@@ -1,6 +1,5 @@
 .button {
-  display: block;
-  float: left;
+  display: inline-block;
   text-transform: uppercase;
   margin: 20px 0;
 
@@ -20,7 +19,7 @@
   &.secondary {
     padding: 7px 12px;
     background: #e7eff3;
-    color: #ffffff;
+    color: #798991;
 
     &:hover {
       background: #ffffff;

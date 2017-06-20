@@ -109,6 +109,7 @@
   .image {
     img {
       width: 100%;
+      float: left;
     }
   }
   &.image-no-left {
@@ -119,4 +120,17 @@
 [data-type=image-with-text-overlay] {
   background-repeat: no-repeat;
   background-size: cover;
+  display: table;
+  width: 100%;
+
+  .hero {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px 0;
+  }
+  .text {
+    margin: 0 auto;
+    max-width: 75%;
+    text-align: center;
+  }
 }
