@@ -1,0 +1,54 @@
+{% comment %}
+
+we can set the animation to vertical/horizontal/fade, also speed & delay?
+
+{% endcomment %}
+
+<script>
+jQuery(document).ready(function($) {
+  $('[data-type=slideshow]').unslider({
+    autoplay: true,
+    animation: 'vertical',
+    delay: 6000,
+    speed: 200
+  });
+});
+</script>
+
+<section data-type="slideshow" class="section-height large">
+	<ul>
+    <li class="image-align-bottom-middle" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')">
+      <div class="hero">
+        <div class="text">
+          <h2 class="general-title">Image with text</h2>
+          <div class="text-content general-text">
+            Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.
+          </div>
+          <a href="" role="button" class="button secondary">Link</a>
+        </div>
+      </div>
+    </li>
+    <li class="image-align-top-right" style="background-image: url('http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg')">
+      <div class="hero">
+        <div class="text text-large">
+          <h2 class="general-title">Image with text</h2>
+          <div class="text-content general-text">
+            Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.
+          </div>
+          <a href="" role="button" class="button secondary">Link</a>
+        </div>
+      </div>
+    </li>
+    <li class="image-align-middle" style="background-image: url('https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg')">
+      <div class="hero">
+        <div class="text">
+          <h2 class="general-title">Image with text</h2>
+          <div class="text-content general-text">
+            Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.
+          </div>
+          <a href="" role="button" class="button secondary">Link</a>
+        </div>
+      </div>
+    </li>
+	</ul>
+</section>
