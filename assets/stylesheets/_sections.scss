@@ -1,0 +1,122 @@
+[data-type=image-gallery] {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+
+    li {
+      height: 100%;
+      float: left;
+      background-size: cover;
+    }
+  }
+  &[data-image-count='1'] {
+    li {
+      width: 100%;
+    }
+  }
+  &[data-image-count='2'] {
+    li {
+      width: 50%;
+    }
+  }
+  &[data-image-count='3'] {
+    li {
+      width: 33.33333%;
+    }
+  }
+  &[data-image-count='4'] {
+    li {
+      width: 25%;
+    }
+  }
+}
+
+.section-height {
+  &.extra-small {
+    height: 125px;
+  }
+  &.small {
+    height: 300px;
+  }
+  &.medium {
+    height: 475px;
+  }
+  &.large {
+    height: 650px;
+  }
+  &.extra-large {
+    height: 775px;
+  }
+}
+
+
+.image-align-top-left {
+  background-position: left top;
+}
+.image-align-top-middle {
+  background-position: center top;
+}
+.image-align-top-right {
+  background-position: right top;
+}
+.image-align-middle-left {
+  background-position: left center;
+}
+.image-align-middle {
+  background-position: center center;
+}
+.image-align-middle-right {
+  background-position: right center;
+}
+.image-align-bottom-left {
+  background-position: left bottom;
+}
+.image-align-bottom-middle {
+  background-position: center bottom;
+}
+.image-align-bottom-right {
+  background-position: right bottom;
+}
+
+[data-type=image-with-text] {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  flex-direction: row;
+
+  .text,
+  .image {
+    -webkit-flex: 0 1 50%;
+    -moz-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+  .text {
+    padding: 30px;
+  }
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+  &.image-no-left {
+    flex-direction: row-reverse;
+  }
+}
+
+[data-type=image-with-text-overlay] {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

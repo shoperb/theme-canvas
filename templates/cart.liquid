@@ -1,0 +1,75 @@
+<header class="row">
+  <div class="columns">
+    <h1 class="page-title">{{'cart.title' | t}}</h1>
+  </div>
+</header>
+
+{% include 'flash_message' %}
+
+{% if cart.items.any? %}
+<form action="{{form_actions.cart_update}}" method="post" class="custom" id="js-cart-content">
+  <div class="row">
+    <div class="columns">
+      <table width="100%" class="cart-table">
+        <thead>
+          <tr>
+            <th class="image">&nbsp;</th>
+            <th class="title">&nbsp;</th>
+            <th class="quantity">{{'cart.quantity' | t}}</th>
+            <th class="total">{{'cart.total' | t}}</th>
+            <th class="remove">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart.items %}
+          {% include "cart_item" %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="totals total-price columns">
+      <h3><strong>{{ 'cart.subtotal' | t }} <span class="money">{{cart.total | money_with_currency}}</span></strong></h3>
+    </div>
+  </div>
+</form>
+
+<form action="{{ form_actions.cart_checkout }}" method="POST">
+  <div class="row">
+    <div class="columns large-5">
+      <div class="order-notes">
+        <div class="container">
+          <h3>{{'cart.order_notes' | t}}</h3>
+          <textarea id="cart-additional-information" name="notes" placeholder="{{'cart.additional_information' | t}}"></textarea>
+        </div>
+      </div>
+
+      <div class="continue-shopping show-for-medium-up">
+        <span><a href="{{url.products}}"><span aria-hidden="true" class="glyph arrow-left"></span> {{'cart.continue_shopping' | t}}</a></span>
+      </div>
+    </div>
+
+    <div class="columns large-7">
+      <div class="totals columns">
+        <p class="shipping-taxes-notification">{% if 1 %}{{'cart.note_shipping' | t}}{% else %}{{'cart.note_shipping_and_tax' | t}}{% endif %}</p>
+
+        <div class="buttons checkout clearfix">
+          <button type="submit" class="right">{{'cart.checkout' | t}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{% else %}
+
+<section class="empty-cart row">
+  <div class="columns">
+    <h1>{{'cart.empty' | t}}</h1>
+    <p><a class="button" href="{{url.products}}">{{'cart.continue_browsing' | t}}</a></p>
+  </div>
+</section>
+
+{% endif %}

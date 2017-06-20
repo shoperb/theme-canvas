@@ -1,0 +1,12 @@
+{
+  "handle": "builder",
+  "name": "Builder",
+  "author": "Shoperb",
+  "year": "2017",
+  "version": "0.1",
+  "description": "Builder theme for building the builder. Das Master Builder",
+  "compile": {
+    "stylesheets": [ "application.css", "semantic.min.css" ],
+    "javascripts": [ "application.js", "config.js" , "plugins.js", "custom.modernizr.js", "jquery-1.10.2.min.js", "lodash.js", "numeral.js", "languages.js", "foundation.js", "foundation.orbit.js", "foundation.clearing.js", "jquery.glide.min.js", "shoperb.js", "shop.js" ]
+  }
+}

@@ -1,0 +1,58 @@
+<tr class="cart-item">
+<td class="image">
+  <a href="{{ item.product.url }}">
+    {{ item.product.image.size-100.url | image_tag: item.product.name }}
+  </a>
+
+  <p class="mobile-title">
+    <a href="{{ item.product.url }}">
+      {{ item.product.name }}
+      <br>
+      <span>
+        {% if item.variant.attributes.any? %}
+        (
+        {% assign comma = 0 %}
+        {% for attribute in item.variant.attributes %}
+          {% if comma > 1 %}
+                ,
+          {% endif %}
+          {{ attribute.value }}
+          {% assign comma = 1 %}
+        {% endfor %}
+        )
+        {% endif %}
+      </span>
+    </a>
+  </p>
+</td>
+<td class="title">
+  <p>
+    <a href="{{ item.product.url }}">{{ item.product.name }}</a>
+    <span>
+      {% if item.variant.attributes.any? %}
+      (
+      {% assign comma = 0 %}
+      {% for attribute in item.variant.attributes %}
+        {% if comma > 0 %}
+              ,
+        {% endif %}
+        {{ attribute.value }}
+        {% assign comma = 1 %}
+      {% endfor %}
+      )
+      {% endif %}
+    </span>
+  </p>
+</td>
+<td class="quantity">
+  <span aria-hidden="true" class="glyph arrow-down" data-decrease-quantity></span>
+  <input type="text" class="field styled-input" name="update[{{ item.id }}]" value="{{ item.quantity }}" placeholder="{{ 'cart.quantity_placeholder' | t }}" type="number">
+  <span aria-hidden="true" class="glyph arrow-up" data-increase-quantity></span>
+</td>
+<td class="total">
+  <span class="money">{{ item.total | money }}</span>
+</td>
+<td class="remove">
+  <span class="glyph cross remove-cart-item" title="Remove"></span>
+</td>
+</tr>

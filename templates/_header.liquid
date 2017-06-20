@@ -1,0 +1,119 @@
+<header id="main-header" class="grid logo-left">
+  <div class="background"></div>
+
+  <div class="logo">
+    {{ 'images/logo.png' | asset_url | image_tag: shop.name | link_to_root }}
+  </div>
+
+  <nav role="navigation" class="main-menu">
+    {% include 'menu' %}
+  </nav>
+
+  <div class="search-account">
+    {% include 'language_switcher' %}
+
+    <span class="search">
+      {{'search' | t}}
+      <span class="icon-search"></span>
+    </span>
+
+    <span class="account">
+      {{'account' | t}}
+      <span class="icon-account"></span>
+    </span>
+
+    {% if cart.quantity > 0 %}
+    <div class="cart-container">
+      <div class="cart">
+        <div class="show-for-medium-up">
+          <a class="cart-link" href="{{url.cart}}">
+            {{'header.cart' | t}}
+            {% if cart.quantity > 0 %}
+            <span class="number-wrapper">
+              (<span class="number">{{ cart.quantity }}</span>)
+            </span>
+            {% endif %}
+            <span aria-hidden="true" class="glyph cart"></span>
+          </a>
+        </div>
+
+        <div class="show-for-small hide-for-ie9-down">
+          <div class="recently-added-mask hide"></div>
+          <div class="recently-added mobile">
+            <a aria-hidden="true" class="close glyph cross"></a>
+
+
+            <div class="row">
+              <div class="columns">
+                <p><strong class="all-caps">{{'header.recently_added' | t}}</strong></p>
+                <p class="mobile-item"></p>
+                <p class="items-count"><a href="{{url.cart}}"><span class="number">0</span> {{'header.items' | t}}</a></p>
+                <p><strong class="all-caps">{{'header.total' | t}} <span class="total-price" style="margin-left:5px;">$0.00</span></strong></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="checkout columns">
+                <a class="button" href="{{url.cart}}">{{'header.checkout' | t}}</a>
+              </div>
+            </div>
+
+            <div class="error">
+              <p>{{'header.unavailable_item' | t}}</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="search-container">
+    <form  action="{{url.search}}" method="get" role="search">
+      <input name="query" type="text" placeholder="{{'search.keyword' | t}}">
+      <button class="icon-search"></button>
+    </form>
+    <span class="searchbar-close icon-cross"></span>
+  </div>
+
+  <div class="account-container">
+    {% if account.logged_in? %}
+    <a href="{{url.account}}">{{'account.view' | t}}</a> {{'general.or' | t}} <a href="{{url.logout}}">{{'account.logout' | t}}</a>
+    {% else %}
+    <a href="{{url.login}}">{{'account.login' | t}}</a> {{'general.or' | t}} <a href="{{url.signup}}">{{'account.register' | t}}</a>
+    {% endif %}
+    <span class="account-close icon-cross"></span>
+  </div>
+
+
+
+
+
+  {% comment %}
+  <div class="bottom-row">
+    <div class="row">
+
+      <div class="mobile-tools">
+        <a class="glyph menu" href=""></a>
+        <a href="{{url.search}}" class="glyph search"></a>
+        <a href="{{url.account}}" class="glyph account"></a>
+        <a href="{{url.cart}}" class="glyph cart"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <nav role="navigation">
+      {% include 'menu' %}
+    </nav>
+
+    {% include 'language_switcher' with 'mobile' %}
+  </div>
+  {% endcomment %}
+
+
+
+
+
+</header>

@@ -1,0 +1,32 @@
+<section class="subheader">
+  <div class="columns large-12">
+    {% include "crumbs" %}
+  </div>
+</section>
+
+{% include "flash_message" %}
+
+<div class="account-content">
+  <div id="customer-login">
+    <div class="row">
+      <div id="login" class="columns large-7">
+        <h1 class="page-title">{{'account.login' | t}}</h1>
+
+        <form action="{{ form_actions.new_login }}" method="post">
+          {{ form_actions.auth_input }}
+          <label for="email" class="label">{{'account.email' | t}}</label>
+          <input type="email" value="" name="account[email]" id="email" class="text">
+
+          <label for="password" class="label">{{'account.password' | t}}</label>
+          <input type="password" value="" name="account[password]" id="password" class="text">
+          <p><a href="{{url.recover}}">{{'account.forgot' | t}}</a></p>
+
+          <div class="action_bottom">
+            <input class="button" type="submit" value="{{'account.signin' | t}}">
+            <span class="note">or <a href="{{url.signup}}">{{'account.register_new_account' | t}}</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

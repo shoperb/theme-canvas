@@ -1,0 +1,34 @@
+{% assign variant  = product.variants.first %}
+
+<div class="product-item">
+  <div class="image-wrapper{% if product.available? %}{% else %} not-available-image{% endif %}">
+    {% if product.available? %}
+    {% else %}
+    <div class="not-available">{{'product.unavailable' | t}}</div>
+    {% endif %}
+    <a href="{{ product.url }}" class="item-link">
+      <img class="lazyOwl" src="{{ product.image.size-480.url }}" data-src="{{ product.image.size-480.url }}" alt="{{ product.name }}" />
+    </a>
+  </div>
+  {% if variant.discount? %}
+  <a class="circle sale" href="{{ product.url }}"><span>{{'product.sale' | t}}</span></a>
+  {% endif %}
+  <div class="caption">
+    <p class="title">
+      <a href="{{ product.url }}">
+        {{ product.name }}
+      </a>
+    </p>
+
+    {% if product.vendor %}
+    <p class="vendor">{{ product.vendor.name }}</p>
+    {% endif %}
+
+    <p class="price">
+      <span class="money">{{ variant.current_price | money }}</span>
+      {% if variant.discount? %}
+      <em class="marked-down-from">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></em>
+      {% endif %}
+    </p>
+  </div>
+</div>

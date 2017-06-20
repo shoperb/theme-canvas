@@ -1,0 +1,94 @@
+<section class="subheader">
+  <div class="columns large-12">
+    {% include "crumbs" %}
+  </div>
+</section>
+
+{% include "flash_message" %}
+
+<div class="account-content">
+  <div id="customer-register">
+    <div class="row">
+      <div id="register" class="columns large-12">
+        <h1 class="page-title">{{'account.title' | t}}</h1>
+      </div>
+    </div>
+
+    <div class="row large">
+      <div id="customer_orders" class="columns large-8">
+
+        {%if account.orders.any? %}
+        <table>
+          <tbody>
+            {% for order in account.orders %}
+            <tr>
+              <td class="order-nr">
+                <a href="http://checkout.shoperb.me/invoices/{{order.token}}" target="_invoice">#{{order.token}}</a>
+              </td>
+              <td class="amount">{{order.currency.symbol}}{{order.total}}</td>
+              <td class="date">{% include 'date' with order.created_at %}</td>
+              {% assign state = order.state | prepend: 'account.state_' %}
+              <td class="status">{{state | t}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p>{{'account.no_orders' | t}}</p>
+        <a class="button" href="{{url.products}}">{{'cart.continue_browsing' | t}}</a>
+        {{'general.or' | t}}
+        <span class="note"><a href="{{url.logout}}">{{'account.logout' | t}}</a></span>
+        {% endif %}
+
+      </div>
+
+      <div id="customer_sidebar" class="columns large-4">
+        <form action="{{form_actions.account}}" class="custom" method="post">
+          {{form_actions.auth_input}}
+          <div class="row">
+            <div class="field">
+              <input type="text" name="account[first_name]" placeholder="{{ 'account.first_name' | t }}" value="{{account.first_name}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <input type="text" name="account[last_name]" placeholder="{{ 'account.last_name' | t }}" value="{{account.last_name}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <input type="text" name="account[email]" placeholder="{{ 'account.email' | t }}" value="{{account.email}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <input type="password" name="account[password]" placeholder="{{ 'account.password' | t }}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <input type="password" name="account[password_confirm]" placeholder="{{ 'account.password_confirm' | t }}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="field checkbox-field">
+              <label for="newsletter">
+                <input type="hidden" name="account[newsletter]" value="0">
+                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %} checked{% endif %}>
+                <span class="label-text">
+                  {{ 'account.subscribe_to_newsletter' | t }}
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-8">
+              <button class="expand">{{ 'account.save' | t }}</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

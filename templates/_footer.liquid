@@ -1,0 +1,40 @@
+<footer class="main-footer">
+  <div class="row bottom">
+    <div class="column-2 large-4 columns">
+      {% assign menu = menus['shop'] %}
+      <h2 class="title">{{ menu.name }}</h2>
+
+      <div class="content">
+        <ul class="footer-nav" role="navigation">
+          {% for item in menu.links %}
+          <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="column-1 large-4 columns">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/brofitwearstore/" target="_blank">
+          {{ "images/social/facebook.png" | asset_url | image_tag: "Bro Fitwear @ Facebook" }}
+        </a>
+        <a href="https://www.instagram.com/brofitwearstore/" target="_blank">
+          {{ "images/social/instagram.png" | asset_url | image_tag: "Bro Fitwear @ Instagram" }}
+        </a>
+      </div>
+
+      <div class="shoperb">
+        <a href="http://www.shoperb.com" target="_blank">
+          {{ "images/shoperb-logo.svg" | asset_url | image_tag: "Shoperb by Perfectline" }}
+        </a>
+      </div>
+    </div>
+
+    <div class="column-3 large-4 columns">
+      {% if pages['kontaktandmed'] %}
+      <div class="title">{{ pages['kontaktandmed'].name }}</div>
+      {{pages["kontaktandmed"].content}}
+      {% endif %}
+    </div>
+  </div>
+</footer>

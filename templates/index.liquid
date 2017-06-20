@@ -1,0 +1,85 @@
+<main role="main">
+  {% include 'sections/image_gallery' %}
+  {% include 'sections/image_with_text' %}
+  {% include 'sections/image_with_text_overlay' %}
+</main>
+
+
+{% comment %}
+<section class="main-content">
+  {% include 'index_slider' %}
+
+  {% assign collection = collections['spring-summer-collection-2017'] %}
+  {% if collection %}
+  <div class="product-slider dark length--9">
+    <div class="row header">
+      <div class="columns">
+       <h2 class="font-headings clearfix"><a href="{{spring-summer-collection-2017l}}" title="">{{collection.name}}</a></h2>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="product-grid clearfix">
+        {% for product in collection.products %}
+        {% include 'list_product' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% assign collection = collections['uus-kollektsioon'] %}
+  {% if collection %}
+  <div class="product-slider dark length--9">
+    <div class="row header">
+      <div class="columns">
+       <h2 class="font-headings clearfix"><a href="{{collection.url}}" title="">{{collection.name}}</a></h2>
+      </div>
+    </div>
+    <div class="row content">
+      <div class="product-grid clearfix">
+        {% for product in collection.products %}
+        {% include 'list_product' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="widgets">
+    <div class="featured-promo">
+      <div class="row">
+        <div class="columns large-6">
+          <div class="vimeo-wrapper">
+            <div class="flex-video">
+              <iframe src="//player.vimeo.com/video/165124744?color=ffffff" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="columns text-left large-6">
+          <div class="description">
+            {{'home.video.description' | t}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include 'index_collections' %}
+
+  <div class="widgets">
+    <div class="social-feeds">
+      <div class="row">
+        <div class="columns large-4 social-facebook">
+          {% include 'index_facebook' %}
+        </div>
+        <div class="columns large-4 social-instagram">
+          {% include 'index_instagram' %}
+        </div>
+        <div class="columns large-4 social-blog">
+          {% include 'index_blog' with 2 %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}

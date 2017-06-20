@@ -1,0 +1,27 @@
+<section class="subheader">
+  <div class="columns large-12">
+    {% include "crumbs" %}
+  </div>
+</section>
+
+<div class="left-two-columns-wrapper row blog-post">
+  <div class="article columns large-9">
+    <div class="middle-column columns large-9">
+      <h1 class="title"><a href="{{post.url}}">{{post.name}}</a></h1>
+      <p class="mobile-meta show-for-medium-down">
+        {% comment %} - once we hace author
+        Written By Troop Digital -
+        {% endcomment %}
+        {{ post.published_at | date: "%b %-d %Y" }}
+      </p>
+      <div class="content colored-links rte-content">
+        {{post.content}}
+      </div>
+
+      {% include 'share_this' with 'post' %}
+    </div>
+  </div>
+
+  {% include 'blog_sidebar' %}
+
+</div>

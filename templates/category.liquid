@@ -1,0 +1,62 @@
+{% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
+{% assign order =  params["filter"] %}
+{% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
+
+<section class="subheader">
+  <div class="columns large-8">
+    {% include "crumbs" %}
+  </div>
+  <div class="columns large-4">
+    {% include 'sortable' %}
+  </div>
+</section>
+
+<section class="separator"></section>
+
+{% paginate category.products_with_children[order] by 12 %}
+<section role="main" class="category-page">
+  <div class="row product-grid">
+    {% assign full_width = 1 %}
+    {% if categories.root.children.any? or menus['brands'].links.any? %}
+    {% assign full_width = 0 %}
+    <div class="columns large-3">
+      <aside class="product-navigation">
+        {% if category.root.children.any? %}
+        <nav class="category-nav">
+          <header>
+            <div class="title">{{ 'categories.categories' | t }}</div>
+          </header>
+          {% include 'categories' with category.root.children %}
+        </nav>
+        {% endif %}
+
+        {% include 'vendors' %}
+      </aside>
+    </div>
+    {% endif %}
+    <div class="columns large-{% if full_width > 0 %}12{% else %}9{% endif %}">
+
+      {% for product in paginate.collection %}
+      <div class="columns product-column large-{% if full_width > 0 %}3{% else %}4{% endif %}">
+        {% include 'list_product' %}
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<section class="separator"></section>
+
+<section class="subheader">
+  <div class="columns large-6">
+    {% include "crumbs" %}
+  </div>
+  <div class="columns large-6">
+    <div class="row">
+      {% include 'pagination' %}
+    </div>
+  </div>
+</section>
+
+{% endpaginate %}

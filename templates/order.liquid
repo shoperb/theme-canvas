@@ -1,0 +1,93 @@
+<section role="main" class="border-box">
+    <div class="row account-page">
+        <div class="columns large-6">
+            <aside class="side-navigation">
+                {% assign key = url.account %}
+                {% include 'account_menu' width key %}
+            </aside>
+        </div>
+        <div class="columns large-18">
+            <div class="order">
+                <div class="row">
+                    <div class="columns large-24 table-block">
+                      <div class="content-block">
+                        <table>
+                            <tbody>
+                                <tr>
+                                  <td class="order-nr">{{order.name}}</td>
+                                  <td class="amount">{{order.currency.symbol}}{{order.total}}</td>
+                                  <td class="date">{{order.created_at}}</td>
+                                  <td class="status">{{order.state}}</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns large-24 table-block">
+                        <div class="content-block">
+                            <table class="order-items">
+                                <tbody>
+                                {% for item in order.items %}
+                                <tr class="cart-item">
+                                  <td class="picture">
+                                    <img src="http://placehold.it/50x50" alt=""/>
+                                  </td>
+                                  <td class="title">{{item.name}}</td>
+                                  <td class="quantity">
+                                    <!--<button class="quantity decrease" type="button">-->
+                                    <!--<span class="icon-minus"></span>-->
+                                    <!--</button>-->
+                                    <!--<div class="field">-->
+                                    <!--<input type="text" value="1" placeholder="Qty"/>-->
+                                    <!--</div>-->
+                                    <!--<button class="quantity increase" type="button">-->
+                                    <!--<span class="icon-plus"></span>-->
+                                    <!--</button>-->
+                                    <div class="field">{{item.qty}}</div>
+                                  </td>
+                                  <td class="price">
+                                    <span class="currency-prefix">{{order.currency.symbol}}</span>
+                                    <span class="amount">{{item.total}}</span>
+                                  </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns large-8">
+                        <div class="content-block">
+                          <div class="title">{{ 'account.order.subtotal' | t }}</div>
+                          <div class="value">{{order.currency.symbol}} {{ order.subtotal }}</div>
+                        </div>
+                    </div>
+                    <div class="columns large-8">
+                        <div class="content-block">
+                          <div class="title">{{ 'account.order.vat' | t }}</div>
+                          <div class="value">{{order.currency.symbol}} {{ order.total_taxes }}</div>
+                        </div>
+                    </div>
+                    <div class="columns large-8">
+                        <div class="content-block">
+                          <div class="title">{{ 'account.order.shipping' | t }}</div>
+                          <div class="value">{{order.currency.symbol}} {{ order.total_shipping }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns large-24">
+                        <div class="content-block">
+                          <div class="title">{{ 'account.order.total' | t }}</div>
+                          <div class="value">{{order.currency.symbol}} {{order.total}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

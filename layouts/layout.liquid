@@ -1,0 +1,88 @@
+<!doctype html>
+<!--[if IE 9]> <html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta charset="utf-8" />
+  <meta name="description" content="{{shop.meta_description}}" />
+  <meta name="keywords" content="{{shop.meta_keywords}}" />
+  <meta name="author" content="www.shoperb.com" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  {% if meta.title == blank %}
+    {% if product %}
+      {% assign title = shop.name | append: ': ' | append: product.name %}
+    {% elsif template_name == 'category' %}
+      {% assign title = shop.name %}
+        {% for category in category.parents %}
+          {% assign title = title | append: ' &raquo; ' | append: category.name %}
+        {% endfor %}
+      {% assign title = title | append: ' &raquo; ' | append: category.name %}
+      </title>
+    {% elsif template_name == 'cart' %}
+      {% assign cart_title = 'cart.title' | t %}
+      {% assign title = shop.name | append: ': ' | append: cart_title %}
+    {% else %}
+      {% assign title = shop.name %}
+    {% endif %}
+  {% else %}
+    {% assign title = shop.meta_title | append: shop.name %}
+  {% endif %}
+
+  <title>{{title}}</title>
+
+  <link rel="icon" href="{{'images/favicon/favicon.ico' | asset_url}}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:url" content="{{url.current_url}}">
+  <meta property="og:site_name" content="{{shop.name}}">
+  <meta property="og:description" content="">
+  {% if product %}
+  <meta property="og:description" content="{{product.description | strip_html}}">
+  <meta property="og:image" content="{{product.image.size-2048.url}}">
+  {% endif %}
+  <link rel="canonical" href="{{url.current_url}}">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  {{"stylesheets/application.css" | asset_url | stylesheet_tag}}
+  <!-- end CSS-->
+
+  {% comment %}
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_setDomainName', '.{{shop.domain}}']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_setAllowHash', false]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  {% endcomment %}
+</head>
+
+<body class="template-{{template_name | replace: '_', '-'}}">
+  {% include 'header' %}
+
+  <div class="main-content">
+  {% comment %}
+  {% if template_name != 'index' %}
+    {% include "crumbs" %}
+  {% endif %}
+  {% endcomment %}
+
+    {{content_for_layout}}
+  </div>
+
+  {% include 'footer' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {{"javascripts/application.js" | asset_url | javascript_tag}}
+</body>
+
+</html>

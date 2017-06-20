@@ -1,0 +1,54 @@
+<div class="widgets">
+  <div class="small-promos">
+    <div class="row">
+
+      {% assign category = categories['legginsid'] %}
+      <a href="{{category.url}}">
+        <div class="columns large-4">
+          <div class="image-text-widget">
+            <img src="{{ 'images/sale/1.jpg' | asset_url }}">
+            <div class="caption">
+              <div class="bg"></div>
+              <div class="inner">
+                <h1>{{'sale.shipping.topic' | t}}</h1>
+                <h2>{{'sale.shipping' | t}}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      {% assign category = pages['suurused'] %}
+      <a href="{{category.url}}">
+        <div class="columns large-4">
+          <div class="image-text-widget">
+            <img src="{{ 'images/sale/2.jpg' | asset_url }}">
+            <div class="caption">
+              <div class="bg"></div>
+              <div class="inner">
+                <h1>{{'sale.one_size.topic' | t}}</h1>
+                <h2>{{'sale.one_size' | t}}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="{{url.products}}">
+        <div class="columns large-4">
+          <div class="image-text-widget">
+            <img src="{{ 'images/sale/3.jpg' | asset_url }}">
+            <div class="caption">
+              <div class="bg"></div>
+              <div class="inner">
+                <h1>{{'sale.return.topic' | t}}</h1>
+                <h2>{{'sale.return' | t}}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>

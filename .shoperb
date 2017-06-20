@@ -1,0 +1,17 @@
+{
+  "server": {
+    "url": "shoperb.me",
+    "protocol": "https"
+  },
+  "oauth-site": "brofitwear",
+  "oauth-cache": {
+    "scope": "admin",
+    "access_token": "pvl9ttftn4gj6ezkibrj55u4e91xzw",
+    "refresh_token": "rjlfnwr1c8d67kuyuw66m5wkctgs1gw",
+    "expires_at": null
+  },
+  "port": "4000",
+  "handle": "delicious",
+  "verbose": null,
+  "preset": null
+}

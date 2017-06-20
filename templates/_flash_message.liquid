@@ -1,0 +1,27 @@
+{% if errors.any? %}
+<div class="flash error">
+  <div class="row">
+    <div class="columns large-24">
+      <div class="message">
+        {% for error in errors %}
+        <div>
+          {{ error | t }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if flash.notice %}
+<div class="flash">
+  <div class="row">
+    <div class="columns large-24">
+      <div class="message">
+        {{ flash.notice | t }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

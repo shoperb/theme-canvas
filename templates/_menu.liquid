@@ -1,0 +1,40 @@
+<ul class="font-nav">
+  <li class="nav-item">
+    {{ 'breadcrumb.home' | t | link_to_root }}
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-item-link">
+      {{'header.catalog' | t}}
+    </a>
+
+    <ul class="sub-nav catalog">
+      <li class="row">
+        <div class="sub-nav-item columns">
+          <a  href="{{url.products}}"><span>{{'header.products' | t}}</span></a>
+          <ul>
+            <li><a href="{{url.products}}">{{'header.all' | t}}</a></li>
+            {% for category in categories.roots %}
+            <li><a href="{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="sub-nav-item columns">
+          <a class="disabled"><span>{{'header.collections' | t}}</span></a>
+          <ul>
+            {% for collection in collections %}
+            <li><a href="{{ collection.url }}">{{ collection.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-item-link" href="{{url.blog}}">
+      {{'header.blog' | t}}
+    </a>
+  </li>
+</ul>

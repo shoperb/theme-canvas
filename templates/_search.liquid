@@ -1,0 +1,8 @@
+<section class="search">
+    <form id="search-form" action="/search" method="GET">
+        <div class="field query-field icon-zoom">
+            <input type="text" name="query" placeholder="{{ 'search.search_placeholder' | t }}" value="{% if search.performed %}{{ search.word }}{% endif %}"/>
+            <input type="submit" />
+        </div>
+    </form>
+</section>

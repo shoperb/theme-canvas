@@ -1,0 +1,232 @@
+{% assign default_variant  = product.variants.first %}
+{% assign quantity = product.attributes['quantity-description'].value %}
+
+<section class="subheader">
+  <div class="columns large-12">
+    {% include "crumbs" %}
+  </div>
+</section>
+
+<article class="product row" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{ shop.currency.symbol }}" data-currency-code="{{ shop.currency.code }}">
+  <meta itemprop="url" content="{{url.current_url}}" />
+  <meta itemprop="image" content="{{product.image.size-2048.url}}" />
+
+  <div class="positions active clearfix">
+    <div class="columns large-6" id="product-container">
+      <div data-position="title-vendor">
+        <h1 class="page-title" itemprop="name">{{product.name}}</h1>
+
+        <div class="sku" data-variant-sku-container>{{ 'product.sku' | t }}: <span data-variant-sku itemprop="sku">{{ default_variant.sku }}</span></div>
+
+        {% if product.vendor %}
+        <h2 class="vendor" itemprop="brand">{{ product.vendor.name }}</h2>
+        {% endif %}
+      </div>
+      <div data-position="prices">
+        <div class="prices">
+          <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="{{ shop.currency.code }}">
+            <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+            <p>
+              <span class="actual-price money" data-current-price itemprop="price" data-currency="{{ shop.currency.code }}"> {{ default_variant.current_price | money }}</span>
+              &nbsp;
+
+              {% if default_variant.discount? %}
+              <span class="compare-price">
+                {{'product.was' | t}}
+                <span class="money" data-currency="{{ shop.currency.code }}">{{ default_variant.price | money }}</span>
+              </span>
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div data-position="cart-form">
+        <form class="cart-form add-to-cart-form" action="{{ form_actions.cart_add }}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="variant" value="{{ default_variant.id }}"/>
+
+          <div class="variants">
+            {% if product.variants.many? %}
+              <select name="variant" id="variant" data-behaviour="select" data-variant-select>
+                {% for variant in product.variants %}
+                  {% if variant.available? %}
+                  <option data-variant='{{ variant.json }}' value="{{ variant.id }}">{{ variant.name }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              <script type="text/template" id="variant-select-template">
+                <div>
+                  <label class="custom-select-title">
+                    {{'product.select' | t}} <%= name %>
+                  </label>
+                  <select name="<%= name %>" id="variant-<%= name %>" data-behaviour="select">
+                    <%= options %>
+                  </select>
+                </div>
+              </script>
+
+              <div class="row" data-variant-container></div>
+            {% endif %}
+          </div>
+
+          <div class="quanity-cart-row clearfix">
+            <div class="quantity">
+              <label for="amount">{{'product.quantity' | t}}</label>
+              <input id="amount" type="number" name="amount" min="1" value="1">
+            </div>
+
+            {% if product.available? %}
+            <div class="add-to-cart">
+              <input type="submit" name="add" id="add" value="{{'product.add_to_cart' | t}}" class="purchase button">
+            </div>
+            {% else %}
+            <div class="add-to-cart">
+              <input type="button" name="add" id="add" value="{{'product.unavailable' | t}}" class="purchase button" disabled>
+            </div>
+            {% endif %}
+          </div>
+        </form>
+
+        <div class="product-unavailable hidden">
+          <p class="error">This variant is currently sold out</p>
+        </div>
+      </div>
+
+      <div data-position="thumbs">
+        <div class="thumbs">
+          <ul class="clearfix row">
+
+            {% for image in product.images %}
+              <li class="thumb{% if forloop.first == true %} active{% endif %}">{{ image.admin_small.url | image_tag: product.name }}</li>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+
+      <div data-position="description">
+        <div class="description">
+          <div itemprop="description" class="rte-content">
+            <div class="tabs-wrapper">
+              <ul class="tabs-horizontal headings">
+                {% assign prod_desc = product.description | strip_html %}
+                {% if prod_desc.size > 0 %}
+                <li class="active">
+                  {{ 'product.description' | t }}
+                </li>
+                {% endif %}
+                <li class="" data-tech-info-header>
+                  {{ 'product.tech_spec' | t }}
+                </li>
+              </ul>
+              <ul class="tabs content">
+                {% if prod_desc.size > 0 %}
+                <li class="active">{{ product.description }}</li>
+                {% endif %}
+                <li class="">
+                  <ul>
+                    <li data-variant-width-container>
+                      <div class="title">{{ 'product.width' | t }}</div>
+                      <div class="content"><span data-variant-width>{{ default_variant.width }}</span> cm</div>
+                    </li>
+                    <li data-variant-height-container>
+                      <div class="title">{{ 'product.height' | t }}</div>
+                      <div class="content"><span data-variant-height>{{ default_variant.height }}</span> cm</div>
+                    </li>
+                    <li data-variant-depth-container>
+                      <div class="title">{{ 'product.depth' | t }}</div>
+                      <div class="content"><span data-variant-depth>{{ default_variant.depth }}</span> cm</div>
+                    </li>
+                    <li data-variant-weight-container>
+                      <div class="title">{{ 'product.weight' | t }}</div>
+                      <div class="content"><span data-variant-weight>{{ default_variant.weight }}</span> kg</div>
+                    </li>
+                    {% for attribute in product.attributes %}
+                    <li>
+                      <div class="title">{{ attribute.name }}</div>
+                      <div class="content">{{ attribute.value }}</div>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns large-6">
+      <div data-position="photos">
+        <div class="photos">
+          <div class="container clearfix" style="height: auto; width: auto; position: relative; overflow: hidden; outline-width: 0px;">
+
+          {% for image in product.images %}
+            <a class="photo" href="{{image.size-2048.url}}" data-zoom="{{image.size-2048.url}}" rel="gallery" data-image-id="346380750"{% if forloop.first == true %} style="display: inline;"{% endif %}>
+              <img src="{{image.size-720.url}}" alt="{{product.name}}}}">
+            </a>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Positions & Ordering -->
+
+  <!-- Mobile -->
+  <div class="positions show-for-small columns">
+    <div data-position="title-vendor"></div>
+    <div data-position="prices"></div>
+    <div data-position="photos"></div>
+    <div data-position="thumbs" class="text-center"></div>
+    <div data-position="cart-form"></div>
+    <div data-position="description"></div>
+  </div>
+
+  <!-- Medium Screens -->
+  <div class="positions show-for-medium-only">
+    <div class="columns large-6">
+      <div data-position="title-vendor"></div>
+      <div data-position="prices"></div>
+      <div data-position="cart-form"></div>
+      <div data-position="thumbs"></div>
+      <div data-position="description"></div>
+    </div>
+
+    <div class="columns large-6">
+      <div data-position="photos"></div>
+    </div>
+  </div>
+
+  <!-- Large Screens -->
+  <div class="positions show-for-large-up">
+    <div class="columns large-3">
+      <div data-position="title-vendor"></div>
+      <div data-position="prices"></div>
+      <div data-position="cart-form"></div>
+      <div data-position="thumbs"></div>
+    </div>
+
+    <div class="columns large-6">
+      <div data-position="photos"></div>
+    </div>
+
+    <div class="columns large-3">
+      <div data-position="description"></div>
+    </div>
+  </div>
+</article>
+
+{% include 'share_this' %}
+{% include 'recommended_products' %}
+
+<div class="modal with-nav">
+    <div class="loading"><div class="spinner" role="progressbar" style="position: relative; width: 0px; z-index: 2000000000; left: 0px; top: 0px;"><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-0-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(0deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-1-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(45deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-2-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(90deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-3-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(135deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-4-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(180deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-5-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(225deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-6-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(270deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-7-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(315deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div></div></div>
+    <a aria-hidden="true" class="prev glyph slider-left"></a>
+    <a aria-hidden="true" class="close glyph cross"></a>
+    <a aria-hidden="true" class="next glyph slider-right"></a>
+    <div class="slides"></div>
+  </div>
+<div class="modal-mask"></div>

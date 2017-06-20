@@ -1,0 +1,26 @@
+header#main-header {
+  .logo,
+  .main-menu,
+  .language-selector,
+  .search,
+  .account {
+    float: left;
+  }
+  .search-container {
+    display: none;
+  }
+  .account-container {
+    display: none;
+  }
+  &.logo-left {
+    .logo {
+      @extend .grid-3;
+    }
+    .main-menu {
+      @extend .grid-6;
+    }
+    .language-selector {}
+    .search {}
+    .account {}
+  }
+}

@@ -1,0 +1,27 @@
+<section role="main" class="border-box">
+    <div class="row account-page">
+        <div class="columns large-6">
+            <aside class="side-navigation">
+                {% assign key = url.orders %}
+                {% include 'account_menu' with key %}
+            </aside>
+        </div>
+        <div class="columns large-18">
+            <div class="orders content-block">
+                <table>
+                    <tbody>
+                    {% for o in orders %}
+                    <tr>
+                      <td class="order-nr">{{order.name}}</td>
+                      <td class="amount">{{o.currency.symbol}}{{o.total}}</td>
+                      <td class="date">{{o.created_at}}</td>
+                      <td class="status">{{o.state}}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>

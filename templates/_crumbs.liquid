@@ -1,0 +1,75 @@
+<section class="breadcrumbs-navigation">
+  <div class="row">
+    <ul class="breadcrumbs clearfix">
+      <li>{{ 'breadcrumb.home' | t | link_to_root }}</li>
+
+      {% if category %}
+        {% for category in category.parents %}
+      <li data-category>{{ category | link_to_category }}</li>
+        {% endfor %}
+      {% if category.name %}
+      <li{% unless product %} class="current"{% endunless %} data-category-2>{{ category | link_to_category }}</li>
+      {% endif %}
+      {% endif %}
+
+      {% if product %}
+      <li class="current" data-product>{{ product.name | escape }}</li>
+      {% endif %}
+
+      {% if template_name == 'blog_post' %}
+      <li><a href="{{url.blog}}">{{ 'blog.title' | t }}</a></li>
+      <li class="current">{{ post.name }}</li>
+      {% endif %}
+
+      {% if template_name == 'products' %}
+      <li class="current" data-products><a href="{{url.products}}">{{ 'products.title' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'cart' %}
+      <li class="current" data-cart><a href="{{url.cart}}">{{ 'cart.title' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'account' %}
+      <li data-account><a href="{{url.account}}">{{ 'account.title' | t }}</a></li>
+      <li class="current"><a href="{{url.settings}}">{{ 'account.settings' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'orders' or template_name == 'order' %}
+      <li data-order><a href="{{url.account}}">{{ 'account.title' | t }}</a></li>
+      <li class="current" data-order><a href="{{url.orders}}">{{ 'account.my_orders' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'search' %}
+      <li class="current" data-search><a href="{{url.search}}">{{ 'search.results' | t }} "{{ params.query }}"</a></li>
+      {% endif %}
+
+      {% if template_name == 'page.contact' %}
+      <li class="current" data-contact><a href="{{url.contact}}">{{ 'contact' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'login' %}
+      <li class="current" data-login><a href="{{url.login}}">{{ 'breadcrumb.sign_in' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'signup' %}
+      <li class="current" data-signup><a href="{{url.signup}}">{{ 'breadcrumb.sign_up' | t }}</a></li>
+      {% endif %}
+
+      {% if template_name == 'not_found' %}
+      <li class="current" data-404>{{ 'breadcrumb.not_found' | t }}</li>
+      {% endif %}
+
+      {% if template_name == 'page' %}
+      <li class="current" data-page>{{ page.name | escape }}</li>
+      {% endif %}
+
+      {% if template_name == 'password_request' %}
+      <li class="current" data-page>{{ 'breadcrumb.password_request' | t }}</li>
+      {% endif %}
+
+      {% if collection %}
+      <li class="current"><a href="{{ collection.url }}">{{ collection.name }}</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</section>

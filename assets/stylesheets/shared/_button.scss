@@ -1,0 +1,33 @@
+.button {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  margin: 20px 0;
+
+  &.primary {
+    padding: 10px 15px;
+    background: #a0a8ac;
+    color: #ffffff;
+
+    &:hover {
+      background: #C5C5C5;
+    }
+    &:focus,
+    &:active {
+      background: #798991;
+    }
+  }
+  &.secondary {
+    padding: 7px 12px;
+    background: #e7eff3;
+    color: #ffffff;
+
+    &:hover {
+      background: #ffffff;
+    }
+    &:focus,
+    &:active {
+      background: #e3ebef;
+    }
+  }
+}

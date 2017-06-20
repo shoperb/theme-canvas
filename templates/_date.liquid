@@ -1,0 +1,15 @@
+{% if date %}
+  {% if shop.current_locale == 'en' %}
+    {% if long_date > 0 %}
+      {{ date | date: "%B %-d %Y" }}
+    {% else %}
+      {{ date | date: "%b %-d %Y" }}
+    {% endif %}
+  {% else %}
+    {% if long_date > 0 %}
+      {{ date | date: "%-d %B %Y" }}
+    {% else %}
+      {{ date | date: "%-d %b %Y" }}
+    {% endif %}
+  {% endif %}
+{% endif %}

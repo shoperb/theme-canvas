@@ -1,0 +1,16 @@
+{% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
+{% assign order =  params["filter"] %}
+{% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
+
+<form class="sorting-form" action="">
+  <div class="row">
+    <div class="form-col large-16 right">
+      <select name="filter" id="filter-category" data-behaviour="select" onchange="this.form.submit();">
+        <option value="">{{ 'categories.filters.no_sorting' | t }}</option>
+        {% for e in meths %}
+        <option value="{{e}}" {% if order == e %}selected="selected"{% endif %}>{{ 'categories.filters.' | append: e | t }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</form>
