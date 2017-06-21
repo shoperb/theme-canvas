@@ -8,7 +8,8 @@
 [data-type=image-gallery],
 [data-type=collection],
 [data-type=collection-list],
-[data-type=testimonials] {
+[data-type=testimonials],
+[data-type=text-columns-with-images] {
   ul {
     margin: 0;
     padding: 0;
@@ -23,7 +24,8 @@
 }
 [data-type=image-gallery],
 [data-type=collection],
-[data-type=collection-list] {
+[data-type=collection-list],
+[data-type=text-columns-with-images] {
   &.divide-by-1 {
     li {
       width: 100%;
@@ -288,6 +290,36 @@
     }
     .testimonial-author {
       padding: 20px 0 0;
+    }
+  }
+}
+
+[data-type=text-columns-with-images] {
+  ul {
+    @extend .clearfix;
+
+    li {
+      padding: 10px;
+      box-sizing: border-box;
+      width: 33.33333%;
+
+      .text-column {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &.divide-by-5 {
+    ul {
+      li {
+        width: 33.33333%;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 50%;
+        }
+      }
     }
   }
 }

@@ -4,6 +4,8 @@ set .owl-testimonials to .owl-carousel if there's more than 3 testimonials
 
 {% endcomment %}
 
+{% assign carousel_class = ' owl-testimonials' %}
+
 <script>
 $(document).ready(function(){
   $('.owl-testimonials').owlCarousel({
@@ -17,7 +19,7 @@ $(document).ready(function(){
 
   <h2 class="general-title">Testimonials</h2>
 
-	<div class="owl-carousel">
+	<div class="owl-carousel{{carousel_class}}">
     <div class="testimonial">
       <h3 class="testimonial-title">Title here</h3>
       <div class="testimonial-quote">
