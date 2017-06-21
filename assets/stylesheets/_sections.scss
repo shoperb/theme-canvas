@@ -1,5 +1,13 @@
 [data-type=image-gallery] {
   ul {
+    li {
+      background-size: cover;
+    }
+  }
+}
+[data-type=image-gallery],
+[data-type=collection] {
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -8,7 +16,6 @@
     li {
       height: 100%;
       float: left;
-      background-size: cover;
     }
   }
   &.divide-by-1 {
@@ -29,6 +36,11 @@
   &.divide-by-4 {
     li {
       width: 25%;
+    }
+  }
+  &.divide-by-5 {
+    li {
+      width: 20%;
     }
   }
 }
@@ -150,5 +162,31 @@
     margin: 0 auto;
     max-width: 75%;
     text-align: center;
+  }
+}
+
+[data-type=collection] {
+  h2.general-title {
+    text-align: center;
+  }
+  ul {
+    @extend .clearfix;
+
+    li {
+      padding: 10px;
+      box-sizing: border-box;
+
+      .image {
+        @extend .clearfix;
+
+        img {
+          width: 100%;
+          float: left;
+        }
+      }
+      h3 {
+        margin: 0;
+      }
+    }
   }
 }

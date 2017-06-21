@@ -9,13 +9,13 @@ jQuery(document).ready(function($) {
   $('[data-type=slideshow]').unslider({
     autoplay: true,
     animation: 'vertical',
-    delay: 6000,
-    speed: 200
+    delay: 4000,
+    speed: 300
   });
 });
 </script>
 
-<section data-type="slideshow" class="section-height large">
+<section data-section-id="{{section.id}}" data-type="slideshow" class="section-height large">
 	<ul>
     <li class="image-align-bottom-middle" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')">
       <div class="hero">

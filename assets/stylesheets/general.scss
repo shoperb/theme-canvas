@@ -6,6 +6,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #3d4246;
+
+  &:hover {
+    color: #596065;
+  }
 }
 
 .general-title {

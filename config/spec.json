@@ -5,6 +5,7 @@
   "year": "2017",
   "version": "0.1",
   "description": "Builder theme for building the builder. Das Master Builder",
+  "customizable_pages": ["index"],
   "compile": {
     "stylesheets": [ "application.css" ],
     "javascripts": [ "application.js", "unslider.js" ]
