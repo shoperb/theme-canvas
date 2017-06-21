@@ -8,6 +8,6 @@
   "customizable_pages": ["index"],
   "compile": {
     "stylesheets": [ "application.css" ],
-    "javascripts": [ "application.js", "unslider.js" ]
+    "javascripts": [ "application.js" ]
   }
 }

@@ -48,6 +48,7 @@
   <!-- CSS concatenated and minified via ant build script-->
   {{"stylesheets/application.css" | asset_url | stylesheet_tag}}
   <!-- end CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
 
   {% comment %}
   <script type="text/javascript">
@@ -66,6 +67,7 @@
   </script>
   {% endcomment %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 </head>
 
 <body class="template-{{template_name | replace: '_', '-'}}">
@@ -83,7 +85,6 @@
 
   {% include 'footer' %}
   {{"javascripts/application.js" | asset_url | javascript_tag}}
-  {{"javascripts/unslider.js" | asset_url | javascript_tag}}
 </body>
 
 </html>

@@ -1,0 +1,33 @@
+.owl-stage-outer {
+  height: 100%;
+
+  .owl-stage {
+    height: 100%;
+
+    .owl-item {
+      height: 100%;
+    }
+  }
+}
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  @include transform(translatey(-50%));
+  width: 100%;
+  color: #ffffff;
+
+  .owl-prev {
+    float: left;
+    margin-left: 20px;
+  }
+  .owl-next {
+    float: right;
+    margin-right: 20px;
+  }
+  .owl-prev,
+  .owl-next {
+    &:hover {
+      color: #e7eff3;
+    }
+  }
+}

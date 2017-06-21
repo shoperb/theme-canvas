@@ -1,22 +1,28 @@
 {% comment %}
 
 we can set the animation to vertical/horizontal/fade, also speed & delay?
+  no animation anymore
+
+we can use https://daneden.github.io/animate.css/
+implementation https://owlcarousel2.github.io/OwlCarousel2/demos/animate.html
 
 {% endcomment %}
 
 <script>
-jQuery(document).ready(function($) {
-  $('[data-type=slideshow]').unslider({
+$(document).ready(function(){
+  $('.owl-slideshow').owlCarousel({
+    items: 1,
+    nav: true,
+    loop: true,
     autoplay: true,
-    animation: 'vertical',
-    delay: 4000,
-    speed: 300
+    navText : ["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
+    autoplayTimeout: 3000
   });
 });
 </script>
 
 <section data-section-id="{{section.id}}" data-type="slideshow" class="section-height large">
-	<ul>
+	<ul class="owl-carousel owl-slideshow">
     <li class="image-align-bottom-middle" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')">
       <div class="hero">
         <div class="text">
