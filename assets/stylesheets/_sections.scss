@@ -166,15 +166,22 @@
   }
 }
 
-[data-type=collection] {
+[data-type=collection],
+[data-type=collection-list] {
   h2.general-title {
     text-align: center;
+  }
+  ul {
+    @extend .clearfix;
+
+    li {
+      padding: 10px;
+      box-sizing: border-box;
+    }
   }
 }
 [data-type=collection] {
   ul {
-    @extend .clearfix;
-
     a {
       display: block;
 
@@ -183,9 +190,6 @@
       }
     }
     li {
-      padding: 10px;
-      box-sizing: border-box;
-
       .image {
         width: 100%;
         padding-top: 100%;
@@ -198,6 +202,35 @@
       .product-title {}
       .product-vendor {}
       .product-price {}
+    }
+  }
+}
+[data-type=collection-list] {
+  ul {
+    li {
+      a {
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+
+        h3 {
+          padding: 10px;
+          position: absolute;
+          text-align: center;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+          width: 100%;
+          box-sizing: border-box;
+          color: #ffffff;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
