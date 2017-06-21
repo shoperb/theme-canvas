@@ -6,7 +6,8 @@
   }
 }
 [data-type=image-gallery],
-[data-type=collection] {
+[data-type=collection],
+[data-type=collection-list] {
   ul {
     margin: 0;
     padding: 0;
@@ -186,25 +187,17 @@
       box-sizing: border-box;
 
       .image {
-        @extend .clearfix;
-
-        img {
-          width: 100%;
-          float: left;
-        }
+        width: 100%;
+        padding-top: 100%;
+        background-position: center center;
+        background-size: cover;
       }
       h3 {
         margin: 0;
       }
-      .product-title {
-
-      }
-      .product-vendor {
-
-      }
-      .product-price {
-
-      }
+      .product-title {}
+      .product-vendor {}
+      .product-price {}
     }
   }
 }
