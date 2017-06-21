@@ -11,3 +11,16 @@
   -ms-transform: $transform;
   transform: $transform;
 }
+@mixin flex($param) {
+  -webkit-flex: $param;
+  -moz-flex: $param;
+  -ms-flex: $param;
+  flex: $param;
+}
+@mixin align-items($param) {
+  -webkit-align-items: $param;
+  -moz-align-items: $param;
+  -ms-align-items: $param;
+  -o-align-items: $param;
+  align-items: $param;
+}
