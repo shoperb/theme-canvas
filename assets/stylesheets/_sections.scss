@@ -9,7 +9,8 @@
 [data-type=collection],
 [data-type=collection-list],
 [data-type=testimonials],
-[data-type=text-columns-with-images] {
+[data-type=text-columns-with-images],
+[data-type=logo-list] {
   ul {
     margin: 0;
     padding: 0;
@@ -319,6 +320,25 @@
         &:nth-child(2) {
           width: 50%;
         }
+      }
+    }
+  }
+}
+
+[data-type=logo-list] {
+  ul {
+    @extend .clearfix;
+    text-align: center;
+
+    li {
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+      @extend .clearfix;
+
+      img {
+        float: left;
+        max-width: 200px;
       }
     }
   }
