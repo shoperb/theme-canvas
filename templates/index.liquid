@@ -1,4 +1,11 @@
 <main role="main">
+{{ content_for_template }}
+</main>
+
+
+
+{% comment %}
+<main role="main">
   {% include 'sections/image_gallery' %}
   {% include 'sections/image_with_text' %}
   {% include 'sections/image_with_text_overlay' %}
@@ -13,6 +20,9 @@
   {% include 'sections/newsletter' %}
   {% include 'sections/location_and_contact' %}
 </main>
+{% endcomment %}
+
+
 
 {% comment %}
 <section class="main-content">

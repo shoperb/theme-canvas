@@ -1,421 +1,1156 @@
-{ "en-US": {
-  "presets": {
-//    "default_preset": "My first default preset"
-  },
-  "settings": {
-    "body_background": "General background",
-    "body_background_on_small_content": "Background for small content area",
-    "body_color": "Main text color",
-    "body_font_size": "Main text font size",
-    "body_font_weight": "Main text font weight",
-    "body_link_color": "Main text link color",
-    "body_link_hover_color": "Main text link hover color",
-
-    "product_filter_color": "Filter color",
-    "product_filter_font_size": "Filter font size",
-    "product_filter_font_weight": "Filter font weight",
-    "product_filter_select_border_color": "Filter field border color",
-    "product_filter_select_background": "Filter field background color",
-
-    "primary_button_background": "Button background",
-    "primary_button_color": "Button color",
-    "primary_button_font_size": "Button font size",
-    "primary_button_font_weight": "Button font weight",
-    "primary_button_hover_background": "Button hover background",
-    "primary_button_hover_color": "Button hover color",
-    "secondary_button_background": "Button background",
-    "secondary_button_color": "Button color",
-    "secondary_button_font_size": "Button font size",
-    "secondary_button_font_weight": "Button font weight",
-    "secondary_button_hover_background": "Button hover background",
-    "secondary_button_hover_color": "Button hover color",
-
-    "share_this_separator_color": "Separator color",
-    "share_this_title_color": "Title color",
-    "share_this_title_font_size": "Title font size",
-    "share_this_title_font_weight": "Title font weight",
-    "share_this_icon_color": "Icon color",
-    "share_this_icon_hover_color": "Icon hover color",
-
-    "header_background_color": "Background color",
-    "header_border_color": "Bottom border color",
-    "header_color": "Text color",
-    "header_font_size": "Text font size",
-    "header_font_weight": "Text font weight",
-    "header_link_color": "Link color",
-    "header_link_hover_color": "Link hover color",
-
-    "contacts_color": "Text and link color",
-    "contacts_font_size": "Text and link font size",
-    "contacts_font_weight": "Text and link font weight",
-    "contacts_icon_color": "Icon color",
-
-    "menu_color": "Item color",
-    "menu_font_size": "Item font size",
-    "menu_font_weight": "Item font weight",
-    "menu_hover_color": "Item hover color",
-    "menu_active_color": "Item active state color",
-
-    "dropdown_background_color": "Background",
-    "dropdown_hover_background_color": "Hover background",
-    "dropdown_shadow": "Shadow",
-
-    "search_icon_color": "Icon color",
-    "search_icon_hover_color": "Icon hover color",
-    "search_button_background": "Button background",
-    "search_button_hover_background": "Button hover background",
-    "search_button_color": "Button color",
-    "search_button_hover_color": "Button hover color",
-    "search_field_background": "Field background",
-    "search_field_border_color": "Field border color",
-    "search_field_shadow": "Field shadow",
-    "search_field_color": "Field color",
-    "search_field_placeholder_color": "Field placeholder color",
-
-    "language_switcher": "Color",
-    "language_font_size": "Font size",
-    "language_font_weight": "Font weight",
-    "language_hover_color": "Hover color",
-
-    "header_cart_background": "Background",
-    "header_cart_color": "Color",
-    "header_full_cart_background": "Background with items",
-
-    "footer_background_color": "Background",
-    "footer_border_color": "Border color",
-    "footer_color": "Color",
-    "footer_font_size": "Font size",
-    "footer_font_weight": "Font weight",
-    "footer_description": "Short text under footer logo",
-    "footer_title_color": "Title color",
-    "footer_title_font_size": "Title font size",
-    "footer_title_font_weight": "Title font weight",
-    "footer_title_hover_color": "Title hover color",
-    "footer_menu_color": "Menu color",
-    "footer_menu_font_size": "Menu font size",
-    "footer_menu_font_weight": "Menu font weight",
-    "footer_menu_hover_color": "Menu hover color",
-
-    "social_icon_color": "Icon color",
-    "social_icon_hover_color": "Icon hover color",
-
-    "copyright_background_color": "Background",
-    "copyright_border_color": "Border color",
-    "copyright_color": "Color",
-    "copyright_font_size": "Font size",
-    "copyright_font_weight": "Font weight",
-    "shoperb_color": "Shoperb logo color",
-
-    "landing_subtitle_color": "Subtitle color",
-    "landing_subtitle_font_size": "Subtitle font size",
-    "landing_subtitle_font_weight": "Subtitle font weight",
-    "landing_border_color": "Border color",
-
-    "banner_title_color": "Title color",
-    "banner_title_font_size": "Title font size",
-    "banner_title_font_weight": "Title font weight",
-    "banner_color": "Color",
-    "banner_font_size": "Font size",
-    "banner_font_weight": "Font weight",
-    "banner_navigation_color": "Navigation color",
-    "banner_navigation_active_color": "Navigation active color",
-
-    "newsletter_color": "Color",
-    "newsletter_font_size": "Font size",
-    "newsletter_font_weight": "Font weight",
-    "newsletter_input_color": "Input color",
-    "newsletter_input_font_size": "Input font size",
-    "newsletter_input_font_weight": "Input font weight",
-    "newsletter_input_placeholder_color": "Input placeholder color",
-    "newsletter_input_border": "Input border color",
-    "newsletter_message_color": "Message color",
-    "newsletter_message_font_size": "Message font size",
-    "newsletter_message_font_weight": "Message font weight",
-
-    "product_title_color": "Title color",
-    "product_title_font_size": "Title font size",
-    "product_title_font_weight": "Title font weight",
-    "product_category_title_color": "Category name color",
-    "product_category_title_font_size": "Category name font size",
-    "product_category_title_font_weight": "Category name font weight",
-    "product_price_color": "Price color",
-    "product_price_font_size": "Price font size",
-    "product_price_font_weight": "Price font weight",
-    "product_price_discount_color": "Discount price color",
-    "product_price_discount_font_size": "Discount price font size",
-    "product_price_discount_font_weight": "Discount price font weight",
-    "active_image_border_color": "Active image border color",
-    "product_image_arrow_color": "Image slider arrow color",
-    "product_image_arrow_hover_color": "Image slider arrow hover color",
-
-    "variants_color": "Title color",
-    "variants_font_size": "Title font size",
-    "variants_font_weight": "Title font weight",
-    "variants_option_color": "Option color",
-    "variants_option_font_size": "Option font size",
-    "variants_option_font_weight": "Option font weight",
-    "variants_field_option_color": "Input field color",
-    "variants_field_option_font_size": "Input field font size",
-    "variants_field_option_font_weight": "Input field font weight",
-    "variants_field_option_border_color": "Input field border color",
-    "variants_option_active_color": "Active option color",
-    "variants_option_shadow": "Box option shadow",
-
-    "related_product_sale_color": "Sale sign color",
-    "related_product_sale_font_size": "Sale sign font size",
-    "related_product_sale_font_weight": "Sale sign font weight",
-    "related_product_sale_background": "Sale sign background",
-    "related_product_sold_color": "Sold sign color",
-    "related_product_sold_font_size": "Sold sign font size",
-    "related_product_sold_font_weight": "Sold sign font weight",
-    "related_product_sold_background": "Sold sign background",
-    "related_product_hover_box_background": "Background",
-    "related_product_hover_box_shadow": "Shadow",
-    "related_product_hover_box_title_color": "Title color",
-    "related_product_hover_box_title_font_size": "Title font size",
-    "related_product_hover_box_title_font_weight": "Title font weight",
-    "related_product_hover_box_category_title_color": "Category name color",
-    "related_product_hover_box_category_title_font_size": "Category name font size",
-    "related_product_hover_box_category_title_font_weight": "Category name font weight",
-    "related_product_hover_box_price_color": "Price color",
-    "related_product_hover_box_price_font_size": "Price font size",
-    "related_product_hover_box_price_font_weight": "Price font weight",
-    "related_product_hover_box_price_discount_color": "Discount price color",
-    "related_product_hover_box_price_discount_font_size": "Discount price font size",
-    "related_product_hover_box_price_discount_font_weight": "Discount price font weight",
-
-    "box_title_color": "Title color",
-    "box_title_font_size": "Title font size",
-    "box_title_font_weight": "Title font weight",
-    "box_subtitle_color": "Category name color",
-    "box_subtitle_font_size": "Category name font size",
-    "box_subtitle_font_weight": "Category name font weight",
-    "box_price_color": "Price color",
-    "box_price_font_size": "Price font size",
-    "box_price_font_weight": "Price font weight",
-    "box_price_discount_color": "Discount price color",
-    "box_price_discount_font_size": "Discount price font size",
-    "box_price_discount_font_weight": "Discount price font weight",
-
-    "product_sale_color": "Sale sign color",
-    "product_sale_font_size": "Sale sign font size",
-    "product_sale_font_weight": "Sale sign font weight",
-    "product_sale_background": "Sale sign background",
-    "product_sold_color": "Sold sign color",
-    "product_sold_font_size": "Sold sign font size",
-    "product_sold_font_weight": "Sold sign font weight",
-    "product_sold_background": "Sold sign background",
-
-    "hover_box_opacity_background": "Opacity background",
-    "hover_box_background": "Background",
-    "hover_box_shadow": "Shadow",
-    "hover_box_title_color": "Title color",
-    "hover_box_title_font_size": "Title font size",
-    "hover_box_title_font_weight": "Title font weight",
-    "hover_box_subtitle_color": "Category name color",
-    "hover_box_subtitle_font_size": "Category name font size",
-    "hover_box_subtitle_font_weight": "Category name font weight",
-    "hover_box_price_color": "Price color",
-    "hover_box_price_font_size": "Price font size",
-    "hover_box_price_font_weight": "Price font weight",
-    "hover_box_price_discount_color": "Discount price color",
-    "hover_box_price_discount_font_size": "Discount price font size",
-    "hover_box_price_discount_font_weight": "Discount price font weight",
-    "hover_box_view_details_color": "Details link color",
-    "hover_box_view_details_font_size": "Details link font size",
-    "hover_box_view_details_font_weight": "Details link font weight",
-    "hover_box_view_details_border_color": "Details link border color",
-    "hover_box_view_details_hover_color": "Details link hover color",
-    "hover_box_view_details_hover_border_color": "Details link border hover color",
-
-    "hover_box_variants_color": "Title color",
-    "hover_box_variants_font_size": "Title font size",
-    "hover_box_variants_font_weight": "Title font weight",
-    "hover_box_variants_option_color": "Option color",
-    "hover_box_variants_option_font_size": "Option font size",
-    "hover_box_variants_option_font_weight": "Option font weight",
-    "hover_box_variants_option_active_color": "Active option color",
-
-    "collection_title_color": "Title color",
-    "collection_title_font_size": "Title font size",
-    "collection_title_font_weight": "Title font weight",
-    "collection_description_color": "Description color",
-    "collection_description_font_size": "Description font size",
-    "collection_description_font_weight": "Description font weight",
-
-    "sidebar_parent_color": "First level item color",
-    "sidebar_parent_font_size": "First level item font size",
-    "sidebar_parent_font_weight": "First level item font weight",
-    "sidebar_parent_hover_color": "First level item hover color",
-    "sidebar_sub_color": "Item color",
-    "sidebar_sub_font_size": "Item font size",
-    "sidebar_sub_font_weight": "Item font weight",
-    "sidebar_sub_hover_color": "Item hover color",
-    "sidebar_sub_hover_background": "Item hover background",
-
-    "cart_header_color": "Header color",
-    "cart_header_font_size": "Header font size",
-    "cart_header_font_weight": "Header font weight",
-    "cart_separator_color": "Separator line color",
-    "cart_product_color": "Product color",
-    "cart_product_font_size": "Product font size",
-    "cart_product_font_weight": "Product font weight",
-    "cart_variant_color": "Variant color",
-    "cart_variant_font_size": "Variant font size",
-    "cart_variant_font_weight": "Variant font weight",
-    "cart_remove_color": "Remove button color",
-    "cart_remove_font_size": "Remove button font size",
-    "cart_remove_font_weight": "Remove button font weight",
-    "cart_remove_hover_color": "Remove button hover color",
-    "cart_quantity_border_color": "Quantity border color",
-    "cart_quantity_focus_border_color": "Quantity border focus color",
-    "cart_quantity_focus_shadow": "Quantity focus shadow",
-    "cart_quantity_background": "Quantity background",
-    "cart_quantity_color": "Quantity color",
-    "cart_quantity_font_size": "Quantity font size",
-    "cart_quantity_font_weight": "Quantity font weight",
-    "cart_quantity_icon_color": "Quantity icon color",
-    "cart_total_color": "Product total color",
-    "cart_total_font_size": "Product total font size",
-    "cart_total_font_weight": "Product total font weight",
-    "cart_footer_color": "Footer color",
-    "cart_footer_font_size": "Footer font size",
-    "cart_footer_font_weight": "Footer font weight",
-    "cart_footer_total_color": "Footer total color",
-    "cart_footer_total_font_size": "Footer total font size",
-    "cart_footer_total_font_weight": "Footer total font weight",
-
-    "form_label_color": "Label color",
-    "form_label_font_size": "Label font size",
-    "form_label_font_weight": "Label font weight",
-    "form_field_border_color": "Field border color",
-    "form_field_color": "Field color",
-    "form_field_font_size": "Field font size",
-    "form_field_font_weight": "Field font weight",
-    "form_field_placeholder_color": "Field placeholder color",
-    "form_field_focus_border_color": "Field focus border",
-    "form_field_focus_shadow": "Field focus shadow",
-    "form_tick_active_color": "Tick active color",
-    "form_field_background": "Field background",
-    "form_error_color": "Field error color",
-
-    "login_form_title_color": "Title color",
-    "login_form_title_font_size": "Title font size",
-    "login_form_title_font_weight": "Title font weight",
-    "login_form_color": "Color",
-    "login_form_font_size": "Font size",
-    "login_form_font_weight": "Font weight",
-    "login_footer_color": "Footer color",
-    "login_footer_font_size": "Footer font size",
-    "login_footer_font_weight": "Footer font weight",
-    "login_footer_link_color": "Footer link color",
-    "login_footer_link_font_size": "Footer link font size",
-    "login_footer_link_font_weight": "Footer link font weight",
-    "login_footer_link_hover_color": "Footer link hover color",
-    "login_form_subtitle_color": "Subtitle color",
-    "login_form_subtitle_font_size": "Subtitle font size",
-    "login_form_subtitle_font_weight": "Subtitle font weight",
-    "login_form_separator_color": "Separator color",
-    "login_form_account_label_color": "Label color",
-    "login_form_account_label_font_size": "Label font size",
-    "login_form_account_label_font_weight": "Label font weight",
-    "login_form_account_value_color": "Value color",
-    "login_form_account_value_font_size": "Value font size",
-    "login_form_account_value_font_weight": "Value font weight",
-    "login_form_account_view_details_color": "Details link color",
-    "login_form_account_view_details_font_size": "Details link font size",
-    "login_form_account_view_details_font_weight": "Details link font weight",
-    "login_form_account_view_details_hover_color": "Details link hover color",
-
-    "login_form_address_title_color": "Address title color",
-    "login_form_address_title_font_size": "Address title font size",
-    "login_form_address_title_font_weight": "Address title font weight",
-    "login_form_address_name_color": "Address name color",
-    "login_form_address_name_font_size": "Address name font size",
-    "login_form_address_name_font_weight": "Address name font weight",
-    "login_form_new_address_color": "New address link color",
-    "login_form_new_address_font_size": "New address link font size",
-    "login_form_new_address_font_weight": "New address link font weight",
-    "login_form_delete_address_color": "Delete address link color",
-    "login_form_delete_address_font_size": "Delete address link font size",
-    "login_form_delete_address_font_weight": "Delete address link font weight",
-
-    "order_id_color": "ID color",
-    "order_id_font_size": "ID font size",
-    "order_id_font_weight": "ID font weight",
-    "order_value_color": "Details color",
-    "order_value_font_size": "Details font size",
-    "order_value_font_weight": "Details font weight",
-    "order_item_name_color": "Product name color",
-    "order_item_name_font_size": "Product name font size",
-    "order_item_name_font_weight": "Product name font weight",
-    "order_variant_color": "Product variants color",
-    "order_variant_font_size": "Product variants font size",
-    "order_variant_font_weight": "Product variants font weight",
-    "order_subtotal_color": "Subtotal color",
-    "order_subtotal_font_size": "Subtotal font size",
-    "order_subtotal_font_weight": "Subtotal font weight",
-    "order_total_color": "Total color",
-    "order_total_font_size": "Total font size",
-    "order_total_font_weight": "Total font weight",
-
-    "blog_title_color": "Title color",
-    "blog_title_font_size": "Title font size",
-    "blog_title_font_weight": "Title font weight",
-    "blog_date_color": "Date color",
-    "blog_date_font_size": "Date font size",
-    "blog_date_font_weight": "Date font weight",
-    "blog_post_separator_color": "Separator color",
-    "blog_read_more_color": "'Read more' color",
-    "blog_read_more_font_size": "'Read more' font size",
-    "blog_read_more_font_weight": "'Read more' font weight",
-    "blog_read_more_hover_color": "'Read more' hover color",
-    "blog_next_prev_color": "Next/previous link color",
-    "blog_next_prev_font_size": "Next/previous link font size",
-    "blog_next_prev_font_weight": "Next/previous link font weight",
-    "blog_next_prev_hover_color": "Next/previous link hover color",
-    "blog_next_prev_title_color": "Next/previous title color",
-    "blog_next_prev_title_font_size": "Next/previous title font size",
-    "blog_next_prev_title_font_weight": "Next/previous title font weight",
-
-    "blog_home_date_color": "Home page date color",
-    "blog_home_date_font_size": "Home page date font size",
-    "blog_home_date_font_weight": "Home page date font weight",
-    "blog_home_title_color": "Home page title color",
-    "blog_home_title_font_size": "Home page title font size",
-    "blog_home_title_font_weight": "Home page title font weight",
-    "blog_home_description_color": "Home page description color",
-    "blog_home_description_font_size": "Home page description font size",
-    "blog_home_description_font_weight": "Home page description font weight",
-    "blog_home_background": "Home page post background",
-    "blog_home_shadow": "Home page post shadow",
-
-    "flash_background": "Background",
-    "flash_border_color": "Border color",
-    "flash_color": "Color",
-    "flash_font_size": "Font size",
-    "flash_font_weight": "Font weight",
-
-    "": ""
-  },
-  "categories": {
-    "general": "General settings",
-    "header": "Header",
-    "footer": "Footer",
-    "social": "Social icons",
-    "landing_page": "Landing page",
-    "banners": "Landing page banners",
-    "newsletter": "Newsletter form",
-    "products": "Product page & items",
-    "product_list_box": "Product box",
-    "collections": "Collections",
-    "sidebar": "Sidebar on left",
-    "cart": "Cart",
-    "login_area": "Account & login area",
-    "blog_posts": "Blog posts",
-    "flash_message": "Notification messages"
-  },
-  "info": {
-//    "pixels_font_size": "Font size provided in pixels"
+{
+  "en-US": {
+    "presets": {
+    },
+    "sections": {
+      "header": {
+        "title": "Header",
+        "settings": {
+          "align_logo": "Logo alignment",
+          "logo": "Logo",
+          "logo_max_width": "Maximum width of logo",
+          "menu": "Menu"
+        }
+      },
+      "footer": {
+        "title": "Footer",
+        "settings": {
+          "footer_menu1": "Main footer menu",
+          "footer_menu2": "Additional footer menu",
+          "show_powered_by": "Show 'Powered by'"
+        }
+      },
+      "hero": {
+        "image": "Image",
+        "alignment": {
+          "title": "Alignment",
+          "options": {
+            "top": "Top",
+            "middle": "Middle",
+            "bottom": "Bottom"
+          }
+        },
+        "title": "Main title",
+        "text": "Subtitle",
+        "hero_size": {
+          "title": "Section size",
+          "options": {
+            "x-small": "Extra Small",
+            "small": "Small",
+            "medium": "Medium",
+            "large": "Large",
+            "x-large": "Extra large"
+          }
+        },
+        "text_size": {
+          "title": "Text size",
+          "options": {
+            "medium": "Medium",
+            "large": "Large"
+          }
+        },
+        "button_label": "Button text",
+        "button_link": "Button URL"
+      }
+    },
+    "general": {
+      "body_background": {
+        "title": "General background"
+      },
+      "body_background_on_small_content": {
+        "title": "Background for small content area"
+      },
+      "body_color": {
+        "title": "Main text color"
+      },
+      "body_font_size": {
+        "title": "Main text font size"
+      },
+      "body_font_weight": {
+        "title": "Main text font weight"
+      },
+      "body_link_color": {
+        "title": "Main text link color"
+      },
+      "body_link_hover_color": {
+        "title": "Main text link hover color"
+      },
+      "product_filter_color": {
+        "title": "Filter color"
+      },
+      "product_filter_font_size": {
+        "title": "Filter font size"
+      },
+      "product_filter_font_weight": {
+        "title": "Filter font weight"
+      },
+      "product_filter_select_border_color": {
+        "title": "Filter field border color"
+      },
+      "product_filter_select_background": {
+        "title": "Filter field background color"
+      },
+      "primary_button_background": {
+        "title": "Button background"
+      },
+      "primary_button_color": {
+        "title": "Button color"
+      },
+      "primary_button_font_size": {
+        "title": "Button font size"
+      },
+      "primary_button_font_weight": {
+        "title": "Button font weight"
+      },
+      "primary_button_hover_background": {
+        "title": "Button hover background"
+      },
+      "primary_button_hover_color": {
+        "title": "Button hover color"
+      },
+      "secondary_button_background": {
+        "title": "Button background"
+      },
+      "secondary_button_color": {
+        "title": "Button color"
+      },
+      "secondary_button_font_size": {
+        "title": "Button font size"
+      },
+      "secondary_button_font_weight": {
+        "title": "Button font weight"
+      },
+      "secondary_button_hover_background": {
+        "title": "Button hover background"
+      },
+      "secondary_button_hover_color": {
+        "title": "Button hover color"
+      },
+      "share_this_separator_color": {
+        "title": "Separator color"
+      },
+      "share_this_title_color": {
+        "title": "Title color"
+      },
+      "share_this_title_font_size": {
+        "title": "Title font size"
+      },
+      "share_this_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "share_this_icon_color": {
+        "title": "Icon color"
+      },
+      "share_this_icon_hover_color": {
+        "title": "Icon hover color"
+      },
+      "header_background_color": {
+        "title": "Background color"
+      },
+      "header_border_color": {
+        "title": "Bottom border color"
+      },
+      "header_color": {
+        "title": "Text color"
+      },
+      "header_font_size": {
+        "title": "Text font size"
+      },
+      "header_font_weight": {
+        "title": "Text font weight"
+      },
+      "header_link_color": {
+        "title": "Link color"
+      },
+      "header_link_hover_color": {
+        "title": "Link hover color"
+      },
+      "contacts_color": {
+        "title": "Text and link color"
+      },
+      "contacts_font_size": {
+        "title": "Text and link font size"
+      },
+      "contacts_font_weight": {
+        "title": "Text and link font weight"
+      },
+      "contacts_icon_color": {
+        "title": "Icon color"
+      },
+      "menu_color": {
+        "title": "Item color"
+      },
+      "menu_font_size": {
+        "title": "Item font size"
+      },
+      "menu_font_weight": {
+        "title": "Item font weight"
+      },
+      "menu_hover_color": {
+        "title": "Item hover color"
+      },
+      "menu_active_color": {
+        "title": "Item active state color"
+      },
+      "dropdown_background_color": {
+        "title": "Background"
+      },
+      "dropdown_hover_background_color": {
+        "title": "Hover background"
+      },
+      "dropdown_shadow": {
+        "title": "Shadow"
+      },
+      "search_icon_color": {
+        "title": "Icon color"
+      },
+      "search_icon_hover_color": {
+        "title": "Icon hover color"
+      },
+      "search_button_background": {
+        "title": "Button background"
+      },
+      "search_button_hover_background": {
+        "title": "Button hover background"
+      },
+      "search_button_color": {
+        "title": "Button color"
+      },
+      "search_button_hover_color": {
+        "title": "Button hover color"
+      },
+      "search_field_background": {
+        "title": "Field background"
+      },
+      "search_field_border_color": {
+        "title": "Field border color"
+      },
+      "search_field_shadow": {
+        "title": "Field shadow"
+      },
+      "search_field_color": {
+        "title": "Field color"
+      },
+      "search_field_placeholder_color": {
+        "title": "Field placeholder color"
+      },
+      "language_switcher": {
+        "title": "Color"
+      },
+      "language_font_size": {
+        "title": "Font size"
+      },
+      "language_font_weight": {
+        "title": "Font weight"
+      },
+      "language_hover_color": {
+        "title": "Hover color"
+      },
+      "header_cart_background": {
+        "title": "Background"
+      },
+      "header_cart_color": {
+        "title": "Color"
+      },
+      "header_full_cart_background": {
+        "title": "Background with items"
+      },
+      "footer_background_color": {
+        "title": "Background"
+      },
+      "footer_border_color": {
+        "title": "Border color"
+      },
+      "footer_color": {
+        "title": "Color"
+      },
+      "footer_font_size": {
+        "title": "Font size"
+      },
+      "footer_font_weight": {
+        "title": "Font weight"
+      },
+      "footer_description": {
+        "title": "Short text under footer logo"
+      },
+      "footer_title_color": {
+        "title": "Title color"
+      },
+      "footer_title_font_size": {
+        "title": "Title font size"
+      },
+      "footer_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "footer_title_hover_color": {
+        "title": "Title hover color"
+      },
+      "footer_menu_color": {
+        "title": "Menu color"
+      },
+      "footer_menu_font_size": {
+        "title": "Menu font size"
+      },
+      "footer_menu_font_weight": {
+        "title": "Menu font weight"
+      },
+      "footer_menu_hover_color": {
+        "title": "Menu hover color"
+      },
+      "social_icon_color": {
+        "title": "Icon color"
+      },
+      "social_icon_hover_color": {
+        "title": "Icon hover color"
+      },
+      "copyright_background_color": {
+        "title": "Background"
+      },
+      "copyright_border_color": {
+        "title": "Border color"
+      },
+      "copyright_color": {
+        "title": "Color"
+      },
+      "copyright_font_size": {
+        "title": "Font size"
+      },
+      "copyright_font_weight": {
+        "title": "Font weight"
+      },
+      "shoperb_color": {
+        "title": "Shoperb logo color"
+      },
+      "landing_subtitle_color": {
+        "title": "Subtitle color"
+      },
+      "landing_subtitle_font_size": {
+        "title": "Subtitle font size"
+      },
+      "landing_subtitle_font_weight": {
+        "title": "Subtitle font weight"
+      },
+      "landing_border_color": {
+        "title": "Border color"
+      },
+      "banner_title_color": {
+        "title": "Title color"
+      },
+      "banner_title_font_size": {
+        "title": "Title font size"
+      },
+      "banner_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "banner_color": {
+        "title": "Color"
+      },
+      "banner_font_size": {
+        "title": "Font size"
+      },
+      "banner_font_weight": {
+        "title": "Font weight"
+      },
+      "banner_navigation_color": {
+        "title": "Navigation color"
+      },
+      "banner_navigation_active_color": {
+        "title": "Navigation active color"
+      },
+      "newsletter_color": {
+        "title": "Color"
+      },
+      "newsletter_font_size": {
+        "title": "Font size"
+      },
+      "newsletter_font_weight": {
+        "title": "Font weight"
+      },
+      "newsletter_input_color": {
+        "title": "Input color"
+      },
+      "newsletter_input_font_size": {
+        "title": "Input font size"
+      },
+      "newsletter_input_font_weight": {
+        "title": "Input font weight"
+      },
+      "newsletter_input_placeholder_color": {
+        "title": "Input placeholder color"
+      },
+      "newsletter_input_border": {
+        "title": "Input border color"
+      },
+      "newsletter_message_color": {
+        "title": "Message color"
+      },
+      "newsletter_message_font_size": {
+        "title": "Message font size"
+      },
+      "newsletter_message_font_weight": {
+        "title": "Message font weight"
+      },
+      "product_title_color": {
+        "title": "Title color"
+      },
+      "product_title_font_size": {
+        "title": "Title font size"
+      },
+      "product_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "product_category_title_color": {
+        "title": "Category name color"
+      },
+      "product_category_title_font_size": {
+        "title": "Category name font size"
+      },
+      "product_category_title_font_weight": {
+        "title": "Category name font weight"
+      },
+      "product_price_color": {
+        "title": "Price color"
+      },
+      "product_price_font_size": {
+        "title": "Price font size"
+      },
+      "product_price_font_weight": {
+        "title": "Price font weight"
+      },
+      "product_price_discount_color": {
+        "title": "Discount price color"
+      },
+      "product_price_discount_font_size": {
+        "title": "Discount price font size"
+      },
+      "product_price_discount_font_weight": {
+        "title": "Discount price font weight"
+      },
+      "active_image_border_color": {
+        "title": "Active image border color"
+      },
+      "product_image_arrow_color": {
+        "title": "Image slider arrow color"
+      },
+      "product_image_arrow_hover_color": {
+        "title": "Image slider arrow hover color"
+      },
+      "variants_color": {
+        "title": "Title color"
+      },
+      "variants_font_size": {
+        "title": "Title font size"
+      },
+      "variants_font_weight": {
+        "title": "Title font weight"
+      },
+      "variants_option_color": {
+        "title": "Option color"
+      },
+      "variants_option_font_size": {
+        "title": "Option font size"
+      },
+      "variants_option_font_weight": {
+        "title": "Option font weight"
+      },
+      "variants_field_option_color": {
+        "title": "Input field color"
+      },
+      "variants_field_option_font_size": {
+        "title": "Input field font size"
+      },
+      "variants_field_option_font_weight": {
+        "title": "Input field font weight"
+      },
+      "variants_field_option_border_color": {
+        "title": "Input field border color"
+      },
+      "variants_option_active_color": {
+        "title": "Active option color"
+      },
+      "variants_option_shadow": {
+        "title": "Box option shadow"
+      },
+      "related_product_sale_color": {
+        "title": "Sale sign color"
+      },
+      "related_product_sale_font_size": {
+        "title": "Sale sign font size"
+      },
+      "related_product_sale_font_weight": {
+        "title": "Sale sign font weight"
+      },
+      "related_product_sale_background": {
+        "title": "Sale sign background"
+      },
+      "related_product_sold_color": {
+        "title": "Sold sign color"
+      },
+      "related_product_sold_font_size": {
+        "title": "Sold sign font size"
+      },
+      "related_product_sold_font_weight": {
+        "title": "Sold sign font weight"
+      },
+      "related_product_sold_background": {
+        "title": "Sold sign background"
+      },
+      "related_product_hover_box_background": {
+        "title": "Background"
+      },
+      "related_product_hover_box_shadow": {
+        "title": "Shadow"
+      },
+      "related_product_hover_box_title_color": {
+        "title": "Title color"
+      },
+      "related_product_hover_box_title_font_size": {
+        "title": "Title font size"
+      },
+      "related_product_hover_box_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "related_product_hover_box_category_title_color": {
+        "title": "Category name color"
+      },
+      "related_product_hover_box_category_title_font_size": {
+        "title": "Category name font size"
+      },
+      "related_product_hover_box_category_title_font_weight": {
+        "title": "Category name font weight"
+      },
+      "related_product_hover_box_price_color": {
+        "title": "Price color"
+      },
+      "related_product_hover_box_price_font_size": {
+        "title": "Price font size"
+      },
+      "related_product_hover_box_price_font_weight": {
+        "title": "Price font weight"
+      },
+      "related_product_hover_box_price_discount_color": {
+        "title": "Discount price color"
+      },
+      "related_product_hover_box_price_discount_font_size": {
+        "title": "Discount price font size"
+      },
+      "related_product_hover_box_price_discount_font_weight": {
+        "title": "Discount price font weight"
+      },
+      "box_title_color": {
+        "title": "Title color"
+      },
+      "box_title_font_size": {
+        "title": "Title font size"
+      },
+      "box_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "box_subtitle_color": {
+        "title": "Category name color"
+      },
+      "box_subtitle_font_size": {
+        "title": "Category name font size"
+      },
+      "box_subtitle_font_weight": {
+        "title": "Category name font weight"
+      },
+      "box_price_color": {
+        "title": "Price color"
+      },
+      "box_price_font_size": {
+        "title": "Price font size"
+      },
+      "box_price_font_weight": {
+        "title": "Price font weight"
+      },
+      "box_price_discount_color": {
+        "title": "Discount price color"
+      },
+      "box_price_discount_font_size": {
+        "title": "Discount price font size"
+      },
+      "box_price_discount_font_weight": {
+        "title": "Discount price font weight"
+      },
+      "product_sale_color": {
+        "title": "Sale sign color"
+      },
+      "product_sale_font_size": {
+        "title": "Sale sign font size"
+      },
+      "product_sale_font_weight": {
+        "title": "Sale sign font weight"
+      },
+      "product_sale_background": {
+        "title": "Sale sign background"
+      },
+      "product_sold_color": {
+        "title": "Sold sign color"
+      },
+      "product_sold_font_size": {
+        "title": "Sold sign font size"
+      },
+      "product_sold_font_weight": {
+        "title": "Sold sign font weight"
+      },
+      "product_sold_background": {
+        "title": "Sold sign background"
+      },
+      "hover_box_opacity_background": {
+        "title": "Opacity background"
+      },
+      "hover_box_background": {
+        "title": "Background"
+      },
+      "hover_box_shadow": {
+        "title": "Shadow"
+      },
+      "hover_box_title_color": {
+        "title": "Title color"
+      },
+      "hover_box_title_font_size": {
+        "title": "Title font size"
+      },
+      "hover_box_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "hover_box_subtitle_color": {
+        "title": "Category name color"
+      },
+      "hover_box_subtitle_font_size": {
+        "title": "Category name font size"
+      },
+      "hover_box_subtitle_font_weight": {
+        "title": "Category name font weight"
+      },
+      "hover_box_price_color": {
+        "title": "Price color"
+      },
+      "hover_box_price_font_size": {
+        "title": "Price font size"
+      },
+      "hover_box_price_font_weight": {
+        "title": "Price font weight"
+      },
+      "hover_box_price_discount_color": {
+        "title": "Discount price color"
+      },
+      "hover_box_price_discount_font_size": {
+        "title": "Discount price font size"
+      },
+      "hover_box_price_discount_font_weight": {
+        "title": "Discount price font weight"
+      },
+      "hover_box_view_details_color": {
+        "title": "Details link color"
+      },
+      "hover_box_view_details_font_size": {
+        "title": "Details link font size"
+      },
+      "hover_box_view_details_font_weight": {
+        "title": "Details link font weight"
+      },
+      "hover_box_view_details_border_color": {
+        "title": "Details link border color"
+      },
+      "hover_box_view_details_hover_color": {
+        "title": "Details link hover color"
+      },
+      "hover_box_view_details_hover_border_color": {
+        "title": "Details link border hover color"
+      },
+      "hover_box_variants_color": {
+        "title": "Title color"
+      },
+      "hover_box_variants_font_size": {
+        "title": "Title font size"
+      },
+      "hover_box_variants_font_weight": {
+        "title": "Title font weight"
+      },
+      "hover_box_variants_option_color": {
+        "title": "Option color"
+      },
+      "hover_box_variants_option_font_size": {
+        "title": "Option font size"
+      },
+      "hover_box_variants_option_font_weight": {
+        "title": "Option font weight"
+      },
+      "hover_box_variants_option_active_color": {
+        "title": "Active option color"
+      },
+      "collection_title_color": {
+        "title": "Title color"
+      },
+      "collection_title_font_size": {
+        "title": "Title font size"
+      },
+      "collection_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "collection_description_color": {
+        "title": "Description color"
+      },
+      "collection_description_font_size": {
+        "title": "Description font size"
+      },
+      "collection_description_font_weight": {
+        "title": "Description font weight"
+      },
+      "sidebar_parent_color": {
+        "title": "First level item color"
+      },
+      "sidebar_parent_font_size": {
+        "title": "First level item font size"
+      },
+      "sidebar_parent_font_weight": {
+        "title": "First level item font weight"
+      },
+      "sidebar_parent_hover_color": {
+        "title": "First level item hover color"
+      },
+      "sidebar_sub_color": {
+        "title": "Item color"
+      },
+      "sidebar_sub_font_size": {
+        "title": "Item font size"
+      },
+      "sidebar_sub_font_weight": {
+        "title": "Item font weight"
+      },
+      "sidebar_sub_hover_color": {
+        "title": "Item hover color"
+      },
+      "sidebar_sub_hover_background": {
+        "title": "Item hover background"
+      },
+      "cart_header_color": {
+        "title": "Header color"
+      },
+      "cart_header_font_size": {
+        "title": "Header font size"
+      },
+      "cart_header_font_weight": {
+        "title": "Header font weight"
+      },
+      "cart_separator_color": {
+        "title": "Separator line color"
+      },
+      "cart_product_color": {
+        "title": "Product color"
+      },
+      "cart_product_font_size": {
+        "title": "Product font size"
+      },
+      "cart_product_font_weight": {
+        "title": "Product font weight"
+      },
+      "cart_variant_color": {
+        "title": "Variant color"
+      },
+      "cart_variant_font_size": {
+        "title": "Variant font size"
+      },
+      "cart_variant_font_weight": {
+        "title": "Variant font weight"
+      },
+      "cart_remove_color": {
+        "title": "Remove button color"
+      },
+      "cart_remove_font_size": {
+        "title": "Remove button font size"
+      },
+      "cart_remove_font_weight": {
+        "title": "Remove button font weight"
+      },
+      "cart_remove_hover_color": {
+        "title": "Remove button hover color"
+      },
+      "cart_quantity_border_color": {
+        "title": "Quantity border color"
+      },
+      "cart_quantity_focus_border_color": {
+        "title": "Quantity border focus color"
+      },
+      "cart_quantity_focus_shadow": {
+        "title": "Quantity focus shadow"
+      },
+      "cart_quantity_background": {
+        "title": "Quantity background"
+      },
+      "cart_quantity_color": {
+        "title": "Quantity color"
+      },
+      "cart_quantity_font_size": {
+        "title": "Quantity font size"
+      },
+      "cart_quantity_font_weight": {
+        "title": "Quantity font weight"
+      },
+      "cart_quantity_icon_color": {
+        "title": "Quantity icon color"
+      },
+      "cart_total_color": {
+        "title": "Product total color"
+      },
+      "cart_total_font_size": {
+        "title": "Product total font size"
+      },
+      "cart_total_font_weight": {
+        "title": "Product total font weight"
+      },
+      "cart_footer_color": {
+        "title": "Footer color"
+      },
+      "cart_footer_font_size": {
+        "title": "Footer font size"
+      },
+      "cart_footer_font_weight": {
+        "title": "Footer font weight"
+      },
+      "cart_footer_total_color": {
+        "title": "Footer total color"
+      },
+      "cart_footer_total_font_size": {
+        "title": "Footer total font size"
+      },
+      "cart_footer_total_font_weight": {
+        "title": "Footer total font weight"
+      },
+      "form_label_color": {
+        "title": "Label color"
+      },
+      "form_label_font_size": {
+        "title": "Label font size"
+      },
+      "form_label_font_weight": {
+        "title": "Label font weight"
+      },
+      "form_field_border_color": {
+        "title": "Field border color"
+      },
+      "form_field_color": {
+        "title": "Field color"
+      },
+      "form_field_font_size": {
+        "title": "Field font size"
+      },
+      "form_field_font_weight": {
+        "title": "Field font weight"
+      },
+      "form_field_placeholder_color": {
+        "title": "Field placeholder color"
+      },
+      "form_field_focus_border_color": {
+        "title": "Field focus border"
+      },
+      "form_field_focus_shadow": {
+        "title": "Field focus shadow"
+      },
+      "form_tick_active_color": {
+        "title": "Tick active color"
+      },
+      "form_field_background": {
+        "title": "Field background"
+      },
+      "form_error_color": {
+        "title": "Field error color"
+      },
+      "login_form_title_color": {
+        "title": "Title color"
+      },
+      "login_form_title_font_size": {
+        "title": "Title font size"
+      },
+      "login_form_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "login_form_color": {
+        "title": "Color"
+      },
+      "login_form_font_size": {
+        "title": "Font size"
+      },
+      "login_form_font_weight": {
+        "title": "Font weight"
+      },
+      "login_footer_color": {
+        "title": "Footer color"
+      },
+      "login_footer_font_size": {
+        "title": "Footer font size"
+      },
+      "login_footer_font_weight": {
+        "title": "Footer font weight"
+      },
+      "login_footer_link_color": {
+        "title": "Footer link color"
+      },
+      "login_footer_link_font_size": {
+        "title": "Footer link font size"
+      },
+      "login_footer_link_font_weight": {
+        "title": "Footer link font weight"
+      },
+      "login_footer_link_hover_color": {
+        "title": "Footer link hover color"
+      },
+      "login_form_subtitle_color": {
+        "title": "Subtitle color"
+      },
+      "login_form_subtitle_font_size": {
+        "title": "Subtitle font size"
+      },
+      "login_form_subtitle_font_weight": {
+        "title": "Subtitle font weight"
+      },
+      "login_form_separator_color": {
+        "title": "Separator color"
+      },
+      "login_form_account_label_color": {
+        "title": "Label color"
+      },
+      "login_form_account_label_font_size": {
+        "title": "Label font size"
+      },
+      "login_form_account_label_font_weight": {
+        "title": "Label font weight"
+      },
+      "login_form_account_value_color": {
+        "title": "Value color"
+      },
+      "login_form_account_value_font_size": {
+        "title": "Value font size"
+      },
+      "login_form_account_value_font_weight": {
+        "title": "Value font weight"
+      },
+      "login_form_account_view_details_color": {
+        "title": "Details link color"
+      },
+      "login_form_account_view_details_font_size": {
+        "title": "Details link font size"
+      },
+      "login_form_account_view_details_font_weight": {
+        "title": "Details link font weight"
+      },
+      "login_form_account_view_details_hover_color": {
+        "title": "Details link hover color"
+      },
+      "login_form_address_title_color": {
+        "title": "Address title color"
+      },
+      "login_form_address_title_font_size": {
+        "title": "Address title font size"
+      },
+      "login_form_address_title_font_weight": {
+        "title": "Address title font weight"
+      },
+      "login_form_address_name_color": {
+        "title": "Address name color"
+      },
+      "login_form_address_name_font_size": {
+        "title": "Address name font size"
+      },
+      "login_form_address_name_font_weight": {
+        "title": "Address name font weight"
+      },
+      "login_form_new_address_color": {
+        "title": "New address link color"
+      },
+      "login_form_new_address_font_size": {
+        "title": "New address link font size"
+      },
+      "login_form_new_address_font_weight": {
+        "title": "New address link font weight"
+      },
+      "login_form_delete_address_color": {
+        "title": "Delete address link color"
+      },
+      "login_form_delete_address_font_size": {
+        "title": "Delete address link font size"
+      },
+      "login_form_delete_address_font_weight": {
+        "title": "Delete address link font weight"
+      },
+      "order_id_color": {
+        "title": "ID color"
+      },
+      "order_id_font_size": {
+        "title": "ID font size"
+      },
+      "order_id_font_weight": {
+        "title": "ID font weight"
+      },
+      "order_value_color": {
+        "title": "Details color"
+      },
+      "order_value_font_size": {
+        "title": "Details font size"
+      },
+      "order_value_font_weight": {
+        "title": "Details font weight"
+      },
+      "order_item_name_color": {
+        "title": "Product name color"
+      },
+      "order_item_name_font_size": {
+        "title": "Product name font size"
+      },
+      "order_item_name_font_weight": {
+        "title": "Product name font weight"
+      },
+      "order_variant_color": {
+        "title": "Product variants color"
+      },
+      "order_variant_font_size": {
+        "title": "Product variants font size"
+      },
+      "order_variant_font_weight": {
+        "title": "Product variants font weight"
+      },
+      "order_subtotal_color": {
+        "title": "Subtotal color"
+      },
+      "order_subtotal_font_size": {
+        "title": "Subtotal font size"
+      },
+      "order_subtotal_font_weight": {
+        "title": "Subtotal font weight"
+      },
+      "order_total_color": {
+        "title": "Total color"
+      },
+      "order_total_font_size": {
+        "title": "Total font size"
+      },
+      "order_total_font_weight": {
+        "title": "Total font weight"
+      },
+      "blog_title_color": {
+        "title": "Title color"
+      },
+      "blog_title_font_size": {
+        "title": "Title font size"
+      },
+      "blog_title_font_weight": {
+        "title": "Title font weight"
+      },
+      "blog_date_color": {
+        "title": "Date color"
+      },
+      "blog_date_font_size": {
+        "title": "Date font size"
+      },
+      "blog_date_font_weight": {
+        "title": "Date font weight"
+      },
+      "blog_post_separator_color": {
+        "title": "Separator color"
+      },
+      "blog_read_more_color": {
+        "title": "'Read more' color"
+      },
+      "blog_read_more_font_size": {
+        "title": "'Read more' font size"
+      },
+      "blog_read_more_font_weight": {
+        "title": "'Read more' font weight"
+      },
+      "blog_read_more_hover_color": {
+        "title": "'Read more' hover color"
+      },
+      "blog_next_prev_color": {
+        "title": "Next/previous link color"
+      },
+      "blog_next_prev_font_size": {
+        "title": "Next/previous link font size"
+      },
+      "blog_next_prev_font_weight": {
+        "title": "Next/previous link font weight"
+      },
+      "blog_next_prev_hover_color": {
+        "title": "Next/previous link hover color"
+      },
+      "blog_next_prev_title_color": {
+        "title": "Next/previous title color"
+      },
+      "blog_next_prev_title_font_size": {
+        "title": "Next/previous title font size"
+      },
+      "blog_next_prev_title_font_weight": {
+        "title": "Next/previous title font weight"
+      },
+      "blog_home_date_color": {
+        "title": "Home page date color"
+      },
+      "blog_home_date_font_size": {
+        "title": "Home page date font size"
+      },
+      "blog_home_date_font_weight": {
+        "title": "Home page date font weight"
+      },
+      "blog_home_title_color": {
+        "title": "Home page title color"
+      },
+      "blog_home_title_font_size": {
+        "title": "Home page title font size"
+      },
+      "blog_home_title_font_weight": {
+        "title": "Home page title font weight"
+      },
+      "blog_home_description_color": {
+        "title": "Home page description color"
+      },
+      "blog_home_description_font_size": {
+        "title": "Home page description font size"
+      },
+      "blog_home_description_font_weight": {
+        "title": "Home page description font weight"
+      },
+      "blog_home_background": {
+        "title": "Home page post background"
+      },
+      "blog_home_shadow": {
+        "title": "Home page post shadow"
+      },
+      "flash_background": {
+        "title": "Background"
+      },
+      "flash_border_color": {
+        "title": "Border color"
+      },
+      "flash_color": {
+        "title": "Color"
+      },
+      "flash_font_size": {
+        "title": "Font size"
+      },
+      "flash_font_weight": {
+        "title": "Font weight"
+      },
+      "": {
+        "title": ""
+      }
+    },
+    "categories": {
+      "general": "General settings",
+      "header": "Header",
+      "footer": "Footer",
+      "social": "Social icons",
+      "landing_page": "Landing page",
+      "banners": "Landing page banners",
+      "newsletter": "Newsletter form",
+      "products": "Product page & items",
+      "product_list_box": "Product box",
+      "collections": "Collections",
+      "sidebar": "Sidebar on left",
+      "cart": "Cart",
+      "login_area": "Account & login area",
+      "blog_posts": "Blog posts",
+      "flash_message": "Notification messages"
+    }
   }
-}}
+}

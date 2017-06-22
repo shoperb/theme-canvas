@@ -1,0 +1,114 @@
+{
+  "name": "Image with text overlay",
+  "class": "index-section index-section--flush",  // ???
+  "generic": true,                                // ???
+  "settings": [
+    {
+      "type": "image",
+      "handle": "image"
+    },
+    {
+      "type": "select",
+      "handle": "image_alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "top-left",
+          "handle": "top-left"
+        },
+        {
+          "value": "top-middle",
+          "handle": "top-middle"
+        },
+        {
+          "value": "top-right",
+          "handle": "top-right"
+        },
+        {
+          "value": "middle-left",
+          "handle": "middle-left"
+        },
+        {
+          "value": "middle",
+          "handle": "middle"
+        },
+        {
+          "value": "middle-right",
+          "handle": "middle-right"
+        },
+        {
+          "value": "bottom-left",
+          "handle": "bottom-left"
+        },
+        {
+          "value": "bottom-center",
+          "handle": "bottom-center"
+        },
+        {
+          "value": "bottom-right",
+          "handle": "bottom-right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Image with text overlay"
+    },
+    {
+      "type": "richtext",
+      "handle": "text",
+      "default": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>"
+    },
+    {
+      "type": "select",
+      "handle": "hero_size",
+      "default": "medium",
+      "options": [
+        {
+          "handle": "x-small",
+          "value": "x-small"
+        },
+        {
+          "handle": "small",
+          "value": "small"
+        },
+        {
+          "handle": "medium",
+          "value": "medium"
+        },
+        {
+          "handle": "large",
+          "value": "large"
+        },
+        {
+          "handle": "x-large",
+          "value": "x-large"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "handle": "text_size",
+      "default": "medium",
+      "options": [
+        {
+          "handle": "medium",
+          "value": "medium"
+        },
+        {
+          "handle": "large",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "handle": "button_label"
+    },
+    {
+      "type": "url",
+      "handle": "button_link"
+    }
+  ]
+}
