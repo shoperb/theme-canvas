@@ -1,0 +1,64 @@
+{
+  "name": "Product list",
+  "class": "index-section",   // ???
+  "max_blocks": 12,           // ???
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Product list"
+    },
+    {
+      "type": "select",
+      "handle": "grid",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "handle": "2"
+        },
+        {
+          "value": "3",
+          "handle": "3"
+        },
+        {
+          "value": "4",
+          "handle": "4"
+        },
+        {
+          "value": "5",
+          "handle": "5"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_product",
+      "settings": [
+        {
+          "handle": "product",
+          "type": "product"
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "settings": {
+        "grid": "3"
+      },
+      "blocks": [
+        {
+          "type": "featured_product"
+        },
+        {
+          "type": "featured_product"
+        },
+        {
+          "type": "featured_product"
+        }
+      ]
+    }
+  ]
+}

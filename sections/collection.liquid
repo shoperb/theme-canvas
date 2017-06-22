@@ -1,0 +1,109 @@
+<section data-section-id="{{section.id}}" data-type="collection" class="divide-by-3 not-full-screen">
+
+  {% if section.settings.title != blank %}
+  <h2 class="general-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% for block in section.blocks limit: section.blocks.size %}
+    asd
+  {% endfor %}
+
+  <ul>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+    <li>
+      <a class="product" href="">
+        <div class="image" style="background-image: url('https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg')"></div>
+        <h3 class="product-title">Product title</h3>
+        <div class="product-vendor">Vendor</div>
+        <div class="product-price">14.95€</div>
+      </a>
+    </li>
+  </ul>
+
+  <div class="buttons">
+    <a href="" role="button" class="button primary">View all</a>
+  </div>
+
+</section>
+
+<div data-section-id="{{ section.id }}">
+  {% if section.settings.title != blank %}
+    <t2> {{ section.settings.title }} </t2>
+  {% endif %}
+
+  {% case section.settings.grid %}
+    {% when '2' %}
+      {% assign grid_item_width = 'medium-up--one-half' %}
+    {% when '3' %}
+      {% assign grid_item_width = 'small--one-half medium-up--one-third' %}
+    {% when '4' %}
+      {% assign grid_item_width = 'small--one-half medium-up--one-quarter' %}
+    {% when '5' %}
+      {% assign grid_item_width = 'small--one-half medium-up--one-fifth' %}
+  {% endcase %}
+
+  <div class="product-grid">
+    <div class="grid grid--uniform">
+      {% for block in section.blocks limit: section.blocks.size %}
+        <div class="grid__item {{ grid_item_width }}" data-section-block-id="{{ block.id }}">
+          {% assign product = products[block.settings.product] %}
+          {% assign variant = product.variants.first %}
+          <div class="image-wrapper" style="background-image: url('{{product.image.size-480.url}}')">
+            {% if variant.discount? %}<div class="sale">{{'product.sale' | t}}</div>{% endif %}
+            {% if product.available? %}
+            {% else %}
+              <div class="sold-out">{{'product.sold_out' | t}}</div>
+            {% endif %}
+          </div>
+          <div class="caption">
+            <div class="title">{{product.name}}</div>
+            <div class="subtitle">{{product.category.name}}</div>
+            <div class="price" data-current-price>{{variant.current_price | money}}</div>
+            {% if variant.discount? %}
+            <div class="discount" data-current-discount-price>{{variant.price | money}}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
