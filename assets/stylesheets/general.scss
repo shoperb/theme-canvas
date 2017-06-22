@@ -1,3 +1,6 @@
+$limited-content: '1200px';
+$default-padding: 10;
+
 body {
   margin: 0;
   font-family: Verdana;
@@ -7,6 +10,15 @@ body {
 a {
   text-decoration: none;
   color: #3d4246;
+}
+.not-full-screen {
+  max-width: #{$limited-content};
+  margin: 0 auto;
+
+  ul {
+    margin-left: -#{$default-padding}px !important;
+    margin-right: -#{$default-padding}px !important;
+  }
 }
 
 .general-title {
