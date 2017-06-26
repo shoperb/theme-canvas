@@ -1,108 +1,15 @@
-{% comment %}
-data-type="image-gallery" defines section type
-data-image-count sets number of LIs. Should be limited to 1-4
-{% endcomment %}
-
 {% assign image_count = section.blocks.size %}
-
-<section data-section-id="{{section.id}}" data-type="image-gallery" class="section-height medium divide-by-3">
-  <ul>
-    <li class="image-align-bottom-middle" style="background-image: url('http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg')">
-      <span>test</span>
-    </li>
-    <li class="image-align-top-right" style="background-image: url('http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg')"></li>
-    <li class="image-align-middle" style="background-image: url('https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg')"></li>
-  </ul>
-</section>
 
 {% if section.blocks.size > 0 %}
 <section data-section-id="{{section.id}}" data-type="image-gallery" class="section-height {{section.settings.section_height}} divide-by-{{image_count}}">
   <ul>
     {% for block in section.blocks %}
-    <li class="image-align-{{block.image_alignment}}" style="background-image: url('{{block.image}}')">
-      {% if block.caption %}
-      <span>{{block.caption}}</span>
+    <li class="image-align-{{block.settings.image_alignment}}" style="background-image: url('{{block.settings.image}}')">
+      {% if block.settings.caption %}
+      <span>{{block.settings.caption}}</span>
       {% endif %}
     </li>
     {% endfor %}
   </ul>
 </section>
 {% endif %}
-
-
-<div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
-  {% if section.settings.title != blank %}
-    <div class="section-header text-center">
-      <h2>{{ section.settings.title }}</h2>
-    </div>
-  {% endif %}
-
-  {% if section.blocks.size > 0 %}
-    <div class="quotes-wrapper">
-      <div class="quotes-slider" id="Quotes-{{ section.id }}" data-count="{{ section.blocks.size }}">
-        {% for block in section.blocks %}
-          <div class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }}>
-            <blockquote class="quotes-slider__text text-center">
-              {% if block.settings.quote != blank %}
-                <div class="rte-setting">{{ block.settings.quote }}</div>
-              {% endif %}
-              {% if block.settings.author != blank %}
-                <cite>{{ block.settings.author | escape }}</cite>
-               {% endif %}
-            </blockquote>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
-
-  {% if section.blocks.size == 0 %}
-    <p>No blocks placeholder here</p>
-  {% endif %}
-</div>
-
-
-
-<div data-section-id="{{ section.id }}">
-  {% if section.settings.title != blank %}
-    <t2> {{ section.settings.title }} </t2>
-  {% endif %}
-
-  {% case section.settings.grid %}
-    {% when '2' %}
-      {% assign grid_item_width = 'medium-up--one-half' %}
-    {% when '3' %}
-      {% assign grid_item_width = 'small--one-half medium-up--one-third' %}
-    {% when '4' %}
-      {% assign grid_item_width = 'small--one-half medium-up--one-quarter' %}
-    {% when '5' %}
-      {% assign grid_item_width = 'small--one-half medium-up--one-fifth' %}
-  {% endcase %}
-
-  <div class="product-grid">
-    <div class="grid grid--uniform">
-      {% for block in section.blocks limit: section.blocks.size %}
-        <div class="grid__item {{ grid_item_width }}" data-section-block-id="{{ block.id }}">
-          {% assign product = products[block.settings.product] %}
-          {% assign variant = product.variants.first %}
-          <div class="image-wrapper" style="background-image: url('{{product.image.size-480.url}}')">
-            {% if variant.discount? %}<div class="sale">{{'product.sale' | t}}</div>{% endif %}
-            {% if product.available? %}
-            {% else %}
-              <div class="sold-out">{{'product.sold_out' | t}}</div>
-            {% endif %}
-          </div>
-          <div class="caption">
-            <div class="title">{{product.name}}</div>
-            <div class="subtitle">{{product.category.name}}</div>
-            <div class="price" data-current-price>{{variant.current_price | money}}</div>
-            {% if variant.discount? %}
-            <div class="discount" data-current-discount-price>{{variant.price | money}}</div>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-

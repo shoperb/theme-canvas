@@ -1,0 +1,107 @@
+{
+  "name": "Slideshow",
+  "settings": [
+    {
+      "type": "toggle",
+      "handle": "auto_rotate",
+      "default": false
+    },
+    {
+      "type": "select",
+      "handle": "speed",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "handle": "2"
+        },
+        {
+          "value": "3",
+          "handle": "3"
+        },
+        {
+          "value": "4",
+          "handle": "4"
+        },
+        {
+          "value": "5",
+          "handle": "5"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "handle": "image_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top-left",
+              "handle": "top-left"
+            },
+            {
+              "value": "top-middle",
+              "handle": "top-middle"
+            },
+            {
+              "value": "top-right",
+              "handle": "top-right"
+            },
+            {
+              "value": "middle-left",
+              "handle": "middle-left"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "middle-right",
+              "handle": "middle-right"
+            },
+            {
+              "value": "bottom-left",
+              "handle": "bottom-left"
+            },
+            {
+              "value": "bottom-center",
+              "handle": "bottom-center"
+            },
+            {
+              "value": "bottom-right",
+              "handle": "bottom-right"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "handle": "caption"
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

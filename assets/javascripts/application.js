@@ -1,3 +1,19 @@
+$(document).ready(function(){
+  $('.owl-slideshow').each(function() {
+    var auto_rorate = ($(this).attr('data-auto-rotate') == 'true'),
+        speed = $(this).attr('data-speed');
+
+    $(this).owlCarousel({
+      items: 1,
+      nav: true,
+      loop: true,
+      autoplay: auto_rorate,
+      navText : ["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
+      autoplayTimeout: speed
+    });
+  });
+});
+
 // (function() {
 //   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 //
