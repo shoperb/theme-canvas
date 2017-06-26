@@ -462,7 +462,7 @@
         "per_row": 3,
         "rows": 2,
         "collection": "spring-summer-collection-2017",
-        "button": true
+        "show_button": true
       }
     },
     "blog_posts": {
@@ -470,7 +470,9 @@
       "settings": {
         "title": "Blog posts",
         "grid": 3,
-        "button": true
+        "show_author": false,
+        "show_date": false,
+        "show_button": true
       }
     },
 

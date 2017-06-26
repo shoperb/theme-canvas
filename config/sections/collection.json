@@ -32,33 +32,11 @@
       ]
     }
   ],
-  "blocks": [
-    {
-      "type": "featured_product",
-      "settings": [
-        {
-          "handle": "product",
-          "type": "product"
-        }
-      ]
-    }
-  ],
   "default": [
     {
       "settings": {
         "grid": "3"
-      },
-      "blocks": [
-        {
-          "type": "featured_product"
-        },
-        {
-          "type": "featured_product"
-        },
-        {
-          "type": "featured_product"
-        }
-      ]
+      }
     }
   ]
 }

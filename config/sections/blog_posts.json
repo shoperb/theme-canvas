@@ -1,12 +1,10 @@
 {
-  "name": "Product list",
-  "class": "index-section",   // ???
-  "max_blocks": 12,           // ???
+  "name": "Blog posts",
   "settings": [
     {
       "type": "text",
       "handle": "title",
-      "default": "Product list"
+      "default": "Blog posts"
     },
     {
       "type": "select",
@@ -14,33 +12,37 @@
       "default": "3",
       "options": [
         {
-          "value": "2",
-          "handle": "2"
-        },
-        {
           "value": "3",
           "handle": "3"
         },
         {
-          "value": "4",
-          "handle": "4"
+          "value": "6",
+          "handle": "6"
         },
         {
-          "value": "5",
-          "handle": "5"
-        }
-      ]
-    }
-  ],
-  "blocks": [
-    {
-      "type": "featured_product",
-      "settings": [
+          "value": "9",
+          "handle": "9"
+        },
         {
-          "handle": "product",
-          "type": "product"
+          "value": "12",
+          "handle": "12"
         }
       ]
+    },
+    {
+      "type": "toggle",
+      "handle": "show_author",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "handle": "show_date",
+      "default": false
+    },
+    {
+      "type": "toggle",
+      "handle": "show_view_all_button",
+      "default": false
     }
   ],
   "default": [
