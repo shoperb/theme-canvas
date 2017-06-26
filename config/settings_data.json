@@ -508,8 +508,8 @@
       "block_order": ["image-1", "image-2", "image-3"]
     },
 
-
-    "index-product-list": {
+    // DEMO !!!
+    "index_product_list": {
       "type": "product_list",
       "max_blocks": 5,
       "settings": {
@@ -538,21 +538,24 @@
       },
       "block_order": ["feature-product-2", "feature-product-1", "feature-product-3"]
     },
+    // DEMO !!!
 
 
-
-    "product-template": {
-      "type": "product_template",
+    "image_with_text": {
+      "type": "image_with_text",
       "settings": {
-        "image_size": "small",
-        "show_description": true,
-        "show_vendor": true,
-        "enable_zoom": true,
-        "show_share_buttons": true
+        "image": "https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg",
+        "select_horizontal_alignment": "image-on-right",
+        "title": "Image with text",
+        "text": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+        "button_text": "Click here",
+        "button_link": "http://www.google.com"
       }
     }
+
+
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog_posts", "image_gallery", "index-product-list"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog_posts", "image_gallery", "index_product_list", "image_with_text"]
 }
 //    "collection": {
 //      "type": "collection",
@@ -596,3 +599,15 @@
 //      "block_order": ["feature-product-2", "feature-product-1", "feature-product-3"]
 //    }
 //  "content_for_index": ["hero-1", "hero-2", "collection"]
+
+
+//"product-template": {
+//"type": "product_template",
+//"settings": {
+//"image_size": "small",
+//"show_description": true,
+//"show_vendor": true,
+//"enable_zoom": true,
+//"show_share_buttons": true
+//}
+//}

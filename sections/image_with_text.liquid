@@ -1,0 +1,23 @@
+{% assign outer_url = '' %}
+{% if section.settings.button_link contains 'http://' or section.settings.button_link contains 'https://' %}
+{% assign outer_url = ' target="_blank"' %}
+{% endif %}
+
+<section data-section-id="{{section.id}}" data-type="image-with-text" class="{{section.settings.image_horizontal_alignment}} not-full-screen">
+  <div class="text">
+    <h2 class="general-title">{{section.settings.title}}</h2>
+    <div class="text-content general-text">{{section.settings.text}}</div>
+
+    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+    <a href="{{section.settings.button_link}}" role="button" class="button primary"{{outer_url}}>{{section.settings.button_text}}</a>
+    {% endif %}
+
+  </div>
+
+  {% if section.settings.image != blank %}
+  <div class="image">
+    <img src="{{section.settings.image}}">
+  </div>
+  {% endif %}
+
+</section>

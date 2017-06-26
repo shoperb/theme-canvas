@@ -1,0 +1,44 @@
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "image",
+      "handle": "image"
+    },
+    {
+      "type": "select",
+      "handle": "select_horizontal_alignment",
+      "default": "image-on-right",
+      "options": [
+        {
+          "value": "image-on-left",
+          "handle": "image-on-left"
+        },
+        {
+          "value": "image-on-right",
+          "handle": "image-on-right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Image with text overlay"
+    },
+    {
+      "type": "richtext",
+      "handle": "text",
+      "default": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review."
+    },
+    {
+      "type": "text",
+      "handle": "button_text",
+      "default": ""
+    },
+    {
+      "type": "combobox",
+      "handle": "button_link",
+      "default": ""
+    }
+  ]
+}

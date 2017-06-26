@@ -36,13 +36,51 @@
         {
           "type": "image",
           "handle": "image",
-          "default": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg"
+          "default": ""
         },
         {
           "type": "select",
           "handle": "image_alignment",
-          "default": "middle"
-        }
+          "default": "middle",
+          "options": [
+            {
+              "value": "top-left",
+              "handle": "top-left"
+            },
+            {
+              "value": "top-middle",
+              "handle": "top-middle"
+            },
+            {
+              "value": "top-right",
+              "handle": "top-right"
+            },
+            {
+              "value": "middle-left",
+              "handle": "middle-left"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "middle-right",
+              "handle": "middle-right"
+            },
+            {
+              "value": "bottom-left",
+              "handle": "bottom-left"
+            },
+            {
+              "value": "bottom-center",
+              "handle": "bottom-center"
+            },
+            {
+              "value": "bottom-right",
+              "handle": "bottom-right"
+            }
+          ]
+        },
         {
           "type": "text",
           "handle": "caption"
