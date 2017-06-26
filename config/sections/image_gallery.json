@@ -1,0 +1,68 @@
+{
+  "name": "Image gallery",
+  "settings": [
+    {
+      "type": "select",
+      "handle": "section_height",
+      "default": "medium",
+      "options": [
+        {
+          "value": "extra-small",
+          "handle": "extra-small"
+        },
+        {
+          "value": "small",
+          "handle": "small"
+        },
+        {
+          "value": "medium",
+          "handle": "medium"
+        },
+        {
+          "value": "large",
+          "handle": "large"
+        },
+        {
+          "value": "extra-large",
+          "handle": "extra-large"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg"
+        },
+        {
+          "type": "select",
+          "handle": "image_alignment",
+          "default": "middle"
+        }
+        {
+          "type": "text",
+          "handle": "caption"
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

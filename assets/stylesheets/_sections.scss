@@ -2,6 +2,16 @@
   ul {
     li {
       background-size: cover;
+      display: table;
+      width: 100%;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 30px;
+        color: #ffffff;
+      }
     }
   }
 }

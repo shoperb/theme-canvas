@@ -475,6 +475,71 @@
         "show_button": true
       }
     },
+    "image_gallery": {
+      "type": "image_gallery",
+      "settings": {
+        "section_height": "large"
+      },
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image": "http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg",
+            "image_alignment": "bottom-middle",
+            "caption": "No caption! Haha, just kidding"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "image_alignment": "top-right",
+            "caption": "asdasd"
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "image": "https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg",
+            "image_alignment": "middle"
+          }
+        }
+      },
+      "block_order": ["image-1", "image-2", "image-3"]
+    },
+
+
+    "index-product-list": {
+      "type": "product_list",
+      "max_blocks": 5,
+      "settings": {
+        "title": "Our best products!!",
+        "grid": "3"
+      },
+      "blocks": {
+        "feature-product-1": {
+          "type": "featured_product",
+          "settings": {
+            "product": "bar"
+          }
+        },
+        "feature-product-2": {
+          "type": "featured_product",
+          "settings": {
+            "product": "bar"
+          }
+        },
+        "feature-product-3": {
+          "type": "featured_product",
+          "settings": {
+            "product": "bar"
+          }
+        }
+      },
+      "block_order": ["feature-product-2", "feature-product-1", "feature-product-3"]
+    },
+
+
 
     "product-template": {
       "type": "product_template",
@@ -487,7 +552,7 @@
       }
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog_posts"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog_posts", "image_gallery", "index-product-list"]
 }
 //    "collection": {
 //      "type": "collection",
