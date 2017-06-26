@@ -455,7 +455,6 @@
         "button_link": "http://www.google.com/"
       }
     },
-
     "collection": {
       "type": "collection",
       "settings": {
@@ -463,6 +462,14 @@
         "per_row": 3,
         "rows": 2,
         "collection": "spring-summer-collection-2017",
+        "button": true
+      }
+    },
+    "blog_posts": {
+      "type": "blog_posts",
+      "settings": {
+        "title": "Blog posts",
+        "grid": 3,
         "button": true
       }
     },
@@ -478,7 +485,7 @@
       }
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog_posts"]
 }
 //    "collection": {
 //      "type": "collection",
