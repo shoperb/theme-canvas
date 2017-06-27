@@ -769,7 +769,16 @@
         "title": "Newsletter",
         "text": "A short sentence describing what someone will receive by subscribing"
       }
+    },
+    "location-and-contact": {
+      "type": "location_and_contact",
+      "settings": {
+        "title": "Location",
+        "text": "Opening hours: from AM to PM",
+        "address": "Meistri 12, Tallinn",
+        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y"
+      }
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact"]
 }

@@ -1,0 +1,16 @@
+{% assign address = section.settings.address | replace: ' ', '%20' | replace: ',', '%2C' %}
+
+<section data-section-id="{{section.id}}" data-type="location-and-contact">
+
+  <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{ address }}&key={{ section.settings.gmaps_api_key }}" allowfullscreen></iframe>
+
+  <div class="map-description">
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% if section.settings.text != blank %}
+    <div class="text-content general-text">{{ section.settings.text }}</div>
+    {% endif %}
+  </div>
+</section>

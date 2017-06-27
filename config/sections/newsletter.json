@@ -1,0 +1,13 @@
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title"
+    },
+    {
+      "type": "text",
+      "handle": "text"
+    }
+  ]
+}

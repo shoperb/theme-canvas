@@ -1,0 +1,21 @@
+{
+  "name": "Location and contact",
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title"
+    },
+    {
+      "type": "text",
+      "handle": "text"
+    },
+    {
+      "type": "text",
+      "handle": "address"
+    },
+    {
+      "type": "text",
+      "handle": "gmaps_api_key"
+    }
+  ]
+}
