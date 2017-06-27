@@ -18,7 +18,25 @@ $(document).ready(function(){
     loop: true,
     nav: false
   });
+
+  slideVideoResize();
 });
+window.onresize = function() {
+  slideVideoResize();
+};
+
+function slideVideoResize() {
+  $('.owl-carousel').each(function() {
+    // set ratio to 16:9 as per YouTube
+    var h = $('iframe', this).width() * 9 / 16;
+
+    if (h < $('iframe', this).height()) {
+      $('iframe', this).width($('iframe', this).height() * 16 / 9);
+    } else {
+      $('iframe', this).height(h);
+    }
+  });
+}
 
 // (function() {
 //   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };

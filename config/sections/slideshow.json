@@ -1,5 +1,6 @@
 {
   "name": "Slideshow",
+  "max_blocks": 4,
   "settings": [
     {
       "type": "toggle",
@@ -92,9 +93,6 @@
   "default": [
     {
       "blocks": [
-        {
-          "type": "image"
-        },
         {
           "type": "image"
         },

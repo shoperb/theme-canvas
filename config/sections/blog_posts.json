@@ -44,23 +44,5 @@
       "handle": "show_view_all_button",
       "default": false
     }
-  ],
-  "default": [
-    {
-      "settings": {
-        "grid": "3"
-      },
-      "blocks": [
-        {
-          "type": "featured_product"
-        },
-        {
-          "type": "featured_product"
-        },
-        {
-          "type": "featured_product"
-        }
-      ]
-    }
   ]
 }

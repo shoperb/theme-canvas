@@ -7,7 +7,7 @@ implementation https://owlcarousel2.github.io/OwlCarousel2/demos/animate.html
 
 {% if section.blocks.size > 0 %}
 <section data-section-id="{{section.id}}" data-type="slideshow" class="section-height large">
-	<div class="owl-carousel owl-slideshow" data-auto-rotate="{{section.settings.auto_rotate}}" data-speed="{{section.settings.speed | times: 1000}}">
+	<div class="owl-carousel{% if section.blocks.size > 1 %} owl-slideshow{% endif %}" data-auto-rotate="{{section.settings.auto_rotate}}" data-speed="{{section.settings.speed | times: 1000}}">
     {% for block in section.blocks %}
 
     {% if block.settings.slide_link != blank %}
@@ -19,6 +19,9 @@ implementation https://owlcarousel2.github.io/OwlCarousel2/demos/animate.html
     {% endif %}
 
     <{{slide_start}} class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}')"{% endif %}>
+      {% if block.settings.slide_type == 'video' %}
+      <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+      {% endif %}
       <div class="hero">
         <div class="text">
           {% if block.settings.heading %}

@@ -1,7 +1,5 @@
 {
   "name": "Product list",
-  "class": "index-section",   // ???
-  "max_blocks": 12,           // ???
   "settings": [
     {
       "type": "text",
@@ -30,13 +28,6 @@
           "handle": "5"
         }
       ]
-    }
-  ],
-  "default": [
-    {
-      "settings": {
-        "grid": "3"
-      }
     }
   ]
 }
