@@ -12,6 +12,12 @@ $(document).ready(function(){
       autoplayTimeout: speed
     });
   });
+
+  $('.owl-testimonials').owlCarousel({
+    items: 3,
+    loop: true,
+    nav: false
+  });
 });
 
 // (function() {

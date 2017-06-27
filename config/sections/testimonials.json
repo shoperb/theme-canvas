@@ -1,0 +1,42 @@
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Testimonials"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "settings": [
+        {
+          "type": "richtext",
+          "handle": "quote",
+          "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+        },
+        {
+          "type": "text",
+          "handle": "author",
+          "default": "Author's name"
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}

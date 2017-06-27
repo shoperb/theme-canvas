@@ -1,0 +1,24 @@
+{% if section.blocks.size > 3 %}
+{% assign carousel_class = ' owl-testimonials' %}
+{% endif %}
+
+<section data-section-id="{{section.id}}" data-type="testimonials" class="not-full-screen">
+
+  {% if section.settings.title != blank %}
+  <h2 class="general-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+	<div class="owl-carousel{{carousel_class}}">
+	  {% for block in section.blocks %}
+    <div class="testimonial">
+      <div class="testimonial-quote">{{ block.settings.quote }}</div>
+      {% if block.settings.author %}
+      <div class="testimonial-author">{{ block.settings.author}}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</section>
