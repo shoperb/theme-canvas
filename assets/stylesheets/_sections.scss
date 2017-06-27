@@ -384,8 +384,9 @@
     li {
       float: none;
       display: inline-block;
-      margin: 0 10px;
+      margin: 10px;
       @extend .clearfix;
+      vertical-align: middle;
 
       img {
         float: left;

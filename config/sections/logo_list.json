@@ -1,0 +1,45 @@
+{
+  "name": "Logo list",
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Logo list"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "handle": "link",
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
