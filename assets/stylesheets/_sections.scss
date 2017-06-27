@@ -200,7 +200,13 @@
 }
 [data-type=collection-list] {
   ul {
+    text-align: center;
+
     li {
+      float: none;
+      display: inline-block;
+      margin-left: -4px;
+
       a {
         display: block;
         width: 100%;

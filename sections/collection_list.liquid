@@ -1,0 +1,22 @@
+<section data-section-id="{{section.id}}" data-type="collection-list" class="divide-by-{{ section.settings.grid }} not-full-screen">
+
+  {% if section.settings.title != blank %}
+  <h2 class="general-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+  <ul>
+    {% for block in section.blocks %}
+
+    {% assign collection = collections[block.settings.collection] %}
+
+    <li>
+      <a class="collection" href="{{ collection.url }}" style="background-image: {% if collection.image %}url('{{ collection.image }}'), {% endif %}url({{ 'images/placeholder-3x2.svg' | asset_url }})">
+        <h3 class="collection-title">{{ collection.name }}</h3>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</section>
