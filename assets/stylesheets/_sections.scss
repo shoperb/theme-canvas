@@ -332,6 +332,9 @@
 }
 
 [data-type=text-columns-with-images] {
+  &.text-alignment-center {
+    text-align: center;
+  }
   ul {
     @extend .clearfix;
 
@@ -347,6 +350,15 @@
       }
     }
   }
+  &.divide-by-2 {
+    ul {
+      li {
+        &:nth-child(2n + 1) {
+          clear: left;
+        }
+      }
+    }
+  }
   &.divide-by-5 {
     ul {
       li {
@@ -355,6 +367,9 @@
         &:nth-child(1),
         &:nth-child(2) {
           width: 50%;
+        }
+        &:nth-child(3) {
+          clear: left;
         }
       }
     }

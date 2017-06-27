@@ -642,7 +642,73 @@
         }
       },
       "block_order": ["testimonial-1", "testimonial-2", "testimonial-3", "testimonial-4", "testimonial-5"]
+    },
+    "columns": {
+      "type": "text_columns_with_images",
+      "settings": {
+        "title": "Text columns with images",
+        "text_alignment": "left"
+      },
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "title": "Title",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/2109/9227/files/Screenshot_2017-06-21_12.49.37_1080x.png?v=1498046475",
+            "title": "Title asd",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/2109/9227/files/Screenshot_2017-06-21_12.49.37_1080x.png?v=1498046475",
+            "title": "Title asd",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-5": {
+          "type": "column",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-6": {
+          "type": "column",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-7": {
+          "type": "column",
+          "settings": {
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        }
+      },
+      "block_order": ["column-1", "column-2", "column-3", "column-4", "column-5", "column-6", "column-7"]
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns"]
 }

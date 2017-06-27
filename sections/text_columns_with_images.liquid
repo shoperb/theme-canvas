@@ -1,0 +1,42 @@
+{% if section.blocks.size == 1 %}
+{% assign text_column_class = 'divide-by-1' %}
+{% endif %}
+
+{% if section.blocks.size == 2 or section.blocks.size == 4 %}
+{% assign text_column_class = 'divide-by-2' %}
+{% endif %}
+
+{% if section.blocks.size == 5 %}
+{% assign text_column_class = 'divide-by-5' %}
+{% endif %}
+
+<section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="{{ text_column_class }} not-full-screen text-alignment-{{ section.settings.text_alignment }}">
+
+  {% if section.settings.title != blank %}
+  <h2 class="general-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+  <ul>
+	  {% for block in section.blocks %}
+    <li>
+      <div class="text-column">
+        {% if block.settings.image != blank %}
+        <img src="{{ block.settings.image }}">
+        {% endif %}
+
+        {% if block.settings.title != blank %}
+        <h3 class="general-title">{{ block.settings.title }}</h3>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+        <div class="text-column-text">{{ block.settings.text }}</div>
+        {% endif %}
+
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</section>
