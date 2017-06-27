@@ -562,7 +562,7 @@
     "collection-list": {
       "type": "collection_list",
       "settings": {
-        "title": "Blog posts",
+        "title": "Collection list",
         "grid": 3
       },
       "blocks": {
@@ -586,9 +586,21 @@
         }
       },
       "block_order": ["collection-1", "collection-2", "collection-3"]
+    },
+    "product": {
+      "type": "product",
+      "settings": {
+        "product": "legging-multi",
+        "image_size": "large",
+        "show_quantity_selector": true,
+        "show_variant_label": true,
+        "show_vendor": false,
+        "enable_image_zoom": false,
+        "show_social_sharing": false
+      }
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product"]
 }
 
 //    "collection": {
