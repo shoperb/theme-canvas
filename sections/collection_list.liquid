@@ -11,7 +11,7 @@
     {% assign collection = collections[block.settings.collection] %}
 
     <li>
-      <a class="collection" href="{{ collection.url }}" style="background-image: {% if collection.image %}url('{{ collection.image }}'), {% endif %}url({{ 'images/placeholder-3x2.svg' | asset_url }})">
+      <a class="collection" href="{{ collection.url }}" style="background-image: {% if collection.image %}url('{{ collection.image }}'), {% endif %}url({{ 'images/placeholder.svg' | asset_url }})">
         <h3 class="collection-title">{{ collection.name }}</h3>
       </a>
     </li>

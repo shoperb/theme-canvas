@@ -1,0 +1,31 @@
+{% assign product = products[section.settings.product] %}
+
+<div class="custom-section custom-{{ block.settings.type }}" itemtype="http://schema.org/Product">
+  <meta itemprop="url" content="{{ product.url }}">
+  <meta itemprop="image" content="{{ product.image.size-2048.url }}">
+
+  {% if product.image.size-480.url != blank %}
+  <img src="{{ product.image.size-480.url }}" alt="{{ product.name }}">
+  {% else %}
+  <img src="{{ 'images/placeholder.svg' | asset_url }}">
+  {% endif %}
+
+  <h2 class="general-title">{{ product.name }}</h2>
+
+  <div class="product-price">
+    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <meta itemprop="priceCurrency" content="{{ shop.currency.code }}">
+      <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+      <div>
+        <span class="actual-price money" data-current-price itemprop="price" data-currency="{{ shop.currency.code }}">{{ default_variant.current_price | money }}</span>
+
+        {% if default_variant.discount? %}
+        <span class="compare-price">
+          <span class="money" data-currency="{{ shop.currency.code }}">{{ default_variant.price | money }}</span>
+        </span>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

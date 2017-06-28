@@ -778,7 +778,89 @@
         "address": "Meistri 12, Tallinn",
         "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y"
       }
+    },
+    "custom": {
+      "type": "custom",
+      "settings": {
+        "title": "Custom content"
+      },
+      "blocks": {
+        "custom-1": {
+          "type": "custom",
+          "settings": {
+            "type": "text",
+            "section_width": "33",
+            "title": "Location",
+            "text": "Opening hours: from AM to PM",
+            "vertical_alignment": "bottom",
+            "horizontal_alignment": "center"
+          }
+        },
+        "custom-2": {
+          "type": "custom",
+          "settings": {
+            "type": "image",
+            "section_width": "50",
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-3": {
+          "type": "custom",
+          "settings": {
+            "type": "video",
+            "section_width": "50",
+            "vertical_alignment": "middle",
+            "video": "https://www.youtube.com/embed/fVUoi0NoYZU"
+          }
+        },
+        "custom-32": {
+          "type": "custom",
+          "settings": {
+            "type": "video",
+            "section_width": "50",
+            "vertical_alignment": "middle",
+            "video": "https://vimeo.com/187165137"
+          }
+        },
+        "custom-4": {
+          "type": "custom",
+          "settings": {
+            "type": "product",
+            "section_width": "100",
+            "product": "legging-multi",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-5": {
+          "type": "custom",
+          "settings": {
+            "type": "collection",
+            "section_width": "25",
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-6": {
+          "type": "custom",
+          "settings": {
+            "type": "html",
+            "section_width": "33",
+            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-7": {
+          "type": "custom",
+          "settings": {
+            "type": "image",
+            "section_width": "66",
+            "vertical_alignment": "middle"
+          }
+        }
+      },
+      "block_order": ["custom-1", "custom-2", "custom-3", "custom-32", "custom-4", "custom-5", "custom-6", "custom-7"]
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact", "custom"]
 }

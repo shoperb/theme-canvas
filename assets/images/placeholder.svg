@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>img</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="placeholder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1">
+            <g id="img">
+                <rect id="Rectangle-2" fill="#F9F9F9" x="0" y="0" width="500" height="500"></rect>
+                <path d="M336.4334,158.4996 C324.9264,158.4996 315.4334,167.9926 315.4334,179.4996 C315.4334,191.0066 324.9264,200.4996 336.4334,200.4996 C347.9404,200.4996 357.4334,191.0066 357.4334,179.4996 C357.4334,167.9926 347.9404,158.4996 336.4334,158.4996 L336.4334,158.4996 Z" id="Stroke-3" stroke="#BCBEC0" fill="#BCBEC0"></path>
+                <path d="M286.647097,242.67 L281.166097,250.973 C277.213097,256.96 268.428097,256.96 264.475097,250.974 L235.330097,206.836 C230.193097,199.057 218.778097,199.054 213.637097,206.831 L137.177097,322.501 C131.464097,331.144 137.661097,342.67 148.021097,342.67 L220.511097,342.67 L325.131097,342.67 L350.284097,342.67 C360.645097,342.67 366.842097,331.142 361.128097,322.5 L308.340097,242.662 C303.198097,234.886 291.783097,234.89 286.647097,242.67 L286.647097,242.67 Z" id="Page-1" fill="#BCBEC0"></path>
+            </g>
+        </g>
+    </g>
+</svg>

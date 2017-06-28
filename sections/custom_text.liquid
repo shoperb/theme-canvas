@@ -1,0 +1,9 @@
+<div class="custom-section custom-{{ block.settings.type }} text-align-{{ block.settings.horizontal_alignment }}">
+  {% if block.settings.title != blank %}
+  <h2 class="general-title">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  {% if block.settings.text != blank %}
+  <div class="text-content general-text">{{ block.settings.text }}</div>
+  {% endif %}
+</div>

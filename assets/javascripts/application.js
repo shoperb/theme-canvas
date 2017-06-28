@@ -20,9 +20,11 @@ $(document).ready(function(){
   });
 
   slideVideoResize();
+  customVideoSize();
 });
 window.onresize = function() {
   slideVideoResize();
+  customVideoSize();
 };
 
 function slideVideoResize() {
@@ -35,6 +37,14 @@ function slideVideoResize() {
     } else {
       $('iframe', this).height(h);
     }
+  });
+}
+function customVideoSize() {
+  var ratio;
+
+  $('[data-video-full-size]').each(function() {
+    $(this).height($(this).width() * 360 / 640);
+    console.log(ratio);
   });
 }
 

@@ -1,12 +1,9 @@
+{% assign text_column_class = 'divide-by-3' %}
 {% if section.blocks.size == 1 %}
 {% assign text_column_class = 'divide-by-1' %}
-{% endif %}
-
-{% if section.blocks.size == 2 or section.blocks.size == 4 %}
+{% elsif section.blocks.size == 2 or section.blocks.size == 4 %}
 {% assign text_column_class = 'divide-by-2' %}
-{% endif %}
-
-{% if section.blocks.size == 5 %}
+{% elsif section.blocks.size == 5 %}
 {% assign text_column_class = 'divide-by-5' %}
 {% endif %}
 

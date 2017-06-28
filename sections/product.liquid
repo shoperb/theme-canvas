@@ -9,7 +9,7 @@
     {% if product.image.size-480.url != blank %}
     <img src="{{ product.image.size-480.url }}" data-src="{{ product.image.size-2048.url }}" alt="{{ product.name }}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
     {% else %}
-    <img src="{{ 'images/placeholder-3x2.svg' | asset_url }}">
+    <img src="{{ 'images/placeholder.svg' | asset_url }}">
     {% endif %}
   </div>
 
