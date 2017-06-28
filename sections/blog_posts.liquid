@@ -4,82 +4,27 @@
   <h2 class="general-title">{{ section.settings.title }}</h2>
   {% endif %}
 
-blog_posts
-
   <ul>
-    {% for post in posts limit: {{ section.settings.grid }} %}
+    {% for post in blog_posts limit: {{ section.settings.grid }} %}
     <li>
       <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
+
+        {% if post.name %}
+        <h2 class="general-title">{{ post.name }}</h2>
+        {% endif %}
+
+        {% if post.author %}
+        <h3 class="post-author">{{ post.author }}</h3>
+        {% endif %}
+
+        {% if post.content %}
+        <div class="text-column-text">{{ post.content | truncate: 150, '...' }}</div>
+        {% endif %}
+
+        <a role="button" class="button secondary" href="{{ post.url }}">Read more</a>
       </div>
     </li>
     {% endfor %}
-
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
-    <li>
-      <div class="text-column">
-        <h3 class="general-title">Your post's title</h3>
-        <h3 class="post-author">Author name</h3>
-        <div class="text-column-text">
-          Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.
-        </div>
-        <a role="button" class="button secondary" href="">Read more</a>
-      </div>
-    </li>
   </ul>
 
   {% if section.settings.show_button == true %}
