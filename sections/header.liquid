@@ -1,0 +1,86 @@
+<header class="main-header first-header clearfix" data-section-id="{{ section.id }}">
+  <div class="main-container">
+    <div class="ui grid">
+      <div class="eight wide column header-contact-container">
+        <div class="header-contact">
+
+          {% if shop.email %}
+          <div class="email">
+            <span class="icon-email"></span>
+            <a href="mailto:{{shop.email}}">{{shop.email}}</a>
+          </div>
+          {% endif %}
+          {% if shop.address.phone %}
+          <div class="phone">
+            <span class="icon-phone"></span>
+            {{shop.address.phone}}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+      <div class="eight wide column header-search-language-container">
+        <div class="search-language">
+          {% include 'search' %}
+          {% include 'language_switcher' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<header class="main-header second-header clearfix">
+  <div class="main-container">
+    <div class="eight wide column">
+      <div class="logo" style="text-align: {{ section.settings.align_logo }};">
+
+        {% if section.settings.logo != blank %}
+          {{ section.settings.logo }}
+          {{ section.settings.logo | asset_url | image_tag: shop.name | link_to_root }}
+        {% else %}
+          <a href="/">{{shop.name}}</a>
+        {% endif %}
+
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-activator">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <nav role="navigation" class="main-menu clearfix">
+          {% if section.settings.menu != blank %}
+            {% include 'menu' with section.settings.menu %}
+          {% endif %}
+        </nav>
+
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="account-cart">
+
+        <div class="account-container">
+          {% if account.logged_in? %}
+          <a href="{{url.account}}">{{'account.view' | t}}</a> {{'general.or' | t}} <a href="{{url.logout}}">{{'account.logout' | t}}</a>
+          {% else %}
+          <span class="icon-profile"></span>
+          <a href="{{url.login}}">{{'account.login' | t}}</a> {{'general.or' | t}} <a href="{{url.signup}}">{{'account.signup' | t}}</a>
+          {% endif %}
+        </div>
+
+        <div class="cart-container">
+          <span class="cart">
+            <a href="{{url.cart}}">
+              <span class="icon-basket"></span>
+              <span id="header-cart"{% if cart.quantity > 0%} class="not-empty"{% endif %}>{{cart.quantity}}</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+</header>

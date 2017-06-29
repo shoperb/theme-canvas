@@ -1,118 +1,120 @@
 {% assign product = products[section.settings.product] %}
 {% assign default_variant = featured_product.variants.first %}
 
-<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{ section.settings.image_size }} not-full-screen" itemtype="http://schema.org/Product" data-currency-symbol="{{ shop.currency.symbol }}" data-currency-code="{{ shop.currency.code }}">
-  <meta itemprop="url" content="{{url.current_url}}">
-  <meta itemprop="image" content="{{product.image.size-2048.url}}">
+<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{ section.settings.image_size }}" itemtype="http://schema.org/Product" data-currency-symbol="{{ shop.currency.symbol }}" data-currency-code="{{ shop.currency.code }}">
+  <div class="not-full-screen">
+    <meta itemprop="url" content="{{url.current_url}}">
+    <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-  <div class="image">
-    {% if product.image.size-480.url != blank %}
-    <img src="{{ product.image.size-480.url }}" data-src="{{ product.image.size-2048.url }}" alt="{{ product.name }}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
-    {% else %}
-    <img src="{{ 'images/placeholder.svg' | asset_url }}">
-    {% endif %}
+    <div class="image">
+      {% if product.image.size-480.url != blank %}
+      <img src="{{ product.image.size-480.url }}" data-src="{{ product.image.size-2048.url }}" alt="{{ product.name }}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
+      {% else %}
+      <img src="{{ 'images/placeholder.svg' | asset_url }}">
+      {% endif %}
+    </div>
+
+    <div class="product">
+      <h2 class="product-title">{{ product.name }}</h2>
+
+      {% if default_variant.sku %}
+      <div class="sku" data-variant-sku-container>{{ 'product.sku' | t }}: <span data-variant-sku itemprop="sku">{{ default_variant.sku }}</span></div>
+      {% endif %}
+
+      {% if product.vendor %}
+      <div class="product-vendor" itemprop="brand">{{ product.vendor.name }}</div>
+      {% endif %}
+
+      <div class="product-price">
+        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="{{ shop.currency.code }}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+          <div>
+            <span class="actual-price money" data-current-price itemprop="price" data-currency="{{ shop.currency.code }}">{{ default_variant.current_price | money }}</span>
+
+            {% if default_variant.discount? %}
+            <span class="compare-price">
+              <span class="money" data-currency="{{ shop.currency.code }}">{{ default_variant.price | money }}</span>
+            </span>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="product-variants">
+        Variant selectors
+      </div>
+
+      <div class="product-form grid">
+        <div class="product-quantity">
+          <label>Quantity</label>
+          <input>
+        </div>
+        <div class="product-button">
+          <button class="button primary">Sold out</button>
+        </div>
+      </div>
+
+      <div data-position="cart-form">
+        <form class="cart-form add-to-cart-form" action="{{ form_actions.cart_add }}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="variant" value="{{ default_variant.id }}"/>
+
+          <div class="variants">
+            {% if product.variants.many? %}
+              <select name="variant" id="variant" data-behaviour="select" data-variant-select>
+                {% for variant in product.variants %}
+                  {% if variant.available? %}
+                  <option data-variant='{{ variant.json }}' value="{{ variant.id }}">{{ variant.name }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              <script type="text/template" id="variant-select-template">
+                <div>
+                  <label class="custom-select-title">
+                    {{'product.select' | t}} <%= name %>
+                  </label>
+                  <select name="<%= name %>" id="variant-<%= name %>" data-behaviour="select">
+                    <%= options %>
+                  </select>
+                </div>
+              </script>
+
+              <div class="row" data-variant-container></div>
+            {% endif %}
+          </div>
+
+          <div class="quanity-cart-row clearfix">
+            <div class="quantity">
+              <label for="amount">{{'product.quantity' | t}}</label>
+              <input id="amount" type="number" name="amount" min="1" value="1">
+            </div>
+
+            {% if product.available? %}
+            <div class="add-to-cart">
+              <input type="submit" name="add" id="add" value="{{'product.add_to_cart' | t}}" class="purchase button">
+            </div>
+            {% else %}
+            <div class="add-to-cart">
+              <input type="button" name="add" id="add" value="{{'product.unavailable' | t}}" class="purchase button" disabled>
+            </div>
+            {% endif %}
+          </div>
+        </form>
+      </div>
+
+      {% if product.description != blank %}
+      <div class="product-description">{{ product.description }}</div>
+      {% endif %}
+
+      {% if section.settings.show_social_sharing == true %}
+      <div class="product-share">
+        share product options?
+      </div>
+      {% endif %}
+
+    </div>
+
   </div>
-
-  <div class="product">
-    <h2 class="product-title">{{ product.name }}</h2>
-
-    {% if default_variant.sku %}
-    <div class="sku" data-variant-sku-container>{{ 'product.sku' | t }}: <span data-variant-sku itemprop="sku">{{ default_variant.sku }}</span></div>
-    {% endif %}
-
-    {% if product.vendor %}
-    <div class="product-vendor" itemprop="brand">{{ product.vendor.name }}</div>
-    {% endif %}
-
-    <div class="product-price">
-      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="{{ shop.currency.code }}">
-        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-        <div>
-          <span class="actual-price money" data-current-price itemprop="price" data-currency="{{ shop.currency.code }}">{{ default_variant.current_price | money }}</span>
-
-          {% if default_variant.discount? %}
-          <span class="compare-price">
-            <span class="money" data-currency="{{ shop.currency.code }}">{{ default_variant.price | money }}</span>
-          </span>
-          {% endif %}
-
-        </div>
-      </div>
-    </div>
-
-    <div class="product-variants">
-      Variant selectors
-    </div>
-
-    <div class="product-form grid">
-      <div class="product-quantity">
-        <label>Quantity</label>
-        <input>
-      </div>
-      <div class="product-button">
-        <button class="button primary">Sold out</button>
-      </div>
-    </div>
-
-    <div data-position="cart-form">
-      <form class="cart-form add-to-cart-form" action="{{ form_actions.cart_add }}" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="variant" value="{{ default_variant.id }}"/>
-
-        <div class="variants">
-          {% if product.variants.many? %}
-            <select name="variant" id="variant" data-behaviour="select" data-variant-select>
-              {% for variant in product.variants %}
-                {% if variant.available? %}
-                <option data-variant='{{ variant.json }}' value="{{ variant.id }}">{{ variant.name }}</option>
-                {% endif %}
-              {% endfor %}
-            </select>
-
-            <script type="text/template" id="variant-select-template">
-              <div>
-                <label class="custom-select-title">
-                  {{'product.select' | t}} <%= name %>
-                </label>
-                <select name="<%= name %>" id="variant-<%= name %>" data-behaviour="select">
-                  <%= options %>
-                </select>
-              </div>
-            </script>
-
-            <div class="row" data-variant-container></div>
-          {% endif %}
-        </div>
-
-        <div class="quanity-cart-row clearfix">
-          <div class="quantity">
-            <label for="amount">{{'product.quantity' | t}}</label>
-            <input id="amount" type="number" name="amount" min="1" value="1">
-          </div>
-
-          {% if product.available? %}
-          <div class="add-to-cart">
-            <input type="submit" name="add" id="add" value="{{'product.add_to_cart' | t}}" class="purchase button">
-          </div>
-          {% else %}
-          <div class="add-to-cart">
-            <input type="button" name="add" id="add" value="{{'product.unavailable' | t}}" class="purchase button" disabled>
-          </div>
-          {% endif %}
-        </div>
-      </form>
-    </div>
-
-    {% if product.description != blank %}
-    <div class="product-description">{{ product.description }}</div>
-    {% endif %}
-
-    {% if section.settings.show_social_sharing == true %}
-    <div class="product-share">
-      share product options?
-    </div>
-    {% endif %}
-
-  </div>
-
 </section>

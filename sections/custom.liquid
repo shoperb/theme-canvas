@@ -1,19 +1,21 @@
-<section data-section-id="{{section.id}}" data-type="custom" class="not-full-screen">
+<section data-section-id="{{section.id}}" data-type="custom">
+  <div class="not-full-screen">
 
-  {% if section.settings.title != blank %}
-  <h2 class="general-title">{{ section.settings.title }}</h2>
-  {% endif %}
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{ section.settings.title }}</h2>
+    {% endif %}
 
-  {% if section.blocks.size > 0 %}
-  <ul>
-    {% for block in section.blocks %}
+    {% if section.blocks.size > 0 %}
+    <ul>
+      {% for block in section.blocks %}
 
-    <li class="custom-width-{{ block.settings.section_width }} v-align-{{ block.settings.vertical_alignment }}">
-      {% assign file = 'custom_' | append: block.settings.type %}
-      {% section file %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+      <li class="custom-width-{{ block.settings.section_width }} v-align-{{ block.settings.vertical_alignment }}">
+        {% assign file = 'custom_' | append: block.settings.type %}
+        {% section file %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
+  </div>
 </section>

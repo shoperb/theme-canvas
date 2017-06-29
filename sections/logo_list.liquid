@@ -1,27 +1,29 @@
-<section data-section-id="{{section.id}}" data-type="logo-list" class="divide-by-4 not-full-screen">
+<section data-section-id="{{section.id}}" data-type="logo-list" class="divide-by-4">
+  <div class="not-full-screen">
 
-  {% if section.settings.title != blank %}
-  <h2 class="general-title">{{ section.settings.title }}</h2>
-  {% endif %}
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{ section.settings.title }}</h2>
+    {% endif %}
 
-  {% if section.blocks.size > 0 %}
-  <ul>
-	  {% for block in section.blocks %}
-    <li>
-      {% if block.settings.link != blank %}
-      <a class="product" href="">
-      {% endif %}
+    {% if section.blocks.size > 0 %}
+    <ul>
+      {% for block in section.blocks %}
+      <li>
+        {% if block.settings.link != blank %}
+        <a class="product" href="">
+        {% endif %}
 
-      {% if block.settings.image != blank %}
-        <img src="{{ block.settings.image }}">
-      {% endif %}
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image }}">
+        {% endif %}
 
-      {% if block.settings.link != blank %}
-      </a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+        {% if block.settings.link != blank %}
+        </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
+  </div>
 </section>

@@ -1,0 +1,31 @@
+{
+  "name": "Header",
+  "handle": "header",
+  "generic": false,
+  "settings": [
+    {
+      "type": "radio",
+      "handle": "align_logo",
+      "default": "left",
+      "options": [
+        {"value": "left", "label": "Left", "handle": "left"},
+        {"value": "center", "label": "Centered", "handle": "center"}
+      ]
+    },
+    {
+      "type": "image",
+      "handle": "logo",
+      "default": "images/preview.jpg"
+    },
+    {
+      "type": "text",
+      "handle": "logo_max_width",
+      "default": "100"
+    },
+    {
+      "type": "menu",
+      "handle": "menu",
+      "default": "header"
+    }
+  ]
+}

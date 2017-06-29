@@ -2,46 +2,48 @@
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
 
 {% if collection %}
-<section data-section-id="{{section.id}}" data-type="collection" class="divide-by-{{section.settings.per_row}} not-full-screen">
+<section data-section-id="{{section.id}}" data-type="collection" class="divide-by-{{section.settings.per_row}}">
+  <div class="not-full-screen">
 
-  {% if section.settings.title != blank %}
-  <h2 class="general-title">{{ section.settings.title }}</h2>
-  {% endif %}
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{ section.settings.title }}</h2>
+    {% endif %}
 
-  <ul>
-    {% for product in collection.products limit: limit %}
-    <li>
+    <ul>
+      {% for product in collection.products limit: limit %}
+      <li>
 
-      {% assign variant  = product.variants.first %}
+        {% assign variant  = product.variants.first %}
 
-      <a class="product" href="{{ product.url }}">
-        <div class="image" style="background-image: url('{{ product.image.size-480.url }}')"></div>
-        <h3 class="product-title">{{ product.name }}</h3>
+        <a class="product" href="{{ product.url }}">
+          <div class="image" style="background-image: url('{{ product.image.size-480.url }}')"></div>
+          <h3 class="product-title">{{ product.name }}</h3>
 
-        {% if product.vendor %}
-        <div class="product-vendor">{{ product.vendor.name }}</div>
-        {% endif %}
-
-        {% if product.available? %}
-        <div class="product-price">
-          <span class="money">{{ variant.current_price | money }}</span>
-          {% if variant.discount? %}
-          <span class="discount">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></span>
+          {% if product.vendor %}
+          <div class="product-vendor">{{ product.vendor.name }}</div>
           {% endif %}
-        </div>
-        {% else %}
-        <div class="not-available">{{'product.unavailable' | t}}</div>
-        {% endif %}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
 
-  {% if section.settings.show_button == true %}
-  <div class="buttons">
-    <a href="{{collection.url}}" role="button" class="button primary">View all</a>
+          {% if product.available? %}
+          <div class="product-price">
+            <span class="money">{{ variant.current_price | money }}</span>
+            {% if variant.discount? %}
+            <span class="discount">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></span>
+            {% endif %}
+          </div>
+          {% else %}
+          <div class="not-available">{{'product.unavailable' | t}}</div>
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if section.settings.show_button == true %}
+    <div class="buttons">
+      <a href="{{collection.url}}" role="button" class="button primary">View all</a>
+    </div>
+    {% endif %}
+
   </div>
-  {% endif %}
-
 </section>
 {% endif %}
