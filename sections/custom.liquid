@@ -10,11 +10,7 @@
 
     <li class="custom-width-{{ block.settings.section_width }} v-align-{{ block.settings.vertical_alignment }}">
       {% assign file = 'custom_' | append: block.settings.type %}
-      {% if block.settings.type == 'image' or block.settings.type == 'text' or block.settings.type == 'video' or block.settings.type == 'product' %}
       {% section file %}
-      {% else %}
-      <h3 class="collection-title">{{ block.settings.type }}</h3>
-      {% endif %}
     </li>
     {% endfor %}
   </ul>

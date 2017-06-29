@@ -534,6 +534,37 @@
             width: 100%;
           }
         }
+        &.custom-product {
+          h2.general-title {
+            text-align: left;
+          }
+        }
+        &.custom-collection {
+          position: relative;
+          padding-bottom: 100%;
+
+          a {
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            .collection-title {
+              text-align: center;
+              margin: 0;
+              padding: 20px;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              position: absolute;
+              transform: translateY(-50%);
+              box-sizing: border-box;
+            }
+          }
+        }
       }
     }
   }
