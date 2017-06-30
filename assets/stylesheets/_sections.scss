@@ -17,7 +17,7 @@ section[data-type] {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
-        padding: 30px;
+        padding: #{$default-padding}px;
         color: #ffffff;
       }
     }
@@ -125,8 +125,9 @@ section[data-type] {
   h2.general-title {
     text-align: left;
   }
-  .text {
-    padding: 30px;
+  .text,
+  .image {
+    padding: #{$default-padding}px;
   }
   &.image-on-left {
     flex-direction: row-reverse;
@@ -173,7 +174,7 @@ section[data-type] {
   .hero {
     display: table-cell;
     vertical-align: middle;
-    padding: 30px 0;
+    padding: #{$default-padding}px;
     position: relative;
   }
   .text {

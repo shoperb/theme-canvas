@@ -1,5 +1,5 @@
 $limited-content: '1200px';
-$default-padding: 10;
+$default-padding: 15;
 
 body {
   margin: 0;
@@ -18,8 +18,7 @@ a {
   margin: 0 auto;
 
   ul {
-    margin-left: -#{$default-padding}px !important;
-    margin-right: -#{$default-padding}px !important;
+    margin: -#{$default-padding}px;
   }
 }
 
