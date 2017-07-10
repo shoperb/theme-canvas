@@ -14,10 +14,10 @@ header#main-header {
   }
   &.logo-left {
     .logo {
-      @extend .grid-3;
+      //@extend .grid-3;
     }
     .main-menu {
-      @extend .grid-6;
+      //@extend .grid-6;
     }
     .language-selector {}
     .search {}

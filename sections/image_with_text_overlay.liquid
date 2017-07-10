@@ -2,24 +2,22 @@
 {% assign background_image = section.settings.image %}
 {% endif %}
 
-<section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="section-height {{section.settings.section_height}} image-align-{{section.settings.image_alignment}}{% if section.settings.text_size == 'large' %}text-large{% endif %}'" style="background-image: url('{{background_image}}'), url('{{ 'images/placeholder.svg' | asset_url }}')">
-  <div class="hero">
-    <div class="text">
-      {% if section.settings.title != blank %}
-      <h2 class="general-title">{{ section.settings.title | escape }}</h2>
-      {% endif %}
+<div data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="row full-width section-height {{section.settings.section_height}} image-align-{{section.settings.image_alignment}}{% if section.settings.text_size == 'large' %}text-large{% endif %}'" style="background-image: url('{{background_image}}'), url('{{ 'images/placeholder.svg' | asset_url }}')">
+  <section class="column hero">
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{ section.settings.title | escape }}</h2>
+    {% endif %}
 
-      {% if section.settings.text != blank %}
-      <div class="text-content general-text">
-      {{ section.settings.text }}
-      </div>
-      {% endif %}
-
-      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-      <a href="{{ section.settings.button_link }}"ole="button" class="button secondary">
-        {{ section.settings.button_label | escape }}
-      </a>
-      {% endif %}
+    {% if section.settings.text != blank %}
+    <div class="text-content general-text">
+    {{ section.settings.text }}
     </div>
-  </div>
-</section>
+    {% endif %}
+
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+    <a href="{{ section.settings.button_link }}"ole="button" class="button secondary">
+      {{ section.settings.button_label | escape }}
+    </a>
+    {% endif %}
+  </section>
+</div>

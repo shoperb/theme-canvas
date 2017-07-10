@@ -137,8 +137,11 @@ section[data-type] {
 [data-type=image-with-text-overlay] {
   background-repeat: no-repeat;
   background-size: cover;
-  display: table;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  text-align: center;
 }
 
 [data-type=slideshow] {
@@ -172,10 +175,7 @@ section[data-type] {
 [data-type=image-with-text-overlay],
 [data-type=slideshow] {
   .hero {
-    display: table-cell;
-    vertical-align: middle;
-    padding: #{$default-padding}px;
-    position: relative;
+
   }
   .text {
     margin: 0 auto;
@@ -318,7 +318,7 @@ section[data-type] {
       display: table;
 
       .testimonial {
-        @extend .grid-4;
+        //@extend .grid-4;
         padding: 30px;
         box-sizing: border-box;
         display: inline-block;
@@ -331,7 +331,7 @@ section[data-type] {
       }
     }
     .owl-item {
-      @extend .grid-4;
+      //@extend .grid-4;
 
       .testimonial {
         padding: 30px;

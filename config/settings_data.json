@@ -426,7 +426,7 @@
     "hero-1": {
       "type": "image_with_text_overlay",
       "settings": {
-        "image": "http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg",
+        "image": "http://sce.parsons.edu/wp-content/uploads/2010/03/Antonia_Targettie-Competition_IMG_0820.jpg",
         "image_alignment": "top left",
         "title": "Hello",
         "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
@@ -445,7 +445,7 @@
     "hero-2": {
       "type": "image_with_text_overlay",
       "settings": {
-        "image": "https://vignette2.wikia.nocookie.net/batman/images/4/49/MyCard_The_Joker.jpg/revision/latest?cb=20120815195525",
+        "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
         "image_alignment": "middle",
         "title": "My AD",
         "text": "<p>Look at what cool prodcuts I have.</p>",
