@@ -73,7 +73,7 @@
 <body class="template-{{template_name | replace: '_', '-'}}">
   {% include 'header' %}
 
-  <div class="main-content">
+  <div class="main-content clearfix">
   {% comment %}
   {% if template_name != 'index' %}
     {% include "crumbs" %}

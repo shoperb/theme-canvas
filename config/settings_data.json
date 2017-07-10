@@ -460,7 +460,7 @@
       "settings": {
         "title": "Featured products",
         "per_row": 3,
-        "rows": 2,
+        "rows": 3,
         "collection": "spring-summer-collection-2017",
         "show_button": true
       }

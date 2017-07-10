@@ -24,7 +24,6 @@ section[data-type] {
   }
 }
 [data-type=image-gallery],
-[data-type=collection],
 [data-type=collection-list],
 [data-type=testimonials],
 [data-type=text-columns-with-images],
@@ -44,7 +43,6 @@ section[data-type] {
   }
 }
 [data-type=image-gallery],
-[data-type=collection],
 [data-type=collection-list],
 [data-type=text-columns-with-images] {
   &.divide-by-1 {
@@ -160,13 +158,10 @@ section[data-type] {
       background-size: cover;
 
       iframe {
-        position: absolute;
-        top: 50%;
-        left: 50%;
         width: 100%;
         height: 100%;
         pointer-events: none;
-        transform: translate(-50%, -50%);
+        @include centerize;
       }
     }
   }
@@ -184,7 +179,6 @@ section[data-type] {
   }
 }
 
-[data-type=collection],
 [data-type=collection-list] {
   ul {
     @extend .clearfix;
@@ -196,29 +190,35 @@ section[data-type] {
   }
 }
 [data-type=collection] {
-  ul {
-    a {
-      display: block;
+  .column {
+    padding-top: #{$default-padding}px;
+    padding-bottom: #{$default-padding}px;
+  }
+  a {
+    display: block;
 
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    li {
-      .image {
-        width: 100%;
-        padding-top: 100%;
-        background-position: center center;
-        background-size: cover;
-      }
-      h3 {
-        margin: 0;
-      }
-      .product-title {}
-      .product-vendor {}
-      .product-price {}
+    &:hover {
+      opacity: 0.7;
     }
   }
+  .image {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      @include centerize;
+    }
+  }
+  h3 {
+    margin: 0;
+  }
+  .product-title {}
+  .product-vendor {}
+  .product-price {}
 }
 [data-type=collection-list] {
   ul {
@@ -239,11 +239,8 @@ section[data-type] {
 
         h3 {
           padding: 10px;
-          position: absolute;
           text-align: center;
-          left: 50%;
-          top: 50%;
-          @include transform(translate(-50%, -50%));
+          @include centerize;
           width: 100%;
           box-sizing: border-box;
           color: #ffffff;

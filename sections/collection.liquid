@@ -2,48 +2,69 @@
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
 
 {% if collection %}
-<section data-section-id="{{section.id}}" data-type="collection" class="divide-by-{{section.settings.per_row}}">
-  <div class="not-full-screen">
+<section data-section-id="{{section.id}}" data-type="collection">
 
-    {% if section.settings.title != blank %}
-    <h2 class="general-title">{{ section.settings.title }}</h2>
-    {% endif %}
-
-    <ul>
-      {% for product in collection.products limit: limit %}
-      <li>
-
-        {% assign variant  = product.variants.first %}
-
-        <a class="product" href="{{ product.url }}">
-          <div class="image" style="background-image: url('{{ product.image.size-480.url }}')"></div>
-          <h3 class="product-title">{{ product.name }}</h3>
-
-          {% if product.vendor %}
-          <div class="product-vendor">{{ product.vendor.name }}</div>
-          {% endif %}
-
-          {% if product.available? %}
-          <div class="product-price">
-            <span class="money">{{ variant.current_price | money }}</span>
-            {% if variant.discount? %}
-            <span class="discount">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></span>
-            {% endif %}
-          </div>
-          {% else %}
-          <div class="not-available">{{'product.unavailable' | t}}</div>
-          {% endif %}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-
-    {% if section.settings.show_button == true %}
-    <div class="buttons">
-      <a href="{{collection.url}}" role="button" class="button primary">View all</a>
+  {% if section.settings.title != blank %}
+  <div class="row">
+    <div class="column">
+      <h2 class="general-title">{{ section.settings.title }}</h2>
     </div>
-    {% endif %}
+  </div>
+  {% endif %}
+
+  {% for row in (1..section.settings.rows) %}
+  <div class="row">
+
+    {% for per_row in (1..section.settings.per_row) %}
+      {% assign add = row | minus: 1 | times: section.settings.per_row %}
+      {% assign product_position = per_row | plus: add %}
+
+      {% for product in collection.products offset: product_position limit: 1 %}
+        <div class="column">
+          {% assign variant  = product.variants.first %}
+
+          <a class="product" href="{{ product.url }}">
+            {% assign product_image = 'images/placeholder.svg' | asset_url %}
+            {% if product.image.size-480.url != blank %}
+            {% assign product_image = product.image.size-480.url %}
+            {% endif %}
+            <div class="image">
+              <img src="{{product_image}}">
+            </div>
+
+            <h3 class="product-title">{{ product.name }}</h3>
+
+            {% if product.vendor %}
+            <div class="product-vendor">{{ product.vendor.name }}</div>
+            {% endif %}
+
+            {% if product.available? %}
+            <div class="product-price">
+              <span class="money">{{ variant.current_price | money }}</span>
+              {% if variant.discount? %}
+              <span class="discount">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></span>
+              {% endif %}
+            </div>
+            {% else %}
+            <div class="not-available">{{'product.unavailable' | t}}</div>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
 
   </div>
+  {% endfor %}
+
+  {% if section.settings.show_button == true %}
+  <div class="row">
+    <div class="column">
+      <div class="buttons">
+        <a href="{{collection.url}}" role="button" class="button primary">View all</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
 </section>
 {% endif %}
