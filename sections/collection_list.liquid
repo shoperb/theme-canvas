@@ -1,24 +1,39 @@
-<section data-section-id="{{section.id}}" data-type="collection-list" class="divide-by-{{section.settings.grid}}">
-  <div class="not-full-screen">
+{% assign large_class_offset = '' %}
 
-    {% if section.settings.title != blank %}
-    <h2 class="general-title">{{section.settings.title}}</h2>
-    {% endif %}
+{% case section.blocks.size %}
+  {% when 1 %}
+    {% assign large_class = 'large-20' %}
+  {% when 2 %}
+    {% assign large_class = 'large-10' %}
+  {% when 3 %}
+    {% assign large_class = 'large-6' %}
+    {% assign large_class_offset = 'large-offset-1' %}
+  {% when 4 %}
+    {% assign large_class = 'large-5' %}
+  {% else %}
+    {% assign large_class = 'large-4' %}
+{% endcase %}
 
-    {% if section.blocks.size > 0 %}
-    <ul>
-      {% for block in section.blocks %}
+<section data-section-id="{{section.id}}" data-type="collection-list">
+  {% if section.settings.title != blank %}
+  <div class="row">
+    <div class="column">
+      <h2 class="general-title">{{section.settings.title}}</h2>
+    </div>
+  </div>
+  {% endif %}
 
+  {% if section.blocks.size > 0 %}
+  <div class="row">
+    {% for block in section.blocks %}
+    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{large_class_offset}}{% endif %} column">
       {% assign collection = collections[block.settings.collection] %}
 
-      <li>
-        <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
-          <h3 class="collection-title">{{collection.name}}</h3>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
+      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+        <h3 class="collection-title">{{collection.name}}</h3>
+      </a>
+    </div>
+    {% endfor %}
   </div>
+  {% endif %}
 </section>

@@ -1,5 +1,6 @@
 {
   "name": "Collection list",
+  "max_blocks": 5,
   "settings": [
     {
       "type": "text",

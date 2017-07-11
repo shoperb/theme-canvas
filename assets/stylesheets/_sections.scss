@@ -25,7 +25,6 @@ section[data-type] {
     }
   }
 }
-[data-type=collection-list],
 [data-type=testimonials],
 [data-type=text-columns-with-images],
 [data-type=logo-list],
@@ -43,7 +42,6 @@ section[data-type] {
   }
 }
 [data-type=image-gallery],
-[data-type=collection-list],
 [data-type=text-columns-with-images] {
   &.divide-by-1 {
     li {
@@ -258,16 +256,6 @@ section[data-type] {
   }
 }
 
-[data-type=collection-list] {
-  ul {
-    @extend .clearfix;
-
-    li {
-      padding: 10px;
-      box-sizing: border-box;
-    }
-  }
-}
 [data-type=collection] {
   .column, .columns {
     padding-top: #{$default-padding}px;
@@ -303,33 +291,24 @@ section[data-type] {
   .product-price {}
 }
 [data-type=collection-list] {
-  ul {
+  .column, .columns {
     text-align: center;
 
-    li {
-      float: none;
-      display: inline-block;
-      margin-left: -4px;
+    a {
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
 
-      a {
-        display: block;
-        width: 100%;
-        padding-top: 100%;
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-
-        h3 {
-          padding: 10px;
-          text-align: center;
-          @include centerize;
-          width: 100%;
-          box-sizing: border-box;
-          color: #ffffff;
-        }
-        &:hover {
-          opacity: 0.7;
-        }
+      h3 {
+        padding: #{$default-padding}px;
+        @include centerize;
+        color: #ffffff;
+      }
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
