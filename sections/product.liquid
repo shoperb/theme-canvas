@@ -20,7 +20,7 @@
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
   <div class="row">
-    <div class="small-20 {{image_class}} column image">
+    <div class="small-20 medium-10 {{image_class}} column image">
       {% if product.image.size-480.url != blank %}
       <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
       {% else %}
@@ -28,7 +28,7 @@
       {% endif %}
     </div>
 
-    <div class="small-20 {{text_class}} column product">
+    <div class="small-20 medium-10 {{text_class}} column product">
       <h2 class="product-title">{{product.name}}</h2>
 
       {% if default_variant.sku %}

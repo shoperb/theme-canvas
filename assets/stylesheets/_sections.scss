@@ -353,33 +353,17 @@ section[data-type] {
 }
 
 [data-type=testimonials] {
-  .owl-carousel {
-    @extend .clearfix;
+  cursor: pointer;
+
+  .testimonial {
+    padding: #{$default-padding}px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
     text-align: center;
 
-    &:not(.owl-testimonials) {
-      display: table;
-
-      .testimonial {
-        //@extend .grid-4;
-        padding: 30px;
-        box-sizing: border-box;
-        display: inline-block;
-        margin-left: -4px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        display: table-cell;
-      }
-    }
-    .owl-item {
-      //@extend .grid-4;
-
-      .testimonial {
-        padding: 30px;
-      }
-    }
     .testimonial-author {
       padding: 20px 0 0;
     }
