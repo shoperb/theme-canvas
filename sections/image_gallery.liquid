@@ -1,5 +1,3 @@
-{% assign large_class_offset = '' %}
-
 {% case section.blocks.size %}
   {% when 1 %}
     {% assign large_class = 'large-20' %}
@@ -7,7 +5,7 @@
     {% assign large_class = 'large-10' %}
   {% when 3 %}
     {% assign large_class = 'large-6' %}
-    {% assign large_class_offset = 'large-offset-1' %}
+    {% assign offset_class = 'large-offset-1' %}
   {% else %}
     {% assign large_class = 'large-5' %}
 {% endcase %}
@@ -16,7 +14,7 @@
 <section data-section-id="{{section.id}}" data-type="image-gallery">
   <div class="row full-width">
     {% for block in section.blocks %}
-    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{large_class_offset}}{% endif %} column image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
+    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{offset_class}}{% endif %} column image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
       {% if block.settings.caption %}
       <span>{{block.settings.caption}}</span>
       {% endif %}

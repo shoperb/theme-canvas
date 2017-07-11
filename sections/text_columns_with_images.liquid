@@ -1,41 +1,47 @@
-{% assign text_column_class = 'divide-by-3' %}
-{% if section.blocks.size == 1 %}
-{% assign text_column_class = 'divide-by-1' %}
-{% elsif section.blocks.size == 2 or section.blocks.size == 4 %}
-{% assign text_column_class = 'divide-by-2' %}
-{% elsif section.blocks.size == 5 %}
-{% assign text_column_class = 'divide-by-5' %}
-{% endif %}
+{% case section.blocks.size %}
+  {% when 1 %}
+    {% assign large_class = 'large-20' %}
+  {% when 'medium' %}
+    {% assign image_class = 'large-10' %}
+    {% assign text_class = 'large-10' %}
+  {% when 'small' %}
+    {% assign image_class = 'large-5' %}
+    {% assign text_class = 'large-15' %}
+  {% else %}
+    {% assign large_class = 'large-6' %}
+    {% assign offset_class = ' large-offset-1 medium-offset-1' %}
+{% endcase %}
 
 <section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="{{text_column_class}} text-alignment-{{section.settings.text_alignment}}">
-  <div class="not-full-screen">
-
-    {% if section.settings.title != blank %}
-    <h2 class="general-title">{{section.settings.title}}</h2>
-    {% endif %}
-
-    {% if section.blocks.size > 0 %}
-    <ul>
-      {% for block in section.blocks %}
-      <li>
-        <div class="text-column">
-          {% if block.settings.image != blank %}
-          <img src="{{block.settings.image}}">
-          {% endif %}
-
-          {% if block.settings.title != blank %}
-          <h3 class="general-title">{{block.settings.title}}</h3>
-          {% endif %}
-
-          {% if block.settings.text != blank %}
-          <div class="text-column-text">{{block.settings.text}}</div>
-          {% endif %}
-
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
+  {% if section.settings.title != blank %}
+  <div class="row">
+    <div class="column">
+      <h2 class="general-title">{{section.settings.title}}</h2>
+    </div>
   </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+  <div class="row">
+    {% for block in section.blocks %}
+    {% assign check_first = forloop.index | modulo: 3 %}
+    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %}{{offset_class}}{% endif %} column">
+      <div class="text-column">
+        {% if block.settings.image != blank %}
+        <img src="{{block.settings.image}}">
+        {% endif %}
+
+        {% if block.settings.title != blank %}
+        <h3 class="general-title">{{block.settings.title}}</h3>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+        <div class="text-column-text">{{block.settings.text}}</div>
+        {% endif %}
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>

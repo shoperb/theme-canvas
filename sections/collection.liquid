@@ -1,13 +1,12 @@
 {% assign collection = collections[section.settings.collection] %}
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
-{% assign large_class_offset = '' %}
 
 {% case section.settings.per_row %}
   {% when 2 %}
     {% assign large_class = 'large-10' %}
   {% when 3 %}
     {% assign large_class = 'large-6' %}
-    {% assign large_class_offset = 'large-offset-1' %}
+    {% assign offset_class = 'large-offset-1' %}
   {% when 4 %}
     {% assign large_class = 'large-5' %}
   {% else %}
@@ -28,7 +27,7 @@
   <div class="row">
   {% for product in collection.products limit: limit %}
     {% assign check_first = forloop.index | modulo: section.settings.per_row %}
-    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{large_class_offset}}{% endif %} column">
+    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{offset_class}}{% endif %} column">
       {% assign variant  = product.variants.first %}
 
       <a class="product" href="{{product.url}}">

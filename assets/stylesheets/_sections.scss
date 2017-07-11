@@ -25,8 +25,6 @@ section[data-type] {
     }
   }
 }
-[data-type=testimonials],
-[data-type=text-columns-with-images],
 [data-type=logo-list],
 [data-type=custom] {
   ul {
@@ -41,35 +39,6 @@ section[data-type] {
     }
   }
 }
-[data-type=image-gallery],
-[data-type=text-columns-with-images] {
-  &.divide-by-1 {
-    li {
-      width: 100%;
-    }
-  }
-  &.divide-by-2 {
-    li {
-      width: 50%;
-    }
-  }
-  &.divide-by-3 {
-    li {
-      width: 33.33333%;
-    }
-  }
-  &.divide-by-4 {
-    li {
-      width: 25%;
-    }
-  }
-  &.divide-by-5 {
-    li {
-      width: 20%;
-    }
-  }
-}
-
 .section-height {
   &.extra-small {
     height: 125px;
@@ -130,16 +99,6 @@ section[data-type] {
       width: 100%;
     }
   }
-}
-
-[data-type=image-with-text-overlay] {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
 }
 
 [data-type=slideshow] {
@@ -249,6 +208,12 @@ section[data-type] {
 }
 
 [data-type=image-with-text-overlay] {
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
   .text {
     margin: 0 auto;
     max-width: 75%;
@@ -315,22 +280,6 @@ section[data-type] {
 }
 
 [data-type=image-with-text] {
-  .not-full-screen {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-align: center;
-    @include align-items(center);
-    flex-direction: row;
-
-    > * {
-      @include flex(0 1 50%);
-    }
-  }
   .image {
     img {
       width: 100%;
@@ -371,46 +320,17 @@ section[data-type] {
 }
 
 [data-type=text-columns-with-images] {
+  text-align: left;
+
   &.text-alignment-center {
     text-align: center;
   }
-  ul {
-    @extend .clearfix;
+  .text-column {
+    padding-top: #{$default-padding}px;
+    padding-bottom: #{$default-padding}px;
 
-    li {
-      padding: 10px;
-      box-sizing: border-box;
-      width: 33.33333%;
-
-      .text-column {
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-  &.divide-by-2 {
-    ul {
-      li {
-        &:nth-child(2n + 1) {
-          clear: left;
-        }
-      }
-    }
-  }
-  &.divide-by-5 {
-    ul {
-      li {
-        width: 33.33333%;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          width: 50%;
-        }
-        &:nth-child(3) {
-          clear: left;
-        }
-      }
+    img {
+      width: 100%;
     }
   }
 }
