@@ -123,12 +123,14 @@ section[data-type] {
   h2.general-title {
     text-align: left;
   }
-  .text,
-  .image {
+  .column, .columns {
     padding: #{$default-padding}px;
-  }
-  &.image-on-left {
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -256,8 +258,7 @@ section[data-type] {
   }
 }
 
-[data-type=image-with-text],
-[data-type=product] {
+[data-type=image-with-text] {
   .not-full-screen {
     display: -webkit-flex;
     display: -ms-flexbox;

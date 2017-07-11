@@ -510,7 +510,7 @@
     "image-with-text": {
       "type": "image_with_text",
       "settings": {
-        "image": "https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg",
+        "image": "http://www.lighting.philips.com/b-dam/b2b-li/en_AA/products/entertainment-lighting/products/vari-lite/vlz-wash/VLZ_Wash_RFT_sRGB-hi-res.jpg",
         "select_horizontal_alignment": "image-on-right",
         "title": "Image with text",
         "text": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",

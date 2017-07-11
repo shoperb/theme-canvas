@@ -16,7 +16,7 @@
 <section data-section-id="{{section.id}}" data-type="image-gallery">
   <div class="row full-width">
     {% for block in section.blocks %}
-    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{large_class_offset}}{% endif %} column image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}')">
+    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{large_class_offset}}{% endif %} column image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
       {% if block.settings.caption %}
       <span>{{block.settings.caption}}</span>
       {% endif %}

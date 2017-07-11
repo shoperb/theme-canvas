@@ -2,10 +2,13 @@
 {% if section.settings.button_link contains 'http://' or section.settings.button_link contains 'https://' %}
 {% assign outer_url = ' target="_blank"' %}
 {% endif %}
+{% if section.settings.select_horizontal_alignment == 'image-on-left' %}
+{% assign ordering = ' small-order-1' %}
+{% endif %}
 
-<section data-section-id="{{section.id}}" data-type="image-with-text" class="{{section.settings.image_horizontal_alignment}}">
-  <div class="not-full-screen">
-    <div class="text">
+<section data-section-id="{{section.id}}" data-type="image-with-text">
+  <div class="row">
+    <div class="small-20 medium-10{{ordering}} column">
       <h2 class="general-title">{{section.settings.title}}</h2>
       <div class="text-content general-text">{{section.settings.text}}</div>
 
@@ -16,7 +19,7 @@
     </div>
 
     {% if section.settings.image != blank %}
-    <div class="image">
+    <div class="small-20 medium-10 column">
       <img src="{{section.settings.image}}">
     </div>
     {% endif %}
