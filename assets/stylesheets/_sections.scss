@@ -145,35 +145,112 @@ section[data-type] {
 }
 
 [data-type=slideshow] {
-  .owl-carousel {
-    @extend .clearfix;
+  .slideshow {
+    text-align: center;
     height: 100%;
+  }
+  .slick-arrow {
+    z-index: 9;
+    width: 25px;
+    height: 25px;
+    @include centerize;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 3px;
+      background: #ffffff;
+      transform: rotate(-45deg);
+      left: 5px;
+      top: 5px;
+    }
+    &:before {
+      transform: rotate(45deg);
+      top: 15px;
+    }
+    &.slick-prev {
+      right: 20px;
+      left: auto;
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+    &.slick-next {
+      left: 20px;
+    }
+    .slick-nexy {
+      width: 25px;
+      height: 30px;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    bottom: 15px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 
-    .slide {
-      display: table;
+    li {
+      float: left;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      margin: 0 5px;
+
+      button {
+        opacity: 0;
+        cursor: pointer;
+      }
+      &.slick-active {
+        background: rgba(255, 255, 255, 0.7);
+      }
+      &:hover {
+        border-color: #798991;
+      }
+    }
+  }
+  .slick-slider {
+    .slick-track,
+    .slick-list {
       height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
+    }
+    .slide {
       background-size: cover;
 
-      iframe {
+      a {
         width: 100%;
         height: 100%;
-        pointer-events: none;
+        display: flex;
+      }
+      .flex-container {
+        height: 100%;
+        position: relative;
+      }
+      .text {
+        padding: #{$default-padding}px;
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+      }
+      iframe {
         @include centerize;
       }
     }
   }
 }
 
-[data-type=image-with-text-overlay],
-[data-type=slideshow] {
-  .hero {
-
-  }
+[data-type=image-with-text-overlay] {
   .text {
     margin: 0 auto;
     max-width: 75%;

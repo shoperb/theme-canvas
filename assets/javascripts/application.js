@@ -1,22 +1,16 @@
 $(document).ready(function(){
-  $('.owl-slideshow').each(function() {
-    var auto_rorate = ($(this).attr('data-auto-rotate') == 'true'),
-        speed = $(this).attr('data-speed');
+  $('.slideshow').each(function() {
+    var autoPlay = $(this).data('autoplay'),
+        animationSpeed = $(this).data('animation-speed');
 
-    $(this).owlCarousel({
-      items: 1,
-      nav: true,
-      loop: true,
-      autoplay: auto_rorate,
-      navText : ["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
-      autoplayTimeout: speed
+    $(this).slick({
+      dots: true,
+      autoplay: autoPlay,
+      prevArrow: '<div class="slick-prev"></div>',
+      nextArrow: '<div class="slick-next"></div>',
+      autoplaySpeed: animationSpeed * 1000,
+      lazyLoad: 'ondemand'
     });
-  });
-
-  $('.owl-testimonials').owlCarousel({
-    items: 3,
-    loop: true,
-    nav: false
   });
 
   setImageType();
@@ -29,20 +23,13 @@ window.onresize = function() {
 };
 
 function slideVideoResize() {
-  $('.owl-carousel').each(function() {
+  $('.slideshow').each(function() {
     // set ratio to 16:9 as per YouTube
-    var h = $('iframe', this).width() * 9 / 16;
-
-    if (h < $('iframe', this).height()) {
-      $('iframe', this).width($('iframe', this).height() * 16 / 9);
-    } else {
-      $('iframe', this).height(h);
-    }
+    $('iframe', this).width($(this).width());
+    $('iframe', this).height($(this).width() * 9 / 16);
   });
 }
 function customVideoSize() {
-  var ratio;
-
   $('[data-video-full-size]').each(function() {
     $(this).height($(this).width() * 360 / 640);
   });

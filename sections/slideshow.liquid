@@ -1,28 +1,16 @@
-{% comment %}
-
-we can use https://daneden.github.io/animate.css/
-implementation https://owlcarousel2.github.io/OwlCarousel2/demos/animate.html
-
-{% endcomment %}
-
 {% if section.blocks.size > 0 %}
-<section data-section-id="{{section.id}}" data-type="slideshow" class="section-height large">
-	<div class="owl-carousel{% if section.blocks.size > 1 %} owl-slideshow{% endif %}" data-auto-rotate="{{section.settings.auto_rotate}}" data-speed="{{section.settings.speed | times: 1000}}">
+<section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}">
+	<div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}">
     {% for block in section.blocks %}
-
-    {% if block.settings.slide_link != blank %}
-    {% assign slide_start = 'a href="' | append: block.settings.slide_link | append: '"' %}
-    {% assign slide_end = 'a' %}
-    {% else %}
-    {% assign slide_start = 'div' %}
-    {% assign slide_end = 'div' %}
-    {% endif %}
-
-    <{{slide_start}} class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}')"{% endif %}>
-      {% if block.settings.slide_type == 'video' %}
-      <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+    <div class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}');"{% endif %}>
+      {% if block.settings.slide_link != blank %}
+      <a href="{{block.settings.slide_link}}">
+      {% else %}
+      <div class="flex-container">
       {% endif %}
-      <div class="hero">
+        {% if block.settings.slide_type == 'video' %}
+        <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
         <div class="text">
           {% if block.settings.heading %}
           <h2 class="general-title">{{block.settings.heading}}</h2>
@@ -31,8 +19,12 @@ implementation https://owlcarousel2.github.io/OwlCarousel2/demos/animate.html
           <div class="text-content general-text">{{block.settings.subheading}}</div>
           {% endif %}
         </div>
+      {% if block.settings.slide_link != blank %}
+      </a>
+      {% else %}
       </div>
-    </{{slide_end}}>
+      {% endif %}
+    </div>
     {% endfor %}
 	</div>
 </section>

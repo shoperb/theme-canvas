@@ -522,7 +522,7 @@
       "type": "slideshow",
       "settings": {
         "auto_rotate": true,
-        "speed": "3",
+        "animation_speed": "4",
         "section_height": "medium",
         "text_size": "medium"
       },
@@ -531,8 +531,8 @@
           "type": "slide",
           "settings": {
             "slide_type": "image",
-            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
-            "image_alignment": "top-left",
+            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image_alignment": "bottom-right",
             "heading": "Image slide",
             "subheading": "Tell your brand's story through video and images",
             "slide_link": "http://www.google.com"
@@ -551,8 +551,8 @@
           "type": "slide",
           "settings": {
             "slide_type": "image",
-            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
-            "image_alignment": "top-left",
+            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image_alignment": "center",
             "heading": "Image slide 333",
             "subheading": "Tell your brand's story through video and images 333"
           }
