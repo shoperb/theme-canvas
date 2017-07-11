@@ -1,8 +1,8 @@
-<section data-section-id="{{section.id}}" data-type="collection-list" class="divide-by-{{ section.settings.grid }}">
+<section data-section-id="{{section.id}}" data-type="collection-list" class="divide-by-{{section.settings.grid}}">
   <div class="not-full-screen">
 
     {% if section.settings.title != blank %}
-    <h2 class="general-title">{{ section.settings.title }}</h2>
+    <h2 class="general-title">{{section.settings.title}}</h2>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
@@ -12,8 +12,8 @@
       {% assign collection = collections[block.settings.collection] %}
 
       <li>
-        <a class="collection" href="{{ collection.url }}" style="background-image: {% if collection.image %}url('{{ collection.image }}'), {% endif %}url({{ 'images/placeholder.svg' | asset_url }})">
-          <h3 class="collection-title">{{ collection.name }}</h3>
+        <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+          <h3 class="collection-title">{{collection.name}}</h3>
         </a>
       </li>
       {% endfor %}

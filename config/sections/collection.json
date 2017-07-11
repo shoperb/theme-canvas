@@ -8,7 +8,7 @@
     },
     {
       "type": "select",
-      "handle": "grid",
+      "handle": "per_row",
       "default": "3",
       "options": [
         {

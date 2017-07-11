@@ -509,7 +509,7 @@ template {
       display: block !important; } }
 
 .row {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
   display: -ms-flexbox;
@@ -551,6 +551,7 @@ template {
       flex: 1 1 0px;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  box-sizing: border-box;
   min-width: 0; }
 
 .column.row.row, .row.row.columns {

@@ -469,7 +469,7 @@
       "type": "blog_posts",
       "settings": {
         "title": "Blog posts",
-        "grid": 3,
+        "grid": 8,
         "show_author": false,
         "show_date": false,
         "show_button": true

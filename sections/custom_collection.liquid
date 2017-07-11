@@ -1,9 +1,9 @@
 {% assign collection = collections[block.settings.collection] %}
 
 {% if collection %}
-<div class="custom-section custom-{{ block.settings.type }}" itemtype="http://schema.org/Product">
-  <a class="collection" href="{{ collection.url }}" style="background-image: {% if collection.image %}url('{{ collection.image }}'), {% endif %}url({{ 'images/placeholder.svg' | asset_url }})">
-    <h3 class="collection-title">{{ collection.name }}</h3>
+<div class="custom-section custom-{{block.settings.type}}" itemtype="http://schema.org/Product">
+  <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+    <h3 class="collection-title">{{collection.name}}</h3>
   </a>
 </div>
 {% endif %}

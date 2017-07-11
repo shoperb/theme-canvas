@@ -1,4 +1,4 @@
-<header class="main-header first-header clearfix" data-section-id="{{ section.id }}">
+<header class="main-header first-header clearfix" data-section-id="{{section.id}}">
   <div class="main-container">
     <div class="ui grid">
       <div class="eight wide column header-contact-container">
@@ -31,11 +31,11 @@
 <header class="main-header second-header clearfix">
   <div class="main-container">
     <div class="eight wide column">
-      <div class="logo" style="text-align: {{ section.settings.align_logo }};">
+      <div class="logo" style="text-align: {{section.settings.align_logo}};">
 
         {% if section.settings.logo != blank %}
-          {{ section.settings.logo }}
-          {{ section.settings.logo | asset_url | image_tag: shop.name | link_to_root }}
+          {{section.settings.logo}}
+          {{section.settings.logo | asset_url | image_tag: shop.name | link_to_root}}
         {% else %}
           <a href="/">{{shop.name}}</a>
         {% endif %}

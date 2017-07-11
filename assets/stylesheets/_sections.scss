@@ -190,7 +190,8 @@ section[data-type] {
   }
 }
 [data-type=collection] {
-  .column {
+  .column,
+  .columns {
     padding-top: #{$default-padding}px;
     padding-bottom: #{$default-padding}px;
   }

@@ -6,16 +6,16 @@
   <div class="not-full-screen">
 
     {% if section.settings.title != blank %}
-    <h2 class="general-title">{{ section.settings.title }}</h2>
+    <h2 class="general-title">{{section.settings.title}}</h2>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
     <div class="owl-carousel{{carousel_class}}">
       {% for block in section.blocks %}
       <div class="testimonial">
-        <div class="testimonial-quote">{{ block.settings.quote }}</div>
+        <div class="testimonial-quote">{{block.settings.quote}}</div>
         {% if block.settings.author %}
-        <div class="testimonial-author">{{ block.settings.author}}</div>
+        <div class="testimonial-author">{{block.settings.author}}</div>
         {% endif %}
       </div>
       {% endfor %}

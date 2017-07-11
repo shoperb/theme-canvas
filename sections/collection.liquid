@@ -1,5 +1,18 @@
 {% assign collection = collections[section.settings.collection] %}
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
+{% assign large_class_offset = '' %}
+
+{% case section.settings.per_row %}
+  {% when 2 %}
+    {% assign large_class = 'large-10' %}
+  {% when 3 %}
+    {% assign large_class = 'large-6' %}
+    {% assign large_class_offset = 'large-offset-1' %}
+  {% when 4 %}
+    {% assign large_class = 'large-5' %}
+  {% else %}
+    {% assign large_class = 'large-4' %}
+{% endcase %}
 
 {% if collection %}
 <section data-section-id="{{section.id}}" data-type="collection">
@@ -7,54 +20,46 @@
   {% if section.settings.title != blank %}
   <div class="row">
     <div class="column">
-      <h2 class="general-title">{{ section.settings.title }}</h2>
+      <h2 class="general-title">{{section.settings.title}}</h2>
     </div>
   </div>
   {% endif %}
 
-  {% for row in (1..section.settings.rows) %}
   <div class="row">
+  {% for product in collection.products limit: limit %}
+    {% assign check_first = forloop.index | modulo: section.settings.per_row %}
+    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{large_class_offset}}{% endif %} columns">
+      {% assign variant  = product.variants.first %}
 
-    {% for per_row in (1..section.settings.per_row) %}
-      {% assign add = row | minus: 1 | times: section.settings.per_row %}
-      {% assign product_position = per_row | plus: add %}
-
-      {% for product in collection.products offset: product_position limit: 1 %}
-        <div class="column">
-          {% assign variant  = product.variants.first %}
-
-          <a class="product" href="{{ product.url }}">
-            {% assign product_image = 'images/placeholder.svg' | asset_url %}
-            {% if product.image.size-480.url != blank %}
-            {% assign product_image = product.image.size-480.url %}
-            {% endif %}
-            <div class="image">
-              <img src="{{product_image}}">
-            </div>
-
-            <h3 class="product-title">{{ product.name }}</h3>
-
-            {% if product.vendor %}
-            <div class="product-vendor">{{ product.vendor.name }}</div>
-            {% endif %}
-
-            {% if product.available? %}
-            <div class="product-price">
-              <span class="money">{{ variant.current_price | money }}</span>
-              {% if variant.discount? %}
-              <span class="discount">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></span>
-              {% endif %}
-            </div>
-            {% else %}
-            <div class="not-available">{{'product.unavailable' | t}}</div>
-            {% endif %}
-          </a>
+      <a class="product" href="{{product.url}}">
+        {% assign product_image = 'images/placeholder.svg' | asset_url %}
+        {% if product.image.size-480.url != blank %}
+        {% assign product_image = product.image.size-480.url %}
+        {% endif %}
+        <div class="image">
+          <img src="{{product_image}}">
         </div>
-      {% endfor %}
-    {% endfor %}
 
-  </div>
+        <h3 class="product-title">{{product.name}}</h3>
+
+        {% if product.vendor %}
+        <div class="product-vendor">{{product.vendor.name}}</div>
+        {% endif %}
+
+        {% if product.available? %}
+        <div class="product-price">
+          <span class="money">{{variant.current_price | money}}</span>
+          {% if variant.discount? %}
+          <span class="discount">{{'product.was' | t}} <span class="money">{{product.price | money}}</span></span>
+          {% endif %}
+        </div>
+        {% else %}
+        <div class="not-available">{{'product.unavailable' | t}}</div>
+        {% endif %}
+      </a>
+    </div>
   {% endfor %}
+  </div>
 
   {% if section.settings.show_button == true %}
   <div class="row">

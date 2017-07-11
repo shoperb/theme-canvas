@@ -1,7 +1,7 @@
-<div class="custom-section custom-{{ block.settings.type }}">
+<div class="custom-section custom-{{block.settings.type}}">
   {% if block.settings.image != blank %}
-  <img src="{{ block.settings.image }}">
+  <img src="{{block.settings.image}}">
   {% else %}
-  <img src="{{ 'images/placeholder.svg' | asset_url }}">
+  <img src="{{'images/placeholder.svg' | asset_url}}">
   {% endif %}
 </div>

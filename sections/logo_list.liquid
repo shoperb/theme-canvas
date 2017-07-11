@@ -2,7 +2,7 @@
   <div class="not-full-screen">
 
     {% if section.settings.title != blank %}
-    <h2 class="general-title">{{ section.settings.title }}</h2>
+    <h2 class="general-title">{{section.settings.title}}</h2>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
@@ -14,7 +14,7 @@
         {% endif %}
 
         {% if block.settings.image != blank %}
-          <img src="{{ block.settings.image }}">
+          <img src="{{block.settings.image}}">
         {% endif %}
 
         {% if block.settings.link != blank %}
