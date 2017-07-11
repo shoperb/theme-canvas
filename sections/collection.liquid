@@ -28,7 +28,7 @@
   <div class="row">
   {% for product in collection.products limit: limit %}
     {% assign check_first = forloop.index | modulo: section.settings.per_row %}
-    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{large_class_offset}}{% endif %} columns">
+    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{large_class_offset}}{% endif %} column">
       {% assign variant  = product.variants.first %}
 
       <a class="product" href="{{product.url}}">

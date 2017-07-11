@@ -7,23 +7,24 @@ section[data-type] {
 }
 
 [data-type=image-gallery] {
-  ul {
-    li {
-      background-size: cover;
-      display: table;
-      width: 100%;
+  .row,
+  .column, .columns {
+    height: 100%;
+  }
+  .column, .columns {
+    text-align: center;
+    display: flex;
+    background-size: cover;
 
-      span {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        padding: #{$default-padding}px;
-        color: #ffffff;
-      }
+    span {
+      padding: #{$default-padding}px;
+      color: red;
+      justify-content: center;
+      align-self: center;
+      width: 100%;
     }
   }
 }
-[data-type=image-gallery],
 [data-type=collection-list],
 [data-type=testimonials],
 [data-type=text-columns-with-images],
@@ -189,8 +190,7 @@ section[data-type] {
   }
 }
 [data-type=collection] {
-  .column,
-  .columns {
+  .column, .columns {
     padding-top: #{$default-padding}px;
     padding-bottom: #{$default-padding}px;
   }

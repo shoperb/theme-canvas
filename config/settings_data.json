@@ -460,7 +460,7 @@
       "settings": {
         "title": "Featured products",
         "per_row": 3,
-        "rows": 3,
+        "rows": 1,
         "collection": "spring-summer-collection-2017",
         "show_button": true
       }
@@ -469,7 +469,7 @@
       "type": "blog_posts",
       "settings": {
         "title": "Blog posts",
-        "grid": 8,
+        "grid": 3,
         "show_author": false,
         "show_date": false,
         "show_button": true
@@ -484,15 +484,14 @@
         "image-1": {
           "type": "image",
           "settings": {
-            "image": "http://static.fjcdn.com/pictures/Joker+cat_ff8f4c_3504798.jpg",
-            "image_alignment": "bottom-middle",
-            "caption": "No caption! Haha, just kidding"
+            "image": "http://cdn6.bigcommerce.com/s-hp2bpo0/product_images/uploaded_images/herodock-product-hi-res.jpg?t=1471451966",
+            "image_alignment": "bottom-middle"
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "http://s2.quickmeme.com/img/b9/b92e98114c8dc9e14ba1ec91527edb0d9b0b581a24fd7d2d774b761c5d7acff5.jpg",
+            "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
             "image_alignment": "top-right",
             "caption": "asdasd"
           }
@@ -500,8 +499,9 @@
         "image-3": {
           "type": "image",
           "settings": {
-            "image": "https://i.ytimg.com/vi/X9r9sGYp708/hqdefault.jpg",
-            "image_alignment": "middle"
+            "image": "https://i.ytimg.com/vi/fNarH786HOk/maxresdefault.jpg",
+            "image_alignment": "middle",
+            "caption": "No caption! Haha, just kidding"
           }
         }
       },

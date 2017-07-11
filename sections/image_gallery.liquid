@@ -1,15 +1,27 @@
-{% assign image_count = section.blocks.size %}
+{% assign large_class_offset = '' %}
+
+{% case section.blocks.size %}
+  {% when 1 %}
+    {% assign large_class = 'large-20' %}
+  {% when 2 %}
+    {% assign large_class = 'large-10' %}
+  {% when 3 %}
+    {% assign large_class = 'large-6' %}
+    {% assign large_class_offset = 'large-offset-1' %}
+  {% else %}
+    {% assign large_class = 'large-5' %}
+{% endcase %}
 
 {% if section.blocks.size > 0 %}
-<section data-section-id="{{section.id}}" data-type="image-gallery" class="section-height {{section.settings.section_height}} divide-by-{{image_count}}">
-  <ul>
+<section data-section-id="{{section.id}}" data-type="image-gallery">
+  <div class="row full-width">
     {% for block in section.blocks %}
-    <li class="image-align-{{block.settings.image_alignment}}" style="background-image: url('{{block.settings.image}}')">
+    <div class="small-20 {{large_class}}{% if forloop.index != 1 %} {{large_class_offset}}{% endif %} column image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}')">
       {% if block.settings.caption %}
       <span>{{block.settings.caption}}</span>
       {% endif %}
-    </li>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 </section>
 {% endif %}
