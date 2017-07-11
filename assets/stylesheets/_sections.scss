@@ -28,7 +28,6 @@ section[data-type] {
 [data-type=testimonials],
 [data-type=text-columns-with-images],
 [data-type=logo-list],
-[data-type=blog-posts],
 [data-type=custom] {
   ul {
     margin: 0;
@@ -410,23 +409,6 @@ section[data-type] {
 }
 
 [data-type=blog-posts] {
-  ul {
-    @extend .clearfix;
-    text-align: center;
-
-    li {
-      float: none;
-      display: inline-block;
-      margin: 0 10px 0 6px;
-      width: calc(33.33333% - 20px);
-      text-align: left;
-      vertical-align: top;
-
-      .general-title {
-        text-align: left;
-      }
-    }
-  }
 }
 
 [data-type=newsletter] {
