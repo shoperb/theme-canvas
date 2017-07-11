@@ -1,12 +1,26 @@
 {% assign product = products[section.settings.product] %}
 {% assign default_variant = featured_product.variants.first %}
 
-<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
-  <div class="not-full-screen">
-    <meta itemprop="url" content="{{url.current_url}}">
-    <meta itemprop="image" content="{{product.image.size-2048.url}}">
+{% case section.settings.image_size %}
+  {% when 'large' %}
+    {% assign image_class = 'large-15' %}
+    {% assign text_class = 'large-5' %}
+  {% when 'medium' %}
+    {% assign image_class = 'large-10' %}
+    {% assign text_class = 'large-10' %}
+  {% when 'small' %}
+    {% assign image_class = 'large-5' %}
+    {% assign text_class = 'large-15' %}
+  {% else %}
+    {% assign image_class = 'large-20' %}
+    {% assign text_class = 'large-20' %}
+{% endcase %}
 
-    <div class="image">
+<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+  <meta itemprop="url" content="{{url.current_url}}">
+  <meta itemprop="image" content="{{product.image.size-2048.url}}">
+  <div class="row">
+    <div class="small-20 {{image_class}} column image">
       {% if product.image.size-480.url != blank %}
       <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
       {% else %}
@@ -14,7 +28,7 @@
       {% endif %}
     </div>
 
-    <div class="product">
+    <div class="small-20 {{text_class}} column product">
       <h2 class="product-title">{{product.name}}</h2>
 
       {% if default_variant.sku %}

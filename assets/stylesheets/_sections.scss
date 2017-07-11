@@ -340,29 +340,15 @@ section[data-type] {
 }
 
 [data-type=product] {
-  @include align-items(flex-start);
+  .image {
+    padding: #{$default-padding}px;
 
+    img {
+      width: 100%;
+    }
+  }
   .product {
-    padding: 30px;
-  }
-  &.image-size-small {
-    .image {
-      @include flex(0 1 25%);
-    }
-    .product {
-      @include flex(0 1 75%);
-    }
-  }
-  &.image-size-large {
-    .image {
-      @include flex(0 1 75%);
-    }
-    .product {
-      @include flex(0 1 25%);
-    }
-  }
-  &.image-size-full {
-    display: block;
+    padding: #{$default-padding}px;
   }
 }
 
