@@ -1,4 +1,14 @@
 {"et": {
+  "section.default.read_more": "Loe edasi",
+  "section.default.view_all": "Vaata kõiki",
+  "section.default.blog_post.blog_post_title": "Postituse pealkiri",
+  "section.default.blog_post.blog_post_author": "mr. Posti Autor",
+  "section.default.blog_post.blog_post_date": "01.02.2003",
+  "section.default.blog_post.blog_post_content": "Niipea, kui teil on mõni blogi postitus avalikustatud, saame neid siin näitama hakata. Võite juttu teha uutest toodetest, saabuvatest sündmustest või üleüldistest trendidest. Põhimõtteliselt - kõigest, mis meeldib või sobib",
+
+
+
+  //deprecated and need to be reviewd before using
   "navigation.previous": "Eelmine",
   "navigation.next": "Järgmine",
 

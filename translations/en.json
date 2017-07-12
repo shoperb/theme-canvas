@@ -1,4 +1,14 @@
 {"en": {
+  "section.default.read_more": "Read more",
+  "section.default.view_all": "View all",
+  "section.default.blog_post.blog_post_title": "Post's title",
+  "section.default.blog_post.blog_post_author": "mr. Post Author",
+  "section.default.blog_post.blog_post_date": "01.02.2003",
+  "section.default.blog_post.blog_post_content": "As soon as you publish some blog posts we can show them right here. You can share some info about new products, upcoming events or global trends. Basically - about everything and what ever suits you the most.",
+
+
+
+//deprecated and need to be reviewd before using
   "navigation.previous": "Previous",
   "navigation.next": "Next",
 
