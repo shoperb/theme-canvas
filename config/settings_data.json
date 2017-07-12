@@ -453,6 +453,7 @@
         "per_row": 3,
         "rows": 2,
         "collection": "spring-summer-collection-2017",
+        "show_vendor": true,
         "show_button": true
       }
     },

@@ -86,7 +86,8 @@ section[data-type] {
   }
 }
 [data-type=collection] {
-  a.product {
+  a.product,
+  .fake-link {
     display: block;
     padding: #{$default-padding}px;
 

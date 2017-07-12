@@ -1,4 +1,6 @@
+{% if section.settings.collection != blank %}
 {% assign collection = collections[section.settings.collection] %}
+{% endif %}
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
 
 {% case section.settings.per_row %}
@@ -12,7 +14,6 @@
     {% assign grid_class = 'desk--one-fifth' %}
 {% endcase %}
 
-{% if collection %}
 <section data-section-id="{{section.id}}" data-type="collection">
 
   {% if section.settings.title != blank %}
@@ -20,6 +21,7 @@
   {% endif %}
 
   <div class="grid">
+    {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
     {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       {% assign variant  = product.variants.first %}
@@ -38,7 +40,7 @@
 
         <h3 class="product-title" itemprop="name">{{product.name}}</h3>
 
-        {% if product.vendor %}
+        {% if product.vendor and section.settings.show_vendor %}
         <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
         {% endif %}
 
@@ -57,6 +59,26 @@
       </a>
     </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
     {% endfor %}
+    {% else %}
+
+    {% comment %} default view for builder {% endcomment %}
+
+    {% for product in (1..limit) %}
+    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+      <div class="product fake-link">
+        <div class="image">
+          <img src="{{'images/placeholder.svg' | asset_url}}">
+        </div>
+
+        <h3 class="product-title">Product name</h3>
+
+        <div class="product-price">
+          <span class="money">{{'14.95' | money}}</span>
+        </div>
+      </div>
+    </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
+    {% endfor %}
+    {% endif %}
   </div>
 
   {% if section.settings.show_button == true %}
@@ -66,4 +88,3 @@
   {% endif %}
 
 </section>
-{% endif %}
