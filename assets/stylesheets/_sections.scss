@@ -2,11 +2,9 @@ section[data-type] {
   max-width: #{$limited-max-width}px;
   margin: #{2 * $default-padding}px auto #{$default-padding}px;
   box-sizing: border-box;
-  padding: 0 #{$default-padding}px;
 
   &.full-width {
     max-width: 100%;
-    padding: 0;
   }
   &:first-of-type {
     margin-top: 0;
@@ -121,10 +119,15 @@ section[data-type] {
 }
 [data-type=blog-posts] {
   text-align: center;
+
+  .text-column {
+    padding: #{$default-padding}px;
+  }
 }
 [data-type=image-gallery] {
+  text-align: center;
+
   .grid__item {
-    text-align: center;
     background-size: cover;
 
     .caption-container {
@@ -139,6 +142,19 @@ section[data-type] {
         padding: #{$default-padding}px;
         color: #ffffff;
       }
+    }
+  }
+}
+[data-type=image-with-text] {
+  .grid__item {
+    vertical-align: middle;
+    padding: #{$default-padding}px;
+
+    h2.general-title {
+      text-align: left;
+    }
+    img {
+      width: 100%;
     }
   }
 }
@@ -160,20 +176,6 @@ section[data-type] {
   }
 }
 
-[data-type=image-with-text] {
-  h2.general-title {
-    text-align: left;
-  }
-  .column, .columns {
-    padding: #{$default-padding}px;
-    justify-content: center;
-    align-self: center;
-
-    img {
-      width: 100%;
-    }
-  }
-}
 
 [data-type=slideshow] {
   .row {
@@ -304,15 +306,6 @@ section[data-type] {
       &:hover {
         opacity: 0.7;
       }
-    }
-  }
-}
-
-[data-type=image-with-text] {
-  .image {
-    img {
-      width: 100%;
-      float: left;
     }
   }
 }

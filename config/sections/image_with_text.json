@@ -7,7 +7,7 @@
     },
     {
       "type": "select",
-      "handle": "select_horizontal_alignment",
+      "handle": "horizontal_alignment",
       "default": "image-on-right",
       "options": [
         {
@@ -23,12 +23,12 @@
     {
       "type": "text",
       "handle": "title",
-      "default": "Image with text overlay"
+      "default": "Image & text"
     },
     {
       "type": "richtext",
       "handle": "text",
-      "default": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review."
+      "default": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key."
     },
     {
       "type": "text",
