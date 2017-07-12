@@ -5,7 +5,11 @@
   "section.default.blog_post.blog_post_author": "mr. Posti Autor",
   "section.default.blog_post.blog_post_date": "01.02.2003",
   "section.default.blog_post.blog_post_content": "Niipea, kui teil on mõni blogi postitus avalikustatud, saame neid siin näitama hakata. Võite juttu teha uutest toodetest, saabuvatest sündmustest või üleüldistest trendidest. Põhimõtteliselt - kõigest, mis meeldib või sobib",
+  "section.default.collection.product_name": "Toote nimetus",
 
+  "product.was": "oli",
+  "product.unavailable": "Toode pole hetkel saadaval",
+  "product.unavailable_short": "Pole hetkel saadaval",
 
 
   //deprecated and need to be reviewd before using
@@ -47,8 +51,6 @@
 
   "products.title": "Kõik tooted",
   "product.add_to_cart": "Lisa ostukorvi",
-  "product.unavailable": "Toode pole hetkel saadaval",
-  "product.unavailable_short": "Pole hetkel saadaval",
   "product.order": "Tellimus",
   "product.description": "Kirjeldus",
   "product.description.more": "rohkem",
@@ -61,7 +63,6 @@
   "product.just": "Just",
   "product.sku": "SKU",
   "product.quantity": "Kogus",
-  "product.was": "oli",
   "product.sale": "ALE",
 
   "categories.filters.list_by_price": "Hinna järgi",

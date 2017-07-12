@@ -5,7 +5,11 @@
   "section.default.blog_post.blog_post_author": "mr. Post Author",
   "section.default.blog_post.blog_post_date": "01.02.2003",
   "section.default.blog_post.blog_post_content": "As soon as you publish some blog posts we can show them right here. You can share some info about new products, upcoming events or global trends. Basically - about everything and what ever suits you the most.",
+  "section.default.collection.product_name": "Product name",
 
+  "product.was": "was",
+  "product.unavailable": "Product is currently unavailable",
+  "product.unavailable_short": "Currently unavailable",
 
 
 //deprecated and need to be reviewd before using
@@ -47,8 +51,6 @@
 
   "products.title": "Products",
   "product.add_to_cart": "Add to Cart",
-  "product.unavailable": "Product is currently unavailable",
-  "product.unavailable_short": "Currently unavailable",
   "product.order": "Order",
   "product.description": "Description",
   "product.description.more": "more",
@@ -61,7 +63,6 @@
   "product.just": "Just",
   "product.sku": "SKU",
   "product.quantity": "Quantity",
-  "product.was": "was",
   "product.sale": "Sale",
 
   "categories.filters.list_by_price": "List by price",

@@ -1,6 +1,4 @@
-{% if section.settings.collection != blank %}
 {% assign collection = collections[section.settings.collection] %}
-{% endif %}
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
 
 {% case section.settings.per_row %}
@@ -24,7 +22,7 @@
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
     {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
-      {% assign variant  = product.variants.first %}
+      {% assign variant = product.variants.first %}
 
       <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
         <meta itemprop="url" content="{{url.current_url}}">
@@ -53,7 +51,7 @@
           {% endif %}
         </div>
         {% else %}
-        <div class="not-available">{{'product.unavailable' | t}}</div>
+        <div class="not-available">{{'product.unavailable_short' | t}}</div>
         {% endif %}
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
       </a>
@@ -70,7 +68,7 @@
           <img src="{{'images/placeholder.svg' | asset_url}}">
         </div>
 
-        <h3 class="product-title">Product name</h3>
+        <h3 class="product-title">{{'section.default.collection.product_name' | t}}</h3>
 
         <div class="product-price">
           <span class="money">{{'14.95' | money}}</span>
@@ -83,7 +81,7 @@
 
   {% if section.settings.show_button == true %}
   <div class="buttons">
-    <a href="{{collection.url}}" role="button" class="button primary">View all</a>
+    <a href="{{collection.url}}" role="button" class="button primary">{{'section.default.view_all' | t}}</a>
   </div>
   {% endif %}
 
