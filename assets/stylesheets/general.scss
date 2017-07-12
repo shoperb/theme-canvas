@@ -1,5 +1,5 @@
-$limited-max-width: 1280;
-$default-padding: 5;
+$limited-max-width: 1200;
+$default-padding: 10;
 
 body {
   margin: 0;
@@ -13,23 +13,13 @@ a {
   text-decoration: none;
   color: #3d4246;
 }
-.not-full-screen {
-  max-width: #{$limited-max-width}px;
-  margin: 0 auto;
-
-  ul {
-    margin: -#{$default-padding}px;
-  }
-}
-
-.row.full-width {
-  max-width: 100%;
-}
 
 .general-title {
   color: #3d4246;
   font-size: 24px;
   text-align: center;
+  margin: 0;
+  padding: 20px 0;
 }
 .general-text {
   color: #3d4246;
@@ -43,3 +33,15 @@ a {
     font-size: 22px;
   }
 }
+
+
+
+// DEMO ONLY
+.demo {
+  .grid__item {
+    height: 200px;
+  }
+}
+// DEMO ONLY
+
+

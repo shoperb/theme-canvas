@@ -17,37 +17,36 @@
 <section data-section-id="{{section.id}}" data-type="collection">
 
   {% if section.settings.title != blank %}
-  <div class="row">
-    <div class="column">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-    </div>
-  </div>
+  <h2 class="general-title">{{section.settings.title}}</h2>
   {% endif %}
 
-  <div class="row">
-  {% for product in collection.products limit: limit %}
-    {% assign check_first = forloop.index | modulo: section.settings.per_row %}
-    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %} {{offset_class}}{% endif %} column">
+  <div class="grid">
+    {% for product in collection.products limit: limit %}
+    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
       {% assign variant  = product.variants.first %}
 
-      <a class="product" href="{{product.url}}">
+      <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
+        <meta itemprop="url" content="{{url.current_url}}">
+        <meta itemprop="image" content="{{product.image.size-2048.url}}">
+
         {% assign product_image = 'images/placeholder.svg' | asset_url %}
         {% if product.image.size-480.url != blank %}
         {% assign product_image = product.image.size-480.url %}
         {% endif %}
         <div class="image">
-          <img src="{{product_image}}">
+          <img src="{{product_image}}" alt="{{product.name}}">
         </div>
 
-        <h3 class="product-title">{{product.name}}</h3>
+        <h3 class="product-title" itemprop="name">{{product.name}}</h3>
 
         {% if product.vendor %}
-        <div class="product-vendor">{{product.vendor.name}}</div>
+        <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
         {% endif %}
 
         {% if product.available? %}
-        <div class="product-price">
-          <span class="money">{{variant.current_price | money}}</span>
+        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <span class="money" itemprop="price">>{{variant.current_price | money}}</span>
+          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
           {% if variant.discount? %}
           <span class="discount">{{'product.was' | t}} <span class="money">{{product.price | money}}</span></span>
           {% endif %}
@@ -55,18 +54,15 @@
         {% else %}
         <div class="not-available">{{'product.unavailable' | t}}</div>
         {% endif %}
+        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
       </a>
-    </div>
-  {% endfor %}
+    </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
+    {% endfor %}
   </div>
 
   {% if section.settings.show_button == true %}
-  <div class="row">
-    <div class="column">
-      <div class="buttons">
-        <a href="{{collection.url}}" role="button" class="button primary">View all</a>
-      </div>
-    </div>
+  <div class="buttons">
+    <a href="{{collection.url}}" role="button" class="button primary">View all</a>
   </div>
   {% endif %}
 

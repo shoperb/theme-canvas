@@ -2,8 +2,8 @@
 {% assign background_image = section.settings.image %}
 {% endif %}
 
-<section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="row full-width section-height {{section.settings.section_height}} image-align-{{section.settings.image_alignment}}{% if section.settings.text_size == 'large' %}text-large{% endif %}'" style="background-image: url('{{background_image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
-  <div class="column hero">
+<section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="full-width section-height {{section.settings.section_height}} image-align-{{section.settings.image_alignment}}{% if section.settings.text_size == 'large' %}text-large{% endif %}'" style="background-image: url('{{background_image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
+  <div class="hero">
     {% if section.settings.title != blank %}
     <h2 class="general-title">{{section.settings.title | escape}}</h2>
     {% endif %}

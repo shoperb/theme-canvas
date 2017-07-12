@@ -73,13 +73,7 @@
 <body class="template-{{template_name | replace: '_', '-'}}">
   {% include 'header' %}
 
-  <div class="main-content clearfix">
-  {% comment %}
-  {% if template_name != 'index' %}
-    {% include "crumbs" %}
-  {% endif %}
-  {% endcomment %}
-
+  <div class="main-content">
     {{content_for_layout}}
   </div>
 

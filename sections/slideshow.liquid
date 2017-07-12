@@ -1,31 +1,33 @@
 {% if section.blocks.size > 0 %}
 <section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}">
-	<div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}">
-    {% for block in section.blocks %}
-    <div class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}');"{% endif %}>
-      {% if block.settings.slide_link != blank %}
-      <a href="{{block.settings.slide_link}}">
-      {% else %}
-      <div class="flex-container">
-      {% endif %}
-        {% if block.settings.slide_type == 'video' %}
-        <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+  <div class="row full-width">
+    <div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}">
+      {% for block in section.blocks %}
+      <div class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}');"{% endif %}>
+        {% if block.settings.slide_link != blank %}
+        <a href="{{block.settings.slide_link}}">
+        {% else %}
+        <div class="flex-container">
         {% endif %}
-        <div class="text">
-          {% if block.settings.heading %}
-          <h2 class="general-title">{{block.settings.heading}}</h2>
+          {% if block.settings.slide_type == 'video' %}
+          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
           {% endif %}
-          {% if block.settings.subheading %}
-          <div class="text-content general-text">{{block.settings.subheading}}</div>
-          {% endif %}
+          <div class="text">
+            {% if block.settings.heading %}
+            <h2 class="general-title">{{block.settings.heading}}</h2>
+            {% endif %}
+            {% if block.settings.subheading %}
+            <div class="text-content general-text">{{block.settings.subheading}}</div>
+            {% endif %}
+          </div>
+        {% if block.settings.slide_link != blank %}
+        </a>
+        {% else %}
         </div>
-      {% if block.settings.slide_link != blank %}
-      </a>
-      {% else %}
+        {% endif %}
       </div>
-      {% endif %}
+      {% endfor %}
     </div>
-    {% endfor %}
 	</div>
 </section>
 {% endif %}
