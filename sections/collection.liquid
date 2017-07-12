@@ -3,14 +3,13 @@
 
 {% case section.settings.per_row %}
   {% when 2 %}
-    {% assign large_class = 'large-10' %}
+    {% assign grid_class = 'desk--one-half' %}
   {% when 3 %}
-    {% assign large_class = 'large-6' %}
-    {% assign offset_class = 'large-offset-1' %}
+    {% assign grid_class = 'desk--one-third' %}
   {% when 4 %}
-    {% assign large_class = 'large-5' %}
+    {% assign grid_class = 'desk--one-quarter' %}
   {% else %}
-    {% assign large_class = 'large-4' %}
+    {% assign grid_class = 'desk--one-fifth' %}
 {% endcase %}
 
 {% if collection %}
@@ -22,7 +21,7 @@
 
   <div class="grid">
     {% for product in collection.products limit: limit %}
-    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
+    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       {% assign variant  = product.variants.first %}
 
       <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
