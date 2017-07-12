@@ -32,49 +32,54 @@ section[data-type] {
 }
 
 .image-align-top-left {
-  background-position: left top;
+  background-position: left top !important;
 }
 .image-align-top-middle {
-  background-position: center top;
+  background-position: center top !important;
 }
 .image-align-top-right {
-  background-position: right top;
+  background-position: right top !important;
 }
 .image-align-middle-left {
-  background-position: left center;
+  background-position: left center !important;
 }
+.image-align-center,
 .image-align-middle {
-  background-position: center center;
+  background-position: center center !important;
 }
 .image-align-middle-right {
-  background-position: right center;
+  background-position: right center !important;
 }
 .image-align-bottom-left {
-  background-position: left bottom;
+  background-position: left bottom !important;
 }
 .image-align-bottom-middle {
-  background-position: center bottom;
+  background-position: center bottom !important;
 }
 .image-align-bottom-right {
-  background-position: right bottom;
+  background-position: right bottom !important;
 }
-
-
 
 
 
 [data-type=image-with-text-overlay] {
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F9F9F9;
   width: 100%;
   text-align: center;
   display: table;
 
+  &[class*="image-align"] {
+    background-size: cover;
+    background-color: transparent;
+  }
   .hero {
     display: table-cell;
     vertical-align: middle;
     padding: #{$default-padding}px;
   }
-  .text {
+  .text-content {
     margin: 0 auto;
     max-width: 75%;
     text-align: center;
@@ -113,28 +118,32 @@ section[data-type] {
   .product-vendor {}
   .product-price {}
 }
-
-
-
+[data-type=blog-posts] {
+  text-align: center;
+}
 [data-type=image-gallery] {
-  .row,
-  .column, .columns {
-    height: 100%;
-  }
-  .column, .columns {
+  .grid__item {
     text-align: center;
-    display: flex;
     background-size: cover;
 
-    span {
-      padding: #{$default-padding}px;
-      color: red;
-      justify-content: center;
-      align-self: center;
+    .caption-container {
+      text-align: center;
+      display: table;
       width: 100%;
+      height: 100%;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        padding: #{$default-padding}px;
+        color: #ffffff;
+      }
     }
   }
 }
+
+
+
 [data-type=logo-list],
 [data-type=custom] {
   ul {
@@ -374,8 +383,6 @@ section[data-type] {
   }
 }
 
-[data-type=blog-posts] {
-}
 
 [data-type=newsletter] {
   text-align: center;

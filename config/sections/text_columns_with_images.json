@@ -2,9 +2,9 @@
   "name": "Text columns with images",
   "settings": [
     {
-      "type": "text",
-      "handle": "title",
-      "default": "Text columns with images"
+      "type": "image",
+      "handle": "logo",
+      "default": ""
     },
     {
       "type": "select",
@@ -20,38 +20,16 @@
           "handle": "center"
         }
       ]
-    }
-  ],
-  "blocks": [
+    },
     {
-      "type": "column",
-      "settings": [
-        {
-          "type": "richtext",
-          "handle": "quote",
-          "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
-        },
-        {
-          "type": "text",
-          "handle": "author",
-          "default": "Author's name"
-        }
-      ]
-    }
-  ],
-  "default": [
+      "type": "text",
+      "handle": "title",
+      "default": "Hero section title"
+    },
     {
-      "blocks": [
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        }
-      ]
+      "type": "richtext",
+      "handle": "text",
+      "default": "<p>... and here is where your customers will see your hero message</p>"
     }
   ]
 }

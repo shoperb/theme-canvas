@@ -426,27 +426,18 @@
     "hero-1": {
       "type": "image_with_text_overlay",
       "settings": {
-        "image": "http://sce.parsons.edu/wp-content/uploads/2010/03/Antonia_Targettie-Competition_IMG_0820.jpg",
-        "image_alignment": "top left",
-        "title": "Hello",
-        "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
+        "image_alignment": "top-left",
+        "title": "Hero section title",
+        "text": "<p>... and here is where your customers will see your hero message</p>",
         "text_size": "medium",
         "section_height": "medium"
-      },
-      "translations": {
-        "en": {
-          "title": "Hello"
-        },
-        "et": {
-          "title": "Tere"
-        }
       }
     },
     "hero-2": {
       "type": "image_with_text_overlay",
       "settings": {
         "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
-        "image_alignment": "middle",
+        "image_alignment": "center",
         "title": "My AD",
         "text": "<p>Look at what cool prodcuts I have.</p>",
         "text_size": "large",
@@ -469,7 +460,7 @@
       "type": "blog_posts",
       "settings": {
         "title": "Blog posts",
-        "grid": 3,
+        "grid": 5,
         "show_author": false,
         "show_date": false,
         "show_button": true
