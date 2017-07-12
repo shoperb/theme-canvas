@@ -9,18 +9,20 @@
     {% assign grid_class = 'desk--one-whole' %}
 {% endcase %}
 
-{% if section.blocks.size > 0 %}
 <section data-section-id="{{section.id}}" data-type="image-gallery" class="full-width">
   <div class="grid">
     {% for block in section.blocks %}
     {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}} image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}'), url('{{'images/placeholder.svg' | asset_url}}')">
-      {% if block.settings.caption %}
-      <div class="caption-container">
-        <span>{{block.settings.caption}}</span>
-      </div>
+      {% if block.settings.link contains 'http://' or block.settings.link contains 'https://' %}
+      {% assign outer_url = ' target="_blank"' %}
       {% endif %}
+
+      <{% if block.settings.link != blank %}a href="{{block.settings.link}}"{{outer_url}}{% else %}div{% endif %} class="caption-container">
+        {% if block.settings.caption %}
+        <span>{{block.settings.caption}}</span>
+        {% endif %}
+      </{% if block.settings.link != blank %}a{% else %}div{% endif %}>
     </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
     {% endfor %}
   </div>
 </section>
-{% endif %}
