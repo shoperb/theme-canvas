@@ -1,19 +1,4 @@
 $(document).ready(function(){
-
-
-
-  // DEMO ONLY
-  $('.demo-slider').each(function() {
-    $(this).slick({
-      autoplay: true,
-      prevArrow: '<div class="slick-prev"></div>',
-      nextArrow: '<div class="slick-next"></div>'
-    });
-  });
-  // DEMO ONLY
-
-
-
   $('.slideshow').each(function() {
     var autoPlay = $(this).data('autoplay'),
         animationSpeed = $(this).data('animation-speed');

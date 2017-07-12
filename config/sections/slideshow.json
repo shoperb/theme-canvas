@@ -29,6 +29,55 @@
           "handle": "5"
         }
       ]
+    },
+    {
+      "type": "select",
+      "handle": "section_width",
+      "default": "full-width",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "handle": "section_height",
+      "default": "medium",
+      "options": [
+        {
+          "value": "small",
+          "handle": "small"
+        },
+        {
+          "value": "medium",
+          "handle": "medium"
+        },
+        {
+          "value": "large",
+          "handle": "large"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "handle": "text_size",
+      "default": "medium",
+      "options": [
+        {
+          "value": "medium",
+          "handle": "medium"
+        },
+        {
+          "value": "large",
+          "handle": "large"
+        }
+      ]
     }
   ],
   "blocks": [

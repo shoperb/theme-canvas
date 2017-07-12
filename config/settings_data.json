@@ -513,9 +513,10 @@
     "slideshow": {
       "type": "slideshow",
       "settings": {
-        "auto_rotate": true,
+        "auto_rotate": false,
         "animation_speed": "4",
-        "section_height": "medium",
+        "section_width": "full-width",
+        "section_height": "large",
         "text_size": "medium"
       },
       "blocks": {
@@ -535,6 +536,49 @@
           "settings": {
             "slide_type": "video",
             "slide_video": "https://www.youtube.com/watch?v=2MpUj-Aua48",
+            "heading": "Image slide 22",
+            "subheading": "Tell your brand's story through video and images 22"
+          }
+        },
+        "slide-3": {
+          "type": "slide",
+          "settings": {
+            "slide_type": "image",
+            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333"
+          }
+        }
+      },
+      "block_order": ["slide-1", "slide-2", "slide-3"]
+    },
+    "slideshow2": {
+      "type": "slideshow",
+      "settings": {
+        "auto_rotate": false,
+        "animation_speed": "4",
+        "section_width": "limited",
+        "section_height": "medium",
+        "text_size": "medium"
+      },
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "slide_type": "image",
+            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image_alignment": "bottom-right",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through video and images",
+            "slide_link": "http://www.google.com"
+          }
+        },
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "slide_type": "video",
+            "slide_video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
             "heading": "Image slide 22",
             "subheading": "Tell your brand's story through video and images 22"
           }
@@ -845,5 +889,5 @@
       "block_order": ["custom-1", "custom-2", "custom-3", "custom-32", "custom-4", "custom-5", "custom-6"]
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact", "custom"]
+  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "slideshow2", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact", "custom"]
 }
