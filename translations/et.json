@@ -5,12 +5,16 @@
   "section.default.blog_post.blog_post_author": "mr. Posti Autor",
   "section.default.blog_post.blog_post_date": "01.02.2003",
   "section.default.blog_post.blog_post_content": "Niipea, kui teil on mõni blogi postitus avalikustatud, saame neid siin näitama hakata. Võite juttu teha uutest toodetest, saabuvatest sündmustest või üleüldistest trendidest. Põhimõtteliselt - kõigest, mis meeldib või sobib",
-  "section.default.collection.product_name": "Toote nimetus",
+  "section.default.product_name": "Toote nimetus",
   "section.default.collection.name": "Kollektsiooni nimi",
+  "section.default.vendor": "Tootja nimi",
+  "section.default.product_descriontion": "See ala siin on toote kirjelduse tarvis. Kui suur toode on? Mis värvi ja mis materjalist? Lisa detaile, et muuta toode võimalikult atraktiivseks.",
 
   "product.was": "oli",
   "product.unavailable": "Toode pole hetkel saadaval",
   "product.unavailable_short": "Pole hetkel saadaval",
+  "product.quantity": "Kogus",
+  "product.add_to_cart": "Lisa ostukorvi",
 
 
   //deprecated and need to be reviewd before using
@@ -51,7 +55,6 @@
   "search.no_keyword": "eemalda otsingusõna",
 
   "products.title": "Kõik tooted",
-  "product.add_to_cart": "Lisa ostukorvi",
   "product.order": "Tellimus",
   "product.description": "Kirjeldus",
   "product.description.more": "rohkem",
@@ -63,7 +66,6 @@
   "product.recommended": "Teile võib meeldida",
   "product.just": "Just",
   "product.sku": "SKU",
-  "product.quantity": "Kogus",
   "product.sale": "ALE",
 
   "categories.filters.list_by_price": "Hinna järgi",

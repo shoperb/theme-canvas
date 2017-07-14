@@ -5,12 +5,16 @@
   "section.default.blog_post.blog_post_author": "mr. Post Author",
   "section.default.blog_post.blog_post_date": "01.02.2003",
   "section.default.blog_post.blog_post_content": "As soon as you publish some blog posts we can show them right here. You can share some info about new products, upcoming events or global trends. Basically - about everything and what ever suits you the most.",
-  "section.default.collection.product_name": "Product name",
-  "section.default.collection.name": "Collection name",
+  "section.default.product_name": "Product's name",
+  "section.default.collection.name": "Collection's name",
+  "section.default.vendor": "Vendor's name",
+  "section.default.product_descriontion": "Here is the place for your product's description. How big is it? What color and material? Add details to make the product attractive.",
 
   "product.was": "was",
   "product.unavailable": "Product is currently unavailable",
   "product.unavailable_short": "Currently unavailable",
+  "product.quantity": "Quantity",
+  "product.add_to_cart": "Add to Cart",
 
 
 //deprecated and need to be reviewd before using
@@ -51,7 +55,6 @@
   "search.no_keyword": "empty keyword",
 
   "products.title": "Products",
-  "product.add_to_cart": "Add to Cart",
   "product.order": "Order",
   "product.description": "Description",
   "product.description.more": "more",
@@ -63,7 +66,6 @@
   "product.recommended": "You might like",
   "product.just": "Just",
   "product.sku": "SKU",
-  "product.quantity": "Quantity",
   "product.sale": "Sale",
 
   "categories.filters.list_by_price": "List by price",

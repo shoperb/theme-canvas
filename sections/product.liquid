@@ -3,57 +3,54 @@
 
 {% case section.settings.image_size %}
   {% when 'large' %}
-    {% assign image_class = 'large-15' %}
-    {% assign text_class = 'large-5' %}
+    {% assign image_class = 'desk--three-quarters' %}
+    {% assign text_class = 'desk--one-quarter' %}
   {% when 'medium' %}
-    {% assign image_class = 'large-10' %}
-    {% assign text_class = 'large-10' %}
+    {% assign image_class = 'desk--one-half' %}
+    {% assign text_class = 'desk--one-half' %}
   {% when 'small' %}
-    {% assign image_class = 'large-5' %}
-    {% assign text_class = 'large-15' %}
+    {% assign image_class = 'desk--one-quarter' %}
+    {% assign text_class = 'desk--three-quarters' %}
   {% else %}
-    {% assign image_class = 'large-20' %}
-    {% assign text_class = 'large-20' %}
+    {% assign image_class = 'desk--one-whole' %}
+    {% assign text_class = 'desk--one-whole' %}
 {% endcase %}
 
 <section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
-  <div class="row">
-    <div class="small-20 medium-10 {{image_class}} column image">
+  <div class="grid">
+    <div class="grid__item one-whole lap--one-half {{image_class}} image">
       {% if product.image.size-480.url != blank %}
       <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
       {% else %}
       <img src="{{'images/placeholder.svg' | asset_url}}">
       {% endif %}
-    </div>
+    </div><!--
 
-    <div class="small-20 medium-10 {{text_class}} column product">
+    --><div class="grid__item one-whole lap--one-half {{text_class}} product">
+      {% if product %}
       <h2 class="product-title">{{product.name}}</h2>
 
       {% if default_variant.sku %}
       <div class="sku" data-variant-sku-container>{{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span></div>
       {% endif %}
 
-      {% if product.vendor %}
+      {% if product.vendor and section.settings.show_vendor %}
       <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
       {% endif %}
 
-      <div class="product-price">
-        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-          <div>
-            <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
+      <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
+        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
 
-            {% if default_variant.discount? %}
-            <span class="compare-price">
-              <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
-            </span>
-            {% endif %}
+        <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
 
-          </div>
-        </div>
+        {% if default_variant.discount? %}
+        <span class="compare-price">
+          <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
+        </span>
+        {% endif %}
       </div>
 
       <div class="product-variants">
@@ -62,11 +59,15 @@
 
       <div class="product-form grid">
         <div class="product-quantity">
-          <label>Quantity</label>
+          <label>{{'product.quantity' | t}}</label>
           <input>
         </div>
         <div class="product-button">
-          <button class="button primary">Sold out</button>
+          {% if product.available? %}
+          <button class="button primary" type="submit">{{'product.add_to_cart' | t}}</button>
+          {% else %}
+          <div class="disabled-button primary">{{'product.unavailable_short' | t}}</div>
+          {% endif %}
         </div>
       </div>
 
@@ -123,6 +124,40 @@
       {% endif %}
 
       {% if section.settings.show_social_sharing == true %}
+      <div class="product-share">
+        share product options?
+      </div>
+      {% endif %}
+
+      {% comment %} default view for builder {% endcomment %}
+
+      {% else %}
+      <h2 class="product-title">{{'section.default.product_name' | t}}</h2>
+
+      {% if section.settings.show_vendor %}
+      <div class="product-vendor">{{'section.default.vendor' | t}}</div>
+      {% endif %}
+
+      <div class="product-price">
+        <span class="actual-price money">{{'14.95' | money}}</span>
+      </div>
+
+      <div class="product-variants">
+        Variant selectors
+      </div>
+
+      <div class="product-form grid">
+        <div class="product-quantity">
+          <label>{{'product.quantity' | t}}</label>
+          <input>
+        </div>
+        <div class="product-button">
+          <div class="disabled-button primary">{{'product.unavailable_short' | t}}</div>
+        </div>
+      </div>
+
+      <div class="product-description">{{'section.default.product_descriontion' | t}}</div>
+
       <div class="product-share">
         share product options?
       </div>
