@@ -683,7 +683,7 @@
       "type": "text_columns_with_images",
       "settings": {
         "title": "Text columns with images",
-        "text_alignment": "left"
+        "text_alignment": "center"
       },
       "blocks": {
         "column-1": {

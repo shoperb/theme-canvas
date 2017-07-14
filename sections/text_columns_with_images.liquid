@@ -1,31 +1,19 @@
 {% case section.blocks.size %}
-  {% when 1 %}
-    {% assign large_class = 'large-20' %}
-  {% when 'medium' %}
-    {% assign image_class = 'large-10' %}
-    {% assign text_class = 'large-10' %}
-  {% when 'small' %}
-    {% assign image_class = 'large-5' %}
-    {% assign text_class = 'large-15' %}
+  {% when 1 or 2 or 4 or 5 %}
+    {% assign grid_class = 'desk--one-half' %}
   {% else %}
-    {% assign large_class = 'large-6' %}
-    {% assign offset_class = ' large-offset-1' %}
+    {% assign grid_class = 'desk--one-third' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="{{text_column_class}} text-alignment-{{section.settings.text_alignment}}">
+<section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="text-alignment-{{section.settings.text_alignment}}">
   {% if section.settings.title != blank %}
-  <div class="row">
-    <div class="column">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-    </div>
-  </div>
+  <h2 class="general-title">{{section.settings.title}}</h2>
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-  <div class="row">
+  <div class="grid">
     {% for block in section.blocks %}
-    {% assign check_first = forloop.index | modulo: 3 %}
-    <div class="small-20 medium-10 {{large_class}}{% if check_first != 1 %}{{offset_class}}{% endif %} column">
+    {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole lap--one-half {% if section.blocks.size == 5 and forloop.index > 2 %}desk--one-third{% else %}{{grid_class}}{% endif %}">
       <div class="text-column">
         {% if block.settings.image != blank %}
         <img src="{{block.settings.image}}">
@@ -38,9 +26,8 @@
         {% if block.settings.text != blank %}
         <div class="text-column-text">{{block.settings.text}}</div>
         {% endif %}
-
       </div>
-    </div>
+    </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
   </div>
   {% endif %}
