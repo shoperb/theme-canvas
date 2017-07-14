@@ -404,165 +404,87 @@ section[data-type] {
     text-align: center;
   }
 }
-
-
-
-
-
 [data-type=custom] {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 100%;
-
-    li {
-      height: 100%;
-      float: left;
-    }
-  }
-}
-
-[data-type=product] {
-  .image {
+  .grid__item {
     padding: #{$default-padding}px;
 
-    img {
-      width: 100%;
+    &.v-align-top {
+      vertical-align: top;
     }
-  }
-  .product {
-    padding: #{$default-padding}px;
-  }
-}
+    &.v-align-middle {
+      vertical-align: middle;
+    }
+    &.v-align-bottom {
+      vertical-align: bottom;
+    }
+    .custom-section {
+      &.custom-text {
+        &.text-align-left {
+          text-align: left;
 
-
-
-[data-type=custom] {
-  ul {
-    @extend .clearfix;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -ms-flex-align: stretch;
-    @include align-items(stretch);
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-
-    li {
-      @include flex(0 0 auto);
-      padding: 15px;
-      box-sizing: border-box;
-
-      &.custom-width-25 {
-        width: 25%;
-      }
-      &.custom-width-33 {
-        width: 33.33333%;
-      }
-      &.custom-width-50 {
-        width: 50%;
-      }
-      &.custom-width-66 {
-        width: 66.66666%;
-      }
-      &.custom-width-75 {
-        width: 75%;
-      }
-      &.custom-width-100 {
-        width: 100%;
-      }
-
-      &.v-align-top {
-        -ms-flex-item-align: flex-start;
-        -webkit-align-self: flex-start;
-        align-self: flex-start;
-      }
-      &.v-align-middle {
-        -ms-flex-item-align: center;
-        -webkit-align-self: center;
-        align-self: center;
-      }
-      &.v-align-bottom {
-        -ms-flex-item-align: flex-end;
-        -webkit-align-self: flex-end;
-        align-self: flex-end;
-      }
-
-      .custom-section {
-        &.custom-text {
-          &.text-align-left {
+          .general-title {
             text-align: left;
-
-            .general-title {
-              text-align: left;
-            }
           }
-          &.text-align-center {
+        }
+        &.text-align-center {
+          text-align: center;
+
+          .general-title {
             text-align: center;
-
-            .general-title {
-              text-align: center;
-            }
           }
-          &.text-align-right {
+        }
+        &.text-align-right {
+          text-align: right;
+
+          .general-title {
             text-align: right;
+          }
+        }
+      }
+      &.custom-image {
+        img {
+          width: 100%;
+          float: left;
+        }
+      }
+      &.custom-video {
+        iframe {
+          width: 100%;
+        }
+      }
+      &.custom-product {
+        img {
+          width: 100%;
+        }
+      }
+      &.custom-product {
+        h2.general-title {
+          text-align: left;
+        }
+      }
+      &.custom-collection {
+        position: relative;
+        padding-bottom: 100%;
 
-            .general-title {
-              text-align: right;
-            }
-          }
-        }
-        &.custom-image {
-          img {
-            width: 100%;
-            float: left;
-          }
-        }
-        &.custom-video {
-          iframe {
-            width: 100%;
-          }
-        }
-        &.custom-product {
-          img {
-            width: 100%;
-          }
-        }
-        &.custom-product {
-          h2.general-title {
-            text-align: left;
-          }
-        }
-        &.custom-collection {
-          position: relative;
-          padding-bottom: 100%;
+        a {
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
 
-          a {
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
+          .collection-title {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            top: 50%;
             left: 0;
-
-            .collection-title {
-              text-align: center;
-              margin: 0;
-              padding: 20px;
-              top: 50%;
-              left: 0;
-              width: 100%;
-              position: absolute;
-              transform: translateY(-50%);
-              box-sizing: border-box;
-            }
+            width: 100%;
+            position: absolute;
+            transform: translateY(-50%);
+            box-sizing: border-box;
           }
         }
       }

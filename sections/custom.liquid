@@ -1,21 +1,32 @@
 <section data-section-id="{{section.id}}" data-type="custom">
-  <div class="not-full-screen">
+  {% if section.settings.title != blank %}
+  <h2 class="general-title">{{section.settings.title}}</h2>
+  {% endif %}
 
-    {% if section.settings.title != blank %}
-    <h2 class="general-title">{{section.settings.title}}</h2>
-    {% endif %}
+  {% if section.blocks.size > 0 %}
+  <div class="grid">
+    {% for block in section.blocks %}
 
-    {% if section.blocks.size > 0 %}
-    <ul>
-      {% for block in section.blocks %}
+    {% case block.settings.section_width %}
+      {% when '25' %}
+        {% assign grid_class = 'lap--one-quarter desk--one-quarter' %}
+      {% when '33' %}
+        {% assign grid_class = 'lap--one-third desk--one-third' %}
+      {% when '50' %}
+        {% assign grid_class = 'lap--one-half desk--one-half' %}
+      {% when '66' %}
+        {% assign grid_class = 'lap--two-thirds desk--two-thirds' %}
+      {% when '75' %}
+        {% assign grid_class = 'lap--three-quarters desk--three-quarters' %}
+      {% else %}
+        {% assign grid_class = 'lap--one-whole desk--one-whole' %}
+    {% endcase %}
 
-      <li class="custom-width-{{block.settings.section_width}} v-align-{{block.settings.vertical_alignment}}">
-        {% assign file = 'custom_' | append: block.settings.type %}
-        {% section file %}
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
+    {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
+      {% assign file = 'custom_' | append: block.settings.type %}
+      {% section file %}
+    </div>{% if forloop.last != true %}<!--{% endif %}
+    {% endfor %}
   </div>
+  {% endif %}
 </section>
