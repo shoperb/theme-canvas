@@ -6,6 +6,7 @@
   "section.default.blog_post.blog_post_date": "01.02.2003",
   "section.default.blog_post.blog_post_content": "As soon as you publish some blog posts we can show them right here. You can share some info about new products, upcoming events or global trends. Basically - about everything and what ever suits you the most.",
   "section.default.collection.product_name": "Product name",
+  "section.default.collection.name": "Collection name",
 
   "product.was": "was",
   "product.unavailable": "Product is currently unavailable",

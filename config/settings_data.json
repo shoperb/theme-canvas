@@ -600,7 +600,7 @@
       "type": "collection_list",
       "settings": {
         "title": "Collection list",
-        "grid": 3
+        "grid": 4
       },
       "blocks": {
         "collection-1": {
