@@ -334,11 +334,32 @@ section[data-type] {
     }
   }
 }
+[data-type=logo-list] {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      padding: #{$default-padding}px;
+      vertical-align: middle;
+
+      a {
+        display: block;
+        height: 100%;
+      }
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
 
 
 
 
-[data-type=logo-list],
 [data-type=custom] {
   ul {
     margin: 0;
@@ -368,25 +389,6 @@ section[data-type] {
 
 
 
-[data-type=logo-list] {
-  ul {
-    @extend .clearfix;
-    text-align: center;
-
-    li {
-      float: none;
-      display: inline-block;
-      margin: 10px;
-      @extend .clearfix;
-      vertical-align: middle;
-
-      img {
-        float: left;
-        max-width: 200px;
-      }
-    }
-  }
-}
 
 
 [data-type=newsletter] {

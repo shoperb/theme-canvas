@@ -1,19 +1,15 @@
 <section data-section-id="{{section.id}}" data-type="logo-list" class="divide-by-4">
   {% if section.settings.title != blank %}
-  <div class="row">
-    <div class="column">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-    </div>
-  </div>
+  <h2 class="general-title">{{section.settings.title}}</h2>
   {% endif %}
 
-  <div class="row">
-    {% if section.blocks.size > 0 %}
+  {% if section.blocks.size > 0 %}
+  <div class="grid">
     <ul>
       {% for block in section.blocks %}
       <li>
         {% if block.settings.link != blank %}
-        <a class="product" href="">
+        <a href="{{block.settings.link}}" target="_blank">
         {% endif %}
 
         {% if block.settings.image != blank %}
@@ -26,7 +22,7 @@
       </li>
       {% endfor %}
     </ul>
-    {% endif %}
-
   </div>
+  {% endif %}
+
 </section>
