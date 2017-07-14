@@ -402,6 +402,11 @@ section[data-type] {
     @include transform(translateY(-50%));
     width: 300px;
     text-align: center;
+    box-sizing: border-box;
+    @include breakpoint(palm) {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 [data-type=custom] {

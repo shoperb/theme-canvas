@@ -31,3 +31,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin breakpoint($point, $direction: 'max') {
+  // l
+  @if $point == desk {
+    @media screen and (#{$direction}-width: 1024px) { @content; }
+  }
+    // m
+  @else if $point == lap {
+    @media screen and (#{$direction}-width: 768px) { @content; }
+  }
+    // s
+  @else if $point == palm {
+    @media screen and (#{$direction}-width: 480px) { @content; }
+  }
+  @else {
+    @media screen and (#{$direction}-width: #{$point}px) { @content; }
+  }
+}

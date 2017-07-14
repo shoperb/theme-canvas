@@ -535,7 +535,7 @@
           "type": "slide",
           "settings": {
             "slide_type": "video",
-            "slide_video": "https://www.youtube.com/watch?v=2MpUj-Aua48",
+            "slide_video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
             "heading": "Image slide 22",
             "subheading": "Tell your brand's story through video and images 22"
           }
