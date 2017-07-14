@@ -1,8 +1,10 @@
 {% assign address = section.settings.address | replace: ' ', '%20' | replace: ',', '%2C' %}
 
-<section data-section-id="{{section.id}}" data-type="location-and-contact">
+<section data-section-id="{{section.id}}" data-type="location-and-contact" class="full-width next-to-up">
 
-  <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{address}}&key={{section.settings.gmaps_api_key}}" allowfullscreen></iframe>
+  <div class="map-container">
+    <iframe width="100%" height="100%" frameborder="0" class="scrolloff" style="border:0" src="https://www.google.com/maps/embed/v1/place?key={{section.settings.gmaps_api_key}} &q={{address}}" allowfullscreen></iframe>
+  </div>
 
   <div class="map-description">
     {% if section.settings.title != blank %}

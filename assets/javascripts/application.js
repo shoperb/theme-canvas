@@ -36,6 +36,7 @@ $(document).ready(function(){
     });
   });
 
+  handleMapEvents();
   setImageType();
   slideVideoResize();
   customVideoSize();
@@ -57,7 +58,6 @@ function customVideoSize() {
     $(this).height($(this).width() * 360 / 640);
   });
 }
-
 function setImageType() {
   $('[data-type=collection] .product .image img').each(function() {
     if ($(this).width() > $(this).height()){
@@ -67,6 +67,20 @@ function setImageType() {
     }
   });
 }
+function handleMapEvents() {
+  var selector = '[data-type="location-and-contact"] .map-container';
+
+  $(selector).on('click', function () {
+    $('iframe', this).removeClass('scrolloff'); // set the pointer events true on click
+  });
+
+  $(selector).mouseleave(function () {
+    $('iframe', this).addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+  });
+}
+
+
+
 
 // (function() {
 //   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
