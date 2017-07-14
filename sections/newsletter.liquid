@@ -1,21 +1,18 @@
-<section data-section-id="{{section.id}}" data-type="newsletter">
-  {% if section.settings.title != blank %}
-  <div class="row">
-    <div class="column">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-    </div>
-  </div>
-  {% endif %}
-
-  <div class="row">
-    {% if section.settings.text != blank %}
-    <div class="text-content general-text">{{section.settings.text}}</div>
+<section data-section-id="{{section.id}}" data-type="newsletter" class="full-width next-to-down">
+  <div class="newsletter-container">
+    {% if section.settings.title != blank %}
+    <h2 class="general-title">{{section.settings.title}}</h2>
     {% endif %}
 
-    <form>
-      <input>
-      <button class="button primary">Submit</button>
-    </form>
+    <div class="grid">
+      {% if section.settings.text != blank %}
+      <div class="text-content general-text">{{section.settings.text}}</div>
+      {% endif %}
 
+      <form>
+        <input>
+        <button class="button primary">Submit</button>
+      </form>
+    </div>
   </div>
 </section>

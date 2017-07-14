@@ -9,6 +9,12 @@ section[data-type] {
   &:first-of-type {
     margin-top: 0;
   }
+  &.next-to-up {
+    margin-top: 0;
+  }
+  &.next-to-down {
+    margin-bottom: 0;
+  }
 }
 
 .section-height {
@@ -296,6 +302,15 @@ section[data-type] {
     }
   }
 }
+[data-type=product] {
+  .image,
+  .product {
+    padding: #{$default-padding}px;
+  }
+  img {
+    width: 100%;
+  }
+}
 [data-type=testimonials] {
   cursor: pointer;
 
@@ -354,6 +369,18 @@ section[data-type] {
         max-width: 200px;
       }
     }
+  }
+}
+[data-type=newsletter] {
+  background: #ccc;
+  height: 300px;
+  text-align: center;
+  display: table;
+  width: 100%;
+
+  .newsletter-container {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
