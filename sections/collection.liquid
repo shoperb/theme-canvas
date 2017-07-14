@@ -21,7 +21,7 @@
   <div class="grid">
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
-    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       {% assign variant = product.variants.first %}
 
       <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
@@ -55,14 +55,14 @@
         {% endif %}
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
       </a>
-    </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
+    </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
     {% else %}
 
     {% comment %} default view for builder {% endcomment %}
 
     {% for product in (1..limit) %}
-    {% if forloop.index != 1 %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       <div class="product fake-link">
         <div class="image">
           <img src="{{'images/placeholder.svg' | asset_url}}">
@@ -74,7 +74,7 @@
           <span class="money">{{'14.95' | money}}</span>
         </div>
       </div>
-    </div>{% if forloop.index != 0 and forloop.last != true %}<!--{% endif %}
+    </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
     {% endif %}
   </div>

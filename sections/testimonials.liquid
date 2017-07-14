@@ -2,24 +2,29 @@
 {% assign slider = ' testimonial-slider' %}
 {% endif %}
 
+{% case section.blocks.size %}
+  {% when 2 %}
+    {% assign grid_class = 'lap--one-half desk--one-half' %}
+  {% when 3 %}
+    {% assign grid_class = 'lap--one-half desk--one-third' %}
+  {% else %}
+    {% assign grid_class = 'lap--one-whole desk--one-whole' %}
+{% endcase %}
+
 <section data-section-id="{{section.id}}" data-type="testimonials">
   {% if section.settings.title != blank %}
-  <div class="row">
-    <div class="column">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-    </div>
-  </div>
+  <h2 class="general-title">{{section.settings.title}}</h2>
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-  <div class="row{{slider}}">
+  <div class="grid{{slider}}">
     {% for block in section.blocks %}
-    <div class="testimonial small-20 large-6">
+    {% if forloop.first != true %}-->{% endif %}<div class="testimonial grid__item one-whole {{grid_class}}">
       <div class="testimonial-quote">{{block.settings.quote}}</div>
       {% if block.settings.author %}
       <div class="testimonial-author">{{block.settings.author}}</div>
       {% endif %}
-    </div>
+    </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
   </div>
   {% endif %}
