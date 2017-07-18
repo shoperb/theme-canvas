@@ -457,7 +457,8 @@ section[data-type] {
         position: relative;
         padding-bottom: 100%;
 
-        a {
+        a,
+        .collection {
           background-size: cover;
           background-position: center;
           position: absolute;

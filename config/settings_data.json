@@ -875,7 +875,7 @@
           "type": "custom_html",
           "settings": {
             "section_width": "75",
-            "vertical_alignment": "middle",
+            "vertical_alignment": "top",
             "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>"
           }
         }
