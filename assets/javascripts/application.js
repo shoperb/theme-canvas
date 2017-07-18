@@ -35,6 +35,16 @@ $(document).ready(function(){
       ]
     });
   });
+  $('[data-toggle]').on('click', function() {
+    var val = $(event.target).data('toggle');
+
+    $('[data-item=main]', '#main-header').toggleClass('hidden');
+    if (val === 'close') {
+      $(event.target).parent().toggleClass('hidden');
+    } else {
+      $('.' + val + '-container').toggleClass('hidden');
+    }
+  });
 
   handleMapEvents();
   setImageType();

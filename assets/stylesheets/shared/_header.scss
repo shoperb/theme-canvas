@@ -1,28 +1,56 @@
 header#main-header {
-  display: none;
+  position: relative;
 
-  .logo,
-  .main-menu,
-  .language-selector,
-  .search,
-  .account {
-    float: left;
+  .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
-  .search-container {
-    display: none;
+  > * {
+    position: relative;
+    vertical-align: middle;
+    padding: #{$default-padding}px;
   }
+  .actions {
+    .grid__item {
+      vertical-align: middle;
+      padding: #{$default-padding}px;
+    }
+  }
+  .search-container,
   .account-container {
-    display: none;
+    text-align: center;
   }
-  &.logo-left {
-    .logo {
-      //@extend .grid-3;
+}
+nav.main-menu {
+  ul {
+    @extend .default-list;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      position: relative;
+
+      a {
+        display: block;
+        padding: #{$default-padding}px;
+      }
+      ul {
+        display: none;
+      }
+      &:hover {
+        ul {
+          position: absolute;
+          display: block;
+        }
+      }
     }
-    .main-menu {
-      //@extend .grid-6;
-    }
-    .language-selector {}
-    .search {}
-    .account {}
+  }
+}
+.language-selector {
+  ul {
+    @extend .default-list;
   }
 }
