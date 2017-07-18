@@ -13,6 +13,13 @@ header#main-header {
     vertical-align: middle;
     padding: #{$default-padding}px;
   }
+  .logo {
+    text-align: center;
+
+    a {
+      display: block;
+    }
+  }
   .actions {
     .grid__item {
       vertical-align: middle;
