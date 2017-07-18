@@ -1,4 +1,16 @@
 {
+  "server": {
+    "url": "shoperb.dev:3000",
+    "protocol": "http"
+  },
   "oauth-site": "perfectline",
-  "port": "4000"
+  "port": "3000",
+  "preset": null,
+  "verbose": null,
+  "oauth-cache": {
+    "scope": "admin",
+    "access_token": "77kdbgcgvlw3231k8qduamqprwpzwmo",
+    "refresh_token": "ywpgq1emnq4fnlc8egmic0qlqqg3kf",
+    "expires_at": null
+  }
 }
