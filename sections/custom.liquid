@@ -24,10 +24,10 @@
 
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
     {% case block.type %}
+
+
       {% when 'custom_collection' %}
-
     {% assign collection = collections[block.settings.collection] %}
-
     {% if collection %}
     <div class="custom-section {{block.type}}">
       <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
@@ -42,14 +42,14 @@
     </div>
     {% endif %}
 
-      {% when 'custom_html' %}
 
+      {% when 'custom_html' %}
     <div class="custom-section {{block.type}}">
       {{block.settings.html}}
     </div>
 
-      {% when 'custom_image' %}
 
+      {% when 'custom_image' %}
     <div class="custom-section {{block.type}}">
       {% if block.settings.image != blank %}
       <img src="{{block.settings.image}}">
@@ -58,8 +58,8 @@
       {% endif %}
     </div>
 
-      {% when 'custom_product' %}
 
+      {% when 'custom_product' %}
     {% assign product = products[section.settings.product] %}
 
     <div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
@@ -92,8 +92,8 @@
       </div>
     </div>
 
-      {% when 'custom_text' %}
 
+      {% when 'custom_text' %}
     <div class="custom-section {{block.type}} text-align-{{block.settings.horizontal_alignment}}">
       {% if block.settings.title != blank %}
       <h2 class="general-title">{{block.settings.title}}</h2>
@@ -104,13 +104,19 @@
       {% endif %}
     </div>
 
-      {% when 'custom_video' %}
 
+      {% when 'custom_video' %}
     <div class="custom-section {{block.type}}">
+      {% if block.settings.video != blank %}
       {% if block.settings.video contains 'vimeo.com' %}
       <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       {% elsif block.settings.video contains 'youtube.com' %}
       <iframe src="{{block.settings.video}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
+      {% endif %}
+      {% else %}
+      <div class="video-placeholder-container">
+        <div class="video-placeholder"></div>
+      </div>
       {% endif %}
     </div>
 
