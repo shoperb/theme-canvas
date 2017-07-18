@@ -1,0 +1,17 @@
+<article class="media-item columns large-4 {% cycle 'first', 'second', 'third' %}">
+    <div class="inner">
+        {% unless file == '' %}
+        <div class="picture"><a href="{{ file | asset_url }}" download="{{ file }}">{{ image | asset_url | image_tag: name, name }}</a></div>
+        <div class="publication-info">
+            <div class="name"><a href="{{ file | asset_url }}" download="{{ file }}">{{ name }}</a></div>
+            <div class="published">{{ time }}</div>
+        </div>
+        {% else %}
+        <div class="picture">{{ image | asset_url | image_tag: name, name }}</div>
+        <div class="publication-info">
+            <div class="name">{{ name }}</div>
+            <div class="published">{{ time }}</div>
+        </div>
+        {% endunless %}
+    </div>
+</article>

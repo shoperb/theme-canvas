@@ -1,0 +1,19 @@
+<div class="blog-widget">
+  <h3 class="title"><a href="{{url.blog}}">{{'home.from_blog' | t}}</a></h3>
+  <ul class="colored-links">
+    {% for item in blog_posts %}
+    {% if forloop.index0 < index_blog %}
+    <li>
+      <div class="item-title">{{item.name}}</div>
+      <div class="date">
+        {% include 'date' with item.published_at %}
+      </div>
+      <div class="content">
+        {{ item.content | truncate: 150, '...' }}
+      </div>
+      <div class="read-more"><a href="{{ item.url }}">{{'general.read_more' | t}} <span aria-hidden="true" class="glyph arrow-right"></span></a></div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

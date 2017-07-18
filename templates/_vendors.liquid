@@ -1,0 +1,21 @@
+{% if menus['brands'] and menus['brands'].links.any? %}
+    <nav class="manufacturer-nav">
+        <header>
+            <div class="title">{{ 'categories.brands' | t }}</div>
+        </header>
+        <form action="">
+            <ul>
+                {% for item in menus['brands'].links %}
+                    <li>
+                        <div class="field checkbox-field">
+                            <label>
+                                <input type="checkbox" class="custom-checkbox"/>
+                                <div class="label-text">{{ item.name }}</div>
+                            </label>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </form>
+    </nav>
+{% endif %}
