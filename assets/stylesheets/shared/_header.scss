@@ -1,5 +1,6 @@
 header#main-header {
   position: relative;
+  background: #efefef;
 
   .background {
     position: absolute;
@@ -46,10 +47,19 @@ nav.main-menu {
       }
       ul {
         display: none;
+        background: #ffffff;
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+
+        li {
+          white-space: nowrap;
+          width: 100%;
+        }
       }
       &:hover {
         ul {
-          position: absolute;
           display: block;
         }
       }

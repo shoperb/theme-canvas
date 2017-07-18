@@ -1,20 +1,6 @@
 section[data-type] {
-  max-width: #{$limited-max-width}px;
-  margin: #{2 * $default-padding}px auto #{$default-padding}px;
+  @extend .general-content;
   box-sizing: border-box;
-
-  &.full-width {
-    max-width: 100%;
-  }
-  &:first-of-type {
-    margin-top: 0;
-  }
-  &.next-to-up {
-    margin-top: 0;
-  }
-  &.next-to-down {
-    margin-bottom: 0;
-  }
 }
 
 .section-height {

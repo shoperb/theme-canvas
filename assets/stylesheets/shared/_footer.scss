@@ -1,3 +1,49 @@
 .main-footer {
-  display: none;
+  background: #efefef;
+
+  ul {
+    @extend .default-list;
+    text-align: center;
+
+    li {
+      position: relative;
+
+      a {
+        display: block;
+        padding: #{$default-padding}px;
+      }
+    }
+  }
+  .footer {
+    .grid__item {
+      padding: #{$default-padding}px;
+    }
+    .contact {
+      text-align: center;
+
+      h3.general-title {
+        text-align: center;
+      }
+    }
+  }
+  .social-icons {
+    text-align: center;
+
+    a {
+      padding: #{$default-padding}px;
+      display: inline-block;
+
+      img {
+        max-width: 50px;
+      }
+    }
+  }
+  .shoperb {
+    padding: #{$default-padding}px;
+    text-align: center;
+
+    svg {
+      width: 100px;
+    }
+  }
 }
