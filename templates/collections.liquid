@@ -1,0 +1,38 @@
+<div class="main-container">
+  <section class="main-content">
+    <div class="collections">
+      <h2 class="main-title center">{{'general.collections' | t}}</h2>
+
+      <div class="collection-row">
+        {% assign count = 0 %}
+        {% for item in collections %}
+        {% assign count = count | plus: 1 %}
+
+        {% assign class = 'large' %}
+        {% if count == 2 or count == 3 %}
+        {% assign class = 'small' %}
+        {% endif %}
+
+        {% assign image = item.handle | prepend: 'images/collections/' %}
+        <div class="collection {{class}} item-{{count}}" style="background-image: url({{image | asset_url}})">
+          <div class="ui grid">
+            <div class="eight wide column">
+              <div class="title">{{item.name}}</div>
+              <div class="description">{{item.description}}</div>
+              <a href="{{url.collections}}/{{item.handle}}" class="button primary">{{'general.learn_more' | t}}</a>
+            </div>
+          </div>
+        </div>
+
+        {% if count == 4 %}
+      </div>
+      <div class="collection-row">
+        {% assign count = 0 %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% include 'newsletter' %}

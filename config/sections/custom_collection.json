@@ -1,1 +1,81 @@
-{}
+{
+  "name": "Custom section",
+  "blocks": [
+    {
+      "type": "image",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "handle": "image_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top-left",
+              "handle": "top-left"
+            },
+            {
+              "value": "top-middle",
+              "handle": "top-middle"
+            },
+            {
+              "value": "top-right",
+              "handle": "top-right"
+            },
+            {
+              "value": "middle-left",
+              "handle": "middle-left"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "middle-right",
+              "handle": "middle-right"
+            },
+            {
+              "value": "bottom-left",
+              "handle": "bottom-left"
+            },
+            {
+              "value": "bottom-center",
+              "handle": "bottom-center"
+            },
+            {
+              "value": "bottom-right",
+              "handle": "bottom-right"
+            }
+          ]
+        },
+        {
+          "type": "combobox",
+          "handle": "link"
+        },
+        {
+          "type": "text",
+          "handle": "caption"
+        }
+      ]
+    }
+  ],
+  "default": [
+    {
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

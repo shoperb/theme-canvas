@@ -1,0 +1,148 @@
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>
+    {{"email.order.confirmation.title" | t}}
+  </title>
+  <style type="text/css">
+    @media screen {
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body style="font-family: Lato, Helvetica, Arial, sans-serif; font-size: 14px; background: #F5F5F5; margin: 20px; text-align: center;">
+
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td colspan="100%">
+
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td colspan="3" style="text-align: left; padding: 58px 10px 10px 70px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 48px; color: #000000; font-weight: bold;">
+                {{shop.name}}
+              </td>
+              <td style="padding: 60px 70px 10px 10px; text-align: right; font-size: 14px;">
+                <div style="padding: 0 0 10px">
+                  <span style="font-weight: bold; color: #919AA8; text-transform: uppercase;">{{'email.date' | t}}:</span>
+                  <span>{{order.created_at | date: '%d %b %Y'}}</span>
+                </div>
+                <div>
+                  <span style="font-weight: bold; color: #919AA8; text-transform: uppercase;">{{'email.invoice' | t}}:</span>
+                  <span>#{{order.number}}</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+
+              <td style="text-align: left; padding: 28px 10px 50px 70px; vertical-align: top; font-size: 14px; line-height: 1.5;">
+                <div style="font-size: 14px; font-weight: bold; color: #919AA8; text-transform: uppercase; padding: 0 0 8px;">{{'email.billing_address' | t}}:</div>
+                {% if order.billing_address.company? %}
+                <div>{{order.billing_address.company}}</div>
+                {% endif %}
+                <div>{{order.billing_address.first_name}} {{order.billing_address.last_name}}</div>
+                <div>{{order.email}}</div>
+                <div>{{order.billing_address.full_address}}</div>
+                <div>{{order.billing_address.city_state_with_zip}}</div>
+                <div>{{order.billing_address.country}}</div>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+      </td>
+    </tr>
+  </tbody>
+
+  <tbody>
+    {% if order.items.size > 1 %}
+    <tr>
+      <td colspan="100%" style="color: #111419; font-size: 24px; font-weight: bold; text-align: center; padding: 50px 0;">{{'email.thank_you_digital_many' | t}}</td>
+    </tr>
+    {% else %}
+    <tr>
+      <td colspan="100%" style="color: #111419; font-size: 24px; font-weight: bold; text-align: center; padding: 50px 0;">{{'email.thank_you_digital_one' | t}}</td>
+    </tr>
+    {% endif %}
+
+    <tr>
+      <td style="padding: 20px 10px 19px 70px; background: #F0F2F5; text-align: left; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.item' | t}}</td>
+      <td style="padding: 20px 10px 19px 10px; background: #F0F2F5; text-align: left; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.url' | t}}</td>
+    </tr>
+  </tbody>
+
+  <tbody>
+
+    {% for item in order.items %}
+      {% if item.digital? && item.url != blank %}
+        <tr>
+          <td style="text-align: left; padding: 10px 10px 10px 70px"> {{ item.name }}</td>
+          <td style="text-align: left; padding: 10px 70px 10px 10px"> <a href="{{ item.url }}" target="_blank" style="color: #1377BF; text-decoration: none;">{{ item.url }}</a></td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+
+    <tr>
+      <td colspan="100%" style="padding: 100px 0;"></td>
+    </tr>
+
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="100%">
+
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 70px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.address' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.phone' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.email' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 70px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; text-align: right; font-weight: bold; text-transform: uppercase;">
+                {{'email.web' | t}}:
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 70px; color: #111419; font-size: 14px;">
+                {{shop.address.full_address}},
+                {{shop.address.city_state_with_zip}},
+                {{shop.address.country}}
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 10px; color: #111419; font-size: 14px;">
+                {{shop.address.phone}}
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 10px; color: #111419; font-size: 14px;">
+                <a href="mailto:{{shop.email}}" style="color: #1377BF; text-decoration: none;">{{shop.email}}</a>
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 70px 40px 10px; color: #111419; font-size: 14px; text-align: right;">
+                <a href="{{shop.domain}}" style="color: #1377BF; text-decoration: none;">{{shop.domain}}</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>

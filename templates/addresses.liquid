@@ -1,0 +1,136 @@
+<div class="main-container account-page logged-in">
+  <div class="ui grid">
+    <div class="four wide column sidebar">
+      {% include 'account_sidebar' with 'address' %}
+    </div>
+
+    {{addresses.size | debug}}
+
+    <div class="twelve wide column addresses-content">
+      <div class="eight wide column">
+        <div class="addresses-header clearfix">
+          <h2 class="main-title">{{'address.title' | t}}</h2>
+          <div class="add-new-address">
+            <a href="{{url.new_address}}" class="button secondary">{{'address.add_new_address' | t}}</a>
+          </div>
+        </div>
+        <table class="addresses">
+          <thead>
+            <tr>
+              <th>
+                <div class="title">
+                  Main Address
+                </div>
+              </th>
+              <th>
+                <a href="addresses/ID">
+                  {{'order.link' | t}}
+                  <div class="icon-arrow-next"></div>
+                </a>
+              </th>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>{{'order.name' | t}}</label>
+                Ian Syalik
+              </td>
+              <td>
+                <label>{{'order.phone' | t}}</label>
+                +372 555 39 637
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>{{'order.email' | t}}</label>
+                thebigbadwolf88@gmail.com
+              </td>
+              <td>
+                <label>{{'order.address' | t}}</label>
+                Tammsaare 70-7, 13345, Tallinn, Estonia
+              </td>
+            </tr>
+          </tbody>
+
+          <thead>
+            <tr>
+              <th>
+                <div class="title">
+                  Secondary Address
+                </div>
+              </th>
+              <th>
+                <a href="addresses/ID">
+                  {{'order.link' | t}}
+                  <div class="icon-arrow-next"></div>
+                </a>
+              </th>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>{{'order.name' | t}}</label>
+                Ian Syalik
+              </td>
+              <td>
+                <label>{{'order.phone' | t}}</label>
+                +372 555 39 637
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>{{'order.email' | t}}</label>
+                thebigbadwolf88@gmail.com
+              </td>
+              <td>
+                <label>{{'order.address' | t}}</label>
+                Tammsaare 70-7, 13345, Tallinn, Estonia
+              </td>
+            </tr>
+          </tbody>
+
+          <thead>
+            <tr>
+              <th>
+                <div class="title">
+                  Payment Address
+                </div>
+              </th>
+              <th>
+                <a href="addresses/ID">
+                  {{'order.link' | t}}
+                  <div class="icon-arrow-next"></div>
+                </a>
+              </th>
+            <tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>{{'order.name' | t}}</label>
+                Ian Syalik
+              </td>
+              <td>
+                <label>{{'order.phone' | t}}</label>
+                +372 555 39 637
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>{{'order.email' | t}}</label>
+                thebigbadwolf88@gmail.com
+              </td>
+              <td>
+                <label>{{'order.address' | t}}</label>
+                Tammsaare 70-7, 13345, Tallinn, Estonia
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>

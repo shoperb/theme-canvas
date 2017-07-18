@@ -409,7 +409,7 @@ section[data-type] {
       vertical-align: bottom;
     }
     .custom-section {
-      &.custom-text {
+      &.custom_text {
         &.text-align-left {
           text-align: left;
 
@@ -432,28 +432,28 @@ section[data-type] {
           }
         }
       }
-      &.custom-image {
+      &.custom_image {
         img {
           width: 100%;
           float: left;
         }
       }
-      &.custom-video {
+      &.custom_video {
         iframe {
           width: 100%;
         }
       }
-      &.custom-product {
+      &.custom_product {
         img {
           width: 100%;
         }
       }
-      &.custom-product {
+      &.custom_product {
         h2.general-title {
           text-align: left;
         }
       }
-      &.custom-collection {
+      &.custom_collection {
         position: relative;
         padding-bottom: 100%;
 
@@ -466,16 +466,9 @@ section[data-type] {
           bottom: 0;
           left: 0;
 
-          .collection-title {
-            text-align: center;
-            margin: 0;
+          h3.general-title {
             padding: 20px;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            position: absolute;
-            transform: translateY(-50%);
-            box-sizing: border-box;
+            @include centerize;
           }
         }
       }

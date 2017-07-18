@@ -1,0 +1,14 @@
+{{shop.name}}
+
+{{'email.date' | t}}: {{'now' | date: '%d %b %Y' }}
+
+---------
+
+{{'email.shipment' | t}} {{order.name}} (http://checkout.shoperb.me/invoices/{{order.token}}) {{'email.shipment_2' | t}}
+
+---------
+
+{{'email.address' | t}}: {{shop.address.full_address}}, {{shop.address.city_state_with_zip}}, {{shop.address.country}}
+{{'email.phone' | t}}: {{shop.address.phone}}
+{{'email.email' | t}}: {{shop.email}}
+{{'email.web' | t}}: {{shop.domain}}

@@ -1,1 +1,25 @@
-{}
+{
+  "name": "Custom section",
+  "blocks": [
+    {
+      "type": "custom_collection",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "custom_html",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        }
+      ]
+    }
+  ]
+}

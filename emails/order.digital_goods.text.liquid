@@ -1,0 +1,42 @@
+{{shop.name}}
+
+{{'email.date' | t}}: {{order.created_at | date: '%d %b %Y'}}
+{{'email.invoice' | t}}: #{{order.number}}
+
+---------
+
+{{'email.billing_address' | t}}:
+{% if order.billing_address.company? %}
+{{order.billing_address.company}}
+{% endif %}
+{{order.billing_address.first_name}} {{order.billing_address.last_name}}
+{{order.email}}
+{{order.billing_address.full_address}}
+{{order.billing_address.city_state_with_zip}}
+{{order.billing_address.country}}
+
+---------
+
+{% if order.items.size > 1 %}
+{{'email.thank_you_digital_many' | t}}
+{% else %}
+{{'email.thank_you_digital_one' | t}}
+{% endif %}
+
+{% for item in order.items %}
+  {% if item.digital? && item.url != blank %}
+    {{item.name}}
+    |
+    {{item.url}}
+  {% endif %}
+{% endfor %}
+
+
+{{'email.thank_you' | t}}
+
+---------
+
+{{'email.address' | t}}: {{shop.address.full_address}}, {{shop.address.city_state_with_zip}}, {{shop.address.country}}
+{{'email.phone' | t}}: {{shop.address.phone}}
+{{'email.email' | t}}: {{shop.email}}
+{{'email.web' | t}}: {{shop.domain}}

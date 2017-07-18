@@ -23,7 +23,7 @@
     {% endcase %}
 
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
-      {% assign file = 'custom_' | append: block.settings.type %}
+      {% assign file = block.type %}
       {% section file %}
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}

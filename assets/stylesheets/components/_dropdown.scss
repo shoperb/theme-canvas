@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+
+  .icon-arrow-down {
+    position: relative;
+    top: rem(4px);
+    right: rem(1px);
+    font-size: rem(20px);
+    float: right;
+    margin-right: rem(-9px);
+  }
+  ul {
+    @extend .default-list;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: rem(-8px);
+    padding: rem(15px 0 10px) !important;
+    margin: rem(-15px -30px -10px);
+    @include box-shadow(0 5px 20px 0 $dropdown-shadow);
+    background: $dropdown-background;
+
+    li {
+      min-width: rem(125px);
+
+      span,
+      a {
+        padding: rem(8px 30px 7px);
+
+        &:hover {
+          background: $dropdown-hover-background;
+        }
+      }
+    }
+  }
+  &:hover {
+    > ul {
+      display: block;
+    }
+  }
+}

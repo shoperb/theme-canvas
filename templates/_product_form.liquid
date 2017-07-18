@@ -1,0 +1,47 @@
+{% assign default_variant = product.variants.first %}
+
+<div data-position="cart-form">
+  <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}" method="post" enctype="multipart/form-data">
+    <div class="variants clearfix">
+      {% if product.variants.many? %}
+      <select name="variant" id="variant" data-behaviour="select" data-variant-select>
+        {% for variant in product.variants %}
+        <option data-variant='{{variant.json}}' value="{{variant.id}}">{{variant.name}}</option>
+        {% endfor %}
+      </select>
+
+      <script type="text/template" id="variant-select-template">
+        <div class="field custom-select clearfix">
+          <label class="custom-select-title"><%= name %>:</label>
+          <select name="<%= name %>" id="variant-<%= lower_name %>" data-behaviour="select">
+            <%= options %>
+          </select>
+        </div>
+      </script>
+
+      <div class="row" data-variant-container></div>
+      {% else %}
+      <input type="hidden" name="variant" value="{{default_variant.id}}"/>
+      {% endif %}
+    </div>
+
+    <div class="quanity-cart-row clearfix">
+      <div class="quantity">
+        <label class="custom-select-title">Qty:</label>
+        <div class="number-input">
+          <input id="amount" name="amount" min="1" value="1">
+          <div class="icon-arrow-up-form" data-quantity="increase"></div>
+          <div class="icon-arrow-up-down" data-quantity="decrease"></div>
+        </div>
+      </div>
+
+      <div class="add-to-cart">
+        {% if product.available? %}
+        <button class="button primary" type="submit">{{'product.add_to_cart' | t}}</button>
+        {% else %}
+        <button class="button primary" disabled="disabled" type="submit">{{'product.unavailable_short' | t}}</button>
+        {% endif %}
+      </div>
+    </div>
+  </form>
+</div>

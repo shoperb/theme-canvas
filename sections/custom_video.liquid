@@ -1,4 +1,4 @@
-<div class="custom-section custom-{{block.settings.type}}">
+<div class="custom-section {{block.type}}">
   {% if block.settings.video contains 'vimeo.com' %}
   <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   {% elsif block.settings.video contains 'youtube.com' %}

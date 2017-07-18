@@ -1,0 +1,26 @@
+<sidebar class="account-sidebar">
+  <nav class="account-nav">
+    <div class="title">{{'account.settings' | t}}</div>
+    <ul>
+      <li>
+        <a href="{{url.account}}"{% if account_sidebar == 'account' %} class="active"{% endif %}>{{'account.account_information' | t}}</a>
+      </li>
+      <li>
+        <a href="{{url.orders}}"{% if account_sidebar == 'orders' %} class="active"{% endif %}>{{'account.order_history' | t}}</a>
+      </li>
+
+      {% comment %}
+      <li>
+        <a href="{{url.password}}"{% if account_sidebar == 'password' %} class="active"{% endif %}>{{'account.change_password' | t}}</a>
+      </li>
+      {% endcomment %}
+
+      {% comment %}
+      <li>
+        <a href="{{url.address}}"{% if account_sidebar == 'address' %} class="active"{% endif %}>{{'account.addresses' | t}}</a>
+      </li>
+      {% endcomment %}
+
+    </ul>
+  </nav>
+</sidebar>

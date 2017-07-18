@@ -1,0 +1,24 @@
+{% assign collection = collections[collection_products] %}
+
+{% if collection_products and collection %}
+
+<div class="home-collection">
+  <section class="main-container home product-slider">
+    <div class="header-title">
+      <h2 class="main-title center">{{collection.name}}</h2>
+      <div class="collection-description">{{'general.collection_description' | t}}</div>
+    </div>
+
+    <div class="product-grid" data-height="equal">
+      {% for product in collection.products %}
+      {% if forloop.index <= 14 %}
+      {% include 'list_product' with 1 %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <a href="{{collection.url}}" class="button secondary home-button">{{'general.view_all' | t}}</a>
+</div>
+
+{% endif %}

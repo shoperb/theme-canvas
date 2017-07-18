@@ -1,6 +1,6 @@
 {% assign product = products[section.settings.product] %}
 
-<div class="custom-section custom-{{block.settings.type}}" itemtype="http://schema.org/Product">
+<div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{product.url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
 

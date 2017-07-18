@@ -1,0 +1,215 @@
+.twelve.wide.column.addresses-content {
+  @include breakpoint(tablet) {
+    width: 100% !important;
+  }
+
+  .addresses-header {
+    border-bottom: 1px solid $login-form-separator-color;
+    margin-bottom: rem(55px);
+    
+    h2 {
+      float: left;
+      color: $login-form-address-title-color;
+      font-size: $login-form-address-title-font-size;
+      font-weight: $login-form-address-title-font-weight;
+      margin-top: rem(-11px);
+      margin-bottom: rem(19px);
+    }
+    .add-new-address {
+      float: right;
+      margin: rem(-2px 10px 19px);
+      @include breakpoint(mobile) {
+        float: none;
+        margin: rem(0 0 19px);
+      }
+
+      a {
+        padding: rem(6px 17px 5px);
+        @include breakpoint(mobile) {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+
+    .title {
+      color: $login-form-address-name-color;
+      font-size: $login-form-address-name-font-size;
+      font-weight: $login-form-address-name-font-weight;
+      text-align: left;
+      margin-top: rem(-5px);
+    }
+    label {
+      padding: 0;
+      color: $login-form-account-label-color;
+      font-size: $login-form-account-label-font-size;
+      font-weight: $login-form-account-label-font-weight;
+      display: block;
+    }
+    thead {
+      th {
+        padding: rem(0 0 25px);
+        @include breakpoint(mobile) {
+          display: block;
+        }
+
+        a {
+          color: $login-form-account-view-details-color;
+          font-size: $login-form-account-view-details-font-size;
+          font-weight: $login-form-account-view-details-font-weight;
+          float: right;
+
+          &:hover {
+            color: $login-form-account-view-details-hover-color;
+          }
+          .icon-arrow-next {
+            display: inline-block;
+            position: relative;
+            left: rem(-5px);
+            top: rem(3px);
+            font-size: rem(16px);
+          }
+        }
+      }
+      &:not(:first-of-type) {
+        th {
+          border-top: 1px solid $login-form-separator-color;
+          padding-top: rem(42px);
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: $login-form-account-value-color;
+          font-size: $login-form-account-value-font-size;
+          font-weight: $login-form-account-value-font-weight;
+          padding: rem(0 0 26px);
+          @include breakpoint(mobile) {
+            display: block;
+          }
+        }
+        &:last-of-type {
+          td {
+            padding: rem(0 0 38px);
+          }
+        }
+      }
+    }
+  }
+}
+.twelve.wide.column.address-content {
+  @include breakpoint(tablet) {
+    width: 100% !important;
+  }
+
+  .select {
+    @include border-radius(4px);
+    color: $form-field-color;
+    font-size: $form-field-font-size;
+    font-weight: $form-field-font-weight;
+    border: $form-field-border;
+    background: $form-field-background;
+    height: rem(42px);
+
+    select {
+      opacity: 1;
+      border: none;
+      background: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: rem(0 20px);
+      font-size: $form-field-font-size;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    .icon-arrow-down {
+      position: absolute;
+      top: rem(11px);
+      right: rem(15px);
+      pointer-events: none;
+    }
+  }
+  .fake-link {
+    color: $login-form-new-address-color;
+    font-size: $login-form-new-address-font-size;
+    font-weight: $login-form-new-address-font-weight;
+    margin-top: rem(6px);
+    cursor: pointer;
+  }
+  .add-line {
+    padding-bottom: rem(34px) !important;
+  }
+  form {
+    .wide.column {
+      &.three {
+        padding: rem(24px 0 16px 0);
+        @include breakpoint(900) {
+          width: 50% !important;
+          padding: rem(10px 0 0 47px);
+        }
+        @include breakpoint(tablet) {
+          padding: rem(10px 0 0 20px);
+        }
+        @include breakpoint(mobile) {
+          width: 100% !important;
+        }
+
+        label {
+          padding: 0;
+        }
+      }
+      &.five {
+        @include breakpoint(900) {
+          width: 100% !important;
+        }
+        &:empty {
+          @include breakpoint(mobile) {
+            display: none;
+          }
+        }
+      }
+      &.eight {
+        padding-right: rem(46px);
+        @include breakpoint(900) {
+          width: 50% !important;
+          padding: rem(0 20px 0 0);
+        }
+        @include breakpoint(mobile) {
+          width: 100% !important;
+          padding: rem(0 20px);
+        }
+
+        .button {
+          float: right;
+          padding: rem(10px 71px);
+          @include breakpoint(mobile) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .separator {
+    background: $login-form-separator-color;
+    height: rem(1px);
+    padding: 0 !important;
+    margin: rem(24px 14px 24px 19px);
+  }
+  .delete-address {
+    display: block;
+    padding: rem(9px 23px 0);
+    color: $login-form-delete-address-color;
+    font-size: $login-form-delete-address-font-size;
+    font-weight: $login-form-delete-address-font-weight;
+    @include breakpoint(mobile) {
+      text-align: center;
+    }
+  }
+}
