@@ -2,6 +2,172 @@
   "et-EE": {
     "presets": {
     },
+    "sections": {
+      "header": {
+        "title": "Päis",
+        "settings": {
+          "align_logo": "Logo paigutus",
+          "logo": "Logo",
+          "logo_max_width": "Logo maksimaalne laius",
+          "menu": "Menüü"
+        }
+      },
+      "footer": {
+        "title": "Jalus",
+        "settings": {
+          "footer_menu1": "Peajaluse menüü",
+          "footer_menu2": "Lisajaluse menüü",
+          "show_powered_by": "Näita 'Powered by'"
+        }
+      },
+      "blog_posts": {
+        "title": "Blogi postitused"
+      },
+      "collection": {
+        "title": "Kollektsioon"
+      },
+      "collection_list": {
+        "title": "Kollektsioonide nimekiri"
+      },
+      "custom": {
+        "title": "Loo ise"
+      },
+      "custom_collection": {
+        "title": "Kollektsioon"
+      },
+      "custom_html": {
+        "title": "HTML"
+      },
+      "custom_image": {
+        "title": "Pilt"
+      },
+      "custom_product": {
+        "title": "Toode"
+      },
+      "custom_text": {
+        "title": "Tekst"
+      },
+      "custom_video": {
+        "title": "Video"
+      },
+      "image_gallery": {
+        "title": "Pildigalerii",
+        "settings": {
+          "section_height": {
+            "title": "Galerii kõrgus",
+            "options": {
+              "extra-small": "Väga väike",
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur",
+              "extra-large": "Väga suur"
+            }
+          }
+        },
+        "blocks": {
+          "image": {
+            "title": "Pilt",
+            "settings": {
+              "image": {
+                "title": "Pilt"
+              },
+              "caption": {
+                "title": "Pealkiri"
+              },
+              "image_alignment": {
+                "title": "Paigutus",
+                "options": {
+                  "top-left": "Üles vasakule",
+                  "top-middle": "Üles keskele",
+                  "top-right": "Üles paremale",
+                  "middle": "Keskele",
+                  "middle-right": "Keskele paremale",
+                  "middle-left": "Keskele vasakule",
+                  "bottom-middle": "Alla keskele",
+                  "bottom-right": "Alla paremale",
+                  "bottom-left": "Alla vasakule"
+                }
+              }
+            }
+          }
+        }
+      },
+      "image_with_text": {
+        "title": "Pilt tekstiga"
+      },
+      "image_with_text_overlay": {
+        "title": "Päisepilt",
+        "settings": {
+          "image": {
+            "title": "Pilt"
+          },
+          "image_alignment": {
+            "title": "Paigutus",
+            "options": {
+              "top-left": "Üles vasakule",
+              "top-middle": "Üles keskele",
+              "top-right": "Üles paremale",
+              "middle": "Keskele",
+              "middle-right": "Keskele paremale",
+              "middle-left": "Keskele vasakule",
+              "bottom-middle": "Alla keskele",
+              "bottom-right": "Alla paremale",
+              "bottom-left": "Alla vasakule"
+            }
+          },
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text": {
+            "title": "Alapealkiri"
+          },
+          "section_height": {
+            "title": "Sektsiooni kõrgus",
+            "options": {
+              "extra-small": "Väga väike",
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur",
+              "extra-large": "Väga suur"
+            }
+          },
+          "text_size": {
+            "title": "Teksti suurus",
+            "options": {
+              "medium": "Keskmine",
+              "large": "Suur"
+            }
+          },
+          "button_label": {
+            "title": "Nupu tekst"
+          },
+          "button_url": {
+            "title": "Nupu URL"
+          }
+        }
+      },
+      "location_and_contact": {
+        "title": "Asukoht/kontakt"
+      },
+      "logo_list": {
+        "title": "Brändid/logod"
+      },
+      "newsletter": {
+        "title": "Uudiskiri"
+      },
+      "product": {
+        "title": "Toode"
+      },
+      "slideshow": {
+        "title": "Slaidishow"
+      },
+      "testimonials": {
+        "title": "Iseloomustused"
+      },
+      "text_columns_with_images": {
+        "title": "Teksti lõigud piltidega"
+      }
+    },
     "settings": {
       "body_background": {
         "title": "Taustavärv"
