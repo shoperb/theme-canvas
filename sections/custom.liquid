@@ -23,9 +23,93 @@
     {% endcase %}
 
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
-      {% assign file = block.type %}
-      <div style="border: 1px solid red">{{block.type}}</div>
-      {% section file %}
+    {% case block.type %}
+      {% when 'custom_collection' %}
+
+    {% assign collection = collections[block.settings.collection] %}
+
+    {% if collection %}
+    <div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
+      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+        <h3 class="general-title">{{collection.name}}</h3>
+      </a>
+    </div>
+    {% endif %}
+
+      {% when 'custom_html' %}
+
+    <div class="custom-section {{block.type}}">
+      {{block.settings.html}}
+    </div>
+
+      {% when 'custom_image' %}
+
+    <div class="custom-section {{block.type}}">
+      {% if block.settings.image != blank %}
+      <img src="{{block.settings.image}}">
+      {% else %}
+      <img src="{{'images/placeholder.svg' | asset_url}}">
+      {% endif %}
+    </div>
+
+      {% when 'custom_product' %}
+
+    {% assign product = products[section.settings.product] %}
+
+    <div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
+      <meta itemprop="url" content="{{product.url}}">
+      <meta itemprop="image" content="{{product.image.size-2048.url}}">
+
+      {% if product.image.size-480.url != blank %}
+      <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
+      {% else %}
+      <img src="{{'images/placeholder.svg' | asset_url}}">
+      {% endif %}
+
+      <h2 class="general-title">{{product.name}} name </h2>
+
+      <div class="product-price">
+        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+          <div>
+            <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}} 1.23€</span>
+
+            {% if default_variant.discount? %}
+            <span class="compare-price">
+              <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
+            </span>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {% when 'custom_text' %}
+
+    <div class="custom-section {{block.type}} text-align-{{block.settings.horizontal_alignment}}">
+      {% if block.settings.title != blank %}
+      <h2 class="general-title">{{block.settings.title}}</h2>
+      {% endif %}
+
+      {% if block.settings.text != blank %}
+      <div class="text-content general-text">{{block.settings.text}}</div>
+      {% endif %}
+    </div>
+
+      {% when 'custom_video' %}
+
+    <div class="custom-section {{block.type}}">
+      {% if block.settings.video contains 'vimeo.com' %}
+      <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% elsif block.settings.video contains 'youtube.com' %}
+      <iframe src="{{block.settings.video}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
+      {% endif %}
+    </div>
+
+    {% endcase %}
+
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
   </div>
