@@ -5,8 +5,8 @@
       "type": "custom_collection",
       "settings": [
         {
-          "type": "image",
-          "handle": "image",
+          "type": "collection",
+          "handle": "collection",
           "default": ""
         }
       ]
@@ -15,8 +15,48 @@
       "type": "custom_html",
       "settings": [
         {
+          "type": "html",
+          "handle": "html",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "custom_image",
+      "settings": [
+        {
           "type": "image",
           "handle": "image",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "custom_product",
+      "settings": [
+        {
+          "type": "product",
+          "handle": "product",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "custom_text",
+      "settings": [
+        {
+          "type": "text",
+          "handle": "text",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "custom_video",
+      "settings": [
+        {
+          "type": "video",
+          "handle": "video",
           "default": ""
         }
       ]

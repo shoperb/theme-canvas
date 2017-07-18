@@ -24,6 +24,7 @@
 
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
       {% assign file = block.type %}
+      <div style="border: 1px solid red">{{block.type}}</div>
       {% section file %}
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
