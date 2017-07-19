@@ -5,17 +5,17 @@
 <section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="full-width section-height {{section.settings.section_height}}{% if background_image != blank %} image-align-{{section.settings.image_alignment}}{% endif %}{% if section.settings.text_size == 'large' %} text-large{% endif %}" style="background-image: {% if background_image != blank %}url('{{background_image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')">
   <div class="hero">
     {% if section.settings.title != blank %}
-    <h2 class="general-title">{{section.settings.title | escape}}</h2>
+    <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title | escape}}</h2>
     {% endif %}
 
     {% if section.settings.text != blank %}
-    <div class="text-content general-text">
+    <div class="text-content general-text" data-theme-editor-setting="text">
     {{section.settings.text}}
     </div>
     {% endif %}
 
     {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-    <a href="{{section.settings.button_link}}"ole="button" class="button secondary">
+    <a href="{{section.settings.button_link}}" role="button" class="button secondary">
       {{section.settings.button_label | escape}}
     </a>
     {% endif %}

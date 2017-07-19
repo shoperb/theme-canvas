@@ -12,11 +12,11 @@
       <img src="{% if section.settings.image != blank %}{{section.settings.image}}{% else %}{{'images/placeholder.svg' | asset_url}}{% endif %}">
     </div><!--
     -->{% endif %}<div class="grid__item palm--one-whole lap--one-half desk--one-half">
-      <h2 class="general-title">{{section.settings.title}}</h2>
-      <div class="text-content general-text">{{section.settings.text}}</div>
+      <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
+      <div class="text-content general-text" data-theme-editor-setting="text" >{{section.settings.text}}</div>
 
       {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-      <a href="{{section.settings.button_link}}" role="button" class="button primary"{{outer_url}}>{{section.settings.button_text}}</a>
+      <a href="{{section.settings.button_link}}" data-theme-editor-setting="button_text" role="button" class="button primary"{{outer_url}}>{{section.settings.button_text}}</a>
       {% endif %}
 
     </div>{% if section.settings.horizontal_alignment == 'image-on-right' %}<!--
