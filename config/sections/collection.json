@@ -1,5 +1,6 @@
 {
   "name": "Featured collection",
+  "generic": true,
   "settings": [
     {
       "type": "text",

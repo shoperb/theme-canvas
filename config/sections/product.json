@@ -1,5 +1,6 @@
 {
   "name": "Product",
+  "generic": true,
   "settings": [
     {
       "type": "product",

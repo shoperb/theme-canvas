@@ -1,5 +1,6 @@
 {
   "name": "Custom section",
+  "generic": true,
   "blocks": [
     {
       "type": "custom_collection",

@@ -1,5 +1,6 @@
 {
   "name": "Image with text",
+  "generic": true,
   "settings": [
     {
       "type": "image",

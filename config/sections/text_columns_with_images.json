@@ -1,5 +1,6 @@
 {
   "name": "Text columns with images",
+  "generic": true,
   "settings": [
     {
       "type": "image",

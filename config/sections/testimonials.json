@@ -1,5 +1,6 @@
 {
   "name": "Testimonials",
+  "generic": true,
   "settings": [
     {
       "type": "text",
