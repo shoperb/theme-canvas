@@ -60,7 +60,8 @@
 
 
       {% when 'custom_product' %}
-    {% assign product = products[section.settings.product] %}
+    {% assign product = products[block.settings.product] %}
+    {% assign default_variant  = product.variants.first %}
 
     <div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
       <meta itemprop="url" content="{{product.url}}">
