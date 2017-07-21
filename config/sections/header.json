@@ -20,7 +20,7 @@
     {
       "type": "text",
       "handle": "logo_max_width",
-      "default": "100"
+      "default": 100
     },
     {
       "type": "menu",

@@ -461,7 +461,7 @@
       "type": "blog_posts",
       "settings": {
         "title": "Blog posts",
-        "grid": 5,
+        "grid": 6,
         "show_author": false,
         "show_date": false,
         "show_button": true

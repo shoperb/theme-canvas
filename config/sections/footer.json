@@ -1,0 +1,22 @@
+{
+  "name": "Footer",
+  "handle": "footer",
+  "generic": false,
+  "settings": [
+    {
+      "type": "menu",
+      "handle": "footer_menu1",
+      "default": "footer"
+    },
+    {
+      "type": "menu",
+      "handle": "footer_menu2",
+      "default": "header"
+    },
+    {
+      "type": "checkbox",
+      "handle": "show_powered_by",
+      "default": true
+    }
+  ]
+}
