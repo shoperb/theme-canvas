@@ -8,7 +8,7 @@
       "default": "Featured products"
     },
     {
-      "type": "combobox",
+      "type": "collection",
       "handle": "collection"
     },
     {

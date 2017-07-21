@@ -84,7 +84,7 @@
           ]
         },
         {
-          "type": "combobox",
+          "type": "url",
           "handle": "link"
         },
         {

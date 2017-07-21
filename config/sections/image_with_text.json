@@ -37,7 +37,7 @@
       "default": ""
     },
     {
-      "type": "combobox",
+      "type": "url",
       "handle": "button_link",
       "default": ""
     }
