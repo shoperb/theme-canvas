@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('.slideshow').each(function() {
     var autoPlay = $(this).data('autoplay'),
         animationSpeed = $(this).data('animation-speed');

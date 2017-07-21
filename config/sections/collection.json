@@ -17,19 +17,19 @@
       "default": "3",
       "options": [
         {
-          "value": "2",
+          "value": 2,
           "handle": "2"
         },
         {
-          "value": "3",
+          "value": 3,
           "handle": "3"
         },
         {
-          "value": "4",
+          "value": 4,
           "handle": "4"
         },
         {
-          "value": "5",
+          "value": 5,
           "handle": "5"
         }
       ]
@@ -40,23 +40,23 @@
       "default": "2",
       "options": [
         {
-          "value": "1",
+          "value": 1,
           "handle": "1"
         },
         {
-          "value": "2",
+          "value": 2,
           "handle": "2"
         },
         {
-          "value": "3",
+          "value": 3,
           "handle": "3"
         },
         {
-          "value": "4",
+          "value": 4,
           "handle": "4"
         },
         {
-          "value": "5",
+          "value": 5,
           "handle": "5"
         }
       ]
