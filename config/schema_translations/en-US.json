@@ -6,49 +6,100 @@
       "header": {
         "title": "Header",
         "settings": {
-          "align_logo": "Logo alignment",
-          "logo": "Logo",
-          "logo_max_width": "Maximum width of logo",
-          "menu": "Menu"
+          "align_logo": {
+            "title": "Logo alignment"
+          },
+          "logo": {
+            "title": "Logo"
+          },
+          "logo_max_width": {
+            "title": "Maximum width of logo"
+          },
+          "menu": {
+            "title": "Menu"
+          }
         }
       },
       "footer": {
         "title": "Footer",
         "settings": {
-          "footer_menu1": "Main footer menu",
-          "footer_menu2": "Additional footer menu",
-          "show_powered_by": "Show 'Powered by'"
+          "footer_menu1": {
+            "title": "Main footer menu"
+          },
+          "footer_menu2": {
+            "title": "Additional footer menu"
+          },
+          "show_powered_by": {
+            "title": "Show 'Powered by'"
+          }
         }
       },
       "blog_posts": {
-        "title": "Blog posts"
+        "title": "Blog posts",
+        "settings": {
+          "title": "Title",
+          "grid": {
+            "title": "Grid"
+          },
+          "show_author": {
+            "title": "Show author"
+          },
+          "show_date": {
+            "title": "Show date"
+          },
+          "show_view_all_button": {
+            "title": "Show button \"View All\""
+          }
+        }
       },
       "collection": {
-        "title": "Collection"
+        "title": "Collection",
+        "settings": {
+          "title": {
+            "title": "Title"
+          },
+          "collection": {
+            "title": "Collection"
+          },
+          "per_row": {
+            "title": "Items per row"
+          },
+          "rows": {
+            "title": "Number of rows"
+          },
+          "show_vendor": {
+            "title": "Show vendor"
+          },
+          "show_button": {
+            "title": "Show button"
+          }
+        }
       },
       "collection_list": {
         "title": "Collection list"
       },
       "custom": {
-        "title": "Custom"
-      },
-      "custom_collection": {
-        "title": "Collection"
-      },
-      "custom_html": {
-        "title": "HTML"
-      },
-      "custom_image": {
-        "title": "Image"
-      },
-      "custom_product": {
-        "title": "Product"
-      },
-      "custom_text": {
-        "title": "Text"
-      },
-      "custom_video": {
-        "title": "Video"
+        "title": "Custom",
+        "blocks": {
+          "custom_collection": {
+            "title": "Collection"
+          },
+          "custom_html": {
+            "title": "HTML"
+          },
+          "custom_image": {
+            "title": "Image"
+          },
+          "custom_product": {
+            "title": "Product"
+          },
+          "custom_text": {
+            "title": "Text"
+          },
+          "custom_video": {
+            "title": "Video"
+          }
+        }
       },
       "image_gallery": {
         "title": "Image gallery",
