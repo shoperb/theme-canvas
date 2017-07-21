@@ -30,7 +30,7 @@
     {% assign collection = collections[block.settings.collection] %}
     {% if collection %}
     <div class="custom-section {{block.type}}">
-      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image.url }}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>
