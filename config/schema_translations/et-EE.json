@@ -6,22 +6,48 @@
       "header": {
         "title": "Päis",
         "settings": {
-          "align_logo": "Logo paigutus",
-          "logo": "Logo",
-          "logo_max_width": "Logo maksimaalne laius",
-          "menu": "Menüü"
+          "align_logo": {
+            "title": "Logo paigutus"
+          },
+          "logo": {
+            "title": "Logo"
+          },
+          "logo_max_width": {
+            "title": "Logo maksimaalne laius"
+          },
+          "menu": {
+            "title": "Menüü"
+          }
         }
       },
       "footer": {
         "title": "Jalus",
         "settings": {
-          "footer_menu1": "Peajaluse menüü",
-          "footer_menu2": "Lisajaluse menüü",
-          "show_powered_by": "Näita 'Powered by'"
+          "footer_menu1": {
+            "title": "Jaluse menüü"
+          },
+          "footer_menu2": {
+            "title": "Jaluse lisamenüü"
+          },
+          "show_powered_by": {
+            "title": "Näita \"Powered by\""
+          }
         }
       },
       "blog_posts": {
-        "title": "Blogi postitused"
+        "title": "Blogi postitused",
+        "grid": {
+          "title": "Postituste arv"
+        },
+        "show_author": {
+          "title": "Näita autorit"
+        },
+        "show_date": {
+          "title": "Näita kuupäeva"
+        },
+        "show_view_all_button": {
+          "title": "Näita nuppu \"Vaata kõiki\""
+        }
       },
       "collection": {
         "title": "Kollektsioon"

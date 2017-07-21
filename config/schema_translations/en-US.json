@@ -39,7 +39,7 @@
         "settings": {
           "title": "Title",
           "grid": {
-            "title": "Grid"
+            "title": "Number of posts"
           },
           "show_author": {
             "title": "Show author"
