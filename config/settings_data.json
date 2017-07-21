@@ -439,7 +439,7 @@
         "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
         "image_alignment": "center",
         "title": "My AD",
-        "text": "<p>Look at what cool prodcuts I have.</p>",
+        "text": "<p>Look at what cool products I have.</p>",
         "text_size": "large",
         "section_height": "large",
         "button_label": "Click here!",
@@ -643,34 +643,34 @@
       },
       "blocks": {
         "testimonial-1": {
-          "type": "testimonial",
+          "type": "quote",
           "settings": {
             "quote": "Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Test Author"
           }
         },
         "testimonial-2": {
-          "type": "testimonial",
+          "type": "quote",
           "settings": {
             "quote": "Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.",
             "author": "Thor"
           }
         },
         "testimonial-3": {
-          "type": "testimonial",
+          "type": "quote",
           "settings": {
             "quote": "spring-summer-collection-2017"
           }
         },
         "testimonial-4": {
-          "type": "testimonial",
+          "type": "quote",
           "settings": {
             "quote": "asdasdasdadad",
             "author": "jrkr2333"
           }
         },
         "testimonial-5": {
-          "type": "testimonial",
+          "type": "quote",
           "settings": {
             "quote": "asdasdasdadad",
             "author": "jrkr2333"

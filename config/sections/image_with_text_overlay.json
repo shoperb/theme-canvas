@@ -25,12 +25,12 @@
           "handle": "top-right"
         },
         {
-          "value": "middle-left",
+          "value": "center-left",
           "handle": "middle-left"
         },
         {
-          "value": "middle",
-          "handle": "middle"
+          "value": "center",
+          "handle": "center"
         },
         {
           "value": "middle-right",
@@ -62,7 +62,7 @@
     },
     {
       "type": "select",
-      "handle": "hero_size",
+      "handle": "section_height",
       "default": "medium",
       "options": [
         {
@@ -108,7 +108,7 @@
     },
     {
       "type": "url",
-      "handle": "button_link"
+      "handle": "button_url"
     }
   ]
 }

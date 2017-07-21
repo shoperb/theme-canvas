@@ -147,7 +147,7 @@
         "title": "Image with text"
       },
       "image_with_text_overlay": {
-        "title": "Hero",
+        "title": "Hero image",
         "settings": {
           "image": {
             "title": "Image"
@@ -158,9 +158,9 @@
               "top-left": "Top left",
               "top-middle": "Top Middle",
               "top-right": "Top Right",
-              "middle": "Middle",
+              "center": "Center",
               "middle-right": "Middle Right",
-              "middle-left": "Right Left",
+              "middle-left": "Middle Left",
               "bottom-middle": "Bottom Middle",
               "bottom-right": "Bottom Right",
               "bottom-left": "Bottom Left"
