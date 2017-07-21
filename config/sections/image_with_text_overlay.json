@@ -1,7 +1,5 @@
 {
   "name": "Image with text overlay",
-  "class": "index-section index-section--flush",  // ???
-  "generic": true,                                // ???
   "settings": [
     {
       "type": "image",

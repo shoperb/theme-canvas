@@ -2,11 +2,11 @@
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
 
 {% case section.settings.per_row %}
-  {% when 2 %}
+  {% when '2' %}
     {% assign grid_class = 'desk--one-half' %}
-  {% when 3 %}
+  {% when '3' %}
     {% assign grid_class = 'desk--one-third' %}
-  {% when 4 %}
+  {% when '4' %}
     {% assign grid_class = 'desk--one-quarter' %}
   {% else %}
     {% assign grid_class = 'desk--one-fifth' %}
@@ -44,7 +44,7 @@
 
         {% if product.available? %}
         <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <span class="money" itemprop="price">>{{variant.current_price | money}}</span>
+          <span class="money" itemprop="price">{{variant.current_price | money}}</span>
           <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
           {% if variant.discount? %}
           <span class="discount">{{'product.was' | t}} <span class="money">{{product.price | money}}</span></span>
