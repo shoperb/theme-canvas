@@ -21,7 +21,7 @@
     {
       "type": "image",
       "handle": "logo",
-      "default": "images/preview.jpg"
+      "default": ""
     },
     {
       "type": "text",
@@ -31,7 +31,7 @@
     {
       "type": "menu",
       "handle": "menu",
-      "default": "header"
+      "default": ""
     }
   ]
 }

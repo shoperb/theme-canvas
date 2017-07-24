@@ -5,16 +5,16 @@
   "settings": [
     {
       "type": "menu",
-      "handle": "footer_menu1",
-      "default": "footer"
+      "handle": "menu",
+      "default": ""
     },
     {
-      "type": "menu",
-      "handle": "footer_menu2",
-      "default": "header"
+      "type": "page",
+      "handle": "contact_page",
+      "default": ""
     },
     {
-      "type": "checkbox",
+      "type": "toggle",
       "handle": "show_powered_by",
       "default": true
     }

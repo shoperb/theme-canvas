@@ -1,7 +1,19 @@
 <ul>
+  {% for item in menu.links %}
   <li class="nav-item">
-    {{'breadcrumb.home' | t | link_to_root}}
+    <a href="{{item.link}}">{{item.name}}</a>
   </li>
+  {% endfor %}
+
+  {% comment %}
+        {% if category.root.children.any? %}
+        <nav class="category-nav">
+          <header>
+            <div class="title">{{ 'categories.categories' | t }}</div>
+          </header>
+          {% include 'categories' with category.root.children %}
+        </nav>
+        {% endif %}
 
   <li class="nav-item">
     <a href="{{url.products}}">
@@ -33,4 +45,5 @@
   <li class="nav-item">
     <a class="nav-item-link" href="{{url.blog}}">{{'header.blog' | t}}</a>
   </li>
+  {% endcomment %}
 </ul>

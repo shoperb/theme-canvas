@@ -1,25 +1,19 @@
+{% assign menu = menus[section.settings.menu] %}
+{% assign contact = pages[section.settings.contact_page] %}
+
 <footer class="main-footer">
   <div class="general-content next-to-down">
     <div class="grid footer">
-      <div class="grid__item one-third">
-        {% include 'menu' with 'first-level-only' %}
-      </div><!--
+      {% if menu %}
+      <div class="grid__item palm-one-whole{% if !contact %} one-half{% endif %}">
+        {% include 'menu' with menu %}
+      </div>{% endif %}<!--
 
-      --><div class="grid__item one-third social-icons">
-        <a href="https://www.facebook.com/" target="_blank">
-          {{ "images/social/facebook.png" | asset_url | image_tag: "Store @ Facebook" }}
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          {{ "images/social/instagram.png" | asset_url | image_tag: "Store @ Instagram" }}
-        </a>
-      </div><!--
-
-      --><div class="grid__item one-third contact">
-        {% if pages['kontaktandmed'] %}
-        <h3 class="general-title">{{ pages['kontaktandmed'].name }}</h3>
-        {{pages["kontaktandmed"].content}}
-        {% endif %}
+      -->{% if contact %}<div class="grid__item palm-one-whole {% if !menu %} one-half{% endif %} contact">
+        <h3 class="general-title">{{contact.name}}</h3>
+        {{contact.content}}
       </div>
+      {% endif %}
     </div>
 
     <div class="grid">

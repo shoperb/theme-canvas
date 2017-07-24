@@ -411,14 +411,14 @@
         "logo_alignment": "left",
         "logo": "http://via.placeholder.com/150x100/FC2EFF",
         "logo_max_width": "100",
-        "menu": "header-menu"
+        "menu": "header-right"
       }
     },
     "footer": {
       "type": "footer",
       "settings": {
-        "footer_menu1": "footer",
-        "footer_menu2": "header",
+        "menu": "footer",
+        "contact_page": "who-are-are",
         "show_powered_by": true
       }
     },
