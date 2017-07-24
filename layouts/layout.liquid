@@ -71,13 +71,13 @@
 </head>
 
 <body class="template-{{template_name | replace: '_', '-'}}">
-  {% include 'header' %}
+  {% section 'header' %}
 
   <div class="main-content">
     {{content_for_layout}}
   </div>
 
-  {% include 'footer' %}
+  {% section 'footer' %}
   {{"javascripts/application.js" | asset_url | javascript_tag}}
 </body>
 

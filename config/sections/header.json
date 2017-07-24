@@ -4,12 +4,18 @@
   "generic": false,
   "settings": [
     {
-      "type": "radio",
-      "handle": "align_logo",
+      "type": "select",
+      "handle": "logo_alignment",
       "default": "left",
       "options": [
-        {"value": "left", "label": "Left", "handle": "left"},
-        {"value": "center", "label": "Centered", "handle": "center"}
+        {
+          "value": "left",
+          "handle": "left"
+        },
+        {
+          "value": "center",
+          "handle": "center"
+        }
       ]
     },
     {

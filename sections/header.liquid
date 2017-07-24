@@ -1,7 +1,11 @@
 <header id="main-header" class="grid">
   <div class="background"></div>
 
-  <div class="grid__item palm--one-whole desk--one-quarter">
+  {% assign menu = menus[section.settings.menu] %}
+
+>{{section.settings.logo_alignment|debug}}<
+
+  <div class="grid__item palm--one-whole {% unless menu.links.size == 0 %}desk--one-quarter{% endunless %}">
     <div class="logo">
       {{ 'images/logo.png' | asset_url | image_tag: shop.name | link_to_root }}
     </div>

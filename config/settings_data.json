@@ -408,10 +408,10 @@
     "header": {
       "type": "header",
       "settings": {
-        "align_logo": "left",
+        "logo_alignment": "left",
         "logo": "http://via.placeholder.com/150x100/FC2EFF",
         "logo_max_width": "100",
-        "menu": "header"
+        "menu": "header-menu"
       }
     },
     "footer": {
