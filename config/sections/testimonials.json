@@ -25,19 +25,17 @@
       ]
     }
   ],
-  "default": [
-    {
-      "blocks": [
-        {
-          "type": "quote"
-        },
-        {
-          "type": "quote"
-        },
-        {
-          "type": "quote"
-        }
-      ]
-    }
-  ]
+  "default": {
+    "blocks": [
+      {
+        "type": "quote"
+      },
+      {
+        "type": "quote"
+      },
+      {
+        "type": "quote"
+      }
+    ]
+  }
 }

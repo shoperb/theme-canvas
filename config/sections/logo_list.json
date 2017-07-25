@@ -25,22 +25,20 @@
       ]
     }
   ],
-  "default": [
-    {
-      "blocks": [
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        }
-      ]
-    }
-  ]
+  "default": {
+    "blocks": [
+      {
+        "type": "logo"
+      },
+      {
+        "type": "logo"
+      },
+      {
+        "type": "logo"
+      },
+      {
+        "type": "logo"
+      }
+    ]
+  }
 }
