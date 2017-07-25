@@ -15,6 +15,71 @@
     },
     {
       "type": "toggle",
+      "handle": "allow_social_icons",
+      "default": true
+    },
+    {
+      "type": "text",
+      "handle": "social_facebook",
+      "default": true
+    },
+    {
+      "type": "text",
+      "handle": "social_twitter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "handle": "social_instagram",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "allow_payment_icons",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_seb",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_swedbank",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_nordea",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_danske",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_lhv",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_visa",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_mastercard",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "handle": "payment_maestro",
+      "default": true
+    },
+    {
+      "type": "toggle",
       "handle": "show_powered_by",
       "default": true
     }

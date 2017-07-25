@@ -7,7 +7,7 @@
 
   {% for link in collection %}
   <li>
-    <a href="{{link.url}}"{% if link.style == 'custom' %} target="_blank"{% endif %}>{{link.name}}</a>
+    {% if link.url %}<a href="{{link.url}}"{% if link.style == 'custom' %} target="_blank"{% endif %}>{% endif %}{{link.name}}{% if link.url %}</a>{% endif %}
 
     {% if link.children.any? %}
     {% include 'menu' with link %}

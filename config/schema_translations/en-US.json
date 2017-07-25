@@ -29,6 +29,45 @@
           "contact_page": {
             "title": "Contact page"
           },
+          "allow_social_icons": {
+            "title": "Allow social icons"
+          },
+          "social_facebook": {
+            "title": "Facebook"
+          },
+          "social_twitter": {
+            "title": "Twitter"
+          },
+          "social_instagram": {
+            "title": "Instagram"
+          },
+          "allow_payment_icons": {
+            "title": "Allow payment icons"
+          },
+          "payment_seb": {
+            "title": "SEB"
+          },
+          "payment_swedbank": {
+            "title": "Swedbank"
+          },
+          "payment_nordea": {
+            "title": "Nordea"
+          },
+          "payment_danske": {
+            "title": "Danske"
+          },
+          "payment_lhv": {
+            "title": "LHV"
+          },
+          "payment_visa": {
+            "title": "VISA"
+          },
+          "payment_mastercard": {
+            "title": "MasterCard"
+          },
+          "payment_maestro": {
+            "title": "Maestro"
+          },
           "show_powered_by": {
             "title": "Näita 'Powered by'"
           }

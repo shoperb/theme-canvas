@@ -419,6 +419,19 @@
       "settings": {
         "menu": "main-menu",
         "contact_page": "who-are-are",
+        "allow_social_icons": true,
+        "social_facebook": "http://www.facebook.com",
+        "social_twitter": "",
+        "social_instagram": "",
+        "allow_payment_icons": true,
+        "payment_seb": true,
+        "payment_swedbank": true,
+        "payment_nordea": true,
+        "payment_danske": true,
+        "payment_lhv": true,
+        "payment_visa": true,
+        "payment_mastercard": true,
+        "payment_maestro": true,
         "show_powered_by": true
       }
     },

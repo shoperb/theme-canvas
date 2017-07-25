@@ -29,6 +29,80 @@
       }
     }
   }
+  .social-icons {
+    text-align: center;
+    padding: #{$default-padding}px;
+
+    a {
+      display: inline-block;
+      padding: #{$default-padding}px;
+
+      &.icon-facebook {
+        &:before {
+          content: 'facebook';
+        }
+      }
+      &.icon-twitter {
+        &:before {
+          content: 'twitter';
+        }
+      }
+      &.icon-instagram {
+        &:before {
+          content: 'instagram';
+        }
+      }
+    }
+  }
+  .payment-icons {
+    text-align: center;
+    padding: #{$default-padding}px;
+
+    > div {
+      display: inline-block;
+    }
+
+    .payment-seb {
+      &:before {
+        content: "seb";
+      }
+    }
+    .payment-swedbank {
+      &:before {
+        content: "swedbank";
+      }
+    }
+    .payment-nordea {
+      &:before {
+        content: "nordea";
+      }
+    }
+    .payment-danske {
+      &:before {
+        content: "danske";
+      }
+    }
+    .payment-lhv {
+      &:before {
+        content: "lhv";
+      }
+    }
+    .payment-visa {
+      &:before {
+        content: "visa";
+      }
+    }
+    .payment-mastercard {
+      &:before {
+        content: "mastercard";
+      }
+    }
+    .payment-maestro {
+      &:before {
+        content: "maestro";
+      }
+    }
+  }
   .shoperb {
     padding: #{$default-padding}px;
     text-align: center;

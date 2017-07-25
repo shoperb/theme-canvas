@@ -16,6 +16,50 @@
       {% endif %}
     </div>
 
+    {% if section.settings.allow_social_icons %}
+    <div class="social-icons">
+      {% if section.settings.social_facebook != blank %}
+      <a href="{{section.settings.social_facebook}}" target="_blank" class="icon-facebook"></a>
+      {% endif %}
+      {% if section.settings.social_twitter != blank %}
+      <a href="{{section.settings.social_twitter}}" target="_blank" class="icon-twitter"></a>
+      {% endif %}
+      {% if section.settings.social_instagram != blank %}
+      <a href="{{section.settings.social_instagram}}" target="_blank" class="icon-instagram"></a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.allow_payment_icons %}
+    <div class="payment-icons">
+      {% if section.settings.payment_seb %}
+      <div class="payment-seb"></div>
+      {% endif %}
+      {% if section.settings.payment_swedbank %}
+      <div class="payment-swedbank"></div>
+      {% endif %}
+      {% if section.settings.payment_nordea %}
+      <div class="payment-nordea"></div>
+      {% endif %}
+      {% if section.settings.payment_danske %}
+      <div class="payment-danske"></div>
+      {% endif %}
+      {% if section.settings.payment_lhv %}
+      <div class="payment-lhv"></div>
+      {% endif %}
+      {% if section.settings.payment_visa %}
+      <div class="payment-visa"></div>
+      {% endif %}
+      {% if section.settings.payment_mastercard %}
+      <div class="payment-mastercard"></div>
+      {% endif %}
+      {% if section.settings.payment_maestro %}
+      <div class="payment-maestro"></div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.show_powered_by %}
     <div class="grid">
       <div class="grid__item one-whole shoperb">
         <a href="https://www.shoperb.com" target="_blank">
@@ -31,5 +75,6 @@
         </a>
       </div>
     </div>
+    {% endif %}
   </div>
 </footer>
