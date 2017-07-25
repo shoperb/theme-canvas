@@ -46,7 +46,8 @@
   <link rel="canonical" href="{{url.current_url}}">
 
   <!-- CSS concatenated and minified via ant build script-->
-  {{"stylesheets/application.css" | asset_url | stylesheet_tag}}
+  {% include 'shoperb_stylesheets', stylesheets: 'application.css' | split: '|' %}
+
   <!-- end CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
 
