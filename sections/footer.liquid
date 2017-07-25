@@ -1,7 +1,7 @@
 {% assign menu = menus[section.settings.menu] %}
 {% assign contact = pages[section.settings.contact_page] %}
 
-<footer class="main-footer">
+<footer class="main-footer" data-section-id="{{section.id}}">
   <div class="general-content next-to-down">
     <div class="grid footer">
       {% if menu %}

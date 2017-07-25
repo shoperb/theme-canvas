@@ -1,6 +1,6 @@
 {% assign menu = menus[section.settings.menu] %}
 
-<header id="main-header" class="grid">
+<header id="main-header" class="grid" data-section-id="{{section.id}}">
   <div class="background"></div>
 
   <div class="grid__item palm--one-whole{% if section.settings.logo_alignment != 'center' %} desk--one-quarter{% endif %}">
