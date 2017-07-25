@@ -1,49 +1,19 @@
+{% if menu.links.any? or menu.children.any? %}
 <ul>
-  {% for item in menu.links %}
-  <li class="nav-item">
-    <a href="{{item.link}}">{{item.name}}</a>
+  {% assign collection = menu.root_links %}
+  {% if menu.children.any? %}
+  {% assign collection = menu.children %}
+  {% endif %}
+
+  {% for link in collection %}
+  <li>
+    <a href="{{link.url}}">{{link.name}}</a>
+
+    {% if link.children.any? %}
+    {% include 'menu' with link %}
+    {% endif %}
+
   </li>
   {% endfor %}
-
-  {% comment %}
-        {% if category.root.children.any? %}
-        <nav class="category-nav">
-          <header>
-            <div class="title">{{ 'categories.categories' | t }}</div>
-          </header>
-          {% include 'categories' with category.root.children %}
-        </nav>
-        {% endif %}
-
-  <li class="nav-item">
-    <a href="{{url.products}}">
-      <span>{{'header.catalog' | t}}</span>
-    </a>
-    {% if menu != 'first-level-only' %}
-    <ul>
-      <li><a href="{{url.products}}">{{'header.all' | t}}</a></li>
-      {% for category in categories.roots %}
-      <li><a href="{{category.url}}">{{category.name}}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-
-  <li class="nav-item">
-    <a class="disabled">
-      <span>{{'header.collections' | t}}</span>
-    </a>
-    {% if menu != 'first-level-only' %}
-    <ul>
-      {% for collection in collections %}
-      <li><a href="{{collection.url}}">{{collection.name}}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-item-link" href="{{url.blog}}">{{'header.blog' | t}}</a>
-  </li>
-  {% endcomment %}
 </ul>
+{% endif %}
