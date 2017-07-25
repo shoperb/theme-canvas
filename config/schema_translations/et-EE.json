@@ -6,7 +6,7 @@
       "header": {
         "title": "Päis",
         "settings": {
-          "align_logo": {
+          "logo_alignment": {
             "title": "Logo paigutus"
           },
           "logo": {
@@ -16,21 +16,21 @@
             "title": "Logo maksimaalne laius"
           },
           "menu": {
-            "title": "Menüü"
+            "title": "Põhimenüü"
           }
         }
       },
       "footer": {
         "title": "Jalus",
         "settings": {
-          "footer_menu1": {
+          "menu": {
             "title": "Jaluse menüü"
           },
-          "footer_menu2": {
-            "title": "Jaluse lisamenüü"
+          "contact_page": {
+            "title": "Kontakti leht"
           },
           "show_powered_by": {
-            "title": "Näita \"Powered by\""
+            "title": "Näita 'Powered by'"
           }
         }
       },
@@ -46,7 +46,7 @@
           "title": "Näita kuupäeva"
         },
         "show_view_all_button": {
-          "title": "Näita nuppu \"Vaata kõiki\""
+          "title": "Näita nuppu 'Vaata kõiki'"
         }
       },
       "collection": {

@@ -6,7 +6,7 @@
       "header": {
         "title": "Header",
         "settings": {
-          "align_logo": {
+          "logo_alignment": {
             "title": "Logo alignment"
           },
           "logo": {
@@ -16,21 +16,21 @@
             "title": "Maximum width of logo"
           },
           "menu": {
-            "title": "Menu"
+            "title": "Main menu"
           }
         }
       },
       "footer": {
         "title": "Footer",
         "settings": {
-          "footer_menu1": {
-            "title": "Main footer menu"
+          "menu": {
+            "title": "Footer menu"
           },
-          "footer_menu2": {
-            "title": "Additional footer menu"
+          "contact_page": {
+            "title": "Contact page"
           },
           "show_powered_by": {
-            "title": "Show 'Powered by'"
+            "title": "Näita 'Powered by'"
           }
         }
       },
@@ -48,7 +48,7 @@
             "title": "Show date"
           },
           "show_view_all_button": {
-            "title": "Show button \"View All\""
+            "title": "Show button 'View All'"
           }
         }
       },

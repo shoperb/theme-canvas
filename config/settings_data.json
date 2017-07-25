@@ -417,7 +417,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu": "footer",
+        "menu": "main-menu",
         "contact_page": "who-are-are",
         "show_powered_by": true
       }

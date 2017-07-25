@@ -1,10 +1,10 @@
 {% if shop.possible_languages.many? %}
 <div class="language-selector">
+  <div class="current-locale">
+    {{ "language." | append: shop.current_locale | t }}
+    <span aria-hidden="true" class="glyph arrow-down"></span>
+  </div>
   <ul>
-    <li class="current-locale">
-      {{ "language." | append: shop.current_locale | t }}
-      <span aria-hidden="true" class="glyph arrow-down"></span>
-    </li>
     {% for language in shop.possible_languages %}
     {% unless shop.current_locale == language %}
     <li>{{ "language." | append: language | t | link_to_locale: language }}</li>
