@@ -437,7 +437,21 @@
         }
       },
       "location_and_contact": {
-        "title": "Asukoht/kontakt"
+        "title": "Asukoht/kontakt",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text": {
+            "title": "Tekst"
+          },
+          "address": {
+            "title": "Asukoha aadress"
+          },
+          "gmaps_api_key": {
+            "title": "Google Maps API võti"
+          }
+        }
       },
 
 
