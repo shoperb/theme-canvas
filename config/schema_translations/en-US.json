@@ -67,9 +67,6 @@
           },
           "payment_maestro": {
             "title": "Maestro"
-          },
-          "show_powered_by": {
-            "title": "Näita 'Powered by'"
           }
         }
       },

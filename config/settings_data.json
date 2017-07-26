@@ -431,8 +431,7 @@
         "payment_lhv": true,
         "payment_visa": true,
         "payment_mastercard": true,
-        "payment_maestro": true,
-        "show_powered_by": true
+        "payment_maestro": true
       }
     },
 

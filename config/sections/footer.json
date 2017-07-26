@@ -77,11 +77,6 @@
       "type": "toggle",
       "handle": "payment_maestro",
       "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "show_powered_by",
-      "default": true
     }
   ]
 }

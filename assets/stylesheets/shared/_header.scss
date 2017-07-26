@@ -29,6 +29,9 @@ header#main-header {
   }
   .actions {
     text-align: right;
+    @include breakpoint(desk, 'max') {
+      text-align: center;
+    }
 
     > div:not(.hidden) {
       display: inline-block;
