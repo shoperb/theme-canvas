@@ -10,33 +10,6 @@
     },
     {
       "type": "select",
-      "handle": "grid",
-      "default": 3,
-      "options": [
-        {
-          "value": 1,
-          "handle": "1"
-        },
-        {
-          "value": 2,
-          "handle": "2"
-        },
-        {
-          "value": 3,
-          "handle": "3"
-        },
-        {
-          "value": 4,
-          "handle": "4"
-        },
-        {
-          "value": 5,
-          "handle": "5"
-        }
-      ]
-    },
-    {
-      "type": "select",
       "handle": "animation_speed",
       "default": 3,
       "options": [

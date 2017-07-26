@@ -187,7 +187,7 @@ section[data-type] {
       top: 15px;
     }
     &.slick-prev {
-      left: 20px;
+      left: 33px;
 
       &:before {
         transform: rotate(45deg);
@@ -197,7 +197,7 @@ section[data-type] {
       }
     }
     &.slick-next {
-      right: 20px;
+      right: 8px;
       left: auto;
     }
     .slick-nexy {

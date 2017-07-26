@@ -285,9 +285,6 @@
           "auto_rotate": {
             "title": "Automaatne alustamine"
           },
-          "grid": {
-            "title": "Collection count"
-          },
           "animation_speed": {
             "title": "Animatsiooni kiirus (sekundites)"
           },

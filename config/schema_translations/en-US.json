@@ -196,9 +196,6 @@
           "auto_rotate": {
             "title": "Auto rotate"
           },
-          "grid": {
-            "title": "Collection count"
-          },
           "animation_speed": {
             "title": "Speed (in seconds)"
           },

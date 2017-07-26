@@ -528,7 +528,6 @@
       "settings": {
         "auto_rotate": false,
         "animation_speed": 4,
-        "grid": 3,
         "section_width": "full-width",
         "section_height": "large",
         "text_size": "medium"
