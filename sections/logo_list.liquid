@@ -7,7 +7,7 @@
   <div class="grid">
     <ul>
       {% for block in section.blocks %}
-      <li>
+      <li data-section-block-id="{{block.id}}">
         {% if block.settings.link != blank %}
         <a href="{{block.settings.link}}" target="_blank">
         {% endif %}

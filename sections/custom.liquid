@@ -22,7 +22,7 @@
         {% assign grid_class = 'lap--one-whole desk--one-whole' %}
     {% endcase %}
 
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}">
+    {% if forloop.first != true %}-->{% endif %}<div class="grid__item palm--one-whole {{grid_class}} v-align-{{block.settings.vertical_alignment}}" data-section-block-id="{{block.id}}">
     {% case block.type %}
 
 
@@ -97,11 +97,11 @@
       {% when 'custom_text' %}
     <div class="custom-section {{block.type}} text-align-{{block.settings.horizontal_alignment}}">
       {% if block.settings.title != blank %}
-      <h2 class="general-title">{{block.settings.title}}</h2>
+      <h2 class="general-title" data-theme-editor-block-setting='title'>{{block.settings.title}}</h2>
       {% endif %}
 
       {% if block.settings.text != blank %}
-      <div class="text-content general-text">{{block.settings.text}}</div>
+      <div class="text-content general-text" data-theme-editor-block-setting='text'>{{block.settings.text}}</div>
       {% endif %}
     </div>
 

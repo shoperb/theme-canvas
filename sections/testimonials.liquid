@@ -19,10 +19,10 @@
   {% if section.blocks.size > 0 %}
   <div class="grid{{slider}}">
     {% for block in section.blocks %}
-    {% if forloop.first != true %}-->{% endif %}<div class="testimonial grid__item one-whole {{grid_class}}">
-      <div class="testimonial-quote">{{block.settings.quote}}</div>
+    {% if forloop.first != true %}-->{% endif %}<div  data-section-block-id="{{block.id}}" class="testimonial grid__item one-whole {{grid_class}}">
+      <div class="testimonial-quote" data-theme-editor-block-setting='quote'>{{block.settings.quote}}</div>
       {% if block.settings.author %}
-      <div class="testimonial-author">{{block.settings.author}}</div>
+      <div class="testimonial-author" data-theme-editor-block-setting='author' >{{block.settings.author}}</div>
       {% endif %}
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
