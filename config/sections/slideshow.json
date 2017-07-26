@@ -1,7 +1,6 @@
 {
   "name": "Slideshow",
   "max_blocks": 4,
-  "generic": true,
   "settings": [
     {
       "type": "toggle",

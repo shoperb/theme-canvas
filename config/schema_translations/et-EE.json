@@ -73,6 +73,81 @@
           }
         }
       },
+
+      "image_with_text_overlay": {
+        "title": "Päisepilt",
+        "settings": {
+          "image": {
+            "title": "Pilt"
+          },
+          "image_alignment": {
+            "title": "Paigutus",
+            "options": {
+              "top-left": "Üles vasakule",
+              "top-middle": "Üles keskele",
+              "top-right": "Üles paremale",
+              "middle": "Keskele",
+              "middle-right": "Keskele paremale",
+              "middle-left": "Keskele vasakule",
+              "bottom-middle": "Alla keskele",
+              "bottom-right": "Alla paremale",
+              "bottom-left": "Alla vasakule"
+            }
+          },
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text": {
+            "title": "Alapealkiri"
+          },
+          "section_height": {
+            "title": "Sektsiooni kõrgus",
+            "options": {
+              "extra-small": "Väga väike",
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur",
+              "extra-large": "Väga suur"
+            }
+          },
+          "text_size": {
+            "title": "Teksti suurus",
+            "options": {
+              "medium": "Keskmine",
+              "large": "Suur"
+            }
+          },
+          "button_label": {
+            "title": "Nupu tekst"
+          },
+          "button_url": {
+            "title": "Nupu URL"
+          }
+        }
+      },
+      "collection": {
+        "title": "Kollektsioon",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "collection": {
+            "title": "Kollektsioon"
+          },
+          "per_row": {
+            "title": "Kollektsioone reas"
+          },
+          "rows": {
+            "title": "Ridade arv"
+          },
+          "show_vendor": {
+            "title": "Näita tootjat"
+          },
+          "show_button": {
+            "title": "Näita nuppu 'Vaata kõiki'"
+          }
+        }
+      },
       "blog_posts": {
         "title": "Blogi postitused",
         "grid": {
@@ -87,42 +162,6 @@
         "show_view_all_button": {
           "title": "Näita nuppu 'Vaata kõiki'"
         }
-      },
-      "collection": {
-        "title": "Kollektsioon"
-      },
-      "collection_list": {
-        "title": "Kollektsioonide nimekiri",
-        "settings": {
-          "title": {
-            "title": "Pealkiri"
-          },
-          "grid": {
-            "title": "Kollektsioonide arv"
-          }
-        }
-      },
-
-      "custom": {
-        "title": "Loo ise"
-      },
-      "custom_collection": {
-        "title": "Kollektsioon"
-      },
-      "custom_html": {
-        "title": "HTML"
-      },
-      "custom_image": {
-        "title": "Pilt"
-      },
-      "custom_product": {
-        "title": "Toode"
-      },
-      "custom_text": {
-        "title": "Tekst"
-      },
-      "custom_video": {
-        "title": "Video"
       },
       "image_gallery": {
         "title": "Pildigalerii",
@@ -190,92 +229,6 @@
           },
           "button_link": {
             "title": "Nupu URL"
-          }
-        }
-      },
-      "image_with_text_overlay": {
-        "title": "Päisepilt",
-        "settings": {
-          "image": {
-            "title": "Pilt"
-          },
-          "image_alignment": {
-            "title": "Paigutus",
-            "options": {
-              "top-left": "Üles vasakule",
-              "top-middle": "Üles keskele",
-              "top-right": "Üles paremale",
-              "middle": "Keskele",
-              "middle-right": "Keskele paremale",
-              "middle-left": "Keskele vasakule",
-              "bottom-middle": "Alla keskele",
-              "bottom-right": "Alla paremale",
-              "bottom-left": "Alla vasakule"
-            }
-          },
-          "title": {
-            "title": "Pealkiri"
-          },
-          "text": {
-            "title": "Alapealkiri"
-          },
-          "section_height": {
-            "title": "Sektsiooni kõrgus",
-            "options": {
-              "extra-small": "Väga väike",
-              "small": "Väike",
-              "medium": "Keskmine",
-              "large": "Suur",
-              "extra-large": "Väga suur"
-            }
-          },
-          "text_size": {
-            "title": "Teksti suurus",
-            "options": {
-              "medium": "Keskmine",
-              "large": "Suur"
-            }
-          },
-          "button_label": {
-            "title": "Nupu tekst"
-          },
-          "button_url": {
-            "title": "Nupu URL"
-          }
-        }
-      },
-      "location_and_contact": {
-        "title": "Asukoht/kontakt"
-      },
-      "logo_list": {
-        "title": "Brändid/logod"
-      },
-      "newsletter": {
-        "title": "Uudiskiri"
-      },
-      "product": {
-        "title": "Toode",
-        "settings": {
-          "product": {
-            "title": "Toode"
-          },
-          "image_size": {
-            "title": "Pildi suurus",
-            "options": {
-              "small": "Väike",
-              "medium": "Keskmine",
-              "large": "Suur",
-              "full": "Täismahus"
-            }
-          },
-          "show_quantity_selector": {
-            "title": "Näita koguse valikut"
-          },
-          "show_variant_label": {
-            "title": "Näita variantide nimetusi"
-          },
-          "show_vendor": {
-            "title": "Näita tootjat"
           }
         }
       },
@@ -359,11 +312,127 @@
           }
         }
       },
+      "collection_list": {
+        "title": "Kollektsioonide nimekiri",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "grid": {
+            "title": "Kollektsioonide arv"
+          }
+        }
+      },
+      "product": {
+        "title": "Toode",
+        "settings": {
+          "product": {
+            "title": "Toode"
+          },
+          "image_size": {
+            "title": "Pildi suurus",
+            "options": {
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur",
+              "full": "Täismahus"
+            }
+          },
+          "show_quantity_selector": {
+            "title": "Näita koguse valikut"
+          },
+          "show_variant_label": {
+            "title": "Näita variantide nimetusi"
+          },
+          "show_vendor": {
+            "title": "Näita tootjat"
+          }
+        }
+      },
       "testimonials": {
-        "title": "Iseloomustused"
+        "title": "Iseloomustused",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "blocks": {
+            "quote": {
+              "title": "Iseloomustus",
+              "settings": {
+                "quote": {
+                  "title": "Iseloomustus"
+                },
+                "author": {
+                  "title": "Autor"
+                }
+              }
+            }
+          }
+        }
       },
       "text_columns_with_images": {
-        "title": "Teksti lõigud piltidega"
+        "title": "Teksti lõigud piltidega",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text_alignment": {
+            "title" : "Teksti küljendus",
+            "options": {
+              "left": "Vasak",
+              "center": "Keskel"
+            }
+          }
+        },
+        "blocks": {
+          "quote": {
+            "title": "Plokk",
+            "settings": {
+              "image": {
+                "title": "Pilt"
+              },
+              "title": {
+                "title": "Pealkiri"
+              },
+              "text": {
+                "title": "Sisu"
+              }
+            }
+          }
+        }
+      },
+
+
+
+      "custom": {
+        "title": "Loo ise"
+      },
+      "custom_collection": {
+        "title": "Kollektsioon"
+      },
+      "custom_html": {
+        "title": "HTML"
+      },
+      "custom_image": {
+        "title": "Pilt"
+      },
+      "custom_product": {
+        "title": "Toode"
+      },
+      "custom_text": {
+        "title": "Tekst"
+      },
+      "custom_video": {
+        "title": "Video"
+      },
+      "location_and_contact": {
+        "title": "Asukoht/kontakt"
+      },
+      "logo_list": {
+        "title": "Brändid/logod"
+      },
+      "newsletter": {
+        "title": "Uudiskiri"
       }
     },
     "settings": {

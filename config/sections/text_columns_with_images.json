@@ -1,11 +1,10 @@
 {
   "name": "Text columns with images",
-  "generic": true,
   "settings": [
     {
-      "type": "image",
-      "handle": "logo",
-      "default": ""
+      "type": "text",
+      "handle": "title",
+      "default": "Text columns with images"
     },
     {
       "type": "select",
@@ -21,16 +20,43 @@
           "handle": "center"
         }
       ]
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "handle": "title",
-      "default": "Hero section title"
-    },
-    {
-      "type": "richtext",
-      "handle": "text",
-      "default": "<p>... and here is where your customers will see your hero message</p>"
+      "type": "column",
+      "settings": [
+        {
+          "type": "image",
+          "handle": "image",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "handle": "text_alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "handle": "left"
+            },
+            {
+              "value": "center",
+              "handle": "center"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "handle": "title",
+          "default": "Column section title"
+        },
+        {
+          "type": "richtext",
+          "handle": "text",
+          "default": "Good way to inlude some small thought with visual addition. Make it represent your store & brand."
+        }
+      ]
     }
   ]
 }

@@ -73,21 +73,55 @@
           }
         }
       },
-      "blog_posts": {
-        "title": "Blog posts",
+
+      "image_with_text_overlay": {
+        "title": "Hero image",
         "settings": {
-          "title": "Title",
-          "grid": {
-            "title": "Number of posts"
+          "image": {
+            "title": "Image"
           },
-          "show_author": {
-            "title": "Show author"
+          "image_alignment": {
+            "title": "Alignment",
+            "options": {
+              "top-left": "Top left",
+              "top-middle": "Top Middle",
+              "top-right": "Top Right",
+              "center": "Center",
+              "middle-right": "Middle Right",
+              "middle-left": "Middle Left",
+              "bottom-middle": "Bottom Middle",
+              "bottom-right": "Bottom Right",
+              "bottom-left": "Bottom Left"
+            }
           },
-          "show_date": {
-            "title": "Show date"
+          "title": {
+            "title": "Title"
           },
-          "show_view_all_button": {
-            "title": "Show button 'View All'"
+          "text": {
+            "title": "Subtitle"
+          },
+          "section_height": {
+            "title": "Section height",
+            "options": {
+              "extra-small": "Extra small",
+              "small": "Small",
+              "medium": "Medium",
+              "large": "Large",
+              "extra-large": "Extra large"
+            }
+          },
+          "text_size": {
+            "title": "Text size",
+            "options": {
+              "medium": "Medium",
+              "large": "Large"
+            }
+          },
+          "button_label": {
+            "title": "Button text"
+          },
+          "button_url": {
+            "title": "Button URL"
           }
         }
       },
@@ -110,41 +144,25 @@
             "title": "Show vendor"
           },
           "show_button": {
-            "title": "Show button"
+            "title": "Show button 'View All'"
           }
         }
       },
-      "collection_list": {
-        "title": "Collection list",
+      "blog_posts": {
+        "title": "Blog posts",
         "settings": {
-          "title": {
-            "title": "Title"
-          },
+          "title": "Title",
           "grid": {
-            "title": "Collection count"
-          }
-        }
-      },
-      "custom": {
-        "title": "Custom",
-        "blocks": {
-          "custom_collection": {
-            "title": "Collection"
+            "title": "Number of posts"
           },
-          "custom_html": {
-            "title": "HTML"
+          "show_author": {
+            "title": "Show author"
           },
-          "custom_image": {
-            "title": "Image"
+          "show_date": {
+            "title": "Show date"
           },
-          "custom_product": {
-            "title": "Product"
-          },
-          "custom_text": {
-            "title": "Text"
-          },
-          "custom_video": {
-            "title": "Video"
+          "show_view_all_button": {
+            "title": "Show button 'View All'"
           }
         }
       },
@@ -187,6 +205,33 @@
                 }
               }
             }
+          }
+        }
+      },
+      "image_with_text": {
+        "title": "Image with text",
+        "settings": {
+          "image": {
+            "title": "Image"
+          },
+          "horizontal_alignment": {
+            "title": "Alignment",
+            "options": {
+              "image-on-left": "Image on left",
+              "image-on-right": "Image on right"
+            }
+          },
+          "title": {
+            "title": "Title"
+          },
+          "text": {
+            "title": "Text"
+          },
+          "button_text": {
+            "title": "Button text"
+          },
+          "button_link": {
+            "title": "Button link"
           }
         }
       },
@@ -270,92 +315,16 @@
           }
         }
       },
-      "image_with_text": {
-        "title": "Image with text",
+      "collection_list": {
+        "title": "Collection list",
         "settings": {
-          "image": {
-            "title": "Image"
-          },
-          "horizontal_alignment": {
-            "title": "Alignment",
-            "options": {
-              "image-on-left": "Image on left",
-              "image-on-right": "Image on right"
-            }
-          },
           "title": {
             "title": "Title"
           },
-          "text": {
-            "title": "Text"
-          },
-          "button_text": {
-            "title": "Button text"
-          },
-          "button_link": {
-            "title": "Button link"
+          "grid": {
+            "title": "Collection count"
           }
         }
-      },
-      "image_with_text_overlay": {
-        "title": "Hero image",
-        "settings": {
-          "image": {
-            "title": "Image"
-          },
-          "image_alignment": {
-            "title": "Alignment",
-            "options": {
-              "top-left": "Top left",
-              "top-middle": "Top Middle",
-              "top-right": "Top Right",
-              "center": "Center",
-              "middle-right": "Middle Right",
-              "middle-left": "Middle Left",
-              "bottom-middle": "Bottom Middle",
-              "bottom-right": "Bottom Right",
-              "bottom-left": "Bottom Left"
-            }
-          },
-          "title": {
-            "title": "Title"
-          },
-          "text": {
-            "title": "Subtitle"
-          },
-          "section_height": {
-            "title": "Section height",
-            "options": {
-              "extra-small": "Extra small",
-              "small": "Small",
-              "medium": "Medium",
-              "large": "Large",
-              "extra-large": "Extra large"
-            }
-          },
-          "text_size": {
-            "title": "Text size",
-            "options": {
-              "medium": "Medium",
-              "large": "Large"
-            }
-          },
-          "button_label": {
-            "title": "Button text"
-          },
-          "button_url": {
-            "title": "Button URL"
-          }
-        }
-      },
-      "location_and_contact": {
-        "title": "Location/Contacts"
-      },
-      "logo_list": {
-        "title": "Brands/Logos"
-      },
-      "newsletter": {
-        "title": "Newsletter"
       },
       "product": {
         "title": "Product",
@@ -383,13 +352,92 @@
           }
         }
       },
-
-
       "testimonials": {
-        "title": "Testimonials"
+        "title": "Testimonials",
+        "settings": {
+          "title": {
+            "title": "Title"
+          }
+        },
+        "blocks": {
+          "quote": {
+            "title": "Quote",
+            "settings": {
+              "quote": {
+                "title": "Quote"
+              },
+              "author": {
+                "title": "Author"
+              }
+            }
+          }
+        }
       },
       "text_columns_with_images": {
-        "title": "Text columns with images"
+        "title": "Text columns with images",
+        "settings": {
+          "title": {
+            "title": "Title"
+          },
+          "text_alignment": {
+            "title" : "Text alignment",
+            "options": {
+              "left": "Left",
+              "center": "Center"
+            }
+          }
+        },
+        "blocks": {
+          "column": {
+            "title": "Column",
+            "settings": {
+              "image": {
+                "title": "Image"
+              },
+              "title": {
+                "title": "Title"
+              },
+              "text": {
+                "title": "Content"
+              }
+            }
+          }
+        }
+      },
+
+
+
+      "custom": {
+        "title": "Custom",
+        "blocks": {
+          "custom_collection": {
+            "title": "Collection"
+          },
+          "custom_html": {
+            "title": "HTML"
+          },
+          "custom_image": {
+            "title": "Image"
+          },
+          "custom_product": {
+            "title": "Product"
+          },
+          "custom_text": {
+            "title": "Text"
+          },
+          "custom_video": {
+            "title": "Video"
+          }
+        }
+      },
+      "location_and_contact": {
+        "title": "Location/Contacts"
+      },
+      "logo_list": {
+        "title": "Brands/Logos"
+      },
+      "newsletter": {
+        "title": "Newsletter"
       }
     },
     "general": {
