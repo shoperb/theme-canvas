@@ -8,15 +8,15 @@
     {% for block in section.blocks %}
 
     {% case block.settings.section_width %}
-      {% when '25' %}
+      {% when 25 %}
         {% assign grid_class = 'lap--one-quarter desk--one-quarter' %}
-      {% when '33' %}
+      {% when 33 %}
         {% assign grid_class = 'lap--one-third desk--one-third' %}
-      {% when '50' %}
+      {% when 50 %}
         {% assign grid_class = 'lap--one-half desk--one-half' %}
-      {% when '66' %}
+      {% when 66 %}
         {% assign grid_class = 'lap--two-thirds desk--two-thirds' %}
-      {% when '75' %}
+      {% when 75 %}
         {% assign grid_class = 'lap--three-quarters desk--three-quarters' %}
       {% else %}
         {% assign grid_class = 'lap--one-whole desk--one-whole' %}

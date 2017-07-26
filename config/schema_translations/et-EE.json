@@ -453,29 +453,105 @@
           }
         }
       },
-
-
-
       "custom": {
-        "title": "Loo ise"
-      },
-      "custom_collection": {
-        "title": "Kollektsioon"
-      },
-      "custom_html": {
-        "title": "HTML"
-      },
-      "custom_image": {
-        "title": "Pilt"
-      },
-      "custom_product": {
-        "title": "Toode"
-      },
-      "custom_text": {
-        "title": "Tekst"
-      },
-      "custom_video": {
-        "title": "Video"
+        "title": "Loo ise",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          }
+        },
+        "blocks": {
+          "custom_text": {
+            "title": "Tekst",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "title": {
+                "title": "Pealkiri"
+              },
+              "text": {
+                "title": "Sisu"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              },
+              "horizontal_alignment": {
+                "title": "Horisontaalne küljendus"
+              }
+            }
+          },
+          "custom_image": {
+            "title": "Pilt",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "image": {
+                "title": "Pilt"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              }
+            }
+          },
+          "custom_video": {
+            "title": "Video",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "video": {
+                "title": "Video"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              }
+            }
+          },
+          "custom_product": {
+            "title": "Toode",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "product": {
+                "title": "Toode"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              }
+            }
+          },
+          "custom_collection": {
+            "title": "Kollektsioon",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "collection": {
+                "title": "Kollektsioon"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              }
+            }
+          },
+          "custom_html": {
+            "title": "HTML",
+            "settings": {
+              "section_width": {
+                "title": "Ploki laius"
+              },
+              "html": {
+                "title": "HTML"
+              },
+              "vertical_alignment": {
+                "title": "Vertikaalne paigutus"
+              }
+            }
+          }
+        }
       }
     },
     "settings": {

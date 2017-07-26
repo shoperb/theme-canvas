@@ -838,7 +838,7 @@
         "custom-1": {
           "type": "custom_text",
           "settings": {
-            "section_width": "33",
+            "section_width": 33,
             "title": "Location",
             "text": "Opening hours: from AM to PM",
             "vertical_alignment": "bottom",
@@ -848,7 +848,7 @@
         "custom-2": {
           "type": "custom_image",
           "settings": {
-            "section_width": "66",
+            "section_width": 66,
             "image": "https://cdn-images-1.medium.com/max/1600/1*qZr2510BMwCRRuJhcICPYg.gif",
             "vertical_alignment": "middle"
           }
@@ -856,23 +856,23 @@
         "custom-3": {
           "type": "custom_video",
           "settings": {
-            "section_width": "50",
-            "vertical_alignment": "middle",
-            "video": "https://www.youtube.com/embed/fVUoi0NoYZU"
+            "section_width": 50,
+            "video": "https://www.youtube.com/embed/fVUoi0NoYZU",
+            "vertical_alignment": "middle"
           }
         },
         "custom-32": {
           "type": "custom_video",
           "settings": {
-            "section_width": "50",
-            "vertical_alignment": "middle",
-            "video": "https://vimeo.com/187165137"
+            "section_width": 50,
+            "video": "https://vimeo.com/187165137",
+            "vertical_alignment": "middle"
           }
         },
         "custom-4": {
           "type": "custom_product",
           "settings": {
-            "section_width": "100",
+            "section_width": 100,
             "product": "legging-multi",
             "vertical_alignment": "top"
           }
@@ -880,7 +880,7 @@
         "custom-5": {
           "type": "custom_collection",
           "settings": {
-            "section_width": "25",
+            "section_width": 25,
             "collection": "spring-summer-collection-2017",
             "vertical_alignment": "middle"
           }
@@ -888,9 +888,9 @@
         "custom-6": {
           "type": "custom_html",
           "settings": {
-            "section_width": "75",
-            "vertical_alignment": "top",
-            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>"
+            "section_width": 75,
+            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
+            "vertical_alignment": "top"
           }
         }
       },

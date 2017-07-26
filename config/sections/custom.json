@@ -1,24 +1,94 @@
 {
   "name": "Custom section",
-  "generic": true,
+  "settings": [
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Custom content"
+    }
+  ],
   "blocks": [
     {
-      "type": "custom_collection",
+      "type": "custom_text",
       "settings": [
         {
-          "type": "collection",
-          "handle": "collection",
-          "default": ""
-        }
-      ]
-    },
-    {
-      "type": "custom_html",
-      "settings": [
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
         {
-          "type": "html",
-          "handle": "html",
-          "default": ""
+          "type": "text",
+          "handle": "title",
+          "default": "Custom text"
+        },
+        {
+          "type": "richtext",
+          "handle": "text",
+          "default": "This is a custom text box"
+        },
+        {
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "handle": "horizontal_alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "handle": "left"
+            },
+            {
+              "value": "center",
+              "handle": "center"
+            },
+            {
+              "value": "right",
+              "handle": "right"
+            }
+          ]
         }
       ]
     },
@@ -26,29 +96,59 @@
       "type": "custom_image",
       "settings": [
         {
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
+        {
           "type": "image",
           "handle": "image",
           "default": ""
-        }
-      ]
-    },
-    {
-      "type": "custom_product",
-      "settings": [
+        },
         {
-          "type": "product",
-          "handle": "product",
-          "default": ""
-        }
-      ]
-    },
-    {
-      "type": "custom_text",
-      "settings": [
-        {
-          "type": "text",
-          "handle": "text",
-          "default": ""
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
         }
       ]
     },
@@ -56,9 +156,236 @@
       "type": "custom_video",
       "settings": [
         {
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
+        {
           "type": "video",
           "handle": "video",
           "default": ""
+        },
+        {
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "custom_product",
+      "settings": [
+        {
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
+        {
+          "type": "product",
+          "handle": "product"
+        },
+        {
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "custom_collection",
+      "settings": [
+        {
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
+        {
+          "type": "collection",
+          "handle": "collection"
+        },
+        {
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "custom_html",
+      "settings": [
+        {
+          "type": "select",
+          "handle": "section_width",
+          "default": 50,
+          "options": [
+            {
+              "value": 25,
+              "handle": "25"
+            },
+            {
+              "value": 33,
+              "handle": "33"
+            },
+            {
+              "value": 50,
+              "handle": "50"
+            },
+            {
+              "value": 66,
+              "handle": "66"
+            },
+            {
+              "value": 75,
+              "handle": "75"
+            },
+            {
+              "value": 100,
+              "handle": "100"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "handle": "html"
+        },
+        {
+          "type": "select",
+          "handle": "vertical_alignment",
+          "default": "middle",
+          "options": [
+            {
+              "value": "top",
+              "handle": "top"
+            },
+            {
+              "value": "middle",
+              "handle": "middle"
+            },
+            {
+              "value": "bottom",
+              "handle": "button"
+            }
+          ]
         }
       ]
     }

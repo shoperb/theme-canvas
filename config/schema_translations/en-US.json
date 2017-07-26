@@ -456,29 +456,103 @@
           }
         }
       },
-
-
-
       "custom": {
         "title": "Custom",
+        "settings": {
+          "title": {
+            "title": "Title"
+          }
+        },
         "blocks": {
-          "custom_collection": {
-            "title": "Collection"
-          },
-          "custom_html": {
-            "title": "HTML"
+          "custom_text": {
+            "title": "Text",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "title": {
+                "title": "Title"
+              },
+              "text": {
+                "title": "Text"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              },
+              "horizontal_alignment": {
+                "title": "Horizontal alignment"
+              }
+            }
           },
           "custom_image": {
-            "title": "Image"
-          },
-          "custom_product": {
-            "title": "Product"
-          },
-          "custom_text": {
-            "title": "Text"
+            "title": "Image",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "image": {
+                "title": "Image"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              }
+            }
           },
           "custom_video": {
-            "title": "Video"
+            "title": "Video",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "video": {
+                "title": "Video"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              }
+            }
+          },
+          "custom_product": {
+            "title": "Product",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "product": {
+                "title": "Product"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              }
+            }
+          },
+          "custom_collection": {
+            "title": "Collection",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "collection": {
+                "title": "Collection"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              }
+            }
+          },
+          "custom_html": {
+            "title": "HTML",
+            "settings": {
+              "section_width": {
+                "title": "Section width"
+              },
+              "html": {
+                "title": "HTML"
+              },
+              "vertical_alignment": {
+                "title": "Vertical alignment"
+              }
+            }
           }
         }
       }
