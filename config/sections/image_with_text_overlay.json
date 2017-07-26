@@ -1,5 +1,6 @@
 {
   "name": "Image with text overlay",
+  "generic": true,
   "settings": [
     {
       "type": "image",
