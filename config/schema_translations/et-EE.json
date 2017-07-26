@@ -377,9 +377,9 @@
             "title": "Pealkiri"
           },
           "text_alignment": {
-            "title" : "Teksti küljendus",
+            "title" : "Sisu küljendus",
             "options": {
-              "left": "Vasak",
+              "left": "Vasakul",
               "center": "Keskel"
             }
           }
@@ -396,6 +396,27 @@
               },
               "text": {
                 "title": "Sisu"
+              }
+            }
+          }
+        }
+      },
+      "logo_list": {
+        "title": "Brändid/logod",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          }
+        },
+        "blocks": {
+          "logo": {
+            "title": "Logo",
+            "settings": {
+              "image": {
+                "title": "Logo"
+              },
+              "link": {
+                "title": "Link URL"
               }
             }
           }
@@ -427,9 +448,6 @@
       },
       "location_and_contact": {
         "title": "Asukoht/kontakt"
-      },
-      "logo_list": {
-        "title": "Brändid/logod"
       },
       "newsletter": {
         "title": "Uudiskiri"

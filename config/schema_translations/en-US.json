@@ -380,7 +380,7 @@
             "title": "Title"
           },
           "text_alignment": {
-            "title" : "Text alignment",
+            "title" : "Content alignment",
             "options": {
               "left": "Left",
               "center": "Center"
@@ -399,6 +399,27 @@
               },
               "text": {
                 "title": "Content"
+              }
+            }
+          }
+        }
+      },
+      "logo_list": {
+        "title": "Brands/Logos",
+        "settings": {
+          "title": {
+            "title": "Title"
+          }
+        },
+        "blocks": {
+          "logo": {
+            "title": "Logo",
+            "settings": {
+              "image": {
+                "title": "Logo"
+              },
+              "link": {
+                "title": "Link URL"
               }
             }
           }
@@ -432,9 +453,6 @@
       },
       "location_and_contact": {
         "title": "Location/Contacts"
-      },
-      "logo_list": {
-        "title": "Brands/Logos"
       },
       "newsletter": {
         "title": "Newsletter"

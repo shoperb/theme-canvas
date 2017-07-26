@@ -32,21 +32,6 @@
           "default": ""
         },
         {
-          "type": "select",
-          "handle": "text_alignment",
-          "default": "left",
-          "options": [
-            {
-              "value": "left",
-              "handle": "left"
-            },
-            {
-              "value": "center",
-              "handle": "center"
-            }
-          ]
-        },
-        {
           "type": "text",
           "handle": "title",
           "default": "Column section title"
