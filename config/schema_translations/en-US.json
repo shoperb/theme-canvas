@@ -425,6 +425,23 @@
           }
         }
       },
+      "newsletter": {
+        "title": "Newsletter",
+        "settings": {
+          "title": {
+            "title": "Title"
+          },
+          "text": {
+            "title": "Text"
+          },
+          "form": {
+            "title": "Mailinglist from HTML"
+          }
+        }
+      },
+      "location_and_contact": {
+        "title": "Location/Contacts"
+      },
 
 
 
@@ -450,12 +467,6 @@
             "title": "Video"
           }
         }
-      },
-      "location_and_contact": {
-        "title": "Location/Contacts"
-      },
-      "newsletter": {
-        "title": "Newsletter"
       }
     },
     "general": {

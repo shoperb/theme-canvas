@@ -9,10 +9,11 @@
       <div class="text-content general-text" data-theme-editor-setting="text" > {{section.settings.text}}</div>
       {% endif %}
 
-      <form>
-        <input>
-        <button class="button primary">Submit</button>
-      </form>
+      {% if section.settings.form != blank %}
+      <div class="newsletter-form">
+        {{section.settings.form}}
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>

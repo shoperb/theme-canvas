@@ -7,8 +7,12 @@
       "handle": "title"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "handle": "text"
+    },
+    {
+      "type": "html",
+      "handle": "form"
     }
   ]
 }

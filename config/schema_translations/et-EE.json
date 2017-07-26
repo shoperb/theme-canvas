@@ -422,6 +422,23 @@
           }
         }
       },
+      "newsletter": {
+        "title": "Uudiskiri",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text": {
+            "title": "Tekst"
+          },
+          "form": {
+            "title": "Uudiskirja vormi HTML"
+          }
+        }
+      },
+      "location_and_contact": {
+        "title": "Asukoht/kontakt"
+      },
 
 
 
@@ -445,12 +462,6 @@
       },
       "custom_video": {
         "title": "Video"
-      },
-      "location_and_contact": {
-        "title": "Asukoht/kontakt"
-      },
-      "newsletter": {
-        "title": "Uudiskiri"
       }
     },
     "settings": {

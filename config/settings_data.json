@@ -816,7 +816,8 @@
       "type": "newsletter",
       "settings": {
         "title": "Newsletter",
-        "text": "A short sentence describing what someone will receive by subscribing"
+        "text": "A short sentence describing what someone will receive by subscribing",
+        "form": ""
       }
     },
     "location-and-contact": {
