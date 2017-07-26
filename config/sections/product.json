@@ -1,6 +1,5 @@
 {
   "name": "Product",
-  "generic": true,
   "settings": [
     {
       "type": "product",
@@ -42,16 +41,6 @@
     {
       "type": "toggle",
       "handle": "show_vendor",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "handle": "enable_image_zoom",
-      "default": false
-    },
-    {
-      "type": "toggle",
-      "handle": "show_social_sharing",
       "default": false
     }
   ]

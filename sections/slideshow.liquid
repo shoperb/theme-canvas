@@ -1,14 +1,15 @@
 <section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
   <div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}">
+
     {% for block in section.blocks %}
-    <div class="slide image-align-{{block.settings.image_alignment}}"{% if block.settings.image %} style="background-image: url('{{block.settings.image}}');"{% endif %}>
+    <div class="slide{% if block.settings.image %} image-align-{{block.settings.image_alignment}}" style="background-image: url('{{block.settings.image}}');{% endif %}">
       {% if block.settings.slide_link != blank %}
       <a href="{{block.settings.slide_link}}">
       {% else %}
       <div class="container">
       {% endif %}
-        {% if block.settings.slide_type == 'video' %}
-        <iframe src="{{block.settings.slide_video}}" frameborder="0" allowfullscreen></iframe>
+        {% if block.settings.video %}
+        <iframe src="{{block.settings.video}}" frameborder="0" allowfullscreen></iframe>
         {% endif %}
         <div class="text">
           {% if block.settings.heading %}
@@ -25,5 +26,6 @@
       {% endif %}
     </div>
     {% endfor %}
+
   </div>
 </section>

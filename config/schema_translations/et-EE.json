@@ -92,8 +92,17 @@
         "title": "Kollektsioon"
       },
       "collection_list": {
-        "title": "Kollektsioonide nimekiri"
+        "title": "Kollektsioonide nimekiri",
+        "settings": {
+          "title": {
+            "title": "Pealkiri"
+          },
+          "grid": {
+            "title": "Kollektsioonide arv"
+          }
+        }
       },
+
       "custom": {
         "title": "Loo ise"
       },
@@ -158,7 +167,31 @@
         }
       },
       "image_with_text": {
-        "title": "Pilt tekstiga"
+        "title": "Pilt tekstiga",
+        "settings": {
+          "image": {
+            "title": "Pilt"
+          },
+          "horizontal_alignment": {
+            "title": "Asetus",
+            "options": {
+              "image-on-left": "Pilt vasakul",
+              "image-on-right": "Pilt paremal"
+            }
+          },
+          "title": {
+            "title": "Pealkiri"
+          },
+          "text": {
+            "title": "Tekst"
+          },
+          "button_text": {
+            "title": "Nupu tekst"
+          },
+          "button_link": {
+            "title": "Nupu URL"
+          }
+        }
       },
       "image_with_text_overlay": {
         "title": "Päisepilt",
@@ -221,10 +254,113 @@
         "title": "Uudiskiri"
       },
       "product": {
-        "title": "Toode"
+        "title": "Toode",
+        "settings": {
+          "product": {
+            "title": "Toode"
+          },
+          "image_size": {
+            "title": "Pildi suurus",
+            "options": {
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur",
+              "full": "Täismahus"
+            }
+          },
+          "show_quantity_selector": {
+            "title": "Näita koguse valikut"
+          },
+          "show_variant_label": {
+            "title": "Näita variantide nimetusi"
+          },
+          "show_vendor": {
+            "title": "Näita tootjat"
+          }
+        }
       },
       "slideshow": {
-        "title": "Slaidishow"
+        "title": "Slaidishow",
+        "settings": {
+          "auto_rotate": {
+            "title": "Automaatne alustamine"
+          },
+          "grid": {
+            "title": "Collection count"
+          },
+          "animation_speed": {
+            "title": "Animatsiooni kiirus (sekundites)"
+          },
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
+          "section_height": {
+            "title": "Sektsiooni kõrgus",
+            "options": {
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur"
+            }
+          },
+          "text_size": {
+            "title": "Text size",
+            "options": {
+              "medium": "Medium",
+              "large": "Large"
+            }
+          }
+        },
+        "blocks": {
+          "image_slide": {
+            "title": "Pilt",
+            "settings": {
+              "image": {
+                "title": "Pilt"
+              },
+              "image_alignment": {
+                "title": "Paigutus",
+                "options": {
+                  "top-left": "Üles vasakule",
+                  "top-middle": "Üles keskele",
+                  "top-right": "Üles paremale",
+                  "middle": "Keskele",
+                  "middle-right": "Keskele paremale",
+                  "middle-left": "Keskele vasakule",
+                  "bottom-middle": "Alla keskele",
+                  "bottom-right": "Alla paremale",
+                  "bottom-left": "Alla vasakule"
+                }
+              },
+              "heading": {
+                "title": "Pealkiri"
+              },
+              "subheading": {
+                "title": "Tekst"
+              },
+              "slide_link": {
+                "title": "Slaidi lingi URL"
+              }
+            }
+          },
+          "video_slide": {
+            "title": "Video",
+            "settings": {
+              "video": {
+                "title": "Video"
+              },
+              "heading": {
+                "title": "Pealkiri"
+              },
+              "subheading": {
+                "title": "Tekst"
+              }
+            }
+          }
+        }
       },
       "testimonials": {
         "title": "Iseloomustused"

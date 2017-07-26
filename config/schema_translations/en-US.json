@@ -115,7 +115,15 @@
         }
       },
       "collection_list": {
-        "title": "Collection list"
+        "title": "Collection list",
+        "settings": {
+          "title": {
+            "title": "Title"
+          },
+          "grid": {
+            "title": "Collection count"
+          }
+        }
       },
       "custom": {
         "title": "Custom",
@@ -167,7 +175,7 @@
               "image_alignment": {
                 "title": "Alignment",
                 "options": {
-                  "top-left": "Top left",
+                  "top-left": "Top Left",
                   "top-middle": "Top Middle",
                   "top-right": "Top Right",
                   "middle": "Middle",
@@ -182,8 +190,115 @@
           }
         }
       },
+      "slideshow": {
+        "title": "Slideshow",
+        "settings": {
+          "auto_rotate": {
+            "title": "Auto rotate"
+          },
+          "grid": {
+            "title": "Collection count"
+          },
+          "animation_speed": {
+            "title": "Speed (in seconds)"
+          },
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
+          "section_height": {
+            "title": "Section height",
+            "options": {
+              "small": "Small",
+              "medium": "Medium",
+              "large": "Large"
+            }
+          },
+          "text_size": {
+            "title": "Text size",
+            "options": {
+              "medium": "Medium",
+              "large": "Large"
+            }
+          }
+        },
+        "blocks": {
+          "image_slide": {
+            "title": "Image",
+            "settings": {
+              "image": {
+                "title": "Image"
+              },
+              "image_alignment": {
+                "title": "Alignment",
+                "options": {
+                  "top-left": "Top Left",
+                  "top-middle": "Top Middle",
+                  "top-right": "Top Right",
+                  "middle": "Middle",
+                  "middle-right": "Middle Right",
+                  "middle-left": "Right Left",
+                  "bottom-middle": "Bottom Middle",
+                  "bottom-right": "Bottom Right",
+                  "bottom-left": "Bottom Left"
+                }
+              },
+              "heading": {
+                "title": "Heading"
+              },
+              "subheading": {
+                "title": "Subheading"
+              },
+              "slide_link": {
+                "title": "Slide link URL"
+              }
+            }
+          },
+          "video_slide": {
+            "title": "Video",
+            "settings": {
+              "video": {
+                "title": "Video"
+              },
+              "heading": {
+                "title": "Heading"
+              },
+              "subheading": {
+                "title": "Subheading"
+              }
+            }
+          }
+        }
+      },
       "image_with_text": {
-        "title": "Image with text"
+        "title": "Image with text",
+        "settings": {
+          "image": {
+            "title": "Image"
+          },
+          "horizontal_alignment": {
+            "title": "Alignment",
+            "options": {
+              "image-on-left": "Image on left",
+              "image-on-right": "Image on right"
+            }
+          },
+          "title": {
+            "title": "Title"
+          },
+          "text": {
+            "title": "Text"
+          },
+          "button_text": {
+            "title": "Button text"
+          },
+          "button_link": {
+            "title": "Button link"
+          }
+        }
       },
       "image_with_text_overlay": {
         "title": "Hero image",
@@ -246,11 +361,33 @@
         "title": "Newsletter"
       },
       "product": {
-        "title": "Product"
+        "title": "Product",
+        "settings": {
+          "product": {
+            "title": "Product"
+          },
+          "image_size": {
+            "title": "Image size",
+            "options": {
+              "small": "Small",
+              "medium": "Medium",
+              "large": "Large",
+              "full": "Full"
+            }
+          },
+          "show_quantity_selector": {
+            "title": "Show quantity selector"
+          },
+          "show_variant_label": {
+            "title": "Show variant label"
+          },
+          "show_vendor": {
+            "title": "Show vendor"
+          }
+        }
       },
-      "slideshow": {
-        "title": "Slideshow"
-      },
+
+
       "testimonials": {
         "title": "Testimonials"
       },

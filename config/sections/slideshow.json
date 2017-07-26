@@ -10,7 +10,34 @@
     },
     {
       "type": "select",
-      "handle": "speed",
+      "handle": "grid",
+      "default": 3,
+      "options": [
+        {
+          "value": 1,
+          "handle": "1"
+        },
+        {
+          "value": 2,
+          "handle": "2"
+        },
+        {
+          "value": 3,
+          "handle": "3"
+        },
+        {
+          "value": 4,
+          "handle": "4"
+        },
+        {
+          "value": 5,
+          "handle": "5"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "handle": "animation_speed",
       "default": 3,
       "options": [
         {
@@ -83,12 +110,11 @@
   ],
   "blocks": [
     {
-      "type": "image",
+      "type": "image_slide",
       "settings": [
         {
           "type": "image",
-          "handle": "image",
-          "default": ""
+          "handle": "image"
         },
         {
           "type": "select",
@@ -135,19 +161,34 @@
         },
         {
           "type": "text",
-          "handle": "caption"
+          "handle": "heading"
+        },
+        {
+          "type": "richtext",
+          "handle": "subheading"
+        },
+        {
+          "type": "text",
+          "handle": "slide_link"
+        }
+      ]
+    },
+    {
+      "type": "video_slide",
+      "settings": [
+        {
+          "type": "text",
+          "handle": "video"
+        },
+        {
+          "type": "text",
+          "handle": "heading"
+        },
+        {
+          "type": "richtext",
+          "handle": "subheading"
         }
       ]
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "image"
-      },
-      {
-        "type": "image"
-      }
-    ]
-  }
+  ]
 }
