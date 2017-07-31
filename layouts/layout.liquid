@@ -69,9 +69,11 @@
   {% endcomment %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  {% include 'shoperb_head' %}
 </head>
 
 <body class="template-{{template_name | replace: '_', '-'}}">
+  {% include 'shoperb_start_body' %}
   {% section 'header' %}
 
   <div class="main-content">
@@ -80,6 +82,7 @@
 
   {% section 'footer' %}
   {{"javascripts/application.js" | asset_url | javascript_tag}}
+  {% include 'shoperb_end_body' %}
 </body>
 
 </html>
