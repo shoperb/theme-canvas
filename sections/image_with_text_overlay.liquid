@@ -1,8 +1,5 @@
-{% if section.settings.image != blank %}
-{% assign background_image = section.settings.image %}
-{% endif %}
-
-<section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="full-width section-height {{section.settings.section_height}}{% if background_image != blank %} image-align-{{section.settings.image_alignment}}{% endif %}{% if section.settings.text_size == 'large' %} text-large{% endif %}" style="background-image: {% if background_image != blank %}url('{{background_image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')">
+<section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="full-width section-height {{section.settings.section_height}} opacity-image-container{% if section.settings.text_size == 'large' %} text-large{% endif %}">
+  <div class="opacity-image{% if section.settings.image != blank %} image-align-{{section.settings.image_alignment}}{% endif %}" style="background-image: {% if section.settings.image != blank %}url('{{section.settings.image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')"></div>
   <div class="hero">
     {% if section.settings.title != blank %}
     <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title | escape}}</h2>

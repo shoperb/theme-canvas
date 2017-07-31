@@ -438,7 +438,7 @@
     "hero-1": {
       "type": "image_with_text_overlay",
       "settings": {
-        "image_alignment": "top-left",
+        "image_alignment": "center",
         "title": "Hero section title",
         "text": "<p>... and here is where your customers will see your hero message</p>",
         "text_size": "medium",
@@ -449,7 +449,7 @@
       "type": "image_with_text_overlay",
       "settings": {
         "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
-        "image_alignment": "center",
+        "image_alignment": "top-left",
         "title": "My AD",
         "text": "<p>Look at what cool products I have.</p>",
         "text_size": "large",

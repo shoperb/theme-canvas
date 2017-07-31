@@ -1,5 +1,7 @@
 $limited-max-width: 1200;
 $default-padding: 10;
+$opacity-image-background: #4183D7;
+$opacity-image-opacity: calc(30 / 100);
 
 body {
   margin: 0;
@@ -55,14 +57,20 @@ h3.general-title {
   }
 }
 
+// special images w opacity
+.opacity-image-container {
+  position: relative;
+  background: $opacity-image-background;
 
-
-// DEMO ONLY
-.demo {
-  .grid__item {
-    height: 200px;
+  .opacity-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-position: center;
+    background-size: cover;
+    opacity: $opacity-image-opacity;
   }
 }
-// DEMO ONLY
-
-

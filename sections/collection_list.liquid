@@ -21,7 +21,8 @@
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}" data-section-block-id="{{block.id}}">
       {% assign collection = collections[block.settings.collection] %}
 
-      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+      <a class="collection opacity-image-container" href="{{collection.url}}">
+        <div class="opacity-image" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>{% if forloop.last != true %}<!--{% endif %}{% if diff > 0 %}<!--{% endif %}

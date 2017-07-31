@@ -30,13 +30,15 @@
     {% assign collection = collections[block.settings.collection] %}
     {% if collection %}
     <div class="custom-section {{block.type}}">
-      <a class="collection" href="{{collection.url}}" style="background-image: {% if collection.image %}url('{{collection.image.url }}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
+      <a class="collection opacity-image-container" href="{{collection.url}}">
+        <div class="opacity-image" style="background-image: {% if collection.image %}url('{{collection.image.url }}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})">
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>
     {% else %}
     <div class="custom-section {{block.type}}">
-      <div class="collection" style="background-image: url({{'images/placeholder.svg' | asset_url}})">
+      <div class="collection opacity-image-container">
+        <div class="opacity-image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
         <h3 class="general-title">{{'section.default.collection.name' | t}}</h3>
       </div>
     </div>
