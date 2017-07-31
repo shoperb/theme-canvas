@@ -22,15 +22,18 @@
       },
       "footer": {
         "title": "Jalus",
+        "allow_social_icons": {
+          "title": "Näita sotsiaalikoone"
+        },
+        "allow_payment_icons": {
+          "title": "Näita maksemeetodeid"
+        },
         "settings": {
           "menu": {
             "title": "Jaluse menüü"
           },
           "contact_page": {
             "title": "Kontakti leht"
-          },
-          "allow_social_icons": {
-            "title": "Luba sotsiaalikoonid"
           },
           "social_facebook": {
             "title": "Facebook"
@@ -40,9 +43,6 @@
           },
           "social_instagram": {
             "title": "Instagram"
-          },
-          "allow_payment_icons": {
-            "title": "Allow payment icons"
           },
           "payment_seb": {
             "title": "SEB"
@@ -1634,23 +1634,11 @@
       }
     },
     "categories": {
-      "general": "Üldised seaded",
-      "header": "Päis",
-      "footer": "Jalus",
-      "social": "Sotsiaalikoonid",
-      "landing_page": "Avaleht",
-      "banners": "Avalehe bannerid",
-      "newsletter": "Uudiskirja vorm",
-      "products": "Toote leht & detailid",
-      "product_list_box": "Toote kast",
-      "collections": "Kollektsioonid",
-      "sidebar": "Vasak külgriba",
-      "cart": "Ostukorv",
-      "login_area": "Konto ja kasutaja ala",
-      "blog_posts": "Blogipostitused",
-      "flash_message": "Teavitusteated"
-    },
-    "info": {
+      "categories": {
+        "buttons": "Nupud",
+        "layout": "Kujunds",
+        "text": "Tekstid"
+      }
     }
   }
 }

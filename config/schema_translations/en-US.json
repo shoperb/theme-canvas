@@ -22,15 +22,18 @@
       },
       "footer": {
         "title": "Footer",
+        "allow_social_icons": {
+          "title": "Show social icons"
+        },
+        "allow_payment_icons": {
+          "title": "Show payment icons"
+        },
         "settings": {
           "menu": {
             "title": "Footer menu"
           },
           "contact_page": {
             "title": "Contact page"
-          },
-          "allow_social_icons": {
-            "title": "Allow social icons"
           },
           "social_facebook": {
             "title": "Facebook"
@@ -40,9 +43,6 @@
           },
           "social_instagram": {
             "title": "Instagram"
-          },
-          "allow_payment_icons": {
-            "title": "Allow payment icons"
           },
           "payment_seb": {
             "title": "SEB"
@@ -1637,21 +1637,9 @@
       }
     },
     "categories": {
-      "general": "General settings",
-      "header": "Header",
-      "footer": "Footer",
-      "social": "Social icons",
-      "landing_page": "Landing page",
-      "banners": "Landing page banners",
-      "newsletter": "Newsletter form",
-      "products": "Product page & items",
-      "product_list_box": "Product box",
-      "collections": "Collections",
-      "sidebar": "Sidebar on left",
-      "cart": "Cart",
-      "login_area": "Account & login area",
-      "blog_posts": "Blog posts",
-      "flash_message": "Notification messages"
+      "buttons": "Buttons",
+      "layout": "Layout",
+      "text": "Text"
     }
   }
 }

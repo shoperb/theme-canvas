@@ -65,6 +65,37 @@
               "type": "color"
             }
           ]
+        },
+        {
+          "type": "subcategory",
+          "handle": "image_overlay",
+          "settings": [
+            {
+              "handle": "image_overlay_color",
+              "type": "color"
+            },
+            {
+              "handle": "image_overlay_background",
+              "type": "color"
+            },
+            {
+              "handle": "image_overlay_opacity",
+              "type": "select",
+              "options": [
+                {"handle": "0", "value": "0%"},
+                {"handle": "10", "value": "10%"},
+                {"handle": "20", "value": "20%"},
+                {"handle": "30", "value": "30%"},
+                {"handle": "40", "value": "40%"},
+                {"handle": "50", "value": "50%"},
+                {"handle": "60", "value": "60%"},
+                {"handle": "70", "value": "70%"},
+                {"handle": "80", "value": "80%"},
+                {"handle": "90", "value": "90%"},
+                {"handle": "100", "value": "100%"}
+              ]
+            }
+          ]
         }
       ]
     },

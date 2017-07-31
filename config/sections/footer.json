@@ -14,69 +14,73 @@
       "default": ""
     },
     {
-      "type": "toggle",
+      "type": "subcategory",
       "handle": "allow_social_icons",
-      "default": true
+      "default": true,
+      "settings": [
+        {
+          "type": "text",
+          "handle": "social_facebook",
+          "default": true
+        },
+        {
+          "type": "text",
+          "handle": "social_twitter",
+          "default": true
+        },
+        {
+          "type": "text",
+          "handle": "social_instagram",
+          "default": true
+        }
+      ]
     },
     {
-      "type": "text",
-      "handle": "social_facebook",
-      "default": true
-    },
-    {
-      "type": "text",
-      "handle": "social_twitter",
-      "default": true
-    },
-    {
-      "type": "text",
-      "handle": "social_instagram",
-      "default": true
-    },
-    {
-      "type": "toggle",
+      "type": "subcategory",
       "handle": "allow_payment_icons",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_seb",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_swedbank",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_nordea",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_danske",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_lhv",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_visa",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_mastercard",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "handle": "payment_maestro",
-      "default": true
+      "default": true,
+      "settings": [
+        {
+          "type": "toggle",
+          "handle": "payment_seb",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_swedbank",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_nordea",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_danske",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_lhv",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_visa",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_mastercard",
+          "default": true
+        },
+        {
+          "type": "toggle",
+          "handle": "payment_maestro",
+          "default": true
+        }
+      ]
     }
   ]
 }
