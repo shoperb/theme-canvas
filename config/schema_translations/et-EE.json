@@ -74,6 +74,13 @@
       "image_with_text_overlay": {
         "title": "Päisepilt",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "image": {
             "title": "Pilt"
           },
@@ -125,6 +132,13 @@
       "collection": {
         "title": "Kollektsioon",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -147,22 +161,41 @@
       },
       "blog_posts": {
         "title": "Blogi postitused",
-        "grid": {
-          "title": "Postituste arv"
-        },
-        "show_author": {
-          "title": "Näita autorit"
-        },
-        "show_date": {
-          "title": "Näita kuupäeva"
-        },
-        "show_view_all_button": {
-          "title": "Näita nuppu 'Vaata kõiki'"
+        "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
+          "title": {
+            "title": "Pealkiri"
+          },
+          "grid": {
+            "title": "Postituste arv"
+          },
+          "show_author": {
+            "title": "Näita autorit"
+          },
+          "show_date": {
+            "title": "Näita kuupäeva"
+          },
+          "show_view_all_button": {
+            "title": "Näita nuppu 'Vaata kõiki'"
+          }
         }
       },
       "image_gallery": {
         "title": "Pildigalerii",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "section_height": {
             "title": "Galerii kõrgus",
             "options": {
@@ -205,6 +238,13 @@
       "image_with_text": {
         "title": "Pilt tekstiga",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "image": {
             "title": "Pilt"
           },
@@ -232,18 +272,18 @@
       "slideshow": {
         "title": "Slaidishow",
         "settings": {
-          "auto_rotate": {
-            "title": "Automaatne alustamine"
-          },
-          "animation_speed": {
-            "title": "Animatsiooni kiirus (sekundites)"
-          },
           "section_width": {
             "title": "Sektsiooni laius",
             "options": {
               "full-width": "Täisekraan",
               "limited": "Piiratud sisuosaga"
             }
+          },
+          "auto_rotate": {
+            "title": "Automaatne alustamine"
+          },
+          "animation_speed": {
+            "title": "Animatsiooni kiirus (sekundites)"
           },
           "section_height": {
             "title": "Sektsiooni kõrgus",
@@ -312,6 +352,13 @@
       "collection_list": {
         "title": "Kollektsioonide nimekiri",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -323,6 +370,13 @@
       "product": {
         "title": "Toode",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "product": {
             "title": "Toode"
           },
@@ -349,6 +403,13 @@
       "testimonials": {
         "title": "Iseloomustused",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -370,6 +431,13 @@
       "text_columns_with_images": {
         "title": "Teksti lõigud piltidega",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -401,6 +469,13 @@
       "logo_list": {
         "title": "Brändid/logod",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           }
@@ -422,6 +497,13 @@
       "newsletter": {
         "title": "Uudiskiri",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -436,6 +518,13 @@
       "location_and_contact": {
         "title": "Asukoht/kontakt",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           },
@@ -453,6 +542,13 @@
       "custom": {
         "title": "Loo ise",
         "settings": {
+          "section_width": {
+            "title": "Sektsiooni laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           }

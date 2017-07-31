@@ -74,6 +74,13 @@
       "image_with_text_overlay": {
         "title": "Hero image",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "image": {
             "title": "Image"
           },
@@ -125,6 +132,13 @@
       "collection": {
         "title": "Collection",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           },
@@ -148,6 +162,13 @@
       "blog_posts": {
         "title": "Blog posts",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": "Title",
           "grid": {
             "title": "Number of posts"
@@ -166,6 +187,13 @@
       "image_gallery": {
         "title": "Image gallery",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "section_height": {
             "title": "Gallery height",
             "options": {
@@ -208,6 +236,13 @@
       "image_with_text": {
         "title": "Image with text",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "image": {
             "title": "Image"
           },
@@ -235,18 +270,18 @@
       "slideshow": {
         "title": "Slideshow",
         "settings": {
-          "auto_rotate": {
-            "title": "Auto rotate"
-          },
-          "animation_speed": {
-            "title": "Speed (in seconds)"
-          },
           "section_width": {
             "title": "Section width",
             "options": {
               "full-width": "Full width",
               "limited": "Limited to content"
             }
+          },
+          "auto_rotate": {
+            "title": "Auto rotate"
+          },
+          "animation_speed": {
+            "title": "Speed (in seconds)"
           },
           "section_height": {
             "title": "Section height",
@@ -315,6 +350,13 @@
       "collection_list": {
         "title": "Collection list",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           },
@@ -326,6 +368,13 @@
       "product": {
         "title": "Product",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "product": {
             "title": "Product"
           },
@@ -352,6 +401,13 @@
       "testimonials": {
         "title": "Testimonials",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           }
@@ -373,6 +429,13 @@
       "text_columns_with_images": {
         "title": "Text columns with images",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           },
@@ -404,6 +467,13 @@
       "logo_list": {
         "title": "Brands/Logos",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           }
@@ -425,6 +495,13 @@
       "newsletter": {
         "title": "Newsletter",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           },
@@ -439,6 +516,13 @@
       "location_and_contact": {
         "title": "Location/Contacts",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           },
@@ -456,6 +540,13 @@
       "custom": {
         "title": "Custom",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "title": {
             "title": "Title"
           }

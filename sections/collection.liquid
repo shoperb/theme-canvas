@@ -12,7 +12,7 @@
     {% assign grid_class = 'desk--one-fifth' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="collection">
+<section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
 
   {% if section.settings.title != blank %}
   <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>

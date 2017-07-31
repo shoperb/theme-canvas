@@ -5,7 +5,7 @@
     {% assign grid_class = 'desk--one-third' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="text-alignment-{{section.settings.text_alignment}}">
+<section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="text-alignment-{{section.settings.text_alignment}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
   {% if section.settings.title != blank %}
   <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
   {% endif %}

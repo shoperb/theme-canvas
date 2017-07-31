@@ -16,7 +16,7 @@
     {% assign text_class = 'desk--one-whole' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
   <div class="grid">

@@ -1,4 +1,4 @@
-<section data-section-id="{{section.id}}" data-type="custom">
+<section data-section-id="{{section.id}}" data-type="custom"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   {% if section.settings.title != blank %}
   <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
   {% endif %}

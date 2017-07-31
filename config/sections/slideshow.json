@@ -4,6 +4,21 @@
   "max_blocks": 4,
   "settings": [
     {
+      "type": "select",
+      "handle": "section_width",
+      "default": "limited",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
       "type": "toggle",
       "handle": "auto_rotate",
       "default": false
@@ -28,21 +43,6 @@
         {
           "value": 5,
           "handle": "5"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "handle": "section_width",
-      "default": "full-width",
-      "options": [
-        {
-          "value": "full-width",
-          "handle": "full-width"
-        },
-        {
-          "value": "limited",
-          "handle": "limited"
         }
       ]
     },

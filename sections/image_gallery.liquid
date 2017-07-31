@@ -9,7 +9,7 @@
     {% assign grid_class = 'desk--one-whole' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="image-gallery" class="full-width">
+<section data-section-id="{{section.id}}" data-type="image-gallery"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   <div class="grid">
     {% for block in section.blocks %}
     {% if forloop.first != true %}-->{% endif %}<div data-section-block-id="{{block.id}}" class="grid__item one-whole lap--one-half {{grid_class}} image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}" style="background-image: url('{{block.settings.image}}'), url('{{'images/placeholder.svg' | asset_url}}')">

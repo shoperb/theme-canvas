@@ -5,7 +5,7 @@
 {% assign ordering = ' small-order-1' %}
 {% endif %}
 
-<section data-section-id="{{section.id}}" data-type="image-with-text">
+<section data-section-id="{{section.id}}" data-type="image-with-text"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   <div class="grid">
     {% if section.settings.horizontal_alignment == 'image-on-left' %}
     <div class="grid__item palm--one-whole lap--one-half desk--one-half">

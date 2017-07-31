@@ -442,7 +442,8 @@
         "title": "Hero section title",
         "text": "<p>... and here is where your customers will see your hero message</p>",
         "text_size": "medium",
-        "section_height": "medium"
+        "section_height": "medium",
+        "section_width": "limited"
       }
     },
     "hero-2": {
@@ -455,7 +456,8 @@
         "text_size": "large",
         "section_height": "large",
         "button_label": "Click here!",
-        "button_link": "http://www.google.com/"
+        "button_link": "http://www.google.com/",
+        "section_width": "full-width"
       }
     },
     "collection": {
@@ -466,7 +468,8 @@
         "rows": 2,
         "collection": "spring-summer-collection-2017",
         "show_vendor": true,
-        "show_button": true
+        "show_button": true,
+        "section_width": "limited"
       }
     },
     "blog-posts": {
@@ -476,13 +479,15 @@
         "grid": 6,
         "show_author": false,
         "show_date": false,
-        "show_button": true
+        "show_button": true,
+        "section_width": "limited"
       }
     },
     "image-gallery": {
       "type": "image_gallery",
       "settings": {
-        "section_height": "large"
+        "section_height": "large",
+        "section_width": "full-width"
       },
       "blocks": {
         "image-1": {
@@ -519,7 +524,8 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
-        "button_link": "http://www.google.com"
+        "button_link": "http://www.google.com",
+        "section_width": "limited"
       }
     },
     "slideshow": {
@@ -527,9 +533,9 @@
       "settings": {
         "auto_rotate": false,
         "animation_speed": 4,
-        "section_width": "full-width",
         "section_height": "large",
-        "text_size": "medium"
+        "text_size": "medium",
+        "section_width": "full-width"
       },
       "blocks": {
         "slide-1": {
@@ -570,9 +576,9 @@
       "settings": {
         "auto_rotate": false,
         "animation_speed": 4,
-        "section_width": "limited",
         "section_height": "medium",
-        "text_size": "medium"
+        "text_size": "medium",
+        "section_width": "limited"
       },
       "blocks": {
         "slide-1": {
@@ -612,7 +618,8 @@
       "type": "collection_list",
       "settings": {
         "title": "Collection list",
-        "grid": 3
+        "grid": 3,
+        "section_width": "limited"
       },
       "blocks": {
         "collection-1": {
@@ -645,13 +652,15 @@
         "show_variant_label": true,
         "show_vendor": false,
         "enable_image_zoom": false,
-        "show_social_sharing": false
+        "show_social_sharing": false,
+        "section_width": "limited"
       }
     },
     "testimonials" : {
       "type": "testimonials",
       "settings": {
-        "title": "Testimonials"
+        "title": "Testimonials",
+        "section_width": "limited"
       },
       "blocks": {
         "testimonial-1": {
@@ -695,7 +704,8 @@
       "type": "text_columns_with_images",
       "settings": {
         "title": "Text columns with images",
-        "text_alignment": "center"
+        "text_alignment": "center",
+        "section_width": "limited"
       },
       "blocks": {
         "column-1": {
@@ -760,7 +770,8 @@
     "logo-list": {
       "type": "logo_list",
       "settings": {
-        "title": "Logo list"
+        "title": "Logo list",
+        "section_width": "full-width"
       },
       "blocks": {
         "logo-1": {
@@ -816,7 +827,8 @@
       "settings": {
         "title": "Newsletter",
         "text": "A short sentence describing what someone will receive by subscribing",
-        "form": ""
+        "form": "",
+        "section_width": "full-width"
       }
     },
     "location-and-contact": {
@@ -825,13 +837,15 @@
         "title": "Location",
         "text": "Opening hours: from AM to PM",
         "address": "Meistri 12, Tallinn",
-        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y"
+        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
+        "section_width": "full-width"
       }
     },
     "custom": {
       "type": "custom",
       "settings": {
-        "title": "Custom content"
+        "title": "Custom content",
+        "section_width": "limited"
       },
       "blocks": {
         "custom-1": {
