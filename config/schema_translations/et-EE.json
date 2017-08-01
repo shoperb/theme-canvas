@@ -195,7 +195,7 @@
           "show_date": {
             "title": "Näita kuupäeva"
           },
-          "show_view_all_button": {
+          "show_button": {
             "title": "Näita nuppu 'Vaata kõiki'"
           }
         }

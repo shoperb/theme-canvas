@@ -23,7 +23,6 @@ header#main-header {
     text-align: center;
 
     a {
-      display: block;
       font-size: 30px;
 
       img {
@@ -97,80 +96,6 @@ header#main-header {
     }
   }
 }
-nav.main-menu {
-  ul {
-    @extend .default-list;
-    text-align: center;
-
-    li {
-      display: inline-block;
-      position: relative;
-
-      a,
-      span {
-        display: block;
-        padding: #{$default-padding}px;
-      }
-      &.with-child {
-        a,
-        span {
-          position: relative;
-          padding-right: 25px;
-        }
-      }
-      .icon-arrow-next {
-        @include transform(rotate(90deg));
-        display: inline-block;
-        position: absolute;
-        top: 8px;
-        right: 0;
-      }
-      ul {
-        display: none;
-        background: #ffffff;
-        text-align: left;
-        position: absolute;
-        z-index: 1;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
-
-        li {
-          white-space: nowrap;
-          width: 100%;
-
-          &:hover {
-            background: darken(#ffffff, 5%);
-          }
-        }
-        .icon-arrow-next {
-          @include transform(none);
-          right: 5px;
-        }
-      }
-      &:hover {
-        > ul {
-          display: block;
-        }
-      }
-    }
-  }
-  > ul {
-    > li {
-
-      > ul {
-        left: 50%;
-        @include transform(translateX(-50%));
-
-        li {
-          display: block;
-        }
-        ul {
-          left: 75%;
-          top: 10px;
-        }
-      }
-    }
-  }
-}
 .language-selector {
   position: relative;
   text-align: left;
@@ -189,7 +114,7 @@ nav.main-menu {
     padding-top: 10px;
   }
   ul {
-    @extend .default-list;
+    @extend .default-menu;
     background: #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
 
@@ -197,11 +122,6 @@ nav.main-menu {
       a {
         padding: #{$default-padding}px;
         display: block;
-      }
-      + li {
-        a {
-          padding-top: 0;
-        }
       }
     }
   }

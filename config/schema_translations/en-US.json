@@ -193,7 +193,7 @@
           "show_date": {
             "title": "Show date"
           },
-          "show_view_all_button": {
+          "show_button": {
             "title": "Show button 'View All'"
           }
         }

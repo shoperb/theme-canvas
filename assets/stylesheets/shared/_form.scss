@@ -12,3 +12,46 @@ button {
   min-height: 28px;
   box-sizing: border-box;
 }
+.button,
+.disabled-button {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 20px 0;
+
+  &.primary {
+    padding: 10px 15px;
+    background: #a0a8ac;
+    color: #ffffff;
+
+    &:hover {
+      background: #C5C5C5;
+    }
+    &:focus,
+    &:active {
+      background: #798991;
+    }
+  }
+  &.secondary {
+    padding: 7px 12px;
+    background: #e7eff3;
+    color: #798991;
+
+    &:hover {
+      background: #ffffff;
+    }
+    &:focus,
+    &:active {
+      background: #e3ebef;
+    }
+  }
+}
+.disabled-button {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.buttons {
+  text-align: center;
+}

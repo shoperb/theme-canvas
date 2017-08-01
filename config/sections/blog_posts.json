@@ -57,7 +57,7 @@
     },
     {
       "type": "toggle",
-      "handle": "show_view_all_button",
+      "handle": "show_button",
       "default": false
     }
   ]
