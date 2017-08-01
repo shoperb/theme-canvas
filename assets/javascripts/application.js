@@ -6,16 +6,15 @@ $(document).ready(function() {
     $(this).slick({
       dots: true,
       autoplay: autoPlay,
-      prevArrow: '<div class="slick-prev"></div>',
-      nextArrow: '<div class="slick-next"></div>',
+      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-back"></use></svg></div>',
+      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-next"></use></svg></div>',
       autoplaySpeed: animationSpeed * 1000,
       lazyLoad: 'ondemand'
     });
   });
   $('.testimonial-slider').each(function() {
     $(this).slick({
-      prevArrow: '<div class="slick-prev"></div>',
-      nextArrow: '<div class="slick-next"></div>',
+      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 3,
       responsive: [

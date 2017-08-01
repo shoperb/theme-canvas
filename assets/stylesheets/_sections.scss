@@ -171,39 +171,19 @@ section[data-type] {
     height: 25px;
     @include centerize;
     cursor: pointer;
+    color: #ffffff;
 
-    &:before,
-    &:after {
-      position: absolute;
-      content: '';
-      width: 15px;
-      height: 3px;
-      background: #ffffff;
-      transform: rotate(45deg);
-      left: 5px;
-      top: 5px;
-    }
-    &:before {
-      transform: rotate(-45deg);
-      top: 15px;
+    .icon-arrow-back,
+    .icon-arrow-next {
+      width: 50px;
+      height: 50px;
     }
     &.slick-prev {
-      left: 33px;
-
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
+      left: 13px;
     }
     &.slick-next {
-      right: 8px;
+      right: 13px;
       left: auto;
-    }
-    .slick-nexy {
-      width: 25px;
-      height: 30px;
     }
   }
   .slick-dots {

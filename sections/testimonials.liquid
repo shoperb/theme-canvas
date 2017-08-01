@@ -17,7 +17,7 @@
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-  <div class="grid{{slider}}">
+  <div class="grid{{slider}}" data-arrow-image="{{'images/icons.svg' | asset_url}}">
     {% for block in section.blocks %}
     {% if forloop.first != true %}-->{% endif %}<div  data-section-block-id="{{block.id}}" class="testimonial grid__item one-whole {{grid_class}}">
       <div class="testimonial-quote" data-theme-editor-block-setting='quote'>{{block.settings.quote}}</div>
