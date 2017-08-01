@@ -1,13 +1,8 @@
-$limited-max-width: 1200;
-$default-padding: 10;
-$opacity-image-background: #4183D7;
-$opacity: 70;
-$opacity-image-opacity: calc(#{$opacity} / 100);
-
 body {
   margin: 0;
   font-family: Verdana;
   font-size: 16px;
+  color: $body-color;
 }
 * {
   outline: none;

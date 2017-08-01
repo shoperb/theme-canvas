@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+$limited-max-width: 1200;
+$default-padding: 10;
+$opacity-image-background: #4183D7;
+$opacity: 70;
+$opacity-image-opacity: calc(#{$opacity} / 100);
+
+$body-color: #000000;
+$header-background: #efefef;
+$border-color: #aaa;
+
 @import "csswizardry";
 
 @import "shared/helpers";

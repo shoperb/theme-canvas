@@ -2,3 +2,13 @@ button.button {
   border: none;
   cursor: pointer;
 }
+input,
+button {
+  border: 1px solid $border-color;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #ffffff;
+  min-height: 28px;
+  box-sizing: border-box;
+}

@@ -29,26 +29,19 @@
               {% include 'language_switcher' %}
             </div>
             <div class="search" data-item="main" data-toggle="search">
-              {{'search' | t}}
-              <span class="icon-search"></span>
+              {% include 'icon' with 'search' %}
             </div>
             <div class="account" data-item="main" data-toggle="account">
-              {{'account' | t}}
-              <span class="icon-account"></span>
+              {% include 'icon' with 'profile' %}
             </div>
             <div class="cart-container" data-item="main">
               <div class="cart">
-                <div class="show-for-medium-up">
-                  <a class="cart-link" href="{{url.cart}}">
-                    {{'header.cart' | t}}
-                    {% if cart.quantity > 0 %}
-                    <span class="number-wrapper">
-                      (<span class="number">{{ cart.quantity }}</span>)
-                    </span>
-                    {% endif %}
-                    <span aria-hidden="true" class="glyph cart"></span>
-                  </a>
-                </div>
+                <a class="cart-link" href="{{url.cart}}">
+                  {% include 'icon' with 'basket' %}
+                  {% if cart.quantity > 0 %}
+                  <div class="cart-items">{{ cart.quantity }}</div>
+                  {% endif %}
+                </a>
 
                 {% comment %}
                 <div class="show-for-small hide-for-ie9-down">
@@ -85,10 +78,14 @@
 
             <div class="search-container hidden">
               <form  action="{{url.search}}" method="get" role="search">
-                <input name="query" type="text" placeholder="{{'search.keyword' | t}}">
-                <button class="icon-search"></button>
+                <input name="query" type="text" placeholder="{{'search.keyword' | t}}" class="search-form">
+                <button class="search-button">
+                  {% include 'icon' with 'search' %}
+                </button>
               </form>
-              <span class="icon-cross" data-toggle="close">x</span>
+              <div data-toggle="close">
+                {% include 'icon' with 'close' %}
+              </div>
             </div>
 
             <div class="account-container hidden">
@@ -97,7 +94,9 @@
               {% else %}
               <a href="{{url.login}}">{{'account.login' | t}}</a> {{'general.or' | t}} <a href="{{url.signup}}">{{'account.register' | t}}</a>
               {% endif %}
-              <span class="icon-cross" data-toggle="close">x</span>
+              <div data-toggle="close">
+                {% include 'icon' with 'close' %}
+              </div>
             </div>
           </div>
         </div>

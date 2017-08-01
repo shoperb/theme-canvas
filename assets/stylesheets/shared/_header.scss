@@ -7,7 +7,7 @@ header#main-header {
     position: relative;
   }
   .background {
-    background: #efefef;
+    background: $header-background;
     position: absolute;
     top: 0;
     right: 0;
@@ -32,6 +32,33 @@ header#main-header {
       }
     }
   }
+  .search,
+  .account,
+  .cart,
+  .search-container,
+  .account-container {
+    cursor: pointer;
+
+    svg {
+      pointer-events: none;
+    }
+  }
+  .cart {
+    position: relative;
+
+    .cart-items {
+      @include centerize;
+      background: $header-background;
+      padding: 2px;
+      border-radius: 10px;
+      color: $body-color;
+      line-height: 1;
+      top: 25px;
+    }
+  }
+  [data-toggle="close"] {
+    display: inline-block;
+  }
   .actions {
     text-align: right;
     @include breakpoint(desk, 'max') {
@@ -41,12 +68,33 @@ header#main-header {
     > div:not(.hidden) {
       display: inline-block;
       vertical-align: middle;
-      padding: #{$default-padding}px;
+      padding: 0 #{$default-padding}px;
     }
   }
-  .search-container,
-  .account-container {
-    text-align: center;
+  .search-container {
+    form {
+      display: inline-block;
+
+      .search-form {
+        border-radius: 4px 0 0 4px;
+      }
+      .search-button {
+        position: relative;
+        top: 1px;
+        left: -5px;
+        width: 28px;
+        line-height: 1;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+
+        .icon-search {
+          width: 14px;
+          height: 14px;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
   }
 }
 nav.main-menu {
