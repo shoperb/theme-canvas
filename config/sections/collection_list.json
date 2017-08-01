@@ -51,6 +51,11 @@
       ]
     }
   ],
+  "blocks": [
+    {
+      "type": "collection"
+    }
+  ],
   "default": {
     "blocks": [
       {
