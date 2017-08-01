@@ -1,10 +1,9 @@
 footer.main-footer {
-
   .general-content {
     margin: 0 auto;
 
     .content-spacer {
-      background: #efefef;
+      background: $footer-background;
     }
   }
 
@@ -12,16 +11,17 @@ footer.main-footer {
     @extend .default-list;
     text-align: center;
 
+    .icon-arrow-next {
+      display: none;
+    }
     li {
       position: relative;
 
-      a {
+      a,
+      span {
         display: block;
         padding: #{$default-padding}px;
       }
-    }
-    ul {
-      display: none;
     }
   }
   .footer {
@@ -43,22 +43,6 @@ footer.main-footer {
     a {
       display: inline-block;
       padding: #{$default-padding}px;
-
-      &.icon-facebook {
-        &:before {
-          content: 'facebook';
-        }
-      }
-      &.icon-twitter {
-        &:before {
-          content: 'twitter';
-        }
-      }
-      &.icon-instagram {
-        &:before {
-          content: 'instagram';
-        }
-      }
     }
   }
   .payment-icons {

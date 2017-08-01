@@ -27,6 +27,10 @@
             {
               "handle": "text_sale_text_color",
               "type": "color"
+            },
+            {
+              "handle": "text_link_color",
+              "type": "color"
             }
           ]
         },
@@ -35,7 +39,7 @@
           "handle": "buttons",
           "settings": [
             {
-              "handle": "buttons_primary_buttons_and_links_color",
+              "handle": "buttons_primary_button_background_color",
               "type": "color"
             },
             {
@@ -43,7 +47,7 @@
               "type": "color"
             },
             {
-              "handle": "buttons_secondary_buttons_color",
+              "handle": "buttons_secondary_button_background_color",
               "type": "color"
             },
             {
@@ -62,6 +66,10 @@
             },
             {
               "handle": "layout_border_color",
+              "type": "color"
+            },
+            {
+              "handle": "layout_header_and_footer_background_color",
               "type": "color"
             }
           ]
@@ -117,7 +125,7 @@
               ]
             },
             {
-              "handle": "body_size",
+              "handle": "body_font_size",
               "type": "select",
               "options": [
                 {"handle": "font_size.10", "value": "10px"},
@@ -145,7 +153,7 @@
               ]
             },
             {
-              "handle": "headings_size",
+              "handle": "headings_font_size",
               "type": "select",
               "options": [
                 {"handle": "font_size.12", "value": "12px"},
@@ -155,34 +163,6 @@
                 {"handle": "font_size.20", "value": "20px"},
                 {"handle": "font_size.22", "value": "22px"},
                 {"handle": "font_size.24", "value": "24px"}
-              ]
-            }
-          ]
-        },
-        {
-          "type": "subcategory",
-          "handle": "headings_fonts",
-          "settings": [
-            {
-              "handle": "links_and_buttons_font_family",
-              "type": "select",
-              "options": [
-                {"handle": "arial", "value": "Arial"},
-                {"handle": "lato", "value": "Lato"},
-                {"handle": "tahoma", "value": "Tahoma"},
-                {"handle": "verdana", "value": "Verdana"}
-              ]
-            },
-            {
-              "handle": "links_and_buttons_size",
-              "type": "select",
-              "options": [
-                {"handle": "font_size.10", "value": "10px"},
-                {"handle": "font_size.12", "value": "12px"},
-                {"handle": "font_size.14", "value": "14px"},
-                {"handle": "font_size.16", "value": "16px"},
-                {"handle": "font_size.18", "value": "18px"},
-                {"handle": "font_size.20", "value": "20px"}
               ]
             }
           ]

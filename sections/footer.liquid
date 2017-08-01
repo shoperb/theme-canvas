@@ -20,13 +20,13 @@
       {% if section.settings.allow_social_icons %}
       <div class="social-icons">
         {% if section.settings.social_facebook != blank %}
-        <a href="{{section.settings.social_facebook}}" target="_blank" class="icon-facebook"></a>
+        <a href="{{section.settings.social_facebook}}" target="_blank" class="icon-facebook">{% include 'icon' with 'facebook' %}</a>
         {% endif %}
         {% if section.settings.social_twitter != blank %}
-        <a href="{{section.settings.social_twitter}}" target="_blank" class="icon-twitter"></a>
+        <a href="{{section.settings.social_twitter}}" target="_blank" class="icon-twitter">{% include 'icon' with 'twitter' %}</a>
         {% endif %}
         {% if section.settings.social_instagram != blank %}
-        <a href="{{section.settings.social_instagram}}" target="_blank" class="icon-instagram"></a>
+        <a href="{{section.settings.social_instagram}}" target="_blank" class="icon-instagram">{% include 'icon' with 'instagram' %}</a>
         {% endif %}
       </div>
       {% endif %}
