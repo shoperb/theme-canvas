@@ -109,6 +109,7 @@ nav.main-menu {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
     display: none;
     position: absolute;
+    z-index: 5;
 
     li {
       a {

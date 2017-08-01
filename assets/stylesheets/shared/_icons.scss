@@ -1,16 +1,6 @@
-.icon-arrow {
-  &-left,
-  &-right {
-    border-right: 5px solid;
-    border-bottom: 5px solid;
-    height: 15px;
-    width: 15px;
-    display: block;
-  }
-  &-left {
-    @include transform(rotate(135deg));
-  }
-  &-right {
-    @include transform(rotate(-45deg));
-  }
+[class^="icon-"], [class*=" icon-"] {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  fill: currentColor;
 }

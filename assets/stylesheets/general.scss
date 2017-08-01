@@ -1,7 +1,8 @@
 $limited-max-width: 1200;
 $default-padding: 10;
 $opacity-image-background: #4183D7;
-$opacity-image-opacity: calc(30 / 100);
+$opacity: 70;
+$opacity-image-opacity: calc(#{$opacity} / 100);
 
 body {
   margin: 0;
