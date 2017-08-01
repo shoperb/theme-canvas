@@ -377,6 +377,16 @@
           "grid": {
             "title": "Collection count"
           }
+        },
+        "blocks": {
+          "collection": {
+            "title": "Collection",
+            "settings": {
+              "collection": {
+                "title": "Collection"
+              }
+            }
+          }
         }
       },
       "product": {

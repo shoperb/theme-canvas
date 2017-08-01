@@ -379,6 +379,16 @@
           "grid": {
             "title": "Kollektsioonide arv"
           }
+        },
+        "blocks": {
+          "collection": {
+            "title": "Kollektsioon",
+            "settings": {
+              "collection": {
+                "title": "Kollektsioon"
+              }
+            }
+          }
         }
       },
       "product": {

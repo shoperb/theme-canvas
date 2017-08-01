@@ -53,7 +53,13 @@
   ],
   "blocks": [
     {
-      "type": "collection"
+      "type": "collection",
+      "settings": [
+        {
+          "type": "collection",
+          "handle": "collection"
+        }
+      ]
     }
   ],
   "default": {
