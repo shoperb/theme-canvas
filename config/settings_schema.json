@@ -1,15 +1,6 @@
 {
   "categories": [
     {
-      "handle": "layout",
-      "settings": [
-        {
-          "handle": "what_to_show_here",
-          "type": "color"
-        }
-      ]
-    },
-    {
       "handle": "colors",
       "settings": [
         {

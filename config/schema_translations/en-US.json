@@ -750,7 +750,9 @@
       }
     },
     "categories": {
+      "body_fonts": "Body texts",
       "buttons": "Buttons",
+      "headings_fonts": "Headings",
       "layout": "Layout",
       "text": "Text"
     }
