@@ -1,15 +1,17 @@
 {% if shop.possible_languages.many? %}
-<div class="language-selector">
+<div class="language-selector" data-item="main">
   <div class="current-locale">
-    {{ "language." | append: shop.current_locale | t }}
-    <span aria-hidden="true" class="glyph arrow-down"></span>
+    {{"language." | append: shop.current_locale | t}}
+    {% include 'icon' with 'arrow-down' %}
   </div>
-  <ul>
-    {% for language in shop.possible_languages %}
-    {% unless shop.current_locale == language %}
-    <li>{{ "language." | append: language | t | link_to_locale: language }}</li>
-    {% endunless %}
-    {% endfor %}
-  </ul>
+  <div class="language-list">
+    <ul>
+      {% for language in shop.possible_languages %}
+      {% unless shop.current_locale == language %}
+      <li>{{ "language." | append: language | t | link_to_locale: language }}</li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endif %}

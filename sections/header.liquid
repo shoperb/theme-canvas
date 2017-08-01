@@ -25,9 +25,7 @@
         </div><!--
         -->{% endif %}<div class="grid__item palm--one-whole {% if menu.links.size == 0 or menu == blank %}desk--one-whole{% else %}desk--one-third{% endif %}">
           <div class="actions">
-            <div data-item="main">
-              {% include 'language_switcher' %}
-            </div>
+            {% include 'language_switcher' %}
             <div class="search" data-item="main" data-toggle="search">
               {% include 'icon' with 'search' %}
             </div>

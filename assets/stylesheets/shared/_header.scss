@@ -106,9 +106,24 @@ nav.main-menu {
       display: inline-block;
       position: relative;
 
-      a {
+      a,
+      span {
         display: block;
         padding: #{$default-padding}px;
+      }
+      &.with-child {
+        a,
+        span {
+          position: relative;
+          padding-right: 25px;
+        }
+      }
+      .icon-arrow-next {
+        @include transform(rotate(90deg));
+        display: inline-block;
+        position: absolute;
+        top: 8px;
+        right: 0;
       }
       ul {
         display: none;
@@ -121,6 +136,14 @@ nav.main-menu {
         li {
           white-space: nowrap;
           width: 100%;
+
+          &:hover {
+            background: darken(#ffffff, 5%);
+          }
+        }
+        .icon-arrow-next {
+          @include transform(none);
+          right: 5px;
         }
       }
       &:hover {
@@ -132,6 +155,7 @@ nav.main-menu {
   }
   > ul {
     > li {
+
       > ul {
         left: 50%;
         @include transform(translateX(-50%));
@@ -151,13 +175,23 @@ nav.main-menu {
   position: relative;
   text-align: left;
 
+  .icon-arrow-down {
+    float: right;
+    position: relative;
+    top: -2px;
+  }
+  .language-list {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    @include transform(translateX(-50%));
+    padding-top: 10px;
+  }
   ul {
     @extend .default-list;
     background: #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
-    display: none;
-    position: absolute;
-    z-index: 5;
 
     li {
       a {
@@ -172,7 +206,7 @@ nav.main-menu {
     }
   }
   &:hover {
-    ul {
+    .language-list {
       display: block;
     }
   }
