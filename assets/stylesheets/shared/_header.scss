@@ -1,15 +1,20 @@
 header#main-header {
   position: relative;
-  background: #efefef;
+  @extend .general-content;
+  margin: 0 auto;
 
+  .content-spacer {
+    position: relative;
+  }
   .background {
+    background: #efefef;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
   }
-  > * {
+  .grid__item {
     position: relative;
     vertical-align: middle;
     padding: #{$default-padding}px;

@@ -50,8 +50,6 @@ section[data-type] {
   background-position: right bottom !important;
 }
 
-
-
 [data-type=image-with-text-overlay] {
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +57,9 @@ section[data-type] {
   text-align: center;
   display: table;
 
+  &:not(.full-width) {
+    max-width: calc(1200px - #{2 * $default-padding}px);
+  }
   &[class*="image-align"] {
     background-size: cover;
     background-color: transparent;

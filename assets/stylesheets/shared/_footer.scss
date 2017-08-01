@@ -1,5 +1,12 @@
-.main-footer {
-  background: #efefef;
+footer.main-footer {
+
+  .general-content {
+    margin: 0 auto;
+
+    .content-spacer {
+      background: #efefef;
+    }
+  }
 
   ul {
     @extend .default-list;

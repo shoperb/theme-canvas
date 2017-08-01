@@ -411,7 +411,8 @@
         "logo_alignment": "left",
         "logo": "http://via.placeholder.com/150x100/FC2EFF",
         "logo_max_width": "100",
-        "menu": "main-menu"
+        "menu": "main-menu",
+        "section_width": "limited"
       }
     },
     "footer": {
@@ -431,7 +432,8 @@
         "payment_lhv": true,
         "payment_visa": true,
         "payment_mastercard": true,
-        "payment_maestro": true
+        "payment_maestro": true,
+        "section_width": "full-width"
       }
     },
 

@@ -6,6 +6,13 @@
       "header": {
         "title": "Header",
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "logo_alignment": {
             "title": "Logo alignment"
           },
@@ -29,6 +36,13 @@
           "title": "Show payment icons"
         },
         "settings": {
+          "section_width": {
+            "title": "Section width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited to content"
+            }
+          },
           "menu": {
             "title": "Footer menu"
           },
@@ -556,7 +570,11 @@
             "title": "Text",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "title": {
                 "title": "Title"
@@ -576,7 +594,11 @@
             "title": "Image",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "image": {
                 "title": "Image"
@@ -590,7 +612,11 @@
             "title": "Video",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "video": {
                 "title": "Video"
@@ -604,7 +630,11 @@
             "title": "Product",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "product": {
                 "title": "Product"
@@ -618,7 +648,11 @@
             "title": "Collection",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "collection": {
                 "title": "Collection"
@@ -632,7 +666,11 @@
             "title": "HTML",
             "settings": {
               "section_width": {
-                "title": "Section width"
+                "title": "Section width",
+                "options": {
+                  "full-width": "Full width",
+                  "limited": "Limited to content"
+                }
               },
               "html": {
                 "title": "HTML"

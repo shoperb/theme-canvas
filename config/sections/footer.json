@@ -4,6 +4,21 @@
   "generic": false,
   "settings": [
     {
+      "type": "select",
+      "handle": "section_width",
+      "default": "limited",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
       "type": "menu",
       "handle": "menu",
       "default": ""

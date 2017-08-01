@@ -6,6 +6,13 @@
       "header": {
         "title": "Päis",
         "settings": {
+          "section_width": {
+            "title": "Ploki laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "logo_alignment": {
             "title": "Logo paigutus"
           },
@@ -29,6 +36,13 @@
           "title": "Näita maksemeetodeid"
         },
         "settings": {
+          "section_width": {
+            "title": "Ploki laius",
+            "options": {
+              "full-width": "Täisekraan",
+              "limited": "Piiratud sisuosaga"
+            }
+          },
           "menu": {
             "title": "Jaluse menüü"
           },
@@ -558,7 +572,11 @@
             "title": "Tekst",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "title": {
                 "title": "Pealkiri"
@@ -578,7 +596,11 @@
             "title": "Pilt",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "image": {
                 "title": "Pilt"
@@ -592,7 +614,11 @@
             "title": "Video",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "video": {
                 "title": "Video"
@@ -606,7 +632,11 @@
             "title": "Toode",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "product": {
                 "title": "Toode"
@@ -620,7 +650,11 @@
             "title": "Kollektsioon",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "collection": {
                 "title": "Kollektsioon"
@@ -634,7 +668,11 @@
             "title": "HTML",
             "settings": {
               "section_width": {
-                "title": "Ploki laius"
+                "title": "Ploki laius",
+                "options": {
+                  "full-width": "Täisekraan",
+                  "limited": "Piiratud sisuosaga"
+                }
               },
               "html": {
                 "title": "HTML"
