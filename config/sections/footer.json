@@ -87,6 +87,11 @@
         },
         {
           "type": "toggle",
+          "handle": "payment_paypal",
+          "default": true
+        },
+        {
+          "type": "toggle",
           "handle": "payment_mastercard",
           "default": true
         },

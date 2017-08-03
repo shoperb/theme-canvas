@@ -49,48 +49,49 @@ footer.main-footer {
     text-align: center;
     padding: #{$default-padding}px;
 
-    > div {
+    [class^="payment-"] {
+      height: 15px;
+      padding: 0 2px;
+      background: red;
       display: inline-block;
-    }
+      background: asset-url('images/payments.png') no-repeat top left;
+      opacity: 0.5;
 
-    .payment-seb {
-      &:before {
-        content: "seb";
+      &[class*="seb"] {
+        width: 35px;
+        background-position-y: -160px;
       }
-    }
-    .payment-swedbank {
-      &:before {
-        content: "swedbank";
+      &[class*="swedbank"] {
+        width: 70px;
+        background-position-y: -20px;
       }
-    }
-    .payment-nordea {
-      &:before {
-        content: "nordea";
+      &[class*="nordea"] {
+        width: 68px;
+        background-position-y: -60px;
       }
-    }
-    .payment-danske {
-      &:before {
-        content: "danske";
+      &[class*="danske"] {
+        width: 100px;
+        background-position-y: -120px;
       }
-    }
-    .payment-lhv {
-      &:before {
-        content: "lhv";
+      &[class*="lhv"] {
+        width: 84px;
+        background-position-y: -140px;
       }
-    }
-    .payment-visa {
-      &:before {
-        content: "visa";
+      &[class*="paypal"] {
+        width: 62px;
+        background-position-y: -40px;
       }
-    }
-    .payment-mastercard {
-      &:before {
-        content: "mastercard";
+      &[class*="visa"] {
+        width: 47px;
+        background-position-y: 0;
       }
-    }
-    .payment-maestro {
-      &:before {
-        content: "maestro";
+      &[class*="mastercard"] {
+        width: 25px;
+        background-position-y: -80px;
+      }
+      &[class*="maestro"] {
+        width: 25px;
+        background-position-y: -100px;
       }
     }
   }

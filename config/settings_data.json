@@ -429,6 +429,7 @@
         "payment_nordea": true,
         "payment_danske": true,
         "payment_lhv": true,
+        "payment_paypal": true,
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,

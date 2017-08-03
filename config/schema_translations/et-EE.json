@@ -73,6 +73,9 @@
           "payment_lhv": {
             "title": "LHV"
           },
+          "payment_paypal": {
+            "title": "PayPal"
+          },
           "payment_visa": {
             "title": "VISA"
           },
