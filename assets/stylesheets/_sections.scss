@@ -106,7 +106,10 @@ section[data-type] {
   h3 {
     margin: 0;
   }
-  .product-title {}
+  .product-title {
+    padding: 5px 0;
+    text-align: left;
+  }
   .product-vendor {}
   .product-price {}
 }
@@ -275,6 +278,10 @@ section[data-type] {
   }
   img {
     width: 100%;
+  }
+  .product-title {
+    padding: 0;
+    text-align: left;
   }
 }
 [data-type=testimonials] {

@@ -39,13 +39,13 @@ a {
 
 .general-title {
   color: #3d4246;
-  font-size: 24px;
+  font-size: $header-font-size;
   text-align: center;
   margin: 0;
   padding: 20px 0;
 }
 h3.general-title {
-  font-size: 18px;
+  font-size: #{$header-font-size - 14};
 }
 .general-text {
   color: #3d4246;

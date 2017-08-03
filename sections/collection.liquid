@@ -36,7 +36,7 @@
           <img src="{{product_image}}" alt="{{product.name}}">
         </div>
 
-        <h3 class="product-title" itemprop="name">{{product.name}}</h3>
+        <h3 class="product-title general-title" itemprop="name">{{product.name}}</h3>
 
         {% if product.vendor and section.settings.show_vendor %}
         <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
@@ -68,7 +68,7 @@
           <img src="{{'images/placeholder.svg' | asset_url}}">
         </div>
 
-        <h3 class="product-title">{{'section.default.product_name' | t}}</h3>
+        <h3 class="product-title general-title">{{'section.default.product_name' | t}}</h3>
 
         <div class="product-price">
           <span class="money">{{'14.95' | money}}</span>

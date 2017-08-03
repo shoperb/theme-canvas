@@ -30,7 +30,7 @@
 
     --><div class="grid__item one-whole lap--one-half {{text_class}} product">
       {% if product %}
-      <h2 class="product-title">{{product.name}}</h2>
+      <h2 class="product-title general-title">{{product.name}}</h2>
 
       {% if default_variant.sku %}
       <div class="sku" data-variant-sku-container>{{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span></div>
@@ -132,7 +132,7 @@
       {% comment %} default view for builder {% endcomment %}
 
       {% else %}
-      <h2 class="product-title">{{'section.default.product_name' | t}}</h2>
+      <h2 class="product-title general-title">{{'section.default.product_name' | t}}</h2>
 
       {% if section.settings.show_vendor %}
       <div class="product-vendor">{{'section.default.vendor' | t}}</div>

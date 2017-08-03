@@ -19,7 +19,9 @@
 
       <{% if block.settings.link != blank %}a href="{{block.settings.link}}"{{outer_url}}{% else %}div{% endif %} class="caption-container">
         {% if block.settings.caption %}
-        <span data-theme-editor-block-setting='caption' >{{block.settings.caption}}</span>
+        <span data-theme-editor-block-setting="caption">
+          <h3 class="general-title">{{block.settings.caption}}</h3>
+        </span>
         {% endif %}
       </{% if block.settings.link != blank %}a{% else %}div{% endif %}>
     </div>{% if forloop.last != true %}<!--{% endif %}

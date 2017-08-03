@@ -37,14 +37,14 @@
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <div class="text-column">
 
-        <h2 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h2>
+        <h3 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h3>
 
         {% if section.settings.show_author %}
-        <h3 class="post-author">{{'section.default.blog_post.blog_post_author' | t}}</h3>
+        <div class="post-author">{{'section.default.blog_post.blog_post_author' | t}}</div>
         {% endif %}
 
         {% if section.settings.show_date %}
-        <h3 class="post-date">{{'section.default.blog_post.blog_post_date' | t}}</h3>
+        <div class="post-date">{{'section.default.blog_post.blog_post_date' | t}}</div>
         {% endif %}
 
         <div class="text-column-text">{{'section.default.blog_post.blog_post_content' | t}}</div>
