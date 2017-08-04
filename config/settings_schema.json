@@ -120,12 +120,13 @@
               "handle": "body_font_size",
               "type": "select",
               "options": [
-                {"handle": "font_size.10", "value": "10px"},
                 {"handle": "font_size.12", "value": "12px"},
                 {"handle": "font_size.14", "value": "14px"},
                 {"handle": "font_size.16", "value": "16px"},
                 {"handle": "font_size.18", "value": "18px"},
-                {"handle": "font_size.20", "value": "20px"}
+                {"handle": "font_size.20", "value": "20px"},
+                {"handle": "font_size.22", "value": "22px"},
+                {"handle": "font_size.24", "value": "24px"}
               ]
             }
           ]
@@ -140,6 +141,7 @@
               "options": [
                 {"handle": "arial", "value": "Arial"},
                 {"handle": "lato", "value": "Lato"},
+                {"handle": "russo_one", "value": "Russo One"},
                 {"handle": "tahoma", "value": "Tahoma"},
                 {"handle": "verdana", "value": "Verdana"}
               ]
@@ -154,7 +156,10 @@
                 {"handle": "font_size.18", "value": "18px"},
                 {"handle": "font_size.20", "value": "20px"},
                 {"handle": "font_size.22", "value": "22px"},
-                {"handle": "font_size.24", "value": "24px"}
+                {"handle": "font_size.24", "value": "24px"},
+                {"handle": "font_size.26", "value": "26px"},
+                {"handle": "font_size.28", "value": "28px"},
+                {"handle": "font_size.30", "value": "30px"}
               ]
             }
           ]
