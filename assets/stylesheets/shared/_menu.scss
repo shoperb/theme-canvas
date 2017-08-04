@@ -19,7 +19,8 @@ nav.main-menu {
       a,
       span {
         display: block;
-        padding: #{$default-padding}px;
+        padding: #{$default_padding}px;
+        color: $text_link_color;
       }
       &.with-child {
         a,
@@ -34,6 +35,7 @@ nav.main-menu {
         position: absolute;
         top: 8px;
         right: 0;
+        color: $text_link_color;
       }
       ul {
         display: none;

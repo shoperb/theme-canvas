@@ -17,13 +17,14 @@ header#main-header {
   .grid__item {
     position: relative;
     vertical-align: middle;
-    padding: #{$default-padding}px;
+    padding: #{$default_padding}px;
   }
   .logo {
     text-align: center;
 
     a {
       font-size: 30px;
+      color: $text_headings_color;
 
       img {
         display: block;
@@ -50,9 +51,12 @@ header#main-header {
       background: $header-background;
       padding: 2px;
       border-radius: 10px;
-      color: $body-color;
+      color: $text_body_color;
       line-height: 1;
       top: 25px;
+    }
+    .cart-link {
+      color: $text_link_color;
     }
   }
   [data-toggle="close"] {
@@ -67,7 +71,8 @@ header#main-header {
     > div:not(.hidden) {
       display: inline-block;
       vertical-align: middle;
-      padding: 0 #{$default-padding}px;
+      padding: 0 #{$default_padding}px;
+      color: $text_link_color;
     }
   }
   .search-container {
@@ -120,7 +125,7 @@ header#main-header {
 
     li {
       a {
-        padding: #{$default-padding}px;
+        padding: #{$default_padding}px;
         display: block;
       }
     }

@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Verdana;
   font-size: 16px;
-  color: $body-color;
+  color: $text_body_color;
 }
 * {
   outline: none;
@@ -13,11 +13,11 @@ a {
 }
 
 .general-content {
-  max-width: #{$limited-max-width}px;
-  margin: #{2 * $default-padding}px auto #{$default-padding}px;
+  max-width: #{$limited_max_width}px;
+  margin: #{2 * $default_padding}px auto #{$default_padding}px;
 
   .content-spacer {
-    margin: 0 #{$default-padding}px;
+    margin: 0 #{$default_padding}px;
   }
   &.full-width {
     max-width: 100%;
@@ -38,8 +38,9 @@ a {
 }
 
 .general-title {
-  color: #3d4246;
+  color: $text_headings_color;
   font-size: $header-font-size;
+  font-family: $header-font-family;
   text-align: center;
   margin: 0;
   padding: 20px 0;
@@ -48,7 +49,7 @@ h3.general-title {
   font-size: #{$header-font-size - 14};
 }
 .general-text {
-  color: #3d4246;
+  color: $text_body_color;
   font-size: 16px;
 }
 .text-large {

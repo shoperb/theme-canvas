@@ -20,13 +20,14 @@ footer.main-footer {
       a,
       span {
         display: block;
-        padding: #{$default-padding}px;
+        padding: #{$default_padding}px;
+        color: $text_link_color;
       }
     }
   }
   .footer {
     .grid__item {
-      padding: #{$default-padding}px;
+      padding: #{$default_padding}px;
     }
     .contact {
       text-align: center;
@@ -38,16 +39,17 @@ footer.main-footer {
   }
   .social-icons {
     text-align: center;
-    padding: #{$default-padding}px;
+    padding: #{$default_padding}px;
 
     a {
       display: inline-block;
-      padding: #{$default-padding}px;
+      padding: #{$default_padding}px;
+      color: $text_link_color;
     }
   }
   .payment-icons {
     text-align: center;
-    padding: #{$default-padding}px;
+    padding: #{$default_padding}px;
 
     [class^="payment-"] {
       height: 15px;
@@ -96,11 +98,15 @@ footer.main-footer {
     }
   }
   .shoperb {
-    padding: #{$default-padding}px;
+    padding: #{$default_padding}px;
     text-align: center;
 
     svg {
       width: 100px;
+
+      #shoperb {
+        fill: $text_link_color;
+      }
     }
   }
 }

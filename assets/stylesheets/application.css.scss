@@ -1,22 +1,19 @@
 @charset "UTF-8";
 
-$shoperb: #4183D7;
-
-$limited-max-width: 1200;
-$default-padding: 10;
-$opacity-image-background: $shoperb;
+$opacity-image-background: red;
 $opacity: 90;
 $opacity-image-opacity: calc(#{$opacity} / 100);
 
-$body-color: #000000;
 $header-background: #efefef;
 $footer-background: #efefef;
 $border-color: #aaa;
 $menu-background: #ffffff;
+$header-font-family: "arial";
 $header-font-size: 30px;
 
 @import "csswizardry";
 
+@import "variables";
 @import "shared/helpers";
 @import "shared/form";
 @import "shared/menu";
