@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-$opacity-image-background: red;
-$opacity: 90;
-$opacity-image-opacity: calc(#{$opacity} / 100);
-
-$header-font-family: "arial";
-$header-font-size: 30px;
-
 @import "csswizardry";
 
 @import "variables";

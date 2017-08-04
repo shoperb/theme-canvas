@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Verdana;
-  font-size: 16px;
+  font-family: $body_font_family, sans-serif;
+  font-size: $body_font_size;
   color: $text_body_color;
   background: $layout_background_color;
 }
@@ -10,7 +10,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #3d4246;
+  color: $text_link_color;
 }
 
 .general-content {
@@ -40,14 +40,17 @@ a {
 
 .general-title {
   color: $text_headings_color;
-  font-size: $header-font-size;
-  font-family: $header-font-family;
+  font-size: $headings_font_size;
+  font-family: $headings_font_family,  sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px 0;
 }
 h3.general-title {
-  font-size: #{$header-font-size - 14};
+  // variable to function
+  //font-size: #{$headings_font_size - 8};
+  // remove this once upper one works
+  font-size: $headings_font_size;
 }
 .general-text {
   color: $text_body_color;

@@ -4,9 +4,9 @@
   li {
     &:hover {
       // variable to function
-      //background: darken($layout_secondary_background_color, 20%);
+      //background: darken($layout_secondary_background_color, 5%);
       // remove this once upper one works
-      background: darken(#ffffff, 20%);
+      background: darken(#ffffff, 5%);
     }
   }
 }
@@ -30,6 +30,7 @@ nav.main-menu {
         span {
           position: relative;
           padding-right: 25px;
+          cursor: pointer;
         }
       }
       .icon-arrow-next {
@@ -39,6 +40,7 @@ nav.main-menu {
         top: 8px;
         right: 0;
         color: $text_link_color;
+        pointer-events: none;
       }
       ul {
         display: none;

@@ -81,17 +81,17 @@
               "handle": "image_overlay_opacity",
               "type": "select",
               "options": [
-                {"handle": "0", "value": "0%"},
-                {"handle": "10", "value": "10%"},
-                {"handle": "20", "value": "20%"},
-                {"handle": "30", "value": "30%"},
-                {"handle": "40", "value": "40%"},
-                {"handle": "50", "value": "50%"},
-                {"handle": "60", "value": "60%"},
-                {"handle": "70", "value": "70%"},
-                {"handle": "80", "value": "80%"},
-                {"handle": "90", "value": "90%"},
-                {"handle": "100", "value": "100%"}
+                {"handle": "0", "value": "0"},
+                {"handle": "0.1", "value": "0.1"},
+                {"handle": "0.2", "value": "0.2"},
+                {"handle": "0.3", "value": "0.3"},
+                {"handle": "0.4", "value": "0.4"},
+                {"handle": "0.5", "value": "0.5"},
+                {"handle": "0.6", "value": "0.6"},
+                {"handle": "0.7", "value": "0.7"},
+                {"handle": "0.8", "value": "0.8"},
+                {"handle": "0.9", "value": "0.9"},
+                {"handle": "1", "value": "1"}
               ]
             }
           ]
@@ -109,8 +109,9 @@
               "handle": "body_font_family",
               "type": "select",
               "options": [
-                {"handle": "arial", "value": "Arial"},
+                {"handle": "arial", "value": "arial"},
                 {"handle": "lato", "value": "Lato"},
+                {"handle": "russo_one", "value": "Russo One"},
                 {"handle": "tahoma", "value": "Tahoma"},
                 {"handle": "verdana", "value": "Verdana"}
               ]
