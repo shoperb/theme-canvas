@@ -7,7 +7,7 @@ header#main-header {
     position: relative;
   }
   .background {
-    background: $header-background;
+    background: $layout_secondary_background_color;
     position: absolute;
     top: 0;
     right: 0;
@@ -48,7 +48,7 @@ header#main-header {
 
     .cart-items {
       @include centerize;
-      background: $header-background;
+      background: $layout_secondary_background_color;
       padding: 2px;
       border-radius: 10px;
       color: $text_body_color;

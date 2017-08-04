@@ -60,7 +60,7 @@
               "type": "color"
             },
             {
-              "handle": "layout_header_and_footer_background_color",
+              "handle": "layout_secondary_background_color",
               "type": "color"
             }
           ]

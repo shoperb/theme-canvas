@@ -4,7 +4,7 @@ button.button {
 }
 input,
 button {
-  border: 1px solid $border-color;
+  border: 1px solid $layout_border_color;
   font-size: 14px;
   padding: 4px 8px;
   border-radius: 4px;
@@ -20,28 +20,32 @@ button {
 
   &.primary {
     padding: 10px 15px;
-    background: #a0a8ac;
-    color: #ffffff;
+    background: $buttons_primary_button_background_color;
+    color: $buttons_primary_button_text_color;
 
     &:hover {
-      background: #C5C5C5;
+      // variable to function
+      //background: lighten($buttons_primary_button_background_color, 20%);
     }
     &:focus,
     &:active {
-      background: #798991;
+      // variable to function
+      //background: darken($buttons_primary_button_background_color, 20%);
     }
   }
   &.secondary {
     padding: 7px 12px;
-    background: #e7eff3;
-    color: #798991;
+    background: $buttons_secondary_button_background_color;
+    color: $buttons_secondary_button_text_color;
 
     &:hover {
-      background: #ffffff;
+      // variable to function
+      //background: lighten($buttons_secondary_button_background_color, 20%);
     }
     &:focus,
     &:active {
-      background: #e3ebef;
+      // variable to function
+      //background: darken($buttons_secondary_button_background_color, 20%);
     }
   }
 }
