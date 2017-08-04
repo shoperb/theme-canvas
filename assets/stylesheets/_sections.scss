@@ -75,6 +75,10 @@ section[data-type] {
     max-width: 75%;
     text-align: center;
   }
+  .general-title,
+  .general-text {
+    color: $image_overlay_color;
+  }
 }
 [data-type=collection] {
   a.product,
@@ -167,6 +171,11 @@ section[data-type] {
   .slideshow {
     text-align: center;
     height: 100%;
+
+  }
+  .general-title,
+  .general-text {
+    color: $image_overlay_color;
   }
   .slick-arrow {
     z-index: 9;

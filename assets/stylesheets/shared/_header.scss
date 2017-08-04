@@ -120,7 +120,7 @@ header#main-header {
   }
   ul {
     @extend .default-menu;
-    background: #ffffff;
+    background: $layout_secondary_background_color;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
 
     li {
