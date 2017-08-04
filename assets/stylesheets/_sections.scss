@@ -164,8 +164,21 @@ section[data-type] {
     h2.general-title {
       text-align: left;
     }
-    img {
+    .image {
+      border: $default_placeholder_border;
       width: 100%;
+      text-align: center;
+      padding: 50px 0;
+      box-sizing: border-box;
+    }
+    &.with-image {
+      .image {
+        padding: 0;
+        border: 0;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -305,8 +318,20 @@ section[data-type] {
   .product {
     padding: #{$default_padding}px;
   }
-  img {
-    width: 100%;
+  .grid__item.image {
+    text-align: center;
+    padding: 50px 0;
+    box-sizing: border-box;
+    border: $default_placeholder_border;
+
+    &.with-image {
+      padding: 0;
+      border: none;
+
+      img {
+        width: 100%;
+      }
+    }
   }
   .product-title {
     padding: 0;

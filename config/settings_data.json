@@ -145,6 +145,7 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
+        "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
         "button_link": "http://www.google.com",
         "section_width": "limited"
       }
@@ -356,7 +357,6 @@
         "column-4": {
           "type": "column",
           "settings": {
-            "image": "https://i.ytimg.com/vi/aToEBLYVsSo/maxresdefault.jpg",
             "title": "Title asd",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
           }
