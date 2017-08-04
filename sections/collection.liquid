@@ -32,7 +32,7 @@
         {% if product.image.size-480.url != blank %}
         {% assign product_image = product.image.size-480.url %}
         {% endif %}
-        <div class="image">
+        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}>
           <img src="{{product_image}}" alt="{{product.name}}">
         </div>
 

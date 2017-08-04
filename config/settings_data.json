@@ -131,7 +131,6 @@
         "image-3": {
           "type": "image",
           "settings": {
-            "image": "https://i.ytimg.com/vi/fNarH786HOk/maxresdefault.jpg",
             "image_alignment": "middle",
             "caption": "No caption! Haha, just kidding"
           }

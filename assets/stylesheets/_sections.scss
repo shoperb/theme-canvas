@@ -51,8 +51,6 @@ section[data-type] {
 }
 
 [data-type=image-with-text-overlay] {
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   text-align: center;
   display: table;
@@ -95,15 +93,22 @@ section[data-type] {
     padding-top: 100%;
     position: relative;
     overflow: hidden;
+    border: $default_placeholder_border;
+    box-sizing: border-box;
 
     img {
       @include centerize;
+    }
+    &.with-image {
+      border: none;
 
-      &.portrait {
-        width: 100%;
-      }
-      &.landscape {
-        height: 100%;
+      img {
+        &.portrait {
+          width: 100%;
+        }
+        &.landscape {
+          height: 100%;
+        }
       }
     }
   }
@@ -128,9 +133,14 @@ section[data-type] {
   text-align: center;
 
   .grid__item {
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    border: $default_placeholder_border;
 
+    &.with-background {
+      background-size: cover;
+      border: none;
+    }
     .caption-container {
       text-align: center;
       display: table;

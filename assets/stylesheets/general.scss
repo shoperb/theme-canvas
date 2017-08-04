@@ -68,7 +68,8 @@ h3.general-title {
 // special images w opacity
 .opacity-image-container {
   position: relative;
-  background: $image_overlay_background;
+  border: $default_placeholder_border;
+  box-sizing: border-box;
 
   .opacity-image {
     position: absolute;
@@ -78,7 +79,15 @@ h3.general-title {
     left: 0;
     pointer-events: none;
     background-position: center;
-    background-size: cover;
-    opacity: $image_overlay_opacity;
+    background-repeat: no-repeat;
+  }
+  &.with-background {
+    background: $image_overlay_background;
+    border: none;
+
+    .opacity-image {
+      background-size: cover;
+      opacity: $image_overlay_opacity;
+    }
   }
 }
