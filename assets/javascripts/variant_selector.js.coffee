@@ -48,6 +48,7 @@ class @VariantSelector
     selectList = document.createElement("ul");
     selectList.classList.add("variant-option-dropdown")
     selectList.classList.add(lname)
+    div.innerHTML = '<svg class=\"icon-arrow-down\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"/system/assets/images/icons.svg#icon-arrow-down\"></use></svg>'
     div.appendChild(div_s)
     div.appendChild(selectList)
     container.appendChild(div)
@@ -104,5 +105,8 @@ class @VariantSelector
 
   toggleVariantSelect: (el) ->
     el.onclick = (event) ->
-      event.stopPropagation();
+      event.stopPropagation()
+      for el in document.querySelectorAll('.variant-selector')
+        if el != event.target.closest(".variant-selector")
+          el.classList.remove('open')
       this.closest(".variant-selector").classList.toggle('open')

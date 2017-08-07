@@ -7,13 +7,25 @@ h2.product-title {
   opacity: 0;
 }
 [data-variant-container] {
+  margin: -#{$default_padding}px;
+
   .variant-selector {
-    width: 300px;
+    float: left;
+    min-width: 150px;
     position: relative;
+    margin: #{$default_padding}px;
 
     .selected {
       @extend .input-field-extender;
       cursor: pointer;
+    }
+    svg {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
     }
     ul {
       @extend .default-list;
@@ -43,6 +55,9 @@ h2.product-title {
           border-top: 1px solid $layout_border_color;
         }
         &:hover {
+          // variable to function
+          //background: darken($form_background, 5%);
+          // remove this once upper one works
           background: darken(#ffffff, 5%);
         }
       }
@@ -50,6 +65,9 @@ h2.product-title {
     &.open {
       .selected {
         border-radius: 4px 4px 0 0;
+      }
+      svg {
+        @include transform(rotate(180deg));
       }
       ul {
         display: block;
