@@ -92,10 +92,13 @@ class @VariantSelector
       input.addEventListener 'change', (e)=>
         @selectNewVariantOnOptionChange(e.target)
         @changeSelectedVariantOption(e.target)
+        @markMissingOptions(e.target)
   # what to do when you have changed option-
   # change option value
   selectNewVariantOnOptionChange: (target)->
     form     = target.closest("form")
+
+    # lookup for selected option
     selector = ""
     for inp in form.querySelectorAll("[data-attribute-radio]:checked")
       selector+="[data-#{inp.name}='#{inp.value}']"
@@ -107,6 +110,15 @@ class @VariantSelector
   changeSelectedVariantOption: (target)->
     if node = target.closest(".variant-selector").querySelector(".selected")
       node.textContent = target.value
+
+  markMissingOptions: (target) ->
+    form     = target.closest("form")
+
+    selector = "[data-#{target.name}='#{target.value}']"
+    for node in form.querySelectorAll(selector)
+      console.log node
+      console.log node.json
+      node.classList.add('marked')
 
   toggleVariantSelect: (el) ->
     el.onclick = (event) ->
