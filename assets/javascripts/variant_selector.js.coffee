@@ -18,7 +18,11 @@ class @VariantSelector
       json = varSel.querySelector("option[value='#{varSel.value}']").json
       for attr in json.attributes
         for radio in container.querySelectorAll("input[name='attribute-#{attr.name.toLowerCase()}']")
-          radio.checked = (radio.value == @getName(attr))
+          if radio.value == @getName(attr)
+            radio.checked = true
+            @changeSelectedVariantOption(radio)
+          else
+            radio.checked = false
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
@@ -37,10 +41,17 @@ class @VariantSelector
 
   generateOptionSelect: (lname, arr, container)->
     # add selector data-behavior-box-select
+    div   = document.createElement("div")
+    div_s = document.createElement("div")
+    div.classList.add("variant-selector")
+    div_s.classList.add("selected")
     selectList = document.createElement("ul");
     selectList.classList.add("variant-option-dropdown")
     selectList.classList.add(lname)
-    container.appendChild(selectList)
+    div.appendChild(div_s)
+    div.appendChild(selectList)
+    container.appendChild(div)
+    @toggleVariantSelect(div_s)
 
     values = []
     # missing in matrix disabled by config
@@ -74,6 +85,7 @@ class @VariantSelector
     for input in list.querySelectorAll('input')
       input.addEventListener 'change', (e)=>
         @selectNewVariantOnOptionChange(e.target)
+        @changeSelectedVariantOption(e.target)
   # what to do when you have changed option-
   # change option value
   selectNewVariantOnOptionChange: (target)->
@@ -85,3 +97,12 @@ class @VariantSelector
       form.querySelector(@variantSelector).value = opt.value
     else
       alert "Didn't find option"
+
+  changeSelectedVariantOption: (target)->
+    if node = target.closest(".variant-selector").querySelector(".selected")
+      node.textContent = target.value
+
+  toggleVariantSelect: (el) ->
+    el.onclick = (event) ->
+      event.stopPropagation();
+      this.closest(".variant-selector").classList.toggle('open')

@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log('asd')
-
   $('.slideshow').each(function() {
     var autoPlay = $(this).data('autoplay'),
         animationSpeed = $(this).data('animation-speed');

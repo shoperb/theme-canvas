@@ -1,3 +1,59 @@
 h2.product-title {
   margin: 0;
 }
+
+[data-variant-select] {
+  position: absolute;
+  opacity: 0;
+}
+[data-variant-container] {
+  .variant-selector {
+    width: 300px;
+    position: relative;
+
+    .selected {
+      @extend .input-field-extender;
+      cursor: pointer;
+    }
+    ul {
+      @extend .default-list;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 27px;
+      left: 0;
+      width: 100%;
+      @extend .input-field-extender;
+      border-radius: 0 0 4px 4px;
+      padding: 0;
+
+      li {
+        label {
+          display: block;
+          position: relative;
+          padding: 4px 8px;
+          cursor: pointer;
+
+          input {
+            opacity: 0;
+            position: absolute;
+          }
+        }
+        + li {
+          border-top: 1px solid $layout_border_color;
+        }
+        &:hover {
+          background: darken(#ffffff, 5%);
+        }
+      }
+    }
+    &.open {
+      .selected {
+        border-radius: 4px 4px 0 0;
+      }
+      ul {
+        display: block;
+      }
+    }
+  }
+}

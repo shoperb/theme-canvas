@@ -10,3 +10,7 @@ document.addEventListener("DOMContentLoaded", ->
   new VariantSelector()
   new Cart()
   )
+window.addEventListener("click", (event)->
+  for el in document.querySelectorAll('.variant-selector')
+    el.classList.remove('open')
+  )

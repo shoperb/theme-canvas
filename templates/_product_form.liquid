@@ -12,13 +12,13 @@
 
       <div class="row" data-variant-container></div>
       {% else %}
-      <input type="hidden" name="variant" value="{{default_variant.id}}"/>
+      <input type="hidden" name="variant" value="{{default_variant.id}}">
       {% endif %}
     </div>
 
     <div class="quanity-cart-row clearfix">
       <div class="quantity">
-        <label class="custom-select-title">Qty:</label>
+        <label class="custom-select-title">{{'product.quantity' | t}}</label>
         <div class="number-input">
           <input id="amount" name="amount" min="1" value="1">
           <div class="icon-arrow-up-form" data-quantity="increase"></div>
@@ -30,7 +30,7 @@
         {% if product.available? %}
         <button class="button primary" type="submit">{{'product.add_to_cart' | t}}</button>
         {% else %}
-        <button class="button primary" disabled="disabled" type="submit">{{'product.unavailable_short' | t}}</button>
+        <div class="disabled-button primary">{{'product.unavailable_short' | t}}</div>
         {% endif %}
       </div>
     </div>
