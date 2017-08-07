@@ -54,6 +54,7 @@ h2.product-title {
           padding: 4px 8px;
           cursor: pointer;
 
+          // general note - set marked style either as disabled option or hide it at all to remove missing variants at all
           &.marked {
             pointer-events: none;
             background: rgba(230, 230, 230, 6);
