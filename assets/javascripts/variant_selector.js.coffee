@@ -3,9 +3,11 @@ class @VariantSelector
   constructor: ->
     @lang = document.querySelector("meta[http-equiv='content-language']")?.content
     @variantSelector = "[data-variant-select]"
+    @counter= new Date().getTime()
 
     # collecting data from options
     for varSel in document.querySelectorAll(@variantSelector)
+      @counter += 1
       container = varSel.closest('form').querySelector('[data-variant-container]')
 
       @variantOptions = {}
@@ -66,12 +68,12 @@ class @VariantSelector
       continue if values.indexOf(name) > -1
 
       # selectList.appendChild(li)
-      lis += "<li orig-value='#{obj.value}'><label for='attribute-#{name}'><input type='radio' id='attribute-#{name}' data-attribute-radio name='attribute-#{lname}' value='#{name}'><span>#{name}</span></label></li>"
+      lis += "<li orig-value='#{obj.value}'><label for='#{@counter}-attribute-#{name}'><input type='radio' id='#{@counter}-attribute-#{name}' data-attribute-radio name='attribute-#{lname}' value='#{name}'><span>#{name}</span></label></li>"
       values.push name
     selectList.innerHTML = lis
-    @generateBoxOnSelect(selectList,lname)
-    @generateColorOnSelect(selectList,lname)
-    @addEventsOnSelect(selectList,lname)
+    @generateBoxOnSelect(selectList, lname)
+    @generateColorOnSelect(selectList, lname)
+    @addEventsOnSelect(selectList, lname)
 
   generateBoxOnSelect: (list, name)->
     return if shoperb_dropdown_to_box.indexOf(name) == -1

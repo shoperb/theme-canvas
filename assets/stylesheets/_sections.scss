@@ -474,9 +474,19 @@ section[data-type] {
         }
       }
       &.custom_image {
-        img {
-          width: 100%;
-          float: left;
+        text-align: center;
+        border: $default_placeholder_border;
+        padding: 50px 0;
+        box-sizing: border-box;
+
+        &.with-image {
+          border: none;
+          padding: 0;
+
+          img {
+            width: 100%;
+            float: left;
+          }
         }
       }
       &.custom_video {
@@ -499,8 +509,20 @@ section[data-type] {
         }
       }
       &.custom_product {
-        img {
-          width: 100%;
+        .image {
+          text-align: center;
+          border: $default_placeholder_border;
+          padding: 50px 0;
+          box-sizing: border-box;
+
+          &.with-image {
+            border: none;
+            padding: 0;
+
+            img {
+              width: 100%;
+            }
+          }
         }
       }
       &.custom_product {

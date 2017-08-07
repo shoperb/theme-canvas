@@ -52,7 +52,7 @@
 
 
       {% when 'custom_image' %}
-    <div class="custom-section {{block.type}}">
+    <div class="custom-section {{block.type}}{% if block.settings.image != blank %} with-image{% endif %}">
       {% if block.settings.image != blank %}
       <img src="{{block.settings.image}}">
       {% else %}
@@ -69,11 +69,13 @@
       <meta itemprop="url" content="{{product.url}}">
       <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-      {% if product.image.size-480.url != blank %}
-      <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
-      {% else %}
-      <img src="{{'images/placeholder.svg' | asset_url}}">
-      {% endif %}
+      <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
+        {% if product.image.size-480.url != blank %}
+        <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
+        {% else %}
+        <img src="{{'images/placeholder.svg' | asset_url}}">
+        {% endif %}
+      </div>
 
       <h2 class="general-title">{{product.name}} name </h2>
 
@@ -89,6 +91,9 @@
               <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
             </span>
             {% endif %}
+
+            {% include 'product_form' %}
+            {% include 'product_form' %}
 
           </div>
         </div>
