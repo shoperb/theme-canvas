@@ -1,8 +1,9 @@
-// DO NOT REMOVE, if needed, leave array blank []
-var activate_box_selector = ['size'];
-var color_boxes = [];
+var cart_confirmation_checkbox = false;
 
-var colors = {
+var shoperb_dropdown_to_box = ['suurus', 'size', 'color', 'colour', 'värv'];
+var shoperb_color_boxes = ['color', 'colour', 'värv'];
+
+var shoperb_colors = {
   'blu': '#95FFE4',
   'lightblue': '#95FFE4',
 

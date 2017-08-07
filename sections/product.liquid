@@ -71,53 +71,7 @@
         </div>
       </div>
 
-      <div data-position="cart-form">
-        <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="variant" value="{{default_variant.id}}"/>
-
-          <div class="variants">
-            {% if product.variants.many? %}
-              <select name="variant" id="variant" data-behaviour="select" data-variant-select>
-                {% for variant in product.variants %}
-                  {% if variant.available? %}
-                  <option data-variant='{{variant.json}}' value="{{variant.id}}">{{variant.name}}</option>
-                  {% endif %}
-                {% endfor %}
-              </select>
-
-              <script type="text/template" id="variant-select-template">
-                <div>
-                  <label class="custom-select-title">
-                    {{'product.select' | t}} <%= name %>
-                  </label>
-                  <select name="<%= name %>" id="variant-<%= name %>" data-behaviour="select">
-                    <%= options %>
-                  </select>
-                </div>
-              </script>
-
-              <div class="row" data-variant-container></div>
-            {% endif %}
-          </div>
-
-          <div class="quanity-cart-row clearfix">
-            <div class="quantity">
-              <label for="amount">{{'product.quantity' | t}}</label>
-              <input id="amount" type="number" name="amount" min="1" value="1">
-            </div>
-
-            {% if product.available? %}
-            <div class="add-to-cart">
-              <input type="submit" name="add" id="add" value="{{'product.add_to_cart' | t}}" class="purchase button">
-            </div>
-            {% else %}
-            <div class="add-to-cart">
-              <input type="button" name="add" id="add" value="{{'product.unavailable' | t}}" class="purchase button" disabled>
-            </div>
-            {% endif %}
-          </div>
-        </form>
-      </div>
+      {% include 'product_form' %}
 
       {% if product.description != blank %}
       <div class="product-description">{{product.description}}</div>

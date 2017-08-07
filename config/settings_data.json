@@ -268,7 +268,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "legging-multi",
+        "product": "variant-test",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,

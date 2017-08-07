@@ -1,7 +1,7 @@
 {% assign default_variant = product.variants.first %}
 
 <div data-position="cart-form">
-  <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}" method="post" enctype="multipart/form-data">
+  <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>
     <div class="variants clearfix">
       {% if product.variants.many? %}
       <select name="variant" id="variant" data-behaviour="select" data-variant-select>
@@ -9,15 +9,6 @@
         <option data-variant='{{variant.json}}' value="{{variant.id}}">{{variant.name}}</option>
         {% endfor %}
       </select>
-
-      <script type="text/template" id="variant-select-template">
-        <div class="field custom-select clearfix">
-          <label class="custom-select-title"><%= name %>:</label>
-          <select name="<%= name %>" id="variant-<%= lower_name %>" data-behaviour="select">
-            <%= options %>
-          </select>
-        </div>
-      </script>
 
       <div class="row" data-variant-container></div>
       {% else %}
