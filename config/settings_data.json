@@ -268,7 +268,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "variant-test",
+        "product": "distributor-cap",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,

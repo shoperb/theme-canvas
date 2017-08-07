@@ -41,18 +41,22 @@ class @VariantSelector
 
   generateOptionSelect: (lname, arr, container)->
     # add selector data-behavior-box-select
-    div   = document.createElement("div")
-    div_s = document.createElement("div")
+    console.log container.dataset.icon
+    div = document.createElement("div")
+    div_selector = document.createElement("div")
+    div_selected = document.createElement("div")
     div.classList.add("variant-selector")
-    div_s.classList.add("selected")
+    div_selector.classList.add("variant-select")
+    div_selected.classList.add("selected")
     selectList = document.createElement("ul");
-    selectList.classList.add("variant-option-dropdown")
-    selectList.classList.add(lname)
-    div.innerHTML = '<svg class=\"icon-arrow-down\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"/system/assets/images/icons.svg#icon-arrow-down\"></use></svg>'
-    div.appendChild(div_s)
-    div.appendChild(selectList)
+    selectList.classList.add("variant-option-dropdown", 'variant-class-'+lname)
+    div.innerHTML = '<label class="variant-title">' + lname + '</label>'
+    div_selector.innerHTML = '<svg class=\"icon-arrow-down\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"' + container.dataset.icon + '#icon-arrow-down\"></use></svg>'
+    div_selector.appendChild(div_selected)
+    div_selector.appendChild(selectList)
+    div.appendChild(div_selector)
     container.appendChild(div)
-    @toggleVariantSelect(div_s)
+    @toggleVariantSelect(div_selected)
 
     values = []
     # missing in matrix disabled by config
