@@ -42,6 +42,15 @@ header#main-header {
     svg {
       pointer-events: none;
     }
+    &:hover {
+      svg,
+      a {
+        // variable to function
+        //color: lighten($text_link_color, 20%);;
+        // remove this once upper one works
+        color: lighten(#5092ce, 20%);
+      }
+    }
   }
   .cart {
     position: relative;
@@ -135,6 +144,12 @@ header#main-header {
   &:hover {
     .language-list {
       display: block;
+    }
+    .current-locale {
+      // variable to function
+      //color: lighten($text_link_color, 20%);;
+      // remove this once upper one works
+      color: lighten(#5092ce, 20%);
     }
   }
 }

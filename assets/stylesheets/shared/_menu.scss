@@ -6,7 +6,15 @@
       // variable to function
       //background: darken($layout_secondary_background_color, 5%);
       // remove this once upper one works
-      background: darken(#ffffff, 5%);
+      background: darken(#ffffff, 10%);
+
+      > a,
+      > span {
+        // variable to function
+        //color: lighten($text_link_color, 20%);;
+        // remove this once upper one works
+        color: lighten(#5092ce, 20%);
+      }
     }
   }
 }
@@ -68,6 +76,9 @@ nav.main-menu {
   }
   > ul {
     > li {
+      &:hover {
+        background: none;
+      }
 
       > ul {
         left: 50%;

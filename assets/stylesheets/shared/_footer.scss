@@ -8,7 +8,7 @@ footer.main-footer {
   }
 
   ul {
-    @extend .default-list;
+    @extend .default-menu;
     text-align: center;
 
     .icon-arrow-next {
@@ -17,6 +17,9 @@ footer.main-footer {
     li {
       position: relative;
 
+      &:hover {
+        background: none;
+      }
       a,
       span {
         display: block;
