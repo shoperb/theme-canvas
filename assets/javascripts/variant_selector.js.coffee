@@ -41,7 +41,6 @@ class @VariantSelector
 
   generateOptionSelect: (lname, arr, container)->
     # add selector data-behavior-box-select
-    console.log container.dataset.icon
     div = document.createElement("div")
     div_selector = document.createElement("div")
     div_selected = document.createElement("div")
