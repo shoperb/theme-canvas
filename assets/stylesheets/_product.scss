@@ -7,22 +7,22 @@ h2.product-title {
   opacity: 0;
 }
 [data-variant-container] {
-  margin: -#{$default_padding}px;
+  margin: 0 -#{$default_padding}px;
 
-  .variant-select {
-    position: relative;
-  }
-  .variant-title {
-    text-transform: capitalize;
-    padding-bottom: 5px;
-    display: block;
-  }
   .variant-selector {
     float: left;
     min-width: 150px;
     position: relative;
     margin: #{$default_padding}px;
 
+    .variant-title {
+      text-transform: capitalize;
+      padding-bottom: 5px;
+      display: block;
+    }
+    .variant-select {
+      position: relative;
+    }
     .selected {
       @extend .input-field-extender;
       cursor: pointer;
@@ -79,6 +79,61 @@ h2.product-title {
       }
       ul {
         display: block;
+      }
+    }
+    &.dropdown-box {
+      min-width: 0;
+      float: none;
+
+      .selected,
+      .icon-arrow-down {
+        display: none;
+      }
+      ul {
+        display: block;
+        position: relative;
+        top: 0;
+        border: none;
+        margin: 0 -#{$default_padding / 2}px;
+        @extend .clearfix;
+
+        li {
+          float: left;
+          margin: #{$default_padding / 2}px;
+          border: none;
+          border-radius: 6px;
+
+          &:hover {
+            background: none;
+          }
+          label {
+            padding: 0;
+          }
+          span {
+            display: block;
+            width: 25px;
+            height: 25px;
+            font-size: 0;
+            border: 2px solid $layout_border_color;
+            border-radius: 4px;
+            position: relative;
+
+            &:hover {
+              box-shadow: 3px 3px 5px $layout_border_color;
+              // variable to function
+              //border-color: darken($layout_border_color, 30%);
+              // remove this once upper one works
+              border-color: darken(#cccccc, 30%);
+            }
+          }
+          input:checked + span {
+            box-shadow: 3px 3px 5px $layout_border_color;
+            // variable to function
+            //border-color: darken($layout_border_color, 30%);
+            // remove this once upper one works
+            border-color: darken(#cccccc, 30%);
+          }
+        }
       }
     }
   }

@@ -75,7 +75,7 @@ class @VariantSelector
 
   generateBoxOnSelect: (list, name)->
     return if shoperb_dropdown_to_box.indexOf(name) == -1
-    list.classList.add("dropdown-box")
+    list.closest('.variant-selector').classList.add("dropdown-box")
 
   generateColorOnSelect: (list, name)->
     return if shoperb_color_boxes.indexOf(name) == -1
