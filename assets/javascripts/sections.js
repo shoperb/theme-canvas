@@ -12,6 +12,15 @@ $(document).ready(function() {
       lazyLoad: 'ondemand'
     });
   });
+  $('.collection-slideshow').each(function() {
+    $(this).slick({
+      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-back"></use></svg></div>',
+      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-next"></use></svg></div>',
+      slidesToShow: $(this).data('show-count'),
+      slidesToScroll: $(this).data('show-count'),
+      lazyLoad: 'ondemand'
+      });
+  });
   $('.testimonial-slider').each(function() {
     $(this).slick({
       arrows: false,

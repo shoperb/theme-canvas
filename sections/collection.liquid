@@ -1,5 +1,11 @@
 {% assign collection = collections[section.settings.collection] %}
 {% assign limit = section.settings.rows | times: section.settings.per_row %}
+{% if section.settings.show_as_slider == true %}
+{% assign limit = collection.products.size %}
+{% if limit < section.settings.per_row or limit == blank %}
+{% assign limit = 3 %}
+{% endif %}
+{% endif %}
 
 {% case section.settings.per_row %}
   {% when 2 %}
@@ -12,15 +18,16 @@
     {% assign grid_class = 'desk--one-fifth' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
+<section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} show-slideshow{% endif %}>
 
   {% if section.settings.title != blank %}
   <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
   {% endif %}
 
-  <div class="grid">
+  <div class="grid{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
+    asd
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       {% assign variant = product.variants.first %}
 

@@ -85,6 +85,11 @@
       "type": "toggle",
       "handle": "show_button",
       "default": false
+    },
+    {
+      "type": "toggle",
+      "handle": "show_as_slider",
+      "default": true
     }
   ]
 }

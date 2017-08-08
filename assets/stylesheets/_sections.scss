@@ -125,6 +125,31 @@ section[data-type] {
   }
   .product-vendor {}
   .product-price {}
+  .collection-slideshow {
+    position: relative;
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      &.slick-prev {
+        left: -35px;
+      }
+      &.slick-next {
+        right: -35px;
+      }
+    }
+  }
+  &.show-slideshow {
+    @include breakpoint(1255) {
+      width: calc(100% - 50px);
+    }
+  }
 }
 [data-type=blog-posts] {
   text-align: center;

@@ -91,10 +91,11 @@
         "title": "Featured products",
         "per_row": 3,
         "rows": 2,
-        "collection": "spring-summer-collection-2017",
+        "collection": "testname",
         "show_vendor": true,
         "show_button": true,
-        "section_width": "limited"
+        "section_width": "limited",
+        "show_as_slider": true
       }
     },
     "blog-posts": {
