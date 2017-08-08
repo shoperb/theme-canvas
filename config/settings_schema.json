@@ -114,7 +114,9 @@
               "type": "select",
               "options": [
                 {"handle": "arial", "value": "arial"},
+                {"handle": "josefin_sans", "value": "Josefin Sans"},
                 {"handle": "lato", "value": "Lato"},
+                {"handle": "maven_pro", "value": "Maven Pro"},
                 {"handle": "russo_one", "value": "Russo One"},
                 {"handle": "tahoma", "value": "Tahoma"},
                 {"handle": "verdana", "value": "Verdana"}
@@ -154,8 +156,6 @@
               "handle": "headings_font_size",
               "type": "select",
               "options": [
-                {"handle": "font_size.12", "value": "12px"},
-                {"handle": "font_size.14", "value": "14px"},
                 {"handle": "font_size.16", "value": "16px"},
                 {"handle": "font_size.18", "value": "18px"},
                 {"handle": "font_size.20", "value": "20px"},
@@ -163,7 +163,12 @@
                 {"handle": "font_size.24", "value": "24px"},
                 {"handle": "font_size.26", "value": "26px"},
                 {"handle": "font_size.28", "value": "28px"},
-                {"handle": "font_size.30", "value": "30px"}
+                {"handle": "font_size.30", "value": "30px"},
+                {"handle": "font_size.30", "value": "32px"},
+                {"handle": "font_size.30", "value": "34px"},
+                {"handle": "font_size.30", "value": "36px"},
+                {"handle": "font_size.30", "value": "38px"},
+                {"handle": "font_size.30", "value": "40px"}
               ]
             }
           ]
