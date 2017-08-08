@@ -189,9 +189,37 @@
             "heading": "Image slide 333",
             "subheading": "Tell your brand's story through video and images 333"
           }
+        },
+        "slide-4": {
+          "type": "video_slide",
+          "settings": {
+            "type": "video",
+            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
+            "heading": "Image slide 22",
+            "subheading": "Tell your brand's story through video and images 22"
+          }
+        },
+        "slide-5": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333"
+          }
+        },
+        "slide-6": {
+          "type": "video_slide",
+          "settings": {
+            "type": "video",
+            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
+            "heading": "Image slide 22",
+            "subheading": "Tell your brand's story through video and images 22"
+          }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3"]
+      "block_order": ["slide-1", "slide-2", "slide-3", "slide-4", "slide-5", "slide-6"]
     },
     "slideshow2": {
       "type": "slideshow",

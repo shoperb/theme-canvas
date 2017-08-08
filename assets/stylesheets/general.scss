@@ -90,4 +90,7 @@ h3.general-title {
       opacity: $image_overlay_opacity;
     }
   }
+  &.with-video {
+    border: none;
+  }
 }
