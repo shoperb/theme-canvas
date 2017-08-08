@@ -42,9 +42,25 @@ header#main-header {
     svg {
       pointer-events: none;
     }
+  }
+  .search,
+  .account,
+  .cart {
     &:hover {
       svg,
       a {
+        // variable to function
+        //color: lighten($text_link_color, 20%);;
+        // remove this once upper one works
+        color: lighten(#5092ce, 20%);
+      }
+    }
+  }
+  .search-container,
+  .account-container {
+    [data-toggle],
+    a {
+      &:hover {
         // variable to function
         //color: lighten($text_link_color, 20%);;
         // remove this once upper one works
@@ -100,12 +116,21 @@ header#main-header {
         line-height: 1;
         border-left: none;
         border-radius: 0 4px 4px 0;
+        cursor: pointer;
 
         .icon-search {
           width: 14px;
           height: 14px;
           position: relative;
           top: 2px;
+        }
+        &:hover {
+          svg {
+            // variable to function
+            //color: lighten($text_link_color, 20%);;
+            // remove this once upper one works
+            color: lighten(#5092ce, 20%);
+          }
         }
       }
     }
