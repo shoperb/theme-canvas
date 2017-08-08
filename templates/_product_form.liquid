@@ -1,5 +1,15 @@
 {% assign default_variant = product.variants.first %}
 
+<div class="product-pricing">
+  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
+
+  {% if default_variant.discount? %}
+  <span class="compare-price">
+    <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
+  </span>
+  {% endif %}
+</div>
+
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>
     <div class="variants clearfix">

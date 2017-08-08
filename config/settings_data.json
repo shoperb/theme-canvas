@@ -253,10 +253,10 @@
         "slide-2": {
           "type": "video_slide",
           "settings": {
-            "type": "video",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "heading": "Image slide 22",
-            "subheading": "Tell your brand's story through video and images 22",
+            "type": "image",
+            "image": "https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg",
+            "image_alignment": "bottom-right",
+            "heading": "Image slide",
             "text_style": "light"
           }
         },
@@ -270,9 +270,31 @@
             "subheading": "Tell your brand's story through video and images 333",
             "text_style": "light"
           }
+        },
+        "slide-4": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://www.planwallpaper.com/static/images/wallpapers-hd-8000-8331-hd-wallpapers.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_style": "light"
+          }
+        },
+        "slide-5": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://www.intrawallpaper.com/static/images/HD-Wallpapers-C76.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_style": "light"
+          }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3"]
+      "block_order": ["slide-1", "slide-2", "slide-3", "slide-4", "slide-5"]
     },
     "collection-list": {
       "type": "collection_list",
@@ -545,7 +567,7 @@
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "variant-test",
+            "product": "uhine-variant",
             "vertical_alignment": "top"
           }
         },

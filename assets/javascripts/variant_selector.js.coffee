@@ -116,8 +116,8 @@ class @VariantSelector
 
     selector = "[data-#{target.name}='#{target.value}']"
     for node in form.querySelectorAll(selector)
-      console.log node
-      console.log node.json
+#      console.log node
+#      console.log node.json
       node.classList.add('marked')
 
   toggleVariantSelect: (el) ->

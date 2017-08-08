@@ -35,7 +35,9 @@
       <h2 class="product-title general-title">{{product.name}}</h2>
 
       {% if default_variant.sku %}
-      <div class="sku" data-variant-sku-container>{{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span></div>
+      <div class="sku" data-variant-sku-container>
+        {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
+      </div>
       {% endif %}
 
       {% if product.vendor and section.settings.show_vendor %}
@@ -46,19 +48,12 @@
         <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
 
-        <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
+        {% include 'product_form' %}
 
-        {% if default_variant.discount? %}
-        <span class="compare-price">
-          <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
-        </span>
-        {% endif %}
       </div>
 
-      {% include 'product_form' %}
-
       {% if product.description != blank %}
-      <div class="product-description">{{product.description}}</div>
+      <div class="product-description" data-product-description>{{product.description}}</div>
       {% endif %}
 
       {% if section.settings.show_social_sharing == true %}
