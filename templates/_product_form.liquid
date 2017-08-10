@@ -1,13 +1,15 @@
 {% assign default_variant = product.variants.first %}
 
+<div class="sku{% if default_variant.sku %} visible{% endif %}" data-variant-sku-container>
+  {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
+</div>
+
 <div class="product-pricing">
   <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
 
-  {% if default_variant.discount? %}
-  <span class="compare-price">
-    <span class="money" data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
+  <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
+    <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
   </span>
-  {% endif %}
 </div>
 
 <div data-position="cart-form">
@@ -16,7 +18,7 @@
       {% if product.variants.many? %}
       <select name="variant" id="variant" data-behaviour="select" data-variant-select>
         {% for variant in product.variants %}
-        <option data-variant='{{variant.json}}' value="{{variant.id}}">{{variant.name}}</option>
+        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}">{{variant.name}}</option>
         {% endfor %}
       </select>
 

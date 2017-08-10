@@ -1,5 +1,5 @@
 {% assign product = products[section.settings.product] %}
-{% assign default_variant = featured_product.variants.first %}
+{% assign default_variant = product.variants.first %}
 
 {% case section.settings.image_size %}
   {% when 'large' %}
@@ -30,21 +30,15 @@
       </div>
     </div><!--
 
-    --><div class="grid__item one-whole lap--one-half {{text_class}} product">
+    --><div class="grid__item one-whole lap--one-half {{text_class}} product-container">
       {% if product %}
       <h2 class="product-title general-title">{{product.name}}</h2>
-
-      {% if default_variant.sku %}
-      <div class="sku" data-variant-sku-container>
-        {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
-      </div>
-      {% endif %}
 
       {% if product.vendor and section.settings.show_vendor %}
       <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
       {% endif %}
 
-      <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
         <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
 

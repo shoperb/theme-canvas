@@ -5,6 +5,7 @@ h2.product-title {
 [data-variant-select] {
   position: absolute;
   opacity: 0;
+  pointer-events: none;
 }
 [data-variant-container] {
   margin: 0 -#{$default_padding}px;
@@ -149,18 +150,32 @@ h2.product-title {
     }
   }
 }
-.product-pricing {
-  .actual-price {
-    &.discount {
-      font-weight: bold;
-      color: $text_sale_text_color;
+.product-container {
+  .sku {
+    display: none;
+
+    &.visible {
+      display: block;
     }
   }
-  .compare-price {
-    // variable to function
-    //color: lighten($text_body_color, 30%);
-    // remove this once upper one works
-    color: lighten(#666666, 30%);
-    text-decoration: line-through;
+  .product-pricing {
+    .actual-price {
+      &.discount {
+        font-weight: bold;
+        color: $text_sale_text_color;
+      }
+    }
+    .compare-price {
+      // variable to function
+      //color: lighten($text_body_color, 30%);
+      // remove this once upper one works
+      color: lighten(#666666, 30%);
+      text-decoration: line-through;
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
   }
 }

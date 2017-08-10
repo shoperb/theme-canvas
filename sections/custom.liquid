@@ -63,9 +63,9 @@
 
       {% when 'custom_product' %}
     {% assign product = products[block.settings.product] %}
-    {% assign default_variant  = product.variants.first %}
+    {% assign default_variant = product.variants.first %}
 
-    <div class="custom-section {{block.type}}" itemtype="http://schema.org/Product">
+    <div class="custom-section product-container {{block.type}}" itemtype="http://schema.org/Product">
       <meta itemprop="url" content="{{product.url}}">
       <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
@@ -79,7 +79,7 @@
 
       <h2 class="general-title">{{product.name}}</h2>
 
-      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
         <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
         <div>

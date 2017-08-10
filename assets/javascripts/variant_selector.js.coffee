@@ -61,7 +61,6 @@ class @VariantSelector
 
     values = []
     # missing in matrix disabled by config
-    # select data-sku
     lis = ""
     for obj in arr
       name   = @getName(obj)
@@ -104,6 +103,7 @@ class @VariantSelector
       selector+="[data-#{inp.name}='#{inp.value}']"
     if opt = form.querySelector(selector)
       form.querySelector(@variantSelector).value = opt.value
+      @switchVariantData(target, opt)
     else
       alert "Didn't find option"
 
@@ -112,7 +112,7 @@ class @VariantSelector
       node.textContent = target.value
 
   markMissingOptions: (target) ->
-    form     = target.closest("form")
+    form = target.closest("form")
 
     selector = "[data-#{target.name}='#{target.value}']"
     for node in form.querySelectorAll(selector)
@@ -127,3 +127,19 @@ class @VariantSelector
         if el != event.target.closest(".variant-selector")
           el.classList.remove('open')
       this.closest(".variant-selector").classList.toggle('open')
+
+  switchVariantData: (el, opt) ->
+    container = el.closest('[data-product-form]').parentNode
+    container.querySelector('[data-variant-sku]').innerHTML = opt.json.sku if container.querySelector('[data-variant-sku-container]')
+    if opt.json.sku
+      container.querySelector('[data-variant-sku-container]').classList.add('visible')
+    else
+      container.querySelector('[data-variant-sku-container]').classList.remove('visible')
+
+    container.querySelector('[data-current-price]').innerHTML = opt.dataset.price
+    if opt.dataset.discount_price
+      container.querySelector('[data-price]').innerHTML = opt.dataset.price
+      container.querySelector('[data-current-price]').innerHTML = opt.dataset.discount_price
+      container.querySelector('.compare-price').classList.add('visible')
+    else
+      container.querySelector('.compare-price').classList.remove('visible')
