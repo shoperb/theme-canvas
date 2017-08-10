@@ -153,6 +153,7 @@ h2.product-title {
   .actual-price {
     &.discount {
       font-weight: bold;
+      color: $text_sale_text_color;
     }
   }
   .compare-price {
