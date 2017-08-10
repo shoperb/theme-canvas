@@ -21,7 +21,7 @@
 <section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} show-slideshow{% endif %}>
 
   {% if section.settings.title != blank %}
-  <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
+  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
   {% endif %}
 
   <div class="grid{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
@@ -43,7 +43,7 @@
           <img src="{{product_image}}" alt="{{product.name}}">
         </div>
 
-        <h3 class="product-title general-title" itemprop="name">{{product.name}}</h3>
+        <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 
         {% if product.vendor and section.settings.show_vendor %}
         <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
@@ -75,7 +75,7 @@
           <img src="{{'images/placeholder.svg' | asset_url}}">
         </div>
 
-        <h3 class="product-title general-title">{{'section.default.product_name' | t}}</h3>
+        <h2 class="product-title general-title">{{'section.default.product_name' | t}}</h2>
 
         <div class="product-price">
           <span class="money">{{'14.95' | money}}</span>

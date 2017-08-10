@@ -7,7 +7,7 @@
 
 <section data-section-id="{{section.id}}" data-type="text-columns-with-images" class="text-alignment-{{section.settings.text_alignment}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
   {% if section.settings.title != blank %}
-  <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
+  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
   {% endif %}
 
   {% if section.blocks.size > 0 %}
@@ -20,7 +20,7 @@
         {% endif %}
 
         {% if block.settings.title != blank %}
-        <h3 class="general-title" data-theme-editor-block-setting='title' >{{block.settings.title}}</h3>
+        <h2 class="general-title" data-theme-editor-block-setting='title' >{{block.settings.title}}</h2>
         {% endif %}
 
         {% if block.settings.text != blank %}

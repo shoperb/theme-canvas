@@ -13,7 +13,7 @@
 
 <section data-section-id="{{section.id}}" data-type="collection-list"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   {% if section.settings.title != blank %}
-  <h2 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h2>
+  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
   {% endif %}
 
   <div class="grid">
@@ -23,7 +23,7 @@
 
       <a class="collection opacity-image-container" href="{{collection.url}}">
         <div class="opacity-image" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
-        <h3 class="general-title">{{collection.name}}</h3>
+        <h2 class="general-title">{{collection.name}}</h2>
       </a>
     </div>{% if forloop.last != true %}<!--{% endif %}{% if diff > 0 %}<!--{% endif %}
     {% endfor %}
@@ -33,7 +33,7 @@
     {% if forloop.first == true and diff > 0 %}-->{% endif %}{% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
 
       <div class="collection" style="background-image: url({{'images/placeholder.svg' | asset_url}})">
-        <h3 class="general-title">{{'section.default.collection.name' | t}}</h3>
+        <h2 class="general-title">{{'section.default.collection.name' | t}}</h2>
       </div>
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}

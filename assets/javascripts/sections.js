@@ -23,7 +23,8 @@ $(document).ready(function() {
   });
   $('.testimonial-slider').each(function() {
     $(this).slick({
-      arrows: false,
+      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-back"></use></svg></div>',
+      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-next"></use></svg></div>',
       slidesToShow: 3,
       slidesToScroll: 3,
       responsive: [

@@ -387,6 +387,30 @@ section[data-type] {
       padding: 20px 0 0;
     }
   }
+  .grid.testimonial-slider {
+    position: relative;
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      &.slick-prev {
+        left: -35px;
+      }
+      &.slick-next {
+        right: -35px;
+      }
+    }
+    @include breakpoint(1255) {
+      width: calc(100% - 50px);
+      margin: 0 auto;
+    }
+  }
 }
 [data-type=text-columns-with-images] {
   text-align: left;

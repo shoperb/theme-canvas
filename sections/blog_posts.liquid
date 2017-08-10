@@ -1,6 +1,6 @@
 <section data-section-id="{{section.id}}" data-type="blog-posts"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   {% if section.settings.title != blank %}
-  <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
+  <h3 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h3>
   {% endif %}
 
   <div class="grid">
@@ -14,7 +14,7 @@
         {% endif %}
 
         {% if post.author and section.settings.show_author %}
-        <h3 class="post-author">{{post.author}}</h3>
+        <div class="post-author">{{post.author}}</div>
         {% endif %}
 
         {% if post.date and section.settings.show_date %}
@@ -37,7 +37,7 @@
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <div class="text-column">
 
-        <h3 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h3>
+        <h2 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h2>
 
         {% if section.settings.show_author %}
         <div class="post-author">{{'section.default.blog_post.blog_post_author' | t}}</div>
