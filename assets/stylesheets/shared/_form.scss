@@ -25,13 +25,11 @@ button,
     color: $buttons_primary_button_text_color;
 
     &:hover {
-      // variable to function
-      //background: lighten($buttons_primary_button_background_color, 20%);
+      background: lighten($buttons_primary_button_background_color, 20%);
     }
     &:focus,
     &:active {
-      // variable to function
-      //background: darken($buttons_primary_button_background_color, 20%);
+      background: darken($buttons_primary_button_background_color, 20%);
     }
   }
   &.secondary {
@@ -40,13 +38,11 @@ button,
     color: $buttons_secondary_button_text_color;
 
     &:hover {
-      // variable to function
-      //background: lighten($buttons_secondary_button_background_color, 20%);
+      background: lighten($buttons_secondary_button_background_color, 20%);
     }
     &:focus,
     &:active {
-      // variable to function
-      //background: darken($buttons_secondary_button_background_color, 20%);
+      background: darken($buttons_secondary_button_background_color, 20%);
     }
   }
 }

@@ -241,8 +241,7 @@ section[data-type] {
     cursor: pointer;
     color: $text_link_color;
     &:hover {
-      // variable to function
-      //border-color: lighten($text_link_color, 20%);
+      border-color: lighten($text_link_color, 20%);
     }
 
     .icon-arrow-back,
@@ -280,16 +279,10 @@ section[data-type] {
         cursor: pointer;
       }
       &.slick-active {
-        // variable to function
-        //background: rgba($text_link_color, 0.7);
-        // remove this once upper one works
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba($text_link_color, 0.7);
       }
       &:hover {
-        // variable to function
-        //border-color: lighten($text_link_color, 20%);
-        // remove this once upper one works
-        border-color: #798991;
+        border-color: lighten($text_link_color, 20%);
       }
     }
   }

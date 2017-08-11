@@ -59,10 +59,7 @@ h2.product-title {
           &.marked {
             pointer-events: none;
             background: rgba(230, 230, 230, 6);
-            // variable to function
-            //color: rgba($text_body_color, 1);
-            // remove this once upper one works
-            color: rgba(143, 143, 143, 0.4);
+            color: rgba($text_body_color, 1);
           }
           input {
             opacity: 0;
@@ -75,10 +72,7 @@ h2.product-title {
           }
         }
         &:hover {
-          // variable to function
-          //background: darken($form_background, 5%);
-          // remove this once upper one works
-          background: darken(#ffffff, 5%);
+          background: darken($form_background, 5%);
         }
       }
     }
@@ -132,18 +126,12 @@ h2.product-title {
 
             &:hover {
               box-shadow: 3px 3px 5px $layout_border_color;
-              // variable to function
-              //border-color: darken($layout_border_color, 30%);
-              // remove this once upper one works
-              border-color: darken(#cccccc, 30%);
+              border-color: darken($layout_border_color, 30%);
             }
           }
           input:checked + span {
             box-shadow: 3px 3px 5px $layout_border_color;
-            // variable to function
-            //border-color: darken($layout_border_color, 30%);
-            // remove this once upper one works
-            border-color: darken(#cccccc, 30%);
+            border-color: darken($layout_border_color, 30%);
           }
         }
       }
@@ -160,10 +148,7 @@ h2.product-title {
   }
   .product-pricing {
     .compare-price {
-      // variable to function
-      //color: lighten($text_body_color, 30%);
-      // remove this once upper one works
-      color: lighten(#666666, 30%);
+      color: lighten($text_body_color, 30%);
       text-decoration: line-through;
       display: none;
 
