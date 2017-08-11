@@ -85,17 +85,50 @@
               "handle": "image_overlay_opacity",
               "type": "select",
               "options": [
-                {"handle": "0", "value": "0"},
-                {"handle": "0.1", "value": "0.1"},
-                {"handle": "0.2", "value": "0.2"},
-                {"handle": "0.3", "value": "0.3"},
-                {"handle": "0.4", "value": "0.4"},
-                {"handle": "0.5", "value": "0.5"},
-                {"handle": "0.6", "value": "0.6"},
-                {"handle": "0.7", "value": "0.7"},
-                {"handle": "0.8", "value": "0.8"},
-                {"handle": "0.9", "value": "0.9"},
-                {"handle": "1", "value": "1"}
+                {
+                  "handle": "0",
+                  "value": "0"
+                },
+                {
+                  "handle": "0.1",
+                  "value": "0.1"
+                },
+                {
+                  "handle": "0.2",
+                  "value": "0.2"
+                },
+                {
+                  "handle": "0.3",
+                  "value": "0.3"
+                },
+                {
+                  "handle": "0.4",
+                  "value": "0.4"
+                },
+                {
+                  "handle": "0.5",
+                  "value": "0.5"
+                },
+                {
+                  "handle": "0.6",
+                  "value": "0.6"
+                },
+                {
+                  "handle": "0.7",
+                  "value": "0.7"
+                },
+                {
+                  "handle": "0.8",
+                  "value": "0.8"
+                },
+                {
+                  "handle": "0.9",
+                  "value": "0.9"
+                },
+                {
+                  "handle": "1",
+                  "value": "1"
+                }
               ]
             }
           ]
@@ -113,26 +146,68 @@
               "handle": "body_font_family",
               "type": "select",
               "options": [
-                {"handle": "arial", "value": "arial"},
-                {"handle": "josefin_sans", "value": "Josefin Sans"},
-                {"handle": "lato", "value": "Lato"},
-                {"handle": "maven_pro", "value": "Maven Pro"},
-                {"handle": "russo_one", "value": "Russo One"},
-                {"handle": "tahoma", "value": "Tahoma"},
-                {"handle": "verdana", "value": "Verdana"}
+                {
+                  "handle": "arial",
+                  "value": "arial"
+                },
+                {
+                  "handle": "josefin_sans",
+                  "value": "Josefin Sans"
+                },
+                {
+                  "handle": "lato",
+                  "value": "Lato"
+                },
+                {
+                  "handle": "maven_pro",
+                  "value": "Maven Pro"
+                },
+                {
+                  "handle": "russo_one",
+                  "value": "Russo One"
+                },
+                {
+                  "handle": "tahoma",
+                  "value": "Tahoma"
+                },
+                {
+                  "handle": "verdana",
+                  "value": "Verdana"
+                }
               ]
             },
             {
               "handle": "body_font_size",
               "type": "select",
               "options": [
-                {"handle": "font_size.12", "value": "12px"},
-                {"handle": "font_size.14", "value": "14px"},
-                {"handle": "font_size.16", "value": "16px"},
-                {"handle": "font_size.18", "value": "18px"},
-                {"handle": "font_size.20", "value": "20px"},
-                {"handle": "font_size.22", "value": "22px"},
-                {"handle": "font_size.24", "value": "24px"}
+                {
+                  "handle": "font_size.12",
+                  "value": "12px"
+                },
+                {
+                  "handle": "font_size.14",
+                  "value": "14px"
+                },
+                {
+                  "handle": "font_size.16",
+                  "value": "16px"
+                },
+                {
+                  "handle": "font_size.18",
+                  "value": "18px"
+                },
+                {
+                  "handle": "font_size.20",
+                  "value": "20px"
+                },
+                {
+                  "handle": "font_size.22",
+                  "value": "22px"
+                },
+                {
+                  "handle": "font_size.24",
+                  "value": "24px"
+                }
               ]
             }
           ]
@@ -145,30 +220,84 @@
               "handle": "headings_font_family",
               "type": "select",
               "options": [
-                {"handle": "arial", "value": "Arial"},
-                {"handle": "lato", "value": "Lato"},
-                {"handle": "russo_one", "value": "Russo One"},
-                {"handle": "tahoma", "value": "Tahoma"},
-                {"handle": "verdana", "value": "Verdana"}
+                {
+                  "handle": "arial",
+                  "value": "Arial"
+                },
+                {
+                  "handle": "lato",
+                  "value": "Lato"
+                },
+                {
+                  "handle": "russo_one",
+                  "value": "Russo One"
+                },
+                {
+                  "handle": "tahoma",
+                  "value": "Tahoma"
+                },
+                {
+                  "handle": "verdana",
+                  "value": "Verdana"
+                }
               ]
             },
             {
               "handle": "headings_font_size",
               "type": "select",
               "options": [
-                {"handle": "font_size.16", "value": "16px"},
-                {"handle": "font_size.18", "value": "18px"},
-                {"handle": "font_size.20", "value": "20px"},
-                {"handle": "font_size.22", "value": "22px"},
-                {"handle": "font_size.24", "value": "24px"},
-                {"handle": "font_size.26", "value": "26px"},
-                {"handle": "font_size.28", "value": "28px"},
-                {"handle": "font_size.30", "value": "30px"},
-                {"handle": "font_size.30", "value": "32px"},
-                {"handle": "font_size.30", "value": "34px"},
-                {"handle": "font_size.30", "value": "36px"},
-                {"handle": "font_size.30", "value": "38px"},
-                {"handle": "font_size.30", "value": "40px"}
+                {
+                  "handle": "font_size.16",
+                  "value": "16px"
+                },
+                {
+                  "handle": "font_size.18",
+                  "value": "18px"
+                },
+                {
+                  "handle": "font_size.20",
+                  "value": "20px"
+                },
+                {
+                  "handle": "font_size.22",
+                  "value": "22px"
+                },
+                {
+                  "handle": "font_size.24",
+                  "value": "24px"
+                },
+                {
+                  "handle": "font_size.26",
+                  "value": "26px"
+                },
+                {
+                  "handle": "font_size.28",
+                  "value": "28px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "30px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "32px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "34px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "36px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "38px"
+                },
+                {
+                  "handle": "font_size.30",
+                  "value": "40px"
+                }
               ]
             }
           ]

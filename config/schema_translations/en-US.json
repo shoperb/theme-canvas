@@ -29,11 +29,11 @@
       },
       "footer": {
         "title": "Footer",
-        "allow_social_icons": {
-          "title": "Show social icons"
+        "social_icons": {
+          "title": "Social icons"
         },
-        "allow_payment_icons": {
-          "title": "Show payment icons"
+        "payment_icons": {
+          "title": "Payment icons"
         },
         "settings": {
           "section_width": {
@@ -49,6 +49,9 @@
           "contact_page": {
             "title": "Contact page"
           },
+          "allow_social_icons": {
+            "title": "Show payment icons"
+          },
           "social_facebook": {
             "title": "Facebook"
           },
@@ -57,6 +60,9 @@
           },
           "social_instagram": {
             "title": "Instagram"
+          },
+          "allow_payment_icons": {
+            "title": "Show payment icons"
           },
           "payment_seb": {
             "title": "SEB"
@@ -87,7 +93,6 @@
           }
         }
       },
-
       "image_with_text_overlay": {
         "title": "Hero image",
         "settings": {
@@ -484,7 +489,7 @@
             "title": "Title"
           },
           "text_alignment": {
-            "title" : "Content alignment",
+            "title": "Content alignment",
             "options": {
               "left": "Left",
               "center": "Center"

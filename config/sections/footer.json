@@ -30,9 +30,14 @@
     },
     {
       "type": "subcategory",
-      "handle": "allow_social_icons",
+      "handle": "social_icons",
       "default": true,
       "settings": [
+        {
+          "type": "toggle",
+          "handle": "allow_social_icons",
+          "default": true
+        },
         {
           "type": "text",
           "handle": "social_facebook",
@@ -52,9 +57,14 @@
     },
     {
       "type": "subcategory",
-      "handle": "allow_payment_icons",
+      "handle": "payment_icons",
       "default": true,
       "settings": [
+        {
+          "type": "toggle",
+          "handle": "allow_payment_icons",
+          "default": true
+        },
         {
           "type": "toggle",
           "handle": "payment_seb",

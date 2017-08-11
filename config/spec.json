@@ -5,9 +5,15 @@
   "year": "2017",
   "version": "0.1",
   "description": "Canvas theme for building the theme. Das Master Builder",
-  "customizable_pages": ["index"],
+  "customizable_pages": [
+    "index"
+  ],
   "compile": {
-    "stylesheets": [ "application.css" ],
-    "javascripts": [ "application.js" ]
+    "stylesheets": [
+      "application.css"
+    ],
+    "javascripts": [
+      "application.js"
+    ]
   }
 }

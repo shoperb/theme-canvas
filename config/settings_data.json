@@ -2,26 +2,21 @@
   "general": {
     "text_headings_color": "#000000",
     "text_body_color": "#666666",
-    "text_sale_text_color": "#FF1717",
+    "text_sale_text_color": "#0000ff",
     "text_link_color": "#000000",
-
     "buttons_primary_button_background_color": "#000000",
     "buttons_primary_button_text_color": "#ffffff",
     "buttons_secondary_button_background_color": "#BFBEBB",
     "buttons_secondary_button_text_color": "#ffffff",
-
     "layout_background_color": "#ffffff",
     "layout_border_color": "#DDDDDD",
     "layout_secondary_background_color": "#F7F7F7",
-
     "image_overlay_light_color": "#dddddd",
     "image_overlay_dark_color": "#333333",
-    "image_overlay_background": "#C1B6B6",
-    "image_overlay_opacity": "0.8",
-
+    "image_overlay_background": "rgba(223, 13, 13, 1)",
+    "image_overlay_opacity": "1",
     "body_font_family": "Maven Pro",
     "body_font_size": "16px",
-
     "headings_font_family": "Josefin Sans",
     "headings_font_size": "38px"
   },
@@ -33,7 +28,8 @@
         "logo_max_width": "100",
         "menu": "main-menu",
         "section_width": "full-width"
-      }
+      },
+      "id": "header"
     },
     "footer": {
       "type": "footer",
@@ -55,9 +51,9 @@
         "payment_mastercard": true,
         "payment_maestro": true,
         "section_width": "full-width"
-      }
+      },
+      "id": "footer"
     },
-
     "hero-1": {
       "type": "image_with_text_overlay",
       "settings": {
@@ -68,6 +64,11 @@
         "text_style": "dark",
         "section_height": "medium",
         "section_width": "limited"
+      },
+      "id": "hero-1",
+      "translations": {
+        "et": {
+        }
       }
     },
     "hero-2": {
@@ -83,7 +84,8 @@
         "button_label": "Click here!",
         "button_link": "http://www.google.com/",
         "section_width": "full-width"
-      }
+      },
+      "id": "hero-2"
     },
     "collection": {
       "type": "collection",
@@ -96,7 +98,8 @@
         "show_button": true,
         "section_width": "limited",
         "show_as_slider": true
-      }
+      },
+      "id": "collection"
     },
     "blog-posts": {
       "type": "blog_posts",
@@ -107,7 +110,8 @@
         "show_date": false,
         "show_button": true,
         "section_width": "limited"
-      }
+      },
+      "id": "blog-posts"
     },
     "image-gallery": {
       "type": "image_gallery",
@@ -140,7 +144,12 @@
           }
         }
       },
-      "block_order": ["image-1", "image-2", "image-3"]
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "id": "image-gallery"
     },
     "image-with-text": {
       "type": "image_with_text",
@@ -152,7 +161,8 @@
         "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
         "button_link": "http://www.google.com",
         "section_width": "limited"
-      }
+      },
+      "id": "image-with-text"
     },
     "slideshow": {
       "type": "slideshow",
@@ -226,7 +236,15 @@
           }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3", "slide-4", "slide-5", "slide-6"]
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3",
+        "slide-4",
+        "slide-5",
+        "slide-6"
+      ],
+      "id": "slideshow"
     },
     "slideshow2": {
       "type": "slideshow",
@@ -253,11 +271,13 @@
         "slide-2": {
           "type": "video_slide",
           "settings": {
-            "type": "image",
+            "type": "video",
             "image": "https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg",
             "image_alignment": "bottom-right",
-            "heading": "Image slide",
-            "text_style": "light"
+            "heading": "Image slide 22",
+            "text_style": "light",
+            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
+            "subheading": "Tell your brand's story through video and images 22"
           }
         },
         "slide-3": {
@@ -294,7 +314,12 @@
           }
         }
       },
-      "block_order": ["slide-1", "slide-2", "slide-3", "slide-4", "slide-5"]
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
+      "id": "slideshow2"
     },
     "collection-list": {
       "type": "collection_list",
@@ -323,7 +348,12 @@
           }
         }
       },
-      "block_order": ["collection-1", "collection-2", "collection-3"]
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "id": "collection-list"
     },
     "product": {
       "type": "product",
@@ -336,9 +366,10 @@
         "enable_image_zoom": false,
         "show_social_sharing": false,
         "section_width": "limited"
-      }
+      },
+      "id": "product"
     },
-    "testimonials" : {
+    "testimonials": {
       "type": "testimonials",
       "settings": {
         "title": "Testimonials",
@@ -380,7 +411,14 @@
           }
         }
       },
-      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3", "testimonial-4", "testimonial-5"]
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5"
+      ],
+      "id": "testimonials"
     },
     "columns": {
       "type": "text_columns_with_images",
@@ -446,7 +484,16 @@
           }
         }
       },
-      "block_order": ["column-1", "column-2", "column-3", "column-4", "column-5", "column-6", "column-7"]
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4",
+        "column-5",
+        "column-6",
+        "column-7"
+      ],
+      "id": "columns"
     },
     "logo-list": {
       "type": "logo_list",
@@ -501,7 +548,16 @@
           }
         }
       },
-      "block_order": ["logo-1", "logo-2", "logo-3", "logo-4", "logo-5", "logo-6", "logo-7"]
+      "block_order": [
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4",
+        "logo-5",
+        "logo-6",
+        "logo-7"
+      ],
+      "id": "logo-list"
     },
     "newsletter": {
       "type": "newsletter",
@@ -510,7 +566,8 @@
         "text": "A short sentence describing what someone will receive by subscribing",
         "form": "",
         "section_width": "full-width"
-      }
+      },
+      "id": "newsletter"
     },
     "location-and-contact": {
       "type": "location_and_contact",
@@ -520,7 +577,8 @@
         "address": "Meistri 12, Tallinn",
         "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
         "section_width": "full-width"
-      }
+      },
+      "id": "location-and-contact"
     },
     "custom": {
       "type": "custom",
@@ -567,7 +625,7 @@
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "latitude-e5540",
+            "product": "variant-test",
             "vertical_alignment": "top"
           }
         },
@@ -588,8 +646,34 @@
           }
         }
       },
-      "block_order": ["custom-1", "custom-2", "custom-3", "custom-32", "custom-4", "custom-5", "custom-6"]
+      "block_order": [
+        "custom-1",
+        "custom-2",
+        "custom-3",
+        "custom-32",
+        "custom-4",
+        "custom-5",
+        "custom-6"
+      ],
+      "id": "custom"
     }
   },
-  "content_for_index": ["hero-1", "hero-2", "collection", "blog-posts", "image-gallery", "image-with-text", "slideshow", "slideshow2", "collection-list", "product", "testimonials", "columns", "logo-list", "newsletter", "location-and-contact", "custom"]
+  "content_for_index": [
+    "hero-1",
+    "hero-2",
+    "collection",
+    "blog-posts",
+    "image-gallery",
+    "image-with-text",
+    "slideshow",
+    "slideshow2",
+    "collection-list",
+    "product",
+    "testimonials",
+    "columns",
+    "logo-list",
+    "newsletter",
+    "location-and-contact",
+    "custom"
+  ]
 }

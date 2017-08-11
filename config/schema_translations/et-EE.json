@@ -29,11 +29,11 @@
       },
       "footer": {
         "title": "Jalus",
-        "allow_social_icons": {
-          "title": "Näita sotsiaalikoone"
+        "social_icons": {
+          "title": "Sotsiaalikoonid"
         },
-        "allow_payment_icons": {
-          "title": "Näita maksemeetodeid"
+        "payment_icons": {
+          "title": "Maksemeetodeid"
         },
         "settings": {
           "section_width": {
@@ -49,6 +49,9 @@
           "contact_page": {
             "title": "Kontakti leht"
           },
+          "allow_social_icons": {
+            "title": "Näita sotsiaalikoone"
+          },
           "social_facebook": {
             "title": "Facebook"
           },
@@ -57,6 +60,9 @@
           },
           "social_instagram": {
             "title": "Instagram"
+          },
+          "allow_payment_icons": {
+            "title": "Näita maksemeetodeid"
           },
           "payment_seb": {
             "title": "SEB"
@@ -87,7 +93,6 @@
           }
         }
       },
-
       "image_with_text_overlay": {
         "title": "Päisepilt",
         "settings": {
@@ -486,7 +491,7 @@
             "title": "Pealkiri"
           },
           "text_alignment": {
-            "title" : "Sisu küljendus",
+            "title": "Sisu küljendus",
             "options": {
               "left": "Vasakul",
               "center": "Keskel"
