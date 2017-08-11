@@ -159,12 +159,6 @@ h2.product-title {
     }
   }
   .product-pricing {
-    .actual-price {
-      &.discount {
-        font-weight: bold;
-        color: $text_sale_text_color;
-      }
-    }
     .compare-price {
       // variable to function
       //color: lighten($text_body_color, 30%);
@@ -176,6 +170,9 @@ h2.product-title {
       &.visible {
         display: block;
       }
+    }
+    .discount {
+      color: $text_sale_text_color;
     }
   }
 }
