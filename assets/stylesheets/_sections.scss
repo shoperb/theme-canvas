@@ -192,6 +192,7 @@ section[data-type] {
     &:hover {
       &.opacity-image-container {
         background-color: $image_overlay_background;
+        border: none;
 
         .opacity-image {
           opacity: $image_overlay_opacity;
