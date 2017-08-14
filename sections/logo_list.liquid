@@ -1,4 +1,4 @@
-<section data-section-id="{{section.id}}" data-type="logo-list"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
+<section data-section-id="{{section.id}}" data-type="logo-list" class="section-height-{{section.settings.section_height}} {% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
   {% if section.settings.title != blank %}
   <h3 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h3>
   {% endif %}

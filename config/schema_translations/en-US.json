@@ -523,6 +523,13 @@
               "limited": "Limited to content"
             }
           },
+          "section_height": {
+            "title": "Section height",
+            "options": {
+              "small": "Small",
+              "large": "Large"
+            }
+          },
           "title": {
             "title": "Title"
           }

@@ -525,6 +525,13 @@
               "limited": "Piiratud sisuosaga"
             }
           },
+          "section_height": {
+            "title": "Sektsiooni kõrgus",
+            "options": {
+              "small": "Väike",
+              "large": "Suur"
+            }
+          },
           "title": {
             "title": "Pealkiri"
           }

@@ -346,10 +346,15 @@ section[data-type] {
       width: 100%;
       padding-top: 100%;
       position: relative;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: $default_placeholder_border;
 
-      h3 {
+      h2 {
         @include centerize;
         margin: 0;
+        width: 100%;
+        word-break: break-word;
       }
     }
     a.collection {
@@ -463,8 +468,13 @@ section[data-type] {
         height: 100%;
       }
       img {
-        max-width: 200px;
+        max-height: 20px;
       }
+    }
+  }
+  &.section-height-large {
+    ul li img {
+      max-height: 60px;
     }
   }
 }

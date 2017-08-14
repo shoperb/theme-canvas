@@ -18,6 +18,21 @@
       ]
     },
     {
+      "type": "select",
+      "handle": "section_height",
+      "default": "medium",
+      "options": [
+        {
+          "value": "small",
+          "handle": "small"
+        },
+        {
+          "value": "large",
+          "handle": "large"
+        }
+      ]
+    },
+    {
       "type": "text",
       "handle": "title",
       "default": "Logo list"

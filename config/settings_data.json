@@ -295,7 +295,7 @@
       "type": "collection_list",
       "settings": {
         "title": "Collection list",
-        "grid": 3,
+        "grid": 4,
         "section_width": "limited"
       },
       "blocks": {
@@ -469,7 +469,8 @@
       "type": "logo_list",
       "settings": {
         "title": "Logo list",
-        "section_width": "full-width"
+        "section_width": "full-width",
+        "section_height": "large"
       },
       "blocks": {
         "logo-1": {
