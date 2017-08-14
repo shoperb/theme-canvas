@@ -23,8 +23,10 @@
 
     </div>{% if section.settings.horizontal_alignment == 'image-on-right' %}<!--
 
-    --><div class="grid__item palm--one-whole lap--one-half desk--one-half">
-      <img src="{% if section.settings.image != blank %}{{section.settings.image}}{% else %}{{'images/placeholder.svg' | asset_url}}{% endif %}">
+    --><div class="grid__item palm--one-whole lap--one-half desk--one-half{% if section.settings.image != blank %} with-image{% endif %}">
+      <div class="image">
+        <img src="{% if section.settings.image != blank %}{{section.settings.image}}{% else %}{{'images/placeholder.svg' | asset_url}}{% endif %}">
+      </div>
     </div>{% endif %}
 
   </div>
