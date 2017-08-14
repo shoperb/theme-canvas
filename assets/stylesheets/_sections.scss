@@ -172,15 +172,34 @@ section[data-type] {
     }
     .caption-container {
       text-align: center;
-      display: table;
       width: 100%;
       height: 100%;
+      display: none;
+      position: relative;
 
       span {
         display: table-cell;
         vertical-align: middle;
         padding: #{$default_padding}px;
         color: #ffffff;
+      }
+    }
+    &.opacity-image-container {
+      .opacity-image {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      &.opacity-image-container {
+        background-color: $image_overlay_background;
+
+        .opacity-image {
+          opacity: $image_overlay_opacity;
+          background-color: $layout_background_color;
+        }
+      }
+      .caption-container {
+        display: table;
       }
     }
   }

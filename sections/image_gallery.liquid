@@ -12,7 +12,8 @@
 <section data-section-id="{{section.id}}" data-type="image-gallery"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   <div class="grid">
     {% for block in section.blocks %}
-    {% if forloop.first != true %}-->{% endif %}<div data-section-block-id="{{block.id}}" class="grid__item one-whole lap--one-half {{grid_class}} image-align-{{block.settings.image_alignment}} section-height {{section.settings.section_height}}{% if block.settings.image != blank %} with-background{% endif %}" style="background-image: {% if block.settings.image != blank %}url('{{block.settings.image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')">
+    {% if forloop.first != true %}-->{% endif %}<div data-section-block-id="{{block.id}}" class="grid__item one-whole lap--one-half opacity-image-container {{grid_class}} section-height {{section.settings.section_height}}{% if block.settings.image != blank %} with-background{% endif %}">
+      <div class="opacity-image{% if section.settings.image != blank %} image-align-{{block.settings.image_alignment}}{% endif %}" style="background-image: {% if block.settings.image != blank %}url('{{block.settings.image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')"></div>
       {% if block.settings.link contains 'http://' or block.settings.link contains 'https://' %}
       {% assign outer_url = ' target="_blank"' %}
       {% endif %}
