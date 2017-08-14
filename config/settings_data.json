@@ -3,22 +3,23 @@
     "text_headings_color": "#000000",
     "text_body_color": "#666666",
     "text_sale_text_color": "#0000ff",
-    "text_link_color": "#000000",
+    "text_link_color": "#ff0000",
     "buttons_primary_button_background_color": "#000000",
     "buttons_primary_button_text_color": "#ffffff",
     "buttons_secondary_button_background_color": "#BFBEBB",
     "buttons_secondary_button_text_color": "#ffffff",
     "layout_background_color": "#ffffff",
     "layout_border_color": "#DDDDDD",
+    "layout_header_footer_background_color": "#ffffff",
     "layout_secondary_background_color": "#F7F7F7",
     "image_overlay_light_color": "#dddddd",
     "image_overlay_dark_color": "#333333",
     "image_overlay_background": "rgba(223, 13, 13, 1)",
     "image_overlay_opacity": "1",
-    "body_font_family": "Maven Pro",
+    "body_font_family": "Hind",
     "body_font_size": "16px",
-    "headings_font_family": "Josefin Sans",
-    "headings_font_size": "38px"
+    "headings_font_family": "Hind",
+    "headings_font_size": "46px"
   },
   "sections": {
     "header": {
@@ -27,7 +28,7 @@
         "logo_alignment": "left",
         "logo_max_width": "100",
         "menu": "main-menu",
-        "section_width": "full-width"
+        "section_width": "limited"
       },
       "id": "header"
     },
@@ -50,7 +51,7 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "full-width"
+        "section_width": "limited"
       },
       "id": "footer"
     },
@@ -206,43 +207,12 @@
             "subheading": "Tell your brand's story through video and images 333",
             "text_style": "light"
           }
-        },
-        "slide-4": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "heading": "Image slide 22",
-            "subheading": "Tell your brand's story through video and images 22",
-            "text_style": "dark"
-          }
-        },
-        "slide-5": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
-            "image_alignment": "center",
-            "text_style": "light"
-          }
-        },
-        "slide-6": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "heading": "Image slide 22",
-            "text_style": "light"
-          }
         }
       },
       "block_order": [
         "slide-1",
         "slide-2",
-        "slide-3",
-        "slide-4",
-        "slide-5",
-        "slide-6"
+        "slide-3"
       ],
       "id": "slideshow"
     },

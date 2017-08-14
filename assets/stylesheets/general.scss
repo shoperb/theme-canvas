@@ -46,11 +46,11 @@ a {
   margin: 0;
   padding: 20px 0;
 }
+h2.general-title {
+  font-size: #{$headings_font_size - 8};
+}
 h3.general-title {
-  // variable to function
-  //font-size: #{$headings_font_size - 8};
-  // remove this once upper one works
-  font-size: $headings_font_size;
+  font-size: #{$headings_font_size - 16};
 }
 .general-text {
   color: $text_body_color;

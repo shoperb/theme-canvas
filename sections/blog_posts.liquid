@@ -49,7 +49,7 @@
 
         <div class="text-column-text">{{'section.default.blog_post.blog_post_content' | t}}</div>
 
-        <a role="button" class="button secondary" href="{{post.url}}">{{'section.default.read_more' | t}}</a>
+        <a href="{{post.url}}">{{'section.default.read_more' | t}}</a>
       </div>
     </div>{% if forloop.last != true %}<!--{% endif %}
     {% endfor %}
@@ -59,7 +59,7 @@
 
   {% if section.settings.show_button == true %}
   <div class="buttons">
-    <a href="/blog" role="button" class="button primary">{{'section.default.view_all' | t}}</a>
+    <a href="/blog" role="button" class="button secondary">{{'section.default.view_all' | t}}</a>
   </div>
   {% endif %}
 

@@ -1,8 +1,7 @@
 {% assign menu = menus[section.settings.menu] %}
 
 <header id="main-header" class="grid{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" data-section-id="{{section.id}}">
-  <div class="content-spacer">
-    <div class="background"></div>
+  <div class="content-spacer{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
 
     <div class="grid__item palm--one-whole{% if section.settings.logo_alignment != 'center' %} desk--one-quarter{% endif %}">
       <div class="logo">

@@ -151,6 +151,10 @@
                   "value": "arial"
                 },
                 {
+                  "handle": "hind",
+                  "value": "Hind"
+                },
+                {
                   "handle": "josefin_sans",
                   "value": "Josefin Sans"
                 },
@@ -222,11 +226,23 @@
               "options": [
                 {
                   "handle": "arial",
-                  "value": "Arial"
+                  "value": "arial"
+                },
+                {
+                  "handle": "hind",
+                  "value": "Hind"
+                },
+                {
+                  "handle": "josefin_sans",
+                  "value": "Josefin Sans"
                 },
                 {
                   "handle": "lato",
                   "value": "Lato"
+                },
+                {
+                  "handle": "maven_pro",
+                  "value": "Maven Pro"
                 },
                 {
                   "handle": "russo_one",
