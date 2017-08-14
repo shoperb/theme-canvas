@@ -61,7 +61,7 @@ header#main-header {
 
     .cart-items {
       @include centerize;
-      background: $layout_secondary_background_color;
+      background: $layout_header_footer_background_color;
       padding: 2px;
       border-radius: 10px;
       color: $text_body_color;
@@ -141,7 +141,7 @@ header#main-header {
   }
   ul {
     @extend .default-menu;
-    background: $layout_secondary_background_color;
+    background: $layout_header_footer_background_color;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 
     li {
