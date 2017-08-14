@@ -37,10 +37,6 @@
         {
           "value": "large",
           "handle": "large"
-        },
-        {
-          "value": "full",
-          "handle": "full"
         }
       ]
     },

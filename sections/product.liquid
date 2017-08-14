@@ -5,15 +5,12 @@
   {% when 'large' %}
     {% assign image_class = 'desk--three-quarters' %}
     {% assign text_class = 'desk--one-quarter' %}
-  {% when 'medium' %}
-    {% assign image_class = 'desk--one-half' %}
-    {% assign text_class = 'desk--one-half' %}
   {% when 'small' %}
     {% assign image_class = 'desk--one-quarter' %}
     {% assign text_class = 'desk--three-quarters' %}
   {% else %}
-    {% assign image_class = 'desk--one-whole' %}
-    {% assign text_class = 'desk--one-whole' %}
+    {% assign image_class = 'desk--one-half' %}
+    {% assign text_class = 'desk--one-half' %}
 {% endcase %}
 
 <section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
