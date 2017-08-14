@@ -158,6 +158,10 @@
         {
           "type": "text",
           "handle": "slide_link"
+        },
+        {
+          "type": "text",
+          "handle": "button_text"
         }
       ]
     },
