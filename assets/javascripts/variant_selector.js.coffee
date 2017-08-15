@@ -23,6 +23,7 @@ class @VariantSelector
           if radio.value == @getName(attr)
             radio.checked = true
             @changeSelectedVariantOption(radio)
+            @markMissingOptions(radio)
           else
             radio.checked = false
 
@@ -114,11 +115,25 @@ class @VariantSelector
   markMissingOptions: (target) ->
     form = target.closest("form")
 
-    selector = "[data-#{target.name}='#{target.value}']"
-    for node in form.querySelectorAll(selector)
-#      console.log node
-#      console.log node.json
-      node.classList.add('marked')
+    # uncheck all dropdown elements
+    for dropdown_input in form.querySelectorAll("[data-attribute-radio]")
+      dropdown_input.closest('li').classList.remove('not-present')
+
+    # collect all possible values
+    attrs = {}
+    for node in form.querySelectorAll("[data-#{target.name}='#{target.value}']")
+      continue if node.json.stock == 0 # if not tracking then value is null
+      for attr in node.json.attributes
+        continue if ("attribute-" + attr.name) == target.name # comment out if merk on both sides
+        attrs[attr.name] ?= []
+        attrs[attr.name].push(attr.value) if attrs[attr.name].indexOf(attr.value) == -1
+    
+    # mark not existing variants
+    for name, vals of attrs
+      for dropdown_input in form.querySelectorAll("[data-attribute-radio][name='attribute-#{name}']")
+        if vals.indexOf(dropdown_input.value) == -1
+          dropdown_input.closest('li').classList.add('not-present')
+
 
   toggleVariantSelect: (el) ->
     el.onclick = (event) ->
