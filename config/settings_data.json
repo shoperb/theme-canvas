@@ -327,11 +327,11 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "variant-test",
+        "product": "ronnie-coleman-testogen-xr",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "enable_image_zoom": false,
         "show_social_sharing": false,
         "section_width": "limited"
