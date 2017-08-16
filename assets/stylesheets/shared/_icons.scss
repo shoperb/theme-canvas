@@ -16,3 +16,7 @@
   width: 0;
   height: 0;
 }
+
+.icon-arrow-back {
+  @extend .icon-arrow-narrow;
+}

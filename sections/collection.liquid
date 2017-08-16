@@ -27,7 +27,7 @@
   <div class="grid{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
-    asd
+
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       {% assign variant = product.variants.first %}
 
@@ -39,7 +39,7 @@
         {% if product.image.size-480.url != blank %}
         {% assign product_image = product.image.size-480.url %}
         {% endif %}
-        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}>
+        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}">
           <img src="{{product_image}}" alt="{{product.name}}">
         </div>
 

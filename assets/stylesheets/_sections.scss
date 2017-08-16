@@ -157,16 +157,26 @@ section[data-type] {
       position: absolute;
       top: 50%;
       @include transform(translateY(-50%));
+      color: $text_headings_color;
+      cursor: pointer;
 
+      &:hover {
+        color: lighten($text_headings_color, 20%);
+      }
       svg {
-        width: 50px;
-        height: 50px;
+        width: 25px;
+        height: 25px;
+        display: block;
       }
       &.slick-prev {
         left: -35px;
       }
       &.slick-next {
         right: -35px;
+
+        .icon-arrow-next {
+          @include transform(rotate(180deg));
+        }
       }
     }
   }
