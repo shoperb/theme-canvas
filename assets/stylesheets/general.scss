@@ -60,14 +60,15 @@ h3.general-title {
 }
 .general-text {
   color: $text_body_color;
-  font-size: 16px;
+  font-size: $body_font_size;
+  line-height: 2;
 }
 .text-large {
   .general-title {
-    font-size: 30px;
+    font-size: calc(#{$headings_font_size} + 8px);
   }
   .general-text {
-    font-size: 22px;
+    font-size: calc(#{$body_font_size} + 8px);
   }
 }
 

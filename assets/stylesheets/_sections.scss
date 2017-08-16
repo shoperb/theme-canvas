@@ -263,18 +263,21 @@ section[data-type] {
 
     h2.general-title {
       text-align: left;
+      font-size: calc(#{$headings_font_size} - 14px);
+    }
+    .text-content {
+      padding: 10px 0;
     }
     .image {
-      border: $default_placeholder_border;
       width: 100%;
       text-align: center;
-      padding: 50px 0;
-      box-sizing: border-box;
+      background-color: #F2F6FA;
+      padding: 100px 0;
     }
     &.with-image {
       .image {
         padding: 0;
-        border: 0;
+        background-color: transparent;
       }
       img {
         width: 100%;

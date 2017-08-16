@@ -22,9 +22,10 @@ button,
   font-size: calc(#{$body_font_size} - 2px);
   box-sizing: border-box;
   font-weight: 400;
+  text-align: center;
 
   &.primary {
-    padding: 10px 15px;
+    padding: 9px 15px;
     background: $buttons_primary_button_background_color;
     color: $buttons_primary_button_text_color;
 
