@@ -1,6 +1,33 @@
 section[data-type] {
   @extend .general-content;
   box-sizing: border-box;
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    color: $text_headings_color;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($text_headings_color, 20%);
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      display: block;
+    }
+    &.slick-prev {
+      left: -35px;
+    }
+    &.slick-next {
+      right: -35px;
+
+      .icon-arrow-next {
+        @include transform(rotate(180deg));
+      }
+    }
+  }
 }
 
 .section-height {
@@ -152,33 +179,6 @@ section[data-type] {
   }
   .collection-slideshow {
     position: relative;
-
-    .slick-arrow {
-      position: absolute;
-      top: 50%;
-      @include transform(translateY(-50%));
-      color: $text_headings_color;
-      cursor: pointer;
-
-      &:hover {
-        color: lighten($text_headings_color, 20%);
-      }
-      svg {
-        width: 25px;
-        height: 25px;
-        display: block;
-      }
-      &.slick-prev {
-        left: -35px;
-      }
-      &.slick-next {
-        right: -35px;
-
-        .icon-arrow-next {
-          @include transform(rotate(180deg));
-        }
-      }
-    }
   }
   &.show-slideshow {
     @include breakpoint(1255) {
@@ -285,7 +285,7 @@ section[data-type] {
     }
   }
 }
-[data-type=slideshow] {
+section[data-type=slideshow] {
   &:not(.full-width) {
     .slideshow {
       margin: #{$default_padding}px;
@@ -297,7 +297,6 @@ section[data-type] {
   .slideshow {
     text-align: center;
     height: 100%;
-
   }
   .general-title,
   .general-text {
@@ -308,27 +307,40 @@ section[data-type] {
     }
   }
   .slick-arrow {
-    z-index: 9;
-    width: 50px;
-    height: 50px;
-    @include centerize;
-    cursor: pointer;
-    color: $text_link_color;
-    &:hover {
-      border-color: lighten($text_link_color, 20%);
-    }
+    z-index: 1;
+    color: $image_overlay_light_color;
 
-    .icon-arrow-back,
-    .icon-arrow-next {
+    svg {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
       width: 50px;
       height: 50px;
+      background: lighten($image_overlay_dark_color, 20%);
+      left: -13px;
+      top: -12px;
+      border-radius: 1000px;
+      z-index: 1;
     }
     &.slick-prev {
-      left: 48px;
+      left: 53px;
+
+      &:before {
+        top: -13px;
+      }
     }
     &.slick-next {
-      right: -2px;
-      left: auto;
+      right: 53px;
+    }
+    &:hover {
+      color: lighten($image_overlay_light_color, 20%);
+
+      &:before {
+        background: lighten($image_overlay_dark_color, 30%);
+      }
     }
   }
   .slick-dots {
@@ -342,21 +354,20 @@ section[data-type] {
 
     li {
       float: left;
-      width: 10px;
-      height: 10px;
-      border: 2px solid $text_link_color;
-      border-radius: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 1000px;
       margin: 0 5px;
+      background: lighten($image_overlay_dark_color, 20%);
 
       button {
         opacity: 0;
         cursor: pointer;
       }
-      &.slick-active {
-        background: rgba($text_link_color, 0.7);
-      }
+      &.slick-active,
       &:hover {
-        border-color: lighten($text_link_color, 20%);
+        background: $image_overlay_light_color;
+        box-shadow: 0 0 0 2px $image_overlay_light_color;
       }
     }
   }
@@ -402,13 +413,14 @@ section[data-type] {
       position: relative;
       background-repeat: no-repeat;
       background-position: center;
-      border: $default_placeholder_border;
+      background-color: #F2F6FA;
 
       h2 {
         @include centerize;
         margin: 0;
         width: 100%;
         word-break: break-word;
+        font-size: calc(#{$headings_font_size} - 14px);
       }
     }
     a.collection {

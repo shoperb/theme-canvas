@@ -6,8 +6,8 @@ $(document).ready(function() {
     $(this).slick({
       dots: true,
       autoplay: autoPlay,
-      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-narrow"></use></svg></div>',
-      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-narrow"></use></svg></div>',
+      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
+      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
       autoplaySpeed: animationSpeed * 1000,
       lazyLoad: 'ondemand'
     });
@@ -23,8 +23,8 @@ $(document).ready(function() {
   });
   $('.testimonial-slider').each(function() {
     $(this).slick({
-      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-narrow"></use></svg></div>',
-      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow-narrow"></use></svg></div>',
+      prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
+      nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
       slidesToShow: 3,
       slidesToScroll: 3,
       responsive: [

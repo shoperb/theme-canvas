@@ -294,7 +294,7 @@
       "type": "collection_list",
       "settings": {
         "title": "Collection list",
-        "grid": 4,
+        "grid": 3,
         "section_width": "limited"
       },
       "blocks": {
