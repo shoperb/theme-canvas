@@ -1,5 +1,5 @@
 {% if menu.links.any? or menu.children.any? %}
-<ul>
+<ul{% if link.children.any? %} class="menu-dropdown"{% endif %}>
   {% assign collection = menu.root_links %}
   {% if menu.children.any? %}
   {% assign collection = menu.children %}

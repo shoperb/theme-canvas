@@ -32,6 +32,12 @@
   -o-align-items: $param;
   align-items: $param;
 }
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
 
 @mixin centerize() {
   position: absolute;

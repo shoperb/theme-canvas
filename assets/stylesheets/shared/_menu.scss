@@ -109,3 +109,11 @@ nav.main-menu {
     }
   }
 }
+.menu-dropdown {
+  &.direction-right {
+    .menu-dropdown-container {
+      left: auto;
+      right: 0;
+    }
+  }
+}

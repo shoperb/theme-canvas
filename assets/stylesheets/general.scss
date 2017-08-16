@@ -4,6 +4,7 @@ body {
   font-size: $body_font_size;
   color: $text_body_color;
   background: $layout_background_color;
+  line-height: 1.5;
 }
 * {
   outline: none;
@@ -18,6 +19,12 @@ a {
   width: calc(100% - 2 * #{$default_padding}px);
   height: 100%;
   margin: 0 #{$default_padding}px;
+}
+.full-width {
+  .no-grid-item {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .general-content {
@@ -43,7 +50,6 @@ a {
   font-family: $headings_font_family,  sans-serif;
   text-align: center;
   margin: 0;
-  padding: 20px 0;
 }
 h2.general-title {
   font-size: #{$headings_font_size - 8};
@@ -77,8 +83,6 @@ h3.general-title {
 // special images w opacity
 .opacity-image-container {
   position: relative;
-  border: $default_placeholder_border;
-  box-sizing: border-box;
 
   .opacity-image {
     position: absolute;

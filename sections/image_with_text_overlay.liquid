@@ -1,6 +1,6 @@
 <section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="section-height {{section.settings.section_height}}{% if section.settings.text_size == 'large' %} text-large{% endif %}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}{% if section.settings.image != blank %} with-background{% endif %}">
   <div class="no-grid-item opacity-image-container">
-    <div class="opacity-image{% if section.settings.image != blank %} image-align-{{section.settings.image_alignment}}{% endif %}" style="background-image: {% if section.settings.image != blank %}url('{{section.settings.image}}'), {% endif %}url('{{'images/placeholder.svg' | asset_url}}')"></div>
+    <div class="opacity-image{% if section.settings.image != blank %} image-align-{{section.settings.image_alignment}}{% endif %}" style="background-image: {% if section.settings.image != blank %}url('{{section.settings.image}}'), {% endif %}url('{{'images/general-placeholder.svg' | asset_url}}')"></div>
     <div class="hero">
       {% if section.settings.title != blank %}
       <h1 class="general-title{% if section.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-setting="title">{{section.settings.title | escape}}</h1>
@@ -13,7 +13,7 @@
       {% endif %}
 
       {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-      <a href="{{section.settings.button_link}}" role="button" class="button secondary">
+      <a href="{{section.settings.button_link}}" role="button" class="button primary">
         {{section.settings.button_label | escape}}
       </a>
       {% endif %}

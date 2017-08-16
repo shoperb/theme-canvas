@@ -1,6 +1,6 @@
 {
   "general": {
-    "text_headings_color": "#000000",
+    "text_headings_color": "#242526",
     "text_body_color": "#666666",
     "text_sale_text_color": "#0000ff",
     "text_link_color": "#ff0000",
@@ -14,8 +14,8 @@
     "layout_secondary_background_color": "#F7F7F7",
     "image_overlay_light_color": "#ffffff",
     "image_overlay_dark_color": "#333333",
-    "image_overlay_background": "rgba(13, 13, 233, 1)",
-    "image_overlay_opacity": "0.8",
+    "image_overlay_background": "#B2B6BB",
+    "image_overlay_opacity": "0.3",
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
     "headings_font_family": "Hind",
@@ -60,17 +60,15 @@
       "settings": {
         "image_alignment": "center",
         "title": "Hero section title",
-        "text": "<p>... and here is where your customers will see your hero message</p>",
+        "text": "... and here is where your customers will see your hero message is where your customers will see your hero message is where your customers will see your hero message",
         "text_size": "medium",
         "text_style": "dark",
         "section_height": "medium",
-        "section_width": "limited"
+        "section_width": "limited",
+        "button_label": "Click here!",
+        "button_link": "http://www.google.com/"
       },
-      "id": "hero-1",
-      "translations": {
-        "et": {
-        }
-      }
+      "id": "hero-1"
     },
     "hero-2": {
       "type": "image_with_text_overlay",
@@ -78,7 +76,7 @@
         "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
         "image_alignment": "top-left",
         "title": "My AD",
-        "text": "<p>Look at what cool products I have.</p>",
+        "text": "Look at what cool products I have.",
         "text_size": "large",
         "text_style": "light",
         "section_height": "large",

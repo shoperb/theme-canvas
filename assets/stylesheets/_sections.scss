@@ -55,6 +55,18 @@ section[data-type] {
   text-align: center;
   display: table;
 
+  .opacity-image {
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $image_overlay_background;
+      opacity: $image_overlay_opacity;
+      content: '';
+    }
+  }
   &:not(.full-width) {
     max-width: #{$limited_max_width}px;
   }
@@ -70,16 +82,20 @@ section[data-type] {
   }
   .text-content {
     margin: 0 auto;
-    max-width: 75%;
     text-align: center;
   }
   .general-title,
   .general-text {
     color: $image_overlay_light_color;
+    max-width: 75%;
+    margin: 0 auto;
 
     &.text-dark {
       color: $image_overlay_dark_color;
     }
+  }
+  .general-text {
+    line-height: 2;
   }
 }
 [data-type=collection] {
