@@ -9,6 +9,7 @@
   "section.default.collection.name": "Kollektsiooni nimi",
   "section.default.vendor": "Tootja nimi",
   "section.default.product_descriontion": "See ala siin on toote kirjelduse tarvis. Kui suur toode on? Mis värvi ja mis materjalist? Lisa detaile, et muuta toode võimalikult atraktiivseks.",
+  "section.blog_posts.read_all_posts": "Vaata kõiki postitusi",
 
   "product.was": "oli",
   "product.unavailable": "Toode pole hetkel saadaval",

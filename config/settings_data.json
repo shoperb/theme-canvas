@@ -105,8 +105,8 @@
       "settings": {
         "title": "Blog posts",
         "grid": 3,
-        "show_author": false,
-        "show_date": false,
+        "show_author": true,
+        "show_date": true,
         "show_button": true,
         "section_width": "limited"
       },

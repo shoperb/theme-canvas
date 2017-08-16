@@ -187,10 +187,26 @@ section[data-type] {
   }
 }
 [data-type=blog-posts] {
-  text-align: center;
+  text-align: left;
 
   .text-column {
-    padding: #{$default_padding}px;
+    padding: 10px #{$default_padding}px 40px;
+
+    h2.general-title {
+      text-align: left;
+      padding: 13px 0 0;
+    }
+    .post-author {
+      font-weight: 400;
+      color: $text_headings_color;
+    }
+    .post-date {
+      font-size: calc(#{$body_font_size} - 4px);
+    }
+    .text-column-text {
+      line-height: 2;
+      padding: 13px 0 30px;
+    }
   }
 }
 [data-type=image-gallery] {

@@ -9,6 +9,7 @@
   "section.default.collection.name": "Collection's name",
   "section.default.vendor": "Vendor's name",
   "section.default.product_descriontion": "Here is the place for your product's description. How big is it? What color and material? Add details to make the product attractive.",
+  "section.blog_posts.read_all_posts": "Read all posts",
 
   "product.was": "was",
   "product.unavailable": "Product is currently unavailable",
