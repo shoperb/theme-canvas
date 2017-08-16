@@ -47,15 +47,16 @@ a {
 .general-title {
   color: $text_headings_color;
   font-size: $headings_font_size;
-  font-family: $headings_font_family,  sans-serif;
+  font-family: $headings_font_family, sans-serif;
   text-align: center;
   margin: 0;
 }
 h2.general-title {
-  font-size: #{$headings_font_size - 8};
+  font-size: calc(#{$headings_font_size} - 24px);
 }
 h3.general-title {
-  font-size: #{$headings_font_size - 16};
+  font-size: calc(#{$headings_font_size} - 14px);
+  text-transform: capitalize;
 }
 .general-text {
   color: $text_body_color;

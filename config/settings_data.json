@@ -1,13 +1,13 @@
 {
   "general": {
     "text_headings_color": "#242526",
-    "text_body_color": "#666666",
+    "text_body_color": "#85898C",
     "text_sale_text_color": "#0000ff",
-    "text_link_color": "#ff0000",
-    "buttons_primary_button_background_color": "#000000",
-    "buttons_primary_button_text_color": "#ffffff",
-    "buttons_secondary_button_background_color": "#BFBEBB",
-    "buttons_secondary_button_text_color": "#ffffff",
+    "text_link_color": "#1B2126",
+    "buttons_primary_button_background_color": "#1B2126",
+    "buttons_primary_button_text_color": "#FFFFFF",
+    "buttons_secondary_button_background_color": "#F2F6FA",
+    "buttons_secondary_button_text_color": "#242526",
     "layout_background_color": "#ffffff",
     "layout_border_color": "#DDDDDD",
     "layout_header_footer_background_color": "#ffffff",
@@ -104,7 +104,7 @@
       "type": "blog_posts",
       "settings": {
         "title": "Blog posts",
-        "grid": 6,
+        "grid": 3,
         "show_author": false,
         "show_date": false,
         "show_button": true,

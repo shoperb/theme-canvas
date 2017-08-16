@@ -20,6 +20,8 @@ button,
   margin: 20px 0;
   min-width: 140px;
   font-size: calc(#{$body_font_size} - 2px);
+  box-sizing: border-box;
+  font-weight: 400;
 
   &.primary {
     padding: 10px 15px;
@@ -27,11 +29,11 @@ button,
     color: $buttons_primary_button_text_color;
 
     &:hover {
-      background: lighten($buttons_primary_button_background_color, 20%);
+      background: lighten($buttons_primary_button_background_color, 10%);
     }
     &:focus,
     &:active {
-      background: darken($buttons_primary_button_background_color, 20%);
+      background: darken($buttons_primary_button_background_color, 10%);
     }
   }
   &.secondary {
@@ -40,11 +42,11 @@ button,
     color: $buttons_secondary_button_text_color;
 
     &:hover {
-      background: lighten($buttons_secondary_button_background_color, 20%);
+      background: lighten($buttons_secondary_button_background_color, 10%);
     }
     &:focus,
     &:active {
-      background: darken($buttons_secondary_button_background_color, 20%);
+      background: darken($buttons_secondary_button_background_color, 10%);
     }
   }
 }

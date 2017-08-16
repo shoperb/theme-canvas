@@ -113,14 +113,15 @@ section[data-type] {
     padding-top: 100%;
     position: relative;
     overflow: hidden;
-    border: $default_placeholder_border;
     box-sizing: border-box;
+    background: #F2F6FA;
 
     img {
       @include centerize;
     }
     &.with-image {
       border: none;
+      background: none;
 
       img {
         &.portrait {
@@ -133,14 +134,22 @@ section[data-type] {
     }
   }
   h3 {
-    margin: 0;
+    margin: 0 0 10px;
   }
   .product-title {
-    padding: 5px 0;
+    padding: 11px 0 6px;
     text-align: left;
   }
-  .product-vendor {}
-  .product-price {}
+  .product-vendor {
+    color: $text_headings_color;
+  }
+  .product-price {
+    color: $text_headings_color;
+    font-size: calc(#{$headings_font_size} - 20px);
+  }
+  .button {
+    margin: 10px 0;
+  }
   .collection-slideshow {
     position: relative;
 
