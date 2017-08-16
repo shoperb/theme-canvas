@@ -20,7 +20,7 @@
     <div class="grid__item one-whole lap--one-half {{image_class}}">
       <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
         {% if product.image.size-480.url != blank %}
-        <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}"{% if section.settings.enable_image_zoom %} class="lazyOwl" {% endif %}>
+        <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}">
         {% else %}
         <img src="{{'images/placeholder.svg' | asset_url}}">
         {% endif %}
@@ -31,10 +31,6 @@
       {% if product %}
       <h2 class="product-title general-title">{{product.name}}</h2>
 
-      {% if product.vendor and section.settings.show_vendor %}
-      <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
-      {% endif %}
-
       <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
         <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
         <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
@@ -42,16 +38,6 @@
         {% include 'product_form' %}
 
       </div>
-
-      {% if product.description != blank %}
-      <div class="product-description" data-product-description>{{product.description}}</div>
-      {% endif %}
-
-      {% if section.settings.show_social_sharing == true %}
-      <div class="product-share">
-        share product options?
-      </div>
-      {% endif %}
 
       {% comment %} default view for builder {% endcomment %}
 
@@ -66,9 +52,7 @@
         <span class="actual-price money">{{'14.95' | money}}</span>
       </div>
 
-      <div class="product-variants">
-        Variant selectors
-      </div>
+      <div class="product-description">{{'section.default.product_descriontion' | t}}</div>
 
       <div class="product-form grid">
         <div class="product-quantity">
@@ -80,11 +64,6 @@
         </div>
       </div>
 
-      <div class="product-description">{{'section.default.product_descriontion' | t}}</div>
-
-      <div class="product-share">
-        share product options?
-      </div>
       {% endif %}
 
     </div>

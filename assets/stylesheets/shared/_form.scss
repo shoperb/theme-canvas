@@ -10,7 +10,7 @@ button,
   padding: 4px 8px;
   border-radius: 2px;
   background: $form_background;
-  min-height: 28px;
+  min-height: 40px;
   box-sizing: border-box;
   color: $text_body_color;
 }
@@ -23,6 +23,7 @@ button,
   box-sizing: border-box;
   font-weight: 400;
   text-align: center;
+  min-height: 40px;
 
   &.primary {
     padding: 9px 15px;
@@ -61,4 +62,7 @@ button,
 }
 .buttons {
   text-align: center;
+}
+input {
+
 }

@@ -92,7 +92,7 @@
         "title": "Featured products",
         "per_row": 3,
         "rows": 1,
-        "collection": "spring-summer-collection-2017",
+        "collection": "holidadays",
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
@@ -327,13 +327,11 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "ronnie-coleman-testogen-xr",
+        "product": "sadasdsamdd",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
         "show_vendor": true,
-        "enable_image_zoom": false,
-        "show_social_sharing": false,
         "section_width": "limited"
       },
       "id": "product"

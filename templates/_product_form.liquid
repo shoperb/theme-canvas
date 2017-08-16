@@ -1,8 +1,12 @@
 {% assign default_variant = product.variants.first %}
 
-<div class="sku{% if default_variant.sku %} visible{% endif %}" data-variant-sku-container>
+<div class="product-sku{% if default_variant.sku %} visible{% endif %}" data-variant-sku-container>
   {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
 </div>
+
+{% if product.vendor and section.settings.show_vendor %}
+<div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
+{% endif %}
 
 <div class="product-pricing">
   <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
@@ -11,6 +15,10 @@
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
   </span>
 </div>
+
+{% if product.description != blank %}
+<div class="product-description" data-product-description>{{product.description}}</div>
+{% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>

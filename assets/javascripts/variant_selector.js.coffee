@@ -146,7 +146,7 @@ class @VariantSelector
   switchVariantData: (el, opt) ->
     container = el.closest('[data-product-form]').parentNode
     if node = container.querySelector('[data-variant-sku-container]')
-      node.innerHTML = opt.json.sku 
+      node.querySelector('[data-variant-sku]').innerHTML = opt.json.sku
       if opt.json.sku?
         node.classList.add('visible')
       else
