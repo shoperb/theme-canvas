@@ -53,7 +53,7 @@ class @VariantSelector
     selectList = document.createElement("ul");
     selectList.classList.add("variant-option-dropdown", 'variant-class-'+lname)
     div.innerHTML = '<label class="variant-title">' + lname + '</label>'
-    div_selector.innerHTML = '<svg class=\"icon-arrow-down\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"' + container.dataset.icon + '#icon-arrow-down\"></use></svg>'
+    div_selector.innerHTML = '<svg class=\"icon-full-arrow-down\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"' + container.dataset.icon + '#icon-full-arrow-down\"></use></svg>'
     div_selector.appendChild(div_selected)
     div_selector.appendChild(selectList)
     div.appendChild(div_selector)

@@ -7,6 +7,7 @@ header#main-header {
     position: relative;
     @extend .general-content;
     margin: 0 auto;
+    padding: 0;
   }
   .grid__item {
     position: relative;
@@ -14,11 +15,14 @@ header#main-header {
     padding: #{$default_padding}px;
   }
   .logo {
-    text-align: center;
+    text-align: left;
 
     a {
-      font-size: 30px;
-      color: $text_headings_color;
+      font-size: calc(#{$headings_font_size} - 22px);
+      color: $text_link_color;
+      font-family: $headings_font_family,  sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
 
       img {
         display: block;
@@ -40,6 +44,8 @@ header#main-header {
   .search,
   .account,
   .cart {
+    padding-top: 6px !important;
+
     &:hover {
       svg,
       a {
@@ -76,17 +82,22 @@ header#main-header {
   [data-toggle="close"] {
     display: inline-block;
   }
-  .actions {
-    text-align: right;
-    @include breakpoint(desk, 'max') {
-      text-align: center;
-    }
+  .actions-container {
+    padding-right: 0;
 
-    > div:not(.hidden) {
-      display: inline-block;
-      vertical-align: middle;
-      padding: 0 #{$default_padding}px;
-      color: $text_link_color;
+    .actions {
+      text-align: right;
+
+      > div:not(.hidden) {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 3px;
+        color: $text_link_color;
+
+        &.cart-container {
+          padding-right: 0;
+        }
+      }
     }
   }
   .search-container {
@@ -125,9 +136,10 @@ header#main-header {
   position: relative;
   text-align: left;
   cursor: pointer;
+  text-transform: uppercase;
+  padding-right: 10px !important;
 
-  .icon-arrow-down {
-    float: right;
+  .icon-full-arrow-down {
     position: relative;
     top: -2px;
   }
@@ -135,16 +147,17 @@ header#main-header {
     display: none;
     position: absolute;
     z-index: 5;
-    left: 50%;
-    @include transform(translateX(-50%));
+    left: 0;
     padding-top: 10px;
   }
   ul {
     @extend .default-menu;
     background: $layout_header_footer_background_color;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px 0 rgba(27, 22, 38, 0.1);
 
     li {
+      width: 300px;
+
       a {
         padding: #{$default_padding}px;
         display: block;

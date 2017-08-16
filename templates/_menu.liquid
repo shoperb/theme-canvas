@@ -8,7 +8,8 @@
   {% for link in collection %}
   <li{% if link.children.any? %} class="with-child"{% endif %}>
     {% if link.url %}<a href="{{link.url}}"{% if link.style == 'custom' %} target="_blank"{% endif %}>{% else %}<span>{% endif %}{{link.name}}{% if link.url %}</a>{% else %}</span>{% endif %}
-    {% if link.children.any? %}{% include 'icon' with 'arrow-next' %}{% endif %}
+    {% if link.children.any? %}{% include 'icon' with 'full-arrow-down' %}{% endif %}
+    {% if link.children.any? %}{% include 'icon' with 'arrow-narrow' %}{% endif %}
 
     {% if link.children.any? %}
     {% include 'menu' with link %}

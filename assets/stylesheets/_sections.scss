@@ -56,7 +56,7 @@ section[data-type] {
   display: table;
 
   &:not(.full-width) {
-    max-width: calc(1200px - #{2 * $default_padding}px);
+    max-width: #{$limited_max_width}px;
   }
   &[class*="image-align"] {
     background-size: cover;

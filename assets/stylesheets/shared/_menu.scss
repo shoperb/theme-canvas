@@ -1,6 +1,12 @@
 .default-menu {
   @extend .default-list;
 
+  [class^="icon-"] {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    left: -10px;
+  }
   li {
     &:hover {
       background: darken($layout_header_footer_background_color, 5%);
@@ -23,26 +29,17 @@ nav.main-menu {
 
       a,
       span {
-        display: block;
+        display: inline-block;
         padding: #{$default_padding}px;
         color: $text_link_color;
+        text-transform: uppercase;
       }
       &.with-child {
         a,
         span {
           position: relative;
-          padding-right: 25px;
           cursor: pointer;
         }
-      }
-      .icon-arrow-next {
-        @include transform(rotate(90deg));
-        display: inline-block;
-        position: absolute;
-        top: 8px;
-        right: 0;
-        color: $text_link_color;
-        pointer-events: none;
       }
       ul {
         display: none;
@@ -50,7 +47,7 @@ nav.main-menu {
         text-align: left;
         position: absolute;
         z-index: 1;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 0 2px 8px 0 rgba(27, 22, 38, 0.1);
 
         li {
           white-space: nowrap;
@@ -73,17 +70,40 @@ nav.main-menu {
       &:hover {
         background: none;
       }
+      .icon-arrow-narrow {
+        display: none;
+      }
 
       > ul {
-        left: 50%;
-        @include transform(translateX(-50%));
-
         li {
           display: block;
+          width: 300px;
+          position: relative;
+
+          .icon-arrow-narrow {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            left: auto;
+            width: 12px;
+            fill: currentColor;
+          }
+          .icon-full-arrow-down {
+            display: none;
+          }
+
+          a,
+          span {
+            text-transform: capitalize;
+            display: block;
+            font-size: calc(#{$body_font_size} - 2px);
+            padding: 15px 20px;
+          }
         }
         ul {
-          left: 75%;
-          top: 10px;
+          left: 100%;
+          top: 0;
         }
       }
     }
