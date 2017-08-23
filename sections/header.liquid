@@ -100,4 +100,20 @@
       </div>
     </div>
   </div>
+
+  <script>
+    $(document).ready(function() {
+      $("[data-section-id='{{section.id}}'] [data-toggle]").on('click', function() {
+        var val = $(event.target).data('toggle');
+
+        $('[data-item=main]', '#main-header').toggleClass('hidden');
+        if (val === 'close') {
+          $(event.target).parent().toggleClass('hidden');
+        } else {
+          $('.' + val + '-container').toggleClass('hidden');
+        }
+      });
+    });
+  </script>
+
 </header>

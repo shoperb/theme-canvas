@@ -15,4 +15,18 @@
     <div class="text-content general-text" data-theme-editor-setting="text" >{{section.settings.text}}</div>
     {% endif %}
   </div>
+
+  <script>
+    $(document).ready(function() {
+      var selector = "[data-section-id='{{section.id}}'][data-type='location-and-contact'] .map-container";
+
+      $(selector).on('click', function () {
+        $('iframe', this).removeClass('scrolloff'); // set the pointer events true on click
+      });
+
+      $(selector).mouseleave(function () {
+        $('iframe', this).addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+      });
+    });
+  </script>
 </section>
