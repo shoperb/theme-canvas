@@ -1,5 +1,5 @@
 {
-  "name_key": "canvas",
+  "handle": "canvas",
   "default": true,
   "settings": {
     "text_headings_color": "#ff0000",
