@@ -1,4 +1,5 @@
 /*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */
+LEGACY_SUPPORT = true
 
 function embed(parent, svg, target) {
 	// if the target exists
