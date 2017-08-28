@@ -38,7 +38,6 @@
   -o-transition: $transition;
   transition: $transition;
 }
-
 @mixin centerize() {
   position: absolute;
   top: 50%;
@@ -61,4 +60,11 @@
   @else {
     @media screen and (#{$direction}-width: #{$point}px) { @content; }
   }
+}
+@mixin user-select($select: none) {
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+
 }

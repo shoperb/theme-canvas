@@ -7,6 +7,13 @@ h2.product-title {
   opacity: 0;
   pointer-events: none;
 }
+.product-form-title,
+.variant-title {
+  text-transform: capitalize;
+  padding-bottom: 5px;
+  display: block;
+  color: $text_headings_color;
+}
 [data-variant-container] {
   margin: 0 -#{$default_padding}px;
 
@@ -17,11 +24,6 @@ h2.product-title {
     position: relative;
     margin: #{$default_padding}px;
 
-    .variant-title {
-      text-transform: capitalize;
-      padding-bottom: 5px;
-      display: block;
-    }
     .variant-select {
       position: relative;
     }
@@ -168,11 +170,45 @@ h2.product-title {
   .quanity-cart-row {
     .quantity {
       display: inline-block;
+
+      .number-input {
+        position: relative;
+      }
+      input {
+        text-align: center;
+        background: $layout_secondary_background_color;
+        border: none;
+        width: 140px;
+      }
+      [data-quantity] {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        @include user-select;
+
+        svg {
+          margin-left: 6px;
+          pointer-events: none;
+        }
+      }
+      [data-quantity=decrease] {
+        left: 9px;
+      }
+      [data-quantity=increase] {
+        right: 9px;
+      }
     }
     .add-to-cart {
+      display: inline-block;
+      padding-left: 16px;
+
       .button {
+        position: relative;
+        top: -1px;
         margin: 0;
-        display: inline-block;
       }
     }
   }

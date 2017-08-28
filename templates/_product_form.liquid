@@ -38,11 +38,15 @@
 
     <div class="quanity-cart-row clearfix">
       <div class="quantity">
-        <label class="custom-select-title">{{'product.quantity' | t}}</label>
+        <label class="product-form-title">{{'product.quantity' | t}}</label>
         <div class="number-input">
-          <div class="icon-arrow-up-down" data-quantity="decrease"></div>
+          <div data-quantity="decrease">
+            {% include 'icon' with 'minus' %}
+          </div>
           <input id="amount" name="amount" min="1" value="1">
-          <div class="icon-arrow-up-form" data-quantity="increase"></div>
+          <div data-quantity="increase">
+            {% include 'icon' with 'plus' %}
+          </div>
         </div>
       </div>
 

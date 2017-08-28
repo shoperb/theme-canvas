@@ -19,3 +19,15 @@ window.addEventListener("click", (event)->
   for el in document.querySelectorAll('.variant-selector')
     el.classList.remove('open')
 )
+
+for el in document.querySelectorAll('[data-quantity]')
+  el.addEventListener("click", (event)->
+    input = event.target.parentNode.querySelector('#amount')
+    diff = 0
+    if event.target.dataset.quantity == 'decrease' and parseInt(input.value) > 0
+      diff = -1
+    else if event.target.dataset.quantity == 'increase'
+      diff = 1
+
+    input.value = parseInt(input.value) + diff
+  )
