@@ -20,3 +20,11 @@
 .icon-arrow-back {
   @extend .icon-arrow-narrow;
 }
+.icon-plus,
+.icon-close {
+  height: 12px;
+  width: 12px;
+}
+.icon-close {
+  @include transform(rotate(45deg));
+}

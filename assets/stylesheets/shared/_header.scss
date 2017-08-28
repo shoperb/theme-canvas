@@ -55,6 +55,8 @@ header#main-header {
   }
   .search-container,
   .account-container {
+    line-height: 36px;
+
     [data-toggle],
     a {
       &:hover {
@@ -101,37 +103,40 @@ header#main-header {
     }
   }
   .search-container {
+    margin: -2px 0;
+
     form {
       display: inline-block;
 
       .search-form {
         border-radius: 4px 0 0 4px;
+        width: 235px;
       }
       .search-button {
         position: relative;
-        top: 1px;
-        left: -5px;
-        width: 28px;
         line-height: 1;
-        border-left: none;
         border-radius: 0 4px 4px 0;
         cursor: pointer;
+        background: $buttons_primary_button_background_color;
+        color: $buttons_primary_button_text_color;
+        float: right;
+        width: 50px;
 
         .icon-search {
-          width: 14px;
-          height: 14px;
-          position: relative;
-          top: 2px;
+          padding: 0;
         }
         &:hover {
-          svg {
-            color: lighten($text_link_color, 20%);;
-          }
+          background: lighten($buttons_primary_button_background_color, 10%);
+        }
+        &:focus,
+        &:active {
+          background: darken($buttons_primary_button_background_color, 10%);
         }
       }
     }
   }
 }
+
 .language-selector {
   position: relative;
   text-align: left;

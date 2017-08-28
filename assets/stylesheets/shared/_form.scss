@@ -6,13 +6,14 @@ input,
 button,
 .input-field-extender {
   border: 1px solid $layout_border_color;
-  font-size: calc(#{$body_font_size} - 2px);
+  font-size: $body_font_size;
   padding: 4px 8px;
   border-radius: 2px;
   background: $form_background;
-  min-height: 40px;
+  height: 40px;
   box-sizing: border-box;
-  color: $text_body_color;
+  color: $text_headings_color;
+  font-family: $body_font_family, sans-serif;
 }
 .button,
 .disabled-button {
@@ -23,7 +24,7 @@ button,
   box-sizing: border-box;
   font-weight: 400;
   text-align: center;
-  min-height: 40px;
+  height: 40px;
 
   &.primary {
     padding: 9px 15px;
@@ -51,6 +52,11 @@ button,
       background: darken($buttons_secondary_button_background_color, 10%);
     }
   }
+}
+button,
+.button,
+.disabled-button {
+  border: none;
 }
 .disabled-button {
   cursor: pointer;

@@ -111,6 +111,9 @@ class @VariantSelector
   changeSelectedVariantOption: (target)->
     if node = target.closest(".variant-selector").querySelector(".selected")
       node.textContent = target.value
+      for el in target.closest(".variant-selector .variant-option-dropdown").querySelectorAll('li')
+        el.classList.remove('active')
+      target.closest(".variant-selector").querySelector(".variant-option-dropdown li[orig-value='" + target.value + "']").classList.add('active')
 
   markMissingOptions: (target) ->
     form = target.closest("form")
@@ -127,7 +130,7 @@ class @VariantSelector
         continue if ("attribute-" + attr.name) == target.name # comment out if merk on both sides
         attrs[attr.name] ?= []
         attrs[attr.name].push(attr.value) if attrs[attr.name].indexOf(attr.value) == -1
-    
+
     # mark not existing variants
     for name, vals of attrs
       for dropdown_input in form.querySelectorAll("[data-attribute-radio][name='attribute-#{name}']")
