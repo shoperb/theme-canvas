@@ -29,3 +29,8 @@
 .icon-close {
   @include transform(rotate(45deg));
 }
+.icon-quote {
+  width: 46px;
+  height: 36px;
+  margin: 20px 0 0 10px;
+}

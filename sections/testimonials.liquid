@@ -17,9 +17,10 @@
   {% endif %}
 
   {% if section.blocks.size > 0 %}
-  <div class="grid{{slider}}" data-arrow-image="{{'images/icons.svg' | asset_url}}">
+  <div class="grid{{slider}}">
     {% for block in section.blocks %}
     {% if forloop.first != true %}-->{% endif %}<div  data-section-block-id="{{block.id}}" class="testimonial grid__item one-whole {{grid_class}}">
+      <div class="background">{% include 'icon' with 'quote' %}</div>
       <div class="testimonial-quote" data-theme-editor-block-setting='quote'>{{block.settings.quote}}</div>
       {% if block.settings.author %}
       <div class="testimonial-author" data-theme-editor-block-setting='author' >{{block.settings.author}}</div>
@@ -33,8 +34,8 @@
     $(document).ready(function() {
       $("[data-section-id='{{section.id}}'] .testimonial-slider").each(function() {
         $(this).slick({
-          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
-          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
+          dots: true,
+          arrows: false,
           slidesToShow: 3,
           slidesToScroll: 3,
           responsive: [

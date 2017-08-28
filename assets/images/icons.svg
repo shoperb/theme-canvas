@@ -31,6 +31,13 @@
     <rect transform="translate(-6.000000, -6.000000)" x="6" y="11" width="12" height="2" rx="1"></rect>
   </symbol>
 
+  <symbol id="icon-quote" width="23px" height="18px" viewBox="0 0 23 18">
+    <g fill="#F2F6FA">
+      <path d="M4,8 L10,0 L6,0 L0,8 L0,9 L0,18 L10,18 L10,8 L4,8 Z"></path>
+      <path d="M17,8 L23,0 L19,0 L13,8 L13,9 L13,18 L23,18 L23,8 L17,8 Z"></path>
+    </g>
+  </symbol>
+
 
 
 
