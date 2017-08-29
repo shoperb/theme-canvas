@@ -7,13 +7,15 @@
   </div>
 
   <div class="map-description">
-    {% if section.settings.title != blank %}
-    <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
-    {% endif %}
+    <div class="map-details">
+      {% if section.settings.title != blank %}
+      <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
+      {% endif %}
 
-    {% if section.settings.text != blank %}
-    <div class="text-content general-text" data-theme-editor-setting="text" >{{section.settings.text}}</div>
-    {% endif %}
+      {% if section.settings.text != blank %}
+      <div class="text-content general-text" data-theme-editor-setting="text" >{{section.settings.text}}</div>
+      {% endif %}
+    </div>
   </div>
 
   <script>

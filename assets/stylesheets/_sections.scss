@@ -670,9 +670,6 @@ section[data-type=slideshow] {
     vertical-align: middle;
     padding: 90px 0;
 
-    .general-title {
-      font-size: calc(#{$body_font_size} + 6px);
-    }
     .newsletter-form {
       padding: 20px 0 15px;
 
@@ -692,7 +689,7 @@ section[data-type=slideshow] {
   }
 }
 [data-type=location-and-contact] {
-  height: 500px;
+  height: 454px;
   position: relative;
 
   .scrolloff {
@@ -704,16 +701,24 @@ section[data-type=slideshow] {
   .map-description {
     position: absolute;
     background: $layout_background_color;
-    padding: 10px 30px 30px; // top - title padding
-    top: 50%;
-    left: 50px;
-    @include transform(translateY(-50%));
-    width: 300px;
-    text-align: center;
+    padding: 25px 30px;
+    top: 40px;
+    left: 10px;
+    display: table;
+    height: calc(100% - 80px);
+    width: 370px;
     box-sizing: border-box;
     @include breakpoint(palm) {
       width: 100%;
       left: 0;
+    }
+
+    .map-details {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .general-title {
+      text-align: left;
     }
   }
 }
