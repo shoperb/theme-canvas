@@ -141,7 +141,7 @@ section[data-type] {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: #F2F6FA;
+    background: $layout_secondary_background_color;;
 
     img {
       @include centerize;
@@ -215,7 +215,7 @@ section[data-type] {
   .grid__item {
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #F2F6FA;
+    background-color: $layout_secondary_background_color;;
 
     &.with-background {
       background-size: cover;
@@ -271,7 +271,7 @@ section[data-type] {
     .image {
       width: 100%;
       text-align: center;
-      background-color: #F2F6FA;
+      background-color: $layout_secondary_background_color;;
       padding: 100px 0;
     }
     &.with-image {
@@ -413,7 +413,7 @@ section[data-type=slideshow] {
       position: relative;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #F2F6FA;
+      background-color: $layout_secondary_background_color;;
 
       h2 {
         @include centerize;
@@ -436,7 +436,7 @@ section[data-type=slideshow] {
 
     .image {
       text-align: center;
-      background-color: #F2F6FA;
+      background-color: $layout_secondary_background_color;
       padding: 100px 0;
 
       &.with-image {
@@ -601,7 +601,7 @@ section[data-type=slideshow] {
       height: 258px;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #F2F6FA;
+      background-color: $layout_secondary_background_color;
     }
   }
 }
@@ -761,13 +761,13 @@ section[data-type=slideshow] {
       }
       &.custom_image {
         text-align: center;
-        border: $default_placeholder_border;
-        padding: 50px 0;
+        padding-top: 100%;
         box-sizing: border-box;
+        background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
 
         &.with-image {
-          border: none;
           padding: 0;
+          background: none;
 
           img {
             width: 100%;
@@ -776,6 +776,13 @@ section[data-type=slideshow] {
         }
       }
       &.custom_video {
+        background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+        padding-top: 100%;
+
+        &.with-video {
+          background: none;
+          padding: 0;
+        }
         iframe {
           width: 100%;
         }
@@ -795,15 +802,18 @@ section[data-type=slideshow] {
         }
       }
       &.custom_product {
+        margin: -10px;
+
         .image {
           text-align: center;
-          border: $default_placeholder_border;
-          padding: 50px 0;
           box-sizing: border-box;
+          background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+          padding-top: 100%;
 
           &.with-image {
             border: none;
             padding: 0;
+            background: none;
 
             img {
               width: 100%;
@@ -820,6 +830,9 @@ section[data-type=slideshow] {
         position: relative;
         padding-bottom: 100%;
 
+        .opacity-image {
+          background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+        }
         a,
         .collection {
           position: absolute;

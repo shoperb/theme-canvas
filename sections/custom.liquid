@@ -38,7 +38,7 @@
     {% else %}
     <div class="custom-section {{block.type}}">
       <div class="collection opacity-image-container">
-        <div class="opacity-image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
+        <div class="opacity-image"></div>
         <h3 class="general-title">{{'section.default.collection.name' | t}}</h3>
       </div>
     </div>
@@ -55,8 +55,6 @@
     <div class="custom-section {{block.type}}{% if block.settings.image != blank %} with-image{% endif %}">
       {% if block.settings.image != blank %}
       <img src="{{block.settings.image}}">
-      {% else %}
-      <img src="{{'images/placeholder.svg' | asset_url}}">
       {% endif %}
     </div>
 
@@ -65,25 +63,27 @@
     {% assign product = products[block.settings.product] %}
     {% assign default_variant = product.variants.first %}
 
-    <div class="custom-section product-container {{block.type}}" itemtype="http://schema.org/Product">
+    <div class="custom-section product-container {{block.type}} grid" itemtype="http://schema.org/Product">
       <meta itemprop="url" content="{{product.url}}">
       <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-      <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
-        {% if product.image.size-480.url != blank %}
-        <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
-        {% else %}
-        <img src="{{'images/placeholder.svg' | asset_url}}">
-        {% endif %}
-      </div>
+      <div class="grid__item palm--one-whole lap--one-whole desk--one-half">
+        <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
+          {% if product.image.size-480.url != blank %}
+          <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
+          {% endif %}
+        </div>
+      </div><!--
 
-      <h2 class="general-title">{{product.name}}</h2>
+      --><div class="custom-product-content grid__item palm--one-whole lap--one-whole desk--one-half">
+        <h2 class="general-title">{{product.name}}</h2>
 
-      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
-        <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-        <div>
-          {% include 'product_form' %}
+        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
+          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+          <div>
+            {% include 'product_form' %}
+          </div>
         </div>
       </div>
     </div>
@@ -102,17 +102,13 @@
 
 
       {% when 'custom_video' %}
-    <div class="custom-section {{block.type}}">
+    <div class="custom-section {{block.type}}{% if block.settings.video != blank %} with-video{% endif %}">
       {% if block.settings.video != blank %}
       {% if block.settings.video contains 'vimeo.com' %}
       <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       {% elsif block.settings.video contains 'youtube.com' %}
       <iframe src="{{block.settings.video}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
       {% endif %}
-      {% else %}
-      <div class="video-placeholder-container">
-        <div class="video-placeholder"></div>
-      </div>
       {% endif %}
     </div>
 

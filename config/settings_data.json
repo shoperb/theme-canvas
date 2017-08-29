@@ -559,8 +559,8 @@
           "type": "custom_text",
           "settings": {
             "section_width": 33,
-            "title": "Location",
-            "text": "Opening hours: from AM to PM",
+            "title": "Custom titme",
+            "text": "The place where you can just... just show the custom content",
             "vertical_alignment": "bottom",
             "horizontal_alignment": "center"
           }
