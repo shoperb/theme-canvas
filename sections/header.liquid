@@ -17,12 +17,12 @@
     --><div class="grid__item palm--one-whole{% if section.settings.logo_alignment != 'center' %} desk--three-quarters{% endif %}">
       <div class="grid">
         {% if menu.links.size != 0 and menu != blank %}
-        <div class="grid__item palm--one-whole desk--three-quarters">
+        <div class="grid__item palm--one-whole desk--three-fifths">
           <nav role="navigation" class="main-menu">
             {% include 'menu' with menu %}
           </nav>
         </div><!--
-        -->{% endif %}<div class="grid__item palm--one-whole {% if menu.links.size == 0 or menu == blank %}desk--one-whole{% else %}desk--one-quarter{% endif %} actions-container">
+        -->{% endif %}<div class="grid__item palm--one-whole {% if menu.links.size == 0 or menu == blank %}desk--one-whole{% else %}desk--two-fifths{% endif %} actions-container">
           <div class="actions">
             {% include 'language_switcher' %}
             <div class="search" data-item="main" data-toggle="search">
