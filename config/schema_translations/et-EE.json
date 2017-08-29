@@ -49,6 +49,9 @@
           "contact_page": {
             "title": "Kontakti leht"
           },
+          "title": {
+            "title": "Pealkiri"
+          },
           "allow_social_icons": {
             "title": "Näita sotsiaalikoone"
           },

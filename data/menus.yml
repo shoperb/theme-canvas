@@ -1,0 +1,33 @@
+---
+- id: 89
+  name: Footer
+  handle: footer
+  translations:
+    en:
+      name: Footer
+    et:
+      name: Footer
+- id: 68
+  name: Header
+  handle: header
+  translations:
+    en:
+      name: Header
+    et:
+      name: Header
+- id: 67
+  name: Informatsioon
+  handle: informatsioon
+  translations:
+    en:
+      name: Information
+    et:
+      name: Informatsioon
+- id: 66
+  name: Klienditeenindus
+  handle: klienditeenindus
+  translations:
+    en:
+      name: Custom Service
+    et:
+      name: Klienditeenindus

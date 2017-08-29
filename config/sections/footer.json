@@ -40,6 +40,11 @@
         },
         {
           "type": "text",
+          "handle": "title",
+          "default": "Follow us"
+        },
+        {
+          "type": "text",
           "handle": "social_facebook",
           "default": true
         },

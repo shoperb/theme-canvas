@@ -769,7 +769,7 @@ section[data-type=slideshow] {
         }
       }
       &.custom_product {
-        margin: -10px;
+        margin: -#{$default_padding}px;
 
         .image {
           text-align: center;

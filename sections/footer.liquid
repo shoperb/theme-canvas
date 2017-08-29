@@ -4,64 +4,66 @@
 <footer class="main-footer" data-section-id="{{section.id}}">
   <div class="general-content{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
     <div class="content-spacer">
+
+      {% if section.settings.allow_payment_icons %}
+      <section data-type="logo-list" class="section-height-small full-width">
+        <div class="background"></div>
+
+        <ul class="payment-icons">
+          {% if section.settings.payment_seb %}
+          <li class="payment-seb"></li>
+          {% endif %}
+          {% if section.settings.payment_swedbank %}
+          <li class="payment-swedbank"></li>
+          {% endif %}
+          {% if section.settings.payment_nordea %}
+          <li class="payment-nordea"></li>
+          {% endif %}
+          {% if section.settings.payment_danske %}
+          <li class="payment-danske"></li>
+          {% endif %}
+          {% if section.settings.payment_lhv %}
+          <li class="payment-lhv"></li>
+          {% endif %}
+          {% if section.settings.payment_paypal %}
+          <li class="payment-paypal"></li>
+          {% endif %}
+          {% if section.settings.payment_visa %}
+          <li class="payment-visa"></li>
+          {% endif %}
+          {% if section.settings.payment_mastercard %}
+          <li class="payment-mastercard"></li>
+          {% endif %}
+          {% if section.settings.payment_maestro %}
+          <li class="payment-maestro"></li>
+          {% endif %}
+        </ul>
+      </section>
+      {% endif %}
+
       <div class="grid footer">
         {% if menu %}
-        <div class="grid__item palm-one-whole{% if !contact %} one-half{% endif %}">
+        <div class="grid__item palm-one-whole{% if section.settings.allow_social_icons %} three-quarters{% endif %} footer-menu">
           {% include 'menu' with menu %}
         </div>{% endif %}<!--
 
-        -->{% if contact %}<div class="grid__item palm-one-whole {% if !menu %} one-half{% endif %} contact">
-          <h3 class="general-title">{{contact.name}}</h3>
-          {{contact.content}}
+        --><div class="grid__item palm-one-whole {% if menu %} one-quarter{% endif %}">
+          <h2 class="general-title social-title">{{section.settings.title}}</h2>
+          {% if section.settings.allow_social_icons %}
+          <div class="social-icons">
+            {% if section.settings.social_facebook != blank %}
+            <a href="{{section.settings.social_facebook}}" target="_blank" class="icon-facebook">{% include 'icon' with 'facebook' %}</a>
+            {% endif %}
+            {% if section.settings.social_twitter != blank %}
+            <a href="{{section.settings.social_twitter}}" target="_blank" class="icon-twitter">{% include 'icon' with 'twitter' %}</a>
+            {% endif %}
+            {% if section.settings.social_instagram != blank %}
+            <a href="{{section.settings.social_instagram}}" target="_blank" class="icon-instagram">{% include 'icon' with 'instagram' %}</a>
+            {% endif %}
+          </div>
         </div>
         {% endif %}
       </div>
-
-      {% if section.settings.allow_social_icons %}
-      <div class="social-icons">
-        {% if section.settings.social_facebook != blank %}
-        <a href="{{section.settings.social_facebook}}" target="_blank" class="icon-facebook">{% include 'icon' with 'facebook' %}</a>
-        {% endif %}
-        {% if section.settings.social_twitter != blank %}
-        <a href="{{section.settings.social_twitter}}" target="_blank" class="icon-twitter">{% include 'icon' with 'twitter' %}</a>
-        {% endif %}
-        {% if section.settings.social_instagram != blank %}
-        <a href="{{section.settings.social_instagram}}" target="_blank" class="icon-instagram">{% include 'icon' with 'instagram' %}</a>
-        {% endif %}
-      </div>
-      {% endif %}
-
-      {% if section.settings.allow_payment_icons %}
-      <div class="payment-icons">
-        {% if section.settings.payment_seb %}
-        <div class="payment-seb"></div>
-        {% endif %}
-        {% if section.settings.payment_swedbank %}
-        <div class="payment-swedbank"></div>
-        {% endif %}
-        {% if section.settings.payment_nordea %}
-        <div class="payment-nordea"></div>
-        {% endif %}
-        {% if section.settings.payment_danske %}
-        <div class="payment-danske"></div>
-        {% endif %}
-        {% if section.settings.payment_lhv %}
-        <div class="payment-lhv"></div>
-        {% endif %}
-        {% if section.settings.payment_paypal %}
-        <div class="payment-paypal"></div>
-        {% endif %}
-        {% if section.settings.payment_visa %}
-        <div class="payment-visa"></div>
-        {% endif %}
-        {% if section.settings.payment_mastercard %}
-        <div class="payment-mastercard"></div>
-        {% endif %}
-        {% if section.settings.payment_maestro %}
-        <div class="payment-maestro"></div>
-        {% endif %}
-      </div>
-      {% endif %}
 
       <div class="grid">
         <div class="grid__item one-whole shoperb">

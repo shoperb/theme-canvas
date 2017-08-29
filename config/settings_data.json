@@ -27,7 +27,7 @@
       "settings": {
         "logo_alignment": "left",
         "logo_max_width": "100",
-        "menu": "main-menu",
+        "menu": "header",
         "section_width": "limited"
       },
       "id": "header"
@@ -35,12 +35,12 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu": "main-menu",
-        "contact_page": "who-are-are",
+        "menu": "footer",
         "allow_social_icons": true,
+        "title": "Follow us",
         "social_facebook": "http://www.facebook.com",
-        "social_twitter": "",
-        "social_instagram": "",
+        "social_twitter": "http://www.twitter.com",
+        "social_instagram": "http://www.instagram.com",
         "allow_payment_icons": true,
         "payment_seb": true,
         "payment_swedbank": true,

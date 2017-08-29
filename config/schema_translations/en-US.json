@@ -49,6 +49,9 @@
           "contact_page": {
             "title": "Contact page"
           },
+          "title": {
+            "title": "Title"
+          },
           "allow_social_icons": {
             "title": "Show payment icons"
           },
