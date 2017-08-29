@@ -389,6 +389,13 @@
               "heading": {
                 "title": "Heading"
               },
+              "text_style": {
+                "title": "Text color style",
+                "options": {
+                  "light": "Light",
+                  "dark": "Dark"
+                }
+              },
               "subheading": {
                 "title": "Subheading"
               }

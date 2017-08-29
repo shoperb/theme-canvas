@@ -391,6 +391,13 @@
               "heading": {
                 "title": "Pealkiri"
               },
+              "text_style": {
+                "title": "Teksti värvi stiil",
+                "options": {
+                  "light": "Hele",
+                  "dark": "Tume"
+                }
+              },
               "subheading": {
                 "title": "Tekst"
               }
