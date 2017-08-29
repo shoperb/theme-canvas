@@ -31,7 +31,8 @@ section[data-type] {
 }
 
 .section-height {
-  &.x-small {
+  &.x-small,
+  &.extra-small {
     height: 125px;
   }
   &.small {
@@ -43,7 +44,8 @@ section[data-type] {
   &.large {
     height: 650px;
   }
-  &.x-large {
+  &.x-large,
+  &.extra-large {
     height: 775px;
   }
 }

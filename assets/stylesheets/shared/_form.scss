@@ -25,9 +25,10 @@ button,
   font-weight: 400;
   text-align: center;
   height: 40px;
+  line-height: 42px;
+  padding: 0 15px;
 
   &.primary {
-    padding: 9px 15px;
     background: $buttons_primary_button_background_color;
     color: $buttons_primary_button_text_color;
 
@@ -40,7 +41,6 @@ button,
     }
   }
   &.secondary {
-    padding: 7px 12px;
     background: $buttons_secondary_button_background_color;
     color: $buttons_secondary_button_text_color;
 
@@ -65,7 +65,4 @@ button,
 }
 .buttons {
   text-align: center;
-}
-input {
-
 }

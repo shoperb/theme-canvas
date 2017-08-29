@@ -72,7 +72,7 @@
     {
       "type": "richtext",
       "handle": "text",
-      "default": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>"
+      "default": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>"
     },
     {
       "type": "select",
