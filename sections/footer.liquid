@@ -47,7 +47,7 @@
           {% include 'menu' with menu %}
         </div>{% endif %}<!--
 
-        --><div class="grid__item palm-one-whole {% if menu %} one-quarter{% endif %}">
+        --><div class="grid__item palm-one-whole{% if menu %} one-quarter{% endif %} social-container">
           <h2 class="general-title social-title">{{section.settings.title}}</h2>
           {% if section.settings.allow_social_icons %}
           <div class="social-icons">

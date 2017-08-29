@@ -42,25 +42,30 @@ footer.main-footer {
   .footer {
     padding: 10px 0 38px;
   }
-  .social-title {
-    font-size: $body_font_size;
-    text-transform: uppercase;
-    text-align: left;
-  }
-  .social-icons {
-    margin-left: -11px;
+  .social-container {
+    padding: #{$default_padding}px;
 
-    a {
-      display: inline-block;
-      padding: 7px 13px;
-      color: $text_link_color;
+    .social-title {
+      font-size: $body_font_size;
+      font-family: $body_font_family;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    .social-icons {
+      margin-left: -11px;
 
-      svg {
-        height: 22px;
-        width: 22px;
-      }
-      &:hover {
-        color: lighten($text_link_color, 20%);
+      a {
+        display: inline-block;
+        padding: 7px 13px;
+        color: $text_link_color;
+
+        svg {
+          height: 22px;
+          width: 22px;
+        }
+        &:hover {
+          color: lighten($text_link_color, 20%);
+        }
       }
     }
   }

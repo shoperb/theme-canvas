@@ -57,8 +57,8 @@ $(document).ready(function() {
 
   // handleMapEvents();
   // setImageType();
-  // slideVideoResize();
-  // customVideoSize();
+  slideVideoResize();
+  customVideoSize();
 });
 window.onresize = function() {
   slideVideoResize();
