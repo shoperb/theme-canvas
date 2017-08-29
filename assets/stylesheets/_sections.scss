@@ -650,15 +650,45 @@ section[data-type=slideshow] {
   }
 }
 [data-type=newsletter] {
-  background: $layout_secondary_background_color;
-  height: 300px;
+  position: relative;
   text-align: center;
   display: table;
   width: 100%;
 
+  .background {
+    position: absolute;
+    top: #{3 * $default_padding}px;
+    right: 0;
+    bottom: #{3 * $default_padding}px;
+    left: 0;
+    background: $layout_secondary_background_color;
+  }
+
   .newsletter-container {
+    position: relative;
     display: table-cell;
     vertical-align: middle;
+    padding: 90px 0;
+
+    .general-title {
+      font-size: calc(#{$body_font_size} + 6px);
+    }
+    .newsletter-form {
+      padding: 20px 0 15px;
+
+      input[type=text] {
+        border: none;
+        width: 235px;
+        text-transform: capitalize;
+      }
+      button,
+      input[type=submit] {
+        @extend .button.primary;
+        font-size: calc(#{$body_font_size} - 2px);
+        text-transform: capitalize;
+        padding: 9px 30px;
+      }
+    }
   }
 }
 [data-type=location-and-contact] {
