@@ -17,6 +17,8 @@
       <div class="text-column">
         {% if block.settings.image != blank %}
         <img src="{{block.settings.image}}">
+        {% else %}
+        <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
         {% endif %}
 
         {% if block.settings.title != blank %}
