@@ -130,6 +130,7 @@
           "type": "image",
           "settings": {
             "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
+            "text_style": "light",
             "image_alignment": "top-right",
             "link": "http://www.google.com",
             "caption": "asdasd"
@@ -139,6 +140,7 @@
           "type": "image",
           "settings": {
             "image_alignment": "middle",
+            "text_style": "dark",
             "caption": "No caption! Haha, just kidding"
           }
         }

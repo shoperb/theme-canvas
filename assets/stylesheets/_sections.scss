@@ -270,6 +270,13 @@ section[data-type] {
         color: #ffffff;
       }
     }
+    .general-title {
+      color: $image_overlay_light_color;
+
+      &.text-dark {
+        color: $image_overlay_dark_color;
+      }
+    }
     &.opacity-image-container {
       .opacity-image {
         opacity: 1;

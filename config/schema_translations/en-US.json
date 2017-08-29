@@ -250,6 +250,13 @@
               "caption": {
                 "title": "Caption"
               },
+              "text_style": {
+                "title": "Text color style",
+                "options": {
+                  "light": "Light",
+                  "dark": "Dark"
+                }
+              },
               "image_alignment": {
                 "title": "Alignment",
                 "options": {

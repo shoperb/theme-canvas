@@ -231,6 +231,13 @@
               "limited": "Piiratud sisuosaga"
             }
           },
+          "text_style": {
+            "title": "Teksti värvi stiil",
+            "options": {
+              "light": "Hele",
+              "dark": "Tume"
+            }
+          },
           "section_height": {
             "title": "Galerii kõrgus",
             "options": {

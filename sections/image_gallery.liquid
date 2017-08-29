@@ -21,7 +21,7 @@
       <{% if block.settings.link != blank %}a href="{{block.settings.link}}"{{outer_url}}{% else %}div{% endif %} class="caption-container">
         {% if block.settings.caption %}
         <span data-theme-editor-block-setting="caption">
-          <h3 class="general-title">{{block.settings.caption}}</h3>
+          <h3 class="general-title{% if block.settings.text_style == 'dark' %} text-dark{% endif %}">{{block.settings.caption}}</h3>
         </span>
         {% endif %}
       </{% if block.settings.link != blank %}a{% else %}div{% endif %}>
