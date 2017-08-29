@@ -49,7 +49,7 @@ header#main-header {
     &:hover {
       svg,
       a {
-        color: lighten($text_link_color, 20%);;
+        color: lighten($text_link_color, 20%);
       }
     }
   }
@@ -60,7 +60,7 @@ header#main-header {
     [data-toggle],
     a {
       &:hover {
-        color: lighten($text_link_color, 20%);;
+        color: lighten($text_link_color, 20%);
       }
     }
   }
