@@ -22,7 +22,7 @@
       {% assign collection = collections[block.settings.collection] %}
 
       <a class="collection opacity-image-container" href="{{collection.url}}">
-        <div class="opacity-image" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
+        <div class="opacity-image{% if collection.image %} with-image{% endif %}" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
         <h2 class="general-title">{{collection.name}}</h2>
       </a>
     </div>{% if forloop.last != true %}<!--{% endif %}{% if diff > 0 %}<!--{% endif %}
@@ -40,4 +40,16 @@
     {% endif %}
 
   </div>
+
+  <script>
+    $(document).ready(function() {
+      $("[data-section-id='{{section.id}}'] .product .image img").each(function() {
+        if ($(this).width() > $(this).height()){
+          $(this).addClass("landscape");
+        } else {
+          $(this).addClass("portrait");
+        }
+      });
+    });
+  </script>
 </section>

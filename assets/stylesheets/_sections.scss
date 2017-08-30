@@ -431,6 +431,9 @@ section[data-type=slideshow] {
     .grid__item {
       padding: #{$default_padding}px;
     }
+    .opacity-image.with-image {
+      background-size: cover;
+    }
     .collection {
       display: block;
       width: 100%;
