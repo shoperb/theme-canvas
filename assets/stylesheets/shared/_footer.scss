@@ -1,6 +1,11 @@
 footer.main-footer {
   background: $layout_header_footer_background_color;
 
+  .content-spacer {
+    @extend .general-content;
+    margin: 0 auto !important;
+    padding: 0;
+  }
   > .general-content {
     padding-top: 0;
     padding-bottom: 0;

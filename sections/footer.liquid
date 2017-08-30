@@ -3,12 +3,11 @@
 
 <footer class="main-footer" data-section-id="{{section.id}}">
   <div class="general-content{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
-    <div class="content-spacer">
+    {% if section.settings.allow_payment_icons %}
+    <section data-type="logo-list" class="section-height-small full-width">
+      <div class="background"></div>
 
-      {% if section.settings.allow_payment_icons %}
-      <section data-type="logo-list" class="section-height-small full-width">
-        <div class="background"></div>
-
+      <div class="content-spacer">
         <ul class="payment-icons">
           {% if section.settings.payment_seb %}
           <li class="payment-seb"></li>
@@ -38,10 +37,12 @@
           <li class="payment-maestro"></li>
           {% endif %}
         </ul>
-      </section>
-      {% endif %}
+      </div>
+    </section>
+    {% endif %}
 
-      <div class="grid footer">
+    <div class="grid footer">
+      <div class="content-spacer">
         {% if menu %}
         <div class="grid__item palm-one-whole{% if section.settings.allow_social_icons %} three-quarters{% endif %} footer-menu">
           {% include 'menu' with menu %}
@@ -64,8 +65,10 @@
         </div>
         {% endif %}
       </div>
+    </div>
 
-      <div class="grid copyright-row">
+    <div class="grid copyright-row">
+      <div class="content-spacer">
         <div class="grid__item one-half copyright">
           © {{"now" | date: "%Y"}} {{shop.name}}. {{'section.footer.all_right_reserved' | translate}}
         </div><!--

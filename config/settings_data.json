@@ -28,7 +28,7 @@
         "logo_alignment": "left",
         "logo_max_width": "100",
         "menu": "header",
-        "section_width": "limited"
+        "section_width": "full-width"
       },
       "id": "header"
     },
@@ -51,7 +51,7 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "limited"
+        "section_width": "full-width"
       },
       "id": "footer"
     },
