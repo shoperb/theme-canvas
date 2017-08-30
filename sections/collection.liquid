@@ -35,13 +35,7 @@
         <meta itemprop="url" content="{{url.current_url}}">
         <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-        {% assign product_image = 'images/placeholder.svg' | asset_url %}
-        {% if product.image.size-480.url != blank %}
-        {% assign product_image = product.image.size-480.url %}
-        {% endif %}
-        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}">
-          <img src="{{product_image}}" alt="{{product.name}}">
-        </div>
+        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}" style="background-image: {% if product.image.size-480.url %}url('{{product.image.size-480.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
 
         <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 
@@ -71,9 +65,7 @@
     {% for product in (1..limit) %}
     {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       <div class="product fake-link">
-        <div class="image">
-          <img src="{{'images/placeholder.svg' | asset_url}}">
-        </div>
+        <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
 
         <h2 class="product-title general-title">{{'section.default.product_name' | t}}</h2>
 
@@ -103,7 +95,9 @@
           lazyLoad: 'ondemand'
         });
       });
+      {% comment %}
       setImageType();
+      {% endcomment %}
     });
   </script>
 

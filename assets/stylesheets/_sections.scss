@@ -176,23 +176,14 @@ section[data-type] {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: $layout_secondary_background_color;;
+    background: $layout_secondary_background_color no-repeat center;
 
     img {
       @include centerize;
     }
     &.with-image {
       border: none;
-      background: none;
-
-      img {
-        &.portrait {
-          width: 100%;
-        }
-        &.landscape {
-          height: 100%;
-        }
-      }
+      background-size: cover;
     }
   }
   h3 {
