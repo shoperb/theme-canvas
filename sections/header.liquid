@@ -1,6 +1,6 @@
 {% assign menu = menus[section.settings.menu] %}
 
-<header id="main-header" class="grid{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" data-section-id="{{section.id}}">
+<header id="main-header" class="grid{% if section.settings.section_width == 'full-width' %} full-width{% endif %} header-alignment-{{section.settings.logo_alignment}}" data-section-id="{{section.id}}">
   <div class="content-spacer{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
 
     <div class="grid__item palm--one-whole{% if section.settings.logo_alignment != 'center' %} desk--one-quarter{% endif %}">
@@ -17,12 +17,12 @@
     --><div class="grid__item palm--one-whole{% if section.settings.logo_alignment != 'center' %} desk--three-quarters{% endif %}">
       <div class="grid">
         {% if menu.links.size != 0 and menu != blank %}
-        <div class="grid__item palm--one-whole desk--three-fifths">
+        <div class="grid__item palm--one-whole desk--{% if section.settings.section_width == 'limited' %}three-fifths{% else %}seven-tenths{% endif %}">
           <nav role="navigation" class="main-menu">
             {% include 'menu' with menu %}
           </nav>
         </div><!--
-        -->{% endif %}<div class="grid__item palm--one-whole {% if menu.links.size == 0 or menu == blank %}desk--one-whole{% else %}desk--two-fifths{% endif %} actions-container">
+        -->{% endif %}<div class="grid__item palm--one-whole desk--{% if menu.links.size == 0 or menu == blank %}one-whole{% else %}{% if section.settings.section_width == 'limited' %}two-fifths{% else %}three-tenths{% endif %}{% endif %} actions-container">
           <div class="actions">
             {% include 'language_switcher' %}
             <div class="search" data-item="main" data-toggle="search">

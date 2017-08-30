@@ -16,6 +16,9 @@ header#main-header {
   }
   .logo {
     text-align: left;
+    @include breakpoint(desk) {
+      text-align: center;
+    }
 
     a {
       font-size: calc(#{$headings_font_size} - 22px);
@@ -23,10 +26,23 @@ header#main-header {
       font-family: $headings_font_family,  sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
+      display: inline-block;
 
       img {
         display: block;
-        margin: 0 auto;
+      }
+    }
+  }
+  &.header-alignment-center {
+    .logo {
+      text-align: center;
+    }
+    nav.main-menu ul {
+      text-align: left;
+      margin-left: -#{$default_padding}px;
+      @include breakpoint(desk) {
+        text-align: center;
+        margin-left: 0;
       }
     }
   }
@@ -86,9 +102,18 @@ header#main-header {
   }
   .actions-container {
     padding-right: 0;
+    height: 36px;
 
     .actions {
       text-align: right;
+      min-width: 320px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include breakpoint(desk) {
+        text-align: center;
+        position: relative;
+      }
 
       > div:not(.hidden) {
         display: inline-block;
