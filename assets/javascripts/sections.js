@@ -56,7 +56,7 @@ $(document).ready(function() {
   // });
 
   // handleMapEvents();
-  setImageType();
+  // setImageType();
   slideVideoResize();
   customVideoSize();
 });
@@ -77,15 +77,15 @@ function customVideoSize() {
     $(this).height($(this).width() * 360 / 640);
   });
 }
-function setImageType() {
-  $('[data-type=collection] .product .image img').each(function() {
-    if ($(this).width() > $(this).height()){
-      $(this).addClass('landscape');
-    } else {
-      $(this).addClass('portrait');
-    }
-  });
-}
+// function setImageType() {
+//   $('[data-type=collection] .product .image img').each(function() {
+//     if ($(this).width() > $(this).height()){
+//       $(this).addClass('landscape');
+//     } else {
+//       $(this).addClass('portrait');
+//     }
+//   });
+// }
 // function handleMapEvents() {
 //   var selector = '[data-type="location-and-contact"] .map-container';
 

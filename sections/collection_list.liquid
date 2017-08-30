@@ -40,16 +40,4 @@
     {% endif %}
 
   </div>
-
-  <script>
-    $(document).ready(function() {
-      $("[data-section-id='{{section.id}}'] .product .image img").each(function() {
-        if ($(this).width() > $(this).height()){
-          $(this).addClass("landscape");
-        } else {
-          $(this).addClass("portrait");
-        }
-      });
-    });
-  </script>
 </section>
