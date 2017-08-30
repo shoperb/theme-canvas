@@ -51,7 +51,7 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "full-width"
+        "section_width": "limited"
       },
       "id": "footer"
     },
