@@ -467,28 +467,6 @@ section[data-type=slideshow] {
         }
       }
     }
-    .product-title {
-      padding: 0;
-      text-align: left;
-      font-size: calc(#{$headings_font_size} - 14px);
-    }
-    .product-vendor {
-      color: $text_headings_color;
-    }
-    .product-sku {
-      font-size: calc(#{$body_font_size} - 4px);
-    }
-    .product-pricing {
-      color: $text_headings_color;
-      font-size: calc(#{$headings_font_size} - 20px);
-    }
-    .product-description {
-      padding: 6px 0 17px;
-
-      p {
-        margin: 0;
-      }
-    }
   }
 }
 [data-type=testimonials] {

@@ -145,11 +145,32 @@ h2.product-title {
   }
 }
 .product-container {
-  .sku {
+  .product-title {
+    padding: 0;
+    text-align: left;
+    font-size: calc(#{$headings_font_size} - 14px);
+  }
+  .product-vendor {
+    color: $text_headings_color;
+    padding: 10px 0;
+  }
+  .product-sku {
+    font-size: calc(#{$body_font_size} - 4px);
     display: none;
 
     &.visible {
       display: block;
+    }
+  }
+  .product-pricing {
+    color: $text_headings_color;
+    font-size: calc(#{$headings_font_size} - 20px);
+  }
+  .product-description {
+    padding: 10px 0;
+
+    p {
+      margin: 0;
     }
   }
   .product-pricing {
@@ -168,6 +189,8 @@ h2.product-title {
     }
   }
   .quanity-cart-row {
+    margin: 10px 0;
+
     .quantity {
       display: inline-block;
 
