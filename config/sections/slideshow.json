@@ -140,21 +140,21 @@
           "type": "richtext",
           "handle": "subheading"
         },
-        {
-          "type": "select",
-          "handle": "text_style",
-          "default": "light",
-          "options": [
-            {
-              "value": "light",
-              "handle": "light"
-            },
-            {
-              "value": "dark",
-              "handle": "dark"
-            }
-          ]
-        },
+//        {
+//          "type": "select",
+//          "handle": "text_style",
+//          "default": "light",
+//          "options": [
+//            {
+//              "value": "light",
+//              "handle": "light"
+//            },
+//            {
+//              "value": "dark",
+//              "handle": "dark"
+//            }
+//          ]
+//        },
         {
           "type": "text",
           "handle": "slide_link"
@@ -179,21 +179,21 @@
         {
           "type": "richtext",
           "handle": "subheading"
-        },
-        {
-          "type": "select",
-          "handle": "text_style",
-          "default": "light",
-          "options": [
-            {
-              "value": "light",
-              "handle": "light"
-            },
-            {
-              "value": "dark",
-              "handle": "dark"
-            }
-          ]
+//        },
+//        {
+//          "type": "select",
+//          "handle": "text_style",
+//          "default": "light",
+//          "options": [
+//            {
+//              "value": "light",
+//              "handle": "light"
+//            },
+//            {
+//              "value": "dark",
+//              "handle": "dark"
+//            }
+//          ]
         }
       ]
     }

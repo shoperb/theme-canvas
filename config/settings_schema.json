@@ -73,12 +73,16 @@
           "type": "subcategory",
           "handle": "image_overlay",
           "settings": [
+//            {
+//              "handle": "image_overlay_light_color",
+//              "type": "color"
+//            },
+//            {
+//              "handle": "image_overlay_dark_color",
+//              "type": "color"
+//            },
             {
-              "handle": "image_overlay_light_color",
-              "type": "color"
-            },
-            {
-              "handle": "image_overlay_dark_color",
+              "handle": "image_overlay_color",
               "type": "color"
             },
             {

@@ -129,13 +129,13 @@
           "text": {
             "title": "Alapealkiri"
           },
-          "text_style": {
-            "title": "Teksti värvi stiil",
-            "options": {
-              "light": "Hele",
-              "dark": "Tume"
-            }
-          },
+//          "text_style": {
+//            "title": "Teksti värvi stiil",
+//            "options": {
+//              "light": "Hele",
+//              "dark": "Tume"
+//            }
+//          },
           "section_height": {
             "title": "Sektsiooni kõrgus",
             "options": {
@@ -231,13 +231,13 @@
               "limited": "Piiratud sisuosaga"
             }
           },
-          "text_style": {
-            "title": "Teksti värvi stiil",
-            "options": {
-              "light": "Hele",
-              "dark": "Tume"
-            }
-          },
+//          "text_style": {
+//            "title": "Teksti värvi stiil",
+//            "options": {
+//              "light": "Hele",
+//              "dark": "Tume"
+//            }
+//          },
           "section_height": {
             "title": "Galerii kõrgus",
             "options": {
@@ -370,13 +370,13 @@
               "subheading": {
                 "title": "Tekst"
               },
-              "text_style": {
-                "title": "Teksti värvi stiil",
-                "options": {
-                  "light": "Hele",
-                  "dark": "Tume"
-                }
-              },
+//              "text_style": {
+//                "title": "Teksti värvi stiil",
+//                "options": {
+//                  "light": "Hele",
+//                  "dark": "Tume"
+//                }
+//              },
               "slide_link": {
                 "title": "Slaidi lingi URL"
               }
@@ -390,13 +390,6 @@
               },
               "heading": {
                 "title": "Pealkiri"
-              },
-              "text_style": {
-                "title": "Teksti värvi stiil",
-                "options": {
-                  "light": "Hele",
-                  "dark": "Tume"
-                }
               },
               "subheading": {
                 "title": "Tekst"
@@ -781,11 +774,14 @@
       "layout_header_footer_background_color": {
         "title": "Päise/jaluse taust"
       },
-      "image_overlay_light_color": {
-        "title": "Hele tekst"
-      },
-      "image_overlay_dark_color": {
-        "title": "Tume tekst"
+//      "image_overlay_light_color": {
+//        "title": "Hele tekst"
+//      },
+//      "image_overlay_dark_color": {
+//        "title": "Tume tekst"
+//      },
+      "image_overlay_color": {
+        "title": "Tekst"
       },
       "image_overlay_background": {
         "title": "Taust"
