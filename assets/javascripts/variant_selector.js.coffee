@@ -1,12 +1,12 @@
 class @VariantSelector
 
-  constructor: ->
+  constructor: (selector) ->
     @lang = document.querySelector("meta[http-equiv='content-language']")?.content
     @variantSelector = "[data-variant-select]"
     @counter= new Date().getTime()
 
     # collecting data from options
-    for varSel in document.querySelectorAll(@variantSelector)
+    for varSel in document.querySelectorAll(selector+" "+@variantSelector)
       @counter += 1
       container = varSel.closest('form').querySelector('[data-variant-container]')
 
@@ -15,7 +15,7 @@ class @VariantSelector
         @parseOption(opt)
       for id, value of @variantOptions
         @generateOptionSelect(id, value, container)
-      
+
       # check radio-buttons once page loaded
       json = varSel.querySelector("option[value='#{varSel.value}']").json
       for attr in json.attributes
