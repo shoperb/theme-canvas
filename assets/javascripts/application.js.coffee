@@ -9,7 +9,7 @@
 # require plugins
 
 document.addEventListener("DOMContentLoaded", ->
-  new VariantSelector()
+#  new VariantSelector()
   new Cart()
   svg4everybody(polyfill: true)
 #  new DropdownInViewport()

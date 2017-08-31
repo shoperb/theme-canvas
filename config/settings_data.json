@@ -340,6 +340,18 @@
       },
       "id": "product"
     },
+    "product22": {
+      "type": "product",
+      "settings": {
+        "product": "",
+        "image_size": "medium",
+        "show_quantity_selector": true,
+        "show_variant_label": true,
+        "show_vendor": true,
+        "section_width": "limited"
+      },
+      "id": "product"
+    },
     "testimonials": {
       "type": "testimonials",
       "settings": {
@@ -641,6 +653,7 @@
     "slideshow2",
     "collection-list",
     "product",
+    "product22",
     "testimonials",
     "columns",
     "logo-list",

@@ -4,12 +4,14 @@
   {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
 </div>
 
-{% if product.vendor and section.settings.show_vendor %}
-<div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
-{% endif %}
+<div class="product-vendor" itemprop="brand">
+  {% if section.settings.show_vendor %}
+  {% if product %}{{product.vendor.name}}{% else %}{{'section.default.vendor' | t}}{% endif %}
+  {% endif %}
+</div>
 
 <div class="product-pricing">
-  <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
+  <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
 
   <span class="compare-price{% if default_variant.discount? %} visible{% endif %}{% if default_variant.discount? %} discount{% endif %}">
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
@@ -17,14 +19,14 @@
 </div>
 
 {% if product.description != blank %}
-<div class="product-description" data-product-description>{{product.description}}</div>
+<div class="product-description" data-product-description>{% if product %}{{product.description}}{% else %}{{'section.default.product_descriontion' | t}}{% endif %}</div>
 {% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>
     <div class="variants clearfix">
       {% if product.variants.many? %}
-      <select name="variant" id="variant" data-behaviour="select" data-variant-select>
+      <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{{section.settings.show_variant_label}}">
         {% for variant in product.variants %}
         <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}">{{variant.name}}</option>
         {% endfor %}
@@ -37,8 +39,11 @@
     </div>
 
     <div class="quanity-cart-row clearfix">
+      {% if section.settings.show_quantity_selector %}
       <div class="quantity">
+        {% if section.settings.show_variant_label %}
         <label class="product-form-title">{{'product.quantity' | t}}</label>
+        {% endif %}
         <div class="number-input">
           <div data-quantity="decrease">
             {% include 'icon' with 'minus' %}
@@ -49,6 +54,9 @@
           </div>
         </div>
       </div>
+      {% else %}
+      <input id="amount" type="hidden" name="amount" min="1" value="1">
+      {% endif %}
 
       <div class="add-to-cart">
         {% if product.available? %}
