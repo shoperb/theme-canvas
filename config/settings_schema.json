@@ -193,32 +193,32 @@
               "type": "select",
               "options": [
                 {
-                  "handle": "font_size.12",
+                  "handle": "font_size_12",
                   "value": "12px"
                 },
                 {
-                  "handle": "font_size.14",
+                  "handle": "font_size_13",
+                  "value": "13px"
+                },
+                {
+                  "handle": "font_size_14",
                   "value": "14px"
                 },
                 {
-                  "handle": "font_size.16",
+                  "handle": "font_size_15",
+                  "value": "15px"
+                },
+                {
+                  "handle": "font_size_16",
                   "value": "16px"
                 },
                 {
-                  "handle": "font_size.18",
+                  "handle": "font_size_17",
+                  "value": "17px"
+                },
+                {
+                  "handle": "font_size_18",
                   "value": "18px"
-                },
-                {
-                  "handle": "font_size.20",
-                  "value": "20px"
-                },
-                {
-                  "handle": "font_size.22",
-                  "value": "22px"
-                },
-                {
-                  "handle": "font_size.24",
-                  "value": "24px"
                 }
               ]
             }
@@ -271,56 +271,28 @@
               "type": "select",
               "options": [
                 {
-                  "handle": "font_size.16",
-                  "value": "16px"
-                },
-                {
-                  "handle": "font_size.18",
-                  "value": "18px"
-                },
-                {
-                  "handle": "font_size.20",
+                  "handle": "font_size_20",
                   "value": "20px"
                 },
                 {
-                  "handle": "font_size.22",
-                  "value": "22px"
-                },
-                {
-                  "handle": "font_size.24",
+                  "handle": "font_size_24",
                   "value": "24px"
                 },
                 {
-                  "handle": "font_size.26",
-                  "value": "26px"
-                },
-                {
-                  "handle": "font_size.28",
-                  "value": "28px"
-                },
-                {
-                  "handle": "font_size.30",
-                  "value": "30px"
-                },
-                {
-                  "handle": "font_size.30",
-                  "value": "32px"
-                },
-                {
-                  "handle": "font_size.30",
-                  "value": "34px"
-                },
-                {
-                  "handle": "font_size.30",
+                  "handle": "font_size_36",
                   "value": "36px"
                 },
                 {
-                  "handle": "font_size.30",
-                  "value": "38px"
+                  "handle": "font_size_48",
+                  "value": "48px"
                 },
                 {
-                  "handle": "font_size.30",
-                  "value": "40px"
+                  "handle": "font_size_52",
+                  "value": "52px"
+                },
+                {
+                  "handle": "font_size_64",
+                  "value": "64px"
                 }
               ]
             }

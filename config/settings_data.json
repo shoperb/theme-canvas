@@ -20,7 +20,7 @@
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
     "headings_font_family": "Hind",
-    "headings_font_size": "46px"
+    "headings_font_size": "48px"
   },
   "sections": {
     "header": {
@@ -205,7 +205,7 @@
           "settings": {
             "type": "image",
             "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
-            "image_alignment": "center",
+            "image_alignment": "middle",
             "heading": "Image slide 333",
 //            "text_style": "light",
             "subheading": "Tell your brand's story through video and images 333"

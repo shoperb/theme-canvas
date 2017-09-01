@@ -814,13 +814,30 @@
         "title": "Font family"
       },
       "body_font_size": {
-        "title": "Font size"
+        "title": "Font size",
+        "options": {
+          "font_size_12": "12px",
+          "font_size_13": "13px",
+          "font_size_14": "14px",
+          "font_size_15": "15px",
+          "font_size_16": "16px",
+          "font_size_17": "17px",
+          "font_size_18": "18px"
+        }
       },
       "headings_font_family": {
         "title": "Font family"
       },
       "headings_font_size": {
-        "title": "Font size"
+        "title": "Font size",
+        "options": {
+          "font_size_20": "20px",
+          "font_size_24": "24px",
+          "font_size_36": "36px",
+          "font_size_48": "48px",
+          "font_size_52": "52px",
+          "font_size_64": "64px"
+        }
       }
     },
     "categories": {

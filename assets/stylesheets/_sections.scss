@@ -322,7 +322,7 @@ section[data-type=slideshow] {
       width: 50px;
       height: 50px;
       //background: lighten($image_overlay_dark_color, 20%);
-      background: lighten($image_overlay_color, 20%);
+      background: darken($image_overlay_color, 20%);
       left: -13px;
       top: -12px;
       border-radius: 1000px;
@@ -340,11 +340,11 @@ section[data-type=slideshow] {
     }
     &:hover {
       //color: lighten($image_overlay_light_color, 20%);
-      color: lighten($image_overlay_color, 20%);
+      color: darken($image_overlay_color, 10%);
 
       &:before {
         //background: lighten($image_overlay_dark_color, 30%);
-        background: lighten($image_overlay_color, 30%);
+        background: darken($image_overlay_color, 30%);
       }
     }
   }
