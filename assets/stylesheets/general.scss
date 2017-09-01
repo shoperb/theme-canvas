@@ -73,6 +73,8 @@ h3.general-title {
 }
 
 .main-content {
+  @extend .general-content;
+
   main {
     section[data-type] {
       &:first-of-type {
@@ -107,5 +109,18 @@ h3.general-title {
   }
   &.with-video {
     border: none;
+  }
+}
+
+.general-page {
+  header {
+    @extend .clearfix;
+
+    .general-title {
+      text-align: left;
+    }
+    .sorting {
+      text-align: right;
+    }
   }
 }

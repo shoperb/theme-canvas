@@ -1,27 +1,48 @@
-<section role="main" class="border-box">
-    <div class="row account-page">
-        <div class="columns large-6">
-            <aside class="side-navigation">
-                {% assign key = url.orders %}
-                {% include 'account_menu' with key %}
-            </aside>
-        </div>
-        <div class="columns large-18">
-            <div class="orders content-block">
-                <table>
-                    <tbody>
-                    {% for o in orders %}
-                    <tr>
-                      <td class="order-nr">{{order.name}}</td>
-                      <td class="amount">{{o.currency.symbol}}{{o.total}}</td>
-                      <td class="date">{{o.created_at}}</td>
-                      <td class="status">{{o.state}}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<div class="main-container account-page logged-in">
+  <div class="ui grid">
+    <div class="four wide column sidebar">
+      {% include 'account_sidebar' with 'orders' %}
     </div>
 
-</section>
+    <div class="twelve wide column orders-content">
+      <table>
+        {% for o in orders %}
+        <thead>
+          <th colspan="2">
+            <span>{{'order.id' | t}}</span>
+            <span>{{o.name}}</span>
+            {% assign status_text = 'order.status.' | append: order.status %}
+            <span class="status {{order.status}}">{{'order.status.completed' | t}}</span>
+          </th>
+          <th colspan="2">
+            <a href="{{o.url}}">
+              {{'order.link' | t}}
+              <div class="icon-arrow-next"></div>
+            </a>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label>{{'order.date_added' | t}}</label>
+              <div>{% include 'date' with o.created_at %}</div>
+            </td>
+            <td>
+              <label>{{'order.customer' | t}}</label>
+              <div>{{o.billing_address.first_name}} {{o.billing_address.last_name}}</div>
+            </td>
+            <td>
+              <label>{{'order.products' | t}}</label>
+              <div>6 {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
+            </td>
+            <td>
+              <label>{{'order.total' | t}}</label>
+              <div>{{o.total | money_with_cents}}</div>
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>

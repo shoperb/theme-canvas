@@ -6,7 +6,7 @@
   <div class="grid">
     {% if blog_posts.size == 0 %}
     {% for post in blog_posts limit: {{section.settings.grid}} %}
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
+    {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <div class="text-column">
 
         {% if post.name %}
@@ -27,14 +27,14 @@
 
         <a role="button" class="button secondary" href="{{post.url}}">{{'section.default.read_more' | t}}</a>
       </div>
-    </div>{% if forloop.last != true %}<!--{% endif %}
+    </div>{% unless forloop.last %}<!--{% endunless %}
     {% endfor %}
     {% else %}
 
     {% comment %} default view for builder {% endcomment %}
 
     {% for post in (1..12) limit: {{section.settings.grid}} %}
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half desk--one-third">
+    {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <div class="text-column">
 
         <h2 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h2>
@@ -51,7 +51,7 @@
 
         <a href="{{post.url}}">{{'section.default.read_more' | t}}</a>
       </div>
-    </div>{% if forloop.last != true %}<!--{% endif %}
+    </div>{% unless forloop.last %}<!--{% endunless %}
     {% endfor %}
 
     {% endif %}

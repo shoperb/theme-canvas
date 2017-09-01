@@ -1,27 +1,52 @@
-<section class="subheader">
-  <div class="columns large-12">
-    {% include "crumbs" %}
-  </div>
-</section>
+<div class="blog-post-page">
 
-<div class="left-two-columns-wrapper row blog-post">
-  <div class="article columns large-9">
-    <div class="middle-column columns large-9">
-      <h1 class="title"><a href="{{post.url}}">{{post.name}}</a></h1>
-      <p class="mobile-meta show-for-medium-down">
-        {% comment %} - once we hace author
-        Written By Troop Digital -
-        {% endcomment %}
-        {{ post.published_at | date: "%b %-d %Y" }}
-      </p>
-      <div class="content colored-links rte-content">
+  <div class="main-container">
+    <article>
+      <h2 class="main-title center">{{post.name}}</h2>
+      {% if post.published_at %}
+      <div class="date">
+        {{post.published_at | date: "%-d %b %Y"}}
+      </div>
+      {% endif %}
+
+      <div class="blog">
         {{post.content}}
       </div>
+    </article>
+  </div>
+</div>
 
-      {% include 'share_this' with 'post' %}
+<div class="share-this">
+  <div class="main-container">
+    {% include 'share_this' with 'full' %}
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="prev-next-post">
+    <div class="ui two column grid">
+      <div class="column">
+        {% if post.prev %}
+        <a href="{{post.prev.url}}">
+          <span class="icon-arrow-back"></span>
+          {{'blog.previous' | t}}
+        </a>
+        <div class="title">
+          {{post.prev.name}}
+        </div>
+        {% endif %}
+      </div>
+      <div class="column">
+        {% if post.prev %}
+        <a href="{{post.next.url}}">
+          {{'blog.next' | t}}
+          <span class="icon-arrow-next"></span>
+        </a>
+        <div class="title">
+          {{post.next.name}}
+        </div>
+        {% endif %}
+      </div>
     </div>
   </div>
-
-  {% include 'blog_sidebar' %}
-
 </div>

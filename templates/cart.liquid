@@ -1,75 +1,57 @@
-<header class="row">
-  <div class="columns">
-    <h1 class="page-title">{{'cart.title' | t}}</h1>
-  </div>
-</header>
+<div class="main-container">
+  <div class="cart-container clearfix">
+    <h2 class="main-title center">{{'header.shopping_cart' | t}}</h2>
 
-{% include 'flash_message' %}
+    <div id="js-cart-content">
+      {% if cart.items.any? %}
 
-{% if cart.items.any? %}
-<form action="{{form_actions.cart_update}}" method="post" class="custom" id="js-cart-content">
-  <div class="row">
-    <div class="columns">
-      <table width="100%" class="cart-table">
-        <thead>
-          <tr>
-            <th class="image">&nbsp;</th>
-            <th class="title">&nbsp;</th>
-            <th class="quantity">{{'cart.quantity' | t}}</th>
-            <th class="total">{{'cart.total' | t}}</th>
-            <th class="remove">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for item in cart.items %}
-          {% include "cart_item" %}
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </div>
+      <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post" class="custom">
+        <table width="100%" class="cart-table">
+          <thead>
+            <tr>
+              <th>
+                <label>{{'cart.product_name' | t}}</label>
+              </th>
+              <th class="quantity">
+                <label>{{'cart.quantity' | t}}</label>
+              </th>
+              <th class="total">
+                <label>{{'cart.total' | t}}</label>
+              </th>
+            </tr>
+          </thead>
 
-  <div class="row">
-    <div class="totals total-price columns">
-      <h3><strong>{{ 'cart.subtotal' | t }} <span class="money">{{cart.total | money_with_currency}}</span></strong></h3>
-    </div>
-  </div>
-</form>
+          <tbody>
+            {% for item in cart.items %}
+            {% include "cart_item" %}
+            {% endfor %}
+          </tbody>
 
-<form action="{{ form_actions.cart_checkout }}" method="POST">
-  <div class="row">
-    <div class="columns large-5">
-      <div class="order-notes">
-        <div class="container">
-          <h3>{{'cart.order_notes' | t}}</h3>
-          <textarea id="cart-additional-information" name="notes" placeholder="{{'cart.additional_information' | t}}"></textarea>
+          <tfoot>
+            <tr>
+              <td class="shipping-cost">{{'cart.note_shipping' | t}}</td>
+              <td class="subtotal">{{'cart.subtotal' | t}}</td>
+              <td class="total">{{cart.total | money_with_currency}}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </form>
+
+      <form action="{{form_actions.cart_checkout}}" method="POST">
+        <div class="right chekcout-footer">
+          <button type="submit" class="button primary">{{'cart.checkout' | t}}</button>
         </div>
-      </div>
+      </form>
 
-      <div class="continue-shopping show-for-medium-up">
-        <span><a href="{{url.products}}"><span aria-hidden="true" class="glyph arrow-left"></span> {{'cart.continue_shopping' | t}}</a></span>
-      </div>
-    </div>
+      {% else %}
 
-    <div class="columns large-7">
-      <div class="totals columns">
-        <p class="shipping-taxes-notification">{% if 1 %}{{'cart.note_shipping' | t}}{% else %}{{'cart.note_shipping_and_tax' | t}}{% endif %}</p>
-
-        <div class="buttons checkout clearfix">
-          <button type="submit" class="right">{{'cart.checkout' | t}}</button>
+      <section class="empty-cart row">
+        <div class="columns">
+          <div class="empty-cart">{{'cart.empty' | t}}</div>
         </div>
-      </div>
+      </section>
+
+      {% endif %}
     </div>
   </div>
-</form>
-
-{% else %}
-
-<section class="empty-cart row">
-  <div class="columns">
-    <h1>{{'cart.empty' | t}}</h1>
-    <p><a class="button" href="{{url.products}}">{{'cart.continue_browsing' | t}}</a></p>
-  </div>
-</section>
-
-{% endif %}
+</div>

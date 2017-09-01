@@ -1,59 +1,28 @@
-<section class="subheader">
-  <div class="columns large-8">
-    {% include "crumbs" %}
-  </div>
-  <div class="columns large-4">
-    {% include 'sortable' %}
-  </div>
-</section>
+{% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
+{% assign order =  params["filter"] %}
+{% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 
-<section class="separator"></section>
-
-{% paginate products.order_by_name_asc by 12 %}
-
-<section role="main" class="category-page">
-  <div class="row product-grid">
-    {% assign full_width = 1 %}
-    {% if categories.roots.any? or menus['brands'].links.any? %}
-    {% assign full_width = 0 %}
-    <div class="columns large-3">
-      <aside class="product-navigation">
-        {% if categories.roots.any? %}
-        <nav class="category-nav">
-          <header>
-            <div class="title">{{ 'categories.categories' | t }}</div>
-          </header>
-          {% include 'categories' with categories.roots %}
-        </nav>
-        {% endif %}
-
-        {% include 'vendors' %}
-      </aside>
+<div class="main-container">
+  <div class="ui grid inner-header-title">
+    <div class="eight wide column">
+      <h2 class="main-title">{{'breadcrumb.products' | t}}</h2>
     </div>
-    {% endif %}
-    <div class="columns large-{% if full_width > 0 %}12{% else %}9{% endif %}">
+    <div class="eight wide column">
+      {% include 'sortable' %}
+    </div>
+  </div>
 
+  {% paginate products[order] by 12 %}
+
+  <section role="main" class="products-page">
+    <div class="ui grid product-grid" data-height="equal">
       {% for product in paginate.collection %}
-      <div class="columns product-column large-{% if full_width > 0 %}3{% else %}4{% endif %}">
-        {% include 'list_product' %}
-      </div>
+      {% include 'list_product' with 4 %}
       {% endfor %}
-
     </div>
-  </div>
-</section>
 
-<section class="separator"></section>
+    {% include 'pagination' %}
+  </section>
 
-<section class="subheader">
-  <div class="columns large-6">
-    {% include "crumbs" %}
-  </div>
-  <div class="columns large-6">
-    <div class="row">
-      {% include 'pagination' %}
-    </div>
-  </div>
-</section>
-
-{% endpaginate %}
+  {% endpaginate %}
+</div>

@@ -63,9 +63,9 @@
 <body class="template-{{template_name | replace: '_', '-'}}">
   {% section 'header' %}
 
-  <div class="main-content">
+  {% unless template_name == 'index' %}<div class="main-content">{% endunless %}
     {{content_for_layout}}
-  </div>
+  {% unless template_name == 'index' %}</div>{% endunless %}
 
   {% section 'footer' %}
   {{"javascripts/application.js" | asset_url | javascript_tag}}

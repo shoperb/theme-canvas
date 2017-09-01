@@ -1,18 +1,12 @@
-<section class="subheader">
-  <div class="columns large-12">
-    {% include "crumbs" %}
-  </div>
-</section>
+<div class="page-page">
 
-<section role="main">
-  <div class="content-block text-content-block">
-      <div class="row">
-          <div class="columns large-24">
-              <h1>{{ page.name | escape }}</h1>
-              <div class="text-content">
-                  {{ page.content }}
-              </div>
-          </div>
+  <div class="main-container">
+    <article>
+      <h2 class="main-title center">{{page.name}}</h2>
+
+      <div class="page">
+        {{page.content}}
       </div>
+    </article>
   </div>
-</section>
+</div>

@@ -1,81 +1,50 @@
-<div class="row">
-  <div class="large-12 columns">
-    <h1 class="page-title">Search</h1>
-  </div>
-</div>
+<div class="main-container search-page">
+  <h2 class="main-title center">{{'search' | t}}</h2>
 
-<div class="row">
-  <div class="columns">
-    <div class="divider results"></div>
-  </div>
-</div>
-
-<div class="row summary narrow">
-  {% if params.query %}
-  <div class="large-4 columns">
-    <p>Search results for <strong>"{{ params.query | escape }}"</strong></p>
-  </div>
-  {% endif %}
-
-  <div class="large-4 columns">
-    <div class="searchbar-container">
-      <form  action="{{url.search}}" method="get" role="search">
-
-        <input name="query" type="text" placeholder="Search store..." class="hint text" value="{{ params.query | escape }}" />
-        <button aria-hidden="false" class="glyph search"></button>
+  <div class="ui grid">
+    <div class="ten wide column">
+      {% if params.query %}
+      <span>{{'search.results' | t}}</span>
+      <form action="{{url.search}}" method="get" role="search">
+        <input name="query" type="text" value="{{params.query | escape}}">
+        <button type="submit"><div class="icon-search"></div></button>
       </form>
+      {% endif %}
+    </div>
+    <div class="six wide column">
+    {% assign results = '0' %}
+    {% if search.size %}
+    {% assign results = search.size %}
+    {% endif %}
+    {% capture results %}{{results}} {% if search.size == 1 %}{{'search.found_1' | t}}{% else %}{{'search.found' | t}}{% endif %}{% endcapture %}
+    {% include 'sortable' with results %}
     </div>
   </div>
 
-  {% if search.size %}
-  <div class="large-4 columns">
-    <p><strong>{{search.size}}</strong> results found</p>
-  </div>
-  {% endif %}
-</div>
+  <div class="search-results">
+    {% if search.any? %}
+    {% paginate search by 12 %}
 
-<div class="row">
-  <div class="columns">
-    <div class="divider results"></div>
-  </div>
-</div>
+    <section role="main" class="products-page">
+      <div class="ui grid product-grid" data-height="equal">
+        {% for product in paginate.collection %}
+        <div class="four wide column">
+          {% include 'list_product' with 4 %}
+        </div>
+        {% endfor %}
+      </div>
 
-<div class="row">
-  <div class="right columns large-6">
-
-  </div>
-</div>
-
-{% if search.any? %}
-
-{% paginate search by 12 %}
-<section role="main" class="category-page">
-    {% for product in paginate.collection %}
-    {% include 'list_search' %}
-    {% endfor %}
-</section>
-
-<section class="subheader">
-  <div class="columns large-6">
-    {% include "crumbs" %}
-  </div>
-  <div class="columns large-6">
-    <div class="row">
       {% include 'pagination' %}
-    </div>
-  </div>
-</section>
+    </section>
 
-{% endpaginate %}
+    {% endpaginate %}
 
-{% else %}
-{% if params.query %}
-<section role="main" class="category-page">
-  <div class="row">
-    <div class="columns large-24 text-content-block">
-      {{ 'search.no_results' | t }}
+    {% else %}
+
+    <div class="no-results">
+      {{'search.no_results' | t}} "{{params.query}}".
     </div>
+
+    {% endif %}
   </div>
 </div>
-{% endif %}
-{% endif %}

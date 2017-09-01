@@ -1,34 +1,31 @@
-{% assign variant  = product.variants.first %}
+{% assign variant = product.variants.first %}
 
-<div class="product-item">
-  <div class="image-wrapper{% if product.available? %}{% else %} not-available-image{% endif %}">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {% if list_product == 'page' %}palm--one-half lap--one-third desk--one-quarter{% else %}lap--one-half {{grid_class}}{% endif %} product-container">
+
+  <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
+    <meta itemprop="url" content="{{url.current_url}}">
+    <meta itemprop="image" content="{{product.image.size-2048.url}}">
+
+    <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}" style="background-image: {% if product.image.size-480.url %}url('{{product.image.size-480.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
+
+    <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
+
+    {% if product.vendor and section.settings.show_vendor %}
+    <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
+    {% endif %}
+
     {% if product.available? %}
-    {% else %}
-    <div class="not-available">{{'product.unavailable' | t}}</div>
-    {% endif %}
-    <a href="{{ product.url }}" class="item-link">
-      <img class="lazyOwl" src="{{ product.image.size-480.url }}" data-src="{{ product.image.size-480.url }}" alt="{{ product.name }}" />
-    </a>
-  </div>
-  {% if variant.discount? %}
-  <a class="circle sale" href="{{ product.url }}"><span>{{'product.sale' | t}}</span></a>
-  {% endif %}
-  <div class="caption">
-    <p class="title">
-      <a href="{{ product.url }}">
-        {{ product.name }}
-      </a>
-    </p>
-
-    {% if product.vendor %}
-    <p class="vendor">{{ product.vendor.name }}</p>
-    {% endif %}
-
-    <p class="price">
-      <span class="money">{{ variant.current_price | money }}</span>
+    <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <span class="money" itemprop="price">{{variant.current_price | money}}</span>
+      <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
       {% if variant.discount? %}
-      <em class="marked-down-from">{{'product.was' | t}} <span class="money">{{ product.price | money }}</span></em>
+      <span class="discount">{{'product.was' | t}} <span class="money">{{product.price | money}}</span></span>
       {% endif %}
-    </p>
-  </div>
-</div>
+    </div>
+    {% else %}
+    <div class="not-available">{{'product.unavailable_short' | t}}</div>
+    {% endif %}
+    <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+  </a>
+
+</div>{% unless forloop.last %}<!--{% endunless %}

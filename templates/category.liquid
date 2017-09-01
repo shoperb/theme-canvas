@@ -1,62 +1,53 @@
 {% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
 {% assign order =  params["filter"] %}
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
+{% assign full_width = 1 %}
 
-<section class="subheader">
-  <div class="columns large-8">
-    {% include "crumbs" %}
-  </div>
-  <div class="columns large-4">
-    {% include 'sortable' %}
-  </div>
-</section>
-
-<section class="separator"></section>
-
-{% paginate category.products_with_children[order] by 12 %}
-<section role="main" class="category-page">
-  <div class="row product-grid">
-    {% assign full_width = 1 %}
-    {% if categories.root.children.any? or menus['brands'].links.any? %}
-    {% assign full_width = 0 %}
-    <div class="columns large-3">
-      <aside class="product-navigation">
-        {% if category.root.children.any? %}
+<div class="main-container">
+  <div class="ui grid categories">
+    <div class="four wide column">
+      <sidebar class="category-sidebar">
         <nav class="category-nav">
-          <header>
-            <div class="title">{{ 'categories.categories' | t }}</div>
-          </header>
-          {% include 'categories' with category.root.children %}
+          <ul>
+            {% for category in categories %}
+            {% if category.root? %}
+            <li>
+            {{category | link_to_category}}
+            {% if category.children? %}
+            {% include "categories" with category.children %}
+            {% endif %}
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
         </nav>
-        {% endif %}
-
-        {% include 'vendors' %}
-      </aside>
+      </sidebar>
     </div>
-    {% endif %}
-    <div class="columns large-{% if full_width > 0 %}12{% else %}9{% endif %}">
 
-      {% for product in paginate.collection %}
-      <div class="columns product-column large-{% if full_width > 0 %}3{% else %}4{% endif %}">
-        {% include 'list_product' %}
+    <div class="twelve wide column categories-content">
+      <div class="ui grid">
+        <div class="eight wide column">
+          <h2 class="main-title">{{category.name}}</h2>
+        </div>
+        <div class="eight wide column">
+          {% include 'sortable' %}
+        </div>
       </div>
-      {% endfor %}
 
-    </div>
-  </div>
-</section>
+      {% paginate category.products_with_children[order] by 12 %}
+      <section role="main" class="category-page">
+        <div class="ui grid product-grid" data-height="equal">
 
-<section class="separator"></section>
+          {% for product in paginate.collection %}
+          {% include 'list_product' with 3 %}
+          {% endfor %}
 
-<section class="subheader">
-  <div class="columns large-6">
-    {% include "crumbs" %}
-  </div>
-  <div class="columns large-6">
-    <div class="row">
+        </div>
+      </section>
+
       {% include 'pagination' %}
+
+      {% endpaginate %}
     </div>
   </div>
-</section>
-
-{% endpaginate %}
+</div>

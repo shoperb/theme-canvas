@@ -27,43 +27,14 @@
   <div class="grid{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
-
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
-      {% assign variant = product.variants.first %}
-
-      <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
-        <meta itemprop="url" content="{{url.current_url}}">
-        <meta itemprop="image" content="{{product.image.size-2048.url}}">
-
-        <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}" style="background-image: {% if product.image.size-480.url %}url('{{product.image.size-480.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
-
-        <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
-
-        {% if product.vendor and section.settings.show_vendor %}
-        <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
-        {% endif %}
-
-        {% if product.available? %}
-        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <span class="money" itemprop="price">{{variant.current_price | money}}</span>
-          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-          {% if variant.discount? %}
-          <span class="discount">{{'product.was' | t}} <span class="money">{{product.price | money}}</span></span>
-          {% endif %}
-        </div>
-        {% else %}
-        <div class="not-available">{{'product.unavailable_short' | t}}</div>
-        {% endif %}
-        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-      </a>
-    </div>{% if forloop.last != true %}<!--{% endif %}
+    {% include 'list_product' %}
     {% endfor %}
     {% else %}
 
     {% comment %} default view for builder {% endcomment %}
 
     {% for product in (1..limit) %}
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+    {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       <div class="product fake-link">
         <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
 
@@ -73,7 +44,7 @@
           <span class="money">{{'14.95' | money}}</span>
         </div>
       </div>
-    </div>{% if forloop.last != true %}<!--{% endif %}
+    </div>{% unless forloop.last %}<!--{% endunless %}
     {% endfor %}
     {% endif %}
   </div>

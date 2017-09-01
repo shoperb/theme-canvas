@@ -18,24 +18,24 @@
 
   <div class="grid">
     {% for block in section.blocks limit: section.settings.grid %}
-    {% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}" data-section-block-id="{{block.id}}">
+    {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}" data-section-block-id="{{block.id}}">
       {% assign collection = collections[block.settings.collection] %}
 
       <a class="collection opacity-image-container" href="{{collection.url}}">
         <div class="opacity-image{% if collection.image %} with-image{% endif %}" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
         <h2 class="general-title">{% if collection.name %}{{collection.name}}{% else %}{{'section.default.collection.name' | t}}{% endif %}</h2>
       </a>
-    </div>{% if forloop.last != true %}<!--{% endif %}{% if diff > 0 %}<!--{% endif %}
+    </div>{% unless forloop.last %}<!--{% endunless %}{% if diff > 0 %}<!--{% endif %}
     {% endfor %}
 
     {% if section.blocks.size < section.settings.grid %}
     {% for block in (1..diff) %}
-    {% if forloop.first == true and diff > 0 %}-->{% endif %}{% if forloop.first != true %}-->{% endif %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+    {% if forloop.first == true and diff > 0 %}-->{% endif %}{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
 
       <div class="collection" style="background-image: url({{'images/placeholder.svg' | asset_url}})">
         <h2 class="general-title">{{'section.default.collection.name' | t}}</h2>
       </div>
-    </div>{% if forloop.last != true %}<!--{% endif %}
+    </div>{% unless forloop.last %}<!--{% endunless %}
     {% endfor %}
     {% endif %}
 

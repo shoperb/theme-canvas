@@ -1,94 +1,107 @@
-<section class="subheader">
-  <div class="columns large-12">
-    {% include "crumbs" %}
-  </div>
-</section>
-
 {% include "flash_message" %}
 
-<div class="account-content">
-  <div id="customer-register">
-    <div class="row">
-      <div id="register" class="columns large-12">
-        <h1 class="page-title">{{'account.title' | t}}</h1>
-      </div>
+<div class="main-container account-page logged-in">
+  <div class="ui grid">
+    <div class="four wide column sidebar">
+      {% include 'account_sidebar' with 'account' %}
     </div>
 
-    <div class="row large">
-      <div id="customer_orders" class="columns large-8">
+    <div class="twelve wide column account-content">
+      <div class="eight wide column">
+        <div class="form-error" data-form-error></div>
 
-        {%if account.orders.any? %}
-        <table>
-          <tbody>
-            {% for order in account.orders %}
-            <tr>
-              <td class="order-nr">
-                <a href="http://checkout.shoperb.me/invoices/{{order.token}}" target="_invoice">#{{order.token}}</a>
-              </td>
-              <td class="amount">{{order.currency.symbol}}{{order.total}}</td>
-              <td class="date">{% include 'date' with order.created_at %}</td>
-              {% assign state = order.state | prepend: 'account.state_' %}
-              <td class="status">{{state | t}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        {% else %}
-        <p>{{'account.no_orders' | t}}</p>
-        <a class="button" href="{{url.products}}">{{'cart.continue_browsing' | t}}</a>
-        {{'general.or' | t}}
-        <span class="note"><a href="{{url.logout}}">{{'account.logout' | t}}</a></span>
-        {% endif %}
-
-      </div>
-
-      <div id="customer_sidebar" class="columns large-4">
-        <form action="{{form_actions.account}}" class="custom" method="post">
+        <form action="{{form_actions.account}}" method="post">
           {{form_actions.auth_input}}
-          <div class="row">
-            <div class="field">
-              <input type="text" name="account[first_name]" placeholder="{{ 'account.first_name' | t }}" value="{{account.first_name}}">
+
+          <div class="ui grid">
+            <div class="five wide column">
+              <h4 class="main-title">{{'account.personal_information' | t}}</h4>
             </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <input type="text" name="account[last_name]" placeholder="{{ 'account.last_name' | t }}" value="{{account.last_name}}">
+            <div class="three wide column">
+              <label for="first_name" class="label">{{'account.first_name' | t}}</label>
             </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <input type="text" name="account[email]" placeholder="{{ 'account.email' | t }}" value="{{account.email}}">
+            <div class="eight wide column">
+              <input type="text" value="{{account.first_name}}" name="account[first_name]" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
             </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <input type="password" name="account[password]" placeholder="{{ 'account.password' | t }}">
+
+            <div class="five wide column"></div>
+            <div class="three wide column">
+              <label for="last_name" class="label">{{'account.last_name' | t}}</label>
             </div>
-          </div>
-          <div class="row">
-            <div class="field">
-              <input type="password" name="account[password_confirm]" placeholder="{{ 'account.password_confirm' | t }}">
+            <div class="eight wide column">
+              <input type="text" value="{{account.last_name}}" name="account[last_name]" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}" />
             </div>
-          </div>
-          <div class="row">
-            <div class="field checkbox-field">
+
+            <div class="five wide column"></div>
+            <div class="three wide column">
+              <label for="email" class="label">{{'account.email' | t}}</label>
+            </div>
+            <div class="eight wide column">
+              <input type="text" data-type="email" value="{{account.email}}" name="account[email]" id="email" class="text" data-error="{{'account.error.email' | t}}" />
+            </div>
+
+            <div class="sixteen wide column separator"></div>
+
+
+            {% comment %}
+            [password part here]
+            {% endcomment %}
+
+            <div class="five wide column">
+              <h4 class="main-title">{{'account.change_password' | t}}</h4>
+            </div>
+            <div class="three wide column">
+              <label for="password" class="label">{{'account.password' | t}}</label>
+            </div>
+            <div class="eight wide column">
+              <input type="password" data-type="password" value="" name="account[password]" id="password" class="password text" data-error="{{'account.error.password' | t}}" />
+            </div>
+
+            <div class="five wide column"></div>
+            <div class="three wide column">
+              <label for="password_confirmation" class="label">{{'account.password_confirmation' | t }}</label>
+            </div>
+            <div class="eight wide column">
+              <input type="password" data-type="password_confirmation" value="" name="account[password_confirmation]" id="password_confirmation" class="password text" data-error="{{'account.error.password_confirmation' | t}}" />
+            </div>
+
+            <div class="sixteen wide column separator"></div>
+
+            {% comment %}
+            [password part here]
+            {% endcomment %}
+
+
+            <div class="five wide column">
+              <h4 class="main-title">{{'account.subscription' | t}}</h4>
+            </div>
+            <div class="three wide column"></div>
+            <div class="eight wide column">
               <label for="newsletter">
                 <input type="hidden" name="account[newsletter]" value="0">
-                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %} checked{% endif %}>
+                {% comment %}
+                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %}checked="checked"{% endif %}>
+                {% endcomment %}
+                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" checked="checked">
                 <span class="label-text">
-                  {{ 'account.subscribe_to_newsletter' | t }}
+                  <span class="tick"></span>
+                  {{'account.subscribe_to_newsletter' | t}}
                 </span>
               </label>
             </div>
-          </div>
-          <div class="row">
-            <div class="large-8">
-              <button class="expand">{{ 'account.save' | t }}</button>
+
+            <div class="sixteen wide column separator"></div>
+
+            <div class="five wide column"></div>
+            <div class="three wide column"></div>
+            <div class="eight wide column">
+              <button class="button secondary" type="submit">{{'account.save_changes' | t}}</button>
             </div>
+
           </div>
         </form>
-      </div>
 
+      </div>
     </div>
   </div>
 </div>

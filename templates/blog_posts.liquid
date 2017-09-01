@@ -1,35 +1,13 @@
-<div class="row blog-title">
-  <div class="columns large-12">
-    <h1 class="text">{{'blog.title' | t}}</h1>
-  </div>
-</div>
-
-{% paginate posts by 6 %}
-<div class="left-two-columns-wrapper row">
-  <div class="articles columns large-9">
-
-    {% for post in paginate.collection %}
-    {% include 'list_blog_post' %}
-    {% endfor %}
-
-  </div>
-
-  {% include 'blog_sidebar' %}
-
-</div>
-
-{% if posts.size > 6 %}
-<section class="separator"></section>
-
-<section class="subheader">
-  <div class="columns large-12">
-    <div class="row">
-      <div class="columns large-24 blog-pagination">
-        {% include 'pagination' %}
-      </div>
+<div class="blog-posts-page">
+  {% paginate posts by 6 %}
+  {% for post in paginate.collection %}
+  <div class="blog-posts-list-item">
+    <div class="main-container">
+      {% include 'list_blog_post' %}
     </div>
   </div>
-</section>
-{% endif %}
+  {% endfor %}
 
-{% endpaginate %}
+  {% include 'pagination' %}
+  {% endpaginate %}
+</div>
