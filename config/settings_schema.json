@@ -155,36 +155,112 @@
               "type": "select",
               "options": [
                 {
-                  "handle": "arial",
-                  "value": "arial"
+                  "handle": "Alegreya",
+                  "value": "Alegreya"
                 },
                 {
-                  "handle": "hind",
+                  "handle": "Arial",
+                  "value": "Arial"
+                },
+                {
+                  "handle": "Cantarell",
+                  "value": "Cantarell"
+                },
+                {
+                  "handle": "Droid Sans",
+                  "value": "Droid Sans"
+                },
+                {
+                  "handle": "Droid Serif",
+                  "value": "Droid Serif"
+                },
+                {
+                  "handle": "Fjalla One",
+                  "value": "Fjalla One"
+                },
+                {
+                  "handle": "Garamond",
+                  "value": "Garamond"
+                },
+                {
+                  "handle": "Gentium Book Basic",
+                  "value": "Gentium Book Basic"
+                },
+                {
+                  "handle": "Hind",
                   "value": "Hind"
                 },
                 {
-                  "handle": "josefin_sans",
+                  "handle": "Josefin Sans",
                   "value": "Josefin Sans"
                 },
                 {
-                  "handle": "lato",
+                  "handle": "Lato",
                   "value": "Lato"
                 },
                 {
-                  "handle": "maven_pro",
-                  "value": "Maven Pro"
+                  "handle": "Merriweather",
+                  "value": "Merriweather"
                 },
                 {
-                  "handle": "russo_one",
-                  "value": "Russo One"
+                  "handle": "Montserrat",
+                  "value": "Montserrat"
                 },
                 {
-                  "handle": "tahoma",
-                  "value": "Tahoma"
+                  "handle": "Nunito",
+                  "value": "Nunito"
                 },
                 {
-                  "handle": "verdana",
-                  "value": "Verdana"
+                  "handle": "Open Sans",
+                  "value": "Open Sans"
+                },
+                {
+                  "handle": "Open Sans Condensed",
+                  "value": "Open Sans Condensed"
+                },
+                {
+                  "handle": "Oswald",
+                  "value": "Oswald"
+                },
+                {
+                  "handle": "Playfair Display",
+                  "value": "Playfair Display"
+                },
+                {
+                  "handle": "PT Sans",
+                  "value": "PT Sans"
+                },
+                {
+                  "handle": "PT Serif",
+                  "value": "PT Serif"
+                },
+                {
+                  "handle": "Raleway",
+                  "value": "Raleway"
+                },
+                {
+                  "handle": "Roboto",
+                  "value": "Roboto"
+                },
+                {
+                  "handle": "Roboto Slab",
+                  "value": "Roboto Slab"
+                },
+                {
+                  "handle": "Source Sans Pro",
+                  "value": "Source Sans Pro"
+                },
+                {
+                  "handle": "Unica One",
+                  "value": "Unica One"
+                },
+                {
+                  "handle": "Vollkorn",
+                  "value": "Vollkorn"
+                },
+                {
+                  "handle": "Yeseva One",
+                  "value": "Yeseva One"
                 }
               ]
             },
@@ -233,36 +309,112 @@
               "type": "select",
               "options": [
                 {
-                  "handle": "arial",
-                  "value": "arial"
+                  "handle": "Alegreya",
+                  "value": "Alegreya"
                 },
                 {
-                  "handle": "hind",
+                  "handle": "Arial",
+                  "value": "Arial"
+                },
+                {
+                  "handle": "Cantarell",
+                  "value": "Cantarell"
+                },
+                {
+                  "handle": "Droid Sans",
+                  "value": "Droid Sans"
+                },
+                {
+                  "handle": "Droid Serif",
+                  "value": "Droid Serif"
+                },
+                {
+                  "handle": "Fjalla One",
+                  "value": "Fjalla One"
+                },
+                {
+                  "handle": "Garamond",
+                  "value": "Garamond"
+                },
+                {
+                  "handle": "Gentium Book Basic",
+                  "value": "Gentium Book Basic"
+                },
+                {
+                  "handle": "Hind",
                   "value": "Hind"
                 },
                 {
-                  "handle": "josefin_sans",
+                  "handle": "Josefin Sans",
                   "value": "Josefin Sans"
                 },
                 {
-                  "handle": "lato",
+                  "handle": "Lato",
                   "value": "Lato"
                 },
                 {
-                  "handle": "maven_pro",
-                  "value": "Maven Pro"
+                  "handle": "Merriweather",
+                  "value": "Merriweather"
                 },
                 {
-                  "handle": "russo_one",
-                  "value": "Russo One"
+                  "handle": "Montserrat",
+                  "value": "Montserrat"
                 },
                 {
-                  "handle": "tahoma",
-                  "value": "Tahoma"
+                  "handle": "Nunito",
+                  "value": "Nunito"
                 },
                 {
-                  "handle": "verdana",
-                  "value": "Verdana"
+                  "handle": "Open Sans",
+                  "value": "Open Sans"
+                },
+                {
+                  "handle": "Open Sans Condensed",
+                  "value": "Open Sans Condensed"
+                },
+                {
+                  "handle": "Oswald",
+                  "value": "Oswald"
+                },
+                {
+                  "handle": "Playfair Display",
+                  "value": "Playfair Display"
+                },
+                {
+                  "handle": "PT Sans",
+                  "value": "PT Sans"
+                },
+                {
+                  "handle": "PT Serif",
+                  "value": "PT Serif"
+                },
+                {
+                  "handle": "Raleway",
+                  "value": "Raleway"
+                },
+                {
+                  "handle": "Roboto",
+                  "value": "Roboto"
+                },
+                {
+                  "handle": "Roboto Slab",
+                  "value": "Roboto Slab"
+                },
+                {
+                  "handle": "Source Sans Pro",
+                  "value": "Source Sans Pro"
+                },
+                {
+                  "handle": "Unica One",
+                  "value": "Unica One"
+                },
+                {
+                  "handle": "Vollkorn",
+                  "value": "Vollkorn"
+                },
+                {
+                  "handle": "Yeseva One",
+                  "value": "Yeseva One"
                 }
               ]
             },
