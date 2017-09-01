@@ -634,25 +634,28 @@ section[data-type=slideshow] {
   }
 }
 [data-type=location-and-contact] {
-  height: 454px;
+  min-height: 454px;
   position: relative;
 
   .scrolloff {
     pointer-events: none;
   }
   .map-container {
-    height: 100%;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 30px;
+    left: 0;
   }
   .map-description {
-    position: absolute;
+    position: relative;
     background: $layout_background_color;
     padding: 25px 30px;
-    top: 40px;
-    left: 10px;
     display: table;
-    height: calc(100% - 80px);
     width: 370px;
     box-sizing: border-box;
+    margin: 10px;
+    min-height: inherit;
     @include breakpoint(palm) {
       width: 100%;
       left: 0;

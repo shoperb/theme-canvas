@@ -22,7 +22,7 @@
       "handle": "title"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "handle": "text"
     },
     {
