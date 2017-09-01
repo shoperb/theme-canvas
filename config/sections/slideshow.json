@@ -123,8 +123,8 @@
               "handle": "bottom-left"
             },
             {
-              "value": "bottom-center",
-              "handle": "bottom-center"
+              "value": "bottom-middle",
+              "handle": "bottom-middle"
             },
             {
               "value": "bottom-right",

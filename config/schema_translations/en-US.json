@@ -112,13 +112,13 @@
           "image_alignment": {
             "title": "Alignment",
             "options": {
-              "top-left": "Top left",
-              "top-middle": "Top Middle",
+              "top-left": "Top Left",
+              "top-middle": "Top Center",
               "top-right": "Top Right",
               "center": "Center",
-              "middle-right": "Middle Right",
-              "middle-left": "Middle Left",
-              "bottom-middle": "Bottom Middle",
+              "middle-right": "Center Right",
+              "middle-left": "Center Left",
+              "bottom-middle": "Bottom Center",
               "bottom-right": "Bottom Right",
               "bottom-left": "Bottom Left"
             }
@@ -261,12 +261,12 @@
                 "title": "Alignment",
                 "options": {
                   "top-left": "Top Left",
-                  "top-middle": "Top Middle",
+                  "top-middle": "Top Center",
                   "top-right": "Top Right",
-                  "middle": "Middle",
-                  "middle-right": "Middle Right",
-                  "middle-left": "Right Left",
-                  "bottom-middle": "Bottom Middle",
+                  "middle": "Center",
+                  "middle-right": "Center Right",
+                  "middle-left": "Center Left",
+                  "bottom-middle": "Bottom Center",
                   "bottom-right": "Bottom Right",
                   "bottom-left": "Bottom Left"
                 }
@@ -352,12 +352,12 @@
                 "title": "Alignment",
                 "options": {
                   "top-left": "Top Left",
-                  "top-middle": "Top Middle",
+                  "top-middle": "Top Center",
                   "top-right": "Top Right",
-                  "middle": "Middle",
-                  "middle-right": "Middle Right",
-                  "middle-left": "Right Left",
-                  "bottom-middle": "Bottom Middle",
+                  "middle": "Center",
+                  "middle-right": "Center Right",
+                  "middle-left": "Center Left",
+                  "bottom-middle": "Bottom Center",
                   "bottom-right": "Bottom Right",
                   "bottom-left": "Bottom Left"
                 }
