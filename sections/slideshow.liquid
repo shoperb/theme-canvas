@@ -1,4 +1,4 @@
-<section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
+<section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}{% if section.settings.text_size == 'large' %} text-large{% endif %}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
   <div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}" data-arrow-image="{{'images/icons.svg' | asset_url}}">
 
     {% for block in section.blocks %}

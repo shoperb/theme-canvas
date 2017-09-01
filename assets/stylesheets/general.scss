@@ -19,6 +19,7 @@ a {
   width: calc(100% - 2 * #{$default_padding}px);
   height: 100%;
   margin: 0 #{$default_padding}px;
+  min-height: inherit;
 }
 .full-width {
   .no-grid-item {
