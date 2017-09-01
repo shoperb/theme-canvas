@@ -231,13 +231,6 @@
               "limited": "Piiratud sisuosaga"
             }
           },
-//          "text_style": {
-//            "title": "Teksti värvi stiil",
-//            "options": {
-//              "light": "Hele",
-//              "dark": "Tume"
-//            }
-//          },
           "section_height": {
             "title": "Galerii kõrgus",
             "options": {
@@ -259,6 +252,16 @@
               "caption": {
                 "title": "Pealkiri"
               },
+              "link": {
+                "title": "Lingi URL"
+              },
+              //          "text_style": {
+              //            "title": "Teksti värvi stiil",
+              //            "options": {
+              //              "light": "Hele",
+              //              "dark": "Tume"
+              //            }
+              //          },
               "image_alignment": {
                 "title": "Paigutus",
                 "options": {
@@ -554,7 +557,7 @@
                 "title": "Logo"
               },
               "link": {
-                "title": "Link URL"
+                "title": "Lingi URL"
               }
             }
           }
@@ -787,7 +790,20 @@
         "title": "Taust"
       },
       "image_overlay_opacity": {
-        "title": "Läbipaistvus (%)"
+        "title": "Läbipaistvus (%)",
+        "options": {
+          "0": "0%",
+          "1": "10%",
+          "2": "20%",
+          "3": "30%",
+          "4": "40%",
+          "5": "50%",
+          "6": "60%",
+          "7": "70%",
+          "8": "80%",
+          "9": "90%",
+          "10": "100%"
+        }
       },
       "body_font_family": {
         "title": "Teksti font"
@@ -808,7 +824,8 @@
         "buttons": "Nupud",
         "headings_fonts": "Pealkirjad",
         "layout": "Kujunds",
-        "text": "Tekstid"
+        "text": "Tekstid",
+        "image_overlay": "Läbipaistvusega pilt"
       }
     }
   }

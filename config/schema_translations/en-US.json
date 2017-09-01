@@ -250,6 +250,9 @@
               "caption": {
                 "title": "Caption"
               },
+              "link": {
+                "title": "Link URL"
+              },
 //              "text_style": {
 //                "title": "Text color style",
 //                "options": {
@@ -792,7 +795,20 @@
         "title": "Background"
       },
       "image_overlay_opacity": {
-        "title": "Opacity (%)"
+        "title": "Opacity",
+        "options": {
+          "0": "0%",
+          "1": "10%",
+          "2": "20%",
+          "3": "30%",
+          "4": "40%",
+          "5": "50%",
+          "6": "60%",
+          "7": "70%",
+          "8": "80%",
+          "9": "90%",
+          "10": "100%"
+        }
       },
       "body_font_family": {
         "title": "Font family"
@@ -812,7 +828,8 @@
       "buttons": "Buttons",
       "headings_fonts": "Headings",
       "layout": "Layout",
-      "text": "Text"
+      "text": "Text",
+      "image_overlay": "Image with overlay"
     }
   }
 }
