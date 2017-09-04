@@ -1,0 +1,30 @@
+[data-type=collection-list],
+.collections-page {
+  .grid__item {
+    padding: #{$default_padding}px;
+  }
+  .opacity-image.with-image {
+    background-size: cover;
+  }
+  .collection {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $layout_secondary_background_color;;
+
+    h2 {
+      @include centerize;
+      margin: 0;
+      width: 100%;
+      word-break: break-word;
+    }
+  }
+  a.collection {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

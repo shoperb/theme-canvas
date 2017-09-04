@@ -116,6 +116,7 @@ h3.general-title {
 .general-page {
   header {
     @extend .clearfix;
+    padding: 0 #{$default_padding}px;
 
     .general-title {
       text-align: left;

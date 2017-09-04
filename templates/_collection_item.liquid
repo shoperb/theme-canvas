@@ -1,0 +1,8 @@
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {% if collection_item == 'page' %}palm--one-half lap--one-third desk--one-quarter{% else %}{{grid_class}}{% endif %}" data-section-block-id="{{block.id}}">
+  {% assign collection = collections[block.settings.collection] %}
+
+  <a class="collection opacity-image-container" href="{{collection.url}}">
+    <div class="opacity-image{% if collection.image %} with-image{% endif %}" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
+    <h2 class="general-title">{% if collection.name %}{{collection.name}}{% else %}{{'section.default.collection.name' | t}}{% endif %}</h2>
+  </a>
+</div>{% unless forloop.last %}<!--{% endunless %}{% if diff > 0 %}<!--{% endif %}
