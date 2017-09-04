@@ -9,11 +9,93 @@ button,
   font-size: $body_font_size;
   padding: 4px 8px;
   border-radius: 2px;
-  background: $form_background;
+  background: $layout_background_color;
   height: 40px;
   box-sizing: border-box;
   color: $text_headings_color;
   font-family: $body_font_family, sans-serif;
+
+  &[type=radio] {
+    opacity: 0;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 0;
+    top: 4px;
+
+    + .radio {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      top: 5px;
+      left: 0;
+      background: $buttons_secondary_button_background_color;
+      display: inline-block;
+      border: 1px solid lighten($layout_border_color, 20%);
+      box-shadow: 0 0 0 1px darken($layout_border_color, 20%);
+      box-sizing: border-box;
+      opacity: 0.7;
+      background: $layout_background_color;
+    }
+    &:checked + .radio {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        top: 1px;
+        left: 1px;
+        background: darken($layout_border_color, 40%);
+      }
+    }
+  }
+  &[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+
+    & + .label-text {
+      margin-left: 0;
+      position: relative;
+      display: inline-block;
+      @include user-select;
+
+      .tick {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        top: 2px;
+        border: 1px solid $layout_border_color;
+        background: $layout_background_color;
+
+        svg {
+          left: 4px;
+          top: -2px;
+          position: relative;
+          opacity: 0;
+        }
+      }
+    }
+    &:checked + .label-text .tick svg {
+      opacity: 1;
+    }
+  }
+  &.custom-checkbox {
+    width: auto;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+
+    &:checked + .label-text .tick:before {
+      color: darken($layout_border_color, 40%);
+      position: relative;
+      left: -1px;
+    }
+  }
 }
 .button,
 .disabled-button {

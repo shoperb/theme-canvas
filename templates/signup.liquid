@@ -1,71 +1,75 @@
-{% include "flash_message" %}
+<section role="main" class="signup-page general-page">
+  {% include "flash_message" %}
 
-<div class="account-page background-container">
-  <div class="account-form">
-    <h3 class="main-title center">{{'account.signup' | t}}</h3>
-    <div class="subtitle">{{'account.signup.subtitle' | t}}</div>
+  <div class="account-form-container">
+    <div class="account-page-container">
+      <h3 class="general-title">{{'account.signup' | t}}</h3>
+      <div class="subtitle">{{'account.signup.subtitle' | t}}</div>
 
-    <div class="form-error" data-form-error></div>
+      <div class="form-error" data-form-error></div>
 
-    <form {{form_actions.signup}}" method="post" data-behavior="register" data-error="{{'account.error.password_mismatch' | t}}">
-      {{form_actions.auth_input}}
+      <form {{form_actions.signup}}" method="post" data-behavior="register" data-error="{{'account.error.password_mismatch' | t}}">
+        {{form_actions.auth_input}}
 
-      <div class="ui grid">
-        <div class="eight wide column">
-          <label for="personal" data-sign-up>
-            <input type="radio" name="account[company]" value="false" checked="checked" id="personal">
-            <div class="radio"></div>
-            {{'account.type.personal' | t}}
-          </label>
-        </div>
-        <div class="eight wide column">
-          <label for="business" data-sign-up>
-            <input type="radio" name="account[company]" value="true" id="business">
-            <div class="radio"></div>
-            {{'account.type.business' | t}}
-          </label>
-        </div>
-        <div class="sixteen wide column hidden" data-business-only>
-          <input type="text" name="account[company_name]" placeholder="{{'account.company_name' | t}}"" id="company_name" class="text" data-error="{{'account.error.company_name' | t}}">
-        </div>
-        <div class="sixteen wide column hidden" data-business-only>
-          <input type="text" name="account[vat_number]" placeholder="{{'account.vat' | t}}"" id="vat" class="text" data-error="{{'account.error.vat' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="text" name="account[first_name]" placeholder="{{'account.first_name' | t}}"" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="text" name="account[last_name]" placeholder="{{'account.last_name' | t}}"" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="text" name="account[email]" placeholder="{{'account.email' | t}}"" id="email" class="text" data-error="{{'account.error.email' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="password" name="account[password]" placeholder="{{'account.password' | t}}"" id="password" class="text" data-error="{{'account.error.password' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="password" name="account[password_confirmation]" placeholder="{{'account.password_confirmation' | t}}"" id="password_confirmation" class="text" data-error="{{'account.error.password_confirmation' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <label for="newsletter">
-            <input type="hidden" name="account[newsletter]" value="0">
-            <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1">
-            <span class="label-text">
-              <span class="tick"></span>
-              {{'account.subscribe_to_newsletter' | t}}
-            </span>
-          </label>
-        </div>
-        <div class="sixteen wide column">
-          <button class="button primary" type="submit">{{'account.signup' | t}}</button>
-        </div>
-      </div>
+        <div class="grid">
+          <div class="grid__item one-whole desk--one-half">
+            <label for="personal" data-sign-up>
+              <input type="radio" name="account[company]" value="false" checked="checked" id="personal">
+              <div class="radio"></div>
+              {{'account.type.personal' | t}}
+            </label>
+          </div><!--
+          --><div class="grid__item one-whole desk--one-half">
+            <label for="business" data-sign-up>
+              <input type="radio" name="account[company]" value="true" id="business">
+              <div class="radio"></div>
+              {{'account.type.business' | t}}
+            </label>
+          </div>
 
-    </form>
+          <div class="grid__item one-whole hidden" data-business-only>
+            <input type="text" name="account[company_name]" placeholder="{{'account.company_name' | t}}"" id="company_name" class="text" data-error="{{'account.error.company_name' | t}}">
+          </div>
+          <div class="grid__item one-whole hidden" data-business-only>
+            <input type="text" name="account[vat_number]" placeholder="{{'account.vat' | t}}"" id="vat" class="text" data-error="{{'account.error.vat' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <input type="text" name="account[first_name]" placeholder="{{'account.first_name' | t}}"" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <input type="text" name="account[last_name]" placeholder="{{'account.last_name' | t}}"" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <input type="text" name="account[email]" placeholder="{{'account.email' | t}}"" id="email" class="text" data-error="{{'account.error.email' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <input type="password" name="account[password]" placeholder="{{'account.password' | t}}"" id="password" class="text" data-error="{{'account.error.password' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <input type="password" name="account[password_confirmation]" placeholder="{{'account.password_confirmation' | t}}"" id="password_confirmation" class="text" data-error="{{'account.error.password_confirmation' | t}}">
+          </div>
+          <div class="grid__item one-whole">
+            <label for="newsletter">
+              <input type="checkbox" id="newsletter" name="account[newsletter]" value="1">
+              <span class="label-text">
+                <span class="tick">
+                  {% include 'icon' with 'close' %}
+                </span>
+                {{'account.subscribe_to_newsletter' | t}}
+              </span>
+            </label>
+          </div>
+          <div class="grid__item one-whole">
+            <button class="button primary" type="submit">{{'account.signup' | t}}</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="account-link">
+      <span>{{'account.already_have' | t}}</span>
+      <a href="{{url.login}}">{{'account.sign_in' | t}}</a>
+    </div>
   </div>
-
-  <div class="account-link">
-    <span>{{'account.already_have' | t}}</span>
-    <a href="{{url.login}}">{{'account.sign_in' | t}}</a>
-  </div>
-</div>
+</section>

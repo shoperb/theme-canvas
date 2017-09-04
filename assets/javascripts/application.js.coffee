@@ -39,3 +39,9 @@ for el in document.querySelectorAll('[data-fancy-dropdown-element]')
     if this.closest('form').elements["filter"].value
       this.closest('form').submit()
   )
+
+$('[data-sign-up]').on 'click', ->
+  if $(this).attr('for') == 'business'
+    $('[data-business-only]').removeClass 'hidden'
+  else
+    $('[data-business-only]').addClass 'hidden'

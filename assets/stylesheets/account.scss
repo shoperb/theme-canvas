@@ -1,0 +1,215 @@
+.account-form-container {
+  padding-top: 60px;
+  padding-bottom: 157px;
+
+  .grid__item {
+    padding: #{$default_padding}px;
+  }
+  .account-page-container {
+    background: $layout_secondary_background_color;
+    max-width: 436px;
+    margin: 0 auto;
+    padding: 32px 20px;
+
+    h3.general-title {
+      margin-bottom: 11px;
+    }
+    .subtitle {
+      text-align: center;
+      padding: 0 30px;
+      @include breakpoint(mobile) {
+        padding: 0;
+      }
+    }
+    form {
+      padding: 18px 30px 0;
+      @include breakpoint(mobile) {
+        padding: 18px 0 0;
+      }
+    }
+    .fake-form {
+      padding: 18px 30px 0;
+    }
+    .button {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .account-link {
+    padding: 17px 0 0;
+    text-align: center;
+
+    a {
+      color: $text_link_color;
+
+      &:hover {
+        color: lighten($text_link_color, 20%);
+      }
+    }
+  }
+
+  .account-sidebar {
+    margin: -3px 0 0 3px;
+    display: block;
+    @include breakpoint(mobile) {
+      text-align: center;
+      margin: 0;
+    }
+
+    .title {
+      display: block;
+      padding-bottom: 4px;
+      padding-left: 10px;
+      background: transparent !important;
+      text-transform: uppercase;
+      @include breakpoint(mobile) {
+        padding: 0;
+      }
+    }
+    .account-nav {
+      margin-left: -11px;
+      @include breakpoint(mobile) {
+        margin: 0;
+      }
+
+      ul {
+        @extend .default-list;
+        padding-left: 10px;
+        @include breakpoint(mobile) {
+          padding: 0;
+        }
+
+        li {
+          a {
+            display: block;
+            margin-bottom: 1px;
+            padding: 3px 0 3px 20px;
+            @include breakpoint(mobile) {
+              padding: 3px 0;
+            }
+
+            &.active,
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.logged-in {
+    padding-top: 0;
+    margin-top: -21px;
+  }
+  label {
+    padding-left: 16px;
+    position: relative;
+
+    &[for=newsletter] {
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+  input {
+    &[type=text],
+    &[type=password] {
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px $text_link_color inset;
+    }
+    &:focus {
+      border: $text_link_color !important;
+      box-shadow: 0 0 4px 0 $text_link_color;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px $text_link_color inset;
+      }
+    }
+    &.custom-checkbox {
+      width: auto;
+      height: auto;
+      opacity: 0;
+      position: absolute;
+
+      &:checked + .label-text .tick:before {
+        content: "\68";
+        position: relative;
+        left: -1px;
+      }
+    }
+  }
+}
+[data-sign-up] {
+  cursor: pointer;
+}
+.twelve.wide.column.account-content {
+  @include breakpoint(tablet) {
+    width: 100% !important;
+  }
+
+  form {
+    margin: 3px 0 0;
+
+    .main-title {
+      margin: 6px 0 0 31px;
+      @include breakpoint(tablet) {
+        margin: 6px 0 0;
+        text-align: center;
+      }
+    }
+    .three.wide.column {
+      padding: 24px 0 16px 0;
+
+      label {
+        padding: 0;
+      }
+      @include breakpoint(900) {
+        width: 50% !important;
+        padding: 10px 0 0 47px;
+      }
+      @include breakpoint(tablet) {
+        padding: 10px 0 0 20px;
+      }
+      @include breakpoint(mobile) {
+        width: 100% !important;
+      }
+    }
+    .five.wide.column {
+      @include breakpoint(900) {
+        width: 100% !important;
+      }
+    }
+    .eight.wide.column {
+      padding-left: 0;
+      padding-right: 46px;
+      @include breakpoint(900) {
+        width: 50% !important;
+        padding: 0 20px 0 0;
+      }
+      @include breakpoint(mobile) {
+        width: 100% !important;
+        padding: 0 20px;
+      }
+    }
+    .separator {
+      height: 1px;
+      padding: 0 !important;
+      margin: 24px 14px 24px 19px;
+      @include breakpoint(tablet) {
+        margin: 24px 20px;
+      }
+    }
+    .button {
+      min-width: 250px;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+  }
+}
+.template-account .flash.error {
+  margin-bottom: 30px;
+}
