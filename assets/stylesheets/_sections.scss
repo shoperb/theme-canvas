@@ -240,6 +240,7 @@ section[data-type] {
     }
     &.opacity-image-container {
       .opacity-image {
+        background-image: asset-url('images/placeholder.svg');
         opacity: 1;
       }
     }
