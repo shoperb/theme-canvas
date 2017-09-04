@@ -134,13 +134,13 @@ header#main-header {
       display: inline-block;
 
       .search-form {
-        border-radius: 4px 0 0 4px;
+        border-radius: 2px 0 0 2px;
         width: 235px;
       }
       .search-button {
         position: relative;
         line-height: 1;
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 2px 2px 0;
         cursor: pointer;
         background: $buttons_primary_button_background_color;
         color: $buttons_primary_button_text_color;

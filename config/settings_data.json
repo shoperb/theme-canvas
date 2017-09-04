@@ -30,7 +30,7 @@
         "logo_max_width": "100",
         "menu": "header",
         "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
-        "section_width": "full-width"
+        "section_width": "limited"
       },
       "id": "header"
     },
