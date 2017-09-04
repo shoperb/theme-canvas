@@ -1,0 +1,67 @@
+.pagination{
+  text-align: center;
+  display: block;
+
+  ul {
+    @extend .default-list;
+    margin-top: 35px;
+
+    li {
+      float: none;
+      display: inline-block;
+      color: $text_link_color;
+      margin: 0 15px;
+      text-align: center;
+      text-transform: uppercase;
+
+      .icon-arrow-narrow {
+        width: 18px;
+        height: 18px;
+        top: 1px;
+        position: relative;
+      }
+      &.prev {
+        .icon-arrow-narrow {
+          @include flip;
+        }
+      }
+      a {
+        color: $text_link_color;
+        background: none;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+
+        &:hover {
+          color: lighten($text_link_color, 20%);
+        }
+      }
+      &.active {
+        position: relative;
+        color: lighten($text_link_color, 20%);
+      }
+      &.next,
+      &.prev {
+        @include breakpoint(mobile) {
+          width: 100%;
+          padding: 10px 0;
+        }
+
+        a {
+          top: 0;
+        }
+      }
+      &.next {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.pagination-centered {
+  text-align: center;
+
+  ul > li {
+    float: none;
+    display: inline-block;
+  }
+}

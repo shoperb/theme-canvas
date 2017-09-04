@@ -4,15 +4,16 @@
       <h3 class="general-title">{{collection.name}}</h3>
     </div><!--
     --><div class="grid__item one--whole desk--one-half sorting">
-      {% include 'sortable' with 'collection_sorting' %}
+      {% include 'sortable' %}
     </div>
   </header>
 
+  {% paginate collection.products.order_by_name_asc by 12 %}
   <div class="page-content grid">
-    {% paginate collection.products.order_by_name_asc by 12 %}
     {% for product in paginate.collection %}
     {% include 'list_product' with 'page' %}
     {% endfor %}
-    {% endpaginate %}
   </div>
+  {% include 'pagination' %}
+  {% endpaginate %}
 </section>

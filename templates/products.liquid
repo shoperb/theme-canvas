@@ -2,27 +2,22 @@
 {% assign order =  params["filter"] %}
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 
-<div class="main-container">
-  <div class="ui grid inner-header-title">
-    <div class="eight wide column">
-      <h2 class="main-title">{{'breadcrumb.products' | t}}</h2>
-    </div>
-    <div class="eight wide column">
+<section role="main" class="products-page general-page">
+  <header class="grid">
+    <div class="grid__item one--whole desk--one-half">
+      <h3 class="general-title">{{'general.products' | translate}}</h3>
+    </div><!--
+    --><div class="grid__item one--whole desk--one-half sorting">
       {% include 'sortable' %}
     </div>
-  </div>
+  </header>
 
   {% paginate products[order] by 12 %}
-
-  <section role="main" class="products-page">
-    <div class="ui grid product-grid" data-height="equal">
-      {% for product in paginate.collection %}
-      {% include 'list_product' with 4 %}
-      {% endfor %}
-    </div>
-
-    {% include 'pagination' %}
-  </section>
-
+  <div class="page-content grid">
+    {% for product in paginate.collection %}
+    {% include 'list_product' with 'page' %}
+    {% endfor %}
+  </div>
+  {% include 'pagination' %}
   {% endpaginate %}
-</div>
+</section>
