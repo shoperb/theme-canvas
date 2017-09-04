@@ -160,7 +160,7 @@ h2.product-title {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: $layout_secondary_background_color no-repeat center;
+    background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
 
     img {
       @include centerize;

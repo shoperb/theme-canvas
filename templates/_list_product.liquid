@@ -6,7 +6,7 @@
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-    <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}" style="background-image: {% if product.image.size-480.url %}url('{{product.image.size-480.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
+    <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}"{% if product.image.size-480.url %} style="background-image: url('{{product.image.size-480.url}}')"{% endif %}></div>
 
     <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 
