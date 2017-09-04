@@ -1,50 +1,39 @@
-<div class="main-container search-page">
-  <h2 class="main-title center">{{'search' | t}}</h2>
+{% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
+{% assign order =  params["filter"] %}
+{% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 
-  <div class="ui grid">
-    <div class="ten wide column">
-      {% if params.query %}
-      <span>{{'search.results' | t}}</span>
-      <form action="{{url.search}}" method="get" role="search">
-        <input name="query" type="text" value="{{params.query | escape}}">
-        <button type="submit"><div class="icon-search"></div></button>
-      </form>
-      {% endif %}
+<section role="main" class="search-page general-page">
+  <header class="grid">
+    <div class="grid__item one--whole">
+      <h3 class="general-title">{{'general.search' | translate}}</h3>
     </div>
-    <div class="six wide column">
-    {% assign results = '0' %}
-    {% if search.size %}
-    {% assign results = search.size %}
-    {% endif %}
-    {% capture results %}{{results}} {% if search.size == 1 %}{{'search.found_1' | t}}{% else %}{{'search.found' | t}}{% endif %}{% endcapture %}
-    {% include 'sortable' with results %}
-    </div>
+  </header>
+  <header class="grid">
+    <div class="grid__item one--whole{% if search.size %} desk--one-half{% endif %}">
+      <span>
+        {{'search.results' | t}} '{{params.query}}':
+        {% if search.size > 1 %}
+        {{search.size}} {{'search.found' | t}}
+        {% elsif search.size == 1 %}
+        {{search.size}} {{'search.found_1' | t}}
+        {% else %}
+        {{'search.no_results' | t}}
+        {% endif %}
+      </span>
+    </div>{% if search.size %}<!--
+    --><div class="grid__item one--whole desk--one-half sorting">
+      {% include 'sortable' %}
+    </div>{% endif %}
+  </header>
+
+  {% if search.any? %}
+  {% paginate search[order] by 12 %}
+  <div class="page-content grid">
+    {% for product in paginate.collection %}
+    {% include 'list_product' with 'page' %}
+    {% endfor %}
   </div>
-
-  <div class="search-results">
-    {% if search.any? %}
-    {% paginate search by 12 %}
-
-    <section role="main" class="products-page">
-      <div class="ui grid product-grid" data-height="equal">
-        {% for product in paginate.collection %}
-        <div class="four wide column">
-          {% include 'list_product' with 4 %}
-        </div>
-        {% endfor %}
-      </div>
-
-      {% include 'pagination' %}
-    </section>
-
-    {% endpaginate %}
-
-    {% else %}
-
-    <div class="no-results">
-      {{'search.no_results' | t}} "{{params.query}}".
-    </div>
-
-    {% endif %}
-  </div>
-</div>
+  {% include 'pagination' %}
+  {% endpaginate %}
+  {% endif %}
+</section>

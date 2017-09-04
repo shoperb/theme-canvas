@@ -18,6 +18,16 @@
   "product.quantity": "Kogus",
   "product.add_to_cart": "Lisa ostukorvi",
 
+  "general.products": "Tooted",
+  "general.search": "Otsing",
+
+  "search.placeholder": "Otsi...",
+  "search.results": "Tulemused otsingule",
+  "search.found_1": "tulemus leitud",
+  "search.found": "tulemust leitud",
+  "search.no_results": "tulemusi ei leitud",
+
+
 
   //deprecated and need to be reviewd before using
   "navigation.previous": "Eelmine",
@@ -50,12 +60,8 @@
   "cart.errors.out_of_stock": "Kahjuks on see toode hetkel otsas.",
   "cart.errors.low_on_stock_for_15_mins": "Kahjuks pole meil antud toodet piisavalt laos, viimane eksemplar on hetkel 15 minutiks broneeritud. Palun proovige varsti uuesti",
 
-  "search": "Otsing",
-  "search.keyword": "Otsi poest...",
   "search.all_categories": "Kõik kategooriad",
   "search.search_placeholder": "Sisesta oma otsing",
-  "search.results": "Otsingu tulemused",
-  "search.no_results": "Tulemusi ei leitud",
   "search.no_keyword": "eemalda otsingusõna",
 
   "products.title": "Kõik tooted",
@@ -196,7 +202,6 @@
   "general.404.or_view": "või vaata",
   "general.404.products": "kõiki tooteid.",
   "general.collections": "Kollektsioonid",
-  "general.products": "Tooted",
 
   "public.invoice.invoice": "Arve",
   "public.invoice.reg_no": "Reg. num: 11711129",

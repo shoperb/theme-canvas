@@ -18,6 +18,16 @@
   "product.quantity": "Quantity",
   "product.add_to_cart": "Add to Cart",
 
+  "general.products": "Products",
+  "general.search": "Search",
+
+  "search.placeholder": "Search...",
+  "search.results": "Search results for",
+  "search.found_1": "result found",
+  "search.found": "results found",
+  "search.no_results": "sorry, we didn't find any matches for",
+
+
 
 //deprecated and need to be reviewd before using
   "navigation.previous": "Previous",
@@ -50,12 +60,8 @@
   "cart.errors.out_of_stock": "Unfortunately this is item is sold out.",
   "cart.errors.low_on_stock_for_15_mins": "Unfortunately we do not have enough stock for this item, last item is booked for 15min. Please try aga soon",
 
-  "search": "Search",
-  "search.keyword": "Search store...",
   "search.all_categories": "All categories",
   "search.search_placeholder": "Type your search",
-  "search.results": "Search results for",
-  "search.no_results": "There are no results",
   "search.no_keyword": "empty keyword",
 
   "products.title": "Products",
@@ -153,7 +159,6 @@
   "customer.passwords.new_token_requested": "Looks like someone has generated new password reset token, please use the new one",
   "customer.passwords.password_changed": "Password updated",
 
-
   "january": "January",
   "february": "February",
   "march": "March",
@@ -185,7 +190,6 @@
   "general.404.or_view": "or view our range of",
   "general.404.products": "products.",
   "general.collections": "Colections",
-  "general.products": "Products",
 
   "public.invoice.customer": "Customer",
   "public.invoice.invoice": "Invoice",
