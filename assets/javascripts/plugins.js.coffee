@@ -1,20 +1,12 @@
-#class @DropdownInViewport
-#  constructor: ->
-#    @CheckDroDown($('.menu-dropdown'))
-#
-#  CheckDroDown: (e) =>
-#    e.on 'mouseenter mouseleave', (el) ->
-#      console.log el.target
-#      viewportOffset = el.target.getBoundingClientRect()
-#      if el.target.parentNode.querySelector('ul')
-#        debugger
-#
-#        console.log viewportOffset.left + el.target.querySelector('ul').offsetWidth
-#        console.log window.innerWidth
-#
-#        if viewportOffset.left + el.target.querySelector('ul').offsetWidth > window.innerWidth
-#          el.target.classList.add('direction-right')
-#          console.log 'right'
-#        else
-#          el.target.classList.remove('direction-left')
-#          console.log 'left'
+class @DropdownInViewport
+  constructor: ->
+    @CheckDroDown($('.fancy-dropdown'))
+
+  CheckDroDown: (e) =>
+    e.on 'mouseenter mouseleave', (el) ->
+      viewportOffset = this.getBoundingClientRect()
+      if this.parentNode.querySelector('ul')
+        if viewportOffset.left + this.querySelector('ul').offsetWidth > window.innerWidth
+          this.classList.add('direction-right')
+        else
+          this.classList.remove('direction-left')

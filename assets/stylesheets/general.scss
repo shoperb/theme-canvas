@@ -121,7 +121,75 @@ h3.general-title {
       text-align: left;
     }
     .sorting {
+      vertical-align: bottom;
       text-align: right;
+    }
+  }
+}
+
+.fancy-dropdown {
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-right: 10px !important;
+
+  .icon-full-arrow-down {
+    position: relative;
+    top: -2px;
+  }
+  .fancy-dropdown-container {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    padding-top: 10px;
+  }
+  ul {
+    @extend .default-menu;
+    background: $layout_header_footer_background_color;
+    box-shadow: 0 2px 8px 0 rgba(27, 22, 38, 0.1);
+
+    li {
+      position: relative;
+
+      label {
+        display: block;
+        cursor: pointer;
+      }
+      a,
+      span {
+        padding: #{$default_padding}px;
+        display: block;
+        white-space: nowrap;
+      }
+      span {
+        pointer-events: none;
+      }
+      input {
+        opacity: 0;
+        position: absolute;
+
+        &:checked + span {
+          background: darken($layout_header_footer_background_color, 5%);
+          color: lighten($text_link_color, 20%);
+        }
+      }
+    }
+  }
+  &.direction-right {
+    .fancy-dropdown-container {
+      left: auto;
+      right: 0;
+    }
+  }
+  &:hover {
+    .fancy-dropdown-container {
+      display: block;
+    }
+    .current,
+    .current-locale {
+      color: lighten($text_link_color, 20%);;
     }
   }
 }

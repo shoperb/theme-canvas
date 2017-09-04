@@ -13,6 +13,9 @@
 .hidden {
   display: none;
 }
+.fright {
+  float: right;
+}
 
 @mixin transform($transform) {
   -webkit-transform: $transform;

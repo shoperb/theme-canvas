@@ -6,14 +6,16 @@
 #= require cart
 #= require sections
 #= require svg4everybody
-# require plugins
+#= require plugins
 
 document.addEventListener("DOMContentLoaded", ->
 #  new VariantSelector()
   new Cart()
   svg4everybody(polyfill: true)
-#  new DropdownInViewport()
+  new DropdownInViewport()
 )
+window.onresize = ->
+  new DropdownInViewport()
 
 window.addEventListener("click", (event)->
   for el in document.querySelectorAll('.variant-selector')
@@ -30,4 +32,10 @@ for el in document.querySelectorAll('[data-quantity]')
       diff = 1
 
     input.value = parseInt(input.value) + diff
+  )
+
+for el in document.querySelectorAll('[data-fancy-dropdown-element]')
+  el.addEventListener("click", (event)->
+    if this.closest('form').elements["filter"].value
+      this.closest('form').submit()
   )

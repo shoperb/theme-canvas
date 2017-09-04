@@ -3,10 +3,22 @@
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 
 <form class="sorting-form" action="">
-  <select name="filter" id="filter-category" data-behaviour="select" onchange="this.form.submit();">
-    <option value="">{{ 'categories.filters.no_sorting' | t }}</option>
-    {% for e in meths %}
-    <option value="{{e}}" {% if order == e %}selected="selected"{% endif %}>{{ 'categories.filters.' | append: e | t }}</option>
-    {% endfor %}
-  </select>
+  <div class="fancy-dropdown fright">
+    <div class="current">
+      {{'categories.filters.no_sorting' | t}}
+      {% include 'icon' with 'full-arrow-down' %}
+    </div>
+    <div class="fancy-dropdown-container">
+      <ul>
+        {% for e in meths %}
+        <li data-fancy-dropdown-element>
+          <label>
+            <input type="radio" name="filter" value="{{e}}"{% if order == e %} checked="checked"{% endif %}>
+            <span>{{'categories.filters.' | append: e | t}}</span>
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </form>
