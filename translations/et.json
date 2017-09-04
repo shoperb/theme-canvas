@@ -20,6 +20,9 @@
 
   "general.products": "Tooted",
   "general.search": "Otsing",
+  "general.404.title": "Lehte ei leitud",
+  "general.404.description": "Meil on väga kahju, aga otsitud lehte pole.",
+  "general.404.button": "Mine avalehele",
 
   "search.placeholder": "Otsi...",
   "search.results": "Tulemused otsingule",
@@ -192,11 +195,9 @@
 
   "product.select": "Vali: ",
 
-  "general.404.title": "Lehte ei leitud",
   "general.read_more": "Loe edasi",
   "general.share_this": "Jaga seda toodet",
   "general.or": "või",
-  "general.404.description": "Meil on väga kahju, aga otsitud lehte pole.",
   "general.404.go_back": "Mine tagasi meie",
   "general.404.homepage": "avalehele",
   "general.404.or_view": "või vaata",

@@ -20,6 +20,9 @@
 
   "general.products": "Products",
   "general.search": "Search",
+  "general.404.title": "Sorry",
+  "general.404.description": "The page you’re looking for can’t be found…",
+  "general.404.button": "Go to Homepage",
 
   "search.placeholder": "Search...",
   "search.results": "Search results for",
@@ -180,11 +183,9 @@
 
   "product.select": "Select: ",
 
-  "general.404.title": "Page not found",
   "general.read_more": "Read more",
   "general.share_this": "Share this",
   "general.or": "or",
-  "general.404.description": "We're sorry, but the page you're looking for could not be found.",
   "general.404.go_back": "Go back to our",
   "general.404.homepage": "homepage",
   "general.404.or_view": "or view our range of",
