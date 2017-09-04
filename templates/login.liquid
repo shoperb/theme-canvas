@@ -1,29 +1,33 @@
-{% include "flash_message" %}
+<section role="main" class="login-page general-page">
+  {% include "flash_message" %}
 
-<div class="account-page background-container">
-  <div class="account-form">
-    <h3 class="main-title center">{{'account.login' | t}}</h3>
-    <div class="subtitle">{{'account.login.subtitle' | t}}</div>
+  <div class="account-form-container">
+    <div class="account-page-container">
+      <div class="account-form">
+        <h3 class="general-title">{{'account.login' | t}}</h3>
+        <div class="subtitle">{{'account.login.subtitle' | t}}</div>
 
-    <form action="{{form_actions.new_login}}" method="post">
-      {{form_actions.auth_input}}
+        <form action="{{form_actions.new_login}}" method="post">
+          {{form_actions.auth_input}}
 
-      <div class="ui grid">
-        <div class="sixteen wide column">
-          <input type="text" name="account[email]" placeholder="{{'account.email' | t}}"" id="email" class="text" data-error="{{'account.error.email' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <input type="password" name="account[password]" placeholder="{{'account.password' | t}}"" id="password" class="text" data-error="{{'account.error.password' | t}}">
-        </div>
-        <div class="sixteen wide column">
-          <button class="button primary" type="submit">{{'account.signin' | t}}</button>
-        </div>
+          <div class="grid">
+            <div class="grid__item one-whole">
+              <input type="text" name="account[email]" placeholder="{{'account.email' | t}}"" id="email" class="text" data-error="{{'account.error.email' | t}}">
+            </div>
+            <div class="grid__item one-whole">
+              <input type="password" name="account[password]" placeholder="{{'account.password' | t}}"" id="password" class="text" data-error="{{'account.error.password' | t}}">
+            </div>
+            <div class="grid__item one-whole">
+              <button class="button primary" type="submit">{{'account.signin' | t}}</button>
+            </div>
+          </div>
+
+        </form>
       </div>
+    </div>
 
-    </form>
+    <div class="account-link">
+      <a href="{{url.recover}}">{{'account.forgot' | t}}</a>
+    </div>
   </div>
-
-  <div class="account-link">
-    <a href="{{url.recover}}">{{'account.forgot' | t}}</a>
-  </div>
-</div>
+</section>
