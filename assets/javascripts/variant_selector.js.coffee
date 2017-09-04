@@ -161,5 +161,7 @@ class @VariantSelector
       container.querySelector('[data-price]').innerHTML = opt.dataset.price
       container.querySelector('[data-current-price]').innerHTML = opt.dataset.discount_price
       container.querySelector('.compare-price').classList.add('visible')
+      container.querySelector('.actual-price').classList.add('discount')
     else
       container.querySelector('.compare-price').classList.remove('visible')
+      container.querySelector('.actual-price').classList.remove('discount')

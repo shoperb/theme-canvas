@@ -11,9 +11,9 @@
 </div>
 
 <div class="product-pricing">
-  <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
+  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
 
-  <span class="compare-price{% if default_variant.discount? %} visible{% endif %}{% if default_variant.discount? %} discount{% endif %}">
+  <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
   </span>
 </div>
