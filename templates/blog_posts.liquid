@@ -1,7 +1,7 @@
-<section role="main" class="blogs-page general-page">
+<section role="main" class="blog-page general-page">
   {% paginate posts by 6 %}
   {% for post in paginate.collection %}
-  {% include 'list_blog_post' %}
+  {% include 'list_blog_post' with 'blog-list' %}
   {% endfor %}
 
   {% include 'pagination' %}

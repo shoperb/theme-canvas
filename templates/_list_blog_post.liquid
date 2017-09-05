@@ -14,8 +14,12 @@
 
   <div class="blog-content">
     <div>{{post.content | truncatewords: 40}}</div>
-    <div class="read-more">
-      <a href="{{ post.url }}">{{'general.read_more' | t}}</a>
+    <div class="post-link">
+      {% if list_blog_post == 'blog-list' %}
+      <a href="{{post.url}}">{{'general.read_more' | t}}</a>
+      {% else %}
+      <a href="{{url.blog}}">{{'general.back' | t}}</a>
+      {% endif %}
     </div>
   </div>
 </div>

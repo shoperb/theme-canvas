@@ -23,6 +23,7 @@
   "general.404.title": "Lehte ei leitud",
   "general.404.description": "Meil on väga kahju, aga otsitud lehte pole.",
   "general.404.button": "Mine avalehele",
+  "general.back": "Tagasi",
 
   "search.placeholder": "Otsi...",
   "search.results": "Tulemused otsingule",
