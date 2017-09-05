@@ -3,9 +3,9 @@
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 {% assign full_width = 1 %}
 
-<div class="main-container">
-  <div class="ui grid categories">
-    <div class="four wide column">
+<section role="main" class="category-page general-page">
+  <div class="grid">
+    <div class="grid__item one-whole palm--one-third desk--one-quarter">
       <sidebar class="category-sidebar">
         <nav class="category-nav">
           <ul>
@@ -22,32 +22,28 @@
           </ul>
         </nav>
       </sidebar>
-    </div>
+    </div><!--
 
-    <div class="twelve wide column categories-content">
-      <div class="ui grid">
-        <div class="eight wide column">
-          <h2 class="main-title">{{category.name}}</h2>
-        </div>
-        <div class="eight wide column">
+    --><div class="grid__item one-whole palm--two-third desk--three-quarters">
+      <header class="grid">
+        <div class="grid__item one-whole desk--three-quarters">
+          <h2 class="general-title">{{category.name}}</h2>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter sorting">
           {% include 'sortable' %}
         </div>
+      </header>
+
+      {% paginate category.products_with_children[order] by 9 %}
+      <div class="grid">
+        {% for product in paginate.collection %}
+        {% include 'list_product' with 'category' %}
+        {% endfor %}
       </div>
-
-      {% paginate category.products_with_children[order] by 12 %}
-      <section role="main" class="category-page">
-        <div class="ui grid product-grid" data-height="equal">
-
-          {% for product in paginate.collection %}
-          {% include 'list_product' with 3 %}
-          {% endfor %}
-
-        </div>
-      </section>
 
       {% include 'pagination' %}
 
       {% endpaginate %}
     </div>
   </div>
-</div>
+</section>

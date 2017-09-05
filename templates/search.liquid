@@ -1,8 +1,12 @@
+{% comment %} - support for search results ordering
 {% assign meths = "order_by_price_asc|order_by_price_desc|order_by_name_asc|order_by_name_desc" | split: "|" %}
 {% assign order =  params["filter"] %}
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
+{% endcomment %}
 
 <section role="main" class="search-page general-page">
+
+  {% comment %} - support for search results ordering
   <header class="grid">
     <div class="grid__item one--whole">
       <h3 class="general-title">{{'general.search' | translate}}</h3>
@@ -23,12 +27,39 @@
     </div>{% if search.size %}<!--
     --><div class="grid__item one--whole desk--one-half sorting">
       {% include 'sortable' %}
+
+      with ordering NEED to include query into params as well
+
     </div>{% endif %}
+  </header>
+  {% endcomment %}
+
+  <header class="grid">
+    <div class="grid__item one--whole desk--one-half">
+      <h3 class="general-title">{{'general.search' | translate}}</h3>
+    </div><!--
+    --><div class="grid__item one--whole desk--one-half search-results">
+      <span>
+        {{'search.results' | t}} '{{params.query}}':
+        {% if search.size > 1 %}
+        {{search.size}} {{'search.found' | t}}
+        {% elsif search.size == 1 %}
+        {{search.size}} {{'search.found_1' | t}}
+        {% else %}
+        {{'search.no_results' | t}}
+        {% endif %}
+      </span>
+    </div>
   </header>
 
   {% if search.any? %}
+
+  {% comment %} - support for search results ordering
   {% paginate search[order] by 12 %}
-  <div class="page-content grid">
+  {% endcomment %}
+
+  {% paginate search by 12 %}
+  <div class="grid">
     {% for product in paginate.collection %}
     {% include 'list_product' with 'page' %}
     {% endfor %}

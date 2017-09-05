@@ -13,7 +13,7 @@
   </header>
 
   {% paginate products[order] by 12 %}
-  <div class="page-content grid">
+  <div class="grid">
     {% for product in paginate.collection %}
     {% include 'list_product' with 'page' %}
     {% endfor %}

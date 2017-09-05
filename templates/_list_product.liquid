@@ -1,6 +1,12 @@
 {% assign variant = product.variants.first %}
+{% assign grid = 'lap--one-half ' | append: grid_class %}
+{% if list_product == 'page' %}
+{% assign grid = 'palm--one-half lap--one-third desk--one-quarter' %}
+{% elsif list_product == 'category' %}
+{% assign grid = 'palm--one-half lap--one-third desk--one-third' %}
+{% endif %}
 
-{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {% if list_product == 'page' %}palm--one-half lap--one-third desk--one-quarter{% else %}lap--one-half {{grid_class}}{% endif %} product-container">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container">
 
   <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product">
     <meta itemprop="url" content="{{url.current_url}}">
