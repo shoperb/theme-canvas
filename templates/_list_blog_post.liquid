@@ -1,41 +1,21 @@
-<div class="article clearfix">
-  <div class="left-sidebar columns large-3 show-for-large-up">
-    {% if post.published_at %}
-    <div class="date block">
-      <h3 class="title">{{'blog.date' | t}}</h3>
-      <p class="content">
-        {% include 'date' with post.published_at %}
-      </p>
-    </div>
-    {% else %}
-    &nbsp;
-    {% endif %}
+<div class="article">
+  {% if post.published_at %}
+  {% assign long_date = 1 %}
+  <div class="date">{% include 'date' with post.published_at %}</div>
+  {% endif %}
 
-{% comment %} - for the time we shall have author as well
-    <div class="author block">
-      <h3 class="title">{{'blog.author' | t}}</h3>
-      <p class="content">The Great Author</p>
-    </div>
-{% endcomment %}
+  <h2 class="title"><a href="{{ post.url }}">{{ post.name }}</a></h2>
+
+  {% comment %} - for the time we shall have author as well
+  <div class="author">
+    {{'blog.author' | t}} {{blog.author}}
   </div>
+  {% endcomment %}
 
-  <div class="middle-column columns large-9">
-    <h1 class="title"><a href="{{ post.url }}">{{ post.name }}</a></h1>
-
-{% comment %} - for the time we shall have author as well
-    <p class="mobile-meta show-for-medium-down">
-      Written By Troop Digital - November 07 2013
-    </p>
-{% endcomment %}
-    <p class="mobile-meta show-for-medium-down">
-      {% assign long_date = 1 %}
-      {% include 'date' with post.published_at %}
-      {% assign long_date = 0 %}
-    </p>
-
-    <div class="content rte-content colored-links">
-      <div style="text-align: left;"></div>
-      <p class="read-more"><a href="{{ post.url }}">{{'general.read_more' | t}} <span aria-hidden="true" class="glyph arrow-right"></span></a></p>
+  <div class="blog-content">
+    <div>{{post.content | truncatewords: 40}}</div>
+    <div class="read-more">
+      <a href="{{ post.url }}">{{'general.read_more' | t}}</a>
     </div>
   </div>
 </div>

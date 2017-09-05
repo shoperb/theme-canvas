@@ -1,13 +1,9 @@
-<div class="blog-posts-page">
+<section role="main" class="blogs-page general-page">
   {% paginate posts by 6 %}
   {% for post in paginate.collection %}
-  <div class="blog-posts-list-item">
-    <div class="main-container">
-      {% include 'list_blog_post' %}
-    </div>
-  </div>
+  {% include 'list_blog_post' %}
   {% endfor %}
 
   {% include 'pagination' %}
   {% endpaginate %}
-</div>
+</section>

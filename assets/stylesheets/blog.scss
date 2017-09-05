@@ -1,0 +1,16 @@
+.blogs-page {
+  .author {
+    color: $text_headings_color;
+  }
+  .blog-content {
+    .read-more {
+      padding-bottom: 40px;
+
+      a {
+        &:hover {
+          color: lighten($text_link_color, 20%);
+        }
+      }
+    }
+  }
+}

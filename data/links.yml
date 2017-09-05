@@ -1,354 +1,52 @@
 ---
-- id: 464
-  entity_id: 243
-  entity_type: Page
-  style: Page
-  name: Informatsioon
-  handle: informatsioon
-  position: 1
-  translations:
-    en:
-      name: Information
-    et:
-      name: Informatsioon
-  menu_handle: footer
-- id: 319
-  entity_id: 239
-  entity_type: Page
-  style: Page
-  name: Meist
-  handle: meist
-  position: 1
-  translations:
-    en:
-      name: Our Story
-    et:
-      name: Meist
-  menu_handle: informatsioon
-- id: 317
-  entity_id: 238
-  entity_type: Page
-  style: Page
-  name: Kontakt
-  handle: kontakt
-  position: 1
-  translations:
-    en:
-      name: Contact
-    et:
-      name: Kontakt
-  menu_handle: klienditeenindus
-- id: 327
+- id: 1
   style: HOME
-  name: Avaleht
-  handle: avaleht
+  name: Home
+  handle: home
   position: 1
   translations:
     en:
       name: Home
-    et:
-      name: Avaleht
   menu_handle: header
-- id: 320
-  entity_id: 242
-  entity_type: Page
-  style: Page
-  name: Tarne info
-  handle: tarne-info
-  position: 2
-  translations:
-    en:
-      name: Delivery options
-    et:
-      name: Tarne info
-  menu_handle: informatsioon
-- id: 465
+- id: 4
   style: Blank
-  name: Ettevõttest
-  handle: ettevottest
+  name: Collections
+  handle: collections
   position: 2
-  translations:
-    en:
-      name: Company Information
-    et:
-      name: Ettevõttest
-  menu_handle: footer
-- id: 318
-  entity_id: 241
-  entity_type: Page
-  style: Page
-  name: Tagastus
-  handle: tagastus
-  position: 2
-  translations:
-    en:
-      name: Returns and replacements
-    et:
-      name: Tagastus
-  menu_handle: klienditeenindus
-- id: 330
-  entity_id: 162
-  entity_type: Collection
-  style: Collection
-  name: Põlled
-  handle: polled
-  position: 2
-  translations:
-    en:
-      name: Aprons
-    et:
-      name: Põlled
-  menu_handle: header
-- id: 321
-  entity_id: 243
-  entity_type: Page
-  style: Page
-  name: Tingimused
-  handle: tingimused
-  position: 3
-  translations:
-    en:
-      name: General Terms
-    et:
-      name: Tingimused
-  menu_handle: informatsioon
-- id: 466
-  entity_id: 243
-  parent_id: 464
-  entity_type: Page
-  style: Page
-  name: "Üldtingimused"
-  handle: uldtingimused
-  position: 3
-  translations:
-    en:
-      name: General Terms
-    et:
-      name: "Üldtingimused"
-  menu_handle: footer
-- id: 331
-  entity_id: 163
-  entity_type: Collection
-  style: Collection
-  name: Pajakindad
-  handle: pajakindad
-  position: 3
-  translations:
-    en:
-      name: Oven Gloves
-    et:
-      name: Pajakindad
-  menu_handle: header
-- id: 467
-  entity_id: 254
-  parent_id: 464
-  entity_type: Page
-  style: Page
-  name: Maksetingimused
-  handle: maksetingimused
-  position: 4
-  translations:
-    en:
-      name: Payment Options
-    et:
-      name: Maksetingimused
-  menu_handle: footer
-- id: 488
-  entity_id: 165
-  entity_type: Collection
-  style: Collection
-  name: Bunny Ear Scrunchies
-  handle: bunny-ear-scrunchies
-  position: 5
-  translations:
-    en:
-      name: Bunny Ear Scrunchies
-    et:
-      name: Bunny Ear Scrunchies
-  menu_handle: header
-- id: 468
-  entity_id: 257
-  parent_id: 464
-  entity_type: Page
-  style: Page
-  name: Kuidas osta
-  handle: kuidas-osta
-  position: 5
-  translations:
-    en:
-      name: How To Buy
-    et:
-      name: Kuidas osta
-  menu_handle: footer
-- id: 332
-  entity_id: 164
-  entity_type: Collection
-  style: Collection
-  name: Peapaelad
-  handle: peapaelad
-  position: 5
-  translations:
-    en:
-      name: Headbands
-    et:
-      name: Peapaelad
-  menu_handle: header
-- id: 349
-  style: HOME
-  name: Kollektsioonid
-  handle: kollektsioonid
-  position: 6
   translations:
     en:
       name: Collections
-    et:
-      name: Kollektsioonid
   menu_handle: header
-- id: 469
-  entity_id: 241
-  parent_id: 464
-  entity_type: Page
-  style: Page
-  name: Tagastamine ja vahetamine
-  handle: tagastamine-ja-vahetamine
-  position: 6
-  translations:
-    en:
-      name: Returns and replacements
-    et:
-      name: Tagastamine ja vahetamine
-  menu_handle: footer
-- id: 470
-  entity_id: 240
-  parent_id: 464
-  entity_type: Page
-  style: Page
-  name: Privaatsuspoliitika
-  handle: privaatsuspoliitika
-  position: 7
-  translations:
-    en:
-      name: Privacy policy
-    et:
-      name: Privaatsuspoliitika
-  menu_handle: footer
-- id: 350
-  entity_id: 91
-  parent_id: 349
+- id: 6
+  entity_id: 1
+  parent_id: 4
   entity_type: Collection
   style: Collection
-  name: Bed of Roses
-  handle: bed-of-roses
-  position: 8
+  name: Featured products
+  handle: featured-products
+  position: 3
   translations:
     en:
-      name: Bed of Roses
-    et:
-      name: Bed of Roses
+      name: Featured products
   menu_handle: header
-- id: 471
-  entity_id: 239
-  parent_id: 465
-  entity_type: Page
-  style: Page
-  name: Meie lugu
-  handle: meie-lugu
-  position: 8
+- id: 7
+  style: Collections
+  name: Categories
+  handle: categories
+  position: 4
   translations:
     en:
-      name: Our Story
-    et:
-      name: Meie lugu
-  menu_handle: footer
-- id: 472
-  entity_id: 255
-  parent_id: 465
-  entity_type: Page
-  style: Page
-  name: Meediakajastus
-  handle: meediakajastus
-  position: 9
-  translations:
-    en:
-      name: Press & Media
-    et:
-      name: Meediakajastus
-  menu_handle: footer
-- id: 494
-  entity_id: 144
-  parent_id: 349
+      name: Categories
+  menu_handle: header
+- id: 5
+  entity_id: 4
+  parent_id: 4
   entity_type: Collection
   style: Collection
-  name: Esimene kollektsioon
-  handle: esimene-kollektsioon
-  position: 9
+  name: Jewelry
+  handle: jewelry
+  position: 5
   translations:
     en:
-      name: Collection 2015
-    et:
-      name: Esimene kollektsioon
+      name: Jewelry
   menu_handle: header
-- id: 483
-  style: CUSTOM
-  name: Sotsiaalmeedia
-  value: ''
-  handle: sotsiaalmeedia
-  position: 11
-  translations:
-    en:
-      name: Social Media
-    et:
-      name: Sotsiaalmeedia
-  menu_handle: footer
-- id: 484
-  parent_id: 483
-  style: CUSTOM
-  name: Facebook
-  value: https://www.facebook.com/charmedbyaprons/
-  handle: facebook
-  position: 12
-  translations:
-    en:
-      name: Facebook
-    et:
-      name: Facebook
-  menu_handle: footer
-- id: 485
-  parent_id: 483
-  style: CUSTOM
-  name: Instagram
-  value: https://www.instagram.com/charmedbyaprons/
-  handle: instagram
-  position: 13
-  translations:
-    en:
-      name: Instagram
-    et:
-      name: Instagram
-  menu_handle: footer
-- id: 486
-  parent_id: 483
-  style: CUSTOM
-  name: Pinterest
-  value: https://www.pinterest.com/charmedbyaprons/
-  handle: pinterest
-  position: 14
-  translations:
-    en:
-      name: Pinterest
-    et:
-      name: Pinterest
-  menu_handle: footer
-- id: 487
-  parent_id: 483
-  style: CUSTOM
-  name: Google+
-  value: https://plus.google.com/101323625231305630107
-  handle: google
-  position: 15
-  translations:
-    en:
-      name: Google+
-    et:
-      name: Google+
-  menu_handle: footer
