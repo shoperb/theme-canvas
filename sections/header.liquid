@@ -74,7 +74,7 @@
             </div>
 
             <div class="search-container hidden">
-              <form  action="{{url.search}}" method="get" role="search">
+              <form action="{{url.search}}" method="get" role="search">
                 <input name="query" type="text" placeholder="{{'search.placeholder' | t}}" class="search-form">
                 <button type="submit" class="search-button">
                   {% include 'icon' with 'search' %}
@@ -112,6 +112,8 @@
         } else {
           $('.' + val + '-container').toggleClass('hidden');
         }
+        if (val == 'search')
+          this.parentNode.querySelector('.search-container').querySelector('input').focus()
       });
     });
   </script>

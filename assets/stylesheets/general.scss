@@ -195,3 +195,24 @@ h3.general-title {
     }
   }
 }
+
+sidebar.general-sidebar {
+  ul {
+    @extend .default-list;
+
+    li {
+      a {
+        padding: 5px 0;
+        display: block;
+        color: $text_link_color;
+
+        &:hover {
+          color: lighten($text_link_color, 20%);
+        }
+      }
+      li {
+        padding-left: 20px;
+      }
+    }
+  }
+}

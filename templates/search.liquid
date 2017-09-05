@@ -55,7 +55,7 @@
   {% if search.any? %}
 
   {% comment %} - support for search results ordering
-  {% paginate search[order] by 12 %}
+  paginate search[order] by 12
   {% endcomment %}
 
   {% paginate search by 12 %}
