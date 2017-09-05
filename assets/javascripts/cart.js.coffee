@@ -15,6 +15,7 @@ class @Cart
     meth  = f.attr('method') || f.data('method') || 'GET'
     params= f.serialize()
 
+
     $.ajax({
       method: meth,
       url:    url,

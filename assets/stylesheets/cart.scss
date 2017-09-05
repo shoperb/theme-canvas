@@ -1,0 +1,117 @@
+.cart-page {
+  .cart-item {
+    border-top: 1px solid $layout_border_color;
+  }
+  .cart-header {
+    font-weight: bold;
+    padding: #{$default_padding}px;
+    border-top: none;
+    @include breakpoint(palm) {
+      display: none;
+    }
+  }
+  .cart-col-total {
+    text-align: right;
+    @include breakpoint(palm) {
+      text-align: center;
+    }
+
+    .money {
+      margin-top: 30px;
+      @include breakpoint(palm) {
+        margin: 0;
+      }
+      display: block;
+    }
+  }
+  .cart-item {
+    padding: #{$default_padding}px;
+
+    .image {
+      float: left;
+      background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+      height: 90px;
+      width: 90px;
+      background-size: 50% auto;
+      margin-right: #{$default_padding}px;
+
+      a {
+        display: block;
+      }
+      img {
+        float: left;
+      }
+    }
+    .cart-details {
+      a {
+        &:hover {
+          color: lighten($text_link_color, 20%);
+        }
+      }
+      ul {
+        @extend .default-list;
+
+        li {
+          display: inline-block;
+
+          + li {
+            padding-left: 10px;
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 1px;
+              top: 10px;
+              width: 4px;
+              height: 4px;
+              border-radius: 4px;
+              background: $text_body_color;
+            }
+          }
+        }
+      }
+    }
+    .cart-delete {
+      color: $text_sale_text_color;
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: lighten($text_sale_text_color, 20%);
+      }
+    }
+  }
+  .cart-col-quantity {
+    .product-quantity-input {
+      margin-top: 25px;
+      @include breakpoint(palm) {
+        float: none;
+        margin: 10px 0;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cart-footer {
+    padding: #{$default_padding}px;
+    border-top: 1px solid $layout_border_color;
+    @include breakpoint(palm) {
+      border: none;
+      text-align: center;
+    }
+  }
+  .chekcout-footer {
+    padding: #{$default_padding}px;
+    text-align: right;
+    @include breakpoint(palm) {
+      text-align: center;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

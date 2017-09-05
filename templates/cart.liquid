@@ -1,57 +1,52 @@
-<div class="main-container">
-  <div class="cart-container clearfix">
-    <h2 class="main-title center">{{'header.shopping_cart' | t}}</h2>
-
-    <div id="js-cart-content">
-      {% if cart.items.any? %}
-
-      <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post" class="custom">
-        <table width="100%" class="cart-table">
-          <thead>
-            <tr>
-              <th>
-                <label>{{'cart.product_name' | t}}</label>
-              </th>
-              <th class="quantity">
-                <label>{{'cart.quantity' | t}}</label>
-              </th>
-              <th class="total">
-                <label>{{'cart.total' | t}}</label>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {% for item in cart.items %}
-            {% include "cart_item" %}
-            {% endfor %}
-          </tbody>
-
-          <tfoot>
-            <tr>
-              <td class="shipping-cost">{{'cart.note_shipping' | t}}</td>
-              <td class="subtotal">{{'cart.subtotal' | t}}</td>
-              <td class="total">{{cart.total | money_with_currency}}</td>
-            </tr>
-          </tfoot>
-        </table>
-      </form>
-
-      <form action="{{form_actions.cart_checkout}}" method="POST">
-        <div class="right chekcout-footer">
-          <button type="submit" class="button primary">{{'cart.checkout' | t}}</button>
-        </div>
-      </form>
-
-      {% else %}
-
-      <section class="empty-cart row">
-        <div class="columns">
-          <div class="empty-cart">{{'cart.empty' | t}}</div>
-        </div>
-      </section>
-
-      {% endif %}
+<section role="main" class="cart-page general-page">
+  <div class="grid">
+    <div class="grid__item one-whole">
+      <h3 class="general-title">{{'cart.title' | t}}</h3>
     </div>
   </div>
-</div>
+
+  <div class="grid" id="js-cart-content">
+    {% if cart.items.any? %}
+    <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post">
+      <div class="grid__item one-whole lap--four-eighths desk--five-eighths cart-header cart-col-name">
+        <label>{{'cart.product_name' | t}}</label>
+      </div><!--
+      --><div class="grid__item one-whole lap--two-eighths desk--two-eighths cart-header cart-col-quantity">
+        <label>{{'cart.quantity' | t}}</label>
+      </div><!--
+      --><div class="grid__item one-whole lap--two-eighths desk--one-eighth cart-header cart-col-total">
+        <label>{{'cart.total' | t}}</label>
+      </div>
+
+      {% for item in cart.items %}
+      {% include "cart_item" %}
+      {% endfor %}
+
+      <div class="grid__item one-whole lap--four-eighths desk--five-eighths cart-footer cart-col-name">
+        <label>{{'cart.note_shipping' | t}}</label>
+      </div><!--
+      --><div class="grid__item one-whole lap--two-eighths desk--two-eighths cart-footer cart-col-quantity">
+        <label>{{'cart.subtotal' | t}}</label>
+      </div><!--
+      --><div class="grid__item one-whole lap--two-eighths desk--one-eighth cart-footer cart-col-total">
+        <label>{{cart.total | money}}</label>
+      </div>
+    </form>
+
+    <form action="{{form_actions.cart_checkout}}" method="post">
+      <div class="chekcout-footer">
+        <button type="submit" class="button primary">{{'cart.checkout' | t}}</button>
+      </div>
+    </form>
+
+    {% else %}
+
+    <section class="empty-cart row">
+      <div class="columns">
+        <div class="empty-cart">{{'cart.empty' | t}}</div>
+      </div>
+    </section>
+
+    {% endif %}
+  </div>
+</section>

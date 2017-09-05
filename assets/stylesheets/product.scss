@@ -226,36 +226,6 @@ h2.product-title {
     .quantity {
       display: inline-block;
       padding-right: 16px;
-
-      .number-input {
-        position: relative;
-      }
-      input {
-        text-align: center;
-        background: $layout_secondary_background_color;
-        border: none;
-        width: 140px;
-      }
-      [data-quantity] {
-        position: absolute;
-        top: 50%;
-        @include transform(translateY(-50%));
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        @include user-select;
-
-        svg {
-          margin-left: 6px;
-          pointer-events: none;
-        }
-      }
-      [data-quantity=decrease] {
-        left: 9px;
-      }
-      [data-quantity=increase] {
-        right: 9px;
-      }
     }
     .add-to-cart {
       display: inline-block;
@@ -266,5 +236,42 @@ h2.product-title {
         margin: 0;
       }
     }
+  }
+}
+.product-quantity-input {
+  position: relative;
+  float: left;
+
+  input {
+    text-align: center;
+    background: $layout_secondary_background_color;
+    border: none;
+    width: 140px;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+  [data-quantity] {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    @include user-select;
+
+    svg {
+      margin-left: 6px;
+      pointer-events: none;
+    }
+  }
+  [data-quantity=decrease] {
+    left: 9px;
+  }
+  [data-quantity=increase] {
+    right: 9px;
   }
 }

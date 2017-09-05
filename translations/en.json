@@ -30,9 +30,24 @@
   "search.found": "results found",
   "search.no_results": "sorry, we didn't find any matches for",
 
+  "cart.title": "Your Cart",
+  "cart.product_name": "Product Name",
+  "cart.quantity": "Quantity",
+  "cart.total": "Total",
+  "cart.remove": "Remove",
+
+  "cart.subtotal": "Subtotal",
+  "cart.note_shipping": "Shipping calculated at checkout",
+  "cart.empty": "It appears that your cart is currently empty!",
+  "cart.continue_browsing": "Continue browsing",
+  "cart.item": "item",
+  "cart.items": "items",
+  "cart.quantity_placeholder": "Qty",
+  "cart.checkout": "Checkout",
 
 
-//deprecated and need to be reviewd before using
+
+  //deprecated and need to be reviewd before using
   "navigation.previous": "Previous",
   "navigation.next": "Next",
 

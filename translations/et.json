@@ -30,6 +30,21 @@
   "search.found": "tulemust leitud",
   "search.no_results": "tulemusi ei leitud",
 
+  "cart.title": "Sinu ostukorv",
+  "cart.product_name": "Toote nimi",
+  "cart.quantity": "Kogus",
+  "cart.total": "Kokku",
+  "cart.remove": "Eemalda",
+
+  "cart.subtotal": "Kokku",
+  "cart.note_shipping": "Transpordi hind arvutatakse maksmisel",
+  "cart.empty": "Selgub, et sinu ostukorv on hetkel tühi!",
+  "cart.continue_browsing": "Jätka sirvimist",
+  "cart.item": "toode",
+  "cart.items": "tooted",
+  "cart.quantity_placeholder": "Tk",
+  "cart.checkout": "Mine maksma",
+
 
 
   //deprecated and need to be reviewd before using
