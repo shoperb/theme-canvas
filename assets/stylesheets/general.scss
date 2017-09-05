@@ -129,6 +129,9 @@ h3.general-title {
       text-align: right;
     }
   }
+  .gutter-neutralizer {
+    margin: 0 -#{$default_padding}px;
+  }
 }
 
 .fancy-dropdown {

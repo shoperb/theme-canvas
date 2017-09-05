@@ -1,52 +1,104 @@
 ---
-- id: 1
-  style: HOME
-  name: Home
-  handle: home
+- id: 254
+  entity_id: 176
+  entity_type: Page
+  style: Page
+  name: Pesemisjuhend
+  handle: pesemisjuhend
   position: 1
   translations:
     en:
-      name: Home
-  menu_handle: header
-- id: 4
-  style: Blank
-  name: Collections
-  handle: collections
+      name: Washing instructions
+    et:
+      name: Pesemisjuhend
+  menu_handle: subheader
+- id: 256
+  entity_id: 177
+  entity_type: Page
+  style: Page
+  name: Firmast
+  handle: firmast
+  position: 1
+  translations:
+    en:
+      name: About
+    et:
+      name: Firmast
+  menu_handle: shop
+- id: 257
+  entity_id: 177
+  entity_type: Page
+  style: Page
+  name: Kontaktandmed
+  handle: kontaktandmed
+  position: 1
+  translations:
+    en:
+      name: Contact
+    et:
+      name: Kontaktandmed
+  menu_handle: payment
+- id: 263
+  style: BlogPosts
+  name: UUDISED
+  handle: uudised
   position: 2
   translations:
     en:
-      name: Collections
-  menu_handle: header
-- id: 6
-  entity_id: 1
-  parent_id: 4
-  entity_type: Collection
-  style: Collection
-  name: Featured products
-  handle: featured-products
+      name: NEWS
+    et:
+      name: UUDISED
+  menu_handle: subheader
+- id: 259
+  entity_id: 179
+  entity_type: Page
+  style: Page
+  name: Tagastus
+  handle: tagastus
+  position: 2
+  translations:
+    en:
+      name: Return Policy
+    et:
+      name: Tagastus
+  menu_handle: shop
+- id: 260
+  entity_id: 180
+  parent_id: 256
+  entity_type: Page
+  style: Page
+  name: Privaatsuspoliitika
+  handle: privaatsuspoliitika
   position: 3
   translations:
     en:
-      name: Featured products
-  menu_handle: header
-- id: 7
-  style: Collections
-  name: Categories
-  handle: categories
+      name: Privacy Policy
+    et:
+      name: Privaatsuspoliitika
+  menu_handle: shop
+- id: 261
+  entity_id: 181
+  entity_type: Page
+  style: Page
+  name: Kuidas tellida?
+  handle: kuidas-tellida
   position: 4
   translations:
     en:
-      name: Categories
-  menu_handle: header
-- id: 5
-  entity_id: 4
-  parent_id: 4
-  entity_type: Collection
-  style: Collection
-  name: Jewelry
-  handle: jewelry
+      name: How to order?
+    et:
+      name: Kuidas tellida?
+  menu_handle: shop
+- id: 262
+  entity_id: 182
+  entity_type: Page
+  style: Page
+  name: Suurused
+  handle: suurused
   position: 5
   translations:
     en:
-      name: Jewelry
-  menu_handle: header
+      name: Sizes
+    et:
+      name: Suurused
+  menu_handle: shop

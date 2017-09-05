@@ -13,7 +13,11 @@
   {% endcomment %}
 
   <div class="blog-content">
+    {% if list_blog_post == 'blog-list' %}
     <div>{{post.content | truncatewords: 40}}</div>
+    {% else %}
+    <div>{{post.content}}</div>
+    {% endif %}
     <div class="post-link">
       {% if list_blog_post == 'blog-list' %}
       <a href="{{post.url}}">{{'general.read_more' | t}}</a>

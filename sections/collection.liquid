@@ -24,7 +24,7 @@
   <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
   {% endif %}
 
-  <div class="grid{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
+  <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
     {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
     {% include 'list_product' %}
@@ -36,7 +36,7 @@
     {% for product in (1..limit) %}
     {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       <div class="product fake-link">
-        <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
+        <div class="image"></div>
 
         <h2 class="product-title general-title">{{'section.default.product_name' | t}}</h2>
 

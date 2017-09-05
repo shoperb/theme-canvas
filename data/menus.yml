@@ -1,13 +1,25 @@
 ---
-- id: 2
-  name: Footer
-  handle: footer
+- id: 49
+  name: Footer Payment
+  handle: payment
   translations:
     en:
-      name: Footer
-- id: 1
+      name: Footer Payment
+    et:
+      name: Footer Payment
+- id: 47
+  name: Info
+  handle: shop
+  translations:
+    en:
+      name: Info
+    et:
+      name: Info
+- id: 46
   name: Header
-  handle: header
+  handle: subheader
   translations:
     en:
+      name: Header
+    et:
       name: Header

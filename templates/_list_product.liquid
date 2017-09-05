@@ -4,6 +4,8 @@
 {% assign grid = 'palm--one-half lap--one-third desk--one-quarter' %}
 {% elsif list_product == 'category' %}
 {% assign grid = 'palm--one-half lap--one-third desk--one-third' %}
+{% elsif list_product == 'recommended' %}
+{% assign grid = 'lap--one-half desk--one-quarter' %}
 {% endif %}
 
 {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container">
@@ -12,7 +14,7 @@
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-    <div class="image{% if product.image.size-480.url != blank %} with-image"{% endif %}"{% if product.image.size-480.url %} style="background-image: url('{{product.image.size-480.url}}')"{% endif %}></div>
+    <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}"{% if product.image.size-480.url %} style="background-image: url('{{product.image.size-480.url}}')"{% endif %}></div>
 
     <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 

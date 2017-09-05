@@ -1,12 +1,33 @@
 {% if product.others_in_category.any? %}
-<section class="similar-products row">
-  <h2 class="title">{{ 'product.recommended' | t }}</h2>
-  <div class="product-grid clearfix randomize-list" data-show-only="3">
+<section class="recommended product-container">
+  <h3 class="title">{{'product.recommended' | t}}</h3>
+
+  <div class="grid gutter-neutralizer randomize-list" data-show-only="4">
     {% for product in product.others_in_category %}
-    <div class="columns large-4">
-      {% include 'list_product' %}
-    </div>
+    {% include 'list_product' with 'recommended' %}
     {% endfor %}
   </div>
 </section>
 {% endif %}
+
+<script>
+  $(document).ready(function() {
+    if ($('.randomize-list').length) {
+      var returner;
+      var list = document.querySelector('.randomize-list');
+
+      for(var i = list.children.length; i >= 0; i--){
+        list.appendChild(list.children[Math.random() * i | 0]);
+      }
+
+      var count = $('.randomize-list').data('show-only');
+      if (parseInt(count))
+        count++;
+      else
+        count = 5;
+
+      $('.randomize-list>div:nth-child(n+'+count+')').remove();
+      $('.randomize-list').show();
+    }
+  });
+</script>

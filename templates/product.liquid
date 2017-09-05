@@ -1,13 +1,13 @@
 {% assign default_variant = product.available_variants.first %}
 {% assign quantity = product.attributes['quantity-description'].value %}
 
-<div class="main-container product-page">
-  <article class="product row" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
-    <meta itemprop="url" content="{{url.current_url}}" />
-    <meta itemprop="image" content="{{product.image.size-2048.url}}" />
+<section role="main" class="blog-page general-page">
+  <article itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+    <meta itemprop="url" content="{{url.current_url}}">
+    <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-    <div class="ui grid">
-      <div class="eight wide column">
+    <div class="grid">
+      <div class="grid__item one-whole desk--one-half">
         <div data-position="thumbs" class="thumbs">
           {% for image in product.images %}
           <div class="thumb{% if forloop.first == true %} active{% endif %}">{{image.admin_small.url | image_tag: product.name}}</div>
@@ -25,9 +25,8 @@
 
           </div>
         </div>
-      </div>
-
-      <div class="eight wide column">
+      </div><!--
+      --><div class="grid__item one-whole desk--one-half">
         <div data-position="title-vendor">
           <h1 class="page-title" itemprop="name">{{product.name}}</h1>
 
@@ -62,23 +61,17 @@
       </div>
     </div>
   </article>
-</div>
 
-<div class="share-this">
-  <div class="main-container">
-    {% include 'share_this' with 'full' %}
-  </div>
-</div>
-
-<div class="main-container">
   {% include 'recommended_products' %}
-</div>
 
-<div class="modal with-nav">
-    <div class="loading"><div class="spinner" role="progressbar" style="position: relative; width: 0px; z-index: 2000000000; left: 0px; top: 0px;"><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-0-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(0deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-1-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(45deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-2-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(90deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-3-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(135deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-4-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(180deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-5-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(225deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-6-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(270deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-7-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(315deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div></div></div>
-    <a aria-hidden="true" class="prev glyph slider-left"></a>
-    <a aria-hidden="true" class="close glyph cross"></a>
-    <a aria-hidden="true" class="next glyph slider-right"></a>
-    <div class="slides"></div>
-  </div>
-<div class="modal-mask"></div>
+  {% comment %}
+  <div class="modal with-nav">
+      <div class="loading"><div class="spinner" role="progressbar" style="position: relative; width: 0px; z-index: 2000000000; left: 0px; top: 0px;"><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-0-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(0deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-1-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(45deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-2-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(90deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-3-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(135deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-4-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(180deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-5-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(225deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-6-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(270deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div><div style="position: absolute; top: -1px; opacity: 0.25; animation: opacity-100-25-7-8 1s linear infinite;"><div style="position: absolute; width: 7px; height: 3px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1px; transform-origin: left 50% 0px; transform: rotate(315deg) translate(5px, 0px); border-radius: 1px; background: rgb(68, 68, 68);"></div></div></div></div>
+      <a aria-hidden="true" class="prev glyph slider-left"></a>
+      <a aria-hidden="true" class="close glyph cross"></a>
+      <a aria-hidden="true" class="next glyph slider-right"></a>
+      <div class="slides"></div>
+    </div>
+  <div class="modal-mask"></div>
+  {% endcomment %}
+</div>
