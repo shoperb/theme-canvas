@@ -3,12 +3,37 @@ class @Cart
     for form in document.querySelectorAll("form[data-remote='true']")
       $(form).on 'submit', @sendForm
 
+    $('.cart-item').each () ->
+      increase = $('[data-quantity=increase]', this)
+      decrease = $('[data-quantity=decrease]', this)
+      remove = $('[data-remove-item]', this)
+      field = $('.cart-col-quantity input', this);
+
+      increase.on 'click', ->
+        field.val parseInt(field.val(), 10) + 1
+        field.trigger 'input'
+
+      decrease.on 'click', ->
+        newVal = parseInt(field.val(), 10) - 1
+        if newVal < 0
+          newVal = 0
+        field.val newVal
+        field.trigger 'input'
+
+      remove.on 'click', ->
+        field.val 0
+        field.trigger 'input'
+
+      field.on 'input', (e) ->
+        @sendForm
 
   sendForm: (e)=>
     if e.preventDefault
       e.preventDefault()
     else
       e.returnValue = false;
+
+    console.log 'asd'
 
     f     = $(e.target)
     url   = f.attr('action')
@@ -28,6 +53,8 @@ class @Cart
 
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
+
+      console.log 'submit'
 
       initCart();
 

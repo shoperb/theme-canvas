@@ -24,7 +24,7 @@
       <div data-quantity="decrease">
         {% include 'icon' with 'minus' %}
       </div>
-      <input id="amount" name="update[{{item.id}}]" value="{{item.quantity}}" type="number">
+      <input name="update[{{item.id}}]" value="{{item.quantity}}" type="number">
       <div data-quantity="increase">
         {% include 'icon' with 'plus' %}
       </div>

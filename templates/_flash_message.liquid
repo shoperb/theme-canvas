@@ -1,27 +1,26 @@
-{% if errors.any? %}
+{% if flash_message == 'cart' %}
+<div class="flash">
+  <div class="message">
+    {% for error in errors %}
+    <div data-cart-error>
+      {{error | t}}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% else %}
+{% if errors.any? or flash.notice %}
 <div class="flash error">
-  <div class="row">
-    <div class="columns large-24">
-      <div class="message">
-        {% for error in errors %}
-        <div>
-          {{ error | t }}
-        </div>
-        {% endfor %}
-      </div>
+  <div class="message">
+    {% for error in errors %}
+    <div data-error>
+      {{error | t}}
+    </div>
+    {% endfor %}
+    <div data-notice>
+      {{flash.notice | t}}
     </div>
   </div>
 </div>
 {% endif %}
-
-{% if flash.notice %}
-<div class="flash">
-  <div class="row">
-    <div class="columns large-24">
-      <div class="message">
-        {{ flash.notice | t }}
-      </div>
-    </div>
-  </div>
-</div>
 {% endif %}

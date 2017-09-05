@@ -1,0 +1,16 @@
+.flash {
+  background: $layout_secondary_background_color;
+  position: relative;
+
+  .message {
+    border: 1px solid $layout_border_color;
+    padding: #{$default_padding}px;
+    margin: #{$default_padding}px 0;
+    text-align: center;
+    border-radius: 4px;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
