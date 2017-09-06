@@ -2,7 +2,10 @@ class @Cart
   constructor: ->
     for form in document.querySelectorAll("form[data-remote='true']")
       $(form).on 'submit', @sendForm
+    @initCart()
+    
 
+  initCart: =>
     $('.cart-item').each () ->
       increase = $('[data-quantity=increase]', this)
       decrease = $('[data-quantity=decrease]', this)
@@ -25,6 +28,7 @@ class @Cart
         field.trigger 'input'
 
       field.on 'input', (e) ->
+        $(e.target).closest("form").trigger('submit')
         @sendForm
 
   sendForm: (e)=>
@@ -33,7 +37,6 @@ class @Cart
     else
       e.returnValue = false;
 
-    console.log 'asd'
 
     f     = $(e.target)
     url   = f.attr('action')
@@ -46,7 +49,7 @@ class @Cart
       url:    url,
       data:   params,
       dataType: 'json'
-    }).done( ( data )->
+    }).done( ( data )=>
       newCart = $(data.liquid).filter('#js-cart-content');
       oldCart = $('#js-cart-content');
       oldCart.html(newCart);
@@ -54,9 +57,9 @@ class @Cart
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
 
-      console.log 'submit'
+      debugger
 
-      initCart();
+      @initCart();
 
     );
 
