@@ -29,14 +29,18 @@ class @Product
       document.querySelector('.product-container .photos .container').addEventListener("click", (event)->
         document.querySelector('.product-gallery-container').classList.add('show')
 
+        active_image = 0
         gallery = document.querySelector('.product-gallery-container .product-gallery')
         icon = gallery.dataset.arrowImage
         for el in this.parentNode.parentNode.querySelectorAll('.thumbs .thumb')
           gal_item = document.createElement("DIV")
           gal_item.innerHTML = '<img src="' + el.dataset.imageurl + '">' if el.dataset.imageurl
           gallery.appendChild(gal_item);
+          if el.classList.contains('active')
+            active_image = el.dataset.image
 
         $(gallery).slick({
+          initialSlide: active_image - 1,
           prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>',
           nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>'
         });
