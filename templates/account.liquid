@@ -1,107 +1,117 @@
-{% include "flash_message" %}
+<section role="main" class="account-page general-page">
+  {% include "flash_message" %}
 
-<div class="main-container account-page logged-in">
-  <div class="ui grid">
-    <div class="four wide column sidebar">
-      {% include 'account_sidebar' with 'account' %}
-    </div>
+  <div class="grid">
+    <div class="grid__item one-whole palm--one-third desk--one-quarter">
+      <sidebar class="general-sidebar">
+        {% include 'account_sidebar' with 'account' %}
+      </sidebar>
+    </div><!--
 
-    <div class="twelve wide column account-content">
-      <div class="eight wide column">
+    --><div class="grid__item one-whole palm--two-third desk--three-quarters">
+      <div class="grid">
         <div class="form-error" data-form-error></div>
 
         <form action="{{form_actions.account}}" method="post">
           {{form_actions.auth_input}}
 
-          <div class="ui grid">
-            <div class="five wide column">
-              <h4 class="main-title">{{'account.personal_information' | t}}</h4>
+          <div>
+            <div class="grid__item one-whole lap--one-third desk--one-third">
+              <h3>{{'account.personal_information' | t}}</h3>
+            </div><!--
+            --><div class="grid__item one-whole lap--two-thirds desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="first_name">{{'account.first_name' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" value="{{account.first_name}}" name="account[first_name]" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="last_name">{{'account.last_name' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" value="{{account.last_name}}" name="account[last_name]" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}">
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="email">{{'account.email' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" data-type="email" value="{{account.email}}" name="account[email]" id="email" class="text" data-error="{{'account.error.email' | t}}">
+                </div>
+              </div>
             </div>
-            <div class="three wide column">
-              <label for="first_name" class="label">{{'account.first_name' | t}}</label>
-            </div>
-            <div class="eight wide column">
-              <input type="text" value="{{account.first_name}}" name="account[first_name]" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
-            </div>
+          </div>
 
-            <div class="five wide column"></div>
-            <div class="three wide column">
-              <label for="last_name" class="label">{{'account.last_name' | t}}</label>
+          <div class="general-separator"></div>
+
+          <div>
+            <div class="grid__item one-whole lap--one-half desk--one-third">
+              <h3>{{'account.change_password' | t}}</h3>
+            </div><!--
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="first_name">{{'account.password' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="password" data-type="password" value="" name="account[password]" id="password" class="password text" data-error="{{'account.error.password' | t}}" />
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="last_name">{{'account.password_confirmation' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="password" data-type="password_confirmation" value="" name="account[password_confirmation]" id="password_confirmation" class="password text" data-error="{{'account.error.password_confirmation' | t}}" />
+                </div>
+              </div>
             </div>
-            <div class="eight wide column">
-              <input type="text" value="{{account.last_name}}" name="account[last_name]" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}" />
+          </div>
+
+          <div class="general-separator"></div>
+
+          <div>
+            <div class="grid__item one-whole lap--one-half desk--one-third">
+              <h3>{{'account.subscription' | t}}</h3>
+            </div><!--
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third"></div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <label for="newsletter">
+                    <input type="hidden" name="account[newsletter]" value="0">
+                    <input type="checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %}checked="checked"{% endif %}>
+                    <span class="label-text">
+                      <span class="tick">
+                        {% include 'icon' with 'close' %}
+                      </span>
+                      {{'account.subscribe_to_newsletter' | t}}
+                    </span>
+                  </label>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="five wide column"></div>
-            <div class="three wide column">
-              <label for="email" class="label">{{'account.email' | t}}</label>
+          <div class="general-separator"></div>
+
+          <div>
+            <div class="grid__item one-whole lap--one-half desk--one-third"></div><!--
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third"></div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <button class="button primary" type="submit">{{'account.save_changes' | t}}</button>
+                </div>
+              </div>
             </div>
-            <div class="eight wide column">
-              <input type="text" data-type="email" value="{{account.email}}" name="account[email]" id="email" class="text" data-error="{{'account.error.email' | t}}" />
-            </div>
-
-            <div class="sixteen wide column separator"></div>
-
-
-            {% comment %}
-            [password part here]
-            {% endcomment %}
-
-            <div class="five wide column">
-              <h4 class="main-title">{{'account.change_password' | t}}</h4>
-            </div>
-            <div class="three wide column">
-              <label for="password" class="label">{{'account.password' | t}}</label>
-            </div>
-            <div class="eight wide column">
-              <input type="password" data-type="password" value="" name="account[password]" id="password" class="password text" data-error="{{'account.error.password' | t}}" />
-            </div>
-
-            <div class="five wide column"></div>
-            <div class="three wide column">
-              <label for="password_confirmation" class="label">{{'account.password_confirmation' | t }}</label>
-            </div>
-            <div class="eight wide column">
-              <input type="password" data-type="password_confirmation" value="" name="account[password_confirmation]" id="password_confirmation" class="password text" data-error="{{'account.error.password_confirmation' | t}}" />
-            </div>
-
-            <div class="sixteen wide column separator"></div>
-
-            {% comment %}
-            [password part here]
-            {% endcomment %}
-
-
-            <div class="five wide column">
-              <h4 class="main-title">{{'account.subscription' | t}}</h4>
-            </div>
-            <div class="three wide column"></div>
-            <div class="eight wide column">
-              <label for="newsletter">
-                <input type="hidden" name="account[newsletter]" value="0">
-                {% comment %}
-                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %}checked="checked"{% endif %}>
-                {% endcomment %}
-                <input type="checkbox" class="custom-checkbox" id="newsletter" name="account[newsletter]" value="1" checked="checked">
-                <span class="label-text">
-                  <span class="tick"></span>
-                  {{'account.subscribe_to_newsletter' | t}}
-                </span>
-              </label>
-            </div>
-
-            <div class="sixteen wide column separator"></div>
-
-            <div class="five wide column"></div>
-            <div class="three wide column"></div>
-            <div class="eight wide column">
-              <button class="button secondary" type="submit">{{'account.save_changes' | t}}</button>
-            </div>
-
           </div>
         </form>
-
       </div>
     </div>
   </div>
-</div>
+</section>

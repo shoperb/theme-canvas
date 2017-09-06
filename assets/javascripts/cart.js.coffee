@@ -37,7 +37,6 @@ class @Cart
     else
       e.returnValue = false;
 
-
     f     = $(e.target)
     url   = f.attr('action')
     meth  = f.attr('method') || f.data('method') || 'GET'
@@ -56,8 +55,6 @@ class @Cart
 
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
-
-      debugger
 
       @initCart();
 

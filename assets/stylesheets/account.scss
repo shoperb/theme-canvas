@@ -189,3 +189,63 @@
 .template-account .flash.error {
   margin-bottom: 30px;
 }
+
+.account-page {
+  h3 {
+    margin: #{$default_padding}px 0;
+    line-height: 40px;
+  }
+  label:not([for=newsletter]) {
+    width: 150px;
+    display: inline-block;
+    line-height: 40px;
+    padding: #{$default_padding}px 0;
+    @include breakpoint(palm) {
+      padding: #{$default_padding}px 0 0;
+      line-height: 1;
+    }
+  }
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    margin: #{$default_padding}px 0;
+  }
+  label[for=newsletter] {
+    margin-top: #{$default_padding * 1.5}px;
+    cursor: pointer;
+    display: block;
+  }
+  .field {
+    padding: #{$default_padding}px 0;
+  }
+}
+
+.orders-page {
+  .order-id {
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .order-view-details {
+    text-align: right;
+    padding-top: 15px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  a {
+    &:hover {
+      color: lighten($text_link_color, 20%);
+    }
+  }
+  .order-quantity {
+    text-align: center;
+  }
+  .order-total {
+    text-align: right;
+  }
+}

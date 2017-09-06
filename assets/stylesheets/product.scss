@@ -162,9 +162,6 @@ h2.product-title {
     box-sizing: border-box;
     background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
 
-    img {
-      @include centerize;
-    }
     &.with-image {
       border: none;
       background-size: cover;
@@ -229,10 +226,10 @@ h2.product-title {
     }
     .add-to-cart {
       display: inline-block;
+      vertical-align: bottom;
 
-      .button {
-        position: relative;
-        top: -1px;
+      .button,
+      .disabled-button {
         margin: 0;
       }
     }
@@ -243,7 +240,7 @@ h2.product-title {
 
     .thumb {
       cursor: pointer;
-      margin-bottom: 18px;
+      margin-bottom: #{$default_padding}px;
       text-align: left;
       width: 60px;
       height: 60px;
@@ -253,48 +250,18 @@ h2.product-title {
       &.active {
         box-shadow: 0 0 0 2px $layout_border_color;
       }
-      &.slick-current:before {
-        border: red;
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        height: 60px;
-        width: 59px;
-        z-index: 1;
-      }
     }
     img {
       width: 60px;
-    }
-    button.slick-arrow {
-      position: relative;
-      left: 16px;
-      color: blue;
-
-      &.slick-prev {
-        margin-bottom: 20px;
-      }
-      &.slick-next {
-        margin-top: -5px;
-      }
-      &:before {
-        color: green;
-      }
-      &:hover {
-        &:before {
-          color: cyan;
-        }
-      }
     }
   }
   .photos {
     text-align: center;
     padding-left: 0;
     min-height: 1px;
-    margin-left: 10px;
+    margin-left: #{$default_padding}px;
     float: left;
-    width: calc(100% - 70px);
+    width: calc(100% - 60px - #{$default_padding}px);
 
     .container {
       display: inline-block;
@@ -303,6 +270,7 @@ h2.product-title {
       max-width: 100%;
       height: auto;
       width: auto;
+      cursor: pointer;
 
       .photo {
         display: none;
@@ -320,6 +288,22 @@ h2.product-title {
           width: 100%;
           transition: opacity .5s;
           display: block;
+        }
+        &.no-zoom {
+          cursor: auto;
+
+          img {
+            width: 100%;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        &.zoom {
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -368,5 +352,138 @@ h2.product-title {
 
   .randomize-list {
     display: none;
+  }
+}
+.product-gallery-container {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+  .product-gallery-overlay {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .product-gallery {
+    position: fixed;
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 1);
+
+    .slick-arrow {
+      position: absolute;
+      color: $image_overlay_color;
+      cursor: pointer;
+      top: 50%;
+      height: auto;
+      @include transform(translateY(-50%));
+      z-index: 3;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        //background: lighten($image_overlay_dark_color, 20%);
+        background: darken($buttons_secondary_button_background_color, 20%);
+        left: -13px;
+        top: -13px;
+        border-radius: 1000px;
+        z-index: 1;
+        opacity: 0.7;
+        transition: all 0.2s;
+      }
+      &.slick-prev {
+        left: 53px;
+      }
+      &.slick-next {
+        right: 53px;
+        @include flip;
+      }
+      svg {
+        position: relative;
+        z-index: 2;
+      }
+      &:hover {
+        //color: lighten($image_overlay_light_color, 20%);
+        color: darken($image_overlay_color, 10%);
+
+        &:before {
+          //background: lighten($image_overlay_dark_color, 30%);
+          opacity: 1;
+        }
+      }
+    }
+    div {
+      height: 100%;
+      position: relative;
+
+      img {
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+  }
+  [data-close-gallery] {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 1001;
+    color: $image_overlay_color;
+    cursor: pointer;
+
+    .icon-plus {
+      width: 24px;
+      height: 24px;
+      @include transform(rotate(45deg));
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      //background: lighten($image_overlay_dark_color, 20%);
+      background: darken($buttons_secondary_button_background_color, 20%);
+      border-radius: 1000px;
+      z-index: 1;
+      opacity: 0.7;
+      left: -13px;
+      top: -13px;
+      width: 50px;
+      height: 50px;
+      transition: all 0.2s;
+    }
+    svg {
+      position: relative;
+      z-index: 2;
+    }
+    &:hover {
+      //color: lighten($image_overlay_light_color, 20%);
+      color: darken($image_overlay_color, 10%);
+
+      &:before {
+        //background: lighten($image_overlay_dark_color, 30%);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.product-page {
+  .product-details {
+    padding-left: #{$default_padding}px;
+
+    .product-title {
+      padding-top: 0;
+    }
   }
 }

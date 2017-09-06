@@ -331,7 +331,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "sadasdsamdd",
+        "product": "legging-flora",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
@@ -609,7 +609,10 @@
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "variant-test",
+            "product": "legging-flora",
+            "show_quantity_selector": true,
+            "show_variant_label": true,
+            "show_vendor": true,
             "vertical_alignment": "top"
           }
         },

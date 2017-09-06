@@ -1,6 +1,10 @@
 {
   "et-EE": {
     "presets": {
+      "default": "Default",
+      "dark": "Passion Dark",
+      "mint": "Mint Violets",
+      "green": "Business Green"
     },
     "sections": {
       "header": {

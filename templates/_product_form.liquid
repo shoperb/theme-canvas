@@ -5,7 +5,7 @@
 </div>
 
 <div class="product-vendor" itemprop="brand">
-  {% if section.settings.show_vendor %}
+  {% if section.settings.show_vendor or block.settings.show_vendor or product_form == 'page' %}
   {% if product %}{{product.vendor.name}}{% else %}{{'section.default.vendor' | t}}{% endif %}
   {% endif %}
 </div>
@@ -18,15 +18,20 @@
   </span>
 </div>
 
+{% if product %}
 {% if product.description != blank %}
-<div class="product-description" data-product-description>{% if product %}{{product.description}}{% else %}{{'section.default.product_descriontion' | t}}{% endif %}</div>
+<div class="product-description" data-product-description>{{product.description}}</div>
+{% endif %}
+{% else %}
+<div class="product-description" data-product-description>{{'section.default.product_descriontion' | t}}</div>
 {% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>
     <div class="variants clearfix">
+
       {% if product.variants.many? %}
-      <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{{section.settings.show_variant_label}}">
+      <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{% if product_form == 'page' %}true{% else %}{% if block.settings.show_variant_label %}{{block.settings.show_variant_label}}{% else %}{{section.settings.show_variant_label}}{% endif %}{% endif %}">
         {% for variant in product.variants %}
         <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}">{{variant.name}}</option>
         {% endfor %}
@@ -39,9 +44,9 @@
     </div>
 
     <div class="quanity-cart-row clearfix">
-      {% if section.settings.show_quantity_selector %}
+      {% if section.settings.show_quantity_selector or block.settings.show_quantity_selector or product_form == 'page' %}
       <div class="quantity">
-        {% if section.settings.show_variant_label %}
+        {% if block.settings.show_variant_label or section.settings.show_variant_label or product_form == 'page' %}
         <label class="product-form-title">{{'product.quantity' | t}}</label>
         {% endif %}
         <div class="product-quantity-input">

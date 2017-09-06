@@ -1,8 +1,9 @@
 {% assign default_variant = product.available_variants.first %}
-{% assign quantity = product.attributes['quantity-description'].value %}
 
-<section role="main" class="blog-page general-page">
-  <article class="product-container" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+{% assign selector = product.url | replace: '/', '-' %}
+
+<section role="main" class="product-page general-page">
+  <article class="product-container" id="{{selector}}" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
@@ -11,7 +12,7 @@
 
         <div data-position="thumbs" class="thumbs">
           {% for image in product.images %}
-          <div class="thumb{% if forloop.first == true %} active{% endif %}" data-image="{{forloop.index}}">{{image.admin_small.url | image_tag: product.name}}</div>
+          <div class="thumb{% if forloop.first == true %} active{% endif %}" data-image="{{forloop.index}}" data-imageurl="{{image.size-2048.url}}">{{image.admin_small.url | image_tag: product.name}}</div>
           {% endfor %}
         </div>
 
@@ -25,41 +26,36 @@
           </div>
         </div>
       </div><!--
-      --><div class="grid__item one-whole desk--one-half">
-        <div data-position="title-vendor">
-          <h1 class="page-title" itemprop="name">{{product.name}}</h1>
+      --><div class="grid__item one-whole desk--one-half product-details">
+        <h1 class="product-title general-title">{{product.name}}</h1>
 
-          <div class="category">{{product.category.name}}</div>
-
-          {% if product.description.size > 0 %}
-          <div data-position="description">
-            <div class="description">{{product.description}}</div>
-          </div>
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
+          {% if product %}
+          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
           {% endif %}
 
-          <div data-position="prices">
-            <div class="prices">
-              <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-                <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-                <span class="actual-price money" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{default_variant.current_price | money}}</span>
-
-                {% if default_variant.discount? %}
-                <span class="compare-price">
-                  <span class="money" data-current-discount-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
-                </span>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-
-          <div data-position="cart-form">
-            {% include 'product_form' %}
-          </div>
+          {% include 'product_form' with 'page' %}
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function() {
+        new VariantSelector("#{{selector}}")
+      });
+    </script>
+
   </article>
 
   {% include 'recommended_products' %}
+</div>
+
+<div class="product-gallery-container">
+  <div class="product-gallery-overlay"></div>
+  <div data-close-gallery>
+    {% include 'icon' with 'plus' %}
+  </div>
+  <div class="product-gallery" data-arrow-image="{{'images/icons.svg' | asset_url}}">
+  </div>
 </div>
