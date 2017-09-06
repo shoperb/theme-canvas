@@ -237,6 +237,93 @@ h2.product-title {
       }
     }
   }
+  .thumbs {
+    float: left;
+    width: 60px;
+
+    .thumb {
+      cursor: pointer;
+      margin-bottom: 18px;
+      text-align: left;
+      width: 60px;
+      height: 60px;
+      outline: none;
+      position: relative;
+
+      &.active {
+        box-shadow: 0 0 0 2px $layout_border_color;
+      }
+      &.slick-current:before {
+        border: red;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 59px;
+        z-index: 1;
+      }
+    }
+    img {
+      width: 60px;
+    }
+    button.slick-arrow {
+      position: relative;
+      left: 16px;
+      color: blue;
+
+      &.slick-prev {
+        margin-bottom: 20px;
+      }
+      &.slick-next {
+        margin-top: -5px;
+      }
+      &:before {
+        color: green;
+      }
+      &:hover {
+        &:before {
+          color: cyan;
+        }
+      }
+    }
+  }
+  .photos {
+    text-align: center;
+    padding-left: 0;
+    min-height: 1px;
+    margin-left: 10px;
+    float: left;
+    width: calc(100% - 70px);
+
+    .container {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+
+      .photo {
+        display: none;
+        top: 0;
+        left: 0;
+        position: relative;
+
+        &.visible {
+          display: block;
+        }
+        & img:hover {
+          opacity: 0;
+        }
+        img {
+          width: 100%;
+          transition: opacity .5s;
+          display: block;
+        }
+      }
+    }
+  }
 }
 .product-quantity-input {
   position: relative;

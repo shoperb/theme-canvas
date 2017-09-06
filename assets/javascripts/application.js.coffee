@@ -4,6 +4,7 @@
 
 #= require variant_selector
 #= require cart
+#= require product
 #= require sections
 #= require svg4everybody
 #= require plugins
@@ -11,8 +12,10 @@
 document.addEventListener("DOMContentLoaded", ->
 #  new VariantSelector()
   new Cart()
+  new Product()
   svg4everybody(polyfill: true)
   new DropdownInViewport()
+  document.querySelector('[data-image-zoom]')?.onmousemove = zoom
 )
 window.onresize = ->
   new DropdownInViewport()
@@ -46,3 +49,4 @@ $('[data-sign-up]').on 'click', ->
     $('[data-business-only]').removeClass 'hidden'
   else
     $('[data-business-only]').addClass 'hidden'
+
