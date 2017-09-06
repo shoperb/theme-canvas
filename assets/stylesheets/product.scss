@@ -162,9 +162,6 @@ h2.product-title {
     box-sizing: border-box;
     background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
 
-    img {
-      @include centerize;
-    }
     &.with-image {
       border: none;
       background-size: cover;
@@ -229,10 +226,10 @@ h2.product-title {
     }
     .add-to-cart {
       display: inline-block;
+      vertical-align: bottom;
 
-      .button {
-        position: relative;
-        top: -1px;
+      .button,
+      .disabled-button {
         margin: 0;
       }
     }

@@ -76,7 +76,7 @@
       </div><!--
 
       --><div class="custom-product-content grid__item palm--one-whole lap--one-whole desk--one-half">
-        <h2 class="general-title">{{product.name}}</h2>
+        <h2 class="general-title">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</h2>
 
         <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
           <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
