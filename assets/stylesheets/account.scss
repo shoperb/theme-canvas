@@ -193,19 +193,27 @@
 .account-page {
   h3 {
     margin: #{$default_padding}px 0;
+    line-height: 40px;
   }
   label:not([for=newsletter]) {
     width: 150px;
     display: inline-block;
+    line-height: 40px;
+    padding: #{$default_padding}px 0;
+    @include breakpoint(palm) {
+      padding: #{$default_padding}px 0 0;
+      line-height: 1;
+    }
   }
   input[type=text],
   input[type=password] {
-    width: calc(100% - 170px);
-    margin-left: #{$default_padding}px;
+    width: 100%;
+    margin: #{$default_padding}px 0;
   }
   label[for=newsletter] {
-    margin-left: #{$default_padding}px;
+    margin-top: #{$default_padding * 1.5}px;
     cursor: pointer;
+    display: block;
   }
   .field {
     padding: #{$default_padding}px 0;

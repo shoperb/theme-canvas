@@ -16,21 +16,33 @@
           {{form_actions.auth_input}}
 
           <div>
-            <div class="grid__item one-whole palm--one-half desk--one-third">
+            <div class="grid__item one-whole lap--one-third desk--one-third">
               <h3>{{'account.personal_information' | t}}</h3>
             </div><!--
-            --><div class="grid__item one-whole palm--one-half desk--two-thirds">
-              <div class="field">
-                <label for="first_name">{{'account.first_name' | t}}</label>
-                <input type="text" value="{{account.first_name}}" name="account[first_name]" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
+            --><div class="grid__item one-whole lap--two-thirds desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="first_name">{{'account.first_name' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" value="{{account.first_name}}" name="account[first_name]" id="first_name" class="text" data-error="{{'account.error.first_name' | t}}">
+                </div>
               </div>
-              <div class="field">
-                <label for="last_name">{{'account.last_name' | t}}</label>
-                <input type="text" value="{{account.last_name}}" name="account[last_name]" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="last_name">{{'account.last_name' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" value="{{account.last_name}}" name="account[last_name]" id="last_name" class="text" data-error="{{'account.error.last_name' | t}}">
+                </div>
               </div>
-              <div class="field">
-                <label for="email">{{'account.email' | t}}</label>
-                <input type="text" data-type="email" value="{{account.email}}" name="account[email]" id="email" class="text" data-error="{{'account.error.email' | t}}">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="email">{{'account.email' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="text" data-type="email" value="{{account.email}}" name="account[email]" id="email" class="text" data-error="{{'account.error.email' | t}}">
+                </div>
               </div>
             </div>
           </div>
@@ -38,17 +50,25 @@
           <div class="general-separator"></div>
 
           <div>
-            <div class="grid__item one-whole palm--one-half desk--one-third">
+            <div class="grid__item one-whole lap--one-half desk--one-third">
               <h3>{{'account.change_password' | t}}</h3>
             </div><!--
-            --><div class="grid__item one-whole palm--one-half desk--two-thirds">
-              <div class="field">
-                <label for="first_name">{{'account.password' | t}}</label>
-                <input type="password" data-type="password" value="" name="account[password]" id="password" class="password text" data-error="{{'account.error.password' | t}}" />
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="first_name">{{'account.password' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="password" data-type="password" value="" name="account[password]" id="password" class="password text" data-error="{{'account.error.password' | t}}" />
+                </div>
               </div>
-              <div class="field">
-                <label for="last_name">{{'account.password_confirmation' | t}}</label>
-                <input type="password" data-type="password_confirmation" value="" name="account[password_confirmation]" id="password_confirmation" class="password text" data-error="{{'account.error.password_confirmation' | t}}" />
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third">
+                  <label for="last_name">{{'account.password_confirmation' | t}}</label>
+                </div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <input type="password" data-type="password_confirmation" value="" name="account[password_confirmation]" id="password_confirmation" class="password text" data-error="{{'account.error.password_confirmation' | t}}" />
+                </div>
               </div>
             </div>
           </div>
@@ -56,22 +76,24 @@
           <div class="general-separator"></div>
 
           <div>
-            <div class="grid__item one-whole palm--one-half desk--one-third">
+            <div class="grid__item one-whole lap--one-half desk--one-third">
               <h3>{{'account.subscription' | t}}</h3>
             </div><!--
-            --><div class="grid__item one-whole palm--one-half desk--two-thirds">
-              <div class="field">
-                <label></label>
-                <label for="newsletter">
-                  <input type="hidden" name="account[newsletter]" value="0">
-                  <input type="checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %}checked="checked"{% endif %}>
-                  <span class="label-text">
-                    <span class="tick">
-                      {% include 'icon' with 'close' %}
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+              <div class="grid">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third"></div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <label for="newsletter">
+                    <input type="hidden" name="account[newsletter]" value="0">
+                    <input type="checkbox" id="newsletter" name="account[newsletter]" value="1" {% if account.accepts_newsletter? %}checked="checked"{% endif %}>
+                    <span class="label-text">
+                      <span class="tick">
+                        {% include 'icon' with 'close' %}
+                      </span>
+                      {{'account.subscribe_to_newsletter' | t}}
                     </span>
-                    {{'account.subscribe_to_newsletter' | t}}
-                  </span>
-                </label>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -79,11 +101,12 @@
           <div class="general-separator"></div>
 
           <div>
-            <div class="grid__item one-whole palm--one-half desk--one-third"></div><!--
-            --><div class="grid__item one-whole palm--one-half desk--two-thirds">
-              <div class="field">
-                <label></label>
-                <button class="button primary" type="submit">{{'account.save_changes' | t}}</button>
+            <div class="grid__item one-whole lap--one-half desk--one-third"></div><!--
+            --><div class="grid__item one-whole lap--one-half desk--two-thirds">
+                <div class="grid__item one-whole lap--three-eighths desk--one-third"></div><!--
+                --><div class="grid__item one-whole lap--five-eighths desk--two-thirds">
+                  <button class="button primary" type="submit">{{'account.save_changes' | t}}</button>
+                </div>
               </div>
             </div>
           </div>
