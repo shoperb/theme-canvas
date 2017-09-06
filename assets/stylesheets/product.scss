@@ -477,3 +477,13 @@ h2.product-title {
     }
   }
 }
+
+.product-page {
+  .product-details {
+    padding-left: #{$default_padding}px;
+
+    .product-title {
+      padding-top: 0;
+    }
+  }
+}
