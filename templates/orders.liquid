@@ -1,48 +1,43 @@
-<div class="main-container account-page logged-in">
-  <div class="ui grid">
-    <div class="four wide column sidebar">
-      {% include 'account_sidebar' with 'orders' %}
-    </div>
+<section role="main" class="orders-page general-page">
+  <div class="grid">
+    <div class="grid__item one-whole palm--one-third desk--one-quarter">
+      <sidebar class="general-sidebar">
+        {% include 'account_sidebar' with 'account' %}
+      </sidebar>
+    </div><!--
 
-    <div class="twelve wide column orders-content">
-      <table>
+    --><div class="grid__item one-whole palm--two-third desk--three-quarters">
+      <div class="grid">
         {% for o in orders %}
-        <thead>
-          <th colspan="2">
-            <span>{{'order.id' | t}}</span>
-            <span>{{o.name}}</span>
-            {% assign status_text = 'order.status.' | append: order.status %}
-            <span class="status {{order.status}}">{{'order.status.completed' | t}}</span>
-          </th>
-          <th colspan="2">
-            <a href="{{o.url}}">
-              {{'order.link' | t}}
-              <div class="icon-arrow-next"></div>
-            </a>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label>{{'order.date_added' | t}}</label>
-              <div>{% include 'date' with o.created_at %}</div>
-            </td>
-            <td>
-              <label>{{'order.customer' | t}}</label>
-              <div>{{o.billing_address.first_name}} {{o.billing_address.last_name}}</div>
-            </td>
-            <td>
-              <label>{{'order.products' | t}}</label>
-              <div>6 {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
-            </td>
-            <td>
-              <label>{{'order.total' | t}}</label>
-              <div>{{o.total | money_with_cents}}</div>
-            </td>
-          </tr>
-        </tbody>
+        {% unless forloop.first %}
+        <div class="general-separator"></div>
+        {% endunless %}
+
+        <div class="grid__item one-whole desk--three-quarters order-id">
+          <h2>{{'order.id' | t}} {{o.name}}</h2>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter order-view-details">
+          <a href="{{o.url}}">
+            {{'order.link' | t}}
+            {% include 'icon' with 'arrow-narrow' %}
+          </a>
+        </div>
+
+        <div class="grid__item one-whole desk--one-third order-date">
+          <label>{{'order.date_added' | t}}</label>
+          <div>{% include 'date' with o.created_at %}</div>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-third order-quantity">
+          <label>{{'order.products' | t}}</label>
+          <div>6 {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-third order-total">
+          <label>{{'order.total' | t}}</label>
+          <div>{{o.total | money}}</div>
+        </div>
+
         {% endfor %}
-      </table>
+      </div>
     </div>
   </div>
 </div>

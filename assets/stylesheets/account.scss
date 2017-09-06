@@ -219,3 +219,33 @@
     padding: #{$default_padding}px 0;
   }
 }
+
+.orders-page {
+  .order-id {
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .order-view-details {
+    text-align: right;
+    padding-top: 15px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  a {
+    &:hover {
+      color: lighten($text_link_color, 20%);
+    }
+  }
+  .order-quantity {
+    text-align: center;
+  }
+  .order-total {
+    text-align: right;
+  }
+}
