@@ -267,6 +267,21 @@
           "handle": "product"
         },
         {
+          "type": "toggle",
+          "handle": "show_quantity_selector",
+          "default": false
+        },
+        {
+          "type": "toggle",
+          "handle": "show_variant_label",
+          "default": false
+        },
+        {
+          "type": "toggle",
+          "handle": "show_vendor",
+          "default": false
+        },
+        {
           "type": "select",
           "handle": "vertical_alignment",
           "default": "middle",
