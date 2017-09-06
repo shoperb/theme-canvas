@@ -25,6 +25,39 @@ class @Product
             current.classList.add('zoom')
       )
 
+    if document.querySelector('.product-container .photos .container')
+      document.querySelector('.product-container .photos .container').addEventListener("click", (event)->
+        document.querySelector('.product-gallery-container').classList.add('show')
+
+        gallery = document.querySelector('.product-gallery-container .product-gallery')
+        icon = gallery.dataset.arrowImage
+        for el in this.parentNode.parentNode.querySelectorAll('.thumbs .thumb')
+          gal_item = document.createElement("DIV")
+          gal_item.innerHTML = '<img src="' + el.dataset.imageurl + '">' if el.dataset.imageurl
+          gallery.appendChild(gal_item);
+
+        $(gallery).slick({
+          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>',
+          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>'
+        });
+      )
+
+    document.querySelector('[data-close-gallery]').addEventListener("click", (event)->
+      gallery = document.querySelector('.product-gallery-container .product-gallery')
+      $(gallery).slick('unslick');
+      document.querySelector('.product-gallery-container').classList.remove('show')
+    )
+
+    document.addEventListener 'keydown', (event) ->
+      gallery = document.querySelector('.product-gallery-container')
+      if gallery.classList.contains('show')
+        if event.key == 'ArrowLeft'
+          gallery.querySelector('.slick-prev').click()
+        else if event.key == 'ArrowRight'
+          gallery.querySelector('.slick-next').click()
+        else if event.key == 'Escape'
+          gallery.querySelector('[data-close-gallery]').click()
+
 @zoom = (e) ->
   try
     zoomer = e.currentTarget

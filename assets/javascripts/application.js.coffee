@@ -44,9 +44,12 @@ for el in document.querySelectorAll('[data-fancy-dropdown-element]')
       this.closest('form').submit()
   )
 
-$('[data-sign-up]').on 'click', ->
-  if $(this).attr('for') == 'business'
-    $('[data-business-only]').removeClass 'hidden'
-  else
-    $('[data-business-only]').addClass 'hidden'
-
+for el in document.querySelectorAll('[data-sign-up]')
+  el.addEventListener("click", (event)->
+    if this.getAttribute('for') == 'business'
+      for field in document.querySelectorAll('[data-business-only]')
+        field.classList.remove('hidden')
+    else
+      for field in document.querySelectorAll('[data-business-only]')
+        field.classList.add('hidden')
+  )
