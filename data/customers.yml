@@ -1,0 +1,12 @@
+---
+- id: 18
+  name: Latest
+  content: "<p>tegelt vana</p>"
+  published_at: '2015-12-05T00:00:00.000Z'
+  slug: latest
+  permalink: latest
+  template: ''
+  translations: {}
+  first_name: "Juura"
+  last_name: "Pekkaniska"
+  email: "jp@gmail.com"

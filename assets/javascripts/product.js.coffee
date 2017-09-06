@@ -42,15 +42,16 @@ class @Product
         });
       )
 
-    document.querySelector('[data-close-gallery]').addEventListener("click", (event)->
-      gallery = document.querySelector('.product-gallery-container .product-gallery')
-      $(gallery).slick('unslick');
-      document.querySelector('.product-gallery-container').classList.remove('show')
-    )
+    if document.querySelector('[data-close-gallery]')
+      document.querySelector('[data-close-gallery]').addEventListener("click", (event)->
+        gallery = document.querySelector('.product-gallery-container .product-gallery')
+        $(gallery).slick('unslick');
+        document.querySelector('.product-gallery-container').classList.remove('show')
+      )
 
     document.addEventListener 'keydown', (event) ->
       gallery = document.querySelector('.product-gallery-container')
-      if gallery.classList.contains('show')
+      if gallery and gallery.classList.contains('show')
         if event.key == 'ArrowLeft'
           gallery.querySelector('.slick-prev').click()
         else if event.key == 'ArrowRight'
