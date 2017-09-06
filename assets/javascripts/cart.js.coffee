@@ -33,8 +33,6 @@ class @Cart
     else
       e.returnValue = false;
 
-    console.log 'asd'
-
     f     = $(e.target)
     url   = f.attr('action')
     meth  = f.attr('method') || f.data('method') || 'GET'
@@ -53,8 +51,6 @@ class @Cart
 
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
-
-      console.log 'submit'
 
       initCart();
 

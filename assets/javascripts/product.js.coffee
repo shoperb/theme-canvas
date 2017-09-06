@@ -6,11 +6,23 @@ class @Product
           tnb.classList.remove('active')
         this.classList.add('active')
 
-        img = this.dataset.image
-        for photo in this.parentNode.parentNode.querySelectorAll('.photos .photo')
+        img = this.dataset
+        photos = this.parentNode.parentNode.querySelector('.photos .container')
+        current = document.querySelector('[data-image=full-' + img.image + ']')
+        for photo in photos.querySelectorAll('.photo')
           photo.classList.remove('visible')
-        document.querySelector('[data-image=full-' + img + ']').classList.add('visible')
-        document.querySelector('[data-image=full-' + img + ']').onmousemove = zoom
+        current.classList.add('visible')
+        current.onmousemove = zoom
+
+        testImage = new Image
+        testImage.src = img.imageurl
+        testImage.onload = ->
+          if (testImage.width < photos.offsetWidth)
+            current.classList.remove('zoom')
+            current.classList.add('no-zoom')
+          else
+            current.classList.remove('no-zoom')
+            current.classList.add('zoom')
       )
 
 @zoom = (e) ->

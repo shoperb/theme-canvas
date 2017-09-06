@@ -11,7 +11,7 @@
 
         <div data-position="thumbs" class="thumbs">
           {% for image in product.images %}
-          <div class="thumb{% if forloop.first == true %} active{% endif %}" data-image="{{forloop.index}}">{{image.admin_small.url | image_tag: product.name}}</div>
+          <div class="thumb{% if forloop.first == true %} active{% endif %}" data-image="{{forloop.index}}" data-imageurl="{{image.size-2048.url}}">{{image.admin_small.url | image_tag: product.name}}</div>
           {% endfor %}
         </div>
 
@@ -62,4 +62,8 @@
   </article>
 
   {% include 'recommended_products' %}
+</div>
+
+<div class="product-gallery">
+
 </div>
