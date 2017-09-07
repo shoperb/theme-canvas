@@ -114,8 +114,6 @@ h3.general-title {
 }
 
 .general-page {
-  padding: 0 #{$default_padding}px;
-
   header {
     @extend .clearfix;
     padding: 0 #{$default_padding}px;

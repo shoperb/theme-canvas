@@ -1,8 +1,5 @@
 [data-type=collection-list],
 .collections-page {
-  .grid__item {
-    padding: #{$default_padding}px;
-  }
   .opacity-image.with-image {
     background-size: cover;
   }
@@ -20,6 +17,11 @@
       margin: 0;
       width: 100%;
       word-break: break-word;
+    }
+  }
+  .collections-list {
+    .grid__item {
+      padding: #{$default_padding}px;
     }
   }
   a.collection {
