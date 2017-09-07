@@ -152,7 +152,7 @@
           "settings": [
             {
               "handle": "body_font_family",
-              "type": "select",
+              "type": "font",
               "options": [
                 {
                   "handle": "Alegreya",
@@ -306,7 +306,7 @@
           "settings": [
             {
               "handle": "headings_font_family",
-              "type": "select",
+              "type": "font",
               "options": [
                 {
                   "handle": "Alegreya",
