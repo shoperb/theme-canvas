@@ -632,6 +632,12 @@ section[data-type=slideshow] {
     right: 0;
     bottom: 30px;
     left: 0;
+    @include breakpoint(palm) {
+      position: relative;
+      height: 450px;
+      top: 0;
+      bottom: 0;
+    }
   }
   .map-description {
     position: relative;
@@ -645,6 +651,7 @@ section[data-type=slideshow] {
     @include breakpoint(palm) {
       width: 100%;
       left: 0;
+      min-height: 0;
     }
 
     .map-details {

@@ -85,6 +85,7 @@
   .cart-col-quantity {
     .product-quantity-input {
       margin-top: 25px;
+      margin-left: 10px;
       @include breakpoint(palm) {
         float: none;
         margin: 10px 0;
