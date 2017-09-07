@@ -16,7 +16,7 @@
 //    "image_overlay_dark_color": "#333333",
     "image_overlay_color": "#333333",
     "image_overlay_background": "#B2B6BB",
-    "image_overlay_opacity": "0.3",
+    "image_overlay_opacity": "30",
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
     "headings_font_family": "Hind",
