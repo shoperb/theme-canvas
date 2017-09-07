@@ -166,7 +166,7 @@ section[data-type] {
     line-height: 2;
   }
 }
-[data-type=collection] {
+section[data-type=collection] {
   .button {
     margin: 10px 0;
   }
@@ -176,6 +176,17 @@ section[data-type] {
   &.show-slideshow {
     @include breakpoint(1255) {
       width: calc(100% - 50px);
+    }
+  }
+  .slick-arrow {
+    top: -35px;
+    @include transform(none);
+
+    &.slick-prev {
+      left: 10px;
+    }
+    &.slick-next {
+      right: 10px;
     }
   }
 }
