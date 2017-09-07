@@ -410,6 +410,7 @@ section[data-type=slideshow] {
       text-align: center;
       background-color: $layout_secondary_background_color;
       padding: 100px 0;
+      display: block;
 
       &.with-image {
         padding: 0;
@@ -417,7 +418,7 @@ section[data-type=slideshow] {
 
         img {
           width: 100%;
-          float: left;
+          display: block;
         }
       }
     }
@@ -717,6 +718,7 @@ section[data-type=slideshow] {
           box-sizing: border-box;
           background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
           padding-top: 100%;
+          display: block;
 
           &.with-image {
             border: none;

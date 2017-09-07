@@ -68,15 +68,17 @@
       <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
       <div class="grid__item palm--one-whole lap--one-whole desk--one-half">
-        <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
+        <a href="{{product.url}}" class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
           {% if product.image.size-480.url != blank %}
           <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
           {% endif %}
-        </div>
+        </a>
       </div><!--
 
       --><div class="custom-product-content grid__item palm--one-whole lap--one-whole desk--one-half">
-        <h2 class="general-title">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</h2>
+        <h2 class="general-title">
+          <a href="{{product.url}}">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</a>
+        </h2>
 
         <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
           <meta itemprop="priceCurrency" content="{{shop.currency.code}}">

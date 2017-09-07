@@ -18,17 +18,19 @@
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
   <div class="grid">
     <div class="grid__item one-whole lap--one-half {{image_class}}">
-      <div class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
+      <a href="{{product.url}}" class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
         {% if product.image.size-480.url != blank %}
-        <img src="{{product.image.size-480.url}}" data-src="{{product.image.size-2048.url}}" alt="{{product.name}}">
+        <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
         {% else %}
         <img src="{{'images/placeholder.svg' | asset_url}}">
         {% endif %}
-      </div>
+      </a>
     </div><!--
 
     --><div class="grid__item one-whole lap--one-half {{text_class}} product-container">
-      <h2 class="product-title general-title">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</h2>
+      <h2 class="product-title general-title">
+        <a href="{{product.url}}">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</a>
+      </h2>
 
       <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
         {% if product %}

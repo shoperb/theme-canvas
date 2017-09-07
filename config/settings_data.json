@@ -94,7 +94,7 @@
         "title": "Featured products",
         "per_row": 3,
         "rows": 1,
-        "collection": "holidadays",
+        "collection": "spring-summer-collection-2017",
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
@@ -620,7 +620,7 @@
           "type": "custom_collection",
           "settings": {
             "section_width": 25,
-            "collection": "holidadays",
+            "collection": "spring-summer-collection-2017",
             "vertical_alignment": "middle"
           }
         },
