@@ -63,12 +63,25 @@
           nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
           slidesToShow: $(this).data('show-count'),
           slidesToScroll: $(this).data('show-count'),
-          lazyLoad: 'ondemand'
+          lazyLoad: 'ondemand',
+          responsive: [
+            {
+              breakpoint: 1023,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         });
       });
-      {% comment %}
-      setImageType();
-      {% endcomment %}
     });
   </script>
 
