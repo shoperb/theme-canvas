@@ -31,9 +31,9 @@
           <label>{{'order.products' | t}}</label>
           <div>6 {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
         </div><!--
-        --><div class="grid__item one-whole desk--one-third order-total">
+        --><div class="grid__item one-whole desk--one-third order-price">
           <label>{{'order.total' | t}}</label>
-          <div>{{o.total | money}}</div>
+          <div>{{o.total | money_with_cents}}</div>
         </div>
 
         {% endfor %}

@@ -74,6 +74,18 @@
   "order.email": "Email",
   "order.address": "Address",
 
+  "january": "January",
+  "february": "February",
+  "march": "March",
+  "april": "April",
+  "may": "May",
+  "june": "June",
+  "july": "July",
+  "august": "August",
+  "september": "September",
+  "october": "October",
+  "november": "November",
+  "december": "December",
 
 
   //deprecated and need to be reviewd before using
@@ -193,19 +205,6 @@
   "customer.passwords.invalid_token": "Looks like there is something worng with the password reset token, please generate new one",
   "customer.passwords.new_token_requested": "Looks like someone has generated new password reset token, please use the new one",
   "customer.passwords.password_changed": "Password updated",
-
-  "january": "January",
-  "february": "February",
-  "march": "March",
-  "april": "April",
-  "may": "May",
-  "june": "June",
-  "july": "July",
-  "august": "August",
-  "september": "September",
-  "october": "October",
-  "november": "November",
-  "december": "December",
 
   "categories.filters.no_sorting": "Sort",
   "categories.filters.order_by_price_asc": "By price: cheap to expensive",

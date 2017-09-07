@@ -1,15 +1,17 @@
 {% if date %}
   {% if shop.current_locale == 'en' %}
-    {% if long_date > 0 %}
-      {{ date | date: "%B %-d %Y" }}
+    {% if long_date %}
+      {{date | date: "%B %-d %Y"}}
     {% else %}
-      {{ date | date: "%b %-d %Y" }}
+      {{date | date: "%b %-d %Y"}}
     {% endif %}
   {% else %}
-    {% if long_date > 0 %}
-      {{ date | date: "%-d %B %Y" }}
+    {{ date | date: "%-d" }}.
+    {% if long_date %}
+      {{date | date: "%B" | t}}
     {% else %}
-      {{ date | date: "%-d %b %Y" }}
+      {{date | date: "%b" | t}}
     {% endif %}
+    {{date | date: "%Y"}}
   {% endif %}
 {% endif %}

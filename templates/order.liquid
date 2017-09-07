@@ -1,223 +1,156 @@
-<div class="main-container account-page logged-in">
-  <div class="ui grid">
-    <div class="four wide column sidebar">
-      {% include 'account_sidebar' with 'orders' %}
-    </div>
+<section role="main" class="orders-page general-page">
+  <div class="grid">
+    <div class="grid__item one-whole palm--one-third desk--one-quarter">
+      <sidebar class="general-sidebar">
+        {% include 'account_sidebar' with 'account' %}
+      </sidebar>
+    </div><!--
 
-    <div class="twelve wide column order-content">
-      <table class="order-header">
-        <tbody>
-          <tr>
-            <td colspan="2">
-              <div class="title">
-                {{'order.id' | t}}
-                {{order.name}}
+    --><div class="grid__item one-whole palm--two-third desk--three-quarters">
+      <div class="grid">
+        <div class="grid__item one-whole desk--two-quarters order-id">
+          <h2>{{'order.id' | t}} {{o.name}}</h2>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter order-date">
+          <label>{{'order.date_added' | t}}</label>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter order-date">
+          {% assign long_date = 1 %}
+          {% include 'date' with order.created_at %}
+        </div>
+
+        <div class="grid__item one-whole desk--one-quarter">
+          <label>{{'order.payment_method' | t}}:</label>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <div>{{order.payment_method}}Swedbank pangalink</div>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <label>{{'order.shipping_method' | t}}:</label>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <div>{{order.shipping_method}}</div>
+        </div>
+
+        <div class="general-separator"></div>
+
+        <div class="grid__item one-whole desk--one-quarter">
+          <label>{{'order.billing_address' | t}}:</label>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <div>{{order.billing_address.first_name}} {{order.billing_address.last_name}}</div>
+          <div>{{order.billing_address.company}}</div>
+          <div>{{order.billing_address.phone}}</div>
+          <div>{{order.billing_address.email}}</div>
+          <div>{{order.billing_address.address1}}{% if order.billing_address.address1.size > 0 and order.billing_address.address2.size > 0 %}, {% endif %}{{order.billing_address.address2}}</div>
+          <div>{{order.billing_address.zip}}{% if order.billing_address.zip.size > 0 and order.billing_address.city.size > 0 %}, {% endif %}{{order.billing_address.city}}</div>
+          <div>{{order.billing_address.county}}{% if order.billing_address.county.size > 0 and order.billing_address.country.size > 0 %}, {% endif %}{{order.billing_address.country}}</div>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <label>{{'order.shipping_address' | t}}:</label>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-quarter">
+          <div>{{order.shipping_address.first_name}} {{order.shipping_address.last_name}}</div>
+          <div>{{order.shipping_address.company}}</div>
+          <div>{{order.shipping_address.phone}}</div>
+          <div>{{order.shipping_address.email}}</div>
+          <div>{{order.shipping_address.address1}}{% if order.shipping_address.address1.size > 0 and order.shipping_address.address2.size > 0 %}, {% endif %}{{order.shipping_address.address2}}</div>
+          <div>{{order.shipping_address.zip}}{% if order.shipping_address.zip.size > 0 and order.shipping_address.city.size > 0 %}, {% endif %}{{order.shipping_address.city}}</div>
+          <div>{{order.shipping_address.county}}{% if order.shipping_address.county.size > 0 and order.shipping_address.country.size > 0 %}, {% endif %}{{order.shipping_address.country}}</div>
+        </div>
+
+        <div class="general-separator"></div>
+
+        <div class="grid__item one-whole">
+          <h2>{{'order.ordered_items' | t}}</h2>
+        </div>
+
+        <div class="order-header">
+          <div class="grid__item one-whole lap--two-fifths desk--two-fifths order-header">
+            <label>{{'order.product_name' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-header">
+            <label>{{'order.price' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity order-header">
+            <label>{{'order.quantity' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-header">
+            <label>{{'order.total' | t}}</label>
+          </div>
+        </div>
+
+        {% for item in order.items %}
+        <div class="order-item">
+          <div class="grid__item one-whole lap--two-fifths desk--two-fifths">
+            <div class="image">
+              {% if item.image %}
+              <img src="{{item.image}}" alt="{{item.name}}">
+              {% endif %}
+            </div>
+            <div class="details">
+              <div class="name">
+                {{item.name}}
               </div>
-            </td>
-            <td>
-              <label>{{'order.date_added' | t}}</label>
-            </td>
-            <td class="even">
-              <div>{% include 'date' with order.created_at %}</div>
-            </td>
-          </tr>
-          <tr class="separator">
-            <td>
-              <label>{{'order.payment_method' | t}}</label>
-            </td>
-            <td class="even method">
-              <div>{{o.payment_method}}Swedbank pangalink</div>
-            </td>
-            <td>
-              <label>{{'order.shipping_method' | t}}</label>
-            </td>
-            <td class="even method">
-              <div>{{o.shipping_method}}Omniva parcel machine - Tallinn - Tallinna Viru Keskuse pakiautomaat (Viru väljak 4, Tallinn)</div>
-            </td>
-          </tr>
-
-          <tr class="separator">
-            <td>
-              <label>{{'order.billing_address' | t}}</label>
-            </td>
-            <td class="even address">
-              <div>{{order.billing_address.first_name}} {{order.billing_address.last_name}}</div>
-              <div>{{order.billing_address.company}}</div>
-              <div>{{order.billing_address.phone}}</div>
-
-              {% comment %}
-              <div>{{order.billing_address.email}}</div>
-              {% endcomment %}
-
-              <div>{{order.billing_address.address1}}{% if order.billing_address.address1.size > 0 and order.billing_address.address2.size > 0 %}, {% endif %}{{order.billing_address.address2}}</div>
-              <div>{{order.billing_address.zip}}{% if order.billing_address.zip.size > 0 and order.billing_address.city.size > 0 %}, {% endif %}{{order.billing_address.city}}</div>
-              <div>{{order.billing_address.county}}{% if order.billing_address.county.size > 0 and order.billing_address.country.size > 0 %}, {% endif %}{{order.billing_address.country}}</div>
-            </td>
-            <td>
-              <label>{{'order.shipping_address' | t}}</label>
-            </td>
-            <td class="even address">
-              <div>
-              <div>{{order.shipping_address.first_name}} {{order.shipping_address.last_name}}</div>
-              <div>{{order.shipping_address.company}}</div>
-              <div>{{order.shipping_address.phone}}</div>
-
-              {% comment %}
-              <div>{{order.shipping_address.email}}</div>
-              {% endcomment %}
-
-              <div>{{order.shipping_address.address1}}{% if order.shipping_address.address1.size > 0 and order.shipping_address.address2.size > 0 %}, {% endif %}{{order.shipping_address.address2}}</div>
-              <div>{{order.shipping_address.zip}}{% if order.shipping_address.zip.size > 0 and order.shipping_address.city.size > 0 %}, {% endif %}{{order.shipping_address.city}}</div>
-              <div>{{order.shipping_address.county}}{% if order.shipping_address.county.size > 0 and order.shipping_address.country.size > 0 %}, {% endif %}{{order.shipping_address.country}}</div>
+              {% if item.attributes.size %}
+              <div class="variants">
+                <ul>
+                  {% for variant in item.attributes %}
+                  <li>{{ variant.name }} : {{ variant.value }}</li>
+                  {% endfor %}
+                </ul>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <table class="order-items">
-        <tbody>
-          <tr>
-            <td colspan="4">
-              <div class="title">
-                {{'order.ordered_items' | t}}
-              </div>
-            </td>
-          </tr>
-          <tr class="separator header-row">
-            <td>
-              <label>{{'order.product_name' | t}}</label>
-            </td>
-            <td class="price">
-              <label>{{'order.price' | t}}</label>
-            </td>
-            <td class="quantity">
-              <label>{{'order.quantity' | t}}</label>
-            </td>
-            <td class="total">
-              <label>{{'order.total' | t}}</label>
-            </td>
-          </tr>
-
-          {% for item in order.items %}
-          <tr class="separator">
-            <td>
-              <div class="image">
-                {% if item.image %}
-                <img src="{{item.image}}" alt="{{item.name}}">
-                {% endif %}
-              </div>
-              <div class="details">
-                <div class="name">
-                  {{item.name}}
-                </div>
-                {% if item.attributes.size %}
-                <div class="variants">
-                  <ul>
-                    {% for variant in item.attributes %}
-                    <li>{{ variant.name }} : {{ variant.value }}</li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                {% endif %}
-              </div>
-            </td>
-            <td class="price">
-              {{item.price | money_with_cents}}
-            </td>
-            <td class="quantity">
-              {{item.quantity}}
-            </td>
-            <td class="total">
-              {{item.total | money_with_cents}}
-            </td>
-          </tr>
+              {% endif %}
+            </div>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price">
+            {{item.price | money_with_cents}}
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity">
+            {{item.quantity}}
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price">
+            {{item.total | money_with_cents}}
+          </div>
+        </div>
         {% endfor %}
-        </tbody>
 
-        <tfoot>
-          <tr>
-            <td colspan="2"></td>
-            <td>{{'order.subtotal' | t}}</td>
-            <td>{{order.subtotal | money_with_cents}}</td>
-          </tr>
-          <tr>
-            <td colspan="2"></td>
-            <td>{{'order.tax' | t}}</td>
-            <td>{{order.total_taxes | money_with_cents}}</td>
-          </tr>
-          <tr>
-            <td colspan="2"></td>
-            <td>{{'order.shipping' | t}}</td>
-            <td>{{order.total_shipping | money_with_cents}}</td>
-          </tr>
-          <tr>
-            <td colspan="2"></td>
-            <td>{{'order.full_total' | t}}</td>
-            <td>{{order.total | money_with_cents}}</td>
-          </tr>
-        </tfoot>
-      </table>
+        <div class="order-footer">
+          <div class="grid__item one-whole lap--three-fifths desk--three-fifths order-footer"></div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity order-footer">
+            <label>{{'order.subtotal' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-footer">
+            <label>{{order.subtotal | money_with_cents}}</label>
+          </div>
 
-      {% comment %}
-      <table class="order-payment">
-        <tbody>
-          <tr>
-            <td colspan="4">
-              <div class="title">
-                {{'order.payment_history' | t}}
-              </div>
-            </td>
-          </tr>
-          <tr class="header-row">
-            <td class="date">
-              <label>{{'order.date_added' | t}}</label>
-            </td>
-            <td class="status">
-              <label>{{'order.status' | t}}</label>
-            </td>
-            <td>
-              <label>{{'order.comment' | t}}</label>
-            </td>
-          </tr>
-          <tr class="separator">
-            <td class="date">
-              11 Sep 2016
-            </td>
-            <td class="status">
-              <div class="status">Awaiting Payment</div>
-            </td>
-            <td>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sollicitudin nisi. Nulla lacinia mi in lectus consectetur auctor. Cras nec placerat ligula.
-            </td>
-          </tr>
-          <tr class="separator">
-            <td class="date">
-              12 Sep 2016
-            </td>
-            <td class="status">
-              <div class="status">Processing</div>
-            </td>
-            <td>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sollicitudin nisi.
-            </td>
-          </tr>
-          <tr class="separator completed">
-            <td class="date">
-              13 Sep 2016
-            </td>
-            <td class="status">
-              <div class="status">Completed</div>
-            </td>
-            <td>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id sollicitudin nisi.
-            </td>
-          </tr>
+          <div class="grid__item one-whole lap--three-fifths desk--three-fifths order-footer"></div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity order-footer">
+            <label>{{'order.tax' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-footer">
+            <label>{{order.total_taxes | money_with_cents}}</label>
+          </div>
 
-      </table>
-      {% endcomment %}
+          <div class="grid__item one-whole lap--three-fifths desk--three-fifths order-footer"></div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity order-footer">
+            <label>{{'order.shipping' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-footer">
+            <label>{{order.total_shipping | money_with_cents}}</label>
+          </div>
 
+          <div class="grid__item one-whole lap--three-fifths desk--three-fifths order-footer"></div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-quantity order-footer order-total">
+            <label>{{'order.full_total' | t}}</label>
+          </div><!--
+          --><div class="grid__item one-whole lap--one-fifth desk--one-fifth order-price order-footer order-total">
+            <label>{{order.total | money_with_cents}}</label>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
+</section>
 

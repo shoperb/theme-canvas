@@ -245,7 +245,32 @@
   .order-quantity {
     text-align: center;
   }
-  .order-total {
+  .order-price {
     text-align: right;
+    @include breakpoint(palm) {
+      text-align: center;
+    }
+  }
+  .order-header {
+    font-weight: bold;
+  }
+  .order-item {
+    border-top: 1px solid $layout_border_color;
+  }
+  .order-header,
+  .order-item,
+  .order-footer {
+    .grid__item {
+      padding: #{$default_padding}px 0;
+    }
+  }
+  .order-header {
+    @include breakpoint(palm) {
+      display: none;
+    }
+  }
+  .order-total {
+    font-weight: bold;
+    border-top: 1px solid $layout_border_color;
   }
 }
