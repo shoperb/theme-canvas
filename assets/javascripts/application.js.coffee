@@ -5,12 +5,10 @@
 #= require variant_selector
 #= require cart
 #= require product
-#= require sections
 #= require svg4everybody
 #= require plugins
 
 document.addEventListener("DOMContentLoaded", ->
-#  new VariantSelector()
   new Cart()
   new Product()
   svg4everybody(polyfill: true)

@@ -24,6 +24,18 @@
           {% endif %}
         </div>
       {% if block.settings.slide_link != blank %}</a>{% else %}</div>{% endif %}
+
+      {% if block.settings.video != blank %}
+      <script>
+        $(document).ready(function() {
+          slideVideoResize('{{section.id}}', '{{block.id}}');
+        });
+        window.onresize = function() {
+          slideVideoResize('{{section.id}}', '{{block.id}}');
+        };
+      </script>
+      {% endif %}
+
     </div>
     {% endfor %}
 
@@ -44,7 +56,6 @@
           lazyLoad: 'ondemand'
         });
       });
-      slideVideoResize();
     });
   </script>
 </section>

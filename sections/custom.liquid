@@ -110,6 +110,16 @@
       <iframe src="{{block.settings.video}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
       {% endif %}
       {% endif %}
+
+      <script>
+        $(document).ready(function() {
+          customVideoSize('{{section.id}}', '{{block.id}}');
+        });
+        window.onresize = function() {
+          customVideoSize('{{section.id}}', '{{block.id}}');
+        };
+      </script>
+
     </div>
 
     {% endcase %}
@@ -118,10 +128,4 @@
     {% endfor %}
   </div>
   {% endif %}
-
-  <script>
-    $(document).ready(function() {
-      customVideoSize();
-    });
-  </script>
 </section>
