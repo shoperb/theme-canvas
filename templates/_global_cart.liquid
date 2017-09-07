@@ -1,8 +1,0 @@
-<section id="global-cart"{% if cart.items.empty? %} style="display: none;"{% endif %}>
-    <a href="{{ url.cart }}">
-        <span class="cart-icon"></span>
-        <span>{{ cart.quantity }}{% if cart.quantity == 1 %} {{ 'cart.item' | t}} {% else %} {{ 'cart.items' | t }} {% endif %}</span>
-        -
-        <span>{{ cart.total | money_with_cents }}</span>
-    </a>
-</section>

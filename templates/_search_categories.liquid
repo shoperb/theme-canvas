@@ -1,6 +1,0 @@
-{% for category in search_categories %}
-    <option value="{{ category.id }}">{{ category.name }}</option>
-    {% if category.children? %}
-        {% include "search_categories" with category.children %}
-    {% endif %}
-{% endfor %}

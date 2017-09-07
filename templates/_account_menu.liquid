@@ -1,8 +1,0 @@
-<header>
-    <div class="title">{{ 'account.title' | t }}</div>
-</header>
-<ul>
-    <!--<li{% if key == url.whishlist %} class="active" {% endif %}><a href="{{url.whishlist}}">{{ 'account.wishlist' | t }}</a></li>-->
-    <li{% if key == url.account %} class="active" {% endif %}><a href="{{url.account}}">{{ 'account.settings' | t }}</a></li>
-    <li{% if key == url.orders %} class="active" {% endif %}><a href="{{url.orders}}">{{ 'account.my_orders' | t }}</a></li>
-</ul>
