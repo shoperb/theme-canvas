@@ -412,6 +412,9 @@ section[data-type=slideshow] {
   .grid {
     text-align: center;
   }
+  .grid__item {
+    padding: #{$default_padding}px;
+  }
 }
 [data-type=product] {
   .grid__item {
