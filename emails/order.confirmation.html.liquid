@@ -1,325 +1,243 @@
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>
-      {{"emails.order.confirmation.title" | t}}
-    </title>
-    <style type="text/css">
-      a:hover {
-        text-decoration: none;
-      }
-    </style>
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>
+    {{"email.order.confirmation.title" | t}}
+  </title>
+  <style type="text/css">
+    @media screen {
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
 
+<body style="font-family: Lato, Helvetica, Arial, sans-serif; font-size: 14px; background: #F5F5F5; margin: 20px; text-align: center;">
 
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td colspan="100%">
 
-    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tbody>
-        <tr>
-          <td>
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td colspan="3" style="text-align: left; padding: 58px 10px 10px 70px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 48px; color: #000000; font-weight: bold;">
+                {{shop.name}}
+              </td>
+              <td style="padding: 60px 70px 10px 10px; text-align: right; font-size: 14px;">
+                <div style="padding: 0 0 10px">
+                  <span style="font-weight: bold; color: #919AA8; text-transform: uppercase;">{{'email.date' | t}}:</span>
+                  <span>{{order.created_at | date: '%d %b %Y'}}</span>
+                </div>
+                <div>
+                  <span style="font-weight: bold; color: #919AA8; text-transform: uppercase;">{{'email.invoice' | t}}:</span>
+                  <span>#{{order.number}}</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
 
-            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="620">
-              <tbody>
-                <tr>
-                  <td style="padding: 40px 30px;">
+              <td style="text-align: left; padding: 28px 10px 50px 70px; vertical-align: top; font-size: 14px; line-height: 1.5;">
+                <div style="font-size: 14px; font-weight: bold; color: #919AA8; text-transform: uppercase; padding: 0 0 8px;">{{'email.billing_address' | t}}:</div>
+                {% if order.billing_address.company? %}
+                <div>{{order.billing_address.company}}</div>
+                {% endif %}
+                <div>{{order.billing_address.first_name}} {{order.billing_address.last_name}}</div>
+                <div>{{order.email}}</div>
+                <div>{{order.billing_address.phone}}</div>
+                <div>{{order.billing_address.full_address}}</div>
+                <div>{{order.billing_address.city_state_with_zip}}</div>
+                <div>{{order.billing_address.country}}</div>
+              </td>
 
-                    <table style="margin: 0 0 40px 0;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody>
-                        <tr>
-                          <td width="220">
-                            <p style="margin: 0; padding: 0; font-weight: bold; font-size: 38px;">
-                              {{ shop.name }}
-                            </p>
-                          </td>
-                          <td width="160"></td>
-                          <td style="text-align: left;" width="180">
-                            <p style="margin: 0 0 5px 0; padding: 0; font-size: 13px;">
-                              <strong>
-                                {{"public.invoice.order_number"|t}}
-                              </strong>
-                              <span>
-                                {{order.number}}
-                              </span>
-                            </p>
-                            <p style="margin: 0; padding: 0; font-size: 13px;">
-                              <strong>
-                                {{"public.invoice.date"|t}}
-                              </strong>
-                              <span>
-                                {{ order.created_at | date: '%d %B %Y' }}
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+              {% if order.shipping_address? %}
+              <td style="text-align: left; padding: 28px 10px 50px; vertical-align: top; font-size: 14px; line-height: 1.5;">
+                <div style="font-size: 14px; font-weight: bold; color: #919AA8; text-transform: uppercase; padding: 0 0 8px;">{{'email.shipping_address' | t}}:</div>
+                {% if order.shipping_address.company? %}
+                <div>{{order.shipping_address.company}}</div>
+                {% endif %}
+                <div>{{order.shipping_address.first_name}} {{order.shipping_address.last_name}}</div>
+                <div>{{order.email}}</div>
+                <div>{{order.shipping_address.phone}}</div>
+                <div>{{order.shipping_address.full_address}}</div>
+                <div>{{order.shipping_address.city_state_with_zip}}</div>
+                <div>{{order.shipping_address.country}}</div>
+              </td>
+              {% endif %}
 
+              {% if order.shipping_method %}
+              <td style="text-align: left; padding: 28px 10px 50px; vertical-align: top; font-size: 14px; line-height: 1.5;">
+                <div style="font-size: 14px; font-weight: bold; color: #919AA8; text-transform: uppercase; padding: 0 0 8px;">{{'email.shipping_method' | t}}:</div>
+                <div>{{order.shipping_method.name}}</div>
+                <div>{{order.shipping_method.provider_box}}</div>
+              </td>
+              {% endif %}
 
+            </tr>
+          </tbody>
+        </table>
 
-                          {% if order.shipping_address? %}
+      </td>
+    </tr>
+  </tbody>
 
-                          {% endif %}
+  <tbody>
+    <tr>
+      <th style="padding: 20px 10px 19px 70px; background: #F0F2F5; text-align: left; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.item' | t}}</th>
+      <th style="padding: 20px 10px 19px 10px; background: #F0F2F5; text-align: left; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.rate' | t}}</th>
+      <th style="padding: 20px 10px 19px 10px; background: #F0F2F5; text-align: center; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.quantity' | t}}</th>
+      <th style="padding: 20px 70px 19px 10px; background: #F0F2F5; text-align: right; text-transform: uppercase; font-weight: bold; font-size: 13px; color: #919AA8;">{{'email.amount' | t}}</th>
+    </tr>
+  </tbody>
 
-                          <table style="margin: 0 0 60px 0;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody>
-                        <tr>
-                          <td style="vertical-align: top;" width="180">
-                            <ul style="margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 16px;">
-                              <li style="background: black; height: 28px; line-height: 28px; color: #ffffff; font-weight: bold; padding: 3px 10px; margin: 0 0 10px 0;">
-                                {{"public.invoice.customer"|t}}
-                              </li>
-                              {% if order.billing_address.company? %}
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.company }}
-                              </li>
-                              {% endif %}
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.first_name }} {{order.billing_address.last_name }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.full_address}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.city}} {{order.billing_address.state}} {{order.billing_address.zip}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.country.name}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.email}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.billing_address.phone}}
-                              </li>
-                            </ul>
-                          </td>
-                          <td width="20"></td><td style="vertical-align: top;" width="180">
-                            <ul style="margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 16px;">
-                              <li style="background: black; height: 28px; line-height: 28px; color: #ffffff; font-weight: bold; padding: 3px 10px; margin: 0 0 10px 0;">
-                                {{"public.invoice.shipping"|t }}
-                              </li>
-                              {{ if @order.shipping_address.company? }}
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.company}}
-                              </li>
-                              {{ endif }}
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.full_name}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.full_address}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.city_state_with_zip}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.country_name}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{order.shipping_address.phone}}
-                              </li>
-                            </ul>
-                          </td>
-                          <td width="20"></td><td style="vertical-align: top;" width="180">
-                            <ul style="margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 16px;">
-                              <li style="background: black; height: 28px; line-height: 28px; color: #ffffff; font-weight: bold; padding: 3px 10px; margin: 0 0 10px 0;">
-                                {{"public.invoice.shop"| t}}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.company }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.address1 }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.address2 }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.city }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.zip }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.state }}
-                              </li>
-                              <li style="color: black; padding: 3px 10px;">
-                                {{ shop.address.country }}
-                              </li>
-                              <li style="color: black; padding: 3px;">
-                                {{ shop.address.phone }}
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+  <tbody>
 
-                    {% assign show_sku = 3 %}
-                    {% for item in order.items %}
-                      {% if item.sku != blank %}
-                      {% assign show_sku = 4 %}
-                      {% endif %}
-                    {% endfor %}
+    {% for item in order.items %}
+    <tr>
+      <td style="text-align: left; padding: 19px 10px 19px 70px; border-bottom: 1px solid #F3F3F3;">
+        <div style="color: #111419; font-size: 14px; font-weight: bold; padding: 0 0 9px;">{{item.name}}</div>
+        <div style="color: #919AA8; font-size: 12px;">
 
-                    <table style="margin: 0 0 20px 0; font-size: 13px;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <thead>
-                        <tr style="background: #000000; line-height: 26px; height: 26px; color: #ffffff;">
-                          {% if show_sku == 4 %}
-                          <th style="padding: 0 10px; text-align: left;">
-                               {{"public.invoice.sku"| t}}
-                          </th>
-                          {% endif %}
-                          <th style="padding: 0 10px; text-align: left;">
-                            {{"public.invoice.product"| t}}
-                          </th>
-                          <th style="padding: 0 20px; text-align: center;">
-                            {{"public.invoice.quantity"| t}}
-                          </th>
-                          <th style="padding: 0 10px; text-align: right;">
-                            {{"public.invoice.price"| t}}
-                          </th>
-                          <th style="padding: 0 10px; text-align: right;">
-                            {{"public.invoice.total"| t}}
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {% for item in order.items %}
-                        <tr>
-                          {% if show_sku == 4 %}
-                          <td style="line-height: 28px; padding: 0 10px; text-align: left;">
-                              {{ item.sku }}
-                          </td>
-                          {% endif %}
-                          <td style="line-height: 28px; padding: 3px 10px; text-align: left;">
-                            {{ item.name }}
-                            {% if item.attributes %}<div style="padding: 0 0 0 20px; font-size: 12px; line-height: 1">{% endif %}
-                            {% for attr in item.attributes %}
-                            {% if forloop.index != 1 %}, {% endif %}
-                            {{ attr.value }}
-                            {% endfor %}
-                            {% if item.attributes %}</div>{% endif %}
-                          </td>
-                          <td style="line-height: 28px; padding: 3px 20px; text-align: center;">
-                            {{ item.quantity }}
-                          </td>
-                          <td style="line-height: 28px; padding: 3px 10px; text-align: right;">
-                            {{ item.price | money_with_cents }}
-                          </td>
-                          <td style="line-height: 28px; padding: 3px 10px; text-align: right;">
-                            {{ item.total | money_with_cents }}
-                          </td>
-                        </tr>
-                      {% endfor %}
-                      </tbody>
-                      <tfoot>
+          {% if item.sku != blank %}
+          {{'email.sku' | t}}: <span style="font-weight: bold">{{item.sku}}</span>
+          {% endif %}
+          {% if item.sku != blank and item.attributes.size > 0 %}, {% endif %}
 
-                        {% if order.bruto_discount %}
-                          <td colspan="{{show_sku}}" style="line-height: 28px; text-align: right; padding: 0 10px; border-top: 3px solid #000000;">
-                            {{'email.subtotal_wo_discount' | t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 0 10px; text-align: right; border-top: 3px solid #000000;">
-                            {{order.subtotal_wo_discount | money_with_cents}}
-                          </td>
-                          <td colspan="{{show_sku}}" style="line-height: 28px; text-align: right; padding: 0 10px; border-top: 3px solid #000000;">
-                            {{'email.discount' | t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 0 10px; text-align: right; border-top: 3px solid #000000;">
-                            {{order.bruto_discount | money_with_cents}}
-                          </td>
-                        {% endif %}
+          {% for attr in item.attributes %}
+          {% if item.attributes.size > 1 and forloop.index > 1 %}, {% endif %}
+          {{attr.name}}: <span style="font-weight: bold">{{attr.value}}</span>
+          {% endfor %}
 
-                        <tr>
-                          <td colspan="{{show_sku}}" style="line-height: 28px; text-align: right; padding: 0 10px; border-top: 3px solid #000000;">
-                            {{"public.invoice.price_total"|t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 0 10px; text-align: right; border-top: 3px solid #000000;">
-                            {{order.subtotal | money_with_cents}}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td colspan="{{show_sku}}" style="line-height: 28px; text-align: right; padding: 0 10px;">
-                            {{"public.invoice.tax"| t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 0 10px; text-align: right;">
-                            {{order.total_taxes | money_with_cents}}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td colspan="{{show_sku}}" style="line-height: 28px; text-align: right; padding: 0 10px;">
-                            {{"public.invoice.price_shipping"| t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 0 10px; text-align: right;">
-                            {{order.total_shipping | money_with_cents}}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td colspan="{{show_sku}}" style="line-height: 28px; font-weight: bold; border-top: 3px solid #000000; padding: 5px 10px 0 10px; text-align: right;">
-                            {{"public.invoice.total" | t}}
-                          </td>
-                          <td style="line-height: 28px; padding: 5px 10px 0 10px; text-align: right; font-weight: bold; border-top: 3px solid #000000;">
-                            {{order.total | money_with_cents}}
-                          </td>
-                        </tr>
-                      </tfoot>
-                    </table>
+        </div>
+      </td>
+      <td style="padding: 10px; color: #111419; font-size: 14px; border-bottom: 1px solid #F3F3F3; text-align: left;">
+        {{item.price | money_with_cents}}
+      </td>
+      <td style="padding: 10px; color: #111419; font-size: 14px; border-bottom: 1px solid #F3F3F3; text-align: center;">
+        {{item.quantity}}
+      </td>
+      <td style="padding: 10px 70px 10px 10px; text-align: right; color: #111419; font-size: 14px; font-weight: bold; border-bottom: 1px solid #F3F3F3;">
+        {{item.total | money_with_cents}}
+      </td>
+    </tr>
+    {% endfor %}
 
+  </tbody>
+  <tbody>
+    {% if order.bruto_discount %}
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 27px 10px 10px; text-transform: uppercase; font-weight: bold; font-size: 14px; color: #111419;">{{'email.subtotal_wo_discount' | t}}</td>
+      <td></td>
+      <td style="padding: 27px 70px 10px 10px; text-align: right; font-size: 14px; color: #111419;">{{order.subtotal_wo_discount | money_with_cents}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 15px 10px 10px; text-transform: uppercase; font-weight: bold; font-size: 14px; color: #919AA8;">{{'email.discount' | t}}</td>
+      <td></td>
+      <td style="padding: 15px 70px 10px 10px; text-align: right; font-size: 14px; color: #919AA8;">{{order.bruto_discount | money_with_cents}}</td>
+    </tr>
+    {% endif %}
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 27px 10px 10px; text-transform: uppercase; font-weight: bold; font-size: 14px; color: #111419;">{{'email.subtotal' | t}}</td>
+      <td></td>
+      <td style="padding: 27px 70px 10px 10px; text-align: right; font-size: 14px; color: #111419;">{{order.subtotal | money_with_cents}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 15px 10px 10px; text-transform: uppercase; font-weight: bold; font-size: 14px; color: #919AA8;">{{'email.tax' | t}}</td>
+      <td></td>
+      <td style="padding: 15px 70px 10px 10px; text-align: right; font-size: 14px; color: #919AA8;">{{order.total_taxes | money_with_cents}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 15px 10px 10px; text-transform: uppercase; font-weight: bold; font-size: 14px; color: #919AA8;">{{'email.shipping' | t}}</td>
+      <td></td>
+      <td style="padding: 15px 70px 10px 10px; text-align: right; font-size: 14px; color: #919AA8;">{{order.total_shipping | money_with_cents}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="text-align: left; padding: 13px 10px 10px; font-size: 24px; font-weight: bold; color: #111419; text-transform: uppercase;">{{'email.total' | t}}</td>
+      <td></td>
+      <td style="padding: 13px 70px 10px 10px; text-align: right; font-size: 24px; font-weight: bold; color: #111419;">{{order.total | money_with_cents}}</td>
+    </tr>
 
-                      <table style="margin: 0 0 60px 0; font-size: 13px;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <tbody>
-                        <tr>
-                          <td style="line-height: 20px; text-align: left; width: 140px; padding: 5px;">
-                            <strong>
-                              {{"public.invoice.payment_method"| t}}
-                            </strong>
-                          </td>
-                          <td style="line-height: 20px; text-align: left; padding: 5px;">
-                              {{ order.payment_method_name }}
-                          </td>
-                        </tr>
-                        {% if order.payment_method.invoice_instructions != blank %}
-                        <tr>
-                          <td style="line-height: 20px; text-align: left; width: 140px; padding: 5px;">
-                            <strong>
-                              {{"public.invoice.payment_instructions"| t}}
-                            </strong>
-                          </td>
-                          <td style="line-height: 20px; text-align: left; padding: 5px;">
-                            {{ order.payment_method.invoice_instructions }}
-                          </td>
-                        </tr>
-                        {% endif %}
-                        {% if order.notes != blank %}
-                        <tr>
-                          <td style="line-height: 20px; text-align: left; width: 140px; padding: 5px;">
-                            <strong>
-                              {{"public.invoice.order_notes"| t}}
-                            </strong>
-                          </td>
-                          <td style="line-height: 20px; text-align: left; padding: 5px;">
-                            {{ order.notes }}
-                          </td>
-                        </tr>
-                        {% endif %}
-                      </tbody>
-                    </table>
+    <tr>
+      <td colspan="100%" style="padding: 36px 70px 10px; color: #111419; font-size: 14px;">
+        {% if order.notes != blank %}
+        <div style="float: left;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.notes' | t}}:</div>
+          {{order.notes}}
+        </div>
+        {% endif %}
 
-                    <table style="margin: 0 0 60px 0; font-size: 13px;" border="0" cellpadding="0" cellspacing="0" width="100%">
-                      <!--
-                      <tbody>
-                        <tr>
-                          <td style="line-height: 20px; text-align: center;">
-                            <a href="http://checkout.shoperb.me/invoices/{{order.token}}" style="color: #000000; white-space: nowrap; overflow: hidden; display: block;">http://checkout.shoperb.me/invoices/{{order.token}}</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                      -->
-                    </table>
+        {% if order.payment_method.invoice_instructions != blank %}
+        <div style="float: right; text-align: right;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.payment_details' | t}}:</div>
+          {{order.payment_method.invoice_instructions}}
+        </div>
+        {% endif %}
+      </td>
+    </tr>
 
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    <tr>
+      <td colspan="100%" style="color: #111419; font-size: 24px; font-weight: bold; text-align: center; padding: 28px 0 126px;">{{'email.thank_you' | t}}</td>
+    </tr>
+  </tbody>
 
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <tfoot>
+    <tr>
+      <td colspan="100%">
+
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 70px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.address' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.phone' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 10px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; font-weight: bold; text-transform: uppercase;">
+                {{'email.email' | t}}:
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 30px 70px 5px 10px; color: #919AA8; font-size: 12px; border-top: 1px solid #EDF0F2; text-align: right; font-weight: bold; text-transform: uppercase;">
+                {{'email.web' | t}}:
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 70px; color: #111419; font-size: 14px;">
+                {{shop.address.full_address}},
+                {{shop.address.city_state_with_zip}},
+                {{shop.address.country}}
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 10px; color: #111419; font-size: 14px;">
+                {{shop.address.phone}}
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 10px 40px 10px; color: #111419; font-size: 14px;">
+                <a href="mailto:{{shop.email}}" style="color: #1377BF; text-decoration: none;">{{shop.email}}</a>
+              </td>
+
+              <td style="text-align: left; vertical-align: top; padding: 0 70px 40px 10px; color: #111419; font-size: 14px; text-align: right;">
+                <a href="{{shop.domain}}" style="color: #1377BF; text-decoration: none;">{{shop.domain}}</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>

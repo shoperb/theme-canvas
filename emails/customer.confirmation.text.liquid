@@ -1,1 +1,14 @@
-Customer confirmation email copy
+{{shop.name}}
+
+{{'email.date' | t}}: {{'now' | date: '%d %b %Y' }}
+
+---------
+
+{{'email.customer_confirmation' | t}}
+
+---------
+
+{{'email.address' | t}}: {{shop.address.full_address}}, {{shop.address.city_state_with_zip}}, {{shop.address.country}}
+{{'email.phone' | t}}: {{shop.address.phone}}
+{{'email.email' | t}}: {{shop.email}}
+{{'email.web' | t}}: {{shop.domain}}

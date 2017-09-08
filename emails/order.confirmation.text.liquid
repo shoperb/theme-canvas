@@ -1,1 +1,74 @@
-Order confirmation email copy
+{{shop.name}}
+
+{{'email.date' | t}}: {{order.created_at | date: '%d %b %Y'}}
+{{'email.invoice' | t}}: #{{order.number}}
+
+---------
+
+{{'email.billing_address' | t}}:
+{% if order.billing_address.company? %}
+{{order.billing_address.company}}
+{% endif %}
+{{order.billing_address.first_name}} {{order.billing_address.last_name}}
+{{order.email}}
+{{order.billing_address.phone}}
+{{order.billing_address.full_address}}
+{{order.billing_address.city_state_with_zip}}
+{{order.billing_address.country}}
+
+{% if order.shipping_address? %}
+{{'email.shipping_address' | t}}:
+{% if order.shipping_address.company? %}
+{{order.shipping_address.company}}
+{% endif %}
+{{order.shipping_address.first_name}} {{order.shipping_address.last_name}}
+{{order.email}}
+{{order.shipping_address.phone}}
+{{order.shipping_address.full_address}}
+{{order.shipping_address.city_state_with_zip}}
+{{order.shipping_address.country}}
+{% endif %}
+
+{% if order.shipping_method %}
+{{'email.shipping_method' | t}}:
+{{order.shipping_method.name}}
+{{order.shipping_method.provider_box}}
+{% endif %}
+
+---------
+
+{% for item in order.items %}
+{{item.name}}
+({% if item.sku != blank %}{{'email.sku' | t}}: {{item.sku}}{% endif %}{% if item.sku != blank and item.attributes.size > 0 %}, {% endif %}{% for attr in item.attributes %}{% if item.attributes.size > 1 and forloop.index > 1 %}, {% endif %}{{attr.name}}: {{attr.value}}{% endfor %})
+{{item.price | money_with_cents}} x {{item.quantity}} = {{item.total | money_with_cents}}
+{% endfor %}
+
+{% if order.bruto_discount %}
+{{'email.subtotal_wo_discount' | t}}: {{order.subtotal_wo_discount | money_with_cents}}
+{{'email.discount' | t}}: {{order.bruto_discount | money_with_cents}}
+{% endif %}
+{{'email.subtotal' | t}}: {{order.subtotal | money_with_cents}}
+
+{{'email.tax' | t}}: {{order.total_taxes | money_with_cents}}
+{{'email.shipping' | t}}: {{order.total_shipping | money_with_cents}}
+{{'email.total' | t}}: {{order.total | money_with_cents}}
+
+{% if order.notes != blank %}
+{{'email.notes' | t}}:
+{{order.notes}}
+{% endif %}
+
+{% if order.payment_method.invoice_instructions != blank %}
+{{'email.payment_details' | t}}:
+{{order.payment_method.invoice_instructions}}
+{% endif %}
+
+
+{{'email.thank_you' | t}}
+
+---------
+
+{{'email.address' | t}}: {{shop.address.full_address}}, {{shop.address.city_state_with_zip}}, {{shop.address.country}}
+{{'email.phone' | t}}: {{shop.address.phone}}
+{{'email.email' | t}}: {{shop.email}}
+{{'email.web' | t}}: {{shop.domain}}
