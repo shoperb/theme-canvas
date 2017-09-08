@@ -29,7 +29,7 @@
     {
       "type": "select",
       "handle": "per_row",
-      "default": "3",
+      "default": 3,
       "options": [
         {
           "value": 2,
@@ -52,7 +52,7 @@
     {
       "type": "select",
       "handle": "rows",
-      "default": "2",
+      "default": 2,
       "options": [
         {
           "value": 1,

@@ -13,9 +13,10 @@ class @DropdownInViewport
 
 @customVideoSize = (section, id) ->
   el = document.querySelector('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
-  el.style.height = el.offsetWidth * 9 / 16 + 'px'
+  el.style.height = el.offsetWidth * 9 / 16 + 'px' if el
 
 @slideVideoResize = (section, id) ->
   el = document.querySelector('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')
-  el.querySelector('iframe').style.width = el.offsetWidth + 'px'
-  el.querySelector('iframe').style.height = el.offsetWidth * 9 / 16 + 'px'
+  if el
+    el.querySelector('iframe').style.width = el.offsetWidth + 'px'
+    el.querySelector('iframe').style.height = el.offsetWidth * 9 / 16 + 'px'
