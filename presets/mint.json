@@ -16,7 +16,7 @@
     "layout_header_footer_background_color": "#FFFFFF",
     "image_overlay_color": "#FFFFFF",
     "image_overlay_background": "#303040",
-    "image_overlay_opacity": "60",
+    "image_overlay_opacity": "0.6",
     "body_font_family": "Tahoma",
     "body_font_size": "16px",
     "headings_font_family": "Times New Roman",
