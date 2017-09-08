@@ -13,9 +13,11 @@
         <h2 class="general-title">{{post.name}}</h2>
         {% endif %}
 
+        {% comment %}
         {% if post.author and section.settings.show_author %}
         <div class="post-author">{{post.author}}</div>
         {% endif %}
+        {% endcomment %}
 
         {% if post.date and section.settings.show_date %}
         <h3 class="post-date">{{post.date}}</h3>
@@ -39,9 +41,11 @@
 
         <h2 class="general-title">{{'section.default.blog_post.blog_post_title' | t}}</h2>
 
+        {% comment %}
         {% if section.settings.show_author %}
         <div class="post-author">{{'section.default.blog_post.blog_post_author' | t}}</div>
         {% endif %}
+        {% endcomment %}
 
         {% if section.settings.show_date %}
         <div class="post-date">{{'section.default.blog_post.blog_post_date' | t}}</div>

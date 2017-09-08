@@ -98,17 +98,12 @@
   "november": "november",
   "december": "detsember",
 
-
-
-  //deprecated and need to be reviewd before using
   "navigation.previous": "Eelmine",
   "navigation.next": "Järgmine",
 
-  "breadcrumb.sign_in": "Logige sisse",
-  "breadcrumb.sign_up": "Registreeru",
-  "breadcrumb.home": "Esileht",
-  "breadcrumb.not_found": "404",
-  "breadcrumb.password_request": "Parooli taastamine",
+
+
+  //deprecated and need to be reviewd before using
 
   "cart.order_notes": "Lisainfo",
   "cart.continue_shopping": "Jätka poodlemist",

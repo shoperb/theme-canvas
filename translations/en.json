@@ -87,16 +87,12 @@
   "november": "November",
   "december": "December",
 
-
-  //deprecated and need to be reviewd before using
   "navigation.previous": "Previous",
   "navigation.next": "Next",
 
-  "breadcrumb.sign_in": "Sign In",
-  "breadcrumb.sign_up": "Register",
-  "breadcrumb.home": "Home",
-  "breadcrumb.not_found": "404",
-  "breadcrumb.password_request": "Reset Password",
+
+
+  //deprecated and need to be reviewd before using
 
   "cart.order_notes": "Order notes",
   "cart.continue_shopping": "Continue Shopping",

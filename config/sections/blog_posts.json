@@ -45,11 +45,11 @@
         }
       ]
     },
-    {
-      "type": "toggle",
-      "handle": "show_author",
-      "default": false
-    },
+//    {
+//      "type": "toggle",
+//      "handle": "show_author",
+//      "default": false
+//    },
     {
       "type": "toggle",
       "handle": "show_date",
