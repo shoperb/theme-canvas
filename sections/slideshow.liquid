@@ -8,6 +8,12 @@
       {% endif %}
       {% if block.settings.slide_link != blank %}<a href="{{block.settings.slide_link}}">{% else %}<div class="container">{% endif %}
         {% if block.settings.video %}
+        {% if block.settings.video contains 'vimeo.com' %}
+        <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        {% elsif block.settings.video contains 'youtube.com' %}
+        {% assign youtube = block.settings.video | replace: 'https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/' %}
+        <iframe src="{{youtube}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
+        {% endif %}
         <iframe src="{{block.settings.video}}" frameborder="0" allowfullscreen></iframe>
         {% endif %}
         <div class="text">

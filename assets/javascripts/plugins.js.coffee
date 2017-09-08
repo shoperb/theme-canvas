@@ -12,11 +12,11 @@ class @DropdownInViewport
           this.classList.remove('direction-left')
 
 @customVideoSize = (section, id) ->
-  el = document.querySelector('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
-  el.style.height = el.offsetWidth * 9 / 16 + 'px' if el
+  el = $('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
+  el.height(el.width()  * 9 / 16) if el
 
 @slideVideoResize = (section, id) ->
-  el = document.querySelector('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')
+  el = $('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')
   if el
-    el.querySelector('iframe').style.width = el.offsetWidth + 'px'
-    el.querySelector('iframe').style.height = el.offsetWidth * 9 / 16 + 'px'
+    $('iframe', el).width(el.width())
+    $('iframe', el).height(el.width() * 9 / 16)
