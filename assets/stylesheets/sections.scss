@@ -70,20 +70,20 @@ section[data-type] {
 .section-height {
   &.x-small,
   &.extra-small {
-    min-height: 125px;
+    height: 125px;
   }
   &.small {
-    min-height: 300px;
+    height: 300px;
   }
   &.medium {
-    min-height: 475px;
+    height: 475px;
   }
   &.large {
-    min-height: 650px;
+    height: 650px;
   }
   &.x-large,
   &.extra-large {
-    min-height: 775px;
+    height: 775px;
   }
 }
 
