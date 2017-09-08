@@ -122,8 +122,6 @@ section[data-type] {
   display: table;
 
   .opacity-image {
-    background-size: cover;
-
     &:before {
       position: absolute;
       top: 0;
@@ -133,6 +131,11 @@ section[data-type] {
       background: $image_overlay_background;
       opacity: $image_overlay_opacity;
       content: '';
+    }
+  }
+  &.with-background {
+    .opacity-image {
+      background-size: cover;
     }
   }
   &:not(.full-width) {
