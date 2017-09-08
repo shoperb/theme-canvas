@@ -2,8 +2,10 @@
 
 <section data-section-id="{{section.id}}" data-type="location-and-contact"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
 
-  <div class="map-container">
-    <iframe width="100%" height="100%" frameborder="0" class="scrolloff" style="border:0" src="https://www.google.com/maps/embed/v1/place?key={{section.settings.gmaps_api_key}} &q={{address}}" allowfullscreen></iframe>
+  <div class="map-container{% if section.settings.gmaps_api_key %} with-map{% endif %}">
+    {% if section.settings.gmaps_api_key %}
+    <iframe width="100%" height="100%" frameborder="0" class="scrolloff" style="border:0" src="https://www.google.com/maps/embed/v1/place?key={{section.settings.gmaps_api_key}}&q={{address}}" allowfullscreen></iframe>
+    {% endif %}
   </div>
 
   <div class="map-description">

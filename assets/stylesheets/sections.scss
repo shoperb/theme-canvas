@@ -635,11 +635,16 @@ section[data-type=slideshow] {
     right: 0;
     bottom: 30px;
     left: 0;
+    background: asset-url('images/general-placeholder.svg') no-repeat center $layout_secondary_background_color;
     @include breakpoint(palm) {
       position: relative;
       height: 450px;
       top: 0;
       bottom: 0;
+    }
+
+    &.with-map {
+      background: none;
     }
   }
   .map-description {
