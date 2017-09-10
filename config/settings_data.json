@@ -72,29 +72,12 @@
       },
       "id": "hero-1"
     },
-    "hero-2": {
-      "type": "image_with_text_overlay",
-      "settings": {
-        "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
-        "image_alignment": "top-left",
-        "title": "My AD",
-        "text": "Look at what cool products I have.",
-        "text_size": "large",
-//        "text_style": "light",
-        "section_height": "large",
-        "button_label": "Click here!",
-        "button_link": "http://www.google.com/",
-        "section_width": "full-width"
-      },
-      "id": "hero-2"
-    },
     "collection": {
       "type": "collection",
       "settings": {
         "title": "Featured products",
         "per_row": 3,
         "rows": 1,
-        "collection": "spring-summer-collection-2017",
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
@@ -124,18 +107,17 @@
         "image-1": {
           "type": "image",
           "settings": {
-            "image": "http://cdn6.bigcommerce.com/s-hp2bpo0/product_images/uploaded_images/herodock-product-hi-res.jpg?t=1471451966",
-            "image_alignment": "bottom-middle"
+            "image_alignment": "bottom-middle",
+            "caption": "Image caption"
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
 //            "text_style": "light",
             "image_alignment": "top-right",
-            "link": "http://www.google.com",
-            "caption": "asdasd"
+            "link": "/",
+            "caption": "Image caption"
           }
         },
         "image-3": {
@@ -143,7 +125,7 @@
           "settings": {
             "image_alignment": "middle",
 //            "text_style": "dark",
-            "caption": "No caption! Haha, just kidding"
+            "caption": "Image caption"
           }
         }
       },
@@ -161,7 +143,7 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
-        "image": "http://media.doterra.com/us/en/images/product/doterra-on-guard-foaming-hand-wash.jpg",
+        "image": "",
         "button_link": "http://www.google.com",
         "section_width": "limited"
       },
@@ -181,12 +163,11 @@
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
-            "image_alignment": "bottom-right",
+            "image": "",
 //            "text_style": "dark",
             "heading": "Image slide",
             "subheading": "Tell your brand's story through video and images",
-            "slide_link": "http://www.google.com",
+            "slide_link": "/",
             "button_text": "Click here"
           }
         },
@@ -194,8 +175,8 @@
           "type": "video_slide",
           "settings": {
             "type": "video",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "heading": "Image slide 22",
+            "video": "",
+            "heading": "Video slide",
 //            "text_style": "light",
             "subheading": "Tell your brand's story through video and images 22"
           }
@@ -204,9 +185,9 @@
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image": "",
             "image_alignment": "middle",
-            "heading": "Image slide 333",
+            "heading": "Image slide",
 //            "text_style": "light",
             "subheading": "Tell your brand's story through video and images 333"
           }
@@ -219,81 +200,6 @@
       ],
       "id": "slideshow"
     },
-    "slideshow2": {
-      "type": "slideshow",
-      "settings": {
-        "auto_rotate": false,
-        "animation_speed": 4,
-        "section_height": "medium",
-        "text_size": "medium",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
-            "image_alignment": "bottom-right",
-            "heading": "Image slide",
-            "subheading": "Tell your brand's story through video and images",
-//            "text_style": "light",
-            "slide_link": "http://www.google.com"
-          }
-        },
-        "slide-2": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "image": "https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg",
-            "image_alignment": "bottom-right",
-            "heading": "Image slide 22",
-//            "text_style": "light",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "subheading": "Tell your brand's story through video and images 22"
-          }
-        },
-        "slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-//            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 333"
-          }
-        },
-        "slide-4": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://www.planwallpaper.com/static/images/wallpapers-hd-8000-8331-hd-wallpapers.jpg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-//            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 333"
-          }
-        },
-        "slide-5": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://www.intrawallpaper.com/static/images/HD-Wallpapers-C76.jpg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-//            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 333"
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
-      ],
-      "id": "slideshow2"
-    },
     "collection-list": {
       "type": "collection_list",
       "settings": {
@@ -305,19 +211,19 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "spring-summer-collection-2017"
+            "collection": ""
           }
         },
         "collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "holidadays"
+            "collection": ""
           }
         },
         "collection-3": {
           "type": "collection",
           "settings": {
-            "collection": "spring-summer-collection-2017"
+            "collection": ""
           }
         }
       },
@@ -329,18 +235,6 @@
       "id": "collection-list"
     },
     "product": {
-      "type": "product",
-      "settings": {
-        "product": "legging-flora",
-        "image_size": "medium",
-        "show_quantity_selector": true,
-        "show_variant_label": true,
-        "show_vendor": true,
-        "section_width": "limited"
-      },
-      "id": "product"
-    },
-    "product22": {
       "type": "product",
       "settings": {
         "product": "",
@@ -403,146 +297,6 @@
       ],
       "id": "testimonials"
     },
-    "columns": {
-      "type": "text_columns_with_images",
-      "settings": {
-        "title": "Text columns with images",
-        "text_alignment": "center",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "image": "https://i.ytimg.com/vi/eplgoyDYPWE/hqdefault.jpg",
-            "title": "Title",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-2": {
-          "type": "column",
-          "settings": {
-            "image": "http://moi3d.com/gallery/images/-5.jpeg",
-            "title": "Title asd",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-3": {
-          "type": "column",
-          "settings": {
-            "image": "http://s.storage.akamai.coub.com/get/b120/p/coub/simple/cw_timeline_pic/4b71d416baa/aa64f922c8038e6364ee5/big_1473772661_image.jpg",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-4": {
-          "type": "column",
-          "settings": {
-            "title": "Title asd",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-5": {
-          "type": "column",
-          "settings": {
-            "image": "http://pre07.deviantart.net/f3b8/th/pre/f/2015/139/8/9/architectural_3d_scene____vray_test_by_nazmoza-d8u1ke8.jpg",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-6": {
-          "type": "column",
-          "settings": {
-            "image": "https://cdnb.artstation.com/p/assets/images/images/004/917/075/micro_square/andrew-connelly-test-scene-3.jpg?1487184086",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-7": {
-          "type": "column",
-          "settings": {
-            "image": "http://orig07.deviantart.net/f47a/f/2011/129/3/2/unannounced_2d_rts_test_scene_by_jayrun-d3fypx0.jpg",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        }
-      },
-      "block_order": [
-        "column-1",
-        "column-2",
-        "column-3",
-        "column-4",
-        "column-5",
-        "column-6",
-        "column-7"
-      ],
-      "id": "columns"
-    },
-    "logo-list": {
-      "type": "logo_list",
-      "settings": {
-        "title": "Logo list",
-        "section_width": "full-width",
-        "section_height": "large"
-      },
-      "blocks": {
-        "logo-1": {
-          "type": "logo",
-          "settings": {
-            "image": "https://seeklogo.com/images/D/demo-sport-logo-D8C6EB99C4-seeklogo.com.gif",
-            "link": "http://www.google.com"
-          }
-        },
-        "logo-2": {
-          "type": "logo",
-          "settings": {
-            "image": "https://s-media-cache-ak0.pinimg.com/originals/e6/d0/1b/e6d01b2c2e97bb40f4cb52764f4c0bc4.jpg",
-            "link": "http://www.google.com"
-          }
-        },
-        "logo-3": {
-          "type": "logo",
-          "settings": {
-            "image": "https://democentermn.files.wordpress.com/2015/03/cropped-demo-logos-r1-all-15-20141.jpg"
-          }
-        },
-        "logo-4": {
-          "type": "logo",
-          "settings": {
-            "image": "http://www.demo-africa.com/var/demo/storage/images/duma-works-logo-rectangle/15283-1-eng-GB/duma-works-logo-rectangle_logos.png"
-          }
-        },
-        "logo-5": {
-          "type": "logo",
-          "settings": {
-            "image": "https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png"
-          }
-        },
-        "logo-6": {
-          "type": "logo",
-          "settings": {
-            "image": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png"
-          }
-        },
-        "logo-7": {
-          "type": "logo",
-          "settings": {
-            "image": "http://estudiogonzalez.cl/wp-content/uploads/2011/01/46e83f7d5e07b_logo_demo.jpeg",
-            "link": "http://www.google.com"
-          }
-        }
-      },
-      "block_order": [
-        "logo-1",
-        "logo-2",
-        "logo-3",
-        "logo-4",
-        "logo-5",
-        "logo-6",
-        "logo-7"
-      ],
-      "id": "logo-list"
-    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -560,108 +314,22 @@
         "text": "Opening hours: from AM to PM",
         "address": "Meistri 12, Tallinn",
         "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
-        "section_width": "full-width"
-      },
-      "id": "location-and-contact"
-    },
-    "custom": {
-      "type": "custom",
-      "settings": {
-        "title": "Custom content",
         "section_width": "limited"
       },
-      "blocks": {
-        "custom-1": {
-          "type": "custom_text",
-          "settings": {
-            "section_width": 33,
-            "title": "Custom titme",
-            "text": "The place where you can just... just show the custom content",
-            "vertical_alignment": "bottom",
-            "horizontal_alignment": "center"
-          }
-        },
-        "custom-2": {
-          "type": "custom_image",
-          "settings": {
-            "section_width": 66,
-            "image": "https://cdn-images-1.medium.com/max/1600/1*qZr2510BMwCRRuJhcICPYg.gif",
-            "vertical_alignment": "middle"
-          }
-        },
-        "custom-3": {
-          "type": "custom_video",
-          "settings": {
-            "section_width": 50,
-            "video": "https://www.youtube.com/watch?v=-Gt142R5rXg",
-            "vertical_alignment": "middle"
-          }
-        },
-        "custom-32": {
-          "type": "custom_video",
-          "settings": {
-            "section_width": 50,
-            "video": "https://vimeo.com/187165137",
-            "vertical_alignment": "middle"
-          }
-        },
-        "custom-4": {
-          "type": "custom_product",
-          "settings": {
-            "section_width": 100,
-            "product": "legging-flora",
-            "show_quantity_selector": true,
-            "show_variant_label": true,
-            "show_vendor": true,
-            "vertical_alignment": "top"
-          }
-        },
-        "custom-5": {
-          "type": "custom_collection",
-          "settings": {
-            "section_width": 25,
-            "collection": "spring-summer-collection-2017",
-            "vertical_alignment": "middle"
-          }
-        },
-        "custom-6": {
-          "type": "custom_html",
-          "settings": {
-            "section_width": 75,
-            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
-            "vertical_alignment": "top"
-          }
-        }
-      },
-      "block_order": [
-        "custom-1",
-        "custom-2",
-        "custom-3",
-        "custom-32",
-        "custom-4",
-        "custom-5",
-        "custom-6"
-      ],
-      "id": "custom"
+      "id": "location-and-contact"
     }
   },
   "content_for_index": [
     "hero-1",
-    "hero-2",
     "collection",
     "blog-posts",
     "image-gallery",
     "image-with-text",
     "slideshow",
-    "slideshow2",
     "collection-list",
     "product",
-    "product22",
     "testimonials",
-    "columns",
-    "logo-list",
     "newsletter",
-    "location-and-contact",
-    "custom"
+    "location-and-contact"
   ]
 }
