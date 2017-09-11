@@ -622,7 +622,7 @@ section[data-type=slideshow] {
       button,
       input[type=submit] {
         @extend .button.primary;
-        font-size: calc(#{$body_font_size} - 2px);
+        font-size: 1rem;
         text-transform: capitalize;
         padding: 9px 30px;
       }

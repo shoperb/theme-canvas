@@ -6,7 +6,7 @@ input,
 button,
 .input-field-extender {
   border: 1px solid $layout_border_color;
-  font-size: $body_font_size;
+  font-size: 1rem;
   padding: 4px 8px;
   border-radius: 2px;
   background: $layout_background_color;
@@ -102,7 +102,7 @@ button,
   display: inline-block;
   margin: 20px 0;
   min-width: 140px;
-  font-size: calc(#{$body_font_size} - 2px);
+  font-size: 0.875rem;
   box-sizing: border-box;
   font-weight: 400;
   text-align: center;

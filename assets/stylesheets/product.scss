@@ -184,7 +184,6 @@ h2.product-title {
   }
 
   .product-sku {
-    font-size: calc(#{$body_font_size} - 4px);
     display: none;
 
     &.visible {
