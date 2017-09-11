@@ -55,6 +55,11 @@ class @Cart
 
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
+      count = 0
+      console.log data
+      for item in data.items
+        count += item.quantity
+      $(".cart-container .cart-items").html(count)
 
       @initCart();
 

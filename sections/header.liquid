@@ -35,9 +35,7 @@
               <div class="cart">
                 <a class="cart-link" href="{{url.cart}}">
                   {% include 'icon' with 'basket' %}
-                  {% if cart.quantity > 0 %}
-                  <div class="cart-items">{{ cart.quantity }}</div>
-                  {% endif %}
+                  <div class="cart-items">{% if cart.quantity > 0 %}{{ cart.quantity }}{% endif %}</div>
                 </a>
               </div>
             </div>
