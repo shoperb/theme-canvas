@@ -19,6 +19,16 @@ footer.main-footer {
         display: inline-block;
         background: asset-url('images/payments.png') no-repeat top left;
         opacity: 0.5;
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+          background-image: asset-url('images/payments@2x.png');
+          background-size: 100px auto;
+        }
 
         &[class*="seb"] {
           width: 35px;
