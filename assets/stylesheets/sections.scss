@@ -122,6 +122,8 @@ section[data-type] {
   display: table;
 
   .opacity-image {
+    background-image: asset-url('images/general-placeholder.svg');
+
     &:before {
       position: absolute;
       top: 0;
