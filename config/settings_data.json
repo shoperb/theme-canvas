@@ -313,7 +313,7 @@
         "title": "Location",
         "text": "Opening hours: from AM to PM",
         "address": "Meistri 12, Tallinn",
-        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
+        "gmaps_api_key": "",
         "section_width": "limited"
       },
       "id": "location-and-contact"
