@@ -1,22 +1,20 @@
 {
   "general": {
-    "text_headings_color": "#242526",
-    "text_body_color": "#85898C",
-    "text_sale_text_color": "#0000ff",
-    "text_link_color": "#1B2126",
-    "buttons_primary_button_background_color": "#1B2126",
+    "text_headings_color": "#1B2026",
+    "text_body_color": "#A2A4A8",
+    "text_sale_text_color": "#1B2026",
+    "text_link_color": "#1B2026",
+    "buttons_primary_button_background_color": "#66B84B",
     "buttons_primary_button_text_color": "#FFFFFF",
-    "buttons_secondary_button_background_color": "#F2F6FA",
-    "buttons_secondary_button_text_color": "#242526",
-    "layout_background_color": "#ffffff",
-    "layout_border_color": "#DDDDDD",
-    "layout_header_footer_background_color": "#afafaf",
-    "layout_secondary_background_color": "#F2F6FA",
-//    "image_overlay_light_color": "#ffffff",
-//    "image_overlay_dark_color": "#333333",
-    "image_overlay_color": "#333333",
-    "image_overlay_background": "#B2B6BB",
-    "image_overlay_opacity": "0.3",
+    "buttons_secondary_button_background_color": "#DADFE6",
+    "buttons_secondary_button_text_color": "#6A6F75",
+    "layout_background_color": "#FFFFFF",
+    "layout_border_color": "#CED3D9",
+    "layout_secondary_background_color": "#E6EBF2",
+    "layout_header_footer_background_color": "#FFFFFF",
+    "image_overlay_color": "#FFFFFF",
+    "image_overlay_background": "#1B2026",
+    "image_overlay_opacity": "0.6",
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
     "headings_font_family": "Hind",
@@ -87,57 +85,6 @@
       },
       "id": "collection"
     },
-    "blog-posts": {
-      "type": "blog_posts",
-      "settings": {
-        "title": "Blog posts",
-        "grid": 3,
-//        "show_author": true,
-        "show_date": true,
-        "show_button": true,
-        "section_width": "limited"
-      },
-      "id": "blog-posts"
-    },
-    "image-gallery": {
-      "type": "image_gallery",
-      "settings": {
-        "section_height": "large",
-        "section_width": "full-width"
-      },
-      "blocks": {
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "image_alignment": "bottom-middle",
-            "caption": "Image caption"
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-//            "text_style": "light",
-            "image_alignment": "top-right",
-            "link": "/",
-            "caption": "Image caption"
-          }
-        },
-        "image-3": {
-          "type": "image",
-          "settings": {
-            "image_alignment": "middle",
-//            "text_style": "dark",
-            "caption": "Image caption"
-          }
-        }
-      },
-      "block_order": [
-        "image-1",
-        "image-2",
-        "image-3"
-      ],
-      "id": "image-gallery"
-    },
     "image-with-text": {
       "type": "image_with_text",
       "settings": {
@@ -150,188 +97,11 @@
         "section_width": "limited"
       },
       "id": "image-with-text"
-    },
-    "slideshow": {
-      "type": "slideshow",
-      "settings": {
-        "auto_rotate": false,
-        "animation_speed": 4,
-        "section_height": "large",
-        "text_size": "medium",
-        "section_width": "full-width"
-      },
-      "blocks": {
-        "slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "",
-//            "text_style": "dark",
-            "heading": "Image slide",
-            "subheading": "Tell your brand's story through video and images",
-            "slide_link": "/",
-            "button_text": "Click here"
-          }
-        },
-        "slide-2": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "video": "",
-            "heading": "Video slide",
-//            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 22"
-          }
-        },
-        "slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "",
-            "image_alignment": "middle",
-            "heading": "Image slide",
-//            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 333"
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
-      ],
-      "id": "slideshow"
-    },
-    "collection-list": {
-      "type": "collection_list",
-      "settings": {
-        "title": "Collection list",
-        "grid": 3,
-        "section_width": "limited"
-      },
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3"
-      ],
-      "id": "collection-list"
-    },
-    "product": {
-      "type": "product",
-      "settings": {
-        "product": "",
-        "image_size": "medium",
-        "show_quantity_selector": true,
-        "show_variant_label": true,
-        "show_vendor": true,
-        "section_width": "limited"
-      },
-      "id": "product"
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "settings": {
-        "title": "Testimonials",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "testimonial-1": {
-          "type": "quote",
-          "settings": {
-            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Test Author"
-          }
-        },
-        "testimonial-2": {
-          "type": "quote",
-          "settings": {
-            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Thor"
-          }
-        },
-        "testimonial-3": {
-          "type": "quote",
-          "settings": {
-            "quote": "spring-summer-collection-2017"
-          }
-        },
-        "testimonial-4": {
-          "type": "quote",
-          "settings": {
-            "quote": "asdasdasdadad",
-            "author": "jrkr2333"
-          }
-        },
-        "testimonial-5": {
-          "type": "quote",
-          "settings": {
-            "quote": "asdasdasdadad",
-            "author": "jrkr2333"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-1",
-        "testimonial-2",
-        "testimonial-3",
-        "testimonial-4",
-        "testimonial-5"
-      ],
-      "id": "testimonials"
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "title": "Newsletter",
-        "text": "A short sentence describing what someone will receive by subscribing",
-        "form": "<form><input placeholder='email address' type='text'><button>subscribe</button></form>",
-        "section_width": "full-width"
-      },
-      "id": "newsletter"
-    },
-    "location-and-contact": {
-      "type": "location_and_contact",
-      "settings": {
-        "title": "Location",
-        "text": "Opening hours: from AM to PM",
-        "address": "Meistri 12, Tallinn",
-        "gmaps_api_key": "",
-        "section_width": "limited"
-      },
-      "id": "location-and-contact"
     }
   },
   "content_for_index": [
     "hero-1",
     "collection",
-    "blog-posts",
-    "image-gallery",
-    "image-with-text",
-    "slideshow",
-    "collection-list",
-    "product",
-    "testimonials",
-    "newsletter",
-    "location-and-contact"
+    "image-with-text"
   ]
 }
