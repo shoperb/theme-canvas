@@ -664,7 +664,7 @@ section[data-type=slideshow] {
     margin: 10px;
     min-height: inherit;
     @include breakpoint(palm) {
-      width: 100%;
+      width: calc(100% - 20px);
       left: 0;
       min-height: 0;
     }
