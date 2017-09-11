@@ -273,14 +273,6 @@
               "type": "select",
               "options": [
                 {
-                  "handle": "font_size_12",
-                  "value": "12px"
-                },
-                {
-                  "handle": "font_size_13",
-                  "value": "13px"
-                },
-                {
                   "handle": "font_size_14",
                   "value": "14px"
                 },
@@ -299,6 +291,14 @@
                 {
                   "handle": "font_size_18",
                   "value": "18px"
+                },
+                {
+                  "handle": "font_size_19",
+                  "value": "19px"
+                },
+                {
+                  "handle": "font_size_20",
+                  "value": "20px"
                 }
               ]
             }
