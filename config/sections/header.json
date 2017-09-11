@@ -20,6 +20,21 @@
     },
     {
       "type": "select",
+      "handle": "content_width",
+      "default": "limited",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
+      "type": "select",
       "handle": "logo_alignment",
       "default": "left",
       "options": [

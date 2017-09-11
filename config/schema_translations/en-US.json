@@ -17,6 +17,13 @@
               "limited": "Limited to content"
             }
           },
+          "content_width": {
+            "title": "Content width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited"
+            }
+          },
           "logo_alignment": {
             "title": "Logo alignment"
           },
@@ -45,6 +52,13 @@
             "options": {
               "full-width": "Full width",
               "limited": "Limited to content"
+            }
+          },
+          "content_width": {
+            "title": "Content width",
+            "options": {
+              "full-width": "Full width",
+              "limited": "Limited"
             }
           },
           "menu": {

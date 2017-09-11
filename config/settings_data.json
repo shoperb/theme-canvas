@@ -10,7 +10,7 @@
     "buttons_secondary_button_text_color": "#242526",
     "layout_background_color": "#ffffff",
     "layout_border_color": "#DDDDDD",
-    "layout_header_footer_background_color": "#ffffff",
+    "layout_header_footer_background_color": "#afafaf",
     "layout_secondary_background_color": "#F2F6FA",
 //    "image_overlay_light_color": "#ffffff",
 //    "image_overlay_dark_color": "#333333",
@@ -30,7 +30,8 @@
         "logo_max_width": "100",
         "menu": "header",
         "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
-        "section_width": "limited"
+        "section_width": "full-width",
+        "content_width": "limited"
       },
       "id": "header"
     },
@@ -53,7 +54,8 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "limited"
+        "section_width": "full-width",
+        "content_width": "limited"
       },
       "id": "footer"
     },
