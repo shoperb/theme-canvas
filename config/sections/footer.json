@@ -24,11 +24,6 @@
       "default": ""
     },
     {
-      "type": "page",
-      "handle": "contact_page",
-      "default": ""
-    },
-    {
       "type": "subcategory",
       "handle": "social_icons",
       "default": true,
