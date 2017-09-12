@@ -193,16 +193,13 @@
 .account-page {
   h3 {
     margin: #{$default_padding}px 0;
-    line-height: 40px;
   }
   label:not([for=newsletter]) {
     width: 150px;
     display: inline-block;
-    line-height: 40px;
     padding: #{$default_padding}px 0;
     @include breakpoint(palm) {
       padding: #{$default_padding}px 0 0;
-      line-height: 1;
     }
   }
   input[type=text],

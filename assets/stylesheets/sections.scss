@@ -169,9 +169,6 @@ section[data-type] {
       color: $image_overlay_color;
     }
   }
-  .general-text {
-    line-height: 2;
-  }
 }
 section[data-type=collection] {
   .button {
@@ -215,7 +212,6 @@ section[data-type=collection] {
       font-size: 0.75rem;
     }
     .text-column-text {
-      line-height: 2;
       padding: 13px 0 30px;
     }
   }
@@ -285,7 +281,7 @@ section[data-type=collection] {
 
     h2.general-title {
       text-align: left;
-      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * 1rem);
+      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
     }
     .text-content {
       padding: 10px 0;
@@ -465,7 +461,6 @@ section[data-type=slideshow] {
       text-align: left;
     }
     .testimonial-quote {
-      line-height: 32px;
       padding: 19px 0 0;
       position: relative;
     }
@@ -530,7 +525,6 @@ section[data-type=slideshow] {
   }
   .text-column {
     padding: #{$default_padding}px;
-    line-height: 32px;
 
     .general-title {
       padding-bottom: 0;

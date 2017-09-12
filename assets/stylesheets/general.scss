@@ -16,7 +16,9 @@ a {
   text-decoration: none;
   color: $text_link_color;
 }
-
+p {
+  line-height: 1.5;
+}
 .no-grid-item {
   display: table;
   width: calc(100% - 2 * #{$default_padding}px);
@@ -50,29 +52,29 @@ a {
 
 .general-title {
   color: $text_headings_color;
-  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * 1rem);
-  font-family: $headings_font_family, sans-serif;
+  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
+  font-family: $heading_font_family, sans-serif;
   text-align: center;
   margin: 0;
+  line-height: 1.2;
 }
 h2.general-title {
-  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * 1rem);
+  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
 }
 h3.general-title {
-  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * 1rem);
+  font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
   text-transform: capitalize;
 }
 .general-text {
   color: $text_body_color;
   font-size: 1rem;
-  line-height: 2;
 }
 .text-large {
   .general-title {
-    font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * 1rem);
+    font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
   }
   .general-text {
-    font-size: #{$heading_scaling}rem;
+    font-size: calc(#{$heading_scaling} * #{$heading_font_size});
   }
 }
 
