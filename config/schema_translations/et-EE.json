@@ -355,13 +355,6 @@
               "medium": "Keskmine",
               "large": "Suur"
             }
-          },
-          "text_size": {
-            "title": "Text size",
-            "options": {
-              "medium": "Medium",
-              "large": "Large"
-            }
           }
         },
         "blocks": {
@@ -383,6 +376,13 @@
                   "bottom-middle": "Alla keskele",
                   "bottom-right": "Alla paremale",
                   "bottom-left": "Alla vasakule"
+                }
+              },
+              "text_size": {
+                "title": "Teksti suurus",
+                "options": {
+                  "medium": "Normaalne",
+                  "large": "Suur"
                 }
               },
               "heading": {
@@ -408,6 +408,13 @@
             "settings": {
               "video": {
                 "title": "Video"
+              },
+              "text_size": {
+                "title": "Teksti suurus",
+                "options": {
+                  "medium": "Normaalne",
+                  "large": "Suur"
+                }
               },
               "heading": {
                 "title": "Pealkiri"

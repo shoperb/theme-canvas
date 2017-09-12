@@ -64,21 +64,6 @@
           "handle": "large"
         }
       ]
-    },
-    {
-      "type": "select",
-      "handle": "text_size",
-      "default": "medium",
-      "options": [
-        {
-          "value": "medium",
-          "handle": "medium"
-        },
-        {
-          "value": "large",
-          "handle": "large"
-        }
-      ]
     }
   ],
   "blocks": [
@@ -133,6 +118,21 @@
           ]
         },
         {
+          "type": "select",
+          "handle": "text_size",
+          "default": "medium",
+          "options": [
+            {
+              "value": "medium",
+              "handle": "medium"
+            },
+            {
+              "value": "large",
+              "handle": "large"
+            }
+          ]
+        },
+        {
           "type": "text",
           "handle": "heading"
         },
@@ -171,6 +171,21 @@
         {
           "type": "text",
           "handle": "video"
+        },
+        {
+          "type": "select",
+          "handle": "text_size",
+          "default": "medium",
+          "options": [
+            {
+              "value": "medium",
+              "handle": "medium"
+            },
+            {
+              "value": "large",
+              "handle": "large"
+            }
+          ]
         },
         {
           "type": "text",

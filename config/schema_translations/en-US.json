@@ -353,13 +353,6 @@
               "medium": "Medium",
               "large": "Large"
             }
-          },
-          "text_size": {
-            "title": "Text size",
-            "options": {
-              "medium": "Medium",
-              "large": "Large"
-            }
           }
         },
         "blocks": {
@@ -381,6 +374,13 @@
                   "bottom-middle": "Bottom Center",
                   "bottom-right": "Bottom Right",
                   "bottom-left": "Bottom Left"
+                }
+              },
+              "text_size": {
+                "title": "Text size",
+                "options": {
+                  "medium": "Medium",
+                  "large": "Large"
                 }
               },
               "heading": {
@@ -406,6 +406,13 @@
             "settings": {
               "video": {
                 "title": "Video"
+              },
+              "text_size": {
+                "title": "Text size",
+                "options": {
+                  "medium": "Medium",
+                  "large": "Large"
+                }
               },
               "heading": {
                 "title": "Heading"
