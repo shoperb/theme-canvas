@@ -27,7 +27,7 @@
 {% endif %}
 
 <div data-position="cart-form">
-  <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=true>
+  <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=false>
     <div class="variants clearfix">
 
       {% if product.variants.many? %}
