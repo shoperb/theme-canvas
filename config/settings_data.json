@@ -61,8 +61,8 @@
       "type": "image_with_text_overlay",
       "settings": {
         "image_alignment": "center",
-        "title": "Hero section title",
-        "text": "... and here is where your customers will see your hero message is where your customers will see your hero message is where your customers will see your hero message",
+        "title": "Large image with text",
+        "text": "This area here is good getting the attention of your customers.",
         "text_size": "medium",
 //        "text_style": "dark",
         "section_height": "medium",
@@ -70,7 +70,14 @@
         "button_label": "Click here!",
         "button_link": "http://www.google.com/"
       },
-      "id": "hero-1"
+      "id": "hero-1",
+      "translations": {
+        "et": {
+          "text": "Seda sektsiooni saad kasutada külastajate tähelepanu köitmiseks. ",
+          "title": "Suur pilt tekstiga",
+          "button_label": "Vajuta siia"
+        }
+      }
     },
     "collection": {
       "type": "collection",
@@ -82,6 +89,11 @@
         "show_button": true,
         "section_width": "limited",
         "show_as_slider": true
+      },
+      "translations": {
+        "et": {
+          "title": "Erilised tooted"
+        }
       },
       "id": "collection"
     },
@@ -95,6 +107,13 @@
         "image": "",
         "button_link": "http://www.google.com",
         "section_width": "limited"
+      },
+      "translations": {
+        "et": {
+          "text": "Väga hea kvaliteediga pilt koos hästi sõnastatud tekstiga võib teha imesid.",
+          "title": "Pilt tekstiga",
+          "button_text": "Vajuta siia"
+        }
       },
       "id": "image-with-text"
     }
