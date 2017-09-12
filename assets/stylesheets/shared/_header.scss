@@ -21,7 +21,7 @@ header#main-header {
     }
 
     a {
-      font-size: calc(#{$headings_font_size} - 22px);
+      font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
       color: $text_link_color;
       font-family: $headings_font_family,  sans-serif;
       text-transform: uppercase;

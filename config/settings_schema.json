@@ -423,32 +423,16 @@
               ]
             },
             {
-              "handle": "headings_font_size",
+              "handle": "heading_scaling",
               "type": "select",
               "options": [
                 {
-                  "handle": "font_size_20",
-                  "value": "20px"
+                  "handle": "scaling_normal",
+                  "value": "1.25"
                 },
                 {
-                  "handle": "font_size_24",
-                  "value": "24px"
-                },
-                {
-                  "handle": "font_size_36",
-                  "value": "36px"
-                },
-                {
-                  "handle": "font_size_48",
-                  "value": "48px"
-                },
-                {
-                  "handle": "font_size_52",
-                  "value": "52px"
-                },
-                {
-                  "handle": "font_size_64",
-                  "value": "64px"
+                  "handle": "scaling_large",
+                  "value": "1.414"
                 }
               ]
             }

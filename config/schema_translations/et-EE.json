@@ -814,7 +814,7 @@
         "title": "Teksti font"
       },
       "body_font_size": {
-        "title": "Teksti suurus",
+        "title": "Baas teksti suurus",
         "options": {
           "font_size_14": "14px",
           "font_size_15": "15px",
@@ -828,15 +828,11 @@
       "headings_font_family": {
         "title": "Teksti font"
       },
-      "headings_font_size": {
-        "title": "Teksti suurus",
+      "heading_scaling": {
+        "title": "Päise suurus",
         "options": {
-          "font_size_20": "20px",
-          "font_size_24": "24px",
-          "font_size_36": "36px",
-          "font_size_48": "48px",
-          "font_size_52": "52px",
-          "font_size_64": "64px"
+          "scaling_normal": "Normaalne",
+          "scaling_large": "Suur"
         }
       }
     },

@@ -86,6 +86,11 @@ footer.main-footer {
       > li {
         float: left;
         text-transform: uppercase;
+
+        > a,
+        > span {
+          font-size: 1rem;
+        }
       }
     }
     ul {

@@ -50,16 +50,16 @@ a {
 
 .general-title {
   color: $text_headings_color;
-  font-size: $headings_font_size;
+  font-size: #{$heading_scaling * $heading_scaling * $heading_scaling * $heading_scaling}rem;
   font-family: $headings_font_family, sans-serif;
   text-align: center;
   margin: 0;
 }
 h2.general-title {
-  font-size: calc(#{$headings_font_size} - 24px);
+  font-size: #{$heading_scaling * $heading_scaling}rem;
 }
 h3.general-title {
-  font-size: calc(#{$headings_font_size} - 14px);
+  font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
   text-transform: capitalize;
 }
 .general-text {
@@ -69,10 +69,10 @@ h3.general-title {
 }
 .text-large {
   .general-title {
-    font-size: calc(#{$headings_font_size} + 8px);
+    font-size: #{$heading_scaling * $heading_scaling * $heading_scaling * $heading_scaling * $heading_scaling}rem;
   }
   .general-text {
-    font-size: calc(#{$body_font_size} + 8px);
+    font-size: #{$heading_scaling}rem;
   }
 }
 

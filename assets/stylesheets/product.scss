@@ -180,11 +180,12 @@ h2.product-title {
   }
   .product-price {
     color: $text_headings_color;
-    font-size: calc(#{$headings_font_size} - 20px);
+    font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
   }
 
   .product-sku {
     display: none;
+    font-size: 0.75rem;
 
     &.visible {
       display: block;
@@ -192,7 +193,7 @@ h2.product-title {
   }
   .product-pricing {
     color: $text_headings_color;
-    font-size: calc(#{$headings_font_size} - 20px);
+    font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
   }
   .product-description {
     padding: 10px 0;
@@ -203,13 +204,13 @@ h2.product-title {
   }
   .product-pricing {
     .compare-price {
-      color: lighten($text_body_color, 30%);
+      color: lighten($text_body_color, 10%);
       text-decoration: line-through;
       display: none;
 
       &.visible {
         display: inline-block;
-        font-size: calc(#{$body_font_size} + 6px);
+        font-size: #{$heading_scaling * $heading_scaling}rem;
       }
     }
     .discount {

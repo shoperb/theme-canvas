@@ -212,7 +212,7 @@ section[data-type=collection] {
       color: $text_headings_color;
     }
     .post-date {
-      font-size: calc(#{$body_font_size} - 4px);
+      font-size: 0.75rem;
     }
     .text-column-text {
       line-height: 2;
@@ -285,7 +285,7 @@ section[data-type=collection] {
 
     h2.general-title {
       text-align: left;
-      font-size: calc(#{$headings_font_size} - 14px);
+      font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
     }
     .text-content {
       padding: 10px 0;
