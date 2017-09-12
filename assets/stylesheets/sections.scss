@@ -285,7 +285,7 @@ section[data-type=collection] {
 
     h2.general-title {
       text-align: left;
-      font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
+      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * 1rem);
     }
     .text-content {
       padding: 10px 0;
@@ -293,7 +293,7 @@ section[data-type=collection] {
     .image {
       width: 100%;
       text-align: center;
-      background-color: $layout_secondary_background_color;;
+      background-color: $layout_secondary_background_color;
       padding: 100px 0;
     }
     &.with-image {
