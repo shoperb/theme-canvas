@@ -424,10 +424,10 @@
   "default": {
     "blocks": [
       {
-        "type": "custom_text"
+        "type": "custom_image"
       },
       {
-        "type": "custom_text"
+        "type": "custom_image"
       }
     ]
   }
