@@ -212,5 +212,15 @@
         }
       ]
     }
-  ]
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "image_slide"
+      },
+      {
+        "type": "image_slide"
+      }
+    ]
+  }
 }
