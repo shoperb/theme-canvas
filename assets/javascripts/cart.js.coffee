@@ -61,7 +61,7 @@ class @Cart
       $(".cart-container .cart-items").html(count)
 
       # binds
-      $('#js-cart-content').on 'submit', @sendForm
+      $('#js-cart-content').find("form[data-remote='true']").on 'submit', @sendForm
       @initCart();
     );
 
