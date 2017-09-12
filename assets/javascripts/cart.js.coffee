@@ -49,20 +49,20 @@ class @Cart
       data:   params,
       dataType: 'json'
     }).done( ( data )=>
-      newCart = $(data.liquid).filter('#js-cart-content');
+      newCart = $(data.liquid).find('#js-cart-content');
       oldCart = $('#js-cart-content');
       oldCart.html(newCart);
 
       oldErr = $('.flash.error .message');
       oldErr.html(data.messages);
+
       count = 0
-      console.log data
-      for item in data.items
-        count += item.quantity
+      count += item.quantity for item in data.items
       $(".cart-container .cart-items").html(count)
 
+      # binds
+      $('#js-cart-content').on 'submit', @sendForm
       @initCart();
-
     );
 
 
