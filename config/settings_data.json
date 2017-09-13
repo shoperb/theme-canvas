@@ -37,7 +37,6 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu": "header",
         "allow_social_icons": true,
         "title": "Follow us",
         "social_facebook": "http://www.facebook.com",
@@ -153,6 +152,83 @@
       "block_order": ["logo-1", "logo-2", "logo-3", "logo-4", "logo-5", "logo-6", "logo-7"],
       "id": "logo-list"
     },
+    "custom": {
+      "type": "custom",
+      "settings": {
+        "title": "Custom content",
+        "section_width": "limited"
+      },
+      "blocks": {
+        "custom-1": {
+          "type": "custom_text",
+          "settings": {
+            "section_width": 33,
+            "title": "Custom titme",
+            "text": "The place where you can just... just show the custom content",
+            "vertical_alignment": "bottom",
+            "horizontal_alignment": "center"
+          }
+        },
+        "custom-2": {
+          "type": "custom_image",
+          "settings": {
+            "section_width": 66,
+            "image": "https://cdn-images-1.medium.com/max/1600/1*qZr2510BMwCRRuJhcICPYg.gif",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-3": {
+          "type": "custom_video",
+          "settings": {
+            "section_width": 50,
+            "video": "https://www.youtube.com/embed/fVUoi0NoYZU",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-32": {
+          "type": "custom_video",
+          "settings": {
+            "section_width": 50,
+            "video": "https://vimeo.com/187165137",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-4": {
+          "type": "custom_product",
+          "settings": {
+            "section_width": 100,
+            "product": "variant-test",
+            "vertical_alignment": "top"
+          }
+        },
+        "custom-5": {
+          "type": "custom_collection",
+          "settings": {
+            "section_width": 25,
+            "collection": "holidadays",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-6": {
+          "type": "custom_html",
+          "settings": {
+            "section_width": 75,
+            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
+            "vertical_alignment": "top"
+          }
+        }
+      },
+      "block_order": [
+        "custom-1",
+        "custom-2",
+        "custom-3",
+        "custom-32",
+        "custom-4",
+        "custom-5",
+        "custom-6"
+      ],
+      "id": "custom"
+    },
     "image-with-text": {
       "type": "image_with_text",
       "settings": {
@@ -178,6 +254,7 @@
     "hero-1",
     "collection",
     "logo-list",
-    "image-with-text"
+    "image-with-text",
+    "custom"
   ]
 }

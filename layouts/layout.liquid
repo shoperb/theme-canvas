@@ -32,7 +32,11 @@
 
   <title>{{title}}</title>
 
+  {% if settings.fav_icon != blank %}
+  <link rel="icon" href="{{settings.fav_icon}}">
+  {% else %}
   <link rel="icon" href="{{'images/favicon/favicon.ico' | asset_url}}">
+  {% endif %}
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{title}}">

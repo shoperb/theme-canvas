@@ -858,6 +858,9 @@
           "scaling_normal": "Normal",
           "scaling_large": "Large"
         }
+      },
+      "fav_icon": {
+        "title": "Favicon image"
       }
     },
     "categories": {

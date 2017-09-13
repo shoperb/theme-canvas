@@ -92,56 +92,6 @@
             {
               "handle": "image_overlay_opacity",
               "type": "range"
-//            },
-//            {
-//              "handle": "image_overlay_opacity",
-//              "type": "select",
-//              "options": [
-//                {
-//                  "handle": "0",
-//                  "value": "0"
-//                },
-//                {
-//                  "handle": "1",
-//                  "value": "0.1"
-//                },
-//                {
-//                  "handle": "2",
-//                  "value": "0.2"
-//                },
-//                {
-//                  "handle": "3",
-//                  "value": "0.3"
-//                },
-//                {
-//                  "handle": "4",
-//                  "value": "0.4"
-//                },
-//                {
-//                  "handle": "5",
-//                  "value": "0.5"
-//                },
-//                {
-//                  "handle": "6",
-//                  "value": "0.6"
-//                },
-//                {
-//                  "handle": "7",
-//                  "value": "0.7"
-//                },
-//                {
-//                  "handle": "8",
-//                  "value": "0.8"
-//                },
-//                {
-//                  "handle": "9",
-//                  "value": "0.9"
-//                },
-//                {
-//                  "handle": "10",
-//                  "value": "1"
-//                }
-//              ]
             }
           ]
         }
@@ -471,6 +421,15 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "handle": "fav_icon",
+      "settings": [
+        {
+          "handle": "fav_icon",
+          "type": "image"
         }
       ]
     }

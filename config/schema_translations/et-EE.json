@@ -853,6 +853,9 @@
           "scaling_normal": "Normaalne",
           "scaling_large": "Suur"
         }
+      },
+      "fav_icon": {
+        "title": "Favicon pilt"
       }
     },
     "categories": {
