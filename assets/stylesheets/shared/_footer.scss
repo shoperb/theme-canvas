@@ -88,7 +88,7 @@ footer.main-footer {
         text-transform: uppercase;
 
         > a,
-        > span {
+        span {
           font-size: 1rem;
         }
       }
@@ -149,8 +149,7 @@ footer.main-footer {
 
     .copyright {
       font-size: 0.75rem;
-      line-height: 29px;
-      padding: #{$default_padding}px;
+      padding: #{$default_padding * 1.5}px #{$default_padding}px;
     }
     .shoperb {
       text-align: right;

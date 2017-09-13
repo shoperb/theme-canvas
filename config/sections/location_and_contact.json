@@ -19,7 +19,8 @@
     },
     {
       "type": "text",
-      "handle": "title"
+      "handle": "title",
+      "default": "Our location"
     },
     {
       "type": "richtext",

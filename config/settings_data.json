@@ -17,7 +17,8 @@
     "image_overlay_opacity": "0.6",
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
-    "headings_font_family": "Hind",
+    "heading_font_family": "Hind",
+    "heading_font_size": "16px",
     "heading_scaling": "1.25"
   },
   "sections": {
@@ -36,7 +37,6 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu": "header",
         "allow_social_icons": true,
         "title": "Follow us",
         "social_facebook": "http://www.facebook.com",
@@ -61,8 +61,8 @@
       "type": "image_with_text_overlay",
       "settings": {
         "image_alignment": "center",
-        "title": "Hero section title",
-        "text": "... and here is where your customers will see your hero message is where your customers will see your hero message is where your customers will see your hero message",
+        "title": "Large image with text",
+        "text": "This area here is good getting the attention of your customers.",
         "text_size": "medium",
 //        "text_style": "dark",
         "section_height": "medium",
@@ -70,7 +70,14 @@
         "button_label": "Click here!",
         "button_link": "http://www.google.com/"
       },
-      "id": "hero-1"
+      "id": "hero-1",
+      "translations": {
+        "et": {
+          "text": "Seda sektsiooni saad kasutada külastajate tähelepanu köitmiseks. ",
+          "title": "Suur pilt tekstiga",
+          "button_label": "Vajuta siia"
+        }
+      }
     },
     "collection": {
       "type": "collection",
@@ -83,7 +90,144 @@
         "section_width": "limited",
         "show_as_slider": true
       },
+      "translations": {
+        "et": {
+          "title": "Erilised tooted"
+        }
+      },
       "id": "collection"
+    },
+    "logo-list": {
+      "type": "logo_list",
+      "settings": {
+        "title": "Logo list"
+      },
+      "blocks": {
+        "logo-1": {
+          "type": "logo",
+          "settings": {
+            "image": "https://seeklogo.com/images/D/demo-sport-logo-D8C6EB99C4-seeklogo.com.gif",
+            "link": "http://www.google.com"
+          }
+        },
+        "logo-2": {
+          "type": "logo",
+          "settings": {
+            "image": "https://s-media-cache-ak0.pinimg.com/originals/e6/d0/1b/e6d01b2c2e97bb40f4cb52764f4c0bc4.jpg",
+            "link": "http://www.google.com"
+          }
+        },
+        "logo-3": {
+          "type": "logo",
+          "settings": {
+            "image": "https://democentermn.files.wordpress.com/2015/03/cropped-demo-logos-r1-all-15-20141.jpg"
+          }
+        },
+        "logo-4": {
+          "type": "logo",
+          "settings": {
+            "image": "http://www.demo-africa.com/var/demo/storage/images/duma-works-logo-rectangle/15283-1-eng-GB/duma-works-logo-rectangle_logos.png"
+          }
+        },
+        "logo-5": {
+          "type": "logo",
+          "settings": {
+            "image": "https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png"
+          }
+        },
+        "logo-6": {
+          "type": "logo",
+          "settings": {
+            "image": ""
+          }
+        },
+        "logo-7": {
+          "type": "logo",
+          "settings": {
+            "image": "http://estudiogonzalez.cl/wp-content/uploads/2011/01/46e83f7d5e07b_logo_demo.jpeg",
+            "link": "http://www.google.com"
+          }
+        }
+      },
+      "block_order": ["logo-1", "logo-2", "logo-3", "logo-4", "logo-5", "logo-6", "logo-7"],
+      "id": "logo-list"
+    },
+    "custom": {
+      "type": "custom",
+      "settings": {
+        "title": "Custom content",
+        "section_width": "limited"
+      },
+      "blocks": {
+        "custom-1": {
+          "type": "custom_text",
+          "settings": {
+            "section_width": 33,
+            "title": "Custom titme",
+            "text": "The place where you can just... just show the custom content",
+            "vertical_alignment": "bottom",
+            "horizontal_alignment": "center"
+          }
+        },
+        "custom-2": {
+          "type": "custom_image",
+          "settings": {
+            "section_width": 66,
+            "image": "https://cdn-images-1.medium.com/max/1600/1*qZr2510BMwCRRuJhcICPYg.gif",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-3": {
+          "type": "custom_video",
+          "settings": {
+            "section_width": 50,
+            "video": "https://www.youtube.com/embed/fVUoi0NoYZU",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-32": {
+          "type": "custom_video",
+          "settings": {
+            "section_width": 50,
+            "video": "https://vimeo.com/187165137",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-4": {
+          "type": "custom_product",
+          "settings": {
+            "section_width": 100,
+            "product": "variant-test",
+            "vertical_alignment": "top"
+          }
+        },
+        "custom-5": {
+          "type": "custom_collection",
+          "settings": {
+            "section_width": 25,
+            "collection": "holidadays",
+            "vertical_alignment": "middle"
+          }
+        },
+        "custom-6": {
+          "type": "custom_html",
+          "settings": {
+            "section_width": 75,
+            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
+            "vertical_alignment": "top"
+          }
+        }
+      },
+      "block_order": [
+        "custom-1",
+        "custom-2",
+        "custom-3",
+        "custom-32",
+        "custom-4",
+        "custom-5",
+        "custom-6"
+      ],
+      "id": "custom"
     },
     "image-with-text": {
       "type": "image_with_text",
@@ -96,12 +240,21 @@
         "button_link": "http://www.google.com",
         "section_width": "limited"
       },
+      "translations": {
+        "et": {
+          "text": "Väga hea kvaliteediga pilt koos hästi sõnastatud tekstiga võib teha imesid.",
+          "title": "Pilt tekstiga",
+          "button_text": "Vajuta siia"
+        }
+      },
       "id": "image-with-text"
     }
   },
   "content_for_index": [
     "hero-1",
     "collection",
-    "image-with-text"
+    "logo-list",
+    "image-with-text",
+    "custom"
   ]
 }

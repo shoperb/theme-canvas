@@ -169,9 +169,6 @@ section[data-type] {
       color: $image_overlay_color;
     }
   }
-  .general-text {
-    line-height: 2;
-  }
 }
 section[data-type=collection] {
   .button {
@@ -215,7 +212,6 @@ section[data-type=collection] {
       font-size: 0.75rem;
     }
     .text-column-text {
-      line-height: 2;
       padding: 13px 0 30px;
     }
   }
@@ -285,7 +281,7 @@ section[data-type=collection] {
 
     h2.general-title {
       text-align: left;
-      font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
+      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
     }
     .text-content {
       padding: 10px 0;
@@ -293,7 +289,7 @@ section[data-type=collection] {
     .image {
       width: 100%;
       text-align: center;
-      background-color: $layout_secondary_background_color;;
+      background-color: $layout_secondary_background_color;
       padding: 100px 0;
     }
     &.with-image {
@@ -414,6 +410,9 @@ section[data-type=slideshow] {
       }
     }
   }
+  .opacity-image {
+    background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+  }
 }
 [data-type=collection-list] {
   .grid {
@@ -465,7 +464,6 @@ section[data-type=slideshow] {
       text-align: left;
     }
     .testimonial-quote {
-      line-height: 32px;
       padding: 19px 0 0;
       position: relative;
     }
@@ -530,7 +528,6 @@ section[data-type=slideshow] {
   }
   .text-column {
     padding: #{$default_padding}px;
-    line-height: 32px;
 
     .general-title {
       padding-bottom: 0;
@@ -573,6 +570,9 @@ section[data-type=slideshow] {
       padding: #{$default_padding}px;
       vertical-align: middle;
 
+      svg {
+        width: 100px;
+      }
       a {
         display: block;
         height: 100%;

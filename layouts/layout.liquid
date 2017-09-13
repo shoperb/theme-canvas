@@ -32,7 +32,11 @@
 
   <title>{{title}}</title>
 
+  {% if settings.fav_icon != blank %}
+  <link rel="icon" href="{{settings.fav_icon}}">
+  {% else %}
   <link rel="icon" href="{{'images/favicon/favicon.ico' | asset_url}}">
+  {% endif %}
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{title}}">
@@ -48,8 +52,8 @@
   {% assign default_fonts = "Arial,Tahoma,Verdana" | split:"," %}
   {% unless default_fonts contains settings.body_font_family %}
   <link href="https://fonts.googleapis.com/css?family={{settings.body_font_family | replace: ' ', '+' }}" rel="stylesheet">{% endunless %}
-  {% unless default_fonts contains settings.headings_font_family %}
-  <link href="https://fonts.googleapis.com/css?family={{settings.headings_font_family | replace: ' ', '+' }}" rel="stylesheet">{% endunless %}
+  {% unless default_fonts contains settings.heading_font_family %}
+  <link href="https://fonts.googleapis.com/css?family={{settings.heading_font_family | replace: ' ', '+' }}" rel="stylesheet">{% endunless %}
 
   <!-- CSS concatenated and minified via ant build script-->
   {% include 'shoperb_stylesheets', stylesheets: 'application.css' | split: '|' %}

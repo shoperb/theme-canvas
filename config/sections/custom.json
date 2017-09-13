@@ -420,5 +420,15 @@
         }
       ]
     }
-  ]
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "custom_image"
+      },
+      {
+        "type": "custom_image"
+      }
+    ]
+  }
 }

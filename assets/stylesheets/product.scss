@@ -180,7 +180,7 @@ h2.product-title {
   }
   .product-price {
     color: $text_headings_color;
-    font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
+    font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
   }
 
   .product-sku {
@@ -193,7 +193,7 @@ h2.product-title {
   }
   .product-pricing {
     color: $text_headings_color;
-    font-size: #{$heading_scaling * $heading_scaling * $heading_scaling}rem;
+    font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
   }
   .product-description {
     padding: 10px 0;
@@ -210,7 +210,7 @@ h2.product-title {
 
       &.visible {
         display: inline-block;
-        font-size: #{$heading_scaling * $heading_scaling}rem;
+        font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
       }
     }
     .discount {

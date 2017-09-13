@@ -73,12 +73,12 @@
       }
     }
     .cart-delete {
-      color: $text_sale_text_color;
       cursor: pointer;
       display: inline-block;
+      font-size: 0.875rem;
 
       &:hover {
-        color: lighten($text_sale_text_color, 20%);
+        color: lighten($text_body_color, 20%);
       }
     }
   }

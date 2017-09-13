@@ -9,7 +9,7 @@
 
   <div class="grid" id="js-cart-content">
     {% if cart.items.any? %}
-    <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post">
+    <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post" data-remote="true">
       <div class="grid__item one-whole lap--four-eighths desk--five-eighths cart-header cart-col-name">
         <label>{{'cart.product_name' | t}}</label>
       </div><!--
