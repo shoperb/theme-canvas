@@ -136,8 +136,8 @@
       "handle": "button_label"
     },
     {
-      "type": "url",
-      "handle": "button_url"
+      "type": "link",
+      "handle": "button_link"
     }
   ]
 }

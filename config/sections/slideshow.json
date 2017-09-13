@@ -157,11 +157,11 @@
 //        },
         {
           "type": "text",
-          "handle": "slide_link"
+          "handle": "button_text"
         },
         {
-          "type": "text",
-          "handle": "button_text"
+          "type": "link",
+          "handle": "slide_link"
         }
       ]
     },
