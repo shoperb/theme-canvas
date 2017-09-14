@@ -6,16 +6,16 @@
       <h1 class="general-title{% if section.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-setting="title">{{section.settings.title | escape}}</h1>
       {% endif %}
 
-      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
-      <a href="{{section.settings.button_link}}" role="button" class="button primary">
-        {{section.settings.button_label | escape}}
-      </a>
-      {% endif %}
-
       {% if section.settings.text != blank %}
       <div class="text-content general-text{% if section.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-setting="text">
         {{section.settings.text}}
       </div>
+      {% endif %}
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{section.settings.button_link}}" role="button" class="button primary">
+        {{section.settings.button_label | escape}}
+      </a>
       {% endif %}
     </div>
   </div>

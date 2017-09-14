@@ -1,2 +1,4 @@
 data/*
 .shoperb
+.idea/*
+*.DS_Store
