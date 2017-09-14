@@ -174,7 +174,7 @@
           "button_label": {
             "title": "Button text"
           },
-          "button_url": {
+          "button_link": {
             "title": "Button URL"
           }
         }
@@ -322,7 +322,7 @@
           "text": {
             "title": "Text"
           },
-          "button_text": {
+          "button_label": {
             "title": "Button text"
           },
           "button_link": {
@@ -397,7 +397,10 @@
 //                }
 //              },
               "slide_link": {
-                "title": "Slide link URL"
+                "title": "Slide URL"
+              },
+              "button_text": {
+                "title": "Button text"
               }
             }
           },
