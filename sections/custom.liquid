@@ -107,10 +107,10 @@
     <div class="custom-section {{block.type}}{% if block.settings.video != blank %} with-video{% endif %}">
       {% if block.settings.video != blank %}
       {% if block.settings.video contains 'vimeo.com' %}
-      <iframe src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" frameborder="0" data-video-full-size webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe data-src="https://player.vimeo.com/video/{{block.settings.video | replace: 'https://vimeo.com/', ''}}" class="lazyload" data-video-full-size frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       {% elsif block.settings.video contains 'youtube.com' %}
       {% assign youtube = block.settings.video | replace: 'https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/' %}
-      <iframe src="{{youtube}}" frameborder="0" data-video-full-size allowfullscreen></iframe>
+      <iframe data-src="{{youtube}}" class="lazyload" data-video-full-size frameborder="0" allowfullscreen></iframe>
       {% endif %}
       {% endif %}
 

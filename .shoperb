@@ -3,14 +3,14 @@
     "url": "shoperb.net",
     "protocol": "https"
   },
-  "oauth-site": "fashion",
   "port": "4000",
   "preset": null,
   "verbose": null,
+  "oauth-site": "bossbabewear",
   "oauth-cache": {
     "scope": "admin",
-    "access_token": "fvdmzjkhpqur7q0bj82vmjonww7zcdl",
-    "refresh_token": "12635dfnt6aaydgnn4w9oe2g59ajdsk",
+    "access_token": "kezi1n89jr77jpmfb6fvkaleu4vrxoh",
+    "refresh_token": "hz0ppjqosdvvk6frb1bxrgvn0dr1v13",
     "expires_at": null
   }
 }
