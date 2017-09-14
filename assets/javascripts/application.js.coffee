@@ -9,6 +9,9 @@
 #= require plugins
 
 document.addEventListener("DOMContentLoaded", ->
+  new LazyLoad({
+    elements_selector: "iframe"
+  })
   new Cart()
   new Product()
   svg4everybody(polyfill: true)

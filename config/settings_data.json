@@ -97,6 +97,57 @@
       },
       "id": "collection"
     },
+    "slideshow": {
+      "type": "slideshow",
+      "settings": {
+        "auto_rotate": false,
+        "animation_speed": 4,
+        "section_height": "large",
+        "text_size": "medium",
+        "section_width": "full-width"
+      },
+      "blocks": {
+        "slide-1": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "https://democentermn.files.wordpress.com/2015/03/cropped-demo-logos-r1-all-15-20141.jpg",
+            //            "text_style": "dark",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through video and images",
+            "slide_link": "/",
+            "button_text": "Click here"
+          }
+        },
+        "slide-2": {
+          "type": "video_slide",
+          "settings": {
+            "type": "video",
+            "video": "https://www.youtube.com/watch?v=fVUoi0NoYZU",
+            "heading": "Video slide",
+            //            "text_style": "light",
+            "subheading": "Tell your brand's story through video and images 22"
+          }
+        },
+        "slide-3": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "https://seeklogo.com/images/D/demo-sport-logo-D8C6EB99C4-seeklogo.com.gif",
+            "image_alignment": "middle",
+            "heading": "Image slide",
+            //            "text_style": "light",
+            "subheading": "Tell your brand's story through video and images 333"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
+      "id": "slideshow"
+    },
     "logo-list": {
       "type": "logo_list",
       "settings": {
@@ -254,6 +305,7 @@
     "hero-1",
     "collection",
     "logo-list",
+    "slideshow",
     "image-with-text",
     "custom"
   ]
