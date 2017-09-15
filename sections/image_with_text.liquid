@@ -10,7 +10,19 @@
     {% if section.settings.horizontal_alignment == 'image-on-left' %}
     <div class="grid__item palm--one-whole lap--one-half desk--one-half{% if section.settings.image != blank %} with-image{% endif %}">
       <div class="image">
-        <img src="{% if section.settings.image != blank %}{{section.settings.image}}{% else %}{{'images/placeholder.svg' | asset_url}}{% endif %}">
+        {% if section.settings.image != blank %}
+        {% assign image = section.settings.image %}
+        <img class="lazyload"
+             src="{{section.settings.image | image_size: 'size-540'}}"
+             data-src="{{section.settings.image | image_size: 'size-540'}}""
+             data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+             data-aspectratio="{{section.settings.image.aspect_ratio}}"
+             data-sizes="auto"
+             data-srcset="{% include 'srcset' %}"
+             {% if section.settings.title %}alt="{{section.settings.title | escape}}"{% endif %}>
+        {% else %}
+        <img src="{{'images/placeholder.svg' | asset_url}}">
+        {% endif %}
       </div>
     </div><!--
     -->{% endif %}<div class="grid__item palm--one-whole lap--one-half desk--one-half">

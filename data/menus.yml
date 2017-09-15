@@ -1,13 +1,51 @@
 ---
-- id: 2
+- id: 22
+  name: Payment
+  handle: payment
+  translations:
+    en:
+      name: Payment
+    et:
+      name: Payment
+    ru:
+      name: Payment
+- id: 21
+  name: Shipping
+  handle: header-left
+  translations:
+    en:
+      name: Shipping
+    et:
+      name: Shipping
+    ru:
+      name: Shipping
+- id: 20
+  name: Shop
+  handle: shop
+  translations:
+    en:
+      name: Shop
+    et:
+      name: Shop
+    ru:
+      name: Shop
+- id: 4
   name: Footer
   handle: footer
   translations:
     en:
       name: Footer
-- id: 1
-  name: Header
-  handle: header
+    et:
+      name: Footer
+    ru:
+      name: Footer
+- id: 3
+  name: Main Menu
+  handle: main-menu
   translations:
     en:
-      name: Header
+      name: Main Menu
+    et:
+      name: Main Menu
+    ru:
+      name: Main Menu
