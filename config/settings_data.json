@@ -1,25 +1,30 @@
 {
   "general": {
-    "text_headings_color": "#1B2026",
-    "text_body_color": "#A2A4A8",
-    "text_sale_text_color": "#1B2026",
-    "text_link_color": "#1B2026",
-    "buttons_primary_button_background_color": "#66B84B",
+    "text_headings_color": "#242526",
+    "text_body_color": "rgba(56, 118, 165, 1)",
+    "text_sale_text_color": "#0000ff",
+    "text_link_color": "#1B2126",
+    "buttons_primary_button_background_color": "#1B2126",
     "buttons_primary_button_text_color": "#FFFFFF",
-    "buttons_secondary_button_background_color": "#DADFE6",
-    "buttons_secondary_button_text_color": "#6A6F75",
-    "layout_background_color": "#FFFFFF",
-    "layout_border_color": "#CED3D9",
-    "layout_secondary_background_color": "#E6EBF2",
-    "layout_header_footer_background_color": "#FFFFFF",
-    "image_overlay_color": "#FFFFFF",
-    "image_overlay_background": "#1B2026",
-    "image_overlay_opacity": "0.6",
+    "buttons_secondary_button_background_color": "#F2F6FA",
+    "buttons_secondary_button_text_color": "#242526",
+    "layout_background_color": "#ffffff",
+    "layout_border_color": "#DDDDDD",
+    "layout_secondary_background_color": "#F2F6FA",
+    "layout_header_footer_background_color": "#ffffff",
+    "image_overlay_color": "#333333",
+    "image_overlay_background": "#B2B6BB",
+    "image_overlay_opacity": "0.3",
     "body_font_family": "Open Sans",
     "body_font_size": "16px",
     "heading_font_family": "Hind",
     "heading_font_size": "16px",
-    "heading_scaling": "1.25"
+    "heading_scaling": "1.25",
+    "headings_font_family": "Hind",
+    "headings_font_size": "48px",
+    "image_overlay_light_color": "#ffffff",
+    "image_overlay_dark_color": "#333333",
+    "fav_icon": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6400/img_20170903_111815.jpeg"
   },
   "sections": {
     "header": {
@@ -29,7 +34,7 @@
         "logo_max_width": "100",
         "menu": "header",
         "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
-        "section_width": "full-width",
+        "section_width": "limited",
         "content_width": "limited"
       },
       "id": "header"
@@ -52,7 +57,7 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "full-width",
+        "section_width": "limited",
         "content_width": "limited"
       },
       "id": "footer"
@@ -61,14 +66,15 @@
       "type": "image_with_text_overlay",
       "settings": {
         "image_alignment": "center",
-        "title": "Large image with text",
-        "text": "This area here is good getting the attention of your customers.",
+        "title": "Hero section title",
+        "text": "... and here is where your customers will see your hero message is where your customers will see your hero message is where your customers will see your hero message",
         "text_size": "medium",
-//        "text_style": "dark",
         "section_height": "medium",
         "section_width": "limited",
         "button_label": "Click here!",
-        "button_link": "http://www.google.com/"
+        "button_link": "http://www.google.com/",
+        "text_style": "dark",
+        "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6402/tonutunnel_com_merko_moblessner_tt86448.jpeg"
       },
       "id": "hero-1",
       "translations": {
@@ -76,6 +82,11 @@
           "text": "Seda sektsiooni saad kasutada külastajate tähelepanu köitmiseks. ",
           "title": "Suur pilt tekstiga",
           "button_label": "Vajuta siia"
+        }
+      },
+      "images": {
+        "image": {
+          "id": 6402
         }
       }
     },
@@ -88,7 +99,8 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": true
+        "show_as_slider": true,
+        "collection": "holidadays"
       },
       "translations": {
         "et": {
@@ -97,61 +109,12 @@
       },
       "id": "collection"
     },
-    "slideshow": {
-      "type": "slideshow",
-      "settings": {
-        "auto_rotate": false,
-        "animation_speed": 4,
-        "section_height": "large",
-        "text_size": "medium",
-        "section_width": "full-width"
-      },
-      "blocks": {
-        "slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "https://democentermn.files.wordpress.com/2015/03/cropped-demo-logos-r1-all-15-20141.jpg",
-            //            "text_style": "dark",
-            "heading": "Image slide",
-            "subheading": "Tell your brand's story through video and images",
-            "slide_link": "/",
-            "button_text": "Click here"
-          }
-        },
-        "slide-2": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "video": "https://www.youtube.com/watch?v=fVUoi0NoYZU",
-            "heading": "Video slide",
-            //            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 22"
-          }
-        },
-        "slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "https://seeklogo.com/images/D/demo-sport-logo-D8C6EB99C4-seeklogo.com.gif",
-            "image_alignment": "middle",
-            "heading": "Image slide",
-            //            "text_style": "light",
-            "subheading": "Tell your brand's story through video and images 333"
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
-      ],
-      "id": "slideshow"
-    },
     "logo-list": {
       "type": "logo_list",
       "settings": {
-        "title": "Logo list"
+        "title": "Logo list",
+        "section_width": "full-width",
+        "section_height": "large"
       },
       "blocks": {
         "logo-1": {
@@ -189,7 +152,7 @@
         "logo-6": {
           "type": "logo",
           "settings": {
-            "image": ""
+            "image": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png"
           }
         },
         "logo-7": {
@@ -200,7 +163,15 @@
           }
         }
       },
-      "block_order": ["logo-1", "logo-2", "logo-3", "logo-4", "logo-5", "logo-6", "logo-7"],
+      "block_order": [
+        "logo-1",
+        "logo-2",
+        "logo-3",
+        "logo-4",
+        "logo-5",
+        "logo-6",
+        "logo-7"
+      ],
       "id": "logo-list"
     },
     "custom": {
@@ -249,14 +220,17 @@
           "settings": {
             "section_width": 100,
             "product": "variant-test",
-            "vertical_alignment": "top"
+            "vertical_alignment": "top",
+            "show_quantity_selector": true,
+            "show_variant_label": true,
+            "show_vendor": true
           }
         },
         "custom-5": {
           "type": "custom_collection",
           "settings": {
             "section_width": 25,
-            "collection": "holidadays",
+            "collection": "spring-summer-collection-2017",
             "vertical_alignment": "middle"
           }
         },
@@ -287,7 +261,7 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
-        "image": "http://noblessner.staging.perfectline.co/sites/55cdc3c2830f78b18a0001e7/content_entry5710d90f830f78944f0010ab/5710d9f0830f78944f0010b2/files/kompromissitu-kvaliteet.jpg?1486631549",
+        "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6401/tonutunnel_com_merko_moblessner_tt86446.jpeg",
         "button_link": "http://www.google.com",
         "section_width": "limited"
       },
@@ -298,15 +272,531 @@
           "button_text": "Vajuta siia"
         }
       },
-      "id": "image-with-text"
+      "id": "image-with-text",
+      "images": {
+        "image": {
+          "id": 6401
+        }
+      }
+    },
+    "hero-2": {
+      "type": "image_with_text_overlay",
+      "settings": {
+        "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
+        "image_alignment": "top-left",
+        "title": "My AD",
+        "text": "Look at what cool products I have.",
+        "text_size": "large",
+        "section_height": "large",
+        "button_label": "Click here!",
+        "button_link": "http://www.google.com/",
+        "section_width": "full-width",
+        "text_style": "light"
+      },
+      "id": "hero-2"
+    },
+    "blog-posts": {
+      "type": "blog_posts",
+      "settings": {
+        "title": "Blog posts",
+        "grid": 3,
+        "show_author": true,
+        "show_date": true,
+        "show_button": true,
+        "section_width": "limited"
+      },
+      "id": "blog-posts"
+    },
+    "image-gallery": {
+      "type": "image_gallery",
+      "settings": {
+        "section_height": "large",
+        "section_width": "full-width"
+      },
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6405/tonutunnel_com_merko_moblessner_tt86488.jpeg",
+            "image_alignment": "bottom-middle"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6405
+            }
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6406/tt86393.jpeg",
+            "image_alignment": "top-right",
+            "link": "http://www.google.com",
+            "caption": "asdasd"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6406
+            }
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "image_alignment": "middle",
+            "caption": "No caption! Haha, just kidding",
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6403/tonutunnel_com_merko_moblessner_tt86510.jpeg"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6403
+            }
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "id": "image-gallery",
+      "translations": {
+        "et": {
+        }
+      },
+      "images": {
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "settings": {
+        "auto_rotate": false,
+        "animation_speed": 4,
+        "section_height": "large",
+        "section_width": "full-width"
+      },
+      "blocks": {
+        "slide-1": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image_alignment": "bottom-right",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through video and images",
+            "slide_link": "http://www.google.com",
+            "button_text": "Click here",
+            "text_size": "large",
+            "text_style": "dark"
+          }
+        },
+        "slide-2": {
+          "type": "video_slide",
+          "settings": {
+            "type": "video",
+            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
+            "heading": "Image slide 22",
+            "subheading": "Tell your brand's story through video and images 22",
+            "text_size": "normal",
+            "text_style": "dark"
+          }
+        },
+        "slide-3": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_size": "normal",
+            "text_style": "light"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
+      "id": "slideshow"
+    },
+    "slideshow2": {
+      "type": "slideshow",
+      "settings": {
+        "auto_rotate": false,
+        "animation_speed": 4,
+        "section_height": "medium",
+        "text_size": "medium",
+        "section_width": "limited"
+      },
+      "blocks": {
+        "slide-1": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image_alignment": "bottom-right",
+            "heading": "Image slide",
+            "subheading": "Tell your brand's story through video and images",
+            "slide_link": "http://www.google.com",
+            "text_size": "large",
+            "text_style": "light"
+          }
+        },
+        "slide-2": {
+          "type": "video_slide",
+          "settings": {
+            "type": "video",
+            "image": "https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg",
+            "image_alignment": "bottom-right",
+            "heading": "Image slide 22",
+            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
+            "subheading": "Tell your brand's story through video and images 22",
+            "text_size": "large",
+            "text_style": "light"
+          }
+        },
+        "slide-3": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_size": "normal",
+            "text_style": "light"
+          }
+        },
+        "slide-4": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://www.planwallpaper.com/static/images/wallpapers-hd-8000-8331-hd-wallpapers.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_size": "normal",
+            "text_style": "light"
+          }
+        },
+        "slide-5": {
+          "type": "image_slide",
+          "settings": {
+            "type": "image",
+            "image": "http://www.intrawallpaper.com/static/images/HD-Wallpapers-C76.jpg",
+            "image_alignment": "center",
+            "heading": "Image slide 333",
+            "subheading": "Tell your brand's story through video and images 333",
+            "text_size": "large",
+            "text_style": "light"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "slide-2",
+        "slide-3"
+      ],
+      "id": "slideshow2"
+    },
+    "collection-list": {
+      "type": "collection_list",
+      "settings": {
+        "title": "Collection list",
+        "grid": 3,
+        "section_width": "limited"
+      },
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "spring-summer-collection-2017"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "uus-kollektsioon"
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "spring-summer-collection-2017"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "id": "collection-list"
+    },
+    "product": {
+      "type": "product",
+      "settings": {
+        "product": "sadasdsamdd",
+        "image_size": "medium",
+        "show_quantity_selector": true,
+        "show_variant_label": true,
+        "show_vendor": true,
+        "section_width": "limited"
+      },
+      "id": "product"
+    },
+    "product22": {
+      "type": "product",
+      "settings": {
+        "product": "",
+        "image_size": "medium",
+        "show_quantity_selector": true,
+        "show_variant_label": true,
+        "show_vendor": true,
+        "section_width": "limited"
+      },
+      "id": "product22"
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "title": "Testimonials",
+        "section_width": "limited"
+      },
+      "blocks": {
+        "testimonial-1": {
+          "type": "quote",
+          "settings": {
+            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author": "Test Author"
+          }
+        },
+        "testimonial-2": {
+          "type": "quote",
+          "settings": {
+            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.",
+            "author": "Thor"
+          }
+        },
+        "testimonial-3": {
+          "type": "quote",
+          "settings": {
+            "quote": "spring-summer-collection-2017"
+          }
+        },
+        "testimonial-4": {
+          "type": "quote",
+          "settings": {
+            "quote": "asdasdasdadad",
+            "author": "jrkr2333"
+          }
+        },
+        "testimonial-5": {
+          "type": "quote",
+          "settings": {
+            "quote": "asdasdasdadad",
+            "author": "jrkr2333"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "testimonial-2",
+        "testimonial-3",
+        "testimonial-4",
+        "testimonial-5"
+      ],
+      "id": "testimonials"
+    },
+    "columns": {
+      "type": "text_columns_with_images",
+      "settings": {
+        "title": "Text columns with images",
+        "text_alignment": "center",
+        "section_width": "limited"
+      },
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "https://i.ytimg.com/vi/eplgoyDYPWE/hqdefault.jpg",
+            "title": "Title",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image": "http://moi3d.com/gallery/images/-5.jpeg",
+            "title": "Title asd",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image": "http://s.storage.akamai.coub.com/get/b120/p/coub/simple/cw_timeline_pic/4b71d416baa/aa64f922c8038e6364ee5/big_1473772661_image.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "title": "Title asd",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-5": {
+          "type": "column",
+          "settings": {
+            "image": "http://pre07.deviantart.net/f3b8/th/pre/f/2015/139/8/9/architectural_3d_scene____vray_test_by_nazmoza-d8u1ke8.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-6": {
+          "type": "column",
+          "settings": {
+            "image": "https://cdnb.artstation.com/p/assets/images/images/004/917/075/micro_square/andrew-connelly-test-scene-3.jpg?1487184086",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        },
+        "column-7": {
+          "type": "column",
+          "settings": {
+            "image": "http://orig07.deviantart.net/f47a/f/2011/129/3/2/unannounced_2d_rts_test_scene_by_jayrun-d3fypx0.jpg",
+            "title": "Tit4le",
+            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4",
+        "column-5",
+        "column-6",
+        "column-7"
+      ],
+      "id": "columns"
+    },
+    "location-and-contact": {
+      "type": "location_and_contact",
+      "settings": {
+        "title": "Location",
+        "text": "Opening hours: from AM to PM",
+        "address": "Meistri 12, Tallinn",
+        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
+        "section_width": "full-width"
+      },
+      "id": "location-and-contact"
+    },
+    "image_gallery_1505461671476": {
+      "id": "image_gallery_1505461671476",
+      "type": "image_gallery",
+      "settings": {
+        "section_width": "limited",
+        "section_height": "medium"
+      },
+      "translations": {
+        "et": {
+        }
+      },
+      "blocks": {
+        "image_1505461671476_1": {
+          "settings": {
+            "image_alignment": "middle",
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6407/img_2987_city_maristomba.jpeg"
+          },
+          "type": "image",
+          "id": "image_1505461671476_1",
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6407
+            }
+          }
+        },
+        "image_1505461671476_2": {
+          "settings": {
+            "image_alignment": "middle",
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6409/tonutunnel_com_merko_moblessner_tt86376.jpeg"
+          },
+          "type": "image",
+          "id": "image_1505461671476_2",
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6409
+            }
+          }
+        },
+        "image_1505461671476_3": {
+          "settings": {
+            "image_alignment": "middle",
+            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6408/img_2960_city_maristomba.jpeg"
+          },
+          "type": "image",
+          "id": "image_1505461671476_3",
+          "translations": {
+            "et": {
+            }
+          },
+          "images": {
+            "image": {
+              "id": 6408
+            }
+          }
+        }
+      },
+      "block_order": [
+        "image_1505461671476_1",
+        "image_1505461671476_2",
+        "image_1505461671476_3"
+      ],
+      "images": {
+      }
     }
   },
   "content_for_index": [
     "hero-1",
+    "hero-2",
     "collection",
-    "logo-list",
-    "slideshow",
+    "blog-posts",
+    "image-gallery",
     "image-with-text",
-    "custom"
+    "slideshow",
+    "slideshow2",
+    "collection-list",
+    "product",
+    "testimonials",
+    "columns",
+    "logo-list",
+    "location-and-contact",
+    "custom",
+    "image_gallery_1505461671476"
   ]
 }

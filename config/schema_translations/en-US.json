@@ -147,13 +147,6 @@
           "text": {
             "title": "Subtitle"
           },
-//          "text_style": {
-//            "title": "Text color style",
-//            "options": {
-//              "light": "Light",
-//              "dark": "Dark"
-//            }
-//          },
           "section_height": {
             "title": "Section height",
             "options": {
@@ -271,13 +264,6 @@
               "link": {
                 "title": "Link URL"
               },
-//              "text_style": {
-//                "title": "Text color style",
-//                "options": {
-//                  "light": "Light",
-//                  "dark": "Dark"
-//                }
-//              },
               "image_alignment": {
                 "title": "Alignment",
                 "options": {
@@ -389,13 +375,6 @@
               "subheading": {
                 "title": "Subheading"
               },
-//              "text_style": {
-//                "title": "Text color style",
-//                "options": {
-//                  "light": "Light",
-//                  "dark": "Dark"
-//                }
-//              },
               "slide_link": {
                 "title": "Slide URL"
               },
@@ -420,13 +399,6 @@
               "heading": {
                 "title": "Heading"
               },
-//              "text_style": {
-//                "title": "Text color style",
-//                "options": {
-//                  "light": "Light",
-//                  "dark": "Dark"
-//                }
-//              },
               "subheading": {
                 "title": "Subheading"
               }
@@ -810,12 +782,6 @@
       "layout_header_footer_background_color": {
         "title": "Header/Footer background"
       },
-//      "image_overlay_light_color": {
-//        "title": "Light text"
-//      },
-//      "image_overlay_dark_color": {
-//        "title": "Dark text"
-//      },
       "image_overlay_color": {
         "title": "Text"
       },

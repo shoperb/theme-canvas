@@ -140,21 +140,6 @@
           "type": "richtext",
           "handle": "subheading"
         },
-//        {
-//          "type": "select",
-//          "handle": "text_style",
-//          "default": "light",
-//          "options": [
-//            {
-//              "value": "light",
-//              "handle": "light"
-//            },
-//            {
-//              "value": "dark",
-//              "handle": "dark"
-//            }
-//          ]
-//        },
         {
           "type": "text",
           "handle": "button_text"
@@ -194,21 +179,6 @@
         {
           "type": "richtext",
           "handle": "subheading"
-//        },
-//        {
-//          "type": "select",
-//          "handle": "text_style",
-//          "default": "light",
-//          "options": [
-//            {
-//              "value": "light",
-//              "handle": "light"
-//            },
-//            {
-//              "value": "dark",
-//              "handle": "dark"
-//            }
-//          ]
         }
       ]
     }
