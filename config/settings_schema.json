@@ -429,7 +429,8 @@
       "settings": [
         {
           "handle": "fav_icon",
-          "type": "image"
+          "type": "image",
+          "image_type": "favicon"
         }
       ]
     }
