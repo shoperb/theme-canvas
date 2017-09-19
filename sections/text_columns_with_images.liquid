@@ -16,7 +16,18 @@
     {% unless forloop.first %}-->{% endunless %}<div  data-section-block-id="{{block.id}}" class="grid__item palm--one-whole lap--one-half {% if section.blocks.size == 5 and forloop.index > 2 %}desk--one-third{% else %}{{grid_class}}{% endif %}">
       <div class="text-column">
         {% if block.settings.image != blank %}
+        {% assign image = block.settings.image %}
+
+        <img class="lazyload"
+             src="{{block.settings.image | image_size: 'size-360'}}"
+             data-src="{{block.settings.image | image_size: 'size-360'}}"
+             data-widths="[180, 360]"
+             data-srcset="{% include 'srcset' with 8 %}"
+             {% if block.settings.title %}alt="{{block.settings.title | escape}}"{% endif %}>
+
+{% comment %}
         <img src="{{block.settings.image}}">
+{% endcomment %}
         {% else %}
         <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
         {% endif %}
