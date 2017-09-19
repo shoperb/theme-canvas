@@ -19,7 +19,6 @@
         {% assign image = block.settings.image %}
 
         <img class="lazyload"
-             src="{{block.settings.image | image_size: 'size-360'}}"
              data-src="{{block.settings.image | image_size: 'size-360'}}"
              data-widths="[180, 360]"
              data-srcset="{% include 'srcset' with 8 %}"

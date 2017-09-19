@@ -54,7 +54,12 @@
       {% when 'custom_image' %}
     <div class="custom-section {{block.type}}{% if block.settings.image != blank %} with-image{% endif %}">
       {% if block.settings.image != blank %}
-      <img src="{{block.settings.image}}">
+        {% assign image = block.settings.image %}
+
+        <img class="lazyload"
+             data-src="{{block.settings.image | image_size: 'size-1728'}}"
+             {% if image.width %}data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1950, 2100, 2260, 2450, 2700, 3000, 3350, 3750, 4100]"
+             data-srcset="{% include 'srcset' with 18 %}"{% endif %}>
       {% endif %}
     </div>
 

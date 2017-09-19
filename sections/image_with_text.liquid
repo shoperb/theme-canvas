@@ -13,7 +13,6 @@
       <div class="image">
         {% if section.settings.image != blank %}
         <img class="lazyload"
-             src="{{section.settings.image | image_size: 'size-540'}}"
              data-src="{{section.settings.image | image_size: 'size-540'}}"
              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728]"
              data-srcset="{% include 'srcset' with 8 %}"
@@ -37,7 +36,6 @@
       <div class="image">
         {% if section.settings.image != blank %}
         <img class="lazyload"
-             src="{{section.settings.image | image_size: 'size-540'}}"
              data-src="{{section.settings.image | image_size: 'size-540'}}"
              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728]"
              data-srcset="{% include 'srcset' with 8 %}"

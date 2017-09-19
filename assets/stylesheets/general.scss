@@ -231,3 +231,13 @@ sidebar.general-sidebar {
   background: $layout_border_color;
   margin: #{$default_padding}px 0;
 }
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+}
