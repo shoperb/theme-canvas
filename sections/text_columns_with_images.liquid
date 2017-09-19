@@ -24,10 +24,6 @@
              data-widths="[180, 360]"
              data-srcset="{% include 'srcset' with 8 %}"
              {% if block.settings.title %}alt="{{block.settings.title | escape}}"{% endif %}>
-
-{% comment %}
-        <img src="{{block.settings.image}}">
-{% endcomment %}
         {% else %}
         <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>
         {% endif %}
