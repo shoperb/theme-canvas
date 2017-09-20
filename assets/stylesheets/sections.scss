@@ -781,6 +781,11 @@ section[data-type=slideshow] {
 
         .opacity-image {
           background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
+
+          &.with-image {
+            background-image: none;
+            background-size: cover;
+          }
         }
         a,
         .collection {

@@ -99,8 +99,8 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": true,
-        "collection": "holidadays"
+        "show_as_slider": false,
+        "collection": "teine"
       },
       "translations": {
         "et": {
@@ -117,62 +117,47 @@
         "section_height": "large"
       },
       "blocks": {
-        "logo-1": {
+        "1505825530416": {
           "type": "logo",
           "settings": {
-            "image": "https://seeklogo.com/images/D/demo-sport-logo-D8C6EB99C4-seeklogo.com.gif",
-            "link": "http://www.google.com"
+            "image": "shoperb_image://id:6433//cropped-demo-logos-r1-all-15-20141.jpeg"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
-        "logo-2": {
+        "1505825637540": {
           "type": "logo",
           "settings": {
-            "image": "https://s-media-cache-ak0.pinimg.com/originals/e6/d0/1b/e6d01b2c2e97bb40f4cb52764f4c0bc4.jpg",
-            "link": "http://www.google.com"
+            "image": "shoperb_image://id:6434//demo-sport-logo-d8c6eb99c4-seeklogo_com.gif"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
-        "logo-3": {
+        "1505825642190": {
           "type": "logo",
           "settings": {
-            "image": "https://democentermn.files.wordpress.com/2015/03/cropped-demo-logos-r1-all-15-20141.jpg"
-          }
-        },
-        "logo-4": {
-          "type": "logo",
-          "settings": {
-            "image": "http://www.demo-africa.com/var/demo/storage/images/duma-works-logo-rectangle/15283-1-eng-GB/duma-works-logo-rectangle_logos.png"
-          }
-        },
-        "logo-5": {
-          "type": "logo",
-          "settings": {
-            "image": "https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png"
-          }
-        },
-        "logo-6": {
-          "type": "logo",
-          "settings": {
-            "image": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png"
-          }
-        },
-        "logo-7": {
-          "type": "logo",
-          "settings": {
-            "image": "http://estudiogonzalez.cl/wp-content/uploads/2011/01/46e83f7d5e07b_logo_demo.jpeg",
-            "link": "http://www.google.com"
+            "image": "shoperb_image://id:6435//e6d01b2c2e97bb40f4cb52764f4c0bc4.jpeg"
+          },
+          "translations": {
+            "et": {
+            }
           }
         }
       },
       "block_order": [
-        "logo-1",
-        "logo-2",
-        "logo-3",
-        "logo-4",
-        "logo-5",
-        "logo-6",
-        "logo-7"
+        "1505825530416",
+        "1505825637540",
+        "1505825642190"
       ],
-      "id": "logo-list"
+      "id": "logo-list",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "custom": {
       "type": "custom",
@@ -189,14 +174,22 @@
             "text": "The place where you can just... just show the custom content",
             "vertical_alignment": "bottom",
             "horizontal_alignment": "center"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-2": {
           "type": "custom_image",
           "settings": {
             "section_width": 66,
-            "image": "https://cdn-images-1.medium.com/max/1600/1*qZr2510BMwCRRuJhcICPYg.gif",
+            "image": "shoperb_image://id:6432//non_animated_gif.gif",
             "vertical_alignment": "middle"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-3": {
@@ -205,6 +198,10 @@
             "section_width": 50,
             "video": "https://www.youtube.com/embed/fVUoi0NoYZU",
             "vertical_alignment": "middle"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-32": {
@@ -213,25 +210,37 @@
             "section_width": 50,
             "video": "https://vimeo.com/187165137",
             "vertical_alignment": "middle"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-4": {
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "variant-test",
+            "product": "rainertesttoode",
             "vertical_alignment": "top",
             "show_quantity_selector": true,
             "show_variant_label": true,
             "show_vendor": true
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-5": {
           "type": "custom_collection",
           "settings": {
             "section_width": 25,
-            "collection": "spring-summer-collection-2017",
+            "collection": "teine",
             "vertical_alignment": "middle"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "custom-6": {
@@ -240,6 +249,22 @@
             "section_width": 75,
             "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
             "vertical_alignment": "top"
+          },
+          "translations": {
+            "et": {
+            }
+          }
+        },
+        "1505823280348": {
+          "type": "custom_image",
+          "settings": {
+            "section_width": 50,
+            "vertical_alignment": "middle",
+            "image": "shoperb_image://id:6431//img_20170524_122522.jpeg"
+          },
+          "translations": {
+            "et": {
+            }
           }
         }
       },
@@ -250,9 +275,14 @@
         "custom-32",
         "custom-4",
         "custom-5",
-        "custom-6"
+        "custom-6",
+        "1505823280348"
       ],
-      "id": "custom"
+      "id": "custom",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "image-with-text": {
       "type": "image_with_text",
@@ -261,7 +291,7 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
-        "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6401/tonutunnel_com_merko_moblessner_tt86446.jpeg",
+        "image": "shoperb_image://id:6425//img_20170903_111815.jpeg",
         "button_link": "http://www.google.com",
         "section_width": "limited"
       },
@@ -277,6 +307,8 @@
         "image": {
           "id": 6401
         }
+      },
+      "links": {
       }
     },
     "hero-2": {
@@ -317,7 +349,7 @@
         "image-1": {
           "type": "image",
           "settings": {
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6405/tonutunnel_com_merko_moblessner_tt86488.jpeg",
+            "image": "shoperb_image://id:6426//img_20170903_111831.jpeg",
             "image_alignment": "bottom-middle"
           },
           "translations": {
@@ -333,7 +365,7 @@
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6406/tt86393.jpeg",
+            "image": "shoperb_image://id:6427//img_20170903_111849.jpeg",
             "image_alignment": "top-right",
             "link": "http://www.google.com",
             "caption": "asdasd"
@@ -351,9 +383,9 @@
         "image-3": {
           "type": "image",
           "settings": {
-            "image_alignment": "middle",
+            "image_alignment": "top-middle",
             "caption": "No caption! Haha, just kidding",
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6403/tonutunnel_com_merko_moblessner_tt86510.jpeg"
+            "image": "shoperb_image://id:6428//gena.jpeg"
           },
           "translations": {
             "et": {
@@ -524,19 +556,31 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "spring-summer-collection-2017"
+            "collection": "teine"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "collection-2": {
           "type": "collection",
           "settings": {
             "collection": "uus-kollektsioon"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "collection-3": {
           "type": "collection",
           "settings": {
             "collection": "spring-summer-collection-2017"
+          },
+          "translations": {
+            "et": {
+            }
           }
         }
       },
@@ -545,19 +589,27 @@
         "collection-2",
         "collection-3"
       ],
-      "id": "collection-list"
+      "id": "collection-list",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "product": {
       "type": "product",
       "settings": {
-        "product": "sadasdsamdd",
+        "product": "rainertesttoode",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
         "show_vendor": true,
         "section_width": "limited"
       },
-      "id": "product"
+      "id": "product",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "product22": {
       "type": "product",
@@ -633,25 +685,37 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "image": "https://i.ytimg.com/vi/eplgoyDYPWE/hqdefault.jpg",
+            "image": "shoperb_image://id:6418//21769677_1436610496405909_18656820_n.jpeg",
             "title": "Title",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "column-2": {
           "type": "column",
           "settings": {
-            "image": "http://moi3d.com/gallery/images/-5.jpeg",
+            "image": "shoperb_image://id:6419//tallinn_kings_1.png",
             "title": "Title asd",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "column-3": {
           "type": "column",
           "settings": {
-            "image": "http://s.storage.akamai.coub.com/get/b120/p/coub/simple/cw_timeline_pic/4b71d416baa/aa64f922c8038e6364ee5/big_1473772661_image.jpg",
+            "image": "shoperb_image://id:6421//tallinn_kings_2.png",
             "title": "Tit4le",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "column-4": {
@@ -659,30 +723,47 @@
           "settings": {
             "title": "Title asd",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "column-5": {
           "type": "column",
           "settings": {
-            "image": "http://pre07.deviantart.net/f3b8/th/pre/f/2015/139/8/9/architectural_3d_scene____vray_test_by_nazmoza-d8u1ke8.jpg",
+            "image": "shoperb_image://id:6414//00-9627-0.jpeg",
             "title": "Tit4le",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          }
-        },
-        "column-6": {
-          "type": "column",
-          "settings": {
-            "image": "https://cdnb.artstation.com/p/assets/images/images/004/917/075/micro_square/andrew-connelly-test-scene-3.jpg?1487184086",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "column-7": {
           "type": "column",
           "settings": {
-            "image": "http://orig07.deviantart.net/f47a/f/2011/129/3/2/unannounced_2d_rts_test_scene_by_jayrun-d3fypx0.jpg",
+            "image": "shoperb_image://id:6423//20663404_1203855053093341_1786399435_o.jpeg",
             "title": "Tit4le",
             "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          "translations": {
+            "et": {
+            }
+          }
+        },
+        "1505819894194": {
+          "type": "column",
+          "settings": {
+            "title": "test",
+            "text": "Good way to inlude some small thought with visual addition. Make it represent your store & brand.",
+            "image": "shoperb_image://id:6424//322135e4b82b758458fb6b9eaab2707e.jpeg"
+          },
+          "translations": {
+            "et": {
+              "title": "test"
+            }
           }
         }
       },
@@ -692,10 +773,14 @@
         "column-3",
         "column-4",
         "column-5",
-        "column-6",
-        "column-7"
+        "column-7",
+        "1505819894194"
       ],
-      "id": "columns"
+      "id": "columns",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "location-and-contact": {
       "type": "location_and_contact",
@@ -707,86 +792,14 @@
         "section_width": "full-width"
       },
       "id": "location-and-contact"
-    },
-    "image_gallery_1505461671476": {
-      "id": "image_gallery_1505461671476",
-      "type": "image_gallery",
-      "settings": {
-        "section_width": "limited",
-        "section_height": "medium"
-      },
-      "translations": {
-        "et": {
-        }
-      },
-      "blocks": {
-        "image_1505461671476_1": {
-          "settings": {
-            "image_alignment": "middle",
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6407/img_2987_city_maristomba.jpeg"
-          },
-          "type": "image",
-          "id": "image_1505461671476_1",
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6407
-            }
-          }
-        },
-        "image_1505461671476_2": {
-          "settings": {
-            "image_alignment": "middle",
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6409/tonutunnel_com_merko_moblessner_tt86376.jpeg"
-          },
-          "type": "image",
-          "id": "image_1505461671476_2",
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6409
-            }
-          }
-        },
-        "image_1505461671476_3": {
-          "settings": {
-            "image_alignment": "middle",
-            "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6408/img_2960_city_maristomba.jpeg"
-          },
-          "type": "image",
-          "id": "image_1505461671476_3",
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6408
-            }
-          }
-        }
-      },
-      "block_order": [
-        "image_1505461671476_1",
-        "image_1505461671476_2",
-        "image_1505461671476_3"
-      ],
-      "images": {
-      }
     }
   },
   "content_for_index": [
     "hero-1",
     "hero-2",
-    "collection",
     "blog-posts",
     "image-gallery",
+    "collection",
     "image-with-text",
     "slideshow",
     "slideshow2",
@@ -796,7 +809,6 @@
     "columns",
     "logo-list",
     "location-and-contact",
-    "custom",
-    "image_gallery_1505461671476"
+    "custom"
   ]
 }
