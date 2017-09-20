@@ -13,7 +13,7 @@
   <div class="grid">
     {% for block in section.blocks %}
     {% unless forloop.first %}-->{% endunless %}<div data-section-block-id="{{block.id}}" class="grid__item one-whole lap--one-half opacity-image-container {{grid_class}} section-height {{section.settings.section_height}}{% if block.settings.image != blank %} with-background{% endif %}">
-      <div class="opacity-image{% if block.settings.image != blank %} image-align-{{block.settings.image_alignment}}{% endif %}"{% if block.settings.image != blank %} style="background-image: url('{{block.settings.image}}'){% endif %}"></div>
+      <div class="lazyload opacity-image{% if block.settings.image != blank %} image-align-{{block.settings.image_alignment}}{% endif %}{% if block.settings.image != blank %} with-image{% endif %}"{% if block.settings.image != blank %} data-src="{{block.settings.image}}"{% endif %}"></div>
       {% if block.settings.link contains 'http://' or block.settings.link contains 'https://' %}
       {% assign outer_url = ' target="_blank"' %}
       {% endif %}

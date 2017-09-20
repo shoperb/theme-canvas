@@ -222,12 +222,12 @@ section[data-type=collection] {
   .grid__item {
     background-position: center;
     background-repeat: no-repeat;
-    background-color: $layout_secondary_background_color;;
+    background-color: $layout_secondary_background_color;
 
-    &.with-background {
-      background-size: cover;
-      background-color: transparent;
-    }
+      &.with-background {
+        background-size: cover;
+        background-color: transparent;
+      }
     .caption-container {
       text-align: center;
       width: 100%;
@@ -256,6 +256,11 @@ section[data-type=collection] {
       .opacity-image {
         background-image: asset-url('images/placeholder.svg');
         opacity: 1;
+
+        &.with-image {
+          background-image: none;
+          background-color: $layout_secondary_background_color;
+        }
       }
     }
     &:hover {

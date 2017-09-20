@@ -10,7 +10,7 @@
 
 document.addEventListener("DOMContentLoaded", ->
   new LazyLoad({
-    elements_selector: "iframe.lazyload, img.lazyload"
+    elements_selector: ".lazyload"
   })
   new Cart()
   new Product()
