@@ -11,6 +11,8 @@
 document.addEventListener("DOMContentLoaded", ->
   new LazyLoad({
     elements_selector: ".lazyload"
+    callback_set: (el) ->
+      el.classList.add('loaded')
   })
   new Cart()
   new Product()
