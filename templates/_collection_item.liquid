@@ -2,7 +2,7 @@
   {% assign collection = collections[block.settings.collection] %}
 
   <a class="collection opacity-image-container" href="{{collection.url}}">
-    <div class="opacity-image{% if collection.image %} with-image{% endif %}" style="background-image: {% if collection.image %}url('{{collection.image.url}}'), {% endif %}url({{'images/placeholder.svg' | asset_url}})"></div>
+    <div class="lazyload opacity-image{% if collection.image %} with-image{% endif %}"{% if collection.image %} data-src="{{collection.image.url}}"{% endif %}></div>
     <h2 class="general-title">{% if collection.name %}{{collection.name}}{% else %}{{'section.default.collection.name' | t}}{% endif %}</h2>
   </a>
 </div>{% unless forloop.last %}<!--{% endunless %}{% if diff > 0 %}<!--{% endif %}
