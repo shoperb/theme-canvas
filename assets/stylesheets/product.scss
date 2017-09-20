@@ -163,7 +163,7 @@ h2.product-title {
     background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
 
     &.with-image {
-      border: none;
+      background-image: none;
       background-size: cover;
     }
   }

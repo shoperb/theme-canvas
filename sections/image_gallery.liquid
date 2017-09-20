@@ -28,4 +28,11 @@
     </div>{% unless forloop.last %}<!--{% endunless %}
     {% endfor %}
   </div>
+
+  <script>
+    $(document).ready(function() {
+      runLazyLoad('{{section.id}}');
+    });
+  </script>
+
 </section>

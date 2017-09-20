@@ -31,6 +31,8 @@
       $(selector).mouseleave(function () {
         $('iframe', this).addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
       });
+
+      runLazyLoad('{{section.id}}');
     });
   </script>
 </section>

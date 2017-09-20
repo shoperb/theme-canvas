@@ -19,8 +19,12 @@
   <div class="grid">
     <div class="grid__item one-whole lap--one-half {{image_class}}">
       <a href="{{product.url}}" class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
-        {% if product.image.size-480.url != blank %}
-        <img src="{{product.image.size-480.url}}" alt="{{product.name}}">
+        {% if product.image %}
+        {% assign image = product.image.url %}
+        <img class="lazyload"
+             data-src="{{image | image_size: 'size-1728'}}"
+             {% if image.width %}data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1950, 2100, 2260, 2450, 2700, 3000, 3350, 3750, 4100]"
+             data-srcset="{% include 'srcset' with 18 %}"{% endif %}>
         {% else %}
         <img src="{{'images/placeholder.svg' | asset_url}}">
         {% endif %}
@@ -46,7 +50,8 @@
 
   <script>
     $(document).ready(function() {
-      new VariantSelector("[data-section-id='{{section.id}}']")
+      new VariantSelector("[data-section-id='{{section.id}}']");
+      runLazyLoad('{{section.id}}');
     });
   </script>
 

@@ -220,7 +220,7 @@
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "rainertesttoode",
+            "product": "variant-image-test",
             "vertical_alignment": "top",
             "show_quantity_selector": true,
             "show_variant_label": true,
@@ -598,7 +598,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "rainertesttoode",
+        "product": "latitude-e5540",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
@@ -797,9 +797,9 @@
   "content_for_index": [
     "hero-1",
     "hero-2",
+    "collection",
     "blog-posts",
     "image-gallery",
-    "collection",
     "image-with-text",
     "slideshow",
     "slideshow2",

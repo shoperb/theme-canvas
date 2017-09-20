@@ -9,11 +9,11 @@
 #= require plugins
 
 document.addEventListener("DOMContentLoaded", ->
-  new LazyLoad({
-    elements_selector: ".lazyload"
-    callback_set: (el) ->
-      el.classList.add('loaded')
-  })
+#  new LazyLoad({
+#    elements_selector: ".lazyload"
+#    callback_set: (el) ->
+#      el.classList.add('loaded')
+#  })
   new Cart()
   new Product()
   svg4everybody(polyfill: true)

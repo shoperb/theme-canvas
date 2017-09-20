@@ -20,3 +20,12 @@ class @DropdownInViewport
   if el
     $('iframe', el).width(el.width())
     $('iframe', el).height(el.width() * 9 / 16)
+
+@runLazyLoad = (section) ->
+  selector = '[data-section-id=' + section + '] .lazyload'
+
+  new LazyLoad(
+    elements_selector: selector
+    callback_set: (el) ->
+      el.classList.add 'loaded'
+  )
