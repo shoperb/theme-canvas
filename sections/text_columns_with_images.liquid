@@ -20,8 +20,7 @@
 
         <img class="lazyload"
              data-src="{{block.settings.image | image_size: 'size-360'}}"
-             data-widths="[180, 360]"
-             data-srcset="{% include 'srcset' with 8 %}"
+             data-srcset="{% include 'srcset' %}"
              {% if block.settings.title %}alt="{{block.settings.title | escape}}"{% endif %}>
         {% else %}
         <div class="image" style="background-image: url({{'images/placeholder.svg' | asset_url}})"></div>

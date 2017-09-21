@@ -1,7 +1,6 @@
 {% if image != blank %}
 {% if image.width > 180 %}{{image | image_size: 'size-180'}} 180w,{% endif %}
 {% if image.width > 360 %}{{image | image_size: 'size-360'}} 360w,{% endif %}
-{% if srcset > 1 %}
 {% if image.width > 540 %}{{image | image_size: 'size-540'}} 540w,{% endif %}
 {% if image.width > 720 %}{{image | image_size: 'size-720'}} 720w,{% endif %}
 {% if image.width > 900 %}{{image | image_size: 'size-900'}} 900w,{% endif %}
@@ -9,7 +8,6 @@
 {% if image.width > 1296 %}{{image | image_size: 'size-1296'}} 1296w,{% endif %}
 {% if image.width > 1512 %}{{image | image_size: 'size-1512'}} 1512w,{% endif %}
 {% if image.width > 1728 %}{{image | image_size: 'size-1728'}} 1728w,{% endif %}
-{% if srcset > 8 %}
 {% if image.width > 1950 %}{{image | image_size: 'size-1950'}} 1950w,{% endif %}
 {% if image.width > 2100 %}{{image | image_size: 'size-2100'}} 2100w,{% endif %}
 {% if image.width > 2260 %}{{image | image_size: 'size-2260'}} 2260w,{% endif %}
@@ -19,7 +17,5 @@
 {% if image.width > 3350 %}{{image | image_size: 'size-3350'}} 3350w,{% endif %}
 {% if image.width > 3750 %}{{image | image_size: 'size-3750'}} 3750w,{% endif %}
 {% if image.width > 4100 %}{{image | image_size: 'size-4100'}} 4100w,{% endif %}
-{% endif %}
-{% endif %}
 {{image}} {{image.width}}w {{image.height}}h
 {% endif %}

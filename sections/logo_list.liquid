@@ -18,8 +18,7 @@
           {% assign image = block.settings.image %}
           <img class="lazyload"
                data-src="{{block.settings.image | image_size: 'size-360'}}"
-               data-widths="[180, 360]"
-               data-srcset="{% include 'srcset' with 8 %}">
+               data-srcset="{% include 'srcset' %}">
         {% else %}
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="-874 191 112 20" style="enable-background:new -874 191 112 20;" xml:space="preserve">
