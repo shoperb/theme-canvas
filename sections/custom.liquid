@@ -31,7 +31,7 @@
     {% if collection %}
     <div class="custom-section {{block.type}}">
       <a class="collection opacity-image-container" href="{{collection.url}}">
-        <div class="lazyload opacity-image{% if collection.image %} with-image" data-src="{{collection.image.url}}{% endif %}"></div>
+        <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{{collection.image.url}}{% endif %}" data-sizes="auto"></div>
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>
@@ -140,11 +140,4 @@
     {% endfor %}
   </div>
   {% endif %}
-
-  <script>
-    $(document).ready(function() {
-      runLazyLoad('{{section.id}}');
-    });
-  </script>
-
 </section>

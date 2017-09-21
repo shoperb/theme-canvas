@@ -13,7 +13,8 @@
       "application.css"
     ],
     "javascripts": [
-      "application.js"
+      "application.js",
+      "ls.bgset.min.js"
     ]
   }
 }

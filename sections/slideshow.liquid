@@ -4,7 +4,7 @@
     {% for block in section.blocks %}
     <div data-section-block-id="{{block.id}}" class="slide opacity-image-container{% if block.settings.image != blank %} with-background{% endif %}{% if block.settings.video != blank %} with-video{% endif %}{% if block.settings.text_size == 'large' %} text-large{% endif %}">
       {% if block.settings.video == blank %}
-      <div class="lazyload opacity-image{% if block.settings.image %} image-align-{{block.settings.image_alignment}}{% endif %}"{% if block.settings.image != blank %} data-src="{{block.settings.image}}"{% endif %}></div>
+      <div class="lazyload opacity-image{% if block.settings.image %} image-align-{{block.settings.image_alignment}}" data-bgset="{{block.settings.image}}" data-sizes="auto{% endif %}"></div>
       {% endif %}
       {% if block.settings.slide_link != blank %}<a href="{{block.settings.slide_link}}">{% else %}<div class="container">{% endif %}
         {% if block.settings.video %}
@@ -61,8 +61,6 @@
           lazyLoad: 'ondemand'
         });
       });
-
-      runLazyLoad('{{section.id}}');
     });
   </script>
 </section>

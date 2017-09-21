@@ -111,6 +111,7 @@ h3.general-title {
     .opacity-image {
       background-size: cover;
       opacity: $image_overlay_opacity;
+      background-image: none;
     }
   }
   &.with-video {
