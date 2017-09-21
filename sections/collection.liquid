@@ -6,6 +6,10 @@
 {% assign limit = 3 %}
 {% endif %}
 {% endif %}
+{% assign collection_size = collection.products.size %}
+{% if collection == blank %}
+{% assign collection_size = 0 %}
+{% endif %}
 
 {% case section.settings.per_row %}
   {% when 2 %}
@@ -25,16 +29,16 @@
   {% endif %}
 
   <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
-    {% if collection.products.size != blank or !collection %}
     {% for product in collection.products limit: limit %}
     {% include 'list_product' %}
     {% endfor %}
-    {% else %}
 
-    {% comment %} default view for builder {% endcomment %}
+    {% if collection_size < limit %}
+    {% assign diff = limit | minus: collection_size %}
+    {% for product in (1..diff) %}
 
-    {% for product in (1..limit) %}
-    {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
+
+    {% if collection_size > 0 and collection_size < limit and forloop.first %}-->{% endif %}{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {{grid_class}}">
       <div class="product fake-link">
         <div class="image"></div>
 

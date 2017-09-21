@@ -14,7 +14,7 @@
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-    <div class="lazyload image{% if product.image %} with-image{% endif %}"{% if product.image %} data-bgset="{{product.image.size-480.url}}" data-sizes="auto"{% endif %}></div>
+    <div class="lazyload image{% if product.image %} with-image" data-bgset="{{product.image.size-480.url}}" data-sizes="auto{% endif %}"></div>
 
     <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 
@@ -36,4 +36,4 @@
     <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
   </a>
 
-</div>{% unless forloop.last %}<!--{% endunless %}
+</div>{% unless forloop.last %}<!--{% endunless %}{% if collection_size > 0 and collection_size < limit %}<!--{% endif %}
