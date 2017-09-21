@@ -1,3 +1,13 @@
+{% if srcset == 'product' %}
+{% if image.url != blank %}
+{% if image.width > 160 %}{{image.size-160.url}} 160w,{% endif %}
+{% if image.width > 240 %}{{image.size-240.url}} 240w,{% endif %}
+{% if image.width > 480 %}{{image.size-480.url}} 480w,{% endif %}
+{% if image.width > 720 %}{{image.size-720.url}} 720w,{% endif %}
+{% if image.width > 2048 %}{{image.size-2048.url}} 2048w,{% endif %}
+{{image.url}} {{image.width}}w {{image.height}}h
+{% endif %}
+{% else %}
 {% if image != blank %}
 {% if image.width > 180 %}{{image | image_size: 'size-180'}} 180w,{% endif %}
 {% if image.width > 360 %}{{image | image_size: 'size-360'}} 360w,{% endif %}
@@ -18,4 +28,5 @@
 {% if image.width > 3750 %}{{image | image_size: 'size-3750'}} 3750w,{% endif %}
 {% if image.width > 4100 %}{{image | image_size: 'size-4100'}} 4100w,{% endif %}
 {{image}} {{image.width}}w {{image.height}}h
+{% endif %}
 {% endif %}

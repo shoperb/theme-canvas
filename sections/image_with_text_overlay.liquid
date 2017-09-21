@@ -1,6 +1,7 @@
 <section data-section-id="{{section.id}}" data-type="image-with-text-overlay" class="section-height {{section.settings.section_height}}{% if section.settings.text_size == 'large' %} text-large{% endif %}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}{% if section.settings.image != blank %} with-background{% endif %}">
   <div class="no-grid-item opacity-image-container">
-    <div class="lazyload opacity-image{% if section.settings.image %} image-align-{{section.settings.image_alignment}}" data-bgset="{{section.settings.image}}" data-sizes="auto{% endif %}"></div>
+    {% assign image = section.settings.image %}
+    <div class="lazyload opacity-image{% if section.settings.image %} image-align-{{section.settings.image_alignment}}" data-bgset="{% include 'srcset' %}" data-sizes="auto{% endif %}"></div>
     <div class="hero">
       {% if section.settings.title != blank %}
       <h1 class="general-title{% if section.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-setting="title">{{section.settings.title | escape}}</h1>

@@ -14,7 +14,8 @@
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
-    <div class="lazyload image{% if product.image %} with-image" data-bgset="{{product.image.size-480.url}}" data-sizes="auto{% endif %}"></div>
+    {% assign image = product.image %}
+    <div class="lazyload image{% if product.image %} with-image" data-bgset="{% include 'srcset' with 'product' %}" data-sizes="auto{% endif %}"></div>
 
     <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 

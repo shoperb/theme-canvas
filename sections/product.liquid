@@ -17,13 +17,14 @@
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
   <div class="grid">
+
     <div class="grid__item one-whole lap--one-half {{image_class}}">
-      <a href="{{product.url}}" class="image{% if product.image.size-480.url != blank %} with-image{% endif %}">
+      <a href="{{product.url}}" class="image{% if product.image %} with-image{% endif %}">
         {% if product.image %}
-        {% assign image = product.image.url %}
+        {% assign image = product.image %}
         <img class="lazyload"
              data-src="{{image | image_size: 'size-1728'}}"
-             data-srcset="{% include 'srcset' %}">
+             data-srcset="{% include 'srcset' with 'product' %}">
         {% else %}
         <img src="{{'images/placeholder.svg' | asset_url}}">
         {% endif %}
