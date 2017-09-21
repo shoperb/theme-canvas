@@ -28,10 +28,11 @@
 
       {% when 'custom_collection' %}
     {% assign collection = collections[block.settings.collection] %}
+    {% assign image = collection.image %}
     {% if collection %}
     <div class="custom-section {{block.type}}">
       <a class="collection opacity-image-container" href="{{collection.url}}">
-        <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{{collection.image.url}}{% endif %}" data-sizes="auto"></div>
+        <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{% include 'srcset' with 'collection' %}" data-sizes="auto{% endif %}"></div>
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>

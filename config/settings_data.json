@@ -74,7 +74,7 @@
         "button_label": "Click here!",
         "button_link": "http://www.google.com/",
         "text_style": "dark",
-        "image": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6402/tonutunnel_com_merko_moblessner_tt86448.jpeg"
+        "image": "shoperb_image://id:6449//tallinn_kings_1.png"
       },
       "id": "hero-1",
       "translations": {
@@ -88,6 +88,8 @@
         "image": {
           "id": 6402
         }
+      },
+      "links": {
       }
     },
     "collection": {
@@ -220,7 +222,7 @@
           "type": "custom_product",
           "settings": {
             "section_width": 100,
-            "product": "variant-image-test",
+            "product": "rainertesttoode",
             "vertical_alignment": "top",
             "show_quantity_selector": true,
             "show_variant_label": true,
@@ -314,7 +316,7 @@
     "hero-2": {
       "type": "image_with_text_overlay",
       "settings": {
-        "image": "https://bkpmedia.s3.amazonaws.com/photos/hi-res/1795.jpg",
+        "image": "shoperb_image://id:6450//tallinn_kings_2.png",
         "image_alignment": "top-left",
         "title": "My AD",
         "text": "Look at what cool products I have.",
@@ -325,7 +327,13 @@
         "section_width": "full-width",
         "text_style": "light"
       },
-      "id": "hero-2"
+      "id": "hero-2",
+      "translations": {
+        "et": {
+        }
+      },
+      "links": {
+      }
     },
     "blog-posts": {
       "type": "blog_posts",
@@ -396,12 +404,24 @@
               "id": 6403
             }
           }
+        },
+        "1505913236342": {
+          "type": "image",
+          "settings": {
+            "image_alignment": "middle",
+            "image": "shoperb_image://id:6440//img_0705.jpeg"
+          },
+          "translations": {
+            "et": {
+            }
+          }
         }
       },
       "block_order": [
         "image-1",
         "image-2",
-        "image-3"
+        "image-3",
+        "1505913236342"
       ],
       "id": "image-gallery",
       "translations": {
@@ -424,7 +444,7 @@
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image": "shoperb_image://id:6445//study_playbook.jpeg",
             "image_alignment": "bottom-right",
             "heading": "Image slide",
             "subheading": "Tell your brand's story through video and images",
@@ -432,6 +452,12 @@
             "button_text": "Click here",
             "text_size": "large",
             "text_style": "dark"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
           }
         },
         "slide-2": {
@@ -443,18 +469,28 @@
             "subheading": "Tell your brand's story through video and images 22",
             "text_size": "normal",
             "text_style": "dark"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "slide-3": {
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image": "shoperb_image://id:6446//img_20160825_165156.jpeg",
             "image_alignment": "center",
             "heading": "Image slide 333",
             "subheading": "Tell your brand's story through video and images 333",
             "text_size": "normal",
             "text_style": "light"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
           }
         }
       },
@@ -463,7 +499,11 @@
         "slide-2",
         "slide-3"
       ],
-      "id": "slideshow"
+      "id": "slideshow",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "slideshow2": {
       "type": "slideshow",
@@ -479,13 +519,19 @@
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://article.images.consumerreports.org/prod/content/dam/CRO%20Images%202017/Electronics/February/CR-Electonics-Hero-What-you-need-to-know-about-Hi-Res-Audio-v2-02-17",
+            "image": "shoperb_image://id:6447//bugbus2016.jpeg",
             "image_alignment": "bottom-right",
             "heading": "Image slide",
             "subheading": "Tell your brand's story through video and images",
             "slide_link": "http://www.google.com",
             "text_size": "large",
             "text_style": "light"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
           }
         },
         "slide-2": {
@@ -499,18 +545,28 @@
             "subheading": "Tell your brand's story through video and images 22",
             "text_size": "large",
             "text_style": "light"
+          },
+          "translations": {
+            "et": {
+            }
           }
         },
         "slide-3": {
           "type": "image_slide",
           "settings": {
             "type": "image",
-            "image": "http://techaeris.com/wp-content/uploads/2017/03/Sonos-PLAYBASE-stand-1.jpg",
+            "image": "shoperb_image://id:6448//pink-knight-men_design.png",
             "image_alignment": "center",
             "heading": "Image slide 333",
             "subheading": "Tell your brand's story through video and images 333",
             "text_size": "normal",
             "text_style": "light"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
           }
         },
         "slide-4": {
@@ -543,7 +599,11 @@
         "slide-2",
         "slide-3"
       ],
-      "id": "slideshow2"
+      "id": "slideshow2",
+      "translations": {
+        "et": {
+        }
+      }
     },
     "collection-list": {
       "type": "collection_list",

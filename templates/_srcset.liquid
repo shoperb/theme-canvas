@@ -1,4 +1,4 @@
-{% if srcset == 'product' %}
+{% if srcset == 'product' or srcset == 'collection' %}
 {% if image.url != blank %}
 {% if image.width > 160 %}{{image.size-160.url}} 160w,{% endif %}
 {% if image.width > 240 %}{{image.size-240.url}} 240w,{% endif %}
