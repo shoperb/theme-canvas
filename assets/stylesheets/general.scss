@@ -63,7 +63,10 @@ h2.general-title {
 }
 h3.general-title {
   font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
-  text-transform: capitalize;
+}
+h4.general-title {
+  font-size: calc(#{$heading_scaling} * #{$heading_font_size});
+  text-transform: uppercase;
 }
 .general-text {
   color: $text_body_color;
