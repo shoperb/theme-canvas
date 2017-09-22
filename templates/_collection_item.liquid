@@ -3,7 +3,7 @@
   {% assign image = collection.image %}
 
   <a class="collection opacity-image-container" href="{{collection.url}}">
-    <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{% include 'srcset' with 'collection' %}" data-sizes="auto{% endif %}"></div>
+    <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{% include 'srcset' with 'collection' %}" data-parent-fit="cover" data-sizes="auto{% endif %}"></div>
     <h2 class="general-title">{% if collection.name %}{{collection.name}}{% else %}{{'section.default.collection.name' | t}}{% endif %}</h2>
   </a>
 </div>{% unless forloop.last %}<!--{% endunless %}{% if diff > 0 %}<!--{% endif %}
