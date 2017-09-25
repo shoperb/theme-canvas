@@ -102,16 +102,20 @@ button,
   display: inline-block;
   margin: 20px 0;
   min-width: 140px;
-  font-size: 0.875rem;
   box-sizing: border-box;
-  font-weight: 400;
   text-align: center;
-  height: 40px;
-  padding: 10px 15px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
 
   &.primary {
     background: $buttons_primary_button_background_color;
     color: $buttons_primary_button_text_color;
+    font-size: 1.125rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: auto;
 
     &:hover {
       background: lighten($buttons_primary_button_background_color, 10%);

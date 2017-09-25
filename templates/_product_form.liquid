@@ -1,6 +1,6 @@
 {% assign default_variant = product.variants.first %}
 
-<div class="product-sku{% if default_variant.sku %} visible{% endif %}" data-variant-sku-container>
+<div class="product-sku{% unless default_variant.sku == blank %} visible{% endunless %}" data-variant-sku-container>
   {{'product.sku' | t}}: <span data-variant-sku itemprop="sku">{{default_variant.sku}}</span>
 </div>
 
@@ -11,20 +11,11 @@
 </div>
 
 <div class="product-pricing">
-  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
-
   <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
   </span>
+  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
 </div>
-
-{% if product %}
-{% if product.description != blank %}
-<div class="product-description" data-product-description>{{product.description}}</div>
-{% endif %}
-{% else %}
-<div class="product-description" data-product-description>{{'section.default.product_descriontion' | t}}</div>
-{% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=false>
@@ -73,3 +64,11 @@
     </div>
   </form>
 </div>
+
+{% if product %}
+{% if product.description != blank %}
+<div class="product-description" data-product-description>{{product.description}}</div>
+{% endif %}
+{% else %}
+<div class="product-description" data-product-description>{{'section.default.product_descriontion' | t}}</div>
+{% endif %}

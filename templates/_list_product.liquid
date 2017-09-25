@@ -19,6 +19,7 @@
 
     <h2 class="product-title general-title" itemprop="name">{{product.name}}</h2>
 
+    <div class="product-vendor" itemprop="brand">Uuga Buuga</div>
     {% if product.vendor and section.settings.show_vendor %}
     <div class="product-vendor" itemprop="brand">{{product.vendor.name}}</div>
     {% endif %}

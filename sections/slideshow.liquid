@@ -24,7 +24,7 @@
           <div class="text-content general-text{% if block.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-block-setting='subheading'>{{block.settings.subheading}}</div>
           {% endif %}
           {% if block.settings.slide_link != blank and block.settings.button_text != blank %}
-          <button href="{{section.settings.button_link}}" class="button primary">
+          <button class="button primary">
             {{block.settings.button_text | escape}}
           </button>
           {% endif %}
