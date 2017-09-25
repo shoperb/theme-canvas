@@ -8,7 +8,7 @@
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
     <div class="grid">
-      <div class="grid__item one-whole desk--one-half">
+      <div class="grid__item one-whole desk--one-half product-images">
 
         <div data-position="thumbs" class="thumbs">
           {% for image in product.images %}
@@ -19,8 +19,11 @@
         <div data-position="photos" class="photos">
           <div class="container">
             {% for image in product.images %}
-            <div class="photo{% if forloop.first %} visible{% endif %}" style="background-image: url('{{image.size-2048.url}}')" data-image="full-{{forloop.index}}" data-image-zoom>
-              <img src="{{image.size-480.url}}" alt="{{product.name}}}}">
+            <div class="lazyload photo{% if forloop.first %} visible{% endif %}" data-bgset="{{image.size-2048.url}}" data-image="full-{{forloop.index}}" data-image-zoom>
+              <img class="lazyload"
+                   data-src="{{image.size-480.url}}"
+                   data-srcset="{% include 'srcset' with 'product' %}"
+                   alt="{{product.name | escape}}">
             </div>
             {% endfor %}
           </div>

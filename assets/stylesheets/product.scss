@@ -177,6 +177,7 @@ h2.product-title {
     padding: 11px 0 6px;
     text-align: left;
     font-weight: 600;
+    font-size: $heading_font_size;
   }
   .product-vendor {
     color: $text_headings_color;
@@ -356,13 +357,6 @@ h2.product-title {
   }
 }
 
-.recommended {
-  margin-top: 20px;
-
-  .randomize-list {
-    display: none;
-  }
-}
 .product-gallery-container {
   display: none;
 
@@ -488,11 +482,21 @@ h2.product-title {
 }
 
 .product-page {
+  .product-images,
   .product-details {
-    padding-left: #{$default_padding}px;
+    padding: #{$default_padding}px;
+  }
+  .product-title {
+    padding-top: 0;
+  }
+  .recommended {
+    margin-top: 20px;
 
+    .randomize-list {
+      display: none;
+    }
     .product-title {
-      padding-top: 0;
+      padding-top: 11px;
     }
   }
 }
