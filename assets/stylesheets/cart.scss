@@ -35,11 +35,12 @@
       background-size: 50% auto;
       margin-right: #{$default_padding}px;
 
-      a {
+      a,
+      img {
         display: block;
       }
       img {
-        float: left;
+        border-radius: 4px;
       }
     }
     .cart-details {

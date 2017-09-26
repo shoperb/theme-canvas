@@ -172,6 +172,9 @@ section[data-type=collection] {
   .collection-slideshow {
     position: relative;
   }
+  h2.product-title {
+    font-size: $heading_font_size;
+  }
   &.show-slideshow {
     @include breakpoint(1255) {
       width: calc(100% - 50px);
