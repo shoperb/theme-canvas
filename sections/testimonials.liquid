@@ -30,4 +30,29 @@
   </div>
   {% endif %}
 
+  <script>
+  var selector = "[data-section-id='{{section.id}}'] .testimonial-slider",
+      show = document.querySelector(selector),
+      autoplay = show.dataset.autoplay,
+      animationSpeed = show.dataset.animationSpeed * 1000;
+
+  var slider = tns({
+    container: selector,
+    arrowKeys: true,
+    controls: false,
+    mouseDrag: true,
+    lazyload: true,
+    responsive: {
+      1023: {
+        items: 3,
+        slideBy: 3,
+      },
+      480: {
+        items: 2,
+        slideBy: 2,
+      }
+    }
+  });
+  </script>
+
 </section>
