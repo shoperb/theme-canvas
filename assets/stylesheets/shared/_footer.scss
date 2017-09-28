@@ -119,6 +119,13 @@ footer.main-footer {
     .social-container {
       padding: #{$default_padding}px;
 
+      &:not(.three-quarters) {
+        text-align: center;
+
+        .social-title {
+          text-align: center;
+        }
+      }
       .social-title {
         font-size: 1rem;
         font-family: $body_font_family;
