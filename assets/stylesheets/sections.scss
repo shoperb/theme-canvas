@@ -648,7 +648,9 @@ section[data-type=slideshow] {
   position: relative;
 
   .scrolloff {
-    pointer-events: none;
+    iframe {
+      pointer-events: none;
+    }
   }
   .map-container {
     position: absolute;

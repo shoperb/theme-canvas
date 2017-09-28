@@ -1,19 +1,26 @@
 class @DropdownInViewport
   constructor: ->
-    @CheckDroDown($('.fancy-dropdown'))
+    @CheckDroDown('.fancy-dropdown')
 
-  CheckDroDown: (e) =>
-    e.on 'mouseenter mouseleave', (el) ->
-      viewportOffset = this.getBoundingClientRect()
-      if this.parentNode.querySelector('ul')
-        if viewportOffset.left + this.querySelector('ul').offsetWidth > window.innerWidth
-          this.classList.add('direction-right')
-        else
-          this.classList.remove('direction-left')
+  CheckDroDown: (selector) =>
+    for e in document.querySelectorAll(selector)
+      e.onmouseover = ->
+        dropDownMouseEvent(e);
+      e.onmouseout = ->
+        dropDownMouseEvent(e);
+
+@dropDownMouseEvent = (el) ->
+  viewportOffset = el.getBoundingClientRect()
+  if el.parentNode.querySelector('ul')
+    if viewportOffset.left + el.querySelector('ul').offsetWidth > window.innerWidth
+      el.classList.add('direction-right')
+    else
+      el.classList.remove('direction-left')
 
 @customVideoSize = (section, id) ->
-  el = $('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
-  el.height(el.width()  * 9 / 16) if el
+  el = document.querySelector('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
+  if (el)
+    el.style.height = (el.offsetWidth  * 9 / 16) + 'px'
 
 @slideVideoResize = (section, id) ->
   el = $('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')

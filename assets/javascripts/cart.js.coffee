@@ -1,69 +1,69 @@
 class @Cart
-  constructor: ->
-    for form in document.querySelectorAll("form[data-remote='true']")
-      $(form).on 'submit', @sendForm
-    @initCart()
-    
-
-  initCart: =>
-    $('.cart-item').each () ->
-      increase = $('[data-quantity=increase]', this)
-      decrease = $('[data-quantity=decrease]', this)
-      remove = $('[data-remove-item]', this)
-      field = $('.cart-col-quantity input', this);
-
-      increase.on 'click', ->
-        field.val parseInt(field.val(), 10) + 1
-        field.trigger 'input'
-
-      decrease.on 'click', ->
-        newVal = parseInt(field.val(), 10) - 1
-        if newVal < 0
-          newVal = 0
-        field.val newVal
-        field.trigger 'input'
-
-      remove.on 'click', ->
-        field.val 0
-        field.trigger 'input'
-
-      field.on 'input', (e) ->
-        $(e.target).closest("form").trigger('submit')
-        @sendForm
-
-  sendForm: (e)=>
-    if e.preventDefault
-      e.preventDefault()
-    else
-      e.returnValue = false;
-
-    f     = $(e.target)
-    url   = f.attr('action')
-    meth  = f.attr('method') || f.data('method') || 'GET'
-    params= f.serialize()
-
-
-    $.ajax({
-      method: meth,
-      url:    url,
-      data:   params,
-      dataType: 'json'
-    }).done( ( data )=>
-      newCart = $(data.liquid).find('#js-cart-content');
-      oldCart = $('#js-cart-content');
-      oldCart.html(newCart);
-
-      oldErr = $('.flash.error .message');
-      oldErr.html(data.messages);
-
-      count = 0
-      count += item.quantity for item in data.items
-      $(".cart-container .cart-items").html(count)
-
-      # binds
-      $('#js-cart-content').find("form[data-remote='true']").on 'submit', @sendForm
-      @initCart();
-    );
+#  constructor: ->
+#    for form in document.querySelectorAll("form[data-remote='true']")
+#      $(form).on 'submit', @sendForm
+#    @initCart()
+#
+#
+#  initCart: =>
+#    $('.cart-item').each () ->
+#      increase = $('[data-quantity=increase]', this)
+#      decrease = $('[data-quantity=decrease]', this)
+#      remove = $('[data-remove-item]', this)
+#      field = $('.cart-col-quantity input', this);
+#
+#      increase.on 'click', ->
+#        field.val parseInt(field.val(), 10) + 1
+#        field.trigger 'input'
+#
+#      decrease.on 'click', ->
+#        newVal = parseInt(field.val(), 10) - 1
+#        if newVal < 0
+#          newVal = 0
+#        field.val newVal
+#        field.trigger 'input'
+#
+#      remove.on 'click', ->
+#        field.val 0
+#        field.trigger 'input'
+#
+#      field.on 'input', (e) ->
+#        $(e.target).closest("form").trigger('submit')
+#        @sendForm
+#
+#  sendForm: (e)=>
+#    if e.preventDefault
+#      e.preventDefault()
+#    else
+#      e.returnValue = false;
+#
+#    f     = $(e.target)
+#    url   = f.attr('action')
+#    meth  = f.attr('method') || f.data('method') || 'GET'
+#    params= f.serialize()
+#
+#
+#    $.ajax({
+#      method: meth,
+#      url:    url,
+#      data:   params,
+#      dataType: 'json'
+#    }).done( ( data )=>
+#      newCart = $(data.liquid).find('#js-cart-content');
+#      oldCart = $('#js-cart-content');
+#      oldCart.html(newCart);
+#
+#      oldErr = $('.flash.error .message');
+#      oldErr.html(data.messages);
+#
+#      count = 0
+#      count += item.quantity for item in data.items
+#      $(".cart-container .cart-items").html(count)
+#
+#      # binds
+#      $('#js-cart-content').find("form[data-remote='true']").on 'submit', @sendForm
+#      @initCart();
+#    );
 
 
 

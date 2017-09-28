@@ -8,6 +8,8 @@
 #= require svg4everybody
 #= require plugins
 
+#= require test
+
 document.addEventListener("DOMContentLoaded", ->
   new Cart()
   new Product()

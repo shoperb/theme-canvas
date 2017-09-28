@@ -58,13 +58,13 @@
   <!-- CSS concatenated and minified via ant build script-->
   {% include 'shoperb_stylesheets', stylesheets: 'application.css' | split: '|' %}
   <!-- end CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/tiny-slider.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
   {{"javascripts/ls.bgset.min.js" | asset_url | javascript_tag}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
   {{"javascripts/ls.parent-fit.min.js" | asset_url | javascript_tag}}
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/min/tiny-slider.js"></script>
 </head>
 
 <body class="template-{{template_name | replace: '_', '-'}}">

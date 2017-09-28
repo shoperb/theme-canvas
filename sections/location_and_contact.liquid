@@ -2,9 +2,9 @@
 
 <section data-section-id="{{section.id}}" data-type="location-and-contact"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
 
-  <div class="map-container{% if section.settings.gmaps_api_key != blank %} with-map{% endif %}">
+  <div class="map-container{% if section.settings.gmaps_api_key != blank %} with-map scrolloff{% endif %}">
     {% if section.settings.gmaps_api_key != blank %}
-    <iframe class="lazyload" width="100%" height="100%" frameborder="0" class="scrolloff" style="border:0" data-src="https://www.google.com/maps/embed/v1/place?key={{section.settings.gmaps_api_key}}&q={{address}}" allowfullscreen></iframe>
+    <iframe class="lazyload" width="100%" height="100%" frameborder="0" style="border:0" data-src="https://www.google.com/maps/embed/v1/place?key={{section.settings.gmaps_api_key}}&q={{address}}" allowfullscreen></iframe>
     {% endif %}
   </div>
 
@@ -21,16 +21,16 @@
   </div>
 
   <script>
-    $(document).ready(function() {
-      var selector = "[data-section-id='{{section.id}}'][data-type='location-and-contact'] .map-container";
+  document.addEventListener("DOMContentLoaded", function() {
+    var selector = document.querySelector("[data-section-id='location-and-contact'][data-type='location-and-contact'] .map-container");
 
-      $(selector).on('click', function () {
-        $('iframe', this).removeClass('scrolloff'); // set the pointer events true on click
-      });
-
-      $(selector).mouseleave(function () {
-        $('iframe', this).addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
-      });
-    });
+    selector.onclick = function() {
+      selector.classList.remove('scrolloff');
+    };
+    selector.querySelector('iframe').onmouseout = function() {
+      selector.classList.add('scrolloff');
+    };
+  });
   </script>
+
 </section>

@@ -123,7 +123,7 @@
       {% endif %}
 
       <script>
-        $(document).ready(function() {
+        document.addEventListener("DOMContentLoaded", function() {
           customVideoSize('{{section.id}}', '{{block.id}}');
         });
         window.onresize = function() {

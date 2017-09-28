@@ -33,12 +33,14 @@
 
       {% if block.settings.video != blank %}
       <script>
+/*
         $(document).ready(function() {
           slideVideoResize('{{section.id}}', '{{block.id}}');
         });
         window.onresize = function() {
           slideVideoResize('{{section.id}}', '{{block.id}}');
         };
+*/
       </script>
       {% endif %}
 
@@ -47,7 +49,19 @@
 
   </div>
 
+<script>
+  var slider = tns({
+    container: '.slideshow',
+    items: 1,
+    slideBy: 'page'
+  });
+
+  // NOTE:
+  // prior to v2.0.2, options "container", "controlsContainer", "navContainer" and "autoplayButton" still need to be DOM elements.
+  // e.g. container: document.querySelector('.my-slider'),
+</script>
   <script>
+/*
     $(document).ready(function() {
       $("[data-section-id='{{section.id}}'] .slideshow").each(function() {
         var autoPlay = $(this).data('autoplay'),
@@ -63,5 +77,6 @@
         });
       });
     });
+*/
   </script>
 </section>
