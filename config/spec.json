@@ -14,7 +14,8 @@
     ],
     "javascripts": [
       "application.js",
-      "ls.bgset.min.js"
+      "ls.bgset.min.js",
+      "ls.parent-fit.min.js"
     ]
   }
 }

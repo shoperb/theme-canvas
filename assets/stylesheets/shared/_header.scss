@@ -21,7 +21,7 @@ header#main-header {
     }
 
     a {
-      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
+      font-size: calc(#{$heading_scaling} * #{$heading_font_size});
       color: $text_link_color;
       font-family: $heading_font_family,  sans-serif;
       text-transform: uppercase;
@@ -45,6 +45,9 @@ header#main-header {
         margin-left: 0;
       }
     }
+  }
+  .current-locale {
+    font-size: $heading_font_size;
   }
   .search,
   .account,
@@ -133,12 +136,12 @@ header#main-header {
       display: inline-block;
 
       .search-form {
-        border-radius: 2px 0 0 2px;
+        border-radius: 4px 0 0 4px;
         width: 235px;
       }
       .search-button {
         position: relative;
-        border-radius: 0 2px 2px 0;
+        border-radius: 0 4px 4px 0;
         cursor: pointer;
         background: $buttons_primary_button_background_color;
         color: $buttons_primary_button_text_color;

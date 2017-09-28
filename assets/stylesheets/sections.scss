@@ -35,33 +35,27 @@ section[data-type] {
     text-align: center;
 
     li {
-      width: 6px;
-      height: 6px;
+      width: 10px;
+      height: 10px;
       border-radius: 1000px;
       margin: 0 5px;
       //background: lighten($image_overlay_dark_color, 20%);
-      background: $buttons_secondary_button_background_color;
+      background: $buttons_primary_button_background_color;
       display: inline-block;
-      border: 1px solid lighten($layout_border_color, 20%);
-      box-shadow: 0 0 0 1px darken($layout_border_color, 20%);
+      box-shadow: inset 0 0 0 1px $buttons_primary_button_background_color;
       box-sizing: border-box;
       opacity: 0.7;
 
       button {
         opacity: 0;
         cursor: pointer;
-        height: 10px;
-        width: 10px;
         padding: 0;
+        height: 10px;
       }
       &.slick-active,
       &:hover {
+        background: $layout_background_color;
         opacity: 1;
-        width: 10px;
-        height: 10px;
-        margin: 0 3px;
-        position: relative;
-        top: -2px;
       }
     }
   }
@@ -156,6 +150,7 @@ section[data-type] {
   .text-content {
     margin: 0 auto;
     text-align: center;
+    font-size: calc(#{$heading_scaling} * #{$heading_font_size});
   }
   .general-title,
   .general-text {
@@ -176,6 +171,9 @@ section[data-type=collection] {
   }
   .collection-slideshow {
     position: relative;
+  }
+  h2.product-title {
+    font-size: $heading_font_size;
   }
   &.show-slideshow {
     @include breakpoint(1255) {
@@ -198,11 +196,23 @@ section[data-type=collection] {
   text-align: left;
 
   .text-column {
-    padding: 10px #{$default_padding}px 40px;
+    margin: 10px #{$default_padding}px 40px;
+    border: 1px solid #CCE6F6;
+    border-radius: 4px;
+    padding-bottom: 10px;
 
-    h2.general-title {
+    .general-title,
+    .post-author,
+    .post-date,
+    .text-column-text {
+      padding-left: #{$default_padding}px;
+      padding-right: #{$default_padding}px;
+    }
+    h3.general-title {
       text-align: left;
-      padding: 13px 0 0;
+      padding-top: 13px;
+      font-size: calc(#{$heading_scaling} * #{$heading_font_size});
+      font-weight: 600;
     }
     .post-author {
       font-weight: 400;
@@ -210,9 +220,11 @@ section[data-type=collection] {
     }
     .post-date {
       font-size: 0.75rem;
+      font-weight: 600;
     }
     .text-column-text {
-      padding: 13px 0 30px;
+      padding-top: 13px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -224,10 +236,10 @@ section[data-type=collection] {
     background-repeat: no-repeat;
     background-color: $layout_secondary_background_color;
 
-      &.with-background {
-        background-size: cover;
-        background-color: transparent;
-      }
+    &.with-background {
+      background-size: cover;
+      background-color: transparent;
+    }
     .caption-container {
       text-align: center;
       width: 100%;
@@ -286,7 +298,7 @@ section[data-type=collection] {
 
     h2.general-title {
       text-align: left;
-      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
+      font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
     }
     .text-content {
       padding: 10px 0;
@@ -335,7 +347,7 @@ section[data-type=slideshow] {
   .slick-arrow {
     z-index: 1;
     //color: $image_overlay_light_color;
-    color: $image_overlay_color;
+    color: $layout_background_color;
 
     svg {
       position: relative;
@@ -347,7 +359,7 @@ section[data-type=slideshow] {
       width: 50px;
       height: 50px;
       //background: lighten($image_overlay_dark_color, 20%);
-      background: darken($buttons_secondary_button_background_color, 20%);
+      background: $buttons_primary_button_background_color;
       left: -13px;
       top: -12px;
       border-radius: 1000px;
@@ -366,11 +378,11 @@ section[data-type=slideshow] {
     }
     &:hover {
       //color: lighten($image_overlay_light_color, 20%);
-      color: darken($image_overlay_color, 10%);
+      color: darken($layout_background_color, 10%);
 
       &:before {
         //background: lighten($image_overlay_dark_color, 30%);
-        opacity: 1;
+        opacity: 0.8;
       }
     }
   }
@@ -534,9 +546,6 @@ section[data-type=slideshow] {
   .text-column {
     padding: #{$default_padding}px;
 
-    .general-title {
-      padding-bottom: 0;
-    }
     img {
       width: 100%;
     }
@@ -680,6 +689,7 @@ section[data-type=slideshow] {
     }
     .general-title {
       text-align: left;
+      padding-bottom: 15px;
     }
   }
 }
@@ -698,6 +708,9 @@ section[data-type=slideshow] {
     }
     .custom-section {
       &.custom_text {
+        .general-title {
+          padding-bottom: 15px;
+        }
         &.text-align-left {
           text-align: left;
 

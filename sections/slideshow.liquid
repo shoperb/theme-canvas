@@ -5,7 +5,7 @@
     <div data-section-block-id="{{block.id}}" class="slide opacity-image-container{% if block.settings.image != blank %} with-background{% endif %}{% if block.settings.video != blank %} with-video{% endif %}{% if block.settings.text_size == 'large' %} text-large{% endif %}">
       {% if block.settings.video == blank %}
       {% assign image = block.settings.image %}
-      <div class="lazyload opacity-image{% if block.settings.image %} image-align-{{block.settings.image_alignment}}" data-bgset="{% include 'srcset' %}" data-sizes="auto{% endif %}"></div>
+      <div class="lazyload opacity-image{% if block.settings.image %} image-align-{{block.settings.image_alignment}}" data-bgset="{% include 'srcset' %}" data-parent-fit="cover" data-sizes="auto{% endif %}"></div>
       {% endif %}
       {% if block.settings.slide_link != blank %}<a href="{{block.settings.slide_link}}">{% else %}<div class="container">{% endif %}
         {% if block.settings.video %}
@@ -24,7 +24,7 @@
           <div class="text-content general-text{% if block.settings.text_style == 'dark' %} text-dark{% endif %}" data-theme-editor-block-setting='subheading'>{{block.settings.subheading}}</div>
           {% endif %}
           {% if block.settings.slide_link != blank and block.settings.button_text != blank %}
-          <button href="{{section.settings.button_link}}" class="button primary">
+          <button class="button primary">
             {{block.settings.button_text | escape}}
           </button>
           {% endif %}

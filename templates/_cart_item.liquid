@@ -2,8 +2,11 @@
   <div class="grid__item one-whole lap--four-eighths desk--five-eighths cart-col-name">
     <div class="image">
       <a href="{{item.product.url}}">
-        {% if item.product.image.admin_small.url %}
-        {{item.product.image.admin_small.url | image_tag: item.product.name}}
+        {% if item.product.image %}
+        {% assign image = item.product.image %}
+        <img class="lazyload"
+             data-src="{{item.product.image.admin_small.url}}"
+             alt="{{item.product.name | escape}}">
         {% endif %}
       </a>
     </div>

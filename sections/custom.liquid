@@ -1,6 +1,6 @@
 <section data-section-id="{{section.id}}" data-type="custom"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
   {% if section.settings.title != blank %}
-  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
+  <h4 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h4>
   {% endif %}
 
   {% if section.blocks.size > 0 %}
@@ -32,7 +32,7 @@
     {% if collection %}
     <div class="custom-section {{block.type}}">
       <a class="collection opacity-image-container" href="{{collection.url}}">
-        <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{% include 'srcset' with 'collection' %}" data-sizes="auto{% endif %}"></div>
+        <div class="lazyload opacity-image{% if collection.image %} with-image" data-bgset="{% include 'srcset' with 'collection' %}" data-parent-fit="cover" data-sizes="auto{% endif %}"></div>
         <h3 class="general-title">{{collection.name}}</h3>
       </a>
     </div>

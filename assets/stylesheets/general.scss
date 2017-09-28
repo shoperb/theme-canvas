@@ -63,7 +63,11 @@ h2.general-title {
 }
 h3.general-title {
   font-size: calc(#{$heading_scaling} * #{$heading_scaling} * #{$heading_scaling} * #{$heading_font_size});
-  text-transform: capitalize;
+}
+h4.general-title {
+  font-size: calc(#{$heading_scaling} * #{$heading_font_size});
+  text-transform: uppercase;
+  padding-bottom: 30px;
 }
 .general-text {
   color: $text_body_color;
@@ -82,10 +86,17 @@ h3.general-title {
   @extend .general-content;
 
   main {
-    section[data-type] {
-      &:first-of-type {
+    section[data-type]:first-of-type {
+      &[data-type=image-with-text-overlay] {
         padding-top: 0;
       }
+    }
+  }
+}
+main {
+  section[data-type]:first-of-type {
+    &[data-type=image-with-text-overlay] {
+      padding-top: 0;
     }
   }
 }
@@ -142,7 +153,6 @@ h3.general-title {
   position: relative;
   text-align: left;
   cursor: pointer;
-  text-transform: uppercase;
   padding-right: 10px !important;
 
   .icon-full-arrow-down {

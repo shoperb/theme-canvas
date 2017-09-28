@@ -25,7 +25,6 @@ footer.main-footer {
         padding: 0 2px;
         display: inline-block;
         background: asset-url('images/payments.png') no-repeat top left;
-        opacity: 0.5;
         @media
         only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (   min--moz-device-pixel-ratio: 2),
@@ -159,6 +158,9 @@ footer.main-footer {
       padding: #{$default_padding * 1.5}px #{$default_padding}px;
     }
     .shoperb {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
       text-align: right;
       padding: 0 #{$default_padding}px;
       position: relative;
