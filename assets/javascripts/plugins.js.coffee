@@ -38,5 +38,6 @@ class @DropdownInViewport
 
 @positionSliderArrows =  (section) ->
   container = document.querySelector('[data-section-id=' + section + ']')
-  container.querySelector('[data-controls=prev]').style.top = parseInt(container.querySelector('.image').offsetHeight / 2 + 10) + 'px'
-  container.querySelector('[data-controls=next]').style.top = parseInt(container.querySelector('.image').offsetHeight / 2 + 10) + 'px'
+
+  for el in container.querySelectorAll('[data-controls]')
+    el.style.top = parseInt(container.querySelector('.image').offsetHeight / 2 + 10) + 'px'
