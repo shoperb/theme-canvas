@@ -6,8 +6,8 @@
     "text_link_color": "#1B2126",
     "buttons_primary_button_background_color": "#1B2126",
     "buttons_primary_button_text_color": "#FFFFFF",
-    "buttons_secondary_button_background_color": "#97A0A8",
-    "buttons_secondary_button_text_color": "#ffffff",
+    "buttons_secondary_button_background_color": "#F2F6FA",
+    "buttons_secondary_button_text_color": "#242526",
     "layout_background_color": "#ffffff",
     "layout_border_color": "#DDDDDD",
     "layout_secondary_background_color": "#F2F6FA",
@@ -15,12 +15,16 @@
     "image_overlay_color": "#333333",
     "image_overlay_background": "#B2B6BB",
     "image_overlay_opacity": "0.3",
-    "body_font_family": "Fira Sans",
+    "body_font_family": "Open Sans",
     "body_font_size": "16px",
-    "heading_font_family": "Fira Sans",
-    "heading_font_size": "18px",
+    "heading_font_family": "Hind",
+    "heading_font_size": "16px",
     "heading_scaling": "1.25",
-    "fav_icon": ""
+    "fav_icon": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6400/img_20170903_111815.jpeg",
+    "headings_font_family": "Hind",
+    "headings_font_size": "48px",
+    "image_overlay_light_color": "#ffffff",
+    "image_overlay_dark_color": "#333333"
   },
   "sections": {
     "header": {
@@ -28,8 +32,8 @@
       "settings": {
         "logo_alignment": "left",
         "logo_max_width": "100",
-        "menu": "header-left",
-        "logo": "",
+        "menu": "header",
+        "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
         "section_width": "limited",
         "content_width": "limited"
       },
@@ -369,7 +373,7 @@
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "shoperb_image://id:6427//img_20170903_111849.jpeg",
+            "image": "shoperb_image://id:6456//img_20170903_111849.jpeg",
             "image_alignment": "top-right",
             "link": "http://www.google.com",
             "caption": "asdasd"
@@ -488,12 +492,27 @@
           },
           "links": {
           }
+        },
+        "1506597337849": {
+          "type": "image_slide",
+          "settings": {
+            "image_alignment": "middle",
+            "text_size": "medium",
+            "image": "shoperb_image://id:6457//da_chikistan.png"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
+          }
         }
       },
       "block_order": [
         "slide-1",
         "slide-2",
-        "slide-3"
+        "slide-3",
+        "1506597337849"
       ],
       "id": "slideshow",
       "translations": {
@@ -622,7 +641,7 @@
         "collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "uus-kollektsioon"
+            "collection": "esse-cabron"
           },
           "translations": {
             "et": {
@@ -654,7 +673,7 @@
     "product": {
       "type": "product",
       "settings": {
-        "product": "variant-test",
+        "product": "latitude-e5540",
         "image_size": "medium",
         "show_quantity_selector": true,
         "show_variant_label": true,
@@ -851,20 +870,20 @@
     }
   },
   "content_for_index": [
-//    "hero-1",
-//    "hero-2",
-//    "collection",
-//    "blog-posts",
-//    "image-gallery",
-//    "image-with-text",
+    "hero-1",
+    "hero-2",
+    "collection",
+    "blog-posts",
+    "image-gallery",
+    "image-with-text",
     "slideshow",
     "slideshow2",
-//    "collection-list",
-    "product"
-//    "testimonials",
-//    "columns",
-//    "logo-list",
-//    "location-and-contact",
-//    "custom"
+    "collection-list",
+    "product",
+    "testimonials",
+    "columns",
+    "logo-list",
+    "location-and-contact",
+    "custom"
   ]
 }

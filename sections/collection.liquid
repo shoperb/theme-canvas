@@ -25,7 +25,7 @@
 <section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} show-slideshow{% endif %}>
 
   {% if section.settings.title != blank %}
-  <h4 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h4>
+  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
   {% endif %}
 
   <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
@@ -59,7 +59,31 @@
   </div>
   {% endif %}
 
+  {% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %}
   <script>
+  var selector = "[data-section-id='{{section.id}}'] .collection-slideshow",
+      show = document.querySelector(selector),
+      showCount = parseInt(show.dataset.showCount);
+
+  var slider = tns({
+    container: selector,
+    arrowKeys: true,
+    controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+    mouseDrag: true,
+    lazyload: true,
+    nav: false,
+    responsive: {
+      1023: {
+        items: showCount,
+        slideBy: showCount,
+      },
+      480: {
+        items: 2,
+        slideBy: 2,
+      }
+    }
+  });
   </script>
+  {% endif %}
 
 </section>

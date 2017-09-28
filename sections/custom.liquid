@@ -126,9 +126,9 @@
         document.addEventListener("DOMContentLoaded", function() {
           customVideoSize('{{section.id}}', '{{block.id}}');
         });
-        window.onresize = function() {
+        window.addEventListener('resize', function() {
           customVideoSize('{{section.id}}', '{{block.id}}');
-        };
+        });
       </script>
 
     </div>
