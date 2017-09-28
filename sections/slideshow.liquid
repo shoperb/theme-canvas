@@ -49,17 +49,17 @@
 
   </div>
 
-<script>
+  <script>
   var slider = tns({
-    container: '.slideshow',
+    container: "[data-section-id='{{section.id}}'] .slideshow",
     items: 1,
-    slideBy: 'page'
+    slideBy: 'page',
+    arrowKeys: true,
+    controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + document.querySelector("[data-section-id='{{section.id}}'] .slideshow").dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + document.querySelector("[data-section-id='{{section.id}}'] .slideshow").dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+    mouseDrag: true
   });
+  </script>
 
-  // NOTE:
-  // prior to v2.0.2, options "container", "controlsContainer", "navContainer" and "autoplayButton" still need to be DOM elements.
-  // e.g. container: document.querySelector('.my-slider'),
-</script>
   <script>
 /*
     $(document).ready(function() {

@@ -851,20 +851,20 @@
     }
   },
   "content_for_index": [
-    "hero-1",
-    "hero-2",
-    "collection",
-    "blog-posts",
-    "image-gallery",
-    "image-with-text",
+//    "hero-1",
+//    "hero-2",
+//    "collection",
+//    "blog-posts",
+//    "image-gallery",
+//    "image-with-text",
     "slideshow",
     "slideshow2",
-    "collection-list",
-    "product",
-    "testimonials",
-    "columns",
-    "logo-list",
-    "location-and-contact",
-    "custom"
+//    "collection-list",
+    "product"
+//    "testimonials",
+//    "columns",
+//    "logo-list",
+//    "location-and-contact",
+//    "custom"
   ]
 }
