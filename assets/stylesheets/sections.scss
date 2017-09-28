@@ -218,15 +218,16 @@ section[data-type=collection] {
       width: calc(100% - 50px);
     }
   }
-  .slick-arrow {
-    top: -35px;
-    @include transform(none);
-
-    &.slick-prev {
-      left: 10px;
-    }
-    &.slick-next {
-      right: 10px;
+  .tns-outer {
+    .tns-controls {
+      button {
+        &[data-controls=prev] {
+          left: 15px;
+        }
+        &[data-controls=next] {
+          right: 15px;
+        }
+      }
     }
   }
 }

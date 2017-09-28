@@ -101,7 +101,7 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": false,
+        "show_as_slider": true,
         "collection": "teine"
       },
       "translations": {

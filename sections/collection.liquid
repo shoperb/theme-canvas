@@ -61,6 +61,12 @@
 
   {% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %}
   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    positionSliderArrows('{{section.id}}');
+  });
+  window.addEventListener('resize', function() {
+    positionSliderArrows('{{section.id}}');
+  });
   var selector = "[data-section-id='{{section.id}}'] .collection-slideshow",
       show = document.querySelector(selector),
       showCount = parseInt(show.dataset.showCount);
