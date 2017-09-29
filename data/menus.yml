@@ -41,7 +41,7 @@
       name: Footer
 - id: 3
   name: Main Menu
-  handle: main-menu
+  handle: header-right
   translations:
     en:
       name: Main Menu

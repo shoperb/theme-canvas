@@ -5,7 +5,9 @@ class @Cart
     @initCart()
 
   initCart: =>
-    inputChange = new Event('input')
+    # inputChange = new Event('input')
+    inputChange = document.createEvent('HTMLEvents')
+    inputChange.initEvent('input', true, false)
 
     for item in document.querySelectorAll(".cart-item")
       increase = item.querySelector('[data-quantity=increase]')
@@ -19,8 +21,7 @@ class @Cart
 
       decrease.addEventListener 'click', (e) ->
         newVal = parseInt(field.value, 10) - 1
-        if newVal < 0
-          newVal = 0
+        newVal = 0 if newVal < 0
         field.value = newVal
         field.dispatchEvent inputChange
 
@@ -29,8 +30,7 @@ class @Cart
         field.dispatchEvent inputChange
 
       field.addEventListener 'input', ((e) ->
-        console.log field.value
-#        field.closest('form').submit
+        field.closest('form').submit
 #        @sendForm
       )
 

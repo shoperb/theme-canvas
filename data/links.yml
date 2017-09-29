@@ -69,22 +69,23 @@
       name: Esileht
     ru:
       name: Esileht
-  menu_handle: main-menu
-- id: 87
-  entity_id: 30
-  entity_type: Page
-  style: Page
-  name: Fees
-  handle: fees
+  menu_handle: header-right
+- id: 369
+  entity_id: 12
+  parent_id: 4
+  entity_type: Collection
+  style: Collection
+  name: New link
+  handle: new-link
   position: 2
   translations:
     en:
-      name: Fees
+      name: New link
     et:
-      name: Fees
+      name: New link
     ru:
-      name: Fees
-  menu_handle: payment
+      name: New link
+  menu_handle: footer
 - id: 89
   entity_id: 27
   entity_type: Page
@@ -115,6 +116,21 @@
     ru:
       name: FAQ
   menu_handle: shop
+- id: 87
+  entity_id: 30
+  entity_type: Page
+  style: Page
+  name: Fees
+  handle: fees
+  position: 2
+  translations:
+    en:
+      name: Fees
+    et:
+      name: Fees
+    ru:
+      name: Fees
+  menu_handle: payment
 - id: 99
   style: BlogPosts
   name: Blog
@@ -127,7 +143,7 @@
       name: Blog
     ru:
       name: Blog
-  menu_handle: main-menu
+  menu_handle: header-right
 - id: 90
   entity_id: 28
   entity_type: Page
@@ -143,19 +159,6 @@
     ru:
       name: Cost
   menu_handle: header-left
-- id: 299
-  style: Blank
-  name: test
-  handle: test
-  position: 3
-  translations:
-    en:
-      name: test
-    et:
-      name: test
-    ru:
-      name: test
-  menu_handle: main-menu
 - id: 85
   entity_id: 25
   entity_type: Page
@@ -171,89 +174,3 @@
     ru:
       name: Contact us
   menu_handle: shop
-- id: 298
-  style: CUSTOM
-  name: eeeee
-  value: http://www.google.com
-  handle: eeeee
-  position: 4
-  translations:
-    en:
-      name: eeeee
-    et:
-      name: eeeee
-    ru:
-      name: eeeee
-  menu_handle: main-menu
-- id: 300
-  parent_id: 299
-  style: PRODUCTS
-  name: Products
-  handle: products
-  position: 5
-  translations:
-    en:
-      name: Products
-    et:
-      name: Products
-    ru:
-      name: Products
-  menu_handle: main-menu
-- id: 301
-  parent_id: 299
-  style: Collections
-  name: Collections
-  handle: collections
-  position: 6
-  translations:
-    en:
-      name: Collections
-    et:
-      name: Collections
-    ru:
-      name: Collections
-  menu_handle: main-menu
-- id: 302
-  parent_id: 300
-  style: SEARCH
-  name: esse!
-  handle: esse
-  position: 7
-  translations:
-    en:
-      name: esse!
-    et:
-      name: esse!
-    ru:
-      name: esse!
-  menu_handle: main-menu
-- id: 303
-  parent_id: 300
-  style: HOME
-  name: cabron!
-  handle: cabron
-  position: 8
-  translations:
-    en:
-      name: cabron!
-    et:
-      name: cabron!
-    ru:
-      name: cabron!
-  menu_handle: main-menu
-- id: 304
-  entity_id: 12
-  parent_id: 299
-  entity_type: Collection
-  style: Collection
-  name: collect
-  handle: collect
-  position: 9
-  translations:
-    en:
-      name: collect
-    et:
-      name: collect
-    ru:
-      name: collect
-  menu_handle: main-menu
