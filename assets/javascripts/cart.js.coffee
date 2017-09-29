@@ -1,11 +1,39 @@
 class @Cart
-#  constructor: ->
-#    for form in document.querySelectorAll("form[data-remote='true']")
-#      $(form).on 'submit', @sendForm
-#    @initCart()
-#
-#
-#  initCart: =>
+  constructor: ->
+    for form in document.querySelectorAll("form[data-remote='true']")
+      form.addEventListener "submit", @sendForm
+    @initCart()
+
+  initCart: =>
+    inputChange = new Event('input')
+
+    for item in document.querySelectorAll(".cart-item")
+      increase = item.querySelector('[data-quantity=increase]')
+      decrease = item.querySelector('[data-quantity=decrease]')
+      remove = item.querySelector('[data-remove-item]')
+      field = item.querySelector('.cart-col-quantity input');
+
+      increase.addEventListener 'click', (e) ->
+        field.value = parseInt(field.value, 10) + 1
+        field.dispatchEvent inputChange
+
+      decrease.addEventListener 'click', (e) ->
+        newVal = parseInt(field.value, 10) - 1
+        if newVal < 0
+          newVal = 0
+        field.value = newVal
+        field.dispatchEvent inputChange
+
+      remove.addEventListener 'click', (e) ->
+        field.value = 0
+        field.dispatchEvent inputChange
+
+      field.addEventListener 'input', ((e) ->
+        console.log field.value
+#        field.closest('form').submit
+#        @sendForm
+      )
+
 #    $('.cart-item').each () ->
 #      increase = $('[data-quantity=increase]', this)
 #      decrease = $('[data-quantity=decrease]', this)
@@ -28,6 +56,7 @@ class @Cart
 #        field.trigger 'input'
 #
 #      field.on 'input', (e) ->
+#        console.log 'input!'
 #        $(e.target).closest("form").trigger('submit')
 #        @sendForm
 #
