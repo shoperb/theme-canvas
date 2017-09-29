@@ -43,14 +43,6 @@
       </div>
     </div>
 
-    <script>
-/*
-    document.addEventListener("DOMContentLoaded", function() {
-      VariantSelector("#{{selector}}")
-    });
-*/
-    </script>
-
   </article>
 
   {% include 'recommended_products' %}
@@ -58,9 +50,18 @@
 
 <div class="product-gallery-container">
   <div class="product-gallery-overlay"></div>
-  <div data-close-gallery>
-    {% include 'icon' with 'plus' %}
-  </div>
-  <div class="product-gallery" data-arrow-image="{{'images/icons.svg' | asset_url}}">
+  <div class="product-gallery-content">
+    <div data-close-gallery>
+      {% include 'icon' with 'plus' %}
+    </div>
+    <div class="product-gallery" data-arrow-image="{{'images/icons.svg' | asset_url}}"></div>
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+/*
+  VariantSelector("#{{selector}}")
+*/
+});
+</script>
