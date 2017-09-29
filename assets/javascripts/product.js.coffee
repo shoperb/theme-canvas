@@ -25,13 +25,11 @@ class @Product
             current.classList.add('zoom')
       )
 
+    # product gallery
     if document.querySelector('.product-container .photos .container')
       document.querySelector('.product-container .photos .container').addEventListener("click", (event)->
-        document.querySelector('.product-gallery-container').classList.add('show')
-
         active_image = 0
         gallery = document.querySelector('.product-gallery-container .product-gallery')
-        icon = gallery.dataset.arrowImage
         for el in this.parentNode.parentNode.querySelectorAll('.thumbs .thumb')
           gal_item = document.createElement("DIV")
           gal_item.innerHTML = '<img src="' + el.dataset.imageurl + '">' if el.dataset.imageurl
@@ -39,17 +37,23 @@ class @Product
           if el.classList.contains('active')
             active_image = el.dataset.image
 
-        $(gallery).slick({
-          initialSlide: active_image - 1,
-          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>',
-          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>'
-        });
+        window.slider = tns(
+          container: gallery
+          items: 1
+          slideBy: 'page'
+          nav: false,
+          controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+          arrowKeys: true
+          mouseDrag: true
+          lazyload: true)
+        window.slider.goTo(active_image - 1)
+
+        document.querySelector('.product-gallery-container').classList.add('show')
       )
 
     if document.querySelector('[data-close-gallery]')
       document.querySelector('[data-close-gallery]').addEventListener("click", (event)->
-        gallery = document.querySelector('.product-gallery-container .product-gallery')
-        $(gallery).slick('unslick');
+        window.slider.destroy()
         document.querySelector('.product-gallery-container').classList.remove('show')
       )
 
@@ -57,9 +61,9 @@ class @Product
       gallery = document.querySelector('.product-gallery-container')
       if gallery and gallery.classList.contains('show')
         if event.key == 'ArrowLeft'
-          gallery.querySelector('.slick-prev').click()
+          gallery.querySelector('button[data-controls=prev]').click()
         else if event.key == 'ArrowRight'
-          gallery.querySelector('.slick-next').click()
+          gallery.querySelector('button[data-controls=next]').click()
         else if event.key == 'Escape'
           gallery.querySelector('[data-close-gallery]').click()
 

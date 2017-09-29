@@ -11,23 +11,7 @@
 {% endif %}
 
 <script>
-  $(document).ready(function() {
-    if ($('.randomize-list').length) {
-      var returner;
-      var list = document.querySelector('.randomize-list');
-
-      for(var i = list.children.length; i >= 0; i--){
-        list.appendChild(list.children[Math.random() * i | 0]);
-      }
-
-      var count = $('.randomize-list').data('show-only');
-      if (parseInt(count))
-        count++;
-      else
-        count = 5;
-
-      $('.randomize-list>div:nth-child(n+'+count+')').remove();
-      $('.randomize-list').show();
-    }
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  randomizeList('{{selector}}');
+});
 </script>
