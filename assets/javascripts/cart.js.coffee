@@ -73,17 +73,19 @@ class @Cart
     xmlhttp.send(params.join('&'))
 
   onSave: (data) =>
+    parser=new DOMParser();
+    htmlDoc=parser.parseFromString(data.liquid, "text/html"); # for chrome "text/xml"?
     debugger
-    newCart = $(data.liquid).find('#js-cart-content');
-    oldCart = $('#js-cart-content');
-    oldCart.html(newCart);
+    newCart = htmlDoc.querySelector('#js-cart-content');
+    oldCart = document.querySelector('#js-cart-content');
+    oldCart?.innerHTML = newCart;
 
-    oldErr = $('.flash.error .message');
-    oldErr.html(data.messages);
+    oldErr = document.querySelector('.flash.error .message');
+    oldErr?.innerHTML = data.messages;
 
     count = 0
     count += item.quantity for item in data.items
-    $(".cart-container .cart-items").html(count)
+    document.querySelector(".cart-container .cart-items")?.innerHTML = count
 
     # binds
     document.querySelector('#js-cart-content form[data-remote="true"]')?.addEventListener 'submit', @sendForm
