@@ -46,7 +46,7 @@ class @Cart
     f   = e.target || e.srcElement
     url = f.getAttribute('action')
     meth= f.getAttribute('method') || f.getAttribute('data-method') || 'GET'
-    params= serialize(f)
+    params= @serialize(f)
 
     xmlhttp =  if window.XMLHttpRequest then new XMLHttpRequest() else new ActiveXObject("Microsoft.XMLHTTP")
     xmlhttp.open(meth.toUpperCase(), url, true)
@@ -54,9 +54,6 @@ class @Cart
     xmlhttp.setRequestHeader("Content-type",  "application/x-www-form-urlencoded; charset=UTF-8")
     xmlhttp.onreadystatechange = =>
       if xmlhttp.readyState is 4
-        console.log "sda"
-        console.log xmlhttp.response || xmlhttp.responseText
-        console.log "ggg"
         response = JSON.parse(xmlhttp.response || xmlhttp.responseText)
         if xmlhttp.status is 200
           if response.success
@@ -75,10 +72,10 @@ class @Cart
   onSave: (data) =>
     parser=new DOMParser();
     htmlDoc=parser.parseFromString(data.liquid, "text/html"); # for chrome "text/xml"?
-    debugger
+
     newCart = htmlDoc.querySelector('#js-cart-content');
     oldCart = document.querySelector('#js-cart-content');
-    oldCart?.innerHTML = newCart;
+    oldCart?.innerHTML = newCart.innerHTML;
 
     oldErr = document.querySelector('.flash.error .message');
     oldErr?.innerHTML = data.messages;
@@ -100,7 +97,7 @@ class @Cart
     console.log(xhr.status)
 
 
-  serialize = (form) ->
+  serialize: (form) ->
     return  if not form or form.nodeName isnt "FORM"
     i = undefined
     j = undefined
@@ -113,7 +110,7 @@ class @Cart
       switch form.elements[i].nodeName
         when "INPUT"
           switch form.elements[i].type
-            when "text", "password", "button", "reset", "submit"
+            when "text", "password", "button", "reset", "submit", "number"
               q[form.elements[i].name] = encodeURIComponent(form.elements[i].value)
             when "hidden"
               q[form.elements[i].name] = encodeURIComponent(form.elements[i].value) unless q[form.elements[i].name]
