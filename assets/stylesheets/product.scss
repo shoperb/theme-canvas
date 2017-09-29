@@ -494,6 +494,10 @@ h2.product-title {
 
     .randomize-list {
       display: none;
+
+      &.show {
+        display: block;
+      }
     }
     .product-title {
       padding-top: 11px;

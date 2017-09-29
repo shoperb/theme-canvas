@@ -36,8 +36,33 @@ class @DropdownInViewport
       el.classList.add 'loaded'
   )
 
-@positionSliderArrows =  (section) ->
+@positionSliderArrows = (section) ->
   container = document.querySelector('[data-section-id=' + section + ']')
 
   for el in container.querySelectorAll('[data-controls]')
     el.style.top = parseInt(container.querySelector('.image').offsetHeight / 2 + 10) + 'px'
+
+@randomizeList = ->
+  list = document.querySelector('.randomize-list')
+  current = document.querySelector('[data-product-handle]').dataset.productHandle
+
+  if list
+    returner = undefined
+    i = list.children.length
+
+    while i >= 0
+      list.appendChild list.children[Math.random() * i | 0]
+      i--
+
+    count = list.dataset.showOnly
+    if parseInt(count)
+      count--
+    else
+      count = 3
+
+    for el, i in list.querySelectorAll('.product-container')
+      if i <= count and current and current == el.querySelector('a').dataset.productListHandle
+        el.parentNode.removeChild(el)
+        count++
+      el.parentNode.removeChild(el) if i > count
+    list.classList.add('show')

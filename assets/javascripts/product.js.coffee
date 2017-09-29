@@ -39,17 +39,17 @@ class @Product
           if el.classList.contains('active')
             active_image = el.dataset.image
 
-        $(gallery).slick({
-          initialSlide: active_image - 1,
-          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>',
-          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>'
-        });
+#        $(gallery).slick({
+#          initialSlide: active_image - 1,
+#          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>',
+#          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + icon + '#icon-arrow"></use></svg></div>'
+#        });
       )
 
     if document.querySelector('[data-close-gallery]')
       document.querySelector('[data-close-gallery]').addEventListener("click", (event)->
         gallery = document.querySelector('.product-gallery-container .product-gallery')
-        $(gallery).slick('unslick');
+#        $(gallery).slick('unslick');
         document.querySelector('.product-gallery-container').classList.remove('show')
       )
 

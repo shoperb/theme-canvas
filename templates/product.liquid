@@ -3,7 +3,7 @@
 {% assign selector = product.url | replace: '/', '-' %}
 
 <section role="main" class="product-page general-page">
-  <article class="product-container" id="{{selector}}" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+  <article class="product-container" id="{{selector}}" itemscope="" itemtype="http://schema.org/Product" data-product-details data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}" data-product-handle="{{product.handle}}">
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
@@ -44,9 +44,11 @@
     </div>
 
     <script>
-      $(document).ready(function() {
-        new VariantSelector("#{{selector}}")
-      });
+/*
+    document.addEventListener("DOMContentLoaded", function() {
+      VariantSelector("#{{selector}}")
+    });
+*/
     </script>
 
   </article>
