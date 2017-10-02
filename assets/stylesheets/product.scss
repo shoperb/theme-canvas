@@ -262,6 +262,9 @@ h2.product-title {
   .thumbs {
     float: left;
     width: 60px;
+    @include breakpoint(palm) {
+      width: 100%;
+    }
 
     .thumb {
       cursor: pointer;
@@ -271,6 +274,10 @@ h2.product-title {
       height: 60px;
       outline: none;
       position: relative;
+      @include breakpoint(palm) {
+        margin-right: #{$default_padding}px;
+        float: left;
+      }
 
       &.active {
         box-shadow: 0 0 0 2px $layout_border_color;
@@ -287,6 +294,10 @@ h2.product-title {
     margin-left: #{$default_padding}px;
     float: left;
     width: calc(100% - 60px - #{$default_padding}px);
+    @include breakpoint(palm) {
+      width: 100%;
+      margin: 0;
+    }
 
     .container {
       display: inline-block;
