@@ -65,7 +65,7 @@ class @VariantSelector
     # missing in matrix disabled by config
     lis = ""
     for obj in arr
-      name   = @getName(obj)
+      name = @getName(obj)
       continue if values.indexOf(name) > -1
 
       # selectList.appendChild(li)
