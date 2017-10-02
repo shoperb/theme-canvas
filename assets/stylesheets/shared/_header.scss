@@ -30,6 +30,9 @@ header#main-header {
 
       img {
         display: block;
+        @include breakpoint(palm) {
+          max-width: 100% !important;
+        }
       }
     }
   }
