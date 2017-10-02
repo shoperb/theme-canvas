@@ -32,7 +32,7 @@ nav.main-menu {
         display: inline-block;
         padding: #{$default_padding}px;
         color: $text_link_color;
-        font-size: $heading_font_size;
+        font-size: 1.125rem;
       }
       &.with-child {
         a,

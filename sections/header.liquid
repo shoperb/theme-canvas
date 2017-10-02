@@ -69,20 +69,26 @@
   </div>
 
   <script>
-    $(document).ready(function() {
-      $("[data-section-id='{{section.id}}'] [data-toggle]").on('click', function() {
-        var val = $(event.target).data('toggle');
+  document.addEventListener("DOMContentLoaded", function() {
+    var selector = "[data-section-id='{{section.id}}'] [data-toggle]";
+    [].forEach.call(document.querySelectorAll(selector), function(el) {
+      el.addEventListener('click', function(e) {
+        var val = e.target.dataset.toggle;
 
-        $('[data-item=main]', '#main-header').toggleClass('hidden');
+        [].forEach.call(document.querySelectorAll("#main-header [data-item=main]"), function(mainEl) {
+          mainEl.classList.toggle('hidden');
+        });
         if (val === 'close') {
-          $(event.target).parent().toggleClass('hidden');
+          e.target.parentNode.classList.toggle('hidden')
         } else {
-          $('.' + val + '-container').toggleClass('hidden');
+          document.querySelector('.' + val + '-container').classList.toggle('hidden')
         }
-        if (val == 'search')
-          this.parentNode.querySelector('.search-container').querySelector('input').focus()
-      });
-    });
+        if (val === 'search') {
+          e.target.parentNode.querySelector('.search-container input').focus();
+        }
+      })
+    })
+  });
   </script>
 
 </header>

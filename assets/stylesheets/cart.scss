@@ -1,7 +1,4 @@
 .cart-page {
-  .cart-item {
-    border-top: 1px solid $layout_border_color;
-  }
   .cart-header {
     font-weight: bold;
     padding: #{$default_padding}px;
@@ -26,6 +23,7 @@
   }
   .cart-item {
     padding: #{$default_padding}px;
+    border-top: 1px solid $layout_border_color;
 
     .image {
       float: left;
@@ -34,6 +32,7 @@
       width: 90px;
       background-size: 50% auto;
       margin-right: #{$default_padding}px;
+      border-radius: 4px;
 
       a,
       img {

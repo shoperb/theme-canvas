@@ -375,7 +375,7 @@ h2.product-title {
     left: 0;
     background: rgba(0, 0, 0, 0.8);
   }
-  .product-gallery {
+  .product-gallery-content {
     position: fixed;
     z-index: 999;
     top: 20px;
@@ -383,51 +383,10 @@ h2.product-title {
     bottom: 20px;
     left: 20px;
     background: rgba(0, 0, 0, 1);
+  }
+  .product-gallery {
+    height: 100%;
 
-    .slick-arrow {
-      position: absolute;
-      color: $image_overlay_color;
-      cursor: pointer;
-      top: 50%;
-      height: auto;
-      @include transform(translateY(-50%));
-      z-index: 3;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        //background: lighten($image_overlay_dark_color, 20%);
-        background: darken($buttons_secondary_button_background_color, 20%);
-        left: -13px;
-        top: -13px;
-        border-radius: 1000px;
-        z-index: 1;
-        opacity: 0.7;
-        transition: all 0.2s;
-      }
-      &.slick-prev {
-        left: 53px;
-      }
-      &.slick-next {
-        right: 53px;
-        @include flip;
-      }
-      svg {
-        position: relative;
-        z-index: 2;
-      }
-      &:hover {
-        //color: lighten($image_overlay_light_color, 20%);
-        color: darken($image_overlay_color, 10%);
-
-        &:before {
-          //background: lighten($image_overlay_dark_color, 30%);
-          opacity: 1;
-        }
-      }
-    }
     div {
       height: 100%;
       position: relative;
@@ -482,6 +441,29 @@ h2.product-title {
       }
     }
   }
+  .tns-outer {
+    height: 100%;
+
+    .tns-controls {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+    }
+    .tns-inner {
+      height: 100%;
+    }
+    button {
+      top: 50%;
+      position: fixed;
+
+      &[data-controls=prev] {
+        left: 30px;
+      }
+      &[data-controls=next] {
+        right: 30px;
+      }
+    }
+  }
 }
 
 .product-page {
@@ -497,6 +479,10 @@ h2.product-title {
 
     .randomize-list {
       display: none;
+
+      &.show {
+        display: block;
+      }
     }
     .product-title {
       padding-top: 11px;

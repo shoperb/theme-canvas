@@ -33,12 +33,12 @@
 
       {% if block.settings.video != blank %}
       <script>
-        $(document).ready(function() {
+        document.addEventListener("DOMContentLoaded", function() {
           slideVideoResize('{{section.id}}', '{{block.id}}');
         });
-        window.onresize = function() {
+        window.addEventListener('resize', function() {
           slideVideoResize('{{section.id}}', '{{block.id}}');
-        };
+        });
       </script>
       {% endif %}
 
@@ -48,20 +48,21 @@
   </div>
 
   <script>
-    $(document).ready(function() {
-      $("[data-section-id='{{section.id}}'] .slideshow").each(function() {
-        var autoPlay = $(this).data('autoplay'),
-            animationSpeed = $(this).data('animation-speed');
+  var selector = "[data-section-id='{{section.id}}'] .slideshow",
+      show = document.querySelector(selector),
+      autoplay = show.dataset.autoplay,
+      animationSpeed = show.dataset.animationSpeed * 1000;
 
-        $(this).slick({
-          dots: true,
-          autoplay: autoPlay,
-          prevArrow: '<div class="slick-prev"><svg class="icon-arrow-back"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
-          nextArrow: '<div class="slick-next"><svg class="icon-arrow-next"><use xlink:href="' + $(this).data('arrow-image') + '#icon-arrow"></use></svg></div>',
-          autoplaySpeed: animationSpeed * 1000,
-          lazyLoad: 'ondemand'
-        });
-      });
-    });
+  var slider = tns({
+    container: selector,
+    items: 1,
+    slideBy: 'page',
+    arrowKeys: true,
+    controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+    mouseDrag: true,
+    autoplayTimeout: animationSpeed,
+    lazyload: true
+  });
   </script>
+
 </section>
