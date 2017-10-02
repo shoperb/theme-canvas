@@ -234,16 +234,28 @@ h2.product-title {
     .quantity {
       display: inline-block;
       padding-right: 16px;
+      @include breakpoint(palm) {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin-bottom: 20px;
+      }
     }
     .add-to-cart {
       display: inline-block;
       vertical-align: bottom;
+      @include breakpoint(palm) {
+        display: block;
+      }
 
       .button,
       .disabled-button {
         position: relative;
         top: -1px;
         margin: 0;
+        @include breakpoint(palm) {
+          width: 100%;
+        }
       }
     }
   }
@@ -325,6 +337,9 @@ h2.product-title {
 .product-quantity-input {
   position: relative;
   float: left;
+  @include breakpoint(palm) {
+    float: none;
+  }
 
   input {
     text-align: center;
@@ -332,6 +347,9 @@ h2.product-title {
     border: none;
     width: 140px;
     -moz-appearance: textfield;
+    @include breakpoint(palm) {
+      width: 100%;
+    }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

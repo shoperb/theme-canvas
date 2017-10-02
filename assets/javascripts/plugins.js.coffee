@@ -24,8 +24,12 @@ class @DropdownInViewport
 
 @slideVideoResize = (section, id) ->
   for el in document.querySelectorAll('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')
-    el.querySelector('iframe').style.width = el.offsetWidth + 'px'
-    el.querySelector('iframe').style.height = (el.offsetWidth  * 9 / 16) + 'px'
+    if el.offsetWidth > el.offsetHeight
+      el.querySelector('iframe').style.width = el.offsetWidth + 'px'
+      el.querySelector('iframe').style.height = (el.offsetWidth  * 9 / 16) + 'px'
+    else
+      el.querySelector('iframe').style.height = el.offsetHeight + 'px'
+      el.querySelector('iframe').style.width = el.offsetWidth + 'px'
 
 @runLazyLoad = (section) ->
   selector = '[data-section-id=' + section + '] .lazyload'

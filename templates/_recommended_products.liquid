@@ -2,7 +2,7 @@
 <section class="recommended product-container">
   <h4 class="general-title">{{'product.recommended' | t}}</h4>
 
-  <div class="grid gutter-neutralizer randomize-list" data-show-only="4">
+  <div class="grid randomize-list" data-show-only="4">
     {% for product in product.others_in_category %}
     {% include 'list_product' with 'recommended' %}
     {% endfor %}

@@ -5,7 +5,7 @@
 {% elsif list_product == 'category' %}
 {% assign grid = 'palm--one-half lap--one-third desk--one-third' %}
 {% elsif list_product == 'recommended' %}
-{% assign grid = 'lap--one-half desk--one-quarter' %}
+{% assign grid = 'one-half lap--one-half desk--one-quarter' %}
 {% endif %}
 
 {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container">
