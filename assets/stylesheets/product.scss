@@ -23,6 +23,9 @@ h2.product-title {
     min-width: 200px;
     position: relative;
     margin: #{$default_padding}px;
+    @include breakpoint(palm) {
+      width: calc(100% - 20px);
+    }
 
     .variant-select {
       position: relative;

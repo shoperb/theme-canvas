@@ -152,6 +152,9 @@ footer.main-footer {
   }
   .copyright-row {
     background: $layout_secondary_background_color;
+    @include breakpoint(palm) {
+      text-align: center;
+    }
 
     .copyright {
       font-size: 0.75rem;
@@ -165,9 +168,16 @@ footer.main-footer {
       padding: 0 #{$default_padding}px;
       position: relative;
       top: 15px;
+      @include breakpoint(palm) {
+        top: 0;
+      }
 
       a {
         color: $text_link_color;
+        @include breakpoint(palm) {
+          display: block;
+          text-align: center;
+        }
 
         &:hover {
           color: lighten($text_link_color, 20%);
