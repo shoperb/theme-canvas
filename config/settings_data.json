@@ -20,11 +20,11 @@
     "heading_font_family": "Hind",
     "heading_font_size": "16px",
     "heading_scaling": "1.25",
-    "fav_icon": "https://shoperb-eu-development.s3.amazonaws.com/shop_8/images/6400/img_20170903_111815.jpeg",
     "headings_font_family": "Hind",
     "headings_font_size": "48px",
     "image_overlay_light_color": "#ffffff",
-    "image_overlay_dark_color": "#333333"
+    "image_overlay_dark_color": "#333333",
+    "fav_icon": ""
   },
   "sections": {
     "header": {
@@ -33,8 +33,8 @@
         "logo_alignment": "left",
         "logo_max_width": "100",
         "menu": "header",
-        "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
-        "section_width": "limited",
+        "logo": "",
+        "section_width": "full-width",
         "content_width": "limited"
       },
       "id": "header"
@@ -42,6 +42,7 @@
     "footer": {
       "type": "footer",
       "settings": {
+        "menu": "header",
         "allow_social_icons": true,
         "title": "Follow us",
         "social_facebook": "http://www.facebook.com",
@@ -57,7 +58,7 @@
         "payment_visa": true,
         "payment_mastercard": true,
         "payment_maestro": true,
-        "section_width": "limited",
+        "section_width": "full-width",
         "content_width": "limited"
       },
       "id": "footer"
@@ -66,15 +67,14 @@
       "type": "image_with_text_overlay",
       "settings": {
         "image_alignment": "center",
-        "title": "Hero section title",
-        "text": "... and here is where your customers will see your hero message is where your customers will see your hero message is where your customers will see your hero message",
+        "title": "Large image with text",
+        "text": "This area here is good getting the attention of your customers.",
         "text_size": "medium",
+        //        "text_style": "dark",
         "section_height": "medium",
         "section_width": "limited",
         "button_label": "Click here!",
-        "button_link": "http://www.google.com/",
-        "text_style": "dark",
-        "image": "shoperb_image://id:6449//tallinn_kings_1.png"
+        "button_link": "http://www.google.com/"
       },
       "id": "hero-1",
       "translations": {
@@ -83,13 +83,6 @@
           "title": "Suur pilt tekstiga",
           "button_label": "Vajuta siia"
         }
-      },
-      "images": {
-        "image": {
-          "id": 6402
-        }
-      },
-      "links": {
       }
     },
     "collection": {
@@ -101,8 +94,7 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": true,
-        "collection": "teine"
+        "show_as_slider": true
       },
       "translations": {
         "et": {
@@ -111,181 +103,6 @@
       },
       "id": "collection"
     },
-    "logo-list": {
-      "type": "logo_list",
-      "settings": {
-        "title": "Logo list",
-        "section_width": "full-width",
-        "section_height": "large"
-      },
-      "blocks": {
-        "1505825530416": {
-          "type": "logo",
-          "settings": {
-            "image": "shoperb_image://id:6433//cropped-demo-logos-r1-all-15-20141.jpeg"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "1505825637540": {
-          "type": "logo",
-          "settings": {
-            "image": "shoperb_image://id:6434//demo-sport-logo-d8c6eb99c4-seeklogo_com.gif"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "1505825642190": {
-          "type": "logo",
-          "settings": {
-            "image": "shoperb_image://id:6435//e6d01b2c2e97bb40f4cb52764f4c0bc4.jpeg"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        }
-      },
-      "block_order": [
-        "1505825530416",
-        "1505825637540",
-        "1505825642190"
-      ],
-      "id": "logo-list",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "custom": {
-      "type": "custom",
-      "settings": {
-        "title": "Custom content",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "custom-1": {
-          "type": "custom_text",
-          "settings": {
-            "section_width": 33,
-            "title": "Custom titme",
-            "text": "The place where you can just... just show the custom content",
-            "vertical_alignment": "bottom",
-            "horizontal_alignment": "center"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-2": {
-          "type": "custom_image",
-          "settings": {
-            "section_width": 66,
-            "image": "shoperb_image://id:6432//non_animated_gif.gif",
-            "vertical_alignment": "middle"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-3": {
-          "type": "custom_video",
-          "settings": {
-            "section_width": 50,
-            "video": "https://www.youtube.com/embed/fVUoi0NoYZU",
-            "vertical_alignment": "middle"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-32": {
-          "type": "custom_video",
-          "settings": {
-            "section_width": 50,
-            "video": "https://vimeo.com/187165137",
-            "vertical_alignment": "middle"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-4": {
-          "type": "custom_product",
-          "settings": {
-            "section_width": 100,
-            "product": "rainertesttoode",
-            "vertical_alignment": "top",
-            "show_quantity_selector": true,
-            "show_variant_label": true,
-            "show_vendor": true
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-5": {
-          "type": "custom_collection",
-          "settings": {
-            "section_width": 25,
-            "collection": "teine",
-            "vertical_alignment": "middle"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "custom-6": {
-          "type": "custom_html",
-          "settings": {
-            "section_width": 75,
-            "html": "<div style='margin: 20px 15px 9px 52px'>This is CuSToM html</div>",
-            "vertical_alignment": "top"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "1505823280348": {
-          "type": "custom_image",
-          "settings": {
-            "section_width": 50,
-            "vertical_alignment": "middle",
-            "image": "shoperb_image://id:6431//img_20170524_122522.jpeg"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        }
-      },
-      "block_order": [
-        "custom-1",
-        "custom-2",
-        "custom-3",
-        "custom-32",
-        "custom-4",
-        "custom-5",
-        "custom-6",
-        "1505823280348"
-      ],
-      "id": "custom",
-      "translations": {
-        "et": {
-        }
-      }
-    },
     "image-with-text": {
       "type": "image_with_text",
       "settings": {
@@ -293,7 +110,7 @@
         "title": "Image & text",
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
-        "image": "shoperb_image://id:6425//img_20170903_111815.jpeg",
+        "image": "",
         "button_link": "http://www.google.com",
         "section_width": "limited"
       },
@@ -304,586 +121,12 @@
           "button_text": "Vajuta siia"
         }
       },
-      "id": "image-with-text",
-      "images": {
-        "image": {
-          "id": 6401
-        }
-      },
-      "links": {
-      }
-    },
-    "hero-2": {
-      "type": "image_with_text_overlay",
-      "settings": {
-        "image": "shoperb_image://id:6450//tallinn_kings_2.png",
-        "image_alignment": "top-left",
-        "title": "My AD",
-        "text": "Look at what cool products I have.",
-        "text_size": "large",
-        "section_height": "large",
-        "button_label": "Click here!",
-        "button_link": "http://www.google.com/",
-        "section_width": "full-width",
-        "text_style": "light"
-      },
-      "id": "hero-2",
-      "translations": {
-        "et": {
-        }
-      },
-      "links": {
-      }
-    },
-    "blog-posts": {
-      "type": "blog_posts",
-      "settings": {
-        "title": "Blog posts",
-        "grid": 3,
-        "show_author": true,
-        "show_date": true,
-        "show_button": true,
-        "section_width": "limited"
-      },
-      "id": "blog-posts"
-    },
-    "image-gallery": {
-      "type": "image_gallery",
-      "settings": {
-        "section_height": "large",
-        "section_width": "full-width"
-      },
-      "blocks": {
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shoperb_image://id:6426//img_20170903_111831.jpeg",
-            "image_alignment": "bottom-middle"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6405
-            }
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shoperb_image://id:6456//img_20170903_111849.jpeg",
-            "image_alignment": "top-right",
-            "link": "http://www.google.com",
-            "caption": "asdasd"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6406
-            }
-          }
-        },
-        "image-3": {
-          "type": "image",
-          "settings": {
-            "image_alignment": "top-middle",
-            "caption": "No caption! Haha, just kidding",
-            "image": "shoperb_image://id:6428//gena.jpeg"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "images": {
-            "image": {
-              "id": 6403
-            }
-          }
-        },
-        "1505913236342": {
-          "type": "image",
-          "settings": {
-            "image_alignment": "middle",
-            "image": "shoperb_image://id:6440//img_0705.jpeg"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        }
-      },
-      "block_order": [
-        "image-1",
-        "image-2",
-        "image-3",
-        "1505913236342"
-      ],
-      "id": "image-gallery",
-      "translations": {
-        "et": {
-        }
-      },
-      "images": {
-      }
-    },
-    "slideshow": {
-      "type": "slideshow",
-      "settings": {
-        "auto_rotate": false,
-        "animation_speed": 4,
-        "section_height": "large",
-        "section_width": "full-width"
-      },
-      "blocks": {
-        "slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "shoperb_image://id:6445//study_playbook.jpeg",
-            "image_alignment": "bottom-right",
-            "heading": "Image slide",
-            "subheading": "Tell your brand's story through video and images",
-            "slide_link": "http://www.google.com",
-            "button_text": "Click here",
-            "text_size": "large",
-            "text_style": "dark"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "links": {
-          }
-        },
-        "slide-2": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "heading": "Image slide 22",
-            "subheading": "Tell your brand's story through video and images 22",
-            "text_size": "normal",
-            "text_style": "dark"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "shoperb_image://id:6446//img_20160825_165156.jpeg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-            "subheading": "Tell your brand's story through video and images 333",
-            "text_size": "normal",
-            "text_style": "light"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "links": {
-          }
-        },
-        "1506597337849": {
-          "type": "image_slide",
-          "settings": {
-            "image_alignment": "middle",
-            "text_size": "medium",
-            "image": "shoperb_image://id:6457//da_chikistan.png"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "links": {
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3",
-        "1506597337849"
-      ],
-      "id": "slideshow",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "slideshow2": {
-      "type": "slideshow",
-      "settings": {
-        "auto_rotate": false,
-        "animation_speed": 4,
-        "section_height": "medium",
-        "text_size": "medium",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "slide-1": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "shoperb_image://id:6447//bugbus2016.jpeg",
-            "image_alignment": "bottom-right",
-            "heading": "Image slide",
-            "subheading": "Tell your brand's story through video and images",
-            "slide_link": "http://www.google.com",
-            "text_size": "large",
-            "text_style": "light"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "links": {
-          }
-        },
-        "slide-2": {
-          "type": "video_slide",
-          "settings": {
-            "type": "video",
-            "image": "https://static.pexels.com/photos/33045/lion-wild-africa-african.jpg",
-            "image_alignment": "bottom-right",
-            "heading": "Image slide 22",
-            "video": "https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0",
-            "subheading": "Tell your brand's story through video and images 22",
-            "text_size": "large",
-            "text_style": "light"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "slide-3": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "shoperb_image://id:6448//pink-knight-men_design.png",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-            "subheading": "Tell your brand's story through video and images 333",
-            "text_size": "normal",
-            "text_style": "light"
-          },
-          "translations": {
-            "et": {
-            }
-          },
-          "links": {
-          }
-        },
-        "slide-4": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://www.planwallpaper.com/static/images/wallpapers-hd-8000-8331-hd-wallpapers.jpg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-            "subheading": "Tell your brand's story through video and images 333",
-            "text_size": "normal",
-            "text_style": "light"
-          }
-        },
-        "slide-5": {
-          "type": "image_slide",
-          "settings": {
-            "type": "image",
-            "image": "http://www.intrawallpaper.com/static/images/HD-Wallpapers-C76.jpg",
-            "image_alignment": "center",
-            "heading": "Image slide 333",
-            "subheading": "Tell your brand's story through video and images 333",
-            "text_size": "large",
-            "text_style": "light"
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3"
-      ],
-      "id": "slideshow2",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "collection-list": {
-      "type": "collection_list",
-      "settings": {
-        "title": "Collection list",
-        "grid": 3,
-        "section_width": "limited"
-      },
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "teine"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "esse-cabron"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "spring-summer-collection-2017"
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3"
-      ],
-      "id": "collection-list",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "product": {
-      "type": "product",
-      "settings": {
-        "product": "latitude-e5540",
-        "image_size": "medium",
-        "show_quantity_selector": true,
-        "show_variant_label": true,
-        "show_vendor": true,
-        "section_width": "limited"
-      },
-      "id": "product",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "product22": {
-      "type": "product",
-      "settings": {
-        "product": "",
-        "image_size": "medium",
-        "show_quantity_selector": true,
-        "show_variant_label": true,
-        "show_vendor": true,
-        "section_width": "limited"
-      },
-      "id": "product22"
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "settings": {
-        "title": "Testimonials",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "testimonial-1": {
-          "type": "quote",
-          "settings": {
-            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Test Author"
-          }
-        },
-        "testimonial-2": {
-          "type": "quote",
-          "settings": {
-            "quote": "Add customer reviews and testimonials to showcase your store’s happy customers. Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Thor"
-          }
-        },
-        "testimonial-3": {
-          "type": "quote",
-          "settings": {
-            "quote": "spring-summer-collection-2017"
-          }
-        },
-        "testimonial-4": {
-          "type": "quote",
-          "settings": {
-            "quote": "asdasdasdadad",
-            "author": "jrkr2333"
-          }
-        },
-        "testimonial-5": {
-          "type": "quote",
-          "settings": {
-            "quote": "asdasdasdadad",
-            "author": "jrkr2333"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-1",
-        "testimonial-2",
-        "testimonial-3",
-        "testimonial-4",
-        "testimonial-5"
-      ],
-      "id": "testimonials"
-    },
-    "columns": {
-      "type": "text_columns_with_images",
-      "settings": {
-        "title": "Text columns with images",
-        "text_alignment": "center",
-        "section_width": "limited"
-      },
-      "blocks": {
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "image": "shoperb_image://id:6418//21769677_1436610496405909_18656820_n.jpeg",
-            "title": "Title",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "column-2": {
-          "type": "column",
-          "settings": {
-            "image": "shoperb_image://id:6419//tallinn_kings_1.png",
-            "title": "Title asd",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "column-3": {
-          "type": "column",
-          "settings": {
-            "image": "shoperb_image://id:6421//tallinn_kings_2.png",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "column-4": {
-          "type": "column",
-          "settings": {
-            "title": "Title asd",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "column-5": {
-          "type": "column",
-          "settings": {
-            "image": "shoperb_image://id:6414//00-9627-0.jpeg",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "column-7": {
-          "type": "column",
-          "settings": {
-            "image": "shoperb_image://id:6423//20663404_1203855053093341_1786399435_o.jpeg",
-            "title": "Tit4le",
-            "text": "Add customer reviews and testimonials to showcase your store’s happy customers."
-          },
-          "translations": {
-            "et": {
-            }
-          }
-        },
-        "1505819894194": {
-          "type": "column",
-          "settings": {
-            "title": "test",
-            "text": "Good way to inlude some small thought with visual addition. Make it represent your store & brand.",
-            "image": "shoperb_image://id:6424//322135e4b82b758458fb6b9eaab2707e.jpeg"
-          },
-          "translations": {
-            "et": {
-              "title": "test"
-            }
-          }
-        }
-      },
-      "block_order": [
-        "column-1",
-        "column-2",
-        "column-3",
-        "column-4",
-        "column-5",
-        "column-7",
-        "1505819894194"
-      ],
-      "id": "columns",
-      "translations": {
-        "et": {
-        }
-      }
-    },
-    "location-and-contact": {
-      "type": "location_and_contact",
-      "settings": {
-        "title": "Location",
-        "text": "Opening hours: from AM to PM",
-        "address": "Meistri 12, Tallinn",
-        "gmaps_api_key": "AIzaSyDUSYmrOAgFOj7ILvyixDGx2WDUjCo1P0Y",
-        "section_width": "full-width"
-      },
-      "id": "location-and-contact"
+      "id": "image-with-text"
     }
   },
   "content_for_index": [
     "hero-1",
-    "hero-2",
     "collection",
-    "blog-posts",
-    "image-gallery",
-    "image-with-text",
-    "slideshow",
-    "slideshow2",
-    "collection-list",
-    "product",
-    "testimonials",
-    "columns",
-    "logo-list",
-    "location-and-contact",
-    "custom"
+    "image-with-text"
   ]
 }
