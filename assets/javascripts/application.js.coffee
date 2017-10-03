@@ -62,7 +62,7 @@ for el in document.querySelectorAll('form[data-validate]')
       if field.dataset.validateField == 'email' and (field.value == '' or !validateEmail(field.value))
         field.classList.add('error')
         err = true
-      if field.dataset.validateField == 'password' and (field.value == '')
+      if (field.dataset.validateField == 'password' or field.dataset.validateField == 'text') and (field.value == '')
         field.classList.add('error')
         err = true
 

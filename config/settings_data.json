@@ -31,7 +31,7 @@
       "type": "header",
       "settings": {
         "logo_alignment": "left",
-        "logo_max_width": "500",
+        "logo_max_width": "100",
         "menu": "header",
         "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
         "section_width": "limited",
@@ -58,7 +58,8 @@
         "payment_mastercard": true,
         "payment_maestro": true,
         "section_width": "limited",
-        "content_width": "limited"
+        "content_width": "limited",
+        "menu": "header"
       },
       "id": "footer"
     },
@@ -101,7 +102,7 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": false,
+        "show_as_slider": true,
         "collection": "teine"
       },
       "translations": {
@@ -373,7 +374,7 @@
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "shoperb_image://id:6427//img_20170903_111849.jpeg",
+            "image": "shoperb_image://id:6456//img_20170903_111849.jpeg",
             "image_alignment": "top-right",
             "link": "http://www.google.com",
             "caption": "asdasd"
@@ -492,12 +493,27 @@
           },
           "links": {
           }
+        },
+        "1506597337849": {
+          "type": "image_slide",
+          "settings": {
+            "image_alignment": "middle",
+            "text_size": "medium",
+            "image": "shoperb_image://id:6457//da_chikistan.png"
+          },
+          "translations": {
+            "et": {
+            }
+          },
+          "links": {
+          }
         }
       },
       "block_order": [
-        "slide-2",
         "slide-1",
-        "slide-3"
+        "slide-2",
+        "slide-3",
+        "1506597337849"
       ],
       "id": "slideshow",
       "translations": {
@@ -626,7 +642,7 @@
         "collection-2": {
           "type": "collection",
           "settings": {
-            "collection": "uus-kollektsioon"
+            "collection": "esse-cabron"
           },
           "translations": {
             "et": {
