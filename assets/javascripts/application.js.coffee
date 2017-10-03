@@ -51,3 +51,25 @@ for el in document.querySelectorAll('[data-sign-up]')
       for field in document.querySelectorAll('[data-business-only]')
         field.classList.add('hidden')
   )
+
+for el in document.querySelectorAll('form[data-validate]')
+  el.addEventListener("submit", (e)->
+    e.preventDefault()
+    err = false
+    for field in el.querySelectorAll('[data-validate-field]')
+      field.classList.remove('error')
+
+      if field.dataset.validateField == 'email' and (field.value == '' or !validateEmail(field.value))
+        field.classList.add('error')
+        err = true
+      if field.dataset.validateField == 'password' and (field.value == '')
+        field.classList.add('error')
+        err = true
+
+    if !err
+      el.submit()
+  )
+
+validateEmail = (email) ->
+  re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  re.test email
