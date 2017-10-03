@@ -58,13 +58,13 @@ for el in document.querySelectorAll('form[data-validate]')
     err = false
     for field in el.querySelectorAll('[data-validate-field]')
       field.classList.remove('error')
+      errEl = field.parentNode.querySelector('[data-type=error-message')
+      field.parentNode.removeChild(errEl) if errEl
 
       if field.dataset.validateField == 'email' and (field.value == '' or !validateEmail(field.value))
-        field.classList.add('error')
-        err = true
+        err = setValidation(field)
       if (field.dataset.validateField == 'password' or field.dataset.validateField == 'text') and (field.value == '')
-        field.classList.add('error')
-        err = true
+        err = setValidation(field)
 
     if !err
       el.submit()
@@ -73,3 +73,12 @@ for el in document.querySelectorAll('form[data-validate]')
 validateEmail = (email) ->
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   re.test email
+
+setValidation = (field) ->
+  field.classList.add('error')
+  if field.dataset.error
+    errormsg = document.createElement('DIV')
+    errormsg.setAttribute('data-type', 'error-message')
+    errormsg.innerHTML = field.dataset.error
+    field.parentNode.appendChild(errormsg)
+  true
