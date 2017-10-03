@@ -191,6 +191,21 @@ h2.product-title {
     color: $text_headings_color;
     font-size: calc(#{$body_font_size} * 1.125);
     font-weight: 700;
+
+    .discount {
+      color: $text_sale_text_color;
+    }
+    .compare-price {
+      color: lighten($text_headings_color, 20%);
+      text-decoration: line-through;
+      padding-right: 10px;
+      display: none;
+
+      &.visible {
+        display: inline-block;
+        font-size: calc(#{$body_font_size} * 1.125);
+      }
+    }
   }
 
   .product-sku {
