@@ -191,6 +191,8 @@
 }
 
 .account-page {
+  padding: 0 #{$default_padding}px;
+
   h3 {
     margin: #{$default_padding}px 0;
   }
