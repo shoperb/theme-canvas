@@ -1,15 +1,16 @@
 {
   "server": {
-    "url": "shoperb.me",
-    "protocol": "https"
+    "url": "shoperb.dev:3000",
+    "protocol": "http"
   },
+  "port": "4000",
+  "preset": null,
+  "verbose": null,
   "oauth-site": "perfectline",
   "oauth-cache": {
     "scope": "admin",
-    "access_token": "pil2214cpj6blbw7c364ih27chepzvi",
-    "refresh_token": "j509ckwl8mvc5igeteo0r6r43k6r10n",
+    "access_token": "68k78jdsag1lyqm2548g9w1fc38lx6g",
+    "refresh_token": "1uvxnjs0jkbwdwd4mblgvgw5zygs4fc",
     "expires_at": null
-  },
-  "port": "4000",
-  "verbose": null
+  }
 }

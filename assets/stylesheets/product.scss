@@ -23,6 +23,9 @@ h2.product-title {
     min-width: 200px;
     position: relative;
     margin: #{$default_padding}px;
+    @include breakpoint(palm) {
+      width: calc(100% - 20px);
+    }
 
     .variant-select {
       position: relative;
@@ -188,6 +191,21 @@ h2.product-title {
     color: $text_headings_color;
     font-size: calc(#{$body_font_size} * 1.125);
     font-weight: 700;
+
+    .discount {
+      color: $text_sale_text_color;
+    }
+    .compare-price {
+      color: lighten($text_headings_color, 20%);
+      text-decoration: line-through;
+      padding-right: 10px;
+      display: none;
+
+      &.visible {
+        display: inline-block;
+        font-size: calc(#{$body_font_size} * 1.125);
+      }
+    }
   }
 
   .product-sku {
@@ -231,22 +249,37 @@ h2.product-title {
     .quantity {
       display: inline-block;
       padding-right: 16px;
+      @include breakpoint(palm) {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin-bottom: 20px;
+      }
     }
     .add-to-cart {
       display: inline-block;
       vertical-align: bottom;
+      @include breakpoint(palm) {
+        display: block;
+      }
 
       .button,
       .disabled-button {
         position: relative;
         top: -1px;
         margin: 0;
+        @include breakpoint(palm) {
+          width: 100%;
+        }
       }
     }
   }
   .thumbs {
     float: left;
     width: 60px;
+    @include breakpoint(palm) {
+      width: 100%;
+    }
 
     .thumb {
       cursor: pointer;
@@ -256,6 +289,10 @@ h2.product-title {
       height: 60px;
       outline: none;
       position: relative;
+      @include breakpoint(palm) {
+        margin-right: #{$default_padding}px;
+        float: left;
+      }
 
       &.active {
         box-shadow: 0 0 0 2px $layout_border_color;
@@ -272,6 +309,10 @@ h2.product-title {
     margin-left: #{$default_padding}px;
     float: left;
     width: calc(100% - 60px - #{$default_padding}px);
+    @include breakpoint(palm) {
+      width: 100%;
+      margin: 0;
+    }
 
     .container {
       display: inline-block;
@@ -322,6 +363,9 @@ h2.product-title {
 .product-quantity-input {
   position: relative;
   float: left;
+  @include breakpoint(palm) {
+    float: none;
+  }
 
   input {
     text-align: center;
@@ -329,6 +373,9 @@ h2.product-title {
     border: none;
     width: 140px;
     -moz-appearance: textfield;
+    @include breakpoint(palm) {
+      width: 100%;
+    }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -372,7 +419,7 @@ h2.product-title {
     left: 0;
     background: rgba(0, 0, 0, 0.8);
   }
-  .product-gallery {
+  .product-gallery-content {
     position: fixed;
     z-index: 999;
     top: 20px;
@@ -380,57 +427,17 @@ h2.product-title {
     bottom: 20px;
     left: 20px;
     background: rgba(0, 0, 0, 1);
+  }
+  .product-gallery {
+    height: 100%;
 
-    .slick-arrow {
-      position: absolute;
-      color: $image_overlay_color;
-      cursor: pointer;
-      top: 50%;
-      height: auto;
-      @include transform(translateY(-50%));
-      z-index: 3;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        //background: lighten($image_overlay_dark_color, 20%);
-        background: darken($buttons_secondary_button_background_color, 20%);
-        left: -13px;
-        top: -13px;
-        border-radius: 1000px;
-        z-index: 1;
-        opacity: 0.7;
-        transition: all 0.2s;
-      }
-      &.slick-prev {
-        left: 53px;
-      }
-      &.slick-next {
-        right: 53px;
-        @include flip;
-      }
-      svg {
-        position: relative;
-        z-index: 2;
-      }
-      &:hover {
-        //color: lighten($image_overlay_light_color, 20%);
-        color: darken($image_overlay_color, 10%);
-
-        &:before {
-          //background: lighten($image_overlay_dark_color, 30%);
-          opacity: 1;
-        }
-      }
-    }
     div {
       height: 100%;
       position: relative;
 
       img {
         max-height: 100%;
+        max-width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -479,6 +486,29 @@ h2.product-title {
       }
     }
   }
+  .tns-outer {
+    height: 100%;
+
+    .tns-controls {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+    }
+    .tns-inner {
+      height: 100%;
+    }
+    button {
+      top: 50%;
+      position: fixed;
+
+      &[data-controls=prev] {
+        left: 30px;
+      }
+      &[data-controls=next] {
+        right: 30px;
+      }
+    }
+  }
 }
 
 .product-page {
@@ -494,6 +524,10 @@ h2.product-title {
 
     .randomize-list {
       display: none;
+
+      &.show {
+        display: block;
+      }
     }
     .product-title {
       padding-top: 11px;

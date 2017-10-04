@@ -2,7 +2,7 @@
 <section class="recommended product-container">
   <h4 class="general-title">{{'product.recommended' | t}}</h4>
 
-  <div class="grid gutter-neutralizer randomize-list" data-show-only="4">
+  <div class="grid randomize-list" data-show-only="4">
     {% for product in product.others_in_category %}
     {% include 'list_product' with 'recommended' %}
     {% endfor %}
@@ -11,23 +11,7 @@
 {% endif %}
 
 <script>
-  $(document).ready(function() {
-    if ($('.randomize-list').length) {
-      var returner;
-      var list = document.querySelector('.randomize-list');
-
-      for(var i = list.children.length; i >= 0; i--){
-        list.appendChild(list.children[Math.random() * i | 0]);
-      }
-
-      var count = $('.randomize-list').data('show-only');
-      if (parseInt(count))
-        count++;
-      else
-        count = 5;
-
-      $('.randomize-list>div:nth-child(n+'+count+')').remove();
-      $('.randomize-list').show();
-    }
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  randomizeList('{{selector}}');
+});
 </script>

@@ -1,64 +1,6 @@
 section[data-type] {
   @extend .general-content;
   box-sizing: border-box;
-
-  .slick-arrow {
-    position: absolute;
-    top: 50%;
-    @include transform(translateY(-50%));
-    color: $text_headings_color;
-    cursor: pointer;
-
-    &:hover {
-      color: lighten($text_headings_color, 20%);
-    }
-    svg {
-      width: 25px;
-      height: 25px;
-      display: block;
-    }
-    &.slick-prev {
-      left: -35px;
-    }
-    &.slick-next {
-      right: -35px;
-
-      .icon-arrow-next {
-        @include transform(rotate(180deg));
-      }
-    }
-  }
-  .slick-dots {
-    list-style: none;
-    margin: 0;
-    padding: 45px 0 0;
-    text-align: center;
-
-    li {
-      width: 10px;
-      height: 10px;
-      border-radius: 1000px;
-      margin: 0 5px;
-      //background: lighten($image_overlay_dark_color, 20%);
-      background: $buttons_primary_button_background_color;
-      display: inline-block;
-      box-shadow: inset 0 0 0 1px $buttons_primary_button_background_color;
-      box-sizing: border-box;
-      opacity: 0.7;
-
-      button {
-        opacity: 0;
-        cursor: pointer;
-        padding: 0;
-        height: 10px;
-      }
-      &.slick-active,
-      &:hover {
-        background: $layout_background_color;
-        opacity: 1;
-      }
-    }
-  }
 }
 
 .section-height {
@@ -180,15 +122,16 @@ section[data-type=collection] {
       width: calc(100% - 50px);
     }
   }
-  .slick-arrow {
-    top: -35px;
-    @include transform(none);
-
-    &.slick-prev {
-      left: 10px;
-    }
-    &.slick-next {
-      right: 10px;
+  .tns-outer {
+    .tns-controls {
+      button {
+        &[data-controls=prev] {
+          left: 15px;
+        }
+        &[data-controls=next] {
+          right: 15px;
+        }
+      }
     }
   }
 }
@@ -324,6 +267,9 @@ section[data-type=slideshow] {
   &:not(.full-width) {
     .slideshow {
       margin: #{$default_padding}px;
+      @include breakpoint(palm) {
+        margin: 0;
+      }
     }
   }
   .row {
@@ -344,89 +290,71 @@ section[data-type=slideshow] {
       color: $image_overlay_color;
     }
   }
-  .slick-arrow {
-    z-index: 1;
-    //color: $image_overlay_light_color;
-    color: $layout_background_color;
+  .tns-outer {
+    .tns-inner {
+      .tns-item {
+        a,
+        .container {
+          height: 100%;
+          width: 100%;
+          display: table;
+          position: relative;
 
-    svg {
-      position: relative;
-      z-index: 2;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      //background: lighten($image_overlay_dark_color, 20%);
-      background: $buttons_primary_button_background_color;
-      left: -13px;
-      top: -12px;
-      border-radius: 1000px;
-      z-index: 1;
-      opacity: 0.7;
-    }
-    &.slick-prev {
-      left: 53px;
-
-      &:before {
-        top: -13px;
-      }
-    }
-    &.slick-next {
-      right: 53px;
-    }
-    &:hover {
-      //color: lighten($image_overlay_light_color, 20%);
-      color: darken($layout_background_color, 10%);
-
-      &:before {
-        //background: lighten($image_overlay_dark_color, 30%);
-        opacity: 0.8;
+          iframe {
+            position: absolute;
+          }
+          .text {
+            width: 100%;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+          }
+        }
       }
     }
   }
-  .slick-dots {
-    position: absolute;
-    left: 50%;
-    @include transform(translateX(-50%));
-    bottom: 15px;
-    padding: 0;
-
-    li {
-      float: left;
-    }
-  }
-  .slick-slider {
-    .slick-track,
-    .slick-list {
-      height: 100%;
-      min-height: inherit;
-    }
-    .slide {
-      background-size: cover;
-      min-height: inherit;
-
-      a,
-      .container {
-        width: 100%;
-        height: 100%;
-        display: table;
-        min-height: inherit;
-      }
-      .text {
-        padding: #{$default_padding}px 15%;
-        width: 100%;
-        position: relative;
-        display: table-cell;
-        vertical-align: middle;
-        pointer-events: none;
-      }
-      iframe {
-        @include centerize;
-      }
-    }
-  }
+  //.slick-dots {
+  //  position: absolute;
+  //  left: 50%;
+  //  @include transform(translateX(-50%));
+  //  bottom: 15px;
+  //  padding: 0;
+  //
+  //  li {
+  //    float: left;
+  //  }
+  //}
+  //.slick-slider {
+  //  .slick-track,
+  //  .slick-list {
+  //    height: 100%;
+  //    min-height: inherit;
+  //  }
+  //  .slide {
+  //    background-size: cover;
+  //    min-height: inherit;
+  //
+  //    a,
+  //    .container {
+  //      width: 100%;
+  //      height: 100%;
+  //      display: table;
+  //      min-height: inherit;
+  //    }
+  //    .text {
+  //      padding: #{$default_padding}px 15%;
+  //      width: 100%;
+  //      position: relative;
+  //      display: table-cell;
+  //      vertical-align: middle;
+  //      pointer-events: none;
+  //    }
+  //    iframe {
+  //      @include centerize;
+  //    }
+  //  }
+  //}
   .opacity-image {
     background: asset-url('images/placeholder.svg') no-repeat center $layout_secondary_background_color;
   }
@@ -471,6 +399,7 @@ section[data-type=slideshow] {
     box-sizing: border-box;
     text-align: center;
     position: relative;
+    padding: 10px !important;
 
     .background {
       position: absolute;
@@ -501,29 +430,8 @@ section[data-type=slideshow] {
       }
     }
   }
-  .grid.testimonial-slider {
-    position: relative;
-
-    .slick-arrow {
-      position: absolute;
-      top: 50%;
-      @include transform(translateY(-50%));
-
-      svg {
-        width: 50px;
-        height: 50px;
-      }
-      &.slick-prev {
-        left: -35px;
-      }
-      &.slick-next {
-        right: -35px;
-      }
-    }
-    @include breakpoint(1255) {
-      width: calc(100% - 50px);
-      margin: 0 auto;
-    }
+  .tns-inner {
+    padding-bottom: 30px;
   }
 }
 [data-type=text-columns-with-images] {
@@ -648,7 +556,9 @@ section[data-type=slideshow] {
   position: relative;
 
   .scrolloff {
-    pointer-events: none;
+    iframe {
+      pointer-events: none;
+    }
   }
   .map-container {
     position: absolute;

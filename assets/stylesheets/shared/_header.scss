@@ -30,6 +30,9 @@ header#main-header {
 
       img {
         display: block;
+        @include breakpoint(palm) {
+          max-width: 100% !important;
+        }
       }
     }
   }
@@ -47,7 +50,7 @@ header#main-header {
     }
   }
   .current-locale {
-    font-size: $heading_font_size;
+    font-size: 1.125rem;
   }
   .search,
   .account,
@@ -55,6 +58,7 @@ header#main-header {
   .search-container,
   .account-container {
     cursor: pointer;
+    font-size: 1.125rem;
 
     svg {
       pointer-events: none;
@@ -123,6 +127,9 @@ header#main-header {
         padding: 0 3px;
         color: $text_link_color;
 
+        &.account-container {
+          padding-top: 5px;
+        }
         &.cart-container {
           padding-right: 0;
         }
