@@ -17,15 +17,16 @@ class @VariantSelector
         @generateOptionSelect(id, value, container)
 
       # check radio-buttons once page loaded
-      json = varSel.querySelector("option[value='#{varSel.value}']").json
-      for attr in json.attributes
-        for radio in container.querySelectorAll("input[name='attribute-#{attr.name.toLowerCase()}']")
-          if radio.value == @getName(attr)
-            radio.checked = true
-            @changeSelectedVariantOption(radio)
-            @markMissingOptions(radio)
-          else
-            radio.checked = false
+      continue unless varSel?
+      if json = varSel.querySelector("option[value='#{varSel.value}']")?.json
+        for attr in json.attributes
+          for radio in container.querySelectorAll("input[name='attribute-#{attr.name.toLowerCase()}']")
+            if radio.value == @getName(attr)
+              radio.checked = true
+              @changeSelectedVariantOption(radio)
+              @markMissingOptions(radio)
+            else
+              radio.checked = false
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
