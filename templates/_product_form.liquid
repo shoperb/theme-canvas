@@ -17,6 +17,24 @@
   <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
 </div>
 
+{% for variant in product.variants %}
+{% assign image = variant.image %}
+{% comment %}
+{% if image.width > 160 %}{{image.size-160.url}} 160w {{160 | divided_by: image.aspect_ratio | round}}h,{% endif %}
+{% if image.width > 240 %}{{image.size-240.url}} 240w {{240 | divided_by: image.aspect_ratio | round}}h,{% endif %}
+{% if image.width > 480 %}{{image.size-480.url}} 480w {{480 | divided_by: image.aspect_ratio | round}}h,{% endif %}
+{% if image.width > 720 %}{{image.size-720.url}} 720w {{720 | divided_by: image.aspect_ratio | round}}h,{% endif %}
+{% if image.width > 2048 %}{{image.size-2048.url}} 2048w {{2048 | divided_by: image.aspect_ratio | round}}h,{% endif %}
+{{image.url}} {{image.width}}w {{image.height}}h
+
+{"id":11940,"warehouse_stock":0,"price":"60.0","allow_backorder":false,"track_inventory":false,"charge_taxes":true,"digital":false,"position":1,"stock_amounts":[{"amount":0,"warehouse":"1"}],"product_handle":"variant-image-test","attributes":[{"id":7756,"value":"kolm","translations":{"en":{"value":"kolm"},"et":{"value":"kolm"},"ru":{"value":"kolm"}},"attribute_key":{"name":"Test"},"variant_id":11940,"name":"Test"},{"id":7757,"value":"223","translations":{"en":{"value":"223"},"et":{"value":"223"},"ru":{"value":"223"}},"attribute_key":{"name":"Loll"},"variant_id":11940,"name":"Loll"}],"current_price":60.0,"has_discount":false,"discount_price":null,"stock":null}
+{% endcomment %}
+{{variant.image.size-160.url}}
+{{variant.image.url}}
+<br>
+{% endfor %}
+
+
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=false>
     <div class="variants clearfix">
@@ -25,7 +43,7 @@
       <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{% if product_form == 'page' %}true{% else %}{% if block.settings.show_variant_label %}{{block.settings.show_variant_label}}{% else %}{{section.settings.show_variant_label}}{% endif %}{% endif %}">
         <option>empty</option>
         {% for variant in product.variants %}
-        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}">{{variant.name}}</option>
+        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}" data-variant-image="{{variant.image.url}}">{{variant.name}}</option>
         {% endfor %}
       </select>
 
