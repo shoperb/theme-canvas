@@ -161,8 +161,7 @@ class @VariantSelector
       else
         node.classList.remove('visible')
 
-    debugger
-    image = opt.dataset.variantImage
+    switchImage(opt, 'variant')
 
     container.querySelector('[data-current-price]').innerHTML = opt.dataset.price
     if opt.dataset.discount_price
