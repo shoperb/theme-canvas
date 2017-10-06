@@ -8,6 +8,7 @@ class @VariantSelector
     # collecting data from options
     for varSel in document.querySelectorAll(selector+" "+@variantSelector)
       @counter += 1
+      @cheapestOption = null
       container = varSel.closest('form').querySelector('[data-variant-container]')
 
       @variantOptions = {}
@@ -16,17 +17,21 @@ class @VariantSelector
       for id, value of @variantOptions
         @generateOptionSelect(id, value, container)
 
-      # check radio-buttons once page loaded
-      #TODO: choose min variant to reprosent values and call switchVariantData
+      # After load fill page with cheapest variant
+      @switchVariantData(@cheapestOption, @cheapestOption, false)
       
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
       json = JSON.parse(js)
+      opt.json = json
+
+      @cheapestOption = opt unless @cheapestOption
+      @cheapestOption = opt if parseFloat(@cheapestOption.json.price) > parseFloat(opt.json.price)
+
       for attr in json.attributes
         # updating options to select easier later
         opt.setAttribute("data-attribute-#{attr.name}", @getName(attr))
-        opt.json = json
         aname = attr.name.toLowerCase()
         @variantOptions[aname] ?= []
         @variantOptions[aname].push(attr)
