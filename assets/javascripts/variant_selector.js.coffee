@@ -17,16 +17,8 @@ class @VariantSelector
         @generateOptionSelect(id, value, container)
 
       # check radio-buttons once page loaded
-      continue unless varSel?
-      if json = varSel.querySelector("option[value='#{varSel.value}']")?.json
-        for attr in json.attributes
-          for radio in container.querySelectorAll("input[name='attribute-#{attr.name.toLowerCase()}']")
-            if radio.value == @getName(attr)
-              radio.checked = true
-              @changeSelectedVariantOption(radio)
-              @markMissingOptions(radio)
-            else
-              radio.checked = false
+      #TODO: choose min variant to reprosent values and call switchVariantData
+      
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
@@ -104,7 +96,7 @@ class @VariantSelector
     selector     = ""
     checked_opts = form.querySelectorAll("[data-attribute-radio]:checked")
     return if checked_opts.length < form.querySelectorAll(".variant-selector").length
-    
+
     for inp in checked_opts
       selector+="[data-#{inp.name}='#{inp.value}']"
     if opt = form.querySelector(selector)
@@ -152,7 +144,7 @@ class @VariantSelector
       this.closest(".variant-selector").classList.toggle('open')
 
   # fill data when variant has been chosen
-  switchVariantData: (el, opt) ->
+  switchVariantData: (el, opt, chooseImage = true) ->
     container = el.closest('[data-product-form]').parentNode
     if node = container.querySelector('[data-variant-sku-container]')
       node.querySelector('[data-variant-sku]').innerHTML = opt.json.sku
@@ -161,8 +153,9 @@ class @VariantSelector
       else
         node.classList.remove('visible')
 
-    debugger
-    image = opt.dataset.variantImage
+    if chooseImage
+      debugger
+      image = opt.dataset.variantImage
 
     container.querySelector('[data-current-price]').innerHTML = opt.dataset.price
     if opt.dataset.discount_price
