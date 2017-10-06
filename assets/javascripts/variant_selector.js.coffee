@@ -101,8 +101,11 @@ class @VariantSelector
     form     = target.closest("form")
 
     # lookup for selected option
-    selector = ""
-    for inp in form.querySelectorAll("[data-attribute-radio]:checked")
+    selector     = ""
+    checked_opts = form.querySelectorAll("[data-attribute-radio]:checked")
+    return if checked_opts.length < form.querySelectorAll(".variant-selector").length
+    
+    for inp in checked_opts
       selector+="[data-#{inp.name}='#{inp.value}']"
     if opt = form.querySelector(selector)
       form.querySelector(@variantSelector).value = opt.value
@@ -148,6 +151,7 @@ class @VariantSelector
           el.classList.remove('open')
       this.closest(".variant-selector").classList.toggle('open')
 
+  # fill data when variant has been chosen
   switchVariantData: (el, opt) ->
     container = el.closest('[data-product-form]').parentNode
     if node = container.querySelector('[data-variant-sku-container]')
