@@ -23,12 +23,13 @@
 
       {% if product.variants.many? %}
       <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{% if product_form == 'page' %}true{% else %}{% if block.settings.show_variant_label %}{{block.settings.show_variant_label}}{% else %}{{section.settings.show_variant_label}}{% endif %}{% endif %}">
+        <option>empty</option>
         {% for variant in product.variants %}
-        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}">{{variant.name}}</option>
+        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}" data-image="{{forloop.index}}">{{variant.name}}</option>
         {% endfor %}
       </select>
 
-      <div class="row" data-variant-container data-icon="{{'images/icons.svg' | asset_url}}"></div>
+      <div class="row" data-variant-container data-icon="{{'images/icons.svg' | asset_url}}" data-select="{{'product.select' | t}}"></div>
       {% else %}
       <input type="hidden" name="variant" value="{{default_variant.id}}">
       {% endif %}

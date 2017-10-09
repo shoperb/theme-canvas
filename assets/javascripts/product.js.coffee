@@ -6,23 +6,7 @@ class @Product
           tnb.classList.remove('active')
         this.classList.add('active')
 
-        img = this.dataset
-        photos = this.parentNode.parentNode.querySelector('.photos .container')
-        current = document.querySelector('[data-image=full-' + img.image + ']')
-        for photo in photos.querySelectorAll('.photo')
-          photo.classList.remove('visible')
-        current.classList.add('visible')
-        current.onmousemove = zoom
-
-        testImage = new Image
-        testImage.src = img.imageurl
-        testImage.onload = ->
-          if (testImage.width < photos.offsetWidth)
-            current.classList.remove('zoom')
-            current.classList.add('no-zoom')
-          else
-            current.classList.remove('no-zoom')
-            current.classList.add('zoom')
+        switchImage(this)
       )
 
     # product gallery

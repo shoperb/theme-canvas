@@ -34,6 +34,10 @@ h2.product-title {
       @extend .input-field-extender;
       cursor: pointer;
       padding: 8px 10px;
+
+      &.placeholder {
+        color: darken($layout_background_color, 50%);
+      }
     }
     svg {
       position: absolute;

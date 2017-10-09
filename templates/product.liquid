@@ -26,6 +26,15 @@
                    alt="{{product.name | escape}}">
             </div>
             {% endfor %}
+            {% for variant in product.variants %}
+            {% assign image = variant.image %}
+            <div class="lazyload photo" data-bgset="{{image.size-2048.url}}" data-image="variantfull-{{forloop.index}}" data-image-zoom>
+              <img class="lazyload"
+                   data-src="{{image.size-480.url}}"
+                   data-srcset="{% include 'srcset' with 'product' %}"
+                   alt="{{product.name | escape}}">
+            </div>
+            {% endfor %}
           </div>
         </div>
       </div><!--

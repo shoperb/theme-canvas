@@ -70,3 +70,22 @@ class @DropdownInViewport
         count++
       el.parentNode.removeChild(el) if i > count
     list.classList.add('show')
+
+@switchImage = (_this, add = '') ->
+  img = _this.dataset
+  photos = document.querySelector('.product-container .photos .container')
+  current = document.querySelector('[data-image=' + add + 'full-' + img.image + ']')
+  for photo in photos.querySelectorAll('.photo')
+    photo.classList.remove('visible')
+  current.classList.add('visible')
+  current.onmousemove = zoom
+
+  testImage = new Image
+  testImage.src = img.imageurl
+  testImage.onload = ->
+    if (testImage.width < photos.offsetWidth)
+      current.classList.remove('zoom')
+      current.classList.add('no-zoom')
+    else
+      current.classList.remove('no-zoom')
+      current.classList.add('zoom')
