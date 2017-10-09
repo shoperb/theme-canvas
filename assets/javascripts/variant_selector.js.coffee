@@ -47,7 +47,8 @@ class @VariantSelector
     div_selected = document.createElement("div")
     div.classList.add("variant-selector")
     div_selector.classList.add("variant-select")
-    div_selected.classList.add("selected")
+    div_selected.classList.add("selected", "placeholder")
+    div_selected.innerHTML = container.dataset.select
     selectList = document.createElement("ul");
     selectList.classList.add("variant-option-dropdown", 'variant-class-'+lname)
     if container.closest('form').querySelector('[data-variant-select]').dataset.showLabels == 'true'
@@ -112,6 +113,7 @@ class @VariantSelector
 
   changeSelectedVariantOption: (target)->
     if node = target.closest(".variant-selector").querySelector(".selected")
+      node.classList.remove('placeholder')
       node.textContent = target.value
       for el in target.closest(".variant-selector .variant-option-dropdown").querySelectorAll('li')
         el.classList.remove('active')

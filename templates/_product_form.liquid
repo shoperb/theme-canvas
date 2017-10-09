@@ -29,7 +29,7 @@
         {% endfor %}
       </select>
 
-      <div class="row" data-variant-container data-icon="{{'images/icons.svg' | asset_url}}"></div>
+      <div class="row" data-variant-container data-icon="{{'images/icons.svg' | asset_url}}" data-select="{{'product.select' | t}}"></div>
       {% else %}
       <input type="hidden" name="variant" value="{{default_variant.id}}">
       {% endif %}
