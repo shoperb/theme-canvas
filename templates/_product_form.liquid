@@ -12,9 +12,9 @@
 
 <div class="product-pricing">
   <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
-    <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money}}</span>
+    <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money_with_cents}}</span>
   </span>
-  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money}}{% else %}{{'14.95' | money}}{% endif %}</span>
+  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money_with_cents}}{% else %}{{'14.95' | money_with_cents}}{% endif %}</span>
 </div>
 
 <div data-position="cart-form">
@@ -25,7 +25,7 @@
       <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{% if product_form == 'page' %}true{% else %}{% if block.settings.show_variant_label %}{{block.settings.show_variant_label}}{% else %}{{section.settings.show_variant_label}}{% endif %}{% endif %}">
         <option>empty</option>
         {% for variant in product.variants %}
-        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money}}" data-discount_price="{{variant.discount_price | money}}" data-image="{{forloop.index}}">{{variant.name}}</option>
+        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money_with_cents}}" data-discount_price="{{variant.discount_price | money_with_cents}}" data-image="{{forloop.index}}">{{variant.name}}</option>
         {% endfor %}
       </select>
 

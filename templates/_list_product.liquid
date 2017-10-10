@@ -25,12 +25,12 @@
 
     {% if product.available? %}
     <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <span class="actual-price money{% if variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{variant.current_price | money}}</span>
+      <span class="actual-price money{% if variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{variant.current_price | money_with_cents}}</span>
       {% if variant.discount? %}
       <span>{{'product.was' | t}}</span>
       {% endif %}
       <span class="compare-price{% if variant.discount? %} visible{% endif %}">
-        <span class="money" data-price data-currency="{{shop.currency.code}}">{{variant.price | money}}</span>
+        <span class="money" data-price data-currency="{{shop.currency.code}}">{{variant.price | money_with_cents}}</span>
       </span>
     </div>
     {% else %}
