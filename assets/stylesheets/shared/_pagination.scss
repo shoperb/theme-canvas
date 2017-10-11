@@ -38,7 +38,7 @@
       }
       &.active {
         position: relative;
-        color: lighten($text_link_color, 20%);
+        opacity: 0.5;
       }
       &.next,
       &.prev {
