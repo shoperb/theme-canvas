@@ -13,7 +13,21 @@ document.addEventListener("DOMContentLoaded", ->
   new Product()
   svg4everybody(polyfill: true)
   new DropdownInViewport()
-  document.querySelector('[data-image-zoom]')?.onmousemove = zoom
+
+  #handle first image size vs zoom
+  image = document.querySelector('[data-image-zoom]')
+  photos = document.querySelector('.product-container .photos')
+  if image and photos
+    testImage = new Image
+    testImage.src = image.dataset.bgset
+    testImage.onload = ->
+      if (testImage.width < photos.offsetWidth)
+        image.classList.remove('zoom')
+        image.classList.add('no-zoom')
+      else
+        image.onmousemove = zoom
+        image.classList.remove('no-zoom')
+        image.classList.add('zoom')
 )
 window.onresize = ->
   new DropdownInViewport()
