@@ -22,10 +22,10 @@
     {% assign grid_class = 'desk--one-fifth' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} show-slideshow{% endif %}>
+<section data-section-id="{{section.id}}" data-type="collection"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} show-slideshow{% endif %} itemscope itemtype="http://schema.org/ItemList">
 
   {% if section.settings.title != blank %}
-  <h3 class="general-title" data-theme-editor-setting="title">{{section.settings.title}}</h3>
+  <h3 class="general-title" data-theme-editor-setting="title" itemprop="name">{{section.settings.title}}</h3>
   {% endif %}
 
   <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">

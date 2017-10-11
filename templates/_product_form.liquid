@@ -25,7 +25,7 @@
       <select name="variant" id="variant" data-behaviour="select" data-variant-select data-show-labels="{% if product_form == 'page' %}true{% else %}{% if block.settings.show_variant_label %}{{block.settings.show_variant_label}}{% else %}{{section.settings.show_variant_label}}{% endif %}{% endif %}">
         <option>empty</option>
         {% for variant in product.variants %}
-        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money_with_cents}}" data-discount_price="{{variant.discount_price | money_with_cents}}" data-image="{{forloop.index}}">{{variant.name}}</option>
+        <option data-variant='{{variant.json}}' value="{{variant.id}}" data-price="{{variant.price | money_with_cents}}" data-discount_price="{{variant.discount_price | money_with_cents}}" data-image="{{forloop.index}}"></option>
         {% endfor %}
       </select>
 

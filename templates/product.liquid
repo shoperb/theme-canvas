@@ -19,7 +19,7 @@
         <div data-position="photos" class="photos">
           <div class="container">
             {% for image in product.images %}
-            <div class="lazyload photo{% if forloop.first %} visible{% endif %}" data-bgset="{{image.size-2048.url}}" data-image="full-{{forloop.index}}" data-image-zoom>
+            <div class="lazyload photo{% if forloop.first %} visible{% endif %} no-zoom" data-bgset="{{image.size-2048.url}}" data-image="full-{{forloop.index}}" data-image-zoom>
               <img class="lazyload"
                    data-src="{{image.size-480.url}}"
                    data-srcset="{% include 'srcset' with 'product' %}"
@@ -41,7 +41,7 @@
         </div>
       </div><!--
       --><div class="grid__item one-whole desk--one-half product-details">
-        <h1 class="product-title general-title">{{product.name}}</h1>
+        <h1 class="product-title general-title" itemprop="name">{{product.name}}</h1>
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
           {% if product %}

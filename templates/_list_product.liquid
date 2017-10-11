@@ -8,11 +8,12 @@
 {% assign grid = 'one-half lap--one-half desk--one-quarter' %}
 {% endif %}
 
-{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
 
   <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product" data-product-list-handle="{{product.handle}}">
     <meta itemprop="url" content="{{url.current_url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
+    <meta itemprop="position" content="{{forloop.index}}" />
 
     {% assign image = product.image %}
     <div class="lazyload image{% if product.image %} with-image" data-bgset="{% include 'srcset' with 'product' %}" data-parent-fit="cover" data-sizes="auto{% endif %}"></div>

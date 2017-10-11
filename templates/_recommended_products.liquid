@@ -1,6 +1,6 @@
 {% if product.others_in_category.any? %}
-<section class="recommended product-container">
-  <h4 class="general-title">{{'product.recommended' | t}}</h4>
+<section class="recommended product-container" itemscope itemtype="http://schema.org/ItemList">
+  <h4 class="general-title" itemprop="name">{{'product.recommended' | t}}</h4>
 
   <div class="grid randomize-list" data-show-only="4">
     {% for product in product.others_in_category %}
