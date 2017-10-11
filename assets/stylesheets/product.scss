@@ -151,6 +151,16 @@ h2.product-title {
     }
   }
 }
+.product-price,
+.product-pricing {
+  .price-symbol,
+  .price-number {
+    float: left;
+  }
+  .price-number {
+    padding-right: 5px;
+  }
+}
 .product-container {
   a.product,
   .fake-link {
@@ -205,6 +215,9 @@ h2.product-title {
       padding-right: 10px;
       display: none;
 
+      span {
+        text-decoration: line-through;
+      }
       &.visible {
         display: inline-block;
         font-size: calc(#{$body_font_size} * 1.125);
@@ -220,10 +233,6 @@ h2.product-title {
       display: block;
     }
   }
-  .product-pricing {
-    color: $text_headings_color;
-    font-size: calc(#{$heading_scaling} * #{$heading_font_size});
-  }
   .product-description {
     padding: 10px 0;
 
@@ -232,10 +241,14 @@ h2.product-title {
     }
   }
   .product-pricing {
+    color: $text_headings_color;
+    font-size: calc(#{$heading_scaling} * #{$heading_font_size});
+
     .compare-price {
       color: lighten($text_body_color, 10%);
       text-decoration: line-through;
       padding-right: 10px;
+      float: left;
       display: none;
 
       &.visible {

@@ -43,12 +43,7 @@
       --><div class="grid__item one-whole desk--one-half product-details">
         <h1 class="product-title general-title" itemprop="name">{{product.name}}</h1>
 
-        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
-          {% if product %}
-          <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
-          {% endif %}
-
+        <div data-product-form>
           {% include 'product_form' with 'page' %}
         </div>
       </div>
