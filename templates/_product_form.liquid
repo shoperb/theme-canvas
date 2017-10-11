@@ -10,12 +10,14 @@
   {% endif %}
 </div>
 
+{% if product.available? %}
 <div class="product-pricing">
   <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money_with_cents}}</span>
   </span>
   <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money_with_cents}}{% else %}{{'14.95' | money_with_cents}}{% endif %}</span>
 </div>
+{% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=false>
@@ -41,7 +43,7 @@
         {% if block.settings.show_variant_label or section.settings.show_variant_label or product_form == 'page' %}
         <label class="product-form-title">{{'product.quantity' | t}}</label>
         {% endif %}
-        <div class="product-quantity-input">
+        <div class="product-quantity-input" data-add-quantity="{% if product.available? %}true{% else %}false{% endif %}">
           <div data-quantity="decrease">
             {% include 'icon' with 'minus' %}
           </div>
