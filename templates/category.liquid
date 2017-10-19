@@ -24,10 +24,10 @@
       </sidebar>
     </div><!--
 
-    --><div class="grid__item one-whole palm--two-third desk--three-quarters">
+    --><div class="grid__item one-whole palm--two-third desk--three-quarters" itemscope itemtype="http://schema.org/ItemList">
       <header class="grid">
         <div class="grid__item one-whole desk--three-quarters">
-          <h2 class="general-title">{{category.name}}</h2>
+          <h2 class="general-title" itemprop="name">{{category.name}}</h2>
         </div><!--
         --><div class="grid__item one-whole desk--one-quarter sorting">
           {% include 'sortable' %}

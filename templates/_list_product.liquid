@@ -8,11 +8,12 @@
 {% assign grid = 'one-half lap--one-half desk--one-quarter' %}
 {% endif %}
 
-{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
 
   <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product" data-product-list-handle="{{product.handle}}">
-    <meta itemprop="url" content="{{url.current_url}}">
+    <meta itemprop="url" content="{{url.current_url}}{{product.url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
+    <meta itemprop="position" content="{{forloop.index}}">
 
     {% assign image = product.image %}
     <div class="lazyload image{% if product.image %} with-image" data-bgset="{% include 'srcset' with 'product' %}" data-parent-fit="cover" data-sizes="auto{% endif %}"></div>
@@ -25,12 +26,14 @@
 
     {% if product.available? %}
     <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <span class="actual-price money{% if variant.discount? %} discount{% endif %}" data-current-price itemprop="price" data-currency="{{shop.currency.code}}">{{variant.current_price | money_with_cents}}</span>
+      <span class="price-symbol" itemprop="priceCurrency" content="{{shop.currency.code}}">{{shop.currency.symbol}}</span>
+      <span class="price-number{% if variant.discount? %} discount{% endif %}" data-current-price itemprop="price" content="{{variant.current_price | money_without_currency}}" data-currency="{{shop.currency.code}}">{{variant.current_price | money_without_currency}}</span>
       {% if variant.discount? %}
       <span>{{'product.was' | t}}</span>
       {% endif %}
       <span class="compare-price{% if variant.discount? %} visible{% endif %}">
-        <span class="money" data-price data-currency="{{shop.currency.code}}">{{variant.price | money_with_cents}}</span>
+        <span class="price-symbol">{{shop.currency.symbol}}</span>
+        <span data-price data-currency="{{shop.currency.code}}">{{variant.price | money_without_currency}}</span>
       </span>
     </div>
     {% else %}
