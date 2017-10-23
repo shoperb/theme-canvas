@@ -1,0 +1,33 @@
+{
+  "name": "Newsletter",
+  "generic": true,
+  "settings": [
+    {
+      "type": "select",
+      "handle": "section_width",
+      "default": "limited",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "handle": "title"
+    },
+    {
+      "type": "richtext",
+      "handle": "text"
+    },
+    {
+      "type": "html",
+      "handle": "form"
+    }
+  ]
+}
