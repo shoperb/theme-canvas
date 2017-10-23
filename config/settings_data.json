@@ -328,6 +328,16 @@
         "image_1505739851313_3"
       ]
     },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Newsletter",
+        "text": "A short sentence describing what someone will receive by subscribing",
+        "form": "<form><input placeholder='email address' type='text'><button>subscribe</button></form>",
+        "section_width": "full-width"
+      },
+      "id": "newsletter"
+    },
     "collection_list_1505742366783": {
       "id": "collection_list_1505742366783",
       "type": "collection_list",
@@ -432,6 +442,7 @@
   "content_for_index": [
     "hero-1",
     "collection",
-    "image-with-text"
+    "image-with-text",
+    "newsletter"
   ]
 }

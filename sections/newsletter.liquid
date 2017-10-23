@@ -1,0 +1,21 @@
+<section data-section-id="{{section.id}}" data-type="newsletter"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
+  <div class="background"></div>
+
+  <div class="newsletter-container">
+    {% if section.settings.title != blank %}
+    <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
+    {% endif %}
+
+    <div class="grid">
+      {% if section.settings.text != blank %}
+      <div class="text-content general-text" data-theme-editor-setting="text" > {{section.settings.text}}</div>
+      {% endif %}
+
+      {% if section.settings.form != blank %}
+      <div class="newsletter-form">
+        {{section.settings.form}}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
