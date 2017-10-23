@@ -571,6 +571,9 @@
       "newsletter": {
         "title": "Newsletter",
         "settings": {
+          "email_marketing": {
+            "title": "Select service..."
+          },
           "section_width": {
             "title": "Section width",
             "options": {
@@ -585,7 +588,7 @@
             "title": "Text"
           },
           "form": {
-            "title": "Mailinglist from HTML"
+            "title": "Message after form submit"
           }
         }
       },

@@ -3,6 +3,10 @@
   "generic": true,
   "settings": [
     {
+      "type": "emailmarketing",
+      "handle": "email_marketing"
+    },
+    {
       "type": "select",
       "handle": "section_width",
       "default": "limited",

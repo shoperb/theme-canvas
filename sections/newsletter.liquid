@@ -6,16 +6,21 @@
     <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
     {% endif %}
 
-    <div class="grid">
-      {% if section.settings.text != blank %}
-      <div class="text-content general-text" data-theme-editor-setting="text" > {{section.settings.text}}</div>
-      {% endif %}
-
-      {% if section.settings.form != blank %}
-      <div class="newsletter-form">
-        {{section.settings.form}}
+    <div data-form>
+      <div class="grid">
+        {% if section.settings.text != blank %}
+        <div class="text-content general-text" data-theme-editor-setting="text" > {{section.settings.text}}</div>
+        {% endif %}
       </div>
-      {% endif %}
+
+      <input id="subscribe_url" type="hidden" name="url" value="{{ paths.add_subscriber }}?email_marketing={{ section.settings.email_marketing}}">
     </div>
+
+    {% if section.settings.form != blank %}
+    <div class="newsletter-form" data-on-submit>
+      {{section.settings.form}}
+    </div>
+    {% endif %}
+
   </div>
 </section>
