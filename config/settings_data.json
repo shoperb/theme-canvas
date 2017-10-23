@@ -32,18 +32,12 @@
         "section_width": "full-width",
         "content_width": "limited"
       },
-      "id": "header",
-      "translations": {
-        "et": {
-          "logo_max_width": "150"
-        },
-        "en": {
-        }
-      }
+      "id": "header"
     },
     "footer": {
       "type": "footer",
       "settings": {
+        "menu": "header",
         "allow_social_icons": true,
         "title": "Follow us",
         "social_facebook": "http://www.facebook.com",
@@ -60,18 +54,9 @@
         "payment_mastercard": true,
         "payment_maestro": true,
         "section_width": "full-width",
-        "content_width": "limited",
-        "menu": "header"
+        "content_width": "limited"
       },
-      "id": "footer",
-      "translations": {
-        "et": {
-          "title": "Jälgi meid",
-          "social_facebook": "https://www.facebook.com/bossbabewear/",
-          "social_twitter": "",
-          "social_instagram": "https://www.instagram.com/bossbabewear/"
-        }
-      }
+      "id": "footer"
     },
     "hero-1": {
       "type": "image_with_text_overlay",
@@ -80,11 +65,11 @@
         "title": "Large image with text",
         "text": "This area here is good getting the attention of your customers.",
         "text_size": "medium",
+//        "text_style": "dark",
         "section_height": "medium",
         "section_width": "limited",
         "button_label": "Click here!",
-        "button_link": "http://www.google.com/",
-        "image": "shoperb_image://id:15984//20170610-brofitwearstore-_dsc8848.jpeg"
+        "button_link": "http://www.google.com/"
       },
       "id": "hero-1",
       "translations": {
@@ -92,20 +77,6 @@
           "text": "Seda sektsiooni saad kasutada külastajate tähelepanu köitmiseks. ",
           "title": "Suur pilt tekstiga",
           "button_label": "Vajuta siia"
-        },
-        "en": {
-          "title": "Uniting Boss Babes",
-          "text": "<p>The hottest clothing brand for a training woman.<strong></strong></p>",
-          "button_label": "Shop now"
-        }
-      },
-      "links": {
-        "button_link": {
-          "name": null,
-          "style": "PRODUCTS",
-          "entity_id": null,
-          "entity_type": null,
-          "value": null
         }
       }
     },
@@ -118,8 +89,7 @@
         "show_vendor": true,
         "show_button": true,
         "section_width": "limited",
-        "show_as_slider": true,
-        "collection": "wheels"
+        "show_as_slider": true
       },
       "translations": {
         "et": {
@@ -328,16 +298,6 @@
         "image_1505739851313_3"
       ]
     },
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "title": "Newsletter",
-        "text": "A short sentence describing what someone will receive by subscribing",
-        "form": "<form><input placeholder='email address' type='text'><button>subscribe</button></form>",
-        "section_width": "full-width"
-      },
-      "id": "newsletter"
-    },
     "collection_list_1505742366783": {
       "id": "collection_list_1505742366783",
       "type": "collection_list",
@@ -442,7 +402,6 @@
   "content_for_index": [
     "hero-1",
     "collection",
-    "image-with-text",
-    "newsletter"
+    "image-with-text"
   ]
 }
