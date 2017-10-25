@@ -28,7 +28,6 @@
         "logo_alignment": "left",
         "logo_max_width": "100",
         "menu": "header",
-        "logo": "https://venture360.co/assets/public/logos/demo-logo-f8acf35add5886bc8d112a975ebb2fef.png",
         "section_width": "full-width",
         "content_width": "limited"
       },
@@ -40,9 +39,9 @@
         "menu": "header",
         "allow_social_icons": true,
         "title": "Follow us",
-        "social_facebook": "http://www.facebook.com",
-        "social_twitter": "http://www.twitter.com",
-        "social_instagram": "http://www.instagram.com",
+        "social_facebook": "",
+        "social_twitter": "",
+        "social_instagram": "",
         "allow_payment_icons": true,
         "payment_seb": true,
         "payment_swedbank": true,
@@ -65,11 +64,10 @@
         "title": "Large image with text",
         "text": "This area here is good getting the attention of your customers.",
         "text_size": "medium",
-        //        "text_style": "dark",
         "section_height": "medium",
         "section_width": "limited",
         "button_label": "Click here!",
-        "button_link": "http://www.google.com/"
+        "button_link": ""
       },
       "id": "hero-1",
       "translations": {
@@ -106,7 +104,7 @@
         "text": "Use this combo to really catch attention for a product for example. High quality image with some cleaver wording on it's side can be the key.",
         "button_text": "Click here",
         "image": "",
-        "button_link": "http://www.google.com",
+        "button_link": "",
         "section_width": "limited"
       },
       "translations": {
