@@ -1,0 +1,45 @@
+{
+  "name": "Newsletter",
+  "generic": true,
+  "settings": [
+    {
+      "type": "emailmarketing",
+      "handle": "email_marketing"
+    },
+    {
+      "type": "select",
+      "handle": "section_width",
+      "default": "limited",
+      "options": [
+        {
+          "value": "full-width",
+          "handle": "full-width"
+        },
+        {
+          "value": "limited",
+          "handle": "limited"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "handle": "title",
+      "default": "Newsletter"
+    },
+    {
+      "type": "richtext",
+      "handle": "text",
+      "default": "A short sentence describing what someone will receive by subscribing"
+    },
+    {
+      "type": "text",
+      "handle": "button_text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "richtext",
+      "handle": "form",
+      "default": "You have successfully subscribed to the newsletters"
+    }
+  ]
+}

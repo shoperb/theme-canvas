@@ -1,0 +1,60 @@
+<section data-section-id="{{section.id}}" data-type="newsletter"{% if section.settings.section_width == 'full-width' %} class="full-width"{% endif %}>
+<div class="background"></div>
+
+<div class="newsletter-container">
+    {% if section.settings.title != blank %}
+    <h2 class="general-title" data-theme-editor-setting="title" >{{section.settings.title}}</h2>
+    {% endif %}
+
+    <div data-form>
+        <div class="grid">
+            {% if section.settings.text != blank %}
+            <div class="text-content general-text" data-theme-editor-setting="text" > {{section.settings.text}}</div>
+            {% endif %}
+        </div>
+
+        <div class="newsletter-form newsletter-input">
+            {% form 'subsrcibers' %}
+            <input placeholder='email address' name="url" type='text'>
+            <button class="subscribe_url" value="{{paths.add_subscriber}}?email_marketing={{section.settings.email_marketing}}">{{section.settings.button_text}}</button>
+            {% endform %}
+        </div>
+    </div>
+
+    <div class="newsletter-form newsletter-error hidden">
+        {{'email.validation.failed' | t}}
+    </div>
+
+    <div class="newsletter-form newsletter-submit hidden" data-on-submit>
+        {{section.settings.form}}
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("[data-section-id='{{section.id}}'] .subscribe_url").click(function(event) {
+            event.preventDefault();
+            var url_company = $(this).val();
+            var email = $(this).parent().children("[name='url']").val();
+            var authenticity_token = $(this).parent().children("[name='authenticity_token']").val();
+
+            var request = $.ajax ({
+                url: url_company,
+                type: "POST",
+                data: {email : email, authenticity_token: authenticity_token}
+            });
+
+            request.done(function() {
+                $("[data-section-id='{{section.id}}'] .newsletter-input").addClass('hidden');
+                $("[data-section-id='{{section.id}}'] .newsletter-error").addClass('hidden');
+                $("[data-section-id='{{section.id}}'] .newsletter-submit").removeClass('hidden');
+            });
+
+            request.fail(function() {
+                $("[data-section-id='{{section.id}}'] .newsletter-error").removeClass('hidden');
+            });
+        });
+    });
+</script>
+</section>

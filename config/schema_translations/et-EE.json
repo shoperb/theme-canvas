@@ -583,6 +583,9 @@
           "text": {
             "title": "Tekst"
           },
+          "button_text": {
+            "title": "Nupu tekst-"
+          },
           "form": {
             "title": "Uudiskirja vormi HTML"
           }

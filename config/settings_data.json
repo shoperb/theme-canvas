@@ -98,6 +98,17 @@
       },
       "id": "collection"
     },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Newsletter",
+        "text": "A short sentence describing what someone will receive by subscribing",
+        "button_text": "Subscribe",
+        "form": "You have successfully subscribed to the newsletters",
+        "section_width": "full-width"
+      },
+      "id": "newsletter"
+    },
     "image-with-text": {
       "type": "image_with_text",
       "settings": {

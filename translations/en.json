@@ -211,6 +211,7 @@
   "email.thank_you_digital_one": "Thank you for your order.<br>Here’s the link to download:",
   "email.thank_you_digital_many": "Thank you for your order.<br>Here’re the links to download:",
   "email.order.confirmation.title": "Order confirmation",
+  "email.validation.failed": "Validation failed or service temporarily unavailable",
 
   "blog.author": "Written By",
 
