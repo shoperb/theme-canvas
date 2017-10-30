@@ -135,6 +135,7 @@ class @VariantSelector
         attrs[attr.name] ?= []
         attrs[attr.name].push(attr.value) if attrs[attr.name].indexOf(attr.value) == -1
 
+
     # mark not existing variants
     for name, vals of attrs
       for dropdown_input in form.querySelectorAll("[data-attribute-radio][name='attribute-#{name}']")
