@@ -570,6 +570,9 @@
       "newsletter": {
         "title": "Uudiskiri",
         "settings": {
+          "email_marketing": {
+            "title": "Vali teenus..."
+          },
           "section_width": {
             "title": "Sektsiooni laius",
             "options": {
@@ -587,7 +590,7 @@
             "title": "Nupu tekst-"
           },
           "form": {
-            "title": "Uudiskirja vormi HTML"
+            "title": "Teade peale vormi saatmist"
           }
         }
       },

@@ -73,13 +73,12 @@ class @DropdownInViewport
 
 @switchImage = (_this, add = '') ->
   img = _this.dataset
-  photos = document.querySelector('.product-container .photos .container')
+  photos = document.querySelector('.product-container .photos')
   current = document.querySelector('[data-image=' + add + 'full-' + img.image + ']')
   if current
     for photo in photos.querySelectorAll('.photo')
       photo.classList.remove('visible')
     current.classList.add('visible')
-    current.onmousemove = zoom
 
     testImage = new Image
     testImage.src = img.imageurl
@@ -88,5 +87,6 @@ class @DropdownInViewport
         current.classList.remove('zoom')
         current.classList.add('no-zoom')
       else
+        current.onmousemove = zoom
         current.classList.remove('no-zoom')
         current.classList.add('zoom')
