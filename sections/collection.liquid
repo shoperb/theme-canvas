@@ -3,7 +3,7 @@
 {% if section.settings.show_as_slider == true %}
 {% assign limit = collection.products.size %}
 {% if limit < section.settings.per_row or limit == blank %}
-{% assign limit = 3 %}
+{% assign limit = section.settings.per_row %}
 {% endif %}
 {% endif %}
 {% assign collection_size = collection.products.size %}
