@@ -193,8 +193,8 @@
   "email.date": "Kuupäev",
   "email.invoice": "Arve",
   "email.billing_address": "Arve saaja",
-  "email.shipping_address": "Saatmise aadress",
-  "email.shipping_method": "Saatemeetod",
+  "email.shipping_address": "Tarneaadress",
+  "email.shipping_method": "Tarnemeetod",
   "email.item": "Toode",
   "email.rate": "Hind",
   "email.quantity": "Kogus",
@@ -228,5 +228,6 @@
 
   "language.en": "English",
   "language.lt": "Latviešu",
-  "language.et": "Eesti"
+  "language.et": "Eesti",
+  "language.ru": "Русский"
 }}

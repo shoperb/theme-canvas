@@ -149,7 +149,7 @@
   "account.update.success": "Account updated",
   "account.logged_in.failure": "Logging in failed",
   "customer.passwords.token_sent": "Email with password recovery instructions has been sent",
-  "customer.passwords.invalid_token": "Looks like there is something worng with the password reset token, please generate new one",
+  "customer.passwords.invalid_token": "Looks like there is something wrong with the password reset token, please generate new one",
   "customer.passwords.new_token_requested": "Looks like someone has generated new password reset token, please use the new one",
   "customer.passwords.password_changed": "Password updated",
 
@@ -217,5 +217,6 @@
 
   "language.en": "English",
   "language.lt": "Latviešu",
-  "language.et": "Eesti"
+  "language.et": "Eesti",
+  "language.ru": "Русский"
 }}
