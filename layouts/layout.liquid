@@ -58,7 +58,7 @@
   <!-- CSS concatenated and minified via ant build script-->
   {% include 'shoperb_stylesheets', stylesheets: 'application.css' | split: '|' %}
   <!-- end CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/tiny-slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/tiny-slider.css">
 
   {{"javascripts/ls.bgset.min.js" | asset_url | javascript_tag}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
@@ -66,8 +66,8 @@
 </head>
 
 <body class="template-{{template_name | replace: '_', '-'}}">
-  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/min/tiny-slider.js"></script>
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.3/min/tiny-slider.js"></script>
   {% section 'header' %}
 
   {% unless template_name == 'index' %}<div class="main-content">{% endunless %}

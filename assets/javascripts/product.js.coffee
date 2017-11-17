@@ -12,6 +12,8 @@ class @Product
     # product gallery
     if document.querySelector('.product-container .photos .container')
       document.querySelector('.product-container .photos .container').addEventListener("click", (event)->
+        document.querySelector('.product-gallery-container').classList.add('show')
+
         active_image = 0
         gallery = document.querySelector('.product-gallery-container .product-gallery')
         for el in this.parentNode.parentNode.querySelectorAll('.thumbs .thumb')
@@ -29,10 +31,9 @@ class @Product
           controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
           arrowKeys: true
           mouseDrag: true
-          lazyload: true)
+          lazyload: true
+        )
         window.slider.goTo(active_image - 1)
-
-        document.querySelector('.product-gallery-container').classList.add('show')
       )
 
     if document.querySelector('[data-close-gallery]')
