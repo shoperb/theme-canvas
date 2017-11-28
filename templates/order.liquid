@@ -23,13 +23,13 @@
           <label>{{'order.payment_method' | t}}:</label>
         </div><!--
         --><div class="grid__item one-whole desk--one-quarter">
-          <div>{{order.payment_method}}Swedbank pangalink</div>
+          <div>{{order.payment_method.name}}</div>
         </div><!--
         --><div class="grid__item one-whole desk--one-quarter">
           <label>{{'order.shipping_method' | t}}:</label>
         </div><!--
         --><div class="grid__item one-whole desk--one-quarter">
-          <div>{{order.shipping_method}}</div>
+          <div>{{order.shipping_method.name}}{% if order.shipping_method.provider_box %}, {{order.shipping_method.provider_box}}{% endif %}</div>
         </div>
 
         <div class="general-separator"></div>
