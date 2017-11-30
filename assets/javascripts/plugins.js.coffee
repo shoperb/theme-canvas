@@ -18,12 +18,12 @@ class @DropdownInViewport
       el.classList.remove('direction-left')
 
 @customVideoSize = (section, id) ->
-  el = document.querySelector('[data-section-id=' + section + '] [data-section-block-id=' + id + '] [data-video-full-size]')
+  el = document.querySelector('[data-section-id="' + section + '"] [data-section-block-id="' + id + '"] [data-video-full-size]')
   if el
     el.style.height = (el.offsetWidth  * 9 / 16) + 'px'
 
 @slideVideoResize = (section, id) ->
-  for el in document.querySelectorAll('[data-section-id=' + section + '] .with-video[data-section-block-id=' + id + ']')
+  for el in document.querySelectorAll('[data-section-id="' + section + '"] .with-video[data-section-block-id="' + id + '"]')
     if el.offsetWidth > el.offsetHeight
       el.querySelector('iframe').style.width = el.offsetWidth + 'px'
       el.querySelector('iframe').style.height = (el.offsetWidth  * 9 / 16) + 'px'
@@ -32,7 +32,7 @@ class @DropdownInViewport
       el.querySelector('iframe').style.width = el.offsetWidth + 'px'
 
 @runLazyLoad = (section) ->
-  selector = '[data-section-id=' + section + '] .lazyload'
+  selector = '[data-section-id="' + section + '"] .lazyload'
 
   new LazyLoad(
     elements_selector: selector
@@ -41,7 +41,7 @@ class @DropdownInViewport
   )
 
 @positionSliderArrows = (section) ->
-  container = document.querySelector('[data-section-id=' + section + ']')
+  container = document.querySelector('[data-section-id="' + section + '"]')
 
   for el in container.querySelectorAll('[data-controls]')
     el.style.top = parseInt(container.querySelector('.image').offsetHeight / 2 + 10) + 'px'
