@@ -5,9 +5,7 @@ class @Cart
     @initCart()
 
   initCart: =>
-    # inputChange = new Event('input')
-    inputChange = document.createEvent('HTMLEvents')
-    inputChange.initEvent('input', true, false)
+    inputChange = @make_event('input')
 
     for item in document.querySelectorAll(".cart-item")
       increase = item.querySelector('[data-quantity=increase]')
@@ -29,11 +27,8 @@ class @Cart
         field.value = 0
         field.dispatchEvent inputChange
 
-      field.addEventListener 'input', ((e) ->
-        formSubmit = document.createEvent('HTMLEvents')
-        formSubmit.initEvent('submit', true, false)
-        e.target.closest('form').dispatchEvent formSubmit
-        # @sendForm
+      field.addEventListener 'input', ((e) =>
+        e.target.closest('form').dispatchEvent @make_event('submit')
       )
 
 
@@ -66,8 +61,8 @@ class @Cart
         else
           @onFail(response, xmlhttp)
       return
-
     xmlhttp.send(params.join('&'))
+
 
   onSave: (data) =>
     parser=new DOMParser();
@@ -81,7 +76,8 @@ class @Cart
     oldErr?.innerHTML = data.messages;
 
     count = 0
-    count += item.quantity for item in data.items
+    count += item.quantity for item in data.items?
+
     document.querySelector(".cart-container .cart-items")?.innerHTML = count
 
     # binds
@@ -96,7 +92,14 @@ class @Cart
     console.log(xhr)
     console.log(xhr.status)
 
-
+  make_event: (type) ->
+    try
+      return new Event(type, cancelable: true)
+    catch
+      event = document.createEvent('HTMLEvents')
+      event.initEvent(type, true, false)
+      return event
+  
   serialize: (form) ->
     return  if not form or form.nodeName isnt "FORM"
     i = undefined
@@ -136,5 +139,3 @@ class @Cart
 
     for k, v of q
       "#{k}=#{v}"
-
-
