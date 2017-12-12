@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       var url_company = this.value;
       var email = this.parentNode.querySelector('[name="url"]').value;
-      var authenticity_token = this.parentNode.querySelector('[name="authenticity_token"]');
+      var authenticity_token = this.parentNode.querySelector('[name="authenticity_token"]').value;
 
       var request = new XMLHttpRequest();
       request.open('POST', url_company, true);
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelector("[data-section-id='{{section.id}}'] .newsletter-error").classList.remove('hidden');
         }
       };
-      request.send({email : email, authenticity_token: authenticity_token});
+      request.send("email="+email+"&authenticity_token="+authenticity_token);
     })
   })
 });
