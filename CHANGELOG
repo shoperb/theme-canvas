@@ -1,0 +1,23 @@
+Current versioning
+* 0.1 - all the basic - grid, default design with presets and defaults
+* 0.2 - Updated support for responsive images with lazyload
+* 0.3 - switched to lazysizes with bg responsive images support
+* 0.4 - from jQuery to vanilla js
+* 0.5 - variant image selection
+* 0.6 - microdata (sort of there, can always add things)
+* 0.6.1 - fixed collection section for empty collection with slider as the boxes got misaligned
+* 0.6.2 - added Latvian support
+* 0.6.3 - updated slider to latest (2.3.3) + fixed product image gallery navigation when gallery is opened on any other image than first one
+* 0.6.4 - fixed order view template
+  - removed hardcoded test info
+  - added proper shipping method name
+  - added proper payment method name
+* 0.6.5 - fixed some JS issues
+  - 'testimonial' is not using autoplay so no need to detect autoplay settings
+  - product image gallery full screen view returned errors (resulting JS to die) when there is only one image per product so there is actually no gallery needed
+* 0.6.6 - fix JS selectors and treat them all as strings
+* 0.6.7 - fix cart JS after FF update
+
+Roadmap
+* 2.x - Fancy, with page & blog building ability
+* 3.x - able to select different designs for different blocks
