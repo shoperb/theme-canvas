@@ -264,14 +264,6 @@ section[data-type=collection] {
   }
 }
 section[data-type=slideshow] {
-  &:not(.full-width) {
-    .slideshow {
-      margin: #{$default_padding}px;
-      @include breakpoint(palm) {
-        margin: 0;
-      }
-    }
-  }
   .row {
     height: 100%;
   }

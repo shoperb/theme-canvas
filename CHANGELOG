@@ -18,6 +18,7 @@ Current versioning
 * 0.6.6 - fix JS selectors and treat them all as strings
 * 0.6.7 - fix cart JS after FF update
 * 0.6.8 - newsletter section JS converted to vanilla JS
+* 0.6.9 - fix slider styling to keep slides in place
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
