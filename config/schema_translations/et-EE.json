@@ -838,14 +838,9 @@
       }
     },
     "categories": {
-      "categories": {
-        "body_fonts": "Sisu tekstid",
-        "buttons": "Nupud",
-        "headings_fonts": "Pealkirjad",
-        "layout": "Kujunds",
-        "text": "Tekstid",
-        "image_overlay": "Läbipaistvusega pilt"
-      }
+      "colors": "Värvid",
+      "text_styles": "Teksti stiilid",
+      "fav_icon": "Favikoon"
     }
   }
 }
