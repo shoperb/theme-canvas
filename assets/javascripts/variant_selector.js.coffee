@@ -32,7 +32,7 @@ class @VariantSelector
       for attr in json.attributes
         # updating options to select easier later
         opt.setAttribute("data-attribute-#{attr.name}", @getName(attr))
-        aname = attr.name.toLowerCase()
+        aname = attr.name
         @variantOptions[aname] ?= []
         @variantOptions[aname].push(attr)
 
@@ -83,7 +83,7 @@ class @VariantSelector
     return if shoperb_color_boxes.indexOf(name) == -1
     list.classList.add("dropdown-color")
     for el in list.querySelectorAll('li')
-      if val = shoperb_colors[el.getAttribute('orig-value').toLowerCase()]
+      if val = shoperb_colors[el.getAttribute('orig-value')]
         el.style.background = val
 
   # for options select 

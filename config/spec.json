@@ -3,7 +3,7 @@
   "name": "Canvas",
   "author": "Shoperb",
   "year": "2017",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Canvas theme for building the theme",
   "customizable_pages": [
     "index"

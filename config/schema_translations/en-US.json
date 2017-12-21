@@ -839,12 +839,9 @@
       }
     },
     "categories": {
-      "body_fonts": "Body texts",
-      "buttons": "Buttons",
-      "headings_fonts": "Headings",
-      "layout": "Layout",
-      "text": "Text",
-      "image_overlay": "Image with overlay"
+      "colors": "Colors",
+      "text_styles": "Text Styles",
+      "fav_icon": "Favicon"
     }
   }
 }
