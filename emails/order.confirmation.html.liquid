@@ -175,6 +175,22 @@
         </div>
         {% endif %}
 
+        {% if order.payment_method.bank_account != blank %}
+        <div style="float: right; text-align: right;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bank_account' | t}}: {{order.payment_method.bank_account}}</div>
+        </div>
+        {% endif %}
+        {% if order.payment_method.bank_name != blank %}
+        <div style="float: right; text-align: right;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bank_name' | t}}: {{order.payment_method.bank_name}}</div>
+        </div>
+        {% endif %}
+        {% if order.payment_method.bic_swift_code != blank %}
+        <div style="float: right; text-align: right;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bic_swift_code' | t}}: {{order.payment_method.bic_swift_code}}</div>
+        </div>
+        {% endif %}
+
         {% if order.payment_method.invoice_instructions != blank %}
         <div style="float: right; text-align: right;">
           <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.payment_details' | t}}:</div>

@@ -58,6 +58,19 @@
 {{order.notes}}
 {% endif %}
 
+{% if order.payment_method.bank_account != blank %}
+{{'email.bank_account' | t}}:
+{{order.payment_method.bank_account}}
+{% endif %}
+{% if payment_method.bank_name != blank %}
+{{'email.bank_name' | t}}:
+{{order.payment_method.bank_name}}
+{% endif %}
+{% if payment_method.bic_swift_code != blank %}
+{{'email.bic_swift_code' | t}}:
+{{order.payment_method.bic_swift_code}}
+{% endif %}
+
 {% if order.payment_method.invoice_instructions != blank %}
 {{'email.payment_details' | t}}:
 {{order.payment_method.invoice_instructions}}
