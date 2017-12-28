@@ -24,12 +24,14 @@
   document.addEventListener("DOMContentLoaded", function() {
     var selector = document.querySelector("[data-section-id='location-and-contact'][data-type='location-and-contact'] .map-container");
 
-    selector.onclick = function() {
-      selector.classList.remove('scrolloff');
-    };
-    selector.querySelector('iframe').onmouseout = function() {
-      selector.classList.add('scrolloff');
-    };
+    if (selector) {
+      selector.onclick = function() {
+        selector.classList.remove('scrolloff');
+      };
+      selector.querySelector('iframe').onmouseout = function() {
+        selector.classList.add('scrolloff');
+      };
+    }
   });
   </script>
 

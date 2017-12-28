@@ -20,6 +20,9 @@ Current versioning
 * 0.6.8 - newsletter section JS converted to vanilla JS
 * 0.6.9 - fix slider styling to keep slides in place
 * 0.6.10 - fix variants selector for multiple variants with different name cases, update translations
+* 0.6.11 [28.12.2017]
+  - we will now include date for changelog
+  - fixed 'location and contact' section JS for missing selector
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
