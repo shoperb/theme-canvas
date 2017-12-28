@@ -5,7 +5,8 @@
 {% if image.width > 480 %}{{image.size-480.url}} 480w {{480 | divided_by: image.aspect_ratio | round}}h,{% endif %}
 {% if image.width > 720 %}{{image.size-720.url}} 720w {{720 | divided_by: image.aspect_ratio | round}}h,{% endif %}
 {% if image.width > 2048 %}{{image.size-2048.url}} 2048w {{2048 | divided_by: image.aspect_ratio | round}}h,{% endif %}
-{{image.url}} {{image.width}}w {{image.height}}h
+{{image.url}} {{image.width}}w {{image.height}}h,
+{{image.url}}
 {% endif %}
 {% else %}
 {% if image != blank %}
@@ -27,6 +28,7 @@
 {% if image.width > 3350 %}{{image | img_url: '3350x'}} 3350w {{3350 | divided_by: image.aspect_ratio | round}}h,{% endif %}
 {% if image.width > 3750 %}{{image | img_url: '3750x'}} 3750w {{3750 | divided_by: image.aspect_ratio | round}}h,{% endif %}
 {% if image.width > 4100 %}{{image | img_url: '4100x'}} 4100w {{4100 | divided_by: image.aspect_ratio | round}}h,{% endif %}
-{{image}} {{image.width}}w {{image.height}}h
+{{image}} {{image.width}}w {{image.height}}h,
+{{image}}
 {% endif %}
 {% endif %}

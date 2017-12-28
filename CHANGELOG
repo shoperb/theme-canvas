@@ -23,6 +23,7 @@ Current versioning
 * 0.6.11 [28.12.2017]
   - we will now include date for changelog
   - fixed 'location and contact' section JS for missing selector
+  - include image without dimensions for bgset - IE as refusing to work w/o it
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
