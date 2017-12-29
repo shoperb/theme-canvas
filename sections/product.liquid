@@ -13,7 +13,7 @@
     {% assign text_class = 'desk--one-half' %}
 {% endcase %}
 
-<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" itemtype="http://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
+<section data-section-id="{{section.id}}" data-type="product" class="image-size-{{section.settings.image_size}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}" itemtype="https://schema.org/Product" data-currency-symbol="{{shop.currency.symbol}}" data-currency-code="{{shop.currency.code}}">
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="image" content="{{product.image.size-2048.url}}">
   <div class="grid">
@@ -36,10 +36,10 @@
         <a href="{{product.url}}">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</a>
       </h2>
 
-      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" data-product-form>
+      <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" data-product-form>
         {% if product %}
         <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-        <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+        <link itemprop="availability" href="https://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
         {% endif %}
 
         {% include 'product_form' %}

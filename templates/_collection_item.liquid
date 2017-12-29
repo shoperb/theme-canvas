@@ -1,4 +1,4 @@
-{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {% if collection_item == 'page' %}palm--one-half lap--one-third desk--one-quarter{% else %}{{grid_class}}{% endif %}" data-section-block-id="{{block.id}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half {% if collection_item == 'page' %}palm--one-half lap--one-third desk--one-quarter{% else %}{{grid_class}}{% endif %}" data-section-block-id="{{block.id}}" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
   {% assign collection = collections[block.settings.collection] %}
   {% assign image = collection.image %}
 

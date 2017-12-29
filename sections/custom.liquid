@@ -68,7 +68,7 @@
     {% assign product = products[block.settings.product] %}
     {% assign default_variant = product.variants.first %}
 
-    <div class="custom-section product-container {{block.type}} grid" itemtype="http://schema.org/Product">
+    <div class="custom-section product-container {{block.type}} grid" itemtype="https://schema.org/Product">
       <meta itemprop="url" content="{{product.url}}">
       <meta itemprop="image" content="{{product.image.size-2048.url}}">
 
@@ -88,9 +88,9 @@
           <a href="{{product.url}}">{% if product %}{{product.name}}{% else %}{{'section.default.product_name' | t}}{% endif %}</a>
         </h2>
 
-        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" data-product-form>
+        <div itemprop="offers" itemscope="" itemtype="https://schema.org/Offer" data-product-form>
           <meta itemprop="priceCurrency" content="{{shop.currency.code}}">
-          <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+          <link itemprop="availability" href="https://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
           <div>
             {% include 'product_form' %}
           </div>

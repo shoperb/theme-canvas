@@ -2,7 +2,7 @@
 {% assign order =  params["filter"] %}
 {% unless meths contains order %}{% assign order = "order_by_name_asc" %}{% endunless %}
 
-<section role="main" class="products-page general-page" itemscope itemtype="http://schema.org/ItemList">
+<section role="main" class="products-page general-page" itemscope itemtype="https://schema.org/ItemList">
   <header class="grid">
     <div class="grid__item one--whole desk--one-half">
       <h3 class="general-title" itemprop="name">{{'general.products' | translate}}</h3>

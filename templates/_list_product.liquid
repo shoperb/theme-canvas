@@ -8,9 +8,9 @@
 {% assign grid = 'one-half lap--one-half desk--one-quarter' %}
 {% endif %}
 
-{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+{% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole {{grid}} product-container" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
 
-  <a class="product" href="{{product.url}}" itemtype="http://schema.org/Product" data-product-list-handle="{{product.handle}}">
+  <a class="product" href="{{product.url}}" itemtype="https://schema.org/Product" data-product-list-handle="{{product.handle}}">
     <meta itemprop="url" content="{{url.current_url}}{{product.url}}">
     <meta itemprop="image" content="{{product.image.size-2048.url}}">
     <meta itemprop="position" content="{{forloop.index}}">
@@ -25,7 +25,7 @@
     {% endif %}
 
     {% if product.available? %}
-    <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <span class="price-symbol" itemprop="priceCurrency" content="{{shop.currency.code}}">{{shop.currency.symbol}}</span>
       <span class="price-number{% if variant.discount? %} discount{% endif %}" data-current-price itemprop="price" content="{{variant.current_price | money_without_currency}}" data-currency="{{shop.currency.code}}">{{variant.current_price | money_without_currency}}</span>
       {% if variant.discount? %}
@@ -39,7 +39,7 @@
     {% else %}
     <div class="not-available">{{'product.unavailable_short' | t}}</div>
     {% endif %}
-    <link itemprop="availability" href="http://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
+    <link itemprop="availability" href="https://schema.org/{% if product.available? %}InStock{% else %}OutOfStock{% endif %}">
   </a>
 
 </div>{% unless forloop.last %}<!--{% endunless %}{% if collection_size > 0 and collection_size < limit %}<!--{% endif %}

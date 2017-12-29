@@ -10,7 +10,7 @@
   {% endif %}
 </div>
 
-<div class="product-pricing" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<div class="product-pricing" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
   <span class="compare-price{% if default_variant.discount? %} visible{% endif %}">
     <span class="price-symbol">{{shop.currency.symbol}}</span>
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money_without_currency}}</span>
