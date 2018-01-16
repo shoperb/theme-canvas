@@ -325,7 +325,7 @@ h2.product-title {
     min-height: 1px;
     margin-left: #{$default_padding}px;
     float: left;
-    width: calc(100% - 60px - #{$default_padding}px);
+    width: calc(100% - 60px - #{$default_padding * 1.5}px);
     @include breakpoint(palm) {
       width: 100%;
       margin: 0;
