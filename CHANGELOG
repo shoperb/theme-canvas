@@ -30,6 +30,7 @@ Current versioning
   - disable add to cart button when variant is not selected
   - fix category view blocks placement
   - fix image position compared to tnbs on product view - for IE11
+  - fix IE11 not showing lazyload images
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
