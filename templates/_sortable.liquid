@@ -12,8 +12,8 @@
       <ul>
         {% for e in meths %}
         <li data-fancy-dropdown-element>
-          <label>
-            <input type="radio" name="filter" value="{{e}}"{% if order == e %} checked="checked"{% endif %}>
+          <label for="input-{{e}}">
+            <input id="input-{{e}}" type="radio" name="filter" value="{{e}}"{% if order == e %} checked="checked"{% endif %}>
             <span>{{'categories.filters.' | append: e | t}}</span>
           </label>
         </li>

@@ -187,6 +187,8 @@ main {
       input {
         opacity: 0;
         position: absolute;
+        width: 100%;
+        height: 100%;
 
         &:checked + span {
           background: darken($layout_header_footer_background_color, 5%);
