@@ -26,7 +26,9 @@ Current versioning
   - include image without dimensions for bgset - IE as refusing to work w/o it
 * 0.6.12 [28.12.2017] - add bank identification to email confirmation
 * 0.6.13 [29.12.2017] - change all links to https
-* 0.6.14 [16.01.2018] - disable add to cart button when variant is not selected
+* 0.6.14 [16.01.2018]
+  - disable add to cart button when variant is not selected
+  - fixed category view blocks placement
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
