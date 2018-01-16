@@ -112,6 +112,9 @@ class @VariantSelector
       alert "Didn't find option"
 
   changeSelectedVariantOption: (target)->
+    if (document.querySelector('[data-variant-select]').value != 'empty')
+      document.querySelector('.add-to-cart button').disabled = false
+
     if node = target.closest(".variant-selector").querySelector(".selected")
       node.classList.remove('placeholder')
       node.textContent = target.value

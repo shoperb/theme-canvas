@@ -59,7 +59,7 @@
 
       <div class="add-to-cart">
         {% if product.available? %}
-        <button class="button primary" type="submit">{{'product.add_to_cart' | t}}</button>
+        <button class="button primary" type="submit"{% if product.variants.many? %} disabled="disabled"{% endif %}>{{'product.add_to_cart' | t}}</button>
         {% else %}
         <div class="disabled-button primary">{{'product.unavailable_short' | t}}</div>
         {% endif %}

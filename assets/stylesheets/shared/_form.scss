@@ -120,7 +120,8 @@ button,
     padding-right: 25px;
     height: auto;
 
-    &:hover {
+    &:hover,
+    &[disabled=disabled] {
       background: lighten($buttons_primary_button_background_color, 10%);
     }
     &:focus,
@@ -132,7 +133,8 @@ button,
     background: $buttons_secondary_button_background_color;
     color: $buttons_secondary_button_text_color;
 
-    &:hover {
+    &:hover,
+    &[disabled=disabled] {
       background: lighten($buttons_secondary_button_background_color, 10%);
     }
     &:focus,
