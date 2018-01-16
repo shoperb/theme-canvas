@@ -111,6 +111,23 @@
           "default": true
         }
       ]
+    },
+    {
+      "type": "subcategory",
+      "handle": "footer_text",
+      "default": true,
+      "settings": [
+        {
+          "type": "toggle",
+          "handle": "allow_footer_text",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "handle": "text_title",
+          "default": "Custom text"
+        }
+      ]
     }
   ]
 }

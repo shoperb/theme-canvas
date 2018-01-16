@@ -64,6 +64,12 @@
         </div>
         {% endif %}
       </div>
+
+      {% if section.settings.allow_footer_text %}
+      <div class="grid footer-text-row">
+        {{section.settings.text_title}}
+      </div>
+      {% endif %}
     </div>
 
     <div class="grid copyright-row">

@@ -46,6 +46,9 @@
         "payment_icons": {
           "title": "Maksemeetodeid"
         },
+        "footer_text": {
+          "title": "Jaluse tekst"
+        },
         "settings": {
           "section_width": {
             "title": "Ploki laius",
@@ -111,6 +114,12 @@
           },
           "payment_maestro": {
             "title": "Maestro"
+          },
+          "allow_footer_text": {
+            "title": "Näita teksti"
+          },
+          "text_title": {
+            "title": "Tekst"
           }
         }
       },

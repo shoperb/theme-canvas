@@ -32,6 +32,7 @@ Current versioning
   - fix image position compared to tnbs on product view - for IE11
   - fix IE11 not showing lazyload images
   - fix sorting for FF, input was not activated on label click
+  - Added custom text for footer
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability

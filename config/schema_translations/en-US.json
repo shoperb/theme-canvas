@@ -46,6 +46,9 @@
         "payment_icons": {
           "title": "Payment icons"
         },
+        "footer_text": {
+          "title": "Footer text"
+        },
         "settings": {
           "section_width": {
             "title": "Section width",
@@ -111,6 +114,12 @@
           },
           "payment_maestro": {
             "title": "Maestro"
+          },
+          "allow_footer_text": {
+            "title": "Show footer text"
+          },
+          "text_title": {
+            "title": "Text"
           }
         }
       },

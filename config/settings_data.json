@@ -53,7 +53,8 @@
         "payment_mastercard": true,
         "payment_maestro": true,
         "section_width": "full-width",
-        "content_width": "limited"
+        "content_width": "limited",
+        "allow_footer_text": false
       },
       "id": "footer"
     },
