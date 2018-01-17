@@ -104,6 +104,16 @@
       text-align: center;
     }
   }
+  .checkout-notes {
+    padding: 20px 10px;
+
+    textarea {
+      resize: none;
+      width: 100%;
+      max-width: 450px;
+      height: 75px;
+    }
+  }
   .chekcout-footer {
     padding: #{$default_padding}px;
     text-align: right;

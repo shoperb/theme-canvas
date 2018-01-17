@@ -53,6 +53,7 @@
   "cart.errors.low_on_stock": "Diemžēl noliktavā nav pietiekošs preces daudzums..",
   "cart.errors.out_of_stock": "Diemžēl šī prece ir izpirkta.",
   "cart.errors.low_on_stock_for_15_mins": "Diemžēl noliktavā nav pietiekošs preces daudzums, pēdējā prece ir rezervēta uz 15 min. Lūdzu pamēģiniet vēlāk",
+  "cart.notes": "Piezīmes",
 
   "order.id": "Pasūtījuma ID",
   "order.status.completed": "Pabeigts",

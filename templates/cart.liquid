@@ -36,7 +36,10 @@
     </form>
 
     <form action="{{form_actions.cart_checkout}}" method="post">
-      <div class="chekcout-footer">
+      <div class="grid__item one-half lap--one-whole checkout-notes">
+        <textarea name="notes" placeholder="{{'cart.notes' | t}}" required></textarea>
+      </div><!--
+      --><div class="grid__item one-half lap--one-whole chekcout-footer">
         <button type="submit" class="button primary">{{'cart.checkout' | t}}</button>
       </div>
     </form>

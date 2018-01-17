@@ -33,6 +33,7 @@ Current versioning
   - fix IE11 not showing lazyload images
   - fix sorting for FF, input was not activated on label click
   - Added custom text for footer
+* 0.6.15 [17.01.2018] - added notes field for cart
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability

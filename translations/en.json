@@ -53,6 +53,7 @@
   "cart.errors.low_on_stock": "Unfortunately we do not have enough stock for this item.",
   "cart.errors.out_of_stock": "Unfortunately this is item is sold out.",
   "cart.errors.low_on_stock_for_15_mins": "Unfortunately we do not have enough stock for this item, last item is booked for 15min. Please try aga soon",
+  "cart.notes": "Notes",
 
   "order.id": "Order ID",
   "order.status.completed": "Completed",

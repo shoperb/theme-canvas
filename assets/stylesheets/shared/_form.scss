@@ -4,7 +4,8 @@ button.button {
 }
 input,
 button,
-.input-field-extender {
+.input-field-extender,
+textarea {
   border: 1px solid $layout_border_color;
   font-size: 1rem;
   padding: 4px 8px;

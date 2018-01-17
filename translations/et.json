@@ -53,6 +53,7 @@
   "cart.errors.low_on_stock": "Kahjuks pole meil antud toodet piisavalt laos.",
   "cart.errors.out_of_stock": "Kahjuks on see toode hetkel otsas.",
   "cart.errors.low_on_stock_for_15_mins": "Kahjuks pole meil antud toodet piisavalt laos, viimane eksemplar on hetkel 15 minutiks broneeritud. Palun proovige varsti uuesti",
+  "cart.notes": "Märkused",
 
   "order.id": "Tellimuse ID",
   "order.status.completed": "Lõpetatud",
