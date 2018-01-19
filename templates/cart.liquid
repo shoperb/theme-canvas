@@ -7,9 +7,9 @@
 
   {% include "flash_message" %}
 
-  <div class="grid" id="js-cart-content">
+  <div class="grid">
     {% if cart.items.any? %}
-    <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post" data-remote="true">
+    <form action="{{form_actions.cart_update}}.json?include[]=liquid" method="post" data-remote="true" id="js-cart-content">
       <div class="grid__item one-whole lap--four-eighths desk--five-eighths cart-header cart-col-name">
         <label>{{'cart.product_name' | t}}</label>
       </div><!--
