@@ -13,24 +13,31 @@ class @Cart
       remove = item.querySelector('[data-remove-item]')
       field = item.querySelector('.cart-col-quantity input');
 
-      increase.addEventListener 'click', (e) ->
-        field.value = parseInt(field.value, 10) + 1
-        field.dispatchEvent inputChange
+      increase.addEventListener 'click', (e) =>
+        local_field = @field(e)
+        local_field.value = parseInt(local_field.value, 10) + 1
+        local_field.dispatchEvent inputChange
 
-      decrease.addEventListener 'click', (e) ->
+      decrease.addEventListener 'click', (e) =>
+        local_field = @field(e)
         newVal = parseInt(field.value, 10) - 1
         newVal = 0 if newVal < 0
-        field.value = newVal
-        field.dispatchEvent inputChange
+        local_field.value = newVal
+        local_field.dispatchEvent inputChange
+        @field()
 
-      remove.addEventListener 'click', (e) ->
-        field.value = 0
-        field.dispatchEvent inputChange
+      remove.addEventListener 'click', (e) =>
+        local_field = @field(e)
+        local_field.value = 0
+        local_field.dispatchEvent inputChange
+        @field()
 
       field.addEventListener 'input', ((e) =>
         e.target.closest('form').dispatchEvent @make_event('submit')
       )
 
+  field: (e)->
+    e.target.closest(".cart-item").querySelector('.cart-col-quantity input') if e
 
   sendForm: (e)=>
     if e.preventDefault
