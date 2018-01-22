@@ -2,7 +2,7 @@
 <div class="pagination">
 
   <ul>
-    <li class="prev">{% if paginate.previous %}<a href="{{paginate.previous.url}}">{% endif %}{% include 'icon' with 'arrow-narrow' %}{{'navigation.previous' | t}}{% if paginate.previous %}</a>{% endif %}</li>
+    <li class="prev">{% if paginate.previous %}<a href="{{paginate.previous.url}}">{% endif %}<i class="icon-arrow-narrow pagination-icon"></i>{{'navigation.previous' | t}}{% if paginate.previous %}</a>{% endif %}</li>
 
     {% for part in paginate.parts %}
       {% if part.is_link %}
@@ -16,7 +16,7 @@
       {% endif %}
     {% endfor %}
 
-    <li class="next">{% if paginate.next %}<a href="{{paginate.next.url}}">{% endif %}{{'navigation.next' | t}}{% include 'icon' with 'arrow-narrow' %}{% if paginate.next %}</a>{% endif %}</li>
+    <li class="next">{% if paginate.next %}<a href="{{paginate.next.url}}">{% endif %}{{'navigation.next' | t}}<i class="icon-arrow-narrow pagination-icon"></i>{% if paginate.next %}</a>{% endif %}</li>
   </ul>
 
 </div>

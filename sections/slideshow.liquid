@@ -1,5 +1,5 @@
 <section data-section-id="{{section.id}}" data-type="slideshow" class="section-height {{section.settings.section_height}}{% if section.settings.section_width == 'full-width' %} full-width{% endif %}">
-  <div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}" data-arrow-image="{{'images/icons.svg' | asset_url}}">
+  <div class="{% if section.blocks.size > 1 %} slideshow{% endif %}" data-autoplay="{{section.settings.auto_rotate}}" data-animation-speed="{{section.settings.animation_speed}}">
 
     {% for block in section.blocks %}
     <div data-section-block-id="{{block.id}}" class="slide opacity-image-container{% if block.settings.image != blank %} with-background{% endif %}{% if block.settings.video != blank %} with-video{% endif %}{% if block.settings.text_size == 'large' %} text-large{% endif %}">
@@ -58,7 +58,7 @@
     items: 1,
     slideBy: 'page',
     arrowKeys: true,
-    controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+    controlsText: ['<div class="slideshow-prev"><i class="icon-arrow slider"></i></div>', '<div class="slideshow-next"><i class="icon-arrow slider next"></i></div>'],
     mouseDrag: true,
     autoplayTimeout: animationSpeed,
     lazyload: true

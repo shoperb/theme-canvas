@@ -20,7 +20,7 @@
   <div class="grid{{slider}}">
     {% for block in section.blocks %}
     {% unless forloop.first %}-->{% endunless %}<div  data-section-block-id="{{block.id}}" class="testimonial grid__item one-whole {{grid_class}}">
-      <div class="background">{% include 'icon' with 'quote' %}</div>
+      <div class="background"><i class="icon-quote"></i></div>
       <div class="testimonial-quote" data-theme-editor-block-setting='quote'>{{block.settings.quote}}</div>
       {% if block.settings.author %}
       <div class="testimonial-author" data-theme-editor-block-setting='author' >{{block.settings.author}}</div>

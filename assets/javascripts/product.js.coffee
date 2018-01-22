@@ -30,8 +30,8 @@ class @Product
             items: 1
             slideBy: 'page'
             nav: false,
-            controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>',
-              '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + gallery.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+            controlsText: ['<div class="slideshow-prev"><i class="icon-arrow slider"></i></div>',
+              '<div class="slideshow-next"><i class="icon-arrow slider next"></i></div>'],
             arrowKeys: true
             mouseDrag: true
             lazyload: true

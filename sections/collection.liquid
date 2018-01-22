@@ -28,7 +28,7 @@
   <h3 class="general-title" data-theme-editor-setting="title" itemprop="name">{{section.settings.title}}</h3>
   {% endif %}
 
-  <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-arrow-image="{{'images/icons.svg' | asset_url}}" data-show-count="{{section.settings.per_row}}">
+  <div class="grid product-container{% if section.settings.show_as_slider == true and collection.products.size > section.settings.per_row %} collection-slideshow{% endif %}" data-show-count="{{section.settings.per_row}}">
     {% for product in collection.products limit: limit %}
     {% include 'list_product' %}
     {% endfor %}
@@ -74,7 +74,7 @@
   var slider = tns({
     container: selector,
     arrowKeys: true,
-    controlsText: ['<div class="slideshow-prev"><svg class="icon-arrow-back"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>', '<div class="slideshow-next"><svg class="icon-arrow-next"><use xlink:href="' + show.dataset.arrowImage + '#icon-arrow"></use></svg></div>'],
+    controlsText: ['<div class="slideshow-prev"><i class="icon-arrow slider"></i></div>', '<div class="slideshow-next"><i class="icon-arrow slider next"></i></div>'],
     mouseDrag: true,
     lazyload: true,
     nav: false,

@@ -3,31 +3,78 @@
   width: 24px;
   display: inline-block;
   fill: currentColor;
+  background: asset-url('images/icon-sprite.svg') no-repeat;
+}
+.icon-twitter {
+  background-position: 0 0;
+}
+.icon-instagram {
+  background-position: 0 -30px;
+}
+.icon-facebook {
+  background-position: 0 -60px;
+}
+.icon-quote {
+  background-position: 0 -90px;
+}
+.icon-minus {
+  background-position: 0 -120px;
+}
+.icon-plus {
+  background-position: 0 -150px;
+}
+.icon-close {
+  background-position: 0 -180px;
+
+  &.gallery {
+    background-position: -30px -180px;
+  }
+}
+.icon-arrow {
+  background-position: 0 -210px;
+
+  &.slider {
+    background-position: -30px -210px;
+    position: relative;
+    top: 1px;
+  }
+  &.next {
+    @include flip;
+  }
+}
+.icon-arrow-narrow {
+  background-position: 0 -240px;
+
+  &.pagination-icon {
+    background-position: -30px -240px;
+  }
 }
 .icon-search {
-  width: 16px;
-  height: 16px;
-  padding-right: 5px;
-  padding-bottom: 2px;
+  background-position: 3px -267px;
+
+  &.form {
+    background-position: -27px -263px;
+  }
+}
+.icon-profile {
+  background-position: 0 -300px;
+}
+.icon-basket {
+  background-position: 0 -330px;
 }
 .icon-full-arrow-down {
   border: 3px solid transparent;
   border-top-color: $text_link_color;
   width: 0;
   height: 0;
+  background: none;
 }
 
-.icon-arrow-back {
-  @extend .icon-arrow-narrow;
-}
 .icon-plus,
-.icon-close,
 .icon-minus {
   height: 12px;
   width: 12px;
-}
-.icon-close {
-  @include transform(rotate(45deg));
+  margin-left: 7px;
 }
 .icon-quote {
   width: 46px;

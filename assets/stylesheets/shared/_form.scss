@@ -73,7 +73,9 @@ textarea {
         border: 1px solid $layout_border_color;
         background: $layout_background_color;
 
-        svg {
+        i {
+          width: 12px;
+          height: 12px;
           left: 4px;
           top: -2px;
           position: relative;
@@ -81,7 +83,7 @@ textarea {
         }
       }
     }
-    &:checked + .label-text .tick svg {
+    &:checked + .label-text .tick i {
       opacity: 1;
     }
   }

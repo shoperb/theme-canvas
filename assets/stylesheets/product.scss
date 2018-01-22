@@ -39,7 +39,7 @@ h2.product-title {
         color: darken($layout_background_color, 50%);
       }
     }
-    svg {
+    .icon-full-arrow-down {
       position: absolute;
       top: 18px;
       right: 14px;
@@ -470,11 +470,6 @@ h2.product-title {
     color: $image_overlay_color;
     cursor: pointer;
 
-    .icon-plus {
-      width: 24px;
-      height: 24px;
-      @include transform(rotate(45deg));
-    }
     &:before {
       content: '';
       position: absolute;
@@ -489,7 +484,7 @@ h2.product-title {
       height: 50px;
       transition: all 0.2s;
     }
-    svg {
+    .icon-close {
       position: relative;
       z-index: 2;
     }

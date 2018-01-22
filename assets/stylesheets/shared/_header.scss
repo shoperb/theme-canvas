@@ -3,6 +3,10 @@ header#main-header {
   margin: 0;
   background: $layout_header_footer_background_color;
 
+  .icon-close {
+    width: 12px;
+    height: 12px;
+  }
   .content-spacer {
     position: relative;
     @extend .general-content;

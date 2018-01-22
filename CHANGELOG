@@ -37,6 +37,8 @@ Current versioning
 * 0.6.16 [19.01.2018]
   - Fix cart so notes are not deleted anymore on cart update
   - Fix cart item increase/decrease with multiple items in cart
+* 0.6.17 [22.01.2018]
+  - Switched SVG icons usage to remove unsafe loading warnings
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
