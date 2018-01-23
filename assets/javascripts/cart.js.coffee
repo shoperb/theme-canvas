@@ -20,7 +20,7 @@ class @Cart
 
       decrease.addEventListener 'click', (e) =>
         local_field = @field(e)
-        newVal = parseInt(field.value, 10) - 1
+        newVal = parseInt(local_field.value, 10) - 1
         newVal = 0 if newVal < 0
         local_field.value = newVal
         local_field.dispatchEvent inputChange
@@ -75,7 +75,7 @@ class @Cart
     parser=new DOMParser();
     htmlDoc=parser.parseFromString(data.liquid, "text/html"); # for chrome "text/xml"?
 
-    newCart = htmlDoc.querySelector('#js-cart-content');
+    newCart = htmlDoc.querySelector('#js-cart-content') || htmlDoc.querySelector('#empty-cart');
     oldCart = document.querySelector('#js-cart-content');
     oldCart?.innerHTML = newCart.innerHTML;
 
@@ -83,9 +83,9 @@ class @Cart
     oldErr?.innerHTML = data.messages;
 
     count = 0
-    count += item.quantity for item in data.items?
-
+    count += item.quantity for item in data.items if data.items?
     document.querySelector(".cart-container .cart-items")?.innerHTML = count
+    document.querySelector("#submit-to-checkout").remove() if count == 0
 
     # binds
     document.querySelector('#js-cart-content form[data-remote="true"]')?.addEventListener 'submit', @sendForm

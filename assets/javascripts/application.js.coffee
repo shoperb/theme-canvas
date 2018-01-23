@@ -40,9 +40,9 @@ window.addEventListener("click", (event)->
 for el in document.querySelectorAll('[data-quantity]')
   el.addEventListener("click", (event)->
     if !this.closest('.cart-page') and event.target.parentNode.dataset.addQuantity != "false"
-      input = event.target.parentNode.querySelector('#amount')
+      input = event.target.closest('.product-quantity-input').querySelector('#amount')
       diff = 0
-      if event.target.dataset.quantity == 'decrease' and parseInt(input.value) > 0
+      if event.target.dataset.quantity == 'decrease' and parseInt(input.value) > 1
         diff = -1
       else if event.target.dataset.quantity == 'increase'
         diff = 1

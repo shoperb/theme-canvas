@@ -39,6 +39,11 @@ Current versioning
   - Fix cart item increase/decrease with multiple items in cart
 * 0.6.17 [22.01.2018]
   - Switched SVG icons usage to remove unsafe loading warnings
+* 0.6.18 [23.01.2018]
+  - Missing LV translations
+  - Removed cart notes required state
+  - Cart JS updated
+  - Product quantity change fixed
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability

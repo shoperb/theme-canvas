@@ -35,9 +35,9 @@
       </div>
     </form>
 
-    <form action="{{form_actions.cart_checkout}}" method="post">
+    <form action="{{form_actions.cart_checkout}}" method="post" id="submit-to-checkout">
       <div class="grid__item one-half lap--one-whole checkout-notes">
-        <textarea name="notes" placeholder="{{'cart.notes' | t}}" required></textarea>
+        <textarea name="notes" placeholder="{{'cart.notes' | t}}"></textarea>
       </div><!--
       --><div class="grid__item one-half lap--one-whole chekcout-footer">
         <button type="submit" class="button primary">{{'cart.checkout' | t}}</button>
@@ -46,7 +46,9 @@
 
     {% else %}
 
-    <div class="empty-cart">{{'cart.empty' | t}}</div>
+    <div id="empty-cart">
+      <div class="empty-cart">{{'cart.empty' | t}}</div>
+    </div>
 
     {% endif %}
   </div>
