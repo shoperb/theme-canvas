@@ -23,15 +23,26 @@
           </a>
         </div>
 
+        {% comment %}
         <div class="grid__item one-whole desk--one-third order-date">
           <label>{{'order.date_added' | t}}</label>
           <div>{% include 'date' with o.created_at %}</div>
         </div><!--
         --><div class="grid__item one-whole desk--one-third order-quantity">
           <label>{{'order.products' | t}}</label>
-          <div>6 {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
+          <div>{{order.items}} {% if order.items > 1 %}{{'order.items' | t}}{% else %}{{'order.item' | t}}{% endif %}</div>
         </div><!--
         --><div class="grid__item one-whole desk--one-third order-price">
+          <label>{{'order.total' | t}}</label>
+          <div>{{o.total | money_with_cents}}</div>
+        </div>
+        {% endcomment %}
+
+        <div class="grid__item one-whole desk--one-half order-date">
+          <label>{{'order.date_added' | t}}</label>
+          <div>{% include 'date' with o.created_at %}</div>
+        </div><!--
+        --><div class="grid__item one-whole desk--one-half order-price">
           <label>{{'order.total' | t}}</label>
           <div>{{o.total | money_with_cents}}</div>
         </div>
