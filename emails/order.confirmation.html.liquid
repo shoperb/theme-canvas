@@ -176,25 +176,28 @@
         {% endif %}
 
         {% if order.payment_method.bank_account != blank %}
-        <div style="float: right; text-align: right;">
-          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bank_account' | t}}: {{order.payment_method.bank_account}}</div>
+        <div style="text-align: right; padding-bottom: 20px;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase;">{{'email.bank_account' | t}}:</div>
+          {{order.payment_method.bank_account}}
         </div>
         {% endif %}
         {% if order.payment_method.bank_name != blank %}
-        <div style="float: right; text-align: right;">
-          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bank_name' | t}}: {{order.payment_method.bank_name}}</div>
+        <div style="text-align: right; padding-bottom: 20px;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase;">{{'email.bank_name' | t}}:</div>
+          {{order.payment_method.bank_name}}
         </div>
         {% endif %}
         {% if order.payment_method.bic_swift_code != blank %}
-        <div style="float: right; text-align: right;">
-          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.bic_swift_code' | t}}: {{order.payment_method.bic_swift_code}}</div>
+        <div style="text-align: right; padding-bottom: 20px;">
+          <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase;">{{'email.bic_swift_code' | t}}:</div>
+          {{order.payment_method.bic_swift_code}}
         </div>
         {% endif %}
 
         {% if order.payment_method.invoice_instructions != blank %}
         <div style="float: right; text-align: right;">
           <div style="color: #919AA8; font-weight: bold; font-size: 12px; text-transform: uppercase; padding: 0 0 12px;">{{'email.payment_details' | t}}:</div>
-          {{order.payment_method.invoice_instructions}}
+          {{order.payment_method.invoice_instructions | newline_to_br}}
         </div>
         {% endif %}
       </td>

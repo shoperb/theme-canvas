@@ -47,6 +47,7 @@ Current versioning
 * 0.6.19 [25.01.2018]
   - ET translation fix
   - updated account orders view
+* 0.6.20 [30.01.2018] - Updated HTML order confirmation email
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
