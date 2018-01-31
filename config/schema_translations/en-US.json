@@ -845,12 +845,16 @@
       },
       "fav_icon": {
         "title": "Favicon image"
+      },
+      "square_images": {
+        "title": "Show images as squares"
       }
     },
     "categories": {
       "colors": "Colors",
       "text_styles": "Text Styles",
-      "fav_icon": "Favicon"
+      "fav_icon": "Favicon",
+      "settings": "Settings"
     }
   }
 }

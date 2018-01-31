@@ -187,6 +187,11 @@ h2.product-title {
       box-shadow: none;
     }
   }
+  &.native-image {
+    img {
+      width: 100%;
+    }
+  }
   h3 {
     margin: 0 0 10px;
   }

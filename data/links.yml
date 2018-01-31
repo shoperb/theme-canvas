@@ -1,25 +1,93 @@
 ---
-- id: 287
-  style: BlogPosts
-  name: Blog
-  handle: blog
+- id: 254
+  entity_id: 257
+  entity_type: Collection
+  style: Collection
+  name: Bro Fitweari tooted
+  handle: allahindlus
   position: 1
   translations:
-    en:
-      name: Blog
     et:
-      name: Blog
-  menu_handle: header
-- id: 403
-  entity_id: 401
-  entity_type: Category
-  style: Category
-  name: categories
-  handle: categories
+      name: Bro Fitweari tooted
+    en:
+      name: SALE
+  menu_handle: subheader
+- id: 256
+  entity_id: 177
+  entity_type: Page
+  style: Page
+  name: Firmast
+  handle: firmast
+  position: 1
+  translations:
+    et:
+      name: Firmast
+    en:
+      name: About
+  menu_handle: shop
+- id: 259
+  entity_id: 179
+  entity_type: Page
+  style: Page
+  name: Tagastus
+  handle: tagastus
+  position: 2
+  translations:
+    et:
+      name: Tagastus
+    en:
+      name: Return Policy
+  menu_handle: shop
+- id: 263
+  entity_id: 256
+  entity_type: Collection
+  style: Collection
+  name: Püksid
+  handle: uudised
+  position: 2
+  translations:
+    et:
+      name: Püksid
+    en:
+      name: Bottoms
+  menu_handle: subheader
+- id: 675
+  entity_id: 255
+  entity_type: Collection
+  style: Collection
+  name: Topid
+  handle: tops
   position: 3
   translations:
-    en:
-      name: categories
     et:
-      name: categories
-  menu_handle: header
+      name: Topid
+    en:
+      name: Tops
+  menu_handle: subheader
+- id: 260
+  entity_id: 180
+  parent_id: 256
+  entity_type: Page
+  style: Page
+  name: Privaatsuspoliitika
+  handle: privaatsuspoliitika
+  position: 3
+  translations:
+    et:
+      name: Privaatsuspoliitika
+    en:
+      name: Privacy Policy
+  menu_handle: shop
+- id: 261
+  entity_id: 181
+  entity_type: Page
+  style: Page
+  name: Kuidas tellida?
+  handle: kuidas-tellida
+  position: 4
+  translations:
+    et:
+      name: Kuidas tellida?
+    en:
+      name: How to order?
+  menu_handle: shop

@@ -19,7 +19,8 @@
     "body_font_size": "16px",
     "heading_font_family": "Hind",
     "heading_font_size": "16px",
-    "heading_scaling": "1.25"
+    "heading_scaling": "1.25",
+    "square_images": false
   },
   "sections": {
     "header": {

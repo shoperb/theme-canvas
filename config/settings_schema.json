@@ -425,6 +425,15 @@
           "image_type": "favicon"
         }
       ]
+    },
+    {
+      "handle": "settings",
+      "settings": [
+        {
+          "handle": "square_images",
+          "type": "toggle"
+        }
+      ]
     }
   ]
 }

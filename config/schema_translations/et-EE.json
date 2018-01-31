@@ -844,12 +844,16 @@
       },
       "fav_icon": {
         "title": "Favicon pilt"
+      },
+      "square_images": {
+        "title": "Näita pilte ruuduna"
       }
     },
     "categories": {
       "colors": "Värvid",
       "text_styles": "Teksti stiilid",
-      "fav_icon": "Favikoon"
+      "fav_icon": "Favikoon",
+      "settings": "Settings"
     }
   }
 }

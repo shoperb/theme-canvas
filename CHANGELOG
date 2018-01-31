@@ -48,6 +48,7 @@ Current versioning
   - ET translation fix
   - updated account orders view
 * 0.6.20 [30.01.2018] - Updated HTML order confirmation email
+* 0.6.21 [31.01.2018] - Added settings > display images as square or not. Last update from DasOriginalMerlyn
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability
