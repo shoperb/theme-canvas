@@ -227,6 +227,8 @@
   "email.thank_you_digital_one": "Täname tellimuse eest!<br>Allpool on allalaadimise link:",
   "email.thank_you_digital_many": "Täname tellimuse eest!<br>Allpool on allalaadimise lingid:",
   "email.validation.failed": "Validation failed or service temporarily unavailable",
+  "email.failed_payment.message": "Makse ebaõnnestus. Palun, valige uus maksemeetod.",
+  "email.failed_payment.button": "Vali uus maksemeetod",
 
   "blog.author": "Kirjutas ",
 
