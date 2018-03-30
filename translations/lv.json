@@ -215,6 +215,8 @@
   "email.thank_you_digital_one": "Paldies par Jūsu pirkumu.<br>Šeit būs lejupielādes saite:",
   "email.thank_you_digital_many": "Paldies par Jūsu pirkumu.<br>Šeit būs lejupielādes saite:",
   "email.order.confirmation.title": "Pirkuma apstiprinājums",
+  "email.failed_payment.message": "Maksājums neizdevās. Lūdzu, izvēlieties citu maksājuma veidu, izmantojot zemāk norādīto saiti.",
+  "email.failed_payment.button": "Zvēlēties citu maksājuma veidu",
 
   "blog.author": "Raksta autors",
 

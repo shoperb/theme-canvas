@@ -216,6 +216,8 @@
   "email.thank_you_digital_many": "Thank you for your order.<br>Here’re the links to download:",
   "email.order.confirmation.title": "Order confirmation",
   "email.validation.failed": "Validation failed or service temporarily unavailable",
+  "email.failed_payment.message": "Your payment was unsuccessful. Please, choose another payment method by the link below:",
+  "email.failed_payment.button": "Choose another payment method",
 
   "blog.author": "Written By",
 

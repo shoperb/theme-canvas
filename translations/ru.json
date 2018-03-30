@@ -227,6 +227,8 @@
   "email.thank_you_digital_one": "Спасибо за Ваш заказ!<br>Ссылка для скачивания:",
   "email.thank_you_digital_many": "Спасибо за Ваш заказ!<br>Ссылки для скачивания:",
   "email.validation.failed": "Ошибка валидации или сервис временно не работает",
+  "email.failed_payment.message": "Ваш платеж был отклонен. Пожалуйста, выберете другой способ оплаты ниже:",
+  "email.failed_payment.button": "Выбрать другой способ оплаты",
 
   "blog.author": "Написана ",
 
