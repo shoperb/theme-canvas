@@ -14,12 +14,19 @@ class @VariantSelector
       @variantOptions = {}
       for opt in varSel.querySelectorAll("option")
         @parseOption(opt)
+      
+      @beforeOptionSelectGeneration(varSel)
       for id, value of @variantOptions
         @generateOptionSelect(id, value, container)
+      @afterOptionSelectGeneration(varSel)
 
       # After load fill page with cheapest variant
       @switchVariantData(@cheapestOption, @cheapestOption, false)
 
+	
+  beforeOptionSelectGeneration: ()->		
+	
+  afterOptionSelectGeneration: ()->
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
@@ -31,8 +38,9 @@ class @VariantSelector
 
       for attr in json.attributes
         # updating options to select easier later
-        opt.setAttribute("data-attribute-#{attr.name}", @getName(attr))
-        aname = attr.name
+        aname = attr.name.replace(" ", "-")
+        opt.setAttribute("data-attribute-#{aname}", @getName(attr))
+
         @variantOptions[aname] ?= []
         @variantOptions[aname].push(attr)
 
@@ -96,7 +104,7 @@ class @VariantSelector
   # what to do when you have changed option-
   # change option value
   selectNewVariantOnOptionChange: (target)->
-    form     = target.closest("form")
+    form     = target.closest('form')
 
     # lookup for selected option
     selector     = ""
@@ -123,7 +131,7 @@ class @VariantSelector
       target.closest(".variant-selector").querySelector(".variant-option-dropdown li[orig-value='" + target.value + "']").classList.add('active')
 
   markMissingOptions: (target) ->
-    form = target.closest("form")
+    form = target.closest('form')
 
     # uncheck all dropdown elements
     for dropdown_input in form.querySelectorAll("[data-attribute-radio]")
