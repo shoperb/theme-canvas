@@ -48,7 +48,7 @@ class @Cart
     f   = e.target || e.srcElement
     url = f.getAttribute('action')
     meth= f.getAttribute('method') || f.getAttribute('data-method') || 'GET'
-    params= @serialize(f)
+    params= Cart.serialize(f)
 
     xmlhttp =  if window.XMLHttpRequest then new XMLHttpRequest() else new ActiveXObject("Microsoft.XMLHTTP")
     xmlhttp.open(meth.toUpperCase(), url, true)
@@ -107,7 +107,7 @@ class @Cart
       event.initEvent(type, true, false)
       return event
   
-  serialize: (form) ->
+  @serialize: (form) ->
     return  if not form or form.nodeName isnt "FORM"
     i = undefined
     j = undefined
