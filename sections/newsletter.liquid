@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelector("[data-section-id='{{section.id}}'] .newsletter-error").classList.remove('hidden');
         }
       };
-      request.send("email="+email+"&authenticity_token="+authenticity_token);
+      request.send("email="+encodeURIComponent(email)+"&authenticity_token="+encodeURIComponent(authenticity_token));
     })
   })
 });
