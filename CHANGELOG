@@ -51,6 +51,7 @@ Current versioning
 * 0.6.21 [31.01.2018] - Added settings > display images as square or not. Last update from DasOriginalMerlyn
 * 0.6.22 [27.02.2018] - Added VAT percentage to order confirmation email
 * 0.6.23 [30.03.2018] - Fixed translation typo for LV "subtotal"
+* 0.6.24 [14.05.2018] - hide side navigation on mobiles
 
 Roadmap
 * 2.x - Fancy, with page & blog building ability

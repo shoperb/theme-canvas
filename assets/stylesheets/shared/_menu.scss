@@ -108,6 +108,14 @@ nav.main-menu {
     }
   }
 }
+nav.category-nav{
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  nav.category-nav{
+    display: none;
+  }
+}
 .menu-dropdown {
   &.direction-right {
     .menu-dropdown-container {
