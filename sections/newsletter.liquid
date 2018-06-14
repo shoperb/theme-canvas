@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var selector = "[data-section-id='{{section.id}}'] .subscribe_url";
   [].forEach.call(document.querySelectorAll(selector), function(el) {
     el.addEventListener('click', function(e) {
-      event.preventDefault();
+      e.preventDefault();
       var url_company = this.value;
       var email = this.parentNode.querySelector('[name="url"]').value;
       var authenticity_token = this.parentNode.querySelector('[name="authenticity_token"]').value;
