@@ -14,19 +14,12 @@ class @VariantSelector
       @variantOptions = {}
       for opt in varSel.querySelectorAll("option")
         @parseOption(opt)
-      
-      @beforeOptionSelectGeneration(varSel)
-      for id, value of @variantOptions
-        @generateOptionSelect(id, value, container)
-      @afterOptionSelectGeneration(varSel)
+      for _, value of @variantOptions
+        @generateOptionSelect(value, container)
 
       # After load fill page with cheapest variant
       @switchVariantData(@cheapestOption, @cheapestOption, false)
 
-	
-  beforeOptionSelectGeneration: ()->		
-	
-  afterOptionSelectGeneration: ()->
 
   parseOption: (opt)->
     if (js = opt.getAttribute("data-variant"))?
@@ -34,21 +27,21 @@ class @VariantSelector
       opt.json = json
 
       @cheapestOption = opt unless @cheapestOption
-      @cheapestOption = opt if parseFloat(@cheapestOption.json.price) > parseFloat(opt.json.price)
+      @cheapestOption = opt if parseFloat(@cheapestOption.json.price) > parseFloat(opt.json.price) && opt.json.stock != 0
 
       for attr in json.attributes
         # updating options to select easier later
-        aname = attr.name.replace(" ", "-")
-        opt.setAttribute("data-attribute-#{aname}", @getName(attr))
-
-        @variantOptions[aname] ?= []
-        @variantOptions[aname].push(attr)
+        opt.setAttribute("data-attribute-#{attr.handle}", @getName(attr))
+        @variantOptions[attr.handle] ?= []
+        @variantOptions[attr.handle].push(attr)
 
   getName: (obj)->
     obj.value # system does translation itself
     # obj.translations?[@lang]?.value || obj.value
 
-  generateOptionSelect: (lname, arr, container)->
+  generateOptionSelect: (arr, container)->
+    lname = arr[0].name
+    handle = arr[0].handle
     # add selector data-behavior-box-select
     div = document.createElement("div")
     div_selector = document.createElement("div")
@@ -58,7 +51,7 @@ class @VariantSelector
     div_selected.classList.add("selected", "placeholder")
     div_selected.innerHTML = container.dataset.select
     selectList = document.createElement("ul");
-    selectList.classList.add("variant-option-dropdown", 'variant-class-'+lname)
+    selectList.classList.add("variant-option-dropdown", 'variant-class-'+handle)
     if container.closest('form').querySelector('[data-variant-select]').dataset.showLabels == 'true'
       div.innerHTML = '<label class="variant-title">' + lname + '</label>'
     div_selector.innerHTML = '<i class=\"icon-full-arrow-down\"></i>'
@@ -76,35 +69,36 @@ class @VariantSelector
       continue if values.indexOf(name) > -1
 
       # selectList.appendChild(li)
-      lis += "<li orig-value='#{obj.value}'><label for='#{@counter}-attribute-#{name}'><input type='radio' id='#{@counter}-attribute-#{name}' data-attribute-radio name='attribute-#{lname}' value='#{name}'><span>#{name}</span></label></li>"
+      lis += "<li orig-value='#{obj.value}'><label for='#{@counter}-attribute-#{name}'><input type='radio' id='#{@counter}-attribute-#{name}' data-attribute-radio name='attribute-#{handle}' value='#{name}'><span>#{name}</span></label></li>"
       values.push name
     selectList.innerHTML = lis
-    @generateBoxOnSelect(selectList, lname)
-    @generateColorOnSelect(selectList, lname)
-    @addEventsOnSelect(selectList, lname)
+    @generateBoxOnSelect(selectList, handle)
+    @generateColorOnSelect(selectList, handle)
+    @addEventsOnSelect(selectList, handle)
 
-  generateBoxOnSelect: (list, name)->
-    return if shoperb_dropdown_to_box.indexOf(name) == -1
+  generateBoxOnSelect: (list, handle)->
+    return if shoperb_dropdown_to_box.indexOf(handle) == -1
     list.closest('.variant-selector').classList.add("dropdown-box")
 
-  generateColorOnSelect: (list, name)->
-    return if shoperb_color_boxes.indexOf(name) == -1
+  generateColorOnSelect: (list, handle)->
+    return if shoperb_color_boxes.indexOf(handle) == -1
     list.classList.add("dropdown-color")
     for el in list.querySelectorAll('li')
       if val = shoperb_colors[el.getAttribute('orig-value')]
         el.style.background = val
 
   # for options select 
-  addEventsOnSelect: (list, name)->
+  addEventsOnSelect: (list, handle)->
     for input in list.querySelectorAll('input')
       input.addEventListener 'change', (e)=>
         @selectNewVariantOnOptionChange(e.target)
         @changeSelectedVariantOption(e.target)
         @markMissingOptions(e.target)
+      @markMissingOptions(input)
   # what to do when you have changed option-
   # change option value
   selectNewVariantOnOptionChange: (target)->
-    form     = target.closest('form')
+    form     = target.closest("form")
 
     # lookup for selected option
     selector     = ""
@@ -131,7 +125,7 @@ class @VariantSelector
       target.closest(".variant-selector").querySelector(".variant-option-dropdown li[orig-value='" + target.value + "']").classList.add('active')
 
   markMissingOptions: (target) ->
-    form = target.closest('form')
+    form = target.closest("form")
 
     # uncheck all dropdown elements
     for dropdown_input in form.querySelectorAll("[data-attribute-radio]")
@@ -142,14 +136,13 @@ class @VariantSelector
     for node in form.querySelectorAll("[data-#{target.name}='#{target.value}']")
       continue if node.json.stock == 0 # if not tracking then value is null
       for attr in node.json.attributes
-        continue if ("attribute-" + attr.name) == target.name # comment out if merk on both sides
-        attrs[attr.name] ?= []
-        attrs[attr.name].push(attr.value) if attrs[attr.name].indexOf(attr.value) == -1
-
+        continue if ("attribute-" + attr.handle) == target.name # comment out if merk on both sides
+        attrs[attr.handle] ?= []
+        attrs[attr.handle].push(attr.value) if attrs[attr.handle].indexOf(attr.value) == -1
 
     # mark not existing variants
-    for name, vals of attrs
-      for dropdown_input in form.querySelectorAll("[data-attribute-radio][name='attribute-#{name}']")
+    for handle, vals of attrs
+      for dropdown_input in form.querySelectorAll("[data-attribute-radio][name='attribute-#{handle}']")
         if vals.indexOf(dropdown_input.value) == -1
           dropdown_input.closest('li').classList.add('not-present')
 
