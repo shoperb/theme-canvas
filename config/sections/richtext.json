@@ -1,0 +1,11 @@
+{
+  "name": "Text",
+  "generic": true,
+  "settings": [
+    {
+      "type": "richtext",
+      "handle": "text",
+      "default": "Type text here.."
+    }
+  ]
+}

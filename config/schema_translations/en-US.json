@@ -476,6 +476,14 @@
           }
         }
       },
+      "richtext": {
+        "title": "Text",
+        "settings": {
+          "text": {
+            "title": "Text"
+          }
+        }
+      },
       "testimonials": {
         "title": "Testimonials",
         "settings": {
