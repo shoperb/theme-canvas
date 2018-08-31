@@ -16,8 +16,17 @@
     <span class="money" data-price data-currency="{{shop.currency.code}}">{{default_variant.price | money_without_currency}}</span>
   </span>
   <span class="price-symbol" itemprop="priceCurrency" content="{{shop.currency.code}}">{{shop.currency.symbol}}</span>
-  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" content="{{default_variant.current_price | money_without_currency}}" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money_without_currency}}{% else %}{{'14.95' | money_without_currency}}{% endif %}</span>
+  <span class="actual-price money{% if default_variant.discount? %} discount{% endif %}" data-current-price itemprop="price" content="{{default_variant.current_price | money_without_currency}}" data-currency="{{shop.currency.code}}">{% if product %}{{default_variant.current_price | money_without_currency}}{% else %}{{'14.95' | money_without_currency}}{% endif %}
+  </span>
 </div>
+
+{% if default_variant.compare_at %}
+  <span class="actual-price money" data-current-price itemprop="price" content="{{default_variant.compare_at | money_without_currency}}" data-currency="{{shop.currency.code}}">
+    {{'product.compare_at' | t}}:
+    <span class="price-symbol">{{shop.currency.symbol}}</span>
+    <span data-variant-sku itemprop="sku">{{ default_variant.compare_at | money_without_currency}}</span>
+  </span>
+{% endif %}
 
 <div data-position="cart-form">
   <form class="cart-form add-to-cart-form" action="{{form_actions.cart_add}}?include[]=liquid" method="post" enctype="multipart/form-data" data-remote=false>
