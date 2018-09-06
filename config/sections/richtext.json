@@ -26,7 +26,7 @@
           "handle": "large"
         }
       ]
-    }
+    },
     {
       "type": "select",
       "handle": "title_alignment",
@@ -41,7 +41,7 @@
           "handle": "cener"
         }
       ]
-    }
+    },
     {
       "type": "select",
       "handle": "title_size",
