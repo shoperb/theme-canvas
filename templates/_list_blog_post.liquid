@@ -1,13 +1,17 @@
 <div class="article" itemscope itemtype="https://schema.org/BlogPosting">
   {% if post.published_at %}
-  {% assign long_date = 1 %}
-  <div class="date" datetime="{{date | date: "%Y-%b-%d"}}" itemprop="datePublished">{% include 'date' with post.published_at %}</div>
+    {% assign long_date = 1 %}
+    <div class="date" datetime="{{date | date: "%Y-%b-%d"}}" itemprop="datePublished">
+      {% include 'date' with post.published_at %}
+    </div>
   {% endif %}
 
-  <h2 class="title" temprop="name">{% if list_blog_post == 'blog-list' %}<a href="{{post.url}}" itemprop="url">{% endif %}{{post.name}}{% if list_blog_post == 'blog-list' %}</a>{% endif %}</h2>
+  {% if list_blog_post == 'blog-list' %}
+    <h2 class="title" temprop="name"> <a href="{{post.url}}" itemprop="url"> {{ post.name }} </a> </h2>
+  {% endif %}
+
   <meta itemprop="url" content="{{url.current_url}}">
   <meta itemprop="headline" content="{{post.name}}">
-
 
   {% comment %} - for the time we shall have author as well
   <div class="author itemprop="author">
@@ -20,7 +24,7 @@
     {% if list_blog_post == 'blog-list' %}
     <div itemprop="description">{{post.content | truncatewords: 40}}</div>
     {% else %}
-    <div itemprop="articleBody">{{post.content}}</div>
+    <div itemprop="articleBody" role="content">{{post.content}}</div>
     {% endif %}
     <div class="post-link">
       {% if list_blog_post == 'blog-list' %}
@@ -31,3 +35,11 @@
     </div>
   </div>
 </div>
+
+
+
+<section role="main" class="page-page general-page">
+  <div class="page-content page-content" role="content">
+    {{page.content}}
+  </div>
+</section>

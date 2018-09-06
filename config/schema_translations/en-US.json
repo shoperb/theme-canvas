@@ -481,6 +481,31 @@
         "settings": {
           "text": {
             "title": "Text"
+          },
+          "title": {
+            "title": "Title"
+          },
+          "title_size": {
+            "title": "Title size",
+            "options": {
+              "small": "Small",
+              "medium": "Medium",
+              "large": "Large"
+            }
+          },
+          "title_alignment": {
+            "title": "Title alignment",
+            "options": {
+              "left": "Left",
+              "center": "Center"
+            }
+          },
+          "title_margin": {
+            "title": "Title margin",
+            "options": {
+              "small": "Small",
+              "large": "Large"
+            }
           }
         }
       },

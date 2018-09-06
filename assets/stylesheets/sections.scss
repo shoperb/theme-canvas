@@ -426,6 +426,19 @@ section[data-type=slideshow] {
     padding-bottom: 30px;
   }
 }
+
+.text-alignment-left {
+  h1, h2, h2 {
+    text-align: left;
+  }
+}
+
+.margin-large {
+  h1, h2, h2 {
+    margin-bottom: 40px;
+  }
+}
+
 [data-type=text-columns-with-images] {
   text-align: left;
 

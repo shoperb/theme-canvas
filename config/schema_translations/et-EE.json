@@ -480,6 +480,31 @@
         "settings": {
           "text": {
             "title": "Tekst"
+          },
+          "title": {
+            "title": "Pealkiri"
+          },
+          "title_size": {
+            "title": "Pealkirja suurus",
+            "options": {
+              "small": "Väike",
+              "medium": "Keskmine",
+              "large": "Suur"
+            }
+          },
+          "title_alignment": {
+            "title": "Pealkirja küljendus",
+            "options": {
+              "left": "Vasakul",
+              "center": "Keskel"
+            }
+          },
+          "title_margin": {
+            "title": "Pealkirja veeris",
+            "options": {
+              "small": "Väike",
+              "large": "Suur"
+            }
           }
         }
       },

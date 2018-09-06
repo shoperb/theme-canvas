@@ -1,7 +1,24 @@
 <section data-section-id="{{section.id}}" data-type="richtext">
+
+  {% if section.settings.title != blank %}
+    <header class="grid">
+      <div class="grid__item one--whole text-alignment-{{section.settings.title_alignment}} margin-{{section.settings.title_margin}}" >
+        {% case section.settings.title_size %}
+          {% when 'large' %}
+            <h1 class="general-title" data-theme-editor-setting="title"> {{ section.settings.title }} </h1>
+          {% when 'medium' %}
+            <h2 class="general-title" data-theme-editor-setting="title"> {{ section.settings.title }} </h2>
+          {% when 'small' %}
+            <h3 class="general-title" data-theme-editor-setting="title"> {{ section.settings.title }} </h3>
+        {% endcase %}
+      </div>
+    </header>
+  {% endif %}
+
   <div class="grid">
-    <div class="grid__item">
+    <div class="grid__item" data-theme-editor-setting="text">
       {{ section.settings.text }}
     </div>
   </div>
 </section>
+

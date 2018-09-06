@@ -5,7 +5,7 @@
 
   <div class="grid">
     {% if blog_posts.size == 0 %}
-    {% for post in blog_posts limit: {{section.settings.grid}} %}
+    {% for post in blog_posts limit: section.settings.grid %}
     {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <a href="{{post.url}}" class="text-column">
 
@@ -33,7 +33,7 @@
 
     {% comment %} default view for builder {% endcomment %}
 
-    {% for post in (1..12) limit: {{section.settings.grid}} %}
+    {% for post in (1..12) limit: section.settings.grid %}
     {% unless forloop.first %}-->{% endunless %}<div class="grid__item one-whole lap--one-half desk--one-third">
       <div class="text-column">
 

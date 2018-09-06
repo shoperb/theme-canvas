@@ -1,0 +1,893 @@
+{
+  "ru-RU": {
+    "presets": {
+      "canvas": "Основной",
+      "dark": "Темный",
+      "mint": "Лиловый",
+      "green": "Зеленый"
+    },
+    "sections": {
+      "header": {
+        "title": "Шапка",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "content_width": {
+            "title": "Ширина содержания",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен"
+            }
+          },
+          "logo_alignment": {
+            "title": "Размещение логотипа"
+          },
+          "logo": {
+            "title": "Логотип"
+          },
+          "logo_max_width": {
+            "title": "Максимальная ширина логотипа"
+          },
+          "menu": {
+            "title": "Главное меню"
+          }
+        }
+      },
+      "footer": {
+        "title": "Подвал",
+        "social_icons": {
+          "title": "Иконки соц.сетей"
+        },
+        "payment_icons": {
+          "title": "Иконки платежных систем"
+        },
+        "footer_text": {
+          "title": "Текст"
+        },
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "content_width": {
+            "title": "Ширина контента",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен"
+            }
+          },
+          "menu": {
+            "title": "Меню подвала"
+          },
+          "contact_page": {
+            "title": "Страница контакта"
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "allow_social_icons": {
+            "title": "Показать иконки соц.сетей"
+          },
+          "social_facebook": {
+            "title": "Facebook"
+          },
+          "social_twitter": {
+            "title": "Twitter"
+          },
+          "social_instagram": {
+            "title": "Instagram"
+          },
+          "allow_payment_icons": {
+            "title": "Показать инонки платежных систем"
+          },
+          "payment_seb": {
+            "title": "SEB"
+          },
+          "payment_swedbank": {
+            "title": "Swedbank"
+          },
+          "payment_nordea": {
+            "title": "Nordea"
+          },
+          "payment_danske": {
+            "title": "Danske"
+          },
+          "payment_lhv": {
+            "title": "LHV"
+          },
+          "payment_paypal": {
+            "title": "PayPal"
+          },
+          "payment_visa": {
+            "title": "VISA"
+          },
+          "payment_mastercard": {
+            "title": "MasterCard"
+          },
+          "payment_maestro": {
+            "title": "Maestro"
+          },
+          "allow_footer_text": {
+            "title": "Показать текст подвала"
+          },
+          "text_title": {
+            "title": "Текст"
+          }
+        }
+      },
+      "image_with_text_overlay": {
+        "title": "Изображение",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "image": {
+            "title": "Изображение"
+          },
+          "image_alignment": {
+            "title": "Размещение",
+            "options": {
+              "top-left": "Влево вверх",
+              "top-middle": "Вверх по середине",
+              "top-right": "Вправо вверх",
+              "center": "По середине",
+              "middle-right": "Вправо по середине",
+              "middle-left": "Влево по середине",
+              "bottom-middle": "Вниз по середине",
+              "bottom-right": "Вправо вниз",
+              "bottom-left": "Влево вниз"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "text": {
+            "title": "Подзаголовок"
+          },
+          "section_height": {
+            "title": "Высота секции",
+            "options": {
+              "extra-small": "Очень маленькая",
+              "small": "Маленькая",
+              "medium": "Средняя",
+              "large": "Большая",
+              "extra-large": "Очень большая"
+            }
+          },
+          "text_size": {
+            "title": "Размер шрифта",
+            "options": {
+              "medium": "Средний",
+              "large": "Большой"
+            }
+          },
+          "button_label": {
+            "title": "Текст кнопки"
+          },
+          "button_link": {
+            "title": "URL кнопки"
+          }
+        }
+      },
+      "collection": {
+        "title": "Коллекция",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "collection": {
+            "title": "Коллекция"
+          },
+          "per_row": {
+            "title": "К-ство продуктов в ряду"
+          },
+          "rows": {
+            "title": "К-ство рядов"
+          },
+          "show_vendor": {
+            "title": "Показывать продавца"
+          },
+          "show_button": {
+            "title": "Показывать кнопку 'Смотреть все'"
+          },
+          "show_as_slider": {
+            "title": "Показывать продукты как слайд-шоу"
+          }
+        }
+      },
+      "blog_posts": {
+        "title": "Блог",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": "Заглавие",
+          "grid": {
+            "title": "К-ство постов"
+          },
+          "show_author": {
+            "title": "Показывать автора"
+          },
+          "show_date": {
+            "title": "Показывать дату"
+          },
+          "show_button": {
+            "title": "Показывать кнопку 'Смотреть все'"
+          }
+        }
+      },
+      "image_gallery": {
+        "title": "Галлерея изображений",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "section_height": {
+            "title": "Высота галлереи",
+            "options": {
+              "extra-small": "Очень маленькая",
+              "small": "Маленькая",
+              "medium": "Средняя",
+              "large": "Большая",
+              "extra-large": "Очень большая"
+            }
+          }
+        },
+        "blocks": {
+          "image": {
+            "title": "Изображение",
+            "settings": {
+              "image": {
+                "title": "Изображение"
+              },
+              "caption": {
+                "title": "Подпись"
+              },
+              "link": {
+                "title": "URL изображения"
+              },
+              "image_alignment": {
+                "title": "Alignment",
+                "options": {
+                  "top-left": "Влево вверх",
+                  "top-middle": "Вверх по середине",
+                  "top-right": "Вправо вверх",
+                  "center": "По середине",
+                  "middle-right": "Вправо по середине",
+                  "middle-left": "Влево по середине",
+                  "bottom-middle": "Вниз по середине",
+                  "bottom-right": "Вправо вниз",
+                  "bottom-left": "Влево вниз"
+                }
+              }
+            }
+          }
+        }
+      },
+      "image_with_text": {
+        "title": "Рисунок с текстом",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "image": {
+            "title": "Изображение"
+          },
+          "horizontal_alignment": {
+            "title": "Alignment",
+            "options": {
+              "image-on-left": "Изображение слева",
+              "image-on-right": "Изображение справа"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "text": {
+            "title": "Текст"
+          },
+          "button_label": {
+            "title": "Текст кнопки"
+          },
+          "button_link": {
+            "title": "URL кнопки"
+          }
+        }
+      },
+      "slideshow": {
+        "title": "Слайд-шоу",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "auto_rotate": {
+            "title": "Крутить автоматически"
+          },
+          "animation_speed": {
+            "title": "Скорость (в секундах)"
+          },
+          "section_height": {
+            "title": "Высота секции",
+            "options": {
+              "small": "Маленькая",
+              "medium": "Средняя",
+              "large": "Большая"
+            }
+          }
+        },
+        "blocks": {
+          "image_slide": {
+            "title": "Изображение",
+            "settings": {
+              "image": {
+                "title": "Изображение"
+              },
+              "image_alignment": {
+                "title": "Размещение",
+                "options": {
+                  "top-left": "Влево вверх",
+                  "top-middle": "Вверх по середине",
+                  "top-right": "Вправо вверх",
+                  "center": "По середине",
+                  "middle-right": "Вправо по середине",
+                  "middle-left": "Влево по середине",
+                  "bottom-middle": "Вниз по середине",
+                  "bottom-right": "Вправо вниз",
+                  "bottom-left": "Влево вниз"
+                }
+              },
+              "text_size": {
+                "title": "Размер шрифта",
+                "options": {
+                  "medium": "Средний",
+                  "large": "Большой"
+                }
+              },
+              "heading": {
+                "title": "Заглавие"
+              },
+              "subheading": {
+                "title": "Подзаголовок"
+              },
+              "slide_link": {
+                "title": "URL слайда"
+              },
+              "button_text": {
+                "title": "Текст кнопки"
+              }
+            }
+          },
+          "video_slide": {
+            "title": "Видео",
+            "settings": {
+              "video": {
+                "title": "Видео"
+              },
+              "text_size": {
+                "title": "Размер шрифта",
+                "options": {
+                  "medium": "Средний",
+                  "large": "Большой"
+                }
+              },
+              "heading": {
+                "title": "Заглавие"
+              },
+              "subheading": {
+                "title": "Подзаголовок"
+              }
+            }
+          }
+        }
+      },
+      "collection_list": {
+        "title": "Список коллекций",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "grid": {
+            "title": "К-ство коллекций"
+          }
+        },
+        "blocks": {
+          "collection": {
+            "title": "Коллекция",
+            "settings": {
+              "collection": {
+                "title": "Коллекция"
+              }
+            }
+          }
+        }
+      },
+      "product": {
+        "title": "Продукт",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "product": {
+            "title": "Продукт"
+          },
+          "image_size": {
+            "title": "Размер изображения",
+            "options": {
+              "small": "Маленький",
+              "medium": "Средний",
+              "large": "Большой",
+              "full": "Полный размер"
+            }
+          },
+          "show_quantity_selector": {
+            "title": "Показывать выбор количества"
+          },
+          "show_variant_label": {
+            "title": "Показывать название варианта"
+          },
+          "show_vendor": {
+            "title": "Показывать продавца"
+          }
+        }
+      },
+      "richtext": {
+        "title": "Текст",
+        "settings": {
+          "text": {
+            "title": "Текст"
+          },
+          "title": {
+            "title": "Заголовок"
+          },
+          "title_alignment": {
+            "title": "Размещение заголовка",
+            "options": {
+              "left": "Слева",
+              "center": "По центру"
+            }
+          },
+          "title_size": {
+            "title": "Размер заголовка",
+            "options": {
+              "small": "Маленький",
+              "medium": "Средний",
+              "large": "Большой"
+            }
+          },
+          "title_margin": {
+            "title": "Отступ для заголовка",
+            "options": {
+              "small": "Маленький",
+              "large": "Большой"
+            }
+          }
+        }
+      },
+      "testimonials": {
+        "title": "Отзывы",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          }
+        },
+        "blocks": {
+          "quote": {
+            "title": "Цитата",
+            "settings": {
+              "quote": {
+                "title": "Цитата"
+              },
+              "author": {
+                "title": "Автор"
+              }
+            }
+          }
+        }
+      },
+      "text_columns_with_images": {
+        "title": "Колонки с текстом и рисунками",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "text_alignment": {
+            "title": "Размещение содержания",
+            "options": {
+              "left": "Слева",
+              "center": "По центру"
+            }
+          }
+        },
+        "blocks": {
+          "column": {
+            "title": "Колонка",
+            "settings": {
+              "image": {
+                "title": "Изображение"
+              },
+              "title": {
+                "title": "Заглавие"
+              },
+              "text": {
+                "title": "Текст"
+              }
+            }
+          }
+        }
+      },
+      "logo_list": {
+        "title": "Логотипы",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "section_height": {
+            "title": "Высота секции",
+            "options": {
+              "small": "Маленькая",
+              "large": "Больная"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          }
+        },
+        "blocks": {
+          "logo": {
+            "title": "Логотип",
+            "settings": {
+              "image": {
+                "title": "Логотип"
+              },
+              "link": {
+                "title": "URL логотипа"
+              }
+            }
+          }
+        }
+      },
+      "newsletter": {
+        "title": "Новостная рассылка",
+        "settings": {
+          "email_marketing": {
+            "title": "Сервис маркетинга"
+          },
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "text": {
+            "title": "Текст"
+          },
+          "button_text": {
+            "title": "Текст кнопки"
+          },
+          "form": {
+            "title": "Сообщение после подписки"
+          }
+        }
+      },
+      "location_and_contact": {
+        "title": "Местоположение/Контакты",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          },
+          "text": {
+            "title": "Текст"
+          },
+          "address": {
+            "title": "Адрес"
+          },
+          "gmaps_api_key": {
+            "title": "Ключ Google Maps"
+          }
+        }
+      },
+      "custom": {
+        "title": "Построй вручную",
+        "settings": {
+          "section_width": {
+            "title": "Ширина секции",
+            "options": {
+              "full-width": "Во всю ширину",
+              "limited": "Ограничен по контенту"
+            }
+          },
+          "title": {
+            "title": "Заглавие"
+          }
+        },
+        "blocks": {
+          "custom_text": {
+            "title": "Текст",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "title": {
+                "title": "Заглавие"
+              },
+              "text": {
+                "title": "Текст"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              },
+              "horizontal_alignment": {
+                "title": "Горизонтальное расположение"
+              }
+            }
+          },
+          "custom_image": {
+            "title": "Изображение",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "image": {
+                "title": "Изображение"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              }
+            }
+          },
+          "custom_video": {
+            "title": "Видео",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "video": {
+                "title": "Видео"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              }
+            }
+          },
+          "custom_product": {
+            "title": "Продукт",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "product": {
+                "title": "Продукт"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              }
+            }
+          },
+          "custom_collection": {
+            "title": "Коллекция",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "collection": {
+                "title": "Коллекция"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              }
+            }
+          },
+          "custom_html": {
+            "title": "HTML",
+            "settings": {
+              "section_width": {
+                "title": "Ширина секции",
+                "options": {
+                  "full-width": "Во всю ширину",
+                  "limited": "Ограничен по контенту"
+                }
+              },
+              "html": {
+                "title": "HTML"
+              },
+              "vertical_alignment": {
+                "title": "Вертикальное расположение"
+              }
+            }
+          }
+        }
+      }
+    },
+    "general": {
+      "text_headings_color": {
+        "title": "Заглавия"
+      },
+      "text_body_color": {
+        "title": "Текст содержания"
+      },
+      "text_sale_text_color": {
+        "title": "Текст для скидок"
+      },
+      "text_link_color": {
+        "title": "Ссылки"
+      },
+      "buttons_primary_button_background_color": {
+        "title": "Цвет кнопок"
+      },
+      "buttons_primary_button_text_color": {
+        "title": "Текст на кнопках"
+      },
+      "buttons_secondary_button_background_color": {
+        "title": "Цвет вторичных кнопок"
+      },
+      "buttons_secondary_button_text_color": {
+        "title": "Текст на вторичных кнопках"
+      },
+      "layout_background_color": {
+        "title": "Цвет фона"
+      },
+      "layout_border_color": {
+        "title": "Цвет границ и линий"
+      },
+      "layout_secondary_background_color": {
+        "title": "Вторичный цвет фона"
+      },
+      "layout_header_footer_background_color": {
+        "title": "Цвет для шапки/подвала"
+      },
+      "image_overlay_color": {
+        "title": "Текст"
+      },
+      "image_overlay_background": {
+        "title": "Фон"
+      },
+      "image_overlay_opacity": {
+        "title": "Прозрачность (%)"
+      },
+      "body_font_family": {
+        "title": "Тип шрифта"
+      },
+      "body_font_size": {
+        "title": "Основной размер шрифта",
+        "options": {
+          "font_size_14": "14px",
+          "font_size_15": "15px",
+          "font_size_16": "16px",
+          "font_size_17": "17px",
+          "font_size_18": "18px",
+          "font_size_19": "19px",
+          "font_size_20": "20px"
+        }
+      },
+      "heading_font_family": {
+        "title": "Тип шрифта"
+      },
+      "heading_font_size": {
+        "title": "Тип шрифта для заглавлений",
+        "options": {
+          "font_size_14": "14px",
+          "font_size_15": "15px",
+          "font_size_16": "16px",
+          "font_size_17": "17px",
+          "font_size_18": "18px",
+          "font_size_19": "19px",
+          "font_size_20": "20px"
+        }
+      },
+      "heading_scaling": {
+        "title": "Масштаб заглавлений",
+        "options": {
+          "scaling_normal": "Номарльный",
+          "scaling_large": "Большой"
+        }
+      },
+      "fav_icon": {
+        "title": "Favicon"
+      },
+      "square_images": {
+        "title": "Показывать рисунки как квадраты"
+      }
+    },
+    "categories": {
+      "colors": "Цвета",
+      "text_styles": "Стили шрифта",
+      "fav_icon": "Favicon",
+      "settings": "Настройки"
+    }
+  }
+}
